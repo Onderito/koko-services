@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Manrope";
+  src: url("../app/assets/fonts/Manrope-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../app/assets/fonts/Manrope-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +24,22 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-manrope: "Manrope", sans-serif;
+}
+
+@layer utilities {
+  .font-manrope-regular {
+    font-family: var(--font-manrope);
+    font-weight: 400;
+  }
+
+  .font-manrope-bold {
+    font-family: var(--font-manrope);
+    font-weight: 700;
+  }
+  .inner-shadow-white {
+    box-shadow: inset 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
