@@ -1,10 +1,26 @@
 "use client";
 import Image from "next/image";
+import {
+  heroAnimation,
+  imgAnimation,
+  imgOnHover,
+  buttonAnimation,
+} from "../animation/hero";
+import { useEffect, useRef } from "react";
 
 export default function HeroSection() {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const cleanup = heroAnimation(heroRef.current);
+    imgAnimation();
+    imgOnHover();
+    buttonAnimation();
+    return cleanup;
+  }, []);
   return (
-    <>
-      <div className="absolute inset-0 -z-10 w-full h-[700px] ">
+    <section ref={heroRef}>
+      <div className="absolute inset-0 -z-10 w-full h-[700px] md:h-[900px] ">
         <Image
           className=" rounded-b-[20px]"
           src="/bg-hero.jpg"
@@ -15,21 +31,25 @@ export default function HeroSection() {
         />
       </div>
       <div className="flex flex-col justify-center items-center">
-        <span className="rounded-4xl bg-[#404040] inner-shadow-white p-2 font-manrope-bold text-[12px] text-white w-fit ">
+        <span className="rounded-4xl bg-[#404040] inner-shadow-white p-2 font-manrope-bold text-[12px] text-white w-fit toto ">
           Always ready to drive you
         </span>
-        <h1 className="text-[44px] font-manrope-bold text-center leading-12 mt-4">
+        <h1 className="text-[44px] md:text-[64px] xl:text-[80px] font-manrope-bold text-center leading-12 md:leading-16 xl:leading-20 mt-4 toto">
           Experience the French <br /> Riviera in{" "}
-          <span className="bg-gradient-to-b from-[#FFFFFF] from-0% to-[#404040] to-100% text-transparent bg-clip-text ">
+          <span className="bg-gradient-to-b from-[#FFFFFF] from-0% to-[#404040] to-100% text-transparent bg-clip-text">
             style
           </span>
         </h1>
-        <p className="text-[18px] text-center mt-4">
+        <p className="text-[16px] md:text-[18px] text-center mt-4 toto">
           Private transfers. Unmatched comfort. Absolute peace of mind.
         </p>
-        <button className=" bg-[#404040] inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl mt-8 relative">
-          Plan Your Transfer
-          <div className="rounded-full absolute bg-[#404040] right-[-40px] bottom-[-40px] p-2 border-2 border-white shadow-lg ">
+        <div className=" relative ">
+          <button className="bg-[#404040] cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl mt-8 toto button ">
+            <span className="button-content inline-block">
+              Plan Your Transfer
+            </span>
+          </button>
+          <div className="rounded-full absolute bg-[#404040] right-[-40px] bottom-[-40px] p-2 border-2 border-white shadow-lg toto">
             <svg
               className="w-6 h-6 "
               width="20"
@@ -53,16 +73,17 @@ export default function HeroSection() {
               />
             </svg>
           </div>
-        </button>
+        </div>
+
         <Image
-          className="mt-16 rounded-[30px] border-5 border-white shadow-lg  "
-          src="/nice-hero.jpg"
+          className="mt-16 rounded-[30px] border-5 xl:border-10 xl:w-full border-white shadow-lg img relative z-50"
+          src="/nice-hero.webp"
           alt="Hero image"
           quality={100}
           width={1000}
           height={1000}
         />
       </div>
-    </>
+    </section>
   );
 }
