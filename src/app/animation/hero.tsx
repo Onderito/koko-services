@@ -1,68 +1,88 @@
+"use client";
 import gsap from "gsap";
-import { SplitText } from "gsap/all";
-gsap.registerPlugin(SplitText);
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
-export const heroAnimation = (element: HTMLElement | null) => {
-  if (!element) return;
+export const heroSection = () => {
+  const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 1 } });
 
-  const ctx = gsap.context(() => {
-    gsap.fromTo(
-      element.querySelectorAll(".toto"),
-      {
-        opacity: 0,
-        y: 60,
-        scale: 0.5,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.4,
-        ease: "expoScale(0.5,7,none)", // tu peux aussi tester "back.out(1.4)" pour un mini rebond
-        delay: 0.8,
-        scale: 1,
-        stagger: 0.1,
-      }
-    );
-  }, element);
-
-  return () => ctx.revert(); // ici on revient à la position initiale
-};
-
-export const splitText = () => {
-  SplitText.create(".split", {
-    type: "lines, words",
-    mask: "lines",
-    autoSplit: true,
-    onSplit(self) {
-      return gsap.from(self.words, {
-        duration: 1.2,
-        y: 100,
-        autoAlpha: 0,
-        stagger: 0.05,
-      });
-    },
+  tl.to(".hero-content", {
+    opacity: 1,
+    y: 0,
+    duration: 1,
   });
-};
 
-export const imgAnimation = () => {
-  gsap.fromTo(
+  tl.to(
+    ".hero-span",
+    {
+      duration: 1,
+      clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+    },
+    "-=0.8"
+  );
+
+  tl.from(
+    "h1",
+    {
+      opacity: 0,
+      y: 40,
+    },
+    "-=0.5"
+  );
+
+  tl.from(
+    "p",
+    {
+      opacity: 0,
+      y: 20,
+    },
+    "-=0.5"
+  );
+
+  tl.from(
+    ".button",
+    {
+      opacity: 0,
+      scale: 0.95,
+    },
+    "-=0.5"
+  );
+
+  tl.from(
+    ".svg",
+    {
+      opacity: 0,
+      y: -60,
+      scale: 0.95,
+    },
+    "-=0.5"
+  );
+  tl.from(
     ".img",
     {
-      autoAlpha: 0,
-      y: -500,
-      scale: 0.8,
-      ease: "power1.inOut",
-      borderWidth: 0,
+      opacity: 0,
+      y: -60,
+      scale: 0.95,
     },
-    {
-      autoAlpha: 1,
-      y: 0,
-      scale: 1,
-      ease: "power1.inOut",
-      duration: 1.2,
-      borderWidth: 10,
-    }
+    "-=0.5"
   );
+};
+
+export const heroScroll = () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "1% top",
+      end: "bottom",
+      scrub: true,
+    },
+  });
+  tl.to(".hero-container", {
+    rotate: 2,
+    scale: 0.9,
+    yPercent: 10,
+    ease: "power2.out",
+  });
 };
 
 export const imgOnHover = () => {
