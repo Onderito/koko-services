@@ -6,11 +6,9 @@ import {
   buttonAnimation,
   heroScroll,
 } from "../animation/hero";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export default function HeroSection() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     heroSection();
     heroScroll();
@@ -18,7 +16,7 @@ export default function HeroSection() {
     buttonAnimation();
   }, []);
   return (
-    <section ref={heroRef}>
+    <section>
       <div className="absolute inset-0 -z-10 w-full h-[700px] md:h-[900px] ">
         <Image
           className="rounded-b-[20px]"
@@ -42,7 +40,7 @@ export default function HeroSection() {
             style
           </span>
         </h1>
-        <p className="text-[16px] md:text-[18px] text-center mt-4 ">
+        <p className="description text-[16px] md:text-[18px] text-center mt-4 ">
           Private transfers. Unmatched comfort. Absolute peace of mind.
         </p>
         <div className=" relative ">
