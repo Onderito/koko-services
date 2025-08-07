@@ -18,7 +18,7 @@ export const heroSection = () => {
       duration: 1,
       clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
     },
-    "-=0.8"
+    "-=0.7"
   );
 
   tl.from(
@@ -27,16 +27,16 @@ export const heroSection = () => {
       opacity: 0,
       y: 40,
     },
-    "-=0.5"
+    "-=0.7"
   );
 
   tl.from(
-    "p",
+    ".description",
     {
       opacity: 0,
       y: 20,
     },
-    "-=0.5"
+    "-=0.6"
   );
 
   tl.from(
@@ -45,7 +45,7 @@ export const heroSection = () => {
       opacity: 0,
       scale: 0.95,
     },
-    "-=0.5"
+    "-=0.6"
   );
 
   tl.from(
@@ -55,7 +55,7 @@ export const heroSection = () => {
       y: -60,
       scale: 0.95,
     },
-    "-=0.5"
+    "-=0.6"
   );
   tl.from(
     ".img",
@@ -64,7 +64,7 @@ export const heroSection = () => {
       y: -60,
       scale: 0.95,
     },
-    "-=0.5"
+    "-=0.6"
   );
 };
 

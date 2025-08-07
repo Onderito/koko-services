@@ -1,7 +1,12 @@
 "use client";
 import Image from "next/image";
-import { serviceAnimation } from "../animation/service";
-import { useRef, useEffect } from "react";
+import {
+  serviceSection,
+  animateCards,
+  setInitialCardState,
+  serviceScroll,
+} from "../animation/service";
+import { useEffect } from "react";
 
 const cards = [
   {
@@ -28,25 +33,28 @@ const cards = [
 ];
 
 export default function Services() {
-  const serviceRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const cleanup = serviceAnimation(serviceRef.current);
-    return cleanup;
+    serviceSection();
+    setInitialCardState();
+    serviceScroll();
+    animateCards();
   }, []);
   return (
-    <div ref={serviceRef} className="flex flex-col justify-center section-2">
-      <span className="span text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto">
+    <div className="service-container flex flex-col justify-center section-2">
+      <span
+        style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
+        className="our-service text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
+      >
         our services
       </span>
-      <h2 className="text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center h2">
+      <h2 className="title text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center h2 text-gray-100">
         What We Offer
       </h2>
-      <div className="mt-10 flex flex-col gap-8 xl:gap-10 xl:flex-row">
+      <div className="card mt-10 flex flex-col gap-8 xl:gap-10 xl:flex-row ">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="item bg-[#F9FAFB] border-1 border-[#EEEEEE] rounded-3xl p-4 "
+            className=" card-wrapper bg-[#F9FAFB] border-1 border-[#EEEEEE] rounded-3xl p-4 "
           >
             <div className="flex items-center gap-2 md:gap-4">
               <span className="bg-[#404040] rounded-xl p-3 md:p-4 xl:p-3 inner-shadow-white">
@@ -66,7 +74,6 @@ export default function Services() {
               {card.description}
             </p>
             <Image
-              data-speed="0.9"
               className="mt-8 xl:mt-16 rounded-2xl md:w-full object-cover"
               src={card.image}
               alt="image of service"
