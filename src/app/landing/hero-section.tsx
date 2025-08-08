@@ -44,8 +44,8 @@ export default function HeroSection() {
           Private transfers. Unmatched comfort. Absolute peace of mind.
         </p>
         <div className=" relative ">
-          <button className="bg-[#404040] cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl mt-8 button ">
-            <span className="button-content inline-block">
+          <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl mt-8 button ">
+            <span className="button-content inline-block !cursor-pointer">
               Plan Your Transfer
             </span>
           </button>

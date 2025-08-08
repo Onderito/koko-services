@@ -8,17 +8,18 @@ export const serviceSection = () => {
     type: "words",
   });
 
+  // animation du header de la section service
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".service-container",
       start: "top center",
       end: "30% center",
-      scrub: true,
+      scrub: 1.5,
     },
   });
 
   tl.to(".our-service", {
-    duration: 1,
+    duration: 1.2,
     clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
   });
 
@@ -29,7 +30,7 @@ export const serviceSection = () => {
       stagger: 1,
       ease: "power2.out",
     },
-    "-=0.4"
+    "-=0.9"
   );
 };
 
@@ -81,15 +82,13 @@ export const serviceScroll = () => {
       trigger: ".service-container",
       start: "center 60%",
       end: "bottom 50%",
-      markers: true,
       scrub: true,
     },
   });
   tl.to(".service-container", {
-    opacity: 0,
-    scale: 0.9,
-    y: -500,
+    opacity: 0.5,
+    scale: 1,
+    yPercent: 20,
     ease: "power2.in",
-    filter: "blur(2px)",
   });
 };
