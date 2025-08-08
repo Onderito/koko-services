@@ -2,6 +2,10 @@
 import Image from "next/image";
 import { performanceSection } from "../animation/performance";
 import { useEffect } from "react";
+import FirstCard from "../illustrations/first-card";
+import SecondCard from "../illustrations/second-card";
+import ThirdCard from "../illustrations/third-card";
+import FourthCard from "../illustrations/fourth-card";
 
 const cards = [
   {
@@ -27,7 +31,7 @@ export default function Performances() {
     performanceSection();
   }, []);
   return (
-    <div className="performance-section min-h-dvh relative z-20 flex justify-center bg-[#292929]   rounded-3xl ">
+    <div className="performance-section min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
       <div className="flex flex-col py-10 px-2">
         <h2 className="text-white text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
           Performance that speaks for itself
@@ -36,27 +40,17 @@ export default function Performances() {
           Flawless execution, absolute discretion, and a reputation built on
           consistency.
         </p>
-        <div className="flex flex-col gap-4 text-white mt-10">
+        <div className="flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row xl:px-16 gap-4 text-white mt-10">
           {cards.map((c, index) => (
             <div
-              className="bg-[#404040] shadow-white-thin flex flex-col rounded-3xl p-2"
+              className="bg-[#404040] shadow-white-thin flex flex-col rounded-3xl p-2 xl:max-w-xs"
               key={index}
             >
-              <div className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center">
-                {index === 0 && (
-                  <div className="bg-[#404040] shadow-gray-offset -rotate-5 p-2 pr-8 flex-center w-fit rounded-2xl gap-2">
-                    <Image
-                      src="/check-marked.svg"
-                      alt="check"
-                      width={20}
-                      height={20}
-                    />
-                    <p className="font-manrope-regular text-[12px]">
-                      Private transfer to Nice Airport — <br />
-                      right on schedule.
-                    </p>
-                  </div>
-                )}
+              <div className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative">
+                {index === 0 && <FirstCard />}
+                {index === 1 && <SecondCard />}
+                {index === 2 && <ThirdCard />}
+                {index === 3 && <FourthCard />}
               </div>
               <h3 className="font-manrope-bold text-center text-[20px] mt-8">
                 {c.title}
