@@ -40,10 +40,10 @@ export default function Services() {
     animateCards();
   }, []);
   return (
-    <div className="service-container relative z-10 flex flex-col justify-center section-2">
+    <div className="service-container relative z-10 flex-center-column section-2">
       <span
         style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="our-service text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
+        className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our services
       </span>

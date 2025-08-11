@@ -31,7 +31,7 @@ export default function Performances() {
     performanceSection();
   }, []);
   return (
-    <div className=" min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
+    <div className=" pin-container min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
       <div className="performance-section flex flex-col py-10 px-2">
         <h2 className="text-white text-[32px] md:text-[56px] perf-title font-manrope-bold mt-4 text-center">
           Performance that speaks for itself

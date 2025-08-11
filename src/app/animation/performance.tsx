@@ -14,11 +14,14 @@ export const performanceSection = () => {
   const split = SplitText.create(".perf-title", {
     type: "words, chars",
   });
+
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".performance-section",
-      start: "top center",
-      toggleActions: "play none none reverse",
+      trigger: ".pin-container",
+      pin: true,
+      start: "top top",
+      end: "+=3000",
+      scrub: 1.5,
     },
   });
   tl.from(".performance-section", {
@@ -61,28 +64,31 @@ export const performanceSection = () => {
       from: "end",
     },
   });
+
   // Animation de la FirstCard après les cartes
   tl.from(
     ".first-card-illu",
     {
       scale: 0.95,
-      rotate: 1, // On peut réduire un peu la rotation pour plus de subtilité
+      rotate: 1,
       autoAlpha: 0,
-      duration: 0.8, // On augmente un peu la durée
+      duration: 0.8,
       ease: "power3.out",
     },
-    "+=0.001"
-  ); // Démarre 0.2s après la fin de l'animation des cartes
+    "+=0.1"
+  );
   tl.from(
     ".illu-content",
     {
       autoAlpha: 0,
-      x: 15, // On peut augmenter un peu le déplacement pour qu'il soit visible malgré la durée plus longue
+      x: 15,
       duration: 0.6,
       ease: "power3.out",
     },
-    "<"
+    "0.1"
   );
+
+  // ANIMATION DE LA SECOND CARD //
   tl.from(
     ".second-card-illu",
     {
@@ -92,8 +98,10 @@ export const performanceSection = () => {
       duration: 0.6,
       ease: "power3.out",
     },
-    "<"
+    "+=0.2"
   );
+
+  // ANIMATION DE LA THIRD CARD //
   tl.from(".first-path", {
     drawSVG: "100% 100%", // Commence depuis le début, longueur 0
     duration: 1.1,
@@ -106,7 +114,7 @@ export const performanceSection = () => {
       duration: 0.8,
       ease: "back.out(1.5)",
     },
-    "<"
+    "+=0.2"
   );
   tl.from(
     ".third-card-illu",
@@ -116,8 +124,10 @@ export const performanceSection = () => {
       duration: 0.6,
       ease: "power3.out",
     },
-    "<"
+    "+=0.2"
   );
+
+  // ANIMATION DE LA FOURTH CARD //
   tl.from(
     ".text-fourth-card",
     {
@@ -126,7 +136,7 @@ export const performanceSection = () => {
       duration: 1.2,
       ease: "power3.out",
     },
-    "<"
+    "+=0.2"
   );
   tl.from(
     ".flag-card",
@@ -137,7 +147,7 @@ export const performanceSection = () => {
       duration: 1.2,
       ease: "bounce.out",
     },
-    "<"
+    "+=0.2"
   );
   tl.from(
     ".mouse-svg",
