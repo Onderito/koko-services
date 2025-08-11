@@ -31,19 +31,19 @@ export default function Performances() {
     performanceSection();
   }, []);
   return (
-    <div className="performance-section min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
-      <div className="flex flex-col py-10 px-2">
-        <h2 className="text-white text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
+    <div className=" min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
+      <div className="performance-section flex flex-col py-10 px-2">
+        <h2 className="text-white text-[32px] md:text-[56px] perf-title font-manrope-bold mt-4 text-center">
           Performance that speaks for itself
         </h2>
-        <p className="text-white text-[16px] md:text-[18px] text-center mt-4 ">
+        <p className="text-white text-[16px] md:text-[18px] text-center mt-4 perf-desc">
           Flawless execution, absolute discretion, and a reputation built on
           consistency.
         </p>
         <div className="flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row xl:px-16 gap-4 text-white mt-10">
           {cards.map((c, index) => (
             <div
-              className="bg-[#404040] shadow-white-thin flex flex-col rounded-3xl p-2 xl:max-w-xs"
+              className="bg-[#404040] perf-card shadow-white-thin flex flex-col rounded-3xl p-3 xl:max-w-xs"
               key={index}
             >
               <div className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative">
@@ -52,9 +52,9 @@ export default function Performances() {
                 {index === 2 && <ThirdCard />}
                 {index === 3 && <FourthCard />}
               </div>
-              <h3 className="font-manrope-bold text-center text-[20px] mt-8">
+              <h4 className="font-manrope-bold text-center text-[18px] md:text-[20px] m mt-8">
                 {c.title}
-              </h3>
+              </h4>
               <p className="font-manrope-regular text-center mt-2 text-[16px]">
                 {c.text}
               </p>
