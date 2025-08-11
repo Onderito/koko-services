@@ -55,6 +55,9 @@
   .flex-center-column {
     @apply flex flex-col justify-center;
   }
+  .inner-light-shadow {
+    box-shadow: inset 0px 0px 2px 0px rgba(64, 64, 64, 0.25);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -4,6 +4,7 @@ import Services from "./landing/services";
 import Performance from "./landing/performances";
 import Cars from "./landing/cars";
 import Blogs from "./landing/blogs";
+import Pricing from "./landing/pricing";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
         </section>
         <section className="container mx-auto px-2 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
           <Blogs />
+        </section>
+        <section className="container mx-auto px-2 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+          <Pricing />
         </section>
       </SmoothScrollWrapper>
     </>
