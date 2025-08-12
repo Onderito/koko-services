@@ -30,7 +30,7 @@ export default function Blogs() {
       >
         our blogs
       </span>
-      <h2 className="title text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center h2 text-gray-100">
+      <h2 className="title text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center h2 text-gray-100">
         Chauffeur Insights & Luxury Travel Tips
       </h2>
       <p className="description text-[16px] md:text-[18px] text-center mt-4 ">
