@@ -163,6 +163,6 @@ export const performanceSection = () => {
         duration: 0.6,
         ease: "power3.out",
       },
-      "+=0.1"
+      "start"
     );
 };
