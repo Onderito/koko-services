@@ -58,6 +58,20 @@
   .inner-light-shadow {
     box-shadow: inset 0px 0px 2px 0px rgba(64, 64, 64, 0.25);
   }
+  .card-dark {
+    background-color: #2a2a2a !important;
+    color: white !important;
+  }
+  .card-secondary-text {
+    color: #c9c9c9 !important;
+  }
+  .dark-bg {
+    background-color: #353535 !important;
+  }
+  .dark-border {
+    border-color: #5e5e5e !important;
+    border-width: 0.5px !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

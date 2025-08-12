@@ -39,12 +39,25 @@ export default function Pricing() {
             </li>
           ))}
         </ul>
-        <div className="flex flex-col gap-4 mt-10 w-full">
+        <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-4 gap-4 mt-10 w-full">
           {vehicles.map((v, index) => (
             <div
-              className="border-[#E5E5E5] border-[0.5px] rounded-2xl flex flex-col justify-center items-center p-2"
+              className={`border-[#E5E5E5] border-[0.5px] shadow-xs relative overflow-hidden rounded-3xl flex flex-col justify-center items-center p-2 xl:p-4 ${
+                index >= vehicles.length - 2
+                  ? "card-dark inner-shadow-white"
+                  : ""
+              }`}
               key={index}
             >
+              {index === vehicles.length - 1 && (
+                <Image
+                  className="absolute right-[-45px] top-[-200px] "
+                  src="/vector.svg"
+                  alt="vector"
+                  width={100}
+                  height={100}
+                />
+              )}
               <Image
                 src={v.image}
                 alt="image of car"
@@ -55,9 +68,85 @@ export default function Pricing() {
                 <h6 className="self-start font-manrope-bold text-[20px] ">
                   {v.name}
                 </h6>
-                <p className="text-[#6B7280] text-[16px] font-manrope-regular">
+                <p
+                  className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                    index >= vehicles.length - 2 ? "card-secondary-text" : ""
+                  }`}
+                >
                   {v.passengers} passengers
                 </p>
+              </div>
+              <div
+                className={`flex flex-col justify-center items-center bg-[#F9FAFB] w-full rounded-2xl mt-5 py-4 ${
+                  index >= vehicles.length - 2 ? "dark-bg " : ""
+                } `}
+              >
+                <p
+                  className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                    index >= vehicles.length - 2 ? "card-secondary-text" : ""
+                  }`}
+                >
+                  Transfer
+                </p>
+                <h3 className="font-manrope-bold text-[32px]">
+                  {v.prices[isCityActive.id].transfer}€
+                </h3>
+                <p
+                  className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                    index >= vehicles.length - 2 ? "card-secondary-text" : ""
+                  }`}
+                >
+                  {" "}
+                  to {isCityActive.displayName}
+                </p>
+              </div>
+              <div className="flex justify-between items-center mt-5 w-full gap-8">
+                <div
+                  className={`flex flex-col justify-center items-center border-[#EBEBEB] border-[0.5px] rounded-2xl w-1/2 py-4 ${
+                    index >= vehicles.length - 2 ? "dark-border" : ""
+                  }`}
+                >
+                  <p
+                    className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                      index >= vehicles.length - 2 ? "card-secondary-text" : ""
+                    }`}
+                  >
+                    Hourly
+                  </p>
+                  <h3 className="font-manrope-bold text-[32px]">
+                    {v.prices[isCityActive.id].hourly}€
+                  </h3>
+                  <p
+                    className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                      index >= vehicles.length - 2 ? "card-secondary-text" : ""
+                    }`}
+                  >
+                    per hour
+                  </p>
+                </div>
+                <div
+                  className={`flex flex-col justify-center items-center border-[#EBEBEB] border-[0.5px] rounded-2xl w-1/2 py-4 ${
+                    index >= vehicles.length - 2 ? "dark-border" : ""
+                  }`}
+                >
+                  <p
+                    className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                      index >= vehicles.length - 2 ? "card-secondary-text" : ""
+                    }`}
+                  >
+                    Full Day
+                  </p>
+                  <h3 className="font-manrope-bold text-[32px]">
+                    {v.prices[isCityActive.id].fullDay}€
+                  </h3>
+                  <p
+                    className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                      index >= vehicles.length - 2 ? "card-secondary-text" : ""
+                    }`}
+                  >
+                    8 hours
+                  </p>
+                </div>
               </div>
             </div>
           ))}
