@@ -4,7 +4,7 @@ export default function ThirdCard() {
   return (
     <>
       {/* Span complètement à gauche */}
-      <span className="first-card-illu text-[12px] absolute left-3 top-3 -rotate-5  bg-[#404040] shadow-gray-offset p-2 rounded-lg">
+      <span className="third-card-illu text-[12px] absolute left-3 top-3 -rotate-5  bg-[#404040] shadow-gray-offset p-2 rounded-lg">
         <span className="text-[#C2C2C2]">08:45 ·</span> Nice Airport
       </span>
 

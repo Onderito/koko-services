@@ -66,97 +66,103 @@ export const performanceSection = () => {
   });
 
   // Animation de la FirstCard après les cartes
-  tl.from(
-    ".first-card-illu",
-    {
-      scale: 0.95,
-      rotate: 1,
-      autoAlpha: 0,
-      duration: 0.8,
-      ease: "power3.out",
-    },
-    "+=0.1"
-  );
-  tl.from(
-    ".illu-content",
-    {
-      autoAlpha: 0,
-      x: 15,
-      duration: 0.6,
-      ease: "power3.out",
-    },
-    "0.1"
-  );
+  // First card
+  tl.from(".first-card-illu", {
+    scale: 0.95,
+    rotate: 1,
+    autoAlpha: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  })
 
-  // ANIMATION DE LA SECOND CARD //
-  tl.from(
-    ".second-card-illu",
-    {
-      scale: 0.8,
-      y: 20,
-      autoAlpha: 0,
-      duration: 0.6,
-      ease: "power3.out",
-    },
-    "+=0.2"
-  );
+    .from(
+      ".illu-content",
+      {
+        autoAlpha: 0,
+        x: 15,
+        duration: 0.6,
+        ease: "power3.out",
+      },
+      "-=0.4"
+    ) // Overlap légèrement avec la précédente
 
-  // ANIMATION DE LA THIRD CARD //
-  tl.from(".first-path", {
-    drawSVG: "100% 100%", // Commence depuis le début, longueur 0
-    duration: 1.1,
-    ease: "power2.out",
-  });
-  tl.from(
-    ".second-path",
-    {
-      drawSVG: "100% 100%",
-      duration: 0.8,
-      ease: "back.out(1.5)",
-    },
-    "+=0.2"
-  );
-  tl.from(
-    ".third-card-illu",
-    {
-      autoAlpha: 0,
-      x: 15,
-      duration: 0.6,
-      ease: "power3.out",
-    },
-    "+=0.2"
-  );
+    // Second card
+    .from(
+      ".second-card-illu",
+      {
+        scale: 0.8,
+        y: 20,
+        autoAlpha: 0,
+        duration: 0.6,
+        ease: "power3.out",
+      },
+      "+=0.2"
+    )
 
-  // ANIMATION DE LA FOURTH CARD //
-  tl.from(
-    ".text-fourth-card",
-    {
-      autoAlpha: 0,
-      x: 15,
-      duration: 1.2,
-      ease: "power3.out",
-    },
-    "+=0.2"
-  );
-  tl.from(
-    ".flag-card",
-    {
-      scale: 0.8,
-      autoAlpha: 0,
-      rotate: 2,
-      duration: 1.2,
-      ease: "bounce.out",
-    },
-    "+=0.2"
-  );
-  tl.from(
-    ".mouse-svg",
-    {
-      autoAlpha: 0,
-      x: 15,
-      duration: 0.6,
-      ease: "power3.out",
-    },
-    "<"
-  );
+    // Third card avec paths
+    .from(
+      ".first-path",
+      {
+        drawSVG: "100% 100%",
+        duration: 1.1,
+        ease: "power2.out",
+      },
+      "+=0.2"
+    )
+
+    .from(
+      ".second-path",
+      {
+        drawSVG: "100% 100%",
+        duration: 0.8,
+        ease: "back.out(1.5)",
+      },
+      "+=0.1"
+    )
+
+    .from(
+      ".third-card-illu",
+      {
+        autoAlpha: 0,
+        x: 15,
+        duration: 0.6,
+        ease: "power3.out",
+      },
+      "+=0.2"
+    )
+
+    // Fourth card
+    .from(
+      ".text-fourth-card",
+      {
+        autoAlpha: 0,
+        x: 15,
+        duration: 1.2,
+        ease: "power3.out",
+      },
+      "+=0.2"
+    )
+
+    .from(
+      ".flag-card",
+      {
+        scale: 0.8,
+        autoAlpha: 0,
+        rotate: 2,
+        duration: 1.2,
+        ease: "bounce.out",
+      },
+      "-=0.6"
+    ) // Commence avant la fin de la précédente
+
+    .from(
+      ".mouse-svg",
+      {
+        autoAlpha: 0,
+        x: 15,
+        duration: 0.6,
+        ease: "power3.out",
+      },
+      "+=0.1"
+    );
 };
