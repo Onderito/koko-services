@@ -20,7 +20,7 @@ export default function Pricing() {
         Tailored quotes for airport transfers, hourly services and custom
         journeys.
       </p>
-      <div className="mt-10 xl:mt-12 flex flex-col justify-center items-center">
+      <div className="mt-10 md:mt-12 xl:mt-12 flex flex-col justify-center items-center">
         <h5 className="text-[18px] font-manrope-bold ">
           Choose your destination
         </h5>
