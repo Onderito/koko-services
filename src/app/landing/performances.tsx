@@ -1,11 +1,13 @@
 "use client";
-import Image from "next/image";
 import { performanceSection } from "../animation/performance";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import FirstCard from "../illustrations/first-card";
 import SecondCard from "../illustrations/second-card";
 import ThirdCard from "../illustrations/third-card";
 import FourthCard from "../illustrations/fourth-card";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   {
@@ -27,41 +29,57 @@ const cards = [
 ];
 
 export default function Performances() {
+  const sectionRef = useRef(null)
+
   useEffect(() => {
-    performanceSection();
+    const ctx = gsap.context(() => {
+      // Force un recalcul complet des positions AVANT de lancer l'animation
+      ScrollTrigger.refresh();
+      gsap.delayedCall(0.1, () => {
+        performanceSection();
+        ScrollTrigger.refresh(); // Et encore après
+      });
+    }, sectionRef)
+    
+    return () => {
+      ctx.revert();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    }
   }, []);
   return (
-    <div className=" pin-container min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
-      <div className="performance-section flex flex-col py-10 px-2">
-        <h2 className="text-white text-[32px] md:text-[56px] perf-title font-manrope-bold mt-4 text-center">
-          Performance that speaks for itself
-        </h2>
-        <p className="text-white text-[16px] md:text-[18px] text-center mt-4 perf-desc">
-          Flawless execution, absolute discretion, and a reputation built on
-          consistency.
-        </p>
-        <div className="flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row xl:px-16 gap-4 text-white mt-10">
-          {cards.map((c, index) => (
-            <div
-              className="bg-[#404040] perf-card shadow-white-thin flex flex-col rounded-3xl p-3 xl:max-w-xs"
-              key={index}
-            >
-              <div className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative">
-                {index === 0 && <FirstCard />}
-                {index === 1 && <SecondCard />}
-                {index === 2 && <ThirdCard />}
-                {index === 3 && <FourthCard />}
+    <section ref={sectionRef}>
+      <div className="pin-container min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
+        <div className="performance-section flex flex-col py-10 px-2">
+          <h2 className="text-white text-[32px] md:text-[56px] perf-title font-manrope-bold mt-4 text-center">
+            Performance that speaks for itself
+          </h2>
+          <p className="text-white text-[16px] md:text-[18px] text-center mt-4 perf-desc">
+            Flawless execution, absolute discretion, and a reputation built on
+            consistency.
+          </p>
+          <div className="flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row xl:px-16 gap-4 text-white mt-10">
+            {cards.map((c, index) => (
+              <div
+                className="bg-[#404040] perf-card shadow-white-thin flex flex-col rounded-3xl p-3 xl:max-w-xs"
+                key={index}
+              >
+                <div className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative">
+                  {index === 0 && <FirstCard />}
+                  {index === 1 && <SecondCard />}
+                  {index === 2 && <ThirdCard />}
+                  {index === 3 && <FourthCard />}
+                </div>
+                <h4 className="font-manrope-bold text-center text-[18px] md:text-[20px] m mt-8">
+                  {c.title}
+                </h4>
+                <p className="font-manrope-regular text-center mt-2 text-[16px]">
+                  {c.text}
+                </p>
               </div>
-              <h4 className="font-manrope-bold text-center text-[18px] md:text-[20px] m mt-8">
-                {c.title}
-              </h4>
-              <p className="font-manrope-regular text-center mt-2 text-[16px]">
-                {c.text}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,22 +1,36 @@
 "use client";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
 import {
   heroSection,
   imgOnHover,
   buttonAnimation,
   heroScroll,
 } from "../animation/hero";
-import { useEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
+
+import { useEffect, useRef } from "react";
 
 export default function HeroSection() {
+  const sectionRef = useRef(null);
+
   useEffect(() => {
-    heroSection();
-    heroScroll();
-    imgOnHover();
-    buttonAnimation();
+    const ctx = gsap.context(() => {
+      heroSection();
+      heroScroll();
+      imgOnHover();
+      buttonAnimation();
+    }, sectionRef); // <-- animations limitées à ce composant
+
+    return () => {
+      ctx.revert();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
   return (
-    <section>
+    <section ref={sectionRef}>
       <div className="absolute inset-0 -z-10 w-full h-[700px] md:h-[900px] ">
         <Image
           className="rounded-b-[20px]"
