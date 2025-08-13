@@ -11,6 +11,7 @@ export const performanceSection = () => {
   if (cards.length === 0) {
     return;
   }
+
   const split = SplitText.create(".perf-title", {
     type: "words, chars",
   });
