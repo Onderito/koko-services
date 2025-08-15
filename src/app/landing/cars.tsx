@@ -4,7 +4,7 @@ const vehiclesData = [
   {
     name: "Mercedes V-CLASS",
     type: "Van",
-    imageUrl: "/class-v.webp", // Assure-toi de placer ton image dans le dossier /public/images
+    imageUrl: "/class-v.webp",
     guests: "6 guests",
     bags: "6 bags",
     feature: "Ambient",
@@ -13,7 +13,7 @@ const vehiclesData = [
   {
     name: "Maybach",
     type: "Limousine",
-    imageUrl: "/maybach.webp", // Une autre image pour la variation
+    imageUrl: "/maybach.webp",
     guests: "3 guests",
     bags: "3 bags",
     feature: "VIP",
@@ -22,7 +22,7 @@ const vehiclesData = [
   {
     name: "Mercedes S-CLASS",
     type: "Berline",
-    imageUrl: "/class-s.webp", // Et une troisième
+    imageUrl: "/class-s.webp",
     guests: "3 guests",
     bags: "2 bags",
     feature: "Ambient",
@@ -34,12 +34,12 @@ export default function Cars() {
   return (
     <div className="flex-center-column">
       <span
-        style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
+        // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
+        className=" text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our cars
       </span>
-      <h2 className="title text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center h2 text-gray-100">
+      <h2 className="title text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center h2 ">
         Our Fleet, Your Comfort
       </h2>
       <p className="description text-[16px] md:text-[18px] text-center mt-4 ">

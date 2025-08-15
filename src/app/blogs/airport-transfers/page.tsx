@@ -16,7 +16,6 @@ export default function AirportTransfersPage() {
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
-
         <div className="relative z-10 container mx-auto px-2 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24 text-center">
           <div className="max-w-4xl mx-auto">
             <span className="inline-block text-[14px] md:text-[16px] bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full font-manrope-regular mb-6">
