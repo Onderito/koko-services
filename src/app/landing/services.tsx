@@ -14,21 +14,21 @@ const cards = [
     icon: "/transfer.svg",
     description:
       "Travel in a luxury vehicle with a bilingual driver. Enjoy a punctual, safe, and tailor-made ride experience—from Nice to Monaco, Cannes, and beyond.",
-    image: "/nice-hero.webp",
+    image: "/services/transfer.webp",
   },
   {
     title: "Hourly Services",
     icon: "/service.svg",
     description:
       "Travel in a luxury vehicle with a bilingual driver. Enjoy a punctual, safe, and tailor-made ride experience—from Nice to Monaco, Cannes, and beyond.",
-    image: "/nice-hero.webp",
+    image: "/services/hourly.webp",
   },
   {
     title: "Private Hour",
     icon: "/private.svg",
     description:
       "Travel in a luxury vehicle with a bilingual driver. Enjoy a punctual, safe, and tailor-made ride experience—from Nice to Monaco, Cannes, and beyond.",
-    image: "/nice-hero.webp",
+    image: "/services/private-tour.webp",
   },
 ];
 
@@ -74,11 +74,11 @@ export default function Services() {
               {card.description}
             </p>
             <Image
-              className="mt-8 xl:mt-16 rounded-2xl md:w-full object-cover"
+              className="mt-8 xl:mt-16 rounded-2xl md:w-full object-cover md:h-64"
               src={card.image}
               alt="image of service"
               width={400}
-              height={300}
+              height={400}
             />
             <div className="flex justify-center items-center w-full mt-4 gap-4">
               <button className="bg-white w-[40%] rounded-xl cursor-pointer inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
