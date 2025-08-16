@@ -9,21 +9,21 @@ const blogsData = [
     name: "Why Private Chauffeur Services Are Essential on the French Riviera",
     description:
       "Explore the key benefits of booking a personal driver in Nice, Cannes, and Monaco.",
-      link: "/blogs/private-chauffeur"
+    link: "/blogs/private-chauffeur"
   },
   {
     imageUrl: "/blog-cannes.webp",
     name: "Top 5 Luxury Events in the South of France (and How to Get There)",
     description:
       "From Cannes Film Festival to private galas — arrive in style and on time.",
-      link: "/blogs/luxury-events"
+    link: "/blogs/luxury-events"
   },
   {
     imageUrl: "/blog-airport.webp",
     name: "Airport Transfers in Nice: What to Expect From a Premium Chauffeur",
     description:
       "Stress-free pickups, punctuality, and high-end comfort for your next flight.",
-      link: "/blogs/airport-transfers"
+    link: "/blogs/airport-transfers"
   },
 ];
 
@@ -57,17 +57,17 @@ export default function Blogs() {
               width={400}
               height={300}
             />
-            <div className="flex flex-col justify-center items-center mt-4 font-manrope-regular text-[16px]">
+            <div className="flex flex-col justify-center items-start mt-4 font-manrope-regular text-[16px]">
               <span className="pb-2 font-manrope-bold text-[18px]  ">
                 {b.name}
               </span>
               <span className="py-1 font-manrope-regular text-[16px] ">
                 {b.description}
               </span>
-            </div>
-              <Link href={b.link} className="text-blue-400 text-start ">
+              <Link scroll={true} href={b.link} className="text-gray-400 text-start underline ">
                 Read More
               </Link>
+            </div>
           </div>
         ))}
       </div>

@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image";
+import Link from "next/link";
 
 const vehiclesData = [
   {
@@ -9,6 +12,7 @@ const vehiclesData = [
     bags: "6 bags",
     feature: "Ambient",
     button: "See More",
+    link: "/cars/classV",
   },
   {
     name: "Maybach",
@@ -18,6 +22,7 @@ const vehiclesData = [
     bags: "3 bags",
     feature: "VIP",
     button: "See More",
+    link: "/cars/maybach",
   },
   {
     name: "Mercedes S-CLASS",
@@ -27,6 +32,7 @@ const vehiclesData = [
     bags: "2 bags",
     feature: "Ambient",
     button: "See More",
+    link: "/cars/classS",
   },
 ];
 
@@ -77,9 +83,9 @@ export default function Cars() {
               </div>
             </div>
             <div className="absolute bottom-4 left-4 right-4">
-              <button className="w-full text-[#404040] bg-white inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px]">
-                See More
-              </button>
+              <Link scroll={true} href={v.link} className="block w-full text-[#404040] bg-white inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300">
+                {v.button}
+              </Link>
             </div>
           </div>
         ))}
