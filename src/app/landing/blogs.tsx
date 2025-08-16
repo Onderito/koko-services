@@ -64,7 +64,7 @@ export default function Blogs() {
               <span className="py-1 font-manrope-regular text-[16px] ">
                 {b.description}
               </span>
-              <Link scroll={true} href={b.link} className="text-gray-400 text-start underline ">
+              <Link scroll={true} href={b.link} className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300">
                 Read More
               </Link>
             </div>

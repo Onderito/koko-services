@@ -76,7 +76,7 @@ export default function Vip() {
         </div>
 
         {/* Tablette/Desktop: grid avec proportions ajustées */}
-        <div className="hidden md:grid md:grid-cols-4 md:gap-4 md:h-96">
+        <div className="hidden md:grid md:grid-cols-4 md:gap-4 md:h-[450px]">
           {/* Colonne gauche - plus rectangulaire (1 colonne) */}
           <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden">
             <h3 className="text-[20px] xl:text-[24px] font-manrope-bold leading-8">
