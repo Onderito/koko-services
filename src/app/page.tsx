@@ -6,12 +6,14 @@ import Cars from "./landing/cars";
 import Blogs from "./landing/blogs";
 import Pricing from "./landing/pricing";
 import Vip from "./landing/vip";
+import NavBar from "./layout/navBar";
 import Footer from "./layout/footer";
 
 export default function Home() {
   return (
     <>
       <SmoothScrollWrapper>
+        <NavBar />
         <section className="container mx-auto px-2 py-16 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
           <HeroSection />
         </section>
