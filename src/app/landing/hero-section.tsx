@@ -54,7 +54,7 @@ export default function HeroSection() {
             style
           </span>
         </h1>
-        <p className="description text-[16px] md:text-[18px] text-center mt-4 ">
+        <p className="description text-[16px] md:text-[18px] text-center mt-4">
           Private transfers. Unmatched comfort. Absolute peace of mind.
         </p>
         <div className=" relative ">
