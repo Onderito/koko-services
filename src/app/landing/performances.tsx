@@ -40,7 +40,7 @@ export default function Performances() {
         ScrollTrigger.refresh(); // Et encore après
       });
     }, sectionRef)
-    
+
     return () => {
       ctx.revert();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
