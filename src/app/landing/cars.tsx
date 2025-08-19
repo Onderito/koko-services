@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { forwardRef } from "react";
 
 const vehiclesData = [
   {
@@ -36,9 +37,9 @@ const vehiclesData = [
   },
 ];
 
-export default function Cars() {
+const Cars = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div className="flex-center-column">
+    <div ref={ref} className="flex-center-column">
       <span
         // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
         className=" text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
@@ -92,4 +93,8 @@ export default function Cars() {
       </div>
     </div>
   );
-}
+});
+
+Cars.displayName = "Cars";
+
+export default Cars;

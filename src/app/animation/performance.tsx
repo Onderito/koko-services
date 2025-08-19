@@ -23,6 +23,7 @@ export const performanceSection = () => {
       start: "top top",
       end: "+=3000",
       scrub: 1.5,
+      id: "performance-pin"
     },
   });
   tl.from(".performance-section", {

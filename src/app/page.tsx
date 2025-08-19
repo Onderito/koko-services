@@ -28,9 +28,10 @@ export default function Home() {
   const scrollTo = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
       gsap.to(window, { // On anime la fenêtre (le scroll global)
-        duration: 1.5, // Durée de l'animation de scroll (ajustez si besoin)
+        duration: 1.8, // Durée de l'animation de scroll (ajustez si besoin)
         scrollTo: ref.current, // La cible vers laquelle scroller
         ease: "power2.inOut", // Un effet de "douceur" pour le scroll
+        delay: 0.2,
       });
     }
   };
@@ -47,13 +48,13 @@ export default function Home() {
         </section>
         <Performance />
         <section className="container mx-auto px-2 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
-          <Cars />
+          <Cars ref={ourCarsRef} />
         </section>
         <section className="container mx-auto px-2 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
-          <Blogs />
+          <Blogs ref={blogRef} />
         </section>
         <section className="container mx-auto px-2 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
-          <Pricing />
+          <Pricing ref={pricingRef} />
         </section>
         <section className="container mx-auto px-2 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
           <Vip />
