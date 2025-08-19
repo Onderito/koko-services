@@ -35,15 +35,12 @@ export const serviceSection = () => {
 };
 
 export const animateCards = () => {
-  // On sélectionne toutes les cartes
   const cards = gsap.utils.toArray(".card-wrapper");
 
-  // Si aucune carte n'est trouvée, on ne fait rien pour éviter les erreurs
   if (cards.length === 0) {
     return;
   }
 
-  // On anime chaque carte individuellement avec un décalage (stagger)
   gsap.to(cards, {
     opacity: 1,
     y: 0,
@@ -53,15 +50,15 @@ export const animateCards = () => {
     duration: 1,
 
     scrollTrigger: {
-      trigger: ".service-container", // Le conteneur qui déclenche l'animation
-      start: "top 70%", // Démarre quand 70% du haut du trigger atteint le viewport
-      end: "bottom 80%", //
+      trigger: ".service-container",
+      start: "top 20%",
+      end: "bottom 80%",
       scrub: true,
     },
 
     stagger: {
       each: 0.2,
-      from: "end", // Commence le décalage depuis la première carte
+      from: "end",
     },
   });
 };
