@@ -29,7 +29,7 @@ export default function Maybach() {
     return (
         <div className="min-h-screen px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20">
             {/* Hero Section */}
-            <div className="flex flex-col xl:flex-row justify-center items-center gap-10 xl:min-h-dvh">
+            <div className="flex flex-col xl:flex-row justify-center items-center gap-10 ">
                 <div className="xl:w-2/3">
                     <h1 className="font-manrope-bold text-[44px] leading-[40px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[80px]"> Mercedes Maybach -
                         <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">Prestige Perfected</span></h1>
@@ -58,7 +58,7 @@ export default function Maybach() {
             </div>
 
             {/* Description Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 xl:mt-56">
                 <div className="order-2 lg:order-1">
                     <h2 className="font-manrope-bold text-[32px] md:text-[56px] xl:leading-16 text-[#404040] mb-6">
                         Discover the Mercedes Maybach

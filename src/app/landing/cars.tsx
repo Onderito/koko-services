@@ -37,9 +37,9 @@ const vehiclesData = [
   },
 ];
 
-const Cars = forwardRef<HTMLDivElement>((props, ref) => {
+export default function Cars() {
   return (
-    <div ref={ref} className="flex-center-column">
+    <div className="flex-center-column">
       <span
         // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
         className=" text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
@@ -93,8 +93,4 @@ const Cars = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </div>
   );
-});
-
-Cars.displayName = "Cars";
-
-export default Cars;
+};

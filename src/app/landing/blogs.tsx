@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { forwardRef } from "react";
 
 const blogsData = [
   {
@@ -28,9 +27,9 @@ const blogsData = [
   },
 ];
 
-const Blogs = forwardRef<HTMLDivElement>((props, ref) => {
+export default function Blogs() {
   return (
-    <div ref={ref} className="flex-center-column">
+    <div className="flex-center-column">
       <span
         style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
         className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
@@ -74,8 +73,4 @@ const Blogs = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </div>
   );
-});
-
-Blogs.displayName = "Blogs"
-
-export default Blogs;
+};

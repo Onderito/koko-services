@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import { cities, vehicles } from "../data/vehicles";
-import React, { forwardRef, useState } from "react";
+import React, { useState } from "react";
 
-const Pricing = forwardRef<HTMLDivElement>((props, ref) => {
+export default function Pricing() {
   const [isCityActive, setIsCityActive] = useState(cities[0]);
   return (
     <div className="flex-center-column">
@@ -13,7 +13,7 @@ const Pricing = forwardRef<HTMLDivElement>((props, ref) => {
       >
         our pricing
       </span>
-      <h2 ref={ref} className="title text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center h2 text-gray-100">
+      <h2 className="title text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center h2 text-gray-100">
         Chauffeur Services Pricing Guide
       </h2>
       <p className="description text-[16px] md:text-[18px] text-center mt-4 ">
@@ -142,8 +142,6 @@ const Pricing = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </div>
   );
-})
+}
 
-Pricing.displayName = "Pricing"
 
-export default Pricing;
