@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <SmoothScrollWrapper>
-        <section className="container mx-auto px-2 py-16 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+        <section className="container mx-auto px-2 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
           <HeroSection />
         </section>
         <section id="services" className="container mx-auto px-2 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
