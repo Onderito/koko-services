@@ -8,7 +8,7 @@ const vehiclesData = [
   {
     name: "Mercedes V-CLASS",
     type: "Van",
-    imageUrl: "/class-v.webp",
+    imageUrl: "/cars/class-v/class-v.webp",
     guests: "6 guests",
     bags: "6 bags",
     feature: "Ambient",
@@ -18,7 +18,7 @@ const vehiclesData = [
   {
     name: "Maybach",
     type: "Limousine",
-    imageUrl: "/maybach.webp",
+    imageUrl: "/cars/maybach/maybach.webp",
     guests: "3 guests",
     bags: "3 bags",
     feature: "VIP",
@@ -28,7 +28,7 @@ const vehiclesData = [
   {
     name: "Mercedes S-CLASS",
     type: "Berline",
-    imageUrl: "/class-s.webp",
+    imageUrl: "/cars/class-s/class-s.webp",
     guests: "3 guests",
     bags: "2 bags",
     feature: "Ambient",

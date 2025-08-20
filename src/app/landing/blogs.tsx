@@ -5,21 +5,21 @@ import Link from "next/link";
 
 const blogsData = [
   {
-    imageUrl: "/blog-private.webp",
+    imageUrl: "/blogs/blog-chauffeur.webp",
     name: "Why Private Chauffeur Services Are Essential on the French Riviera",
     description:
       "Explore the key benefits of booking a personal driver in Nice, Cannes, and Monaco.",
     link: "/blogs/private-chauffeur"
   },
   {
-    imageUrl: "/blog-cannes.webp",
+    imageUrl: "/blogs/blog-luxury-events.webp",
     name: "Top 5 Luxury Events in the South of France (and How to Get There)",
     description:
       "From Cannes Film Festival to private galas — arrive in style and on time.",
     link: "/blogs/luxury-events"
   },
   {
-    imageUrl: "/blog-airport.webp",
+    imageUrl: "/blogs/blog-airport.webp",
     name: "Airport Transfers in Nice: What to Expect From a Premium Chauffeur",
     description:
       "Stress-free pickups, punctuality, and high-end comfort for your next flight.",
