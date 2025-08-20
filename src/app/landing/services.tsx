@@ -16,21 +16,21 @@ const cards = [
     title: "Transfer",
     icon: "/transfer.svg",
     description:
-      "Travel in a luxury vehicle with a bilingual driver. Enjoy a punctual, safe, and tailor-made ride experience—from Nice to Monaco, Cannes, and beyond.",
+      "Point-to-point luxury transportation for airports, hotels, and events. Professional service with flight monitoring and personalized assistance throughout the French Riviera.",
     image: "/services/transfer.webp",
   },
   {
     title: "Hourly Services",
     icon: "/service.svg",
     description:
-      "Travel in a luxury vehicle with a bilingual driver. Enjoy a punctual, safe, and tailor-made ride experience—from Nice to Monaco, Cannes, and beyond.",
+      "Flexible chauffeur service by the hour for business meetings, shopping tours, or leisure activities. Your dedicated driver waits while you attend to your appointments.",
     image: "/services/hourly.webp",
   },
   {
     title: "Private Hour",
     icon: "/private.svg",
     description:
-      "Travel in a luxury vehicle with a bilingual driver. Enjoy a punctual, safe, and tailor-made ride experience—from Nice to Monaco, Cannes, and beyond.",
+      "Exclusive full-day or half-day chauffeur service for complete freedom and privacy. Explore the Côte d'Azur at your own pace with a personal driver-guide.",
     image: "/services/private-tour.webp",
   },
 ];
