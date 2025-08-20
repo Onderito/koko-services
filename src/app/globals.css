@@ -14,6 +14,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Gloria Hallelujah";
+  src: url("../app/assets/fonts/GloriaHallelujah-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -25,6 +32,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-manrope: "Manrope", sans-serif;
+  --font-gloria: "Gloria Hallelujah", cursive;
+
 }
 
 @layer utilities {
@@ -57,6 +66,9 @@
   }
   .inner-light-shadow {
     box-shadow: inset 0px 0px 2px 0px rgba(64, 64, 64, 0.25);
+  }
+  .no-blur-shadow-little {
+    box-shadow: 3px 3px 0px 0px #404040;
   }
   .card-dark {
     background-color: #2a2a2a !important;
