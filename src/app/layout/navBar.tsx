@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { usePathname } from "next/navigation";
 
 
-
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
