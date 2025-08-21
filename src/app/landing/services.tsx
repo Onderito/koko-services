@@ -31,7 +31,7 @@ const cards = [
     link: "/our-services/hourly-services"
   },
   {
-    title: "Private Hour",
+    title: "Private Tour",
     icon: "/private.svg",
     description:
       "Exclusive full-day or half-day chauffeur service for complete freedom and privacy. Explore the Côte d'Azur at your own pace with a personal driver-guide.",
@@ -59,11 +59,11 @@ export default function Services() {
     <div ref={sectionRef} className="service-container relative z-10 flex-center-column section-2">
       <span
         style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
+        className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our services
       </span>
-      <h2 className=" text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
+      <h2 className="title h2 text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
         What We Offer
       </h2>
       <div className="card mt-10 flex flex-col gap-8 xl:gap-10 xl:flex-row ">

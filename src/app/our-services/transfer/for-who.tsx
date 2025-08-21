@@ -35,16 +35,21 @@ export default function ForWho() {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "-=150 20%",
-                    end: "+=200%",
+                    trigger: stackRef.current,
+                    start: "top center",
+                    end: "bottom top+=100",
                     pin: true,
-                    scrub: 1.5,
+                    scrub: 2,
                     anticipatePin: 1, // il nous permet de garder le pin même quand on quitte la section
                 }
             });
+            // tl.to(stackRef.current, {
+            //     yPercent: 50,
+            //     duration: 0.5,
+            //     ease: "none",
+            // })
             tl.to(card1Ref.current, {
-                yPercent: -820,
+                yPercent: -520,
                 rotation: 15,
                 transformOrigin: "bottom center",
                 z: 100,
@@ -84,7 +89,7 @@ export default function ForWho() {
                     </div>
                 ))}
             </div>
-            <div ref={stackRef} className="hidden xl:block relative w-fit mx-auto mt-16 isolate">
+            <div ref={stackRef} className="hidden xl:block relative w-fit mx-auto mt-24 isolate">
                 {/* Card 1 - devant */}
                 <div ref={card1Ref} className="relative z-50 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <Image src={"/icon-services/suit-case.svg"} alt="icon suitcase" width={40} height={40} />

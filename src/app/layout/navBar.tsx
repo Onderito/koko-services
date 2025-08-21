@@ -2,9 +2,13 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from "next/navigation";
+import path from 'path';
+
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
         <nav className="sticky top-5 z-50">
@@ -15,32 +19,35 @@ export default function NavBar() {
 
                     {/* Logo à gauche */}
                     <Link href="/" className="font-manrope-bold text-[18px] md:text-[20px] text-[#404040]">
-                        Koko Services
+                        Koko limo
                     </Link>
 
                     {/* Liens centrés */}
-                    <ul className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
-                        <li>
-                            <a href="#services" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
-                                Services
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#cars" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
-                                Our cars
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#blogs" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
-                                Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#pricing" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
-                                Pricing
-                            </a>
-                        </li>
-                    </ul>
+                    {pathname === '/' && (
+
+                        <ul className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+                            <li>
+                                <a href="#services" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                                    Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#cars" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                                    Our cars
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#blogs" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#pricing" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                                    Pricing
+                                </a>
+                            </li>
+                        </ul>
+                    )}
 
                     {/* Bouton / Mobile burger à droite */}
                     <div className="flex items-center gap-4">
@@ -65,33 +72,36 @@ export default function NavBar() {
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden bg-white rounded-3xl border-[0.5px]  border-[#E5E5E5] mt-2">
-                    <ul className="py-4 space-y-2 px-2 ">
-                        <li>
-                            <a href="#services" className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
-                                Services
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#cars" className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
-                                Our cars
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#blogs" className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
-                                Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#pricing" className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
-                                Pricing
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" className="block px-4 py-4 font-manrope-bold text-[16px] text-white bg-[#23C063] rounded-2xl text-center">
-                                Contact us
-                            </a>
-                        </li>
-                    </ul>
+
+                    {pathname === '/' && (
+                        <ul className="py-4 space-y-2 px-2 ">
+                            <li>
+                                <a href="#services" className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
+                                    Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#cars" className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
+                                    Our cars
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#blogs" className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#pricing" className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" className="block px-4 py-4 font-manrope-bold text-[16px] text-white bg-[#23C063] rounded-2xl text-center">
+                                    Contact us
+                                </a>
+                            </li>
+                        </ul>
+                    )}
                 </div>
             )}
         </nav>

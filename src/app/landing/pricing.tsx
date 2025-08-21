@@ -17,8 +17,7 @@ export default function Pricing() {
         Chauffeur Services Pricing Guide
       </h2>
       <p className="text-[16px] md:text-[18px] text-center mt-4 ">
-        Tailored quotes for airport transfers, hourly services and custom
-        journeys.
+        Tailored quotes from nice airport to :
       </p>
       <div className="mt-10 md:mt-12 xl:mt-12 flex flex-col justify-center items-center">
         <h5 className="text-[18px] font-manrope-bold ">
