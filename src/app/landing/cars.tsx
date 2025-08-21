@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { forwardRef } from "react";
 
 const vehiclesData = [
   {
@@ -46,10 +45,10 @@ export default function Cars() {
       >
         our cars
       </span>
-      <h2 className="title text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center h2 ">
+      <h2 className="text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center ">
         Our Fleet, Your Comfort
       </h2>
-      <p className="description text-[16px] md:text-[18px] text-center mt-4 ">
+      <p className=" text-[16px] md:text-[18px] text-center mt-4 ">
         Choose from our range of luxury vehicles — curated for style, space, and
         performance.{" "}
       </p>

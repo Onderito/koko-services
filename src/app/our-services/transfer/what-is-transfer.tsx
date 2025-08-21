@@ -10,7 +10,7 @@ export default function WhatIsTransfer() {
                 We believe a transfer is more than just a ride. It's the seamless transition between two moments of your journey.
             </p>
 
-            <div className="flex flex-col xl:flex-row justify-center items-center gap-10 py-10 xl:py-24">
+            <div className="relative -z-10 flex flex-col xl:flex-row justify-center items-center gap-10 py-10 xl:py-24">
                 <div className="relative overflow-hidden flex flex-col justify-center xl:justify-start items-center bg-[#404040] p-4 py-10 rounded-2xl text-white xl:max-w-3xl xl:h-[410px] ">
                     <h3 className="font-manrope-bold text-[20px] md:text-[22px] xl:text-[32px] ">Our Commitment</h3>
                     <p className="relative z-20 text-center mt-4 font-manrope-regular text-[16px] md:text-[18px] xl:text-[20px] ">Our commitment is to flawless execution. Professional, bilingual drivers and impeccably maintained vehicles ensure your safety, comfort, and absolute punctuality.</p>

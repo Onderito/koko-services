@@ -6,7 +6,7 @@ export default function HeroSection() {
             {/* Hero Section */}
             <div className="flex flex-col xl:flex-row justify-center items-center gap-10">
                 <div className="xl:w-2/3">
-                    <h1 className="font-manrope-bold text-[44px] leading-[40px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[72px]  ">Transfers </h1>
+                    <h1 className="font-manrope-bold text-[44px] leading-[40px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[72px]  ">Private Tour </h1>
                     <p className="font-manrope-regular text-[18px] tracking-[-1%] xl:tracking-[-2%] leading-[26px] md:text-[20px] mt-4 xl:mt-6">Where every journey is a statement of elegance. From the airport to the Riviera's heart, travel in unparalleled comfort.</p>
                     <div className="flex gap-4 mt-8 xl:mt-10">
                         <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-10 font-manrope-bold text-[16px] tracking-[-2%] text-white rounded-xl">Book Now</button>
@@ -27,7 +27,7 @@ export default function HeroSection() {
 
                     {/* First Image */}
                     <div className="absolute top-15 left-5 md:left-10">
-                        <h4 className="text-[10px] md:text-[14px] xl:text-[16px] p-1 px-4 xl:px-6 xl:py-2 ml-auto mb-6 bg-white rounded-lg xl:rounded-xl border-[0.5px] border-[#E5E5E5] w-fit font-gloria">Nice airport</h4>
+                        <h4 className="text-[10px] md:text-[14px] xl:text-[16px] p-1 px-4 xl:px-6 xl:py-2 ml-auto mb-6 bg-white rounded-lg xl:rounded-xl border-[0.5px] border-[#E5E5E5] w-fit font-gloria">Nice</h4>
                         <Image
                             src="/services/airport-arrivals.webp"
                             alt="airport arrivals image"
@@ -43,9 +43,9 @@ export default function HeroSection() {
 
                     {/* Second Image */}
                     <div className="absolute top-29 right-5 md:top-60 ">
-                        <h4 className="text-[10px] md:text-[14px] xl:text-[16px] p-1 px-4 xl:px-6 xl:py-2 mr-auto mb-6 bg-white rounded-lg xl:rounded-xl border-[0.5px] border-[#E5E5E5] w-fit font-gloria">St Tropez</h4>
+                        <h4 className="text-[10px] md:text-[14px] xl:text-[16px] p-1 px-4 xl:px-6 xl:py-2 mr-auto mb-6 bg-white rounded-lg xl:rounded-xl border-[0.5px] border-[#E5E5E5] w-fit font-gloria">Èze </h4>
                         <Image
-                            src="/services/saint-tropez.webp"
+                            src="/services/eze.webp"
                             alt="Saint Tropez image"
                             width={300}
                             height={300}
