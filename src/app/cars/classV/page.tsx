@@ -51,7 +51,7 @@ export default function ClassVPage() {
                             src="/cars/class-v/class-v.svg"
                             alt="Class V"
                             fill
-                            className="object-contain scale-130"
+                            className="object-contain scale-120"
                         />
                     </div>
                 </div>

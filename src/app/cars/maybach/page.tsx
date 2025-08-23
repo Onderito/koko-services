@@ -51,7 +51,7 @@ export default function Maybach() {
                             src="/cars/maybach/maybach.svg"
                             alt="Class V"
                             fill
-                            className="object-contain scale-130"
+                            className="object-contain scale-110"
                         />
                     </div>
                 </div>

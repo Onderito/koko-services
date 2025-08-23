@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
+
 
 const vehiclesData = [
   {
@@ -36,7 +38,20 @@ const vehiclesData = [
   },
 ];
 
+
+
 export default function Cars() {
+  const router = useRouter(); // Déplacé à l'intérieur du composant
+
+
+  const handleClick = (link: string): void => {
+    router.push(link);
+    // Scroll avec un petit délai pour s'assurer que la navigation est terminée
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="flex-center-column">
       <span
@@ -83,13 +98,16 @@ export default function Cars() {
               </div>
             </div>
             <div className="absolute bottom-4 left-4 right-4">
-              <Link scroll={true} href={v.link} className="block w-full text-[#404040] bg-white inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300">
+              <button
+                onClick={() => handleClick(v.link)}
+                className="block w-full text-[#404040] bg-white cursor-pointer inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300"
+              >
                 {v.button}
-              </Link>
+              </button>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </div >
   );
 };

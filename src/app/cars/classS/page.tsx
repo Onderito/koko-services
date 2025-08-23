@@ -51,7 +51,7 @@ export default function ClassSPage() {
                             src="/cars/class-s/class-s.svg"
                             alt="Class S"
                             fill
-                            className="object-contain scale-130"
+                            className="object-contain scale-120"
                         />
                     </div>
                 </div>
