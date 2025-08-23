@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from 'next/navigation';
 
 
@@ -41,8 +40,7 @@ const vehiclesData = [
 
 
 export default function Cars() {
-  const router = useRouter(); // Déplacé à l'intérieur du composant
-
+  const router = useRouter();
 
   const handleClick = (link: string): void => {
     router.push(link);

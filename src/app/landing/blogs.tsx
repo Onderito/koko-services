@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const blogsData = [
   {
@@ -28,6 +28,14 @@ const blogsData = [
 ];
 
 export default function Blogs() {
+  const router = useRouter();
+
+  const handleClick = (link: string): void => {
+    router.push(link);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  }
   return (
     <div className="flex-center-column">
       <span
@@ -64,9 +72,9 @@ export default function Blogs() {
               <span className="py-1 font-manrope-regular text-[16px] ">
                 {b.description}
               </span>
-              <Link scroll={true} href={b.link} className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300">
+              <button onClick={() => handleClick(b.link)} className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300 cursor-pointer">
                 Read More
-              </Link>
+              </button>
             </div>
           </div>
         ))}

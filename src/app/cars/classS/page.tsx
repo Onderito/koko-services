@@ -31,7 +31,7 @@ export default function ClassSPage() {
             {/* Hero Section */}
             <div className="flex flex-col xl:flex-row justify-center items-center gap-10">
                 <div className="xl:w-2/3">
-                    <h1 className="font-manrope-bold text-[44px] leading-[40px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[72px]  ">Mercedes S-Class -
+                    <h1 className="font-manrope-bold text-[44px] leading-[40px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[72px] ">Mercedes S-Class -
                         <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">Excellence Defined</span></h1>
                     <p className="font-manrope-regular text-[18px] tracking-[-1%] xl:tracking-[-2%] leading-[26px] md:text-[20px] mt-4 xl:mt-6">The pinnacle of luxury with handcrafted interior, advanced technology, and unparalleled comfort for discerning clients</p>
                     <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-2%] text-white rounded-xl mt-8 xl:mt-10 button">Book S-Class</button>
@@ -58,7 +58,7 @@ export default function ClassSPage() {
             </div>
 
             {/* Description Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 xl:mt-56">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 mt-12 xl:mt-56">
                 <div className="order-2 lg:order-1">
                     <h2 className="font-manrope-bold text-[32px] md:text-[56px] xl:leading-16 text-[#404040] mb-6">
                         Discover the Mercedes Class-S
@@ -79,7 +79,7 @@ export default function ClassSPage() {
                     <div className="grid grid-cols-2 gap-3 md:gap-4">
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
                             <Image
-                                src="/class-s-first.webp"
+                                src="/cars/class-s/class-s-first.webp"
                                 alt="Class S Interior"
                                 fill
                                 className="object-cover"
@@ -87,7 +87,7 @@ export default function ClassSPage() {
                         </div>
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
                             <Image
-                                src="/class-s-second.webp"
+                                src="/cars/class-s/class-s-second.webp"
                                 alt="Class S Exterior"
                                 fill
                                 className="object-cover"
@@ -95,7 +95,7 @@ export default function ClassSPage() {
                         </div>
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden col-span-2">
                             <Image
-                                src="/class-s-third.webp"
+                                src="/cars/class-s/class-s-third.webp"
                                 alt="Class S Details"
                                 fill
                                 className="object-cover"
