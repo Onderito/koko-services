@@ -54,8 +54,6 @@ export default function NavBar() {
                             </Link>
                         </li>
                     </ul>
-
-
                     {/* Bouton / Mobile burger à droite */}
                     <div className="flex items-center gap-4">
                         {/* Desktop button */}
@@ -75,7 +73,6 @@ export default function NavBar() {
                     </div>
                 </div>
             </div>
-
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden bg-white rounded-3xl border-[0.5px]  border-[#E5E5E5] mt-2">
