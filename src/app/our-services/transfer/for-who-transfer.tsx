@@ -23,7 +23,7 @@ const card = [
     }
 ]
 
-export default function ForWho() {
+export default function ForWhoTransfer() {
     const containerRef = useRef<HTMLDivElement>(null);
     const stackRef = useRef<HTMLDivElement>(null);
     const card1Ref = useRef<HTMLDivElement>(null);
@@ -35,19 +35,14 @@ export default function ForWho() {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: stackRef.current,
-                    start: "top center",
+                    trigger: containerRef.current,
+                    start: "top 20%",
                     end: "bottom top+=100",
                     pin: true,
                     scrub: 2,
                     anticipatePin: 1, // il nous permet de garder le pin même quand on quitte la section
                 }
             });
-            // tl.to(stackRef.current, {
-            //     yPercent: 50,
-            //     duration: 0.5,
-            //     ease: "none",
-            // })
             tl.to(card1Ref.current, {
                 yPercent: -520,
                 rotation: 15,
