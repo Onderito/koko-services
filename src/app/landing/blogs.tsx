@@ -1,25 +1,25 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const blogsData = [
   {
-    imageUrl: "/blog-private.webp",
+    imageUrl: "/blogs/blog-chauffeur.webp",
     name: "Why Private Chauffeur Services Are Essential on the French Riviera",
     description:
       "Explore the key benefits of booking a personal driver in Nice, Cannes, and Monaco.",
     link: "/blogs/private-chauffeur"
   },
   {
-    imageUrl: "/blog-cannes.webp",
+    imageUrl: "/blogs/blog-luxury-events.webp",
     name: "Top 5 Luxury Events in the South of France (and How to Get There)",
     description:
       "From Cannes Film Festival to private galas — arrive in style and on time.",
     link: "/blogs/luxury-events"
   },
   {
-    imageUrl: "/blog-airport.webp",
+    imageUrl: "/blogs/blog-airport.webp",
     name: "Airport Transfers in Nice: What to Expect From a Premium Chauffeur",
     description:
       "Stress-free pickups, punctuality, and high-end comfort for your next flight.",
@@ -28,18 +28,26 @@ const blogsData = [
 ];
 
 export default function Blogs() {
+  const router = useRouter();
+
+  const handleClick = (link: string): void => {
+    router.push(link);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  }
   return (
     <div className="flex-center-column">
       <span
-        style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
+        // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
+        className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our blogs
       </span>
-      <h2 className="title text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center h2 text-gray-100">
+      <h2 className="text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center">
         Chauffeur Insights & Luxury Travel Tips
       </h2>
-      <p className="description text-[16px] md:text-[18px] text-center mt-4 ">
+      <p className="text-[16px] md:text-[18px] text-center mt-4 ">
         Explore articles on premium transportation, airport transfers, and
         travel experiences along the French Riviera.
       </p>
@@ -64,9 +72,9 @@ export default function Blogs() {
               <span className="py-1 font-manrope-regular text-[16px] ">
                 {b.description}
               </span>
-              <Link scroll={true} href={b.link} className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300">
+              <button onClick={() => handleClick(b.link)} className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300 cursor-pointer">
                 Read More
-              </Link>
+              </button>
             </div>
           </div>
         ))}

@@ -1,24 +1,24 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
-import { forwardRef } from "react";
+import { useRouter } from 'next/navigation';
+
 
 const vehiclesData = [
   {
     name: "Mercedes V-CLASS",
     type: "Van",
-    imageUrl: "/class-v.webp",
+    imageUrl: "/cars/class-v/class-v.webp",
     guests: "6 guests",
     bags: "6 bags",
     feature: "Ambient",
     button: "See More",
-    link: "/cars/classV",
+    link: "/cars/class-v",
   },
   {
     name: "Maybach",
     type: "Limousine",
-    imageUrl: "/maybach.webp",
+    imageUrl: "/cars/maybach/maybach.webp",
     guests: "3 guests",
     bags: "3 bags",
     feature: "VIP",
@@ -28,16 +28,28 @@ const vehiclesData = [
   {
     name: "Mercedes S-CLASS",
     type: "Berline",
-    imageUrl: "/class-s.webp",
+    imageUrl: "/cars/class-s/class-s.webp",
     guests: "3 guests",
     bags: "2 bags",
     feature: "Ambient",
     button: "See More",
-    link: "/cars/classS",
+    link: "/cars/class-s",
   },
 ];
 
+
+
 export default function Cars() {
+  const router = useRouter();
+
+  const handleClick = (link: string): void => {
+    router.push(link);
+    // Scroll avec un petit délai pour s'assurer que la navigation est terminée
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="flex-center-column">
       <span
@@ -46,10 +58,10 @@ export default function Cars() {
       >
         our cars
       </span>
-      <h2 className="title text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center h2 ">
+      <h2 className="text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center ">
         Our Fleet, Your Comfort
       </h2>
-      <p className="description text-[16px] md:text-[18px] text-center mt-4 ">
+      <p className=" text-[16px] md:text-[18px] text-center mt-4 ">
         Choose from our range of luxury vehicles — curated for style, space, and
         performance.{" "}
       </p>
@@ -84,13 +96,16 @@ export default function Cars() {
               </div>
             </div>
             <div className="absolute bottom-4 left-4 right-4">
-              <Link scroll={true} href={v.link} className="block w-full text-[#404040] bg-white inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300">
+              <button
+                onClick={() => handleClick(v.link)}
+                className="block w-full text-[#404040] bg-white cursor-pointer inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300"
+              >
                 {v.button}
-              </Link>
+              </button>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </div >
   );
 };

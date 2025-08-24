@@ -27,7 +27,7 @@ const featuresData = [
 
 export default function Maybach() {
     return (
-        <div className="min-h-screen px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20">
+        <div className="min-h-screen px-2 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
             {/* Hero Section */}
             <div className="flex flex-col xl:flex-row justify-center items-center gap-10 ">
                 <div className="xl:w-2/3">
@@ -51,7 +51,7 @@ export default function Maybach() {
                             src="/cars/maybach/maybach.svg"
                             alt="Class V"
                             fill
-                            className="object-contain scale-130"
+                            className="object-contain scale-110"
                         />
                     </div>
                 </div>
@@ -76,7 +76,7 @@ export default function Maybach() {
                     <div className="grid grid-cols-2 gap-3 md:gap-4">
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
                             <Image
-                                src="/maybach-first.webp"
+                                src="/cars/maybach/maybach-first.webp"
                                 alt="Maybach Interior"
                                 fill
                                 className="object-cover"
@@ -84,7 +84,7 @@ export default function Maybach() {
                         </div>
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
                             <Image
-                                src="/maybach-second.webp"
+                                src="/cars/maybach/maybach-second.webp"
                                 alt="Maybach Exterior"
                                 fill
                                 className="object-cover"
@@ -92,7 +92,7 @@ export default function Maybach() {
                         </div>
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden col-span-2">
                             <Image
-                                src="/maybach-third.webp"
+                                src="/cars/maybach/maybach-third.webp"
                                 alt="Maybach Details"
                                 fill
                                 className="object-cover"

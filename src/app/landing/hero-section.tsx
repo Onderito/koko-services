@@ -30,11 +30,11 @@ export default function HeroSection() {
     };
   }, []);
   return (
-    <section ref={sectionRef}>
+    <section className="mt-10" ref={sectionRef}>
       <div className="absolute inset-0 -z-10 w-full h-[700px] md:h-[900px] ">
         <Image
           className="rounded-b-[20px]"
-          src="/bg-hero.jpg"
+          src="/bg-layout/bg-hero.jpg"
           alt="Hero image"
           quality={100}
           layout="fill"
@@ -91,7 +91,7 @@ export default function HeroSection() {
 
         <Image
           className="mt-16 rounded-[30px] border-5 xl:border-10 xl:w-full border-white shadow-lg img relative z-50"
-          src="/nice-hero.webp"
+          src="/bg-layout/nice-hero.webp"
           alt="Hero image"
           quality={100}
           width={1000}

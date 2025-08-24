@@ -8,17 +8,16 @@ export default function Pricing() {
   return (
     <div className="flex-center-column">
       <span
-        style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
+        // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
+        className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our pricing
       </span>
-      <h2 className="title text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center h2 text-gray-100">
+      <h2 className="text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center ">
         Chauffeur Services Pricing Guide
       </h2>
-      <p className="description text-[16px] md:text-[18px] text-center mt-4 ">
-        Tailored quotes for airport transfers, hourly services and custom
-        journeys.
+      <p className="text-[16px] md:text-[18px] text-center mt-4 ">
+        Tailored quotes from nice airport to :
       </p>
       <div className="mt-10 md:mt-12 xl:mt-12 flex flex-col justify-center items-center">
         <h5 className="text-[18px] font-manrope-bold ">
