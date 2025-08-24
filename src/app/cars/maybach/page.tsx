@@ -76,7 +76,7 @@ export default function Maybach() {
                     <div className="grid grid-cols-2 gap-3 md:gap-4">
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
                             <Image
-                                src="/maybach-first.webp"
+                                src="/cars/maybach/maybach-first.webp"
                                 alt="Maybach Interior"
                                 fill
                                 className="object-cover"
@@ -84,7 +84,7 @@ export default function Maybach() {
                         </div>
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
                             <Image
-                                src="/maybach-second.webp"
+                                src="/cars/maybach/maybach-second.webp"
                                 alt="Maybach Exterior"
                                 fill
                                 className="object-cover"
@@ -92,7 +92,7 @@ export default function Maybach() {
                         </div>
                         <div className="aspect-[4/3] relative rounded-lg overflow-hidden col-span-2">
                             <Image
-                                src="/maybach-third.webp"
+                                src="/cars/maybach/maybach-third.webp"
                                 alt="Maybach Details"
                                 fill
                                 className="object-cover"
