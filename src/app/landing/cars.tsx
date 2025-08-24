@@ -13,7 +13,7 @@ const vehiclesData = [
     bags: "6 bags",
     feature: "Ambient",
     button: "See More",
-    link: "/cars/classV",
+    link: "/cars/class-v",
   },
   {
     name: "Maybach",
@@ -33,7 +33,7 @@ const vehiclesData = [
     bags: "2 bags",
     feature: "Ambient",
     button: "See More",
-    link: "/cars/classS",
+    link: "/cars/class-s",
   },
 ];
 

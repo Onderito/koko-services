@@ -27,7 +27,7 @@ const featuresData = [
 
 export default function ClassSPage() {
     return (
-        <div className="min-h-screen px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20">
+        <div className="min-h-screen px-2 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
             {/* Hero Section */}
             <div className="flex flex-col xl:flex-row justify-center items-center gap-10">
                 <div className="xl:w-2/3">
