@@ -2,16 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  serviceSection,
-  animateCards,
-  setInitialCardState,
-  serviceScroll,
-} from "../animation/service";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger);
+import { globalAnimation } from "../animation/global-animation";
 
 const cards = [
   {
@@ -41,29 +35,25 @@ const cards = [
 ];
 
 export default function Services() {
-  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
     const ctx = gsap.context(() => {
-      setInitialCardState();
-      serviceSection();
-      serviceScroll();
-      animateCards();
-      ScrollTrigger.refresh(); // un seul refresh à la fin
-    }, sectionRef);
+      globalAnimation();
+    });
 
     return () => ctx.revert();
   }, []);
   return (
 
-    <div ref={sectionRef} className="service-container relative z-10 flex-center-column section-2">
+    <div className="main-container relative z-10 flex-center-column section-2">
       <span
         style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
         className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our services
       </span>
-      <h2 className="title h2 text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
+      <h2 className="split text-gray-100 text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
         What We Offer
       </h2>
       <div className="card mt-10 flex flex-col gap-8 xl:gap-10 xl:flex-row ">

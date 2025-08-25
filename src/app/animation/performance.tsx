@@ -3,80 +3,80 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { SplitText } from "gsap/all";
 import { DrawSVGPlugin } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(DrawSVGPlugin);
+
+gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
 
 export const performanceSection = () => {
-  const cards = gsap.utils.toArray(".perf-card");
-  if (cards.length === 0) {
-    return;
-  }
+  const root = document.querySelector(".performance-section");
+  const pin = document.querySelector(".pin-container");
+  if (!root || !pin) return () => { };
 
+  const cards = gsap.utils.toArray<HTMLElement>(".perf-card");
+  if (!cards.length) return () => { };
+
+  // SplitText
   const split = SplitText.create(".perf-title", {
-    type: "words, chars",
+    type: "words,chars",
   });
+
+  gsap.set(".perf-card", { willChange: "transform,opacity", force3D: true });
 
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".pin-container",
+      trigger: pin,                           // la zone à pinner
       pin: true,
       start: "top top",
-      end: "+=3000",
-      scrub: 1.5,
-      id: "performance-pin"
+      end: () => "+=" + window.innerHeight * 3, // durée relative au viewport
+      scrub: 1.2,
+      anticipatePin: 1,
+      pinSpacing: true,
+      invalidateOnRefresh: true,
     },
   });
+
   tl.from(".performance-section", {
     autoAlpha: 0,
     y: 20,
     duration: 0.5,
-  });
-  tl.from(
-    split.chars,
-    {
-      y: 20,
-      autoAlpha: 0,
-      stagger: 0.02,
-      duration: 0.4,
-      ease: "power2.out",
-    },
-    "-=0.2"
-  );
-  tl.from(
-    ".perf-desc",
-    {
-      y: 20,
-      autoAlpha: 0,
-      duration: 0.5,
-      ease: "power2.out",
-    },
-    "-=0.2"
-  );
-  gsap.set(".perf-card", { willChange: "transform,opacity", force3D: true });
-
-  tl.from(cards, {
-    autoAlpha: 0,
-    x: 80,
-    scale: 0.96,
-    rotate: -2,
-    duration: 0.6,
-    ease: "none",
-    stagger: {
-      each: 0.2,
-      from: "end",
-    },
-  });
-
-  // Animation de la FirstCard après les cartes
-  // First card
-  tl.from(".first-card-illu", {
-    scale: 0.95,
-    rotate: 1,
-    autoAlpha: 0,
-    duration: 0.8,
-    ease: "power3.out",
   })
-
+    .from(
+      split.chars,
+      {
+        y: 20,
+        autoAlpha: 0,
+        stagger: 0.02,
+        duration: 0.4,
+        ease: "power2.out",
+      },
+      "-=0.2"
+    )
+    .from(
+      ".perf-desc",
+      {
+        y: 20,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      },
+      "-=0.2"
+    )
+    .from(cards, {
+      autoAlpha: 0,
+      x: 80,
+      scale: 0.96,
+      rotate: -2,
+      duration: 0.6,
+      ease: "none",
+      stagger: { each: 0.2, from: "end" },
+    })
+    // First card
+    .from(".first-card-illu", {
+      scale: 0.95,
+      rotate: 1,
+      autoAlpha: 0,
+      duration: 0.8,
+      ease: "power3.out",
+    })
     .from(
       ".illu-content",
       {
@@ -86,8 +86,7 @@ export const performanceSection = () => {
         ease: "power3.out",
       },
       "-=0.4"
-    ) // Overlap légèrement avec la précédente
-
+    )
     // Second card
     .from(
       ".second-card-illu",
@@ -100,7 +99,6 @@ export const performanceSection = () => {
       },
       "+=0.2"
     )
-
     // Third card avec paths
     .from(
       ".first-path",
@@ -111,7 +109,6 @@ export const performanceSection = () => {
       },
       "+=0.2"
     )
-
     .from(
       ".second-path",
       {
@@ -121,7 +118,6 @@ export const performanceSection = () => {
       },
       "+=0.1"
     )
-
     .from(
       ".third-card-illu",
       {
@@ -132,7 +128,6 @@ export const performanceSection = () => {
       },
       "+=0.2"
     )
-
     // Fourth card
     .from(
       ".text-fourth-card",
@@ -144,7 +139,6 @@ export const performanceSection = () => {
       },
       "+=0.2"
     )
-
     .from(
       ".flag-card",
       {
@@ -155,8 +149,7 @@ export const performanceSection = () => {
         ease: "bounce.out",
       },
       "-=0.6"
-    ) // Commence avant la fin de la précédente
-
+    )
     .from(
       ".mouse-svg",
       {
@@ -167,4 +160,12 @@ export const performanceSection = () => {
       },
       "start"
     );
+
+  // cleanup
+  return () => {
+    tl.kill();
+    tl.scrollTrigger?.kill();
+    split.revert();
+    gsap.set(".perf-card", { clearProps: "all" });
+  };
 };

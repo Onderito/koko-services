@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MentionsLegales from "../legal-privacy/page";
 
 export default function Footer() {
     return (
@@ -23,6 +24,7 @@ export default function Footer() {
                     Reserve Your Ride
                 </button>
             </div>
+            <a className="text-white font-manrope-regular absolute bottom-5 left-5 underline" href="/legal-privacy">Legal privacy policy</a>
         </footer>
     )
 }
