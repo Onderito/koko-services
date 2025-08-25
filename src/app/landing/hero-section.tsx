@@ -2,7 +2,6 @@
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
 import {
   heroSection,
   imgOnHover,
@@ -12,6 +11,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function HeroSection() {
   const sectionRef = useRef(null);
@@ -58,11 +58,13 @@ export default function HeroSection() {
           Private transfers. Unmatched comfort. Absolute peace of mind.
         </p>
         <div className=" relative ">
-          <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl mt-8 button ">
-            <span className="button-content inline-block !cursor-pointer">
-              Plan Your Transfer
-            </span>
-          </button>
+          <Link href="/contact-me">
+            <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl mt-8 button ">
+              <span className="button-content inline-block !cursor-pointer">
+                Plan Your Transfer
+              </span>
+            </button>
+          </Link>
           <div className="svg rounded-full absolute bg-[#404040] right-[-40px] bottom-[-40px] p-2 border-2 border-white shadow-lg">
             <svg
               className="w-6 h-6 "

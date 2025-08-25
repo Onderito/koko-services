@@ -34,7 +34,7 @@ export default function ClassVPage() {
                     <h1 className="font-manrope-bold text-[44px] leading-[40px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[72px]  ">Mercedes V-Class -
                         <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">Luxury Redefined</span></h1>
                     <p className="font-manrope-regular text-[18px] tracking-[-1%] xl:tracking-[-2%] leading-[26px] md:text-[20px] mt-4 xl:mt-6">Travel in supreme comfort with premium leather seating, climate control, and spacious interior for up to 7 passengers</p>
-                    <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-2%] text-white rounded-xl mt-8 xl:mt-10 button">Book V-Class</button>
+                    <Link href="/contact-me"><button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-2%] text-white rounded-xl mt-8 xl:mt-10 button">Book V-Class</button></Link>
                 </div>
 
                 <div className="relative xl:w-2/3">
