@@ -54,14 +54,14 @@ export default function Cars() {
     <div className="flex-center-column">
       <span
         // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className=" text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
+        className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our cars
       </span>
       <h2 className="text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center ">
         Our Fleet, Your Comfort
       </h2>
-      <p className=" text-[16px] md:text-[18px] text-center mt-4 ">
+      <p className="text-[16px] md:text-[18px] text-center mt-4 ">
         Choose from our range of luxury vehicles — curated for style, space, and
         performance.{" "}
       </p>
