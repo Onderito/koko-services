@@ -90,9 +90,11 @@ export default function Services() {
               <Link scroll={true} href={card.link} className="bg-white w-[40%] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
                 See More
               </Link>
-              <button className="bg-[#404040] cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-[60%]">
-                Book Now
-              </button>
+              <Link className="w-[60%]" href={"/contact-me"}>
+                <button className="bg-[#404040] cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
         ))}

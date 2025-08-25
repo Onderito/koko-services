@@ -1,6 +1,5 @@
 import Image from "next/image";
-import MentionsLegales from "../legal-privacy/page";
-
+import Link from "next/link";
 export default function Footer() {
     return (
         <footer
@@ -20,9 +19,11 @@ export default function Footer() {
 
             {/* Content layer */}
             <div className="relative z-20 flex items-center justify-center">
-                <button className="bg-white rounded-xl px-8 py-4 cursor-pointer inner-shadow-dark font-manrope-bold text-[16px] hover:scale-105 transition-transform duration-300">
-                    Reserve Your Ride
-                </button>
+                <Link href="/contact-me">
+                    <button className="bg-white rounded-xl px-8 py-4 cursor-pointer inner-shadow-dark font-manrope-bold text-[16px] hover:scale-105 transition-transform duration-300">
+                        Reserve Your Ride
+                    </button>
+                </Link>
             </div>
             <a className="text-white font-manrope-regular absolute bottom-5 left-5 underline" href="/legal-privacy">Legal privacy policy</a>
         </footer>
