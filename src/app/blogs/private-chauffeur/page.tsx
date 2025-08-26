@@ -8,7 +8,7 @@ export default function ChauffeurServicesFrenchRiviera() {
       <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/blog-chauffeur.webp"
+            src="/blogs-chauffeur.webp"
             alt="Luxury Chauffeur French Riviera"
             fill
             className="object-cover"
