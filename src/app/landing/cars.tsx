@@ -97,6 +97,7 @@ export default function Cars() {
             </div>
             <div className="absolute bottom-4 left-4 right-4">
               <button
+                aria-label="see more about the car"
                 onClick={() => handleClick(v.link)}
                 className="block w-full text-[#404040] bg-white cursor-pointer inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300"
               >

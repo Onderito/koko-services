@@ -2,23 +2,26 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("../app/assets/fonts/Manrope-Regular.ttf");
+  src: url("../app/assets/fonts/Manrope-Regular.ttf")format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap; 
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("../app/assets/fonts/Manrope-Bold.ttf");
+  src: url("../app/assets/fonts/Manrope-Bold.ttf")format("woff2");
   font-weight: 700;
   font-style: normal;
+  font-display: swap; 
 }
 
 @font-face {
   font-family: "Gloria Hallelujah";
-  src: url("../app/assets/fonts/GloriaHallelujah-Regular.ttf");
+  src: url("../app/assets/fonts/GloriaHallelujah-Regular.ttf") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap; 
 }
 
 :root {
@@ -84,6 +87,10 @@
     border-color: #5e5e5e !important;
     border-width: 0.5px !important;
   }
+}
+
+@layer base {
+  h1 { font-size: inherit; }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -38,6 +38,7 @@ export default function HeroSection() {
           alt="Hero image"
           quality={100}
           layout="fill"
+          priority
           objectFit="cover"
         />
       </div>
@@ -72,6 +73,7 @@ export default function HeroSection() {
               height="20"
               viewBox="0 0 20 20"
               fill="none"
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -96,8 +98,12 @@ export default function HeroSection() {
           src="/bg-layout/nice-hero.webp"
           alt="Hero image"
           quality={100}
+          priority
           width={1000}
-          height={1000}
+          height={600}
+          sizes="(max-width: 768px) 100vw, 
+          (max-width: 1200px) 50vw, 
+          1000px"
         />
       </div>
     </section>

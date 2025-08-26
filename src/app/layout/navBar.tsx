@@ -55,6 +55,7 @@ export default function NavBar() {
                     <div className="flex items-center gap-4">
                         {/* Desktop button */}
                         <a target="_blank"
+                            aria-label='Contact us on whatsapp'
                             rel="noopener noreferrer" href="https://wa.me/33771698142">
                             <button className="hidden xl:block text-[16px] font-manrope-bold text-white bg-[#23C063] px-8 rounded-2xl h-[52px] cursor-pointer">
                                 Contact us
@@ -63,6 +64,7 @@ export default function NavBar() {
 
                         {/* Mobile menu button */}
                         <button
+                            aria-label='open menu for mobile'
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="xl:hidden flex flex-col justify-center items-center w-6 h-6 space-y-1"
                         >
@@ -109,6 +111,7 @@ export default function NavBar() {
                         </li>
                         <li>
                             <a target="_blank"
+                                aria-label='Contact us on whatsapp'
                                 rel="noopener noreferrer" href='https://wa.me/33771698142' className="block px-4 py-4 font-manrope-bold text-[16px] text-white bg-[#23C063] rounded-2xl text-center">
                                 Contact us
                             </a>

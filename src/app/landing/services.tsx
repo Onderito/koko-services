@@ -60,7 +60,7 @@ export default function Services() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className=" card-wrapper bg-[#F9FAFB] border-1 border-[#EEEEEE] rounded-3xl p-4 "
+            className=" card-wrapper bg-[#F9FAFB] border-1 border-[#EEEEEE] rounded-3xl p-4 h-full"
           >
             <div className="flex items-center gap-2 md:gap-4">
               <span className="bg-[#404040] rounded-xl p-3 md:p-4 xl:p-3 inner-shadow-white">
@@ -85,13 +85,16 @@ export default function Services() {
               alt="image of service"
               width={400}
               height={400}
+              sizes="(max-width: 768px) 100vw, 
+         (max-width: 1280px) 50vw, 
+         400px"
             />
             <div className="flex justify-center items-center w-full mt-4 gap-4">
-              <Link scroll={true} href={card.link} className="bg-white w-[40%] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
+              <Link aria-label="see more about the service" scroll={true} href={card.link} className="bg-white w-[40%] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
                 See More
               </Link>
-              <Link className="w-[60%]" href={"/contact-me"}>
-                <button className="bg-[#404040] cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full">
+              <Link aria-label="book now the service" className="w-[60%]" href={"/contact-me"}>
+                <button aria-label="book now the service" className="bg-[#404040] cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full">
                   Book Now
                 </button>
               </Link>

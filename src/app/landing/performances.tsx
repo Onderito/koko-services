@@ -47,37 +47,36 @@ export default function Performances() {
     }
   }, []);
   return (
-    <section ref={sectionRef}>
+    <section aria-labelledby="perf-title" ref={sectionRef}>
       <div className="pin-container min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
         <div className="performance-section flex flex-col py-10 px-2">
-          <h2 className="text-white text-[32px] md:text-[56px] perf-title font-manrope-bold mt-4 text-center">
+          <h2 id="perf-title" className="text-white text-[32px] md:text-[56px] perf-title font-manrope-bold mt-4 text-center">
             Performance that speaks for itself
           </h2>
           <p className="text-white text-[16px] md:text-[18px] text-center mt-4 perf-desc">
             Flawless execution, absolute discretion, and a reputation built on
             consistency.
           </p>
-          <div className="flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row xl:px-16 gap-4 text-white mt-10">
+          <ul className="flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row xl:px-16 gap-4 text-white mt-10">
             {cards.map((c, index) => (
-              <div
-                className="bg-[#404040] perf-card shadow-white-thin flex flex-col rounded-3xl p-3 xl:max-w-xs"
+              <li
                 key={index}
+                className="bg-[#404040] perf-card shadow-white-thin flex flex-col rounded-3xl p-3 xl:max-w-xs"
               >
-                <div className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative">
+                <div className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative" aria-hidden="true">
                   {index === 0 && <FirstCard />}
                   {index === 1 && <SecondCard />}
                   {index === 2 && <ThirdCard />}
                   {index === 3 && <FourthCard />}
                 </div>
-                <h4 className="font-manrope-bold text-center text-[18px] md:text-[20px] m mt-8">
+
+                <h3 className="font-manrope-bold text-center text-[18px] md:text-[20px] mt-8">
                   {c.title}
-                </h4>
-                <p className="font-manrope-regular text-center mt-2 text-[16px]">
-                  {c.text}
-                </p>
-              </div>
+                </h3>
+                <p className="font-manrope-regular text-center mt-2 text-[16px]">{c.text}</p>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
