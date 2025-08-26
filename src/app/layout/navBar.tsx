@@ -77,7 +77,7 @@ export default function NavBar() {
             </div>
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="xl:hidden bg-white rounded-3xl border-[0.5px]  border-[#E5E5E5]">
+                <div className="xl:hidden bg-white relative rounded-3xl border-[0.5px] border-[#E5E5E5]">
                     <ul className="py-4 space-y-2 px-2 ">
                         <li>
                             <Link href={"/our-services/transfer"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
@@ -95,17 +95,17 @@ export default function NavBar() {
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/our-services/class-v"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
+                            <Link href={"/cars/class-v"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
                                 Class-v
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/our-services/class-s"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
+                            <Link href={"/cars/class-s"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
                                 Class-s
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/our-services/maybach"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
+                            <Link href={"/cars/maybach"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
                                 Maybach
                             </Link>
                         </li>

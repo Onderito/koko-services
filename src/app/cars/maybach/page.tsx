@@ -27,11 +27,11 @@ const featuresData = [
 
 export default function Maybach() {
     return (
-        <div className="min-h-screen px-2 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+        <div className="min-h-screen px-6 pt-28 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
             {/* Hero Section */}
             <div className="flex flex-col xl:flex-row justify-center items-center gap-10 ">
                 <div className="xl:w-2/3">
-                    <h1 className="font-manrope-bold text-[44px] leading-[40px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[80px]"> Mercedes Maybach -
+                    <h1 className="font-manrope-bold text-[44px] leading-[45px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[80px]"> Mercedes Maybach -
                         <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">Prestige Perfected</span></h1>
                     <p className="font-manrope-regular text-[18px] tracking-[-1%] xl:tracking-[-2%] leading-[26px] md:text-[20px] mt-4 xl:mt-6">Experience unparalleled opulence with chauffeur-driven excellence, handcrafted details, and royal-level comfort</p>
                     <Link href="/contact-me"><button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-2%] text-white rounded-xl mt-8 xl:mt-10 button">Book Maybach</button></Link>
@@ -58,8 +58,8 @@ export default function Maybach() {
             </div>
 
             {/* Description Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 xl:mt-56">
-                <div className="order-2 lg:order-1">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mt-16 lg:mb-20 xl:mt-56">
+                <div className="order-1 lg:order-2">
                     <h2 className="font-manrope-bold text-[32px] md:text-[56px] xl:leading-16 text-[#404040] mb-6">
                         Discover the Mercedes Maybach
                     </h2>

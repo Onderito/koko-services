@@ -6,7 +6,7 @@ import FooterComponent from "../footer-component";
 
 export default function hourlyServices() {
     return (
-        <div className="px-2 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+        <div className="px-6 pt-28 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
             <HeroSection />
             <WhatIsHourlyServices />
             <ForWhoHourlyServices />

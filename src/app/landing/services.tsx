@@ -90,7 +90,7 @@ export default function Services() {
          400px"
             />
             <div className="flex justify-center items-center w-full mt-4 gap-4">
-              <Link aria-label="see more about the service" scroll={true} href={card.link} className="bg-white w-[40%] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
+              <Link aria-label="see more about the service" scroll={true} href={card.link} className="bg-white w-[45%] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
                 See More
                 <span className="sr-only"> about {card.title}</span>
               </Link>
