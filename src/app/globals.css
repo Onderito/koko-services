@@ -1,30 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Manrope";
-  src: url("../app/assets/fonts/Manrope-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; 
-}
-
-@font-face {
-  font-family: "Manrope";
-  src: url("../app/assets/fonts/Manrope-Bold.ttf");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap; 
-}
-
-@font-face {
-  font-family: "Gloria Hallelujah";
-  src: url("../app/assets/fonts/GloriaHallelujah-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; 
-}
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
