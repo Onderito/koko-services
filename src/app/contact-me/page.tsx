@@ -2,6 +2,7 @@
 import emailjs from "@emailjs/browser";
 import { useMemo, useRef, useState, useLayoutEffect } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function ContactMe() {
@@ -293,7 +294,7 @@ export default function ContactMe() {
 
                 <div className="mt-6 flex items-start justify-between gap-4">
                     <p className="text-xs text-[#404040]/70">
-                        By submitting, you agree to our terms and <a href="/legal-privacy" className="underline">privacy policy</a>.
+                        By submitting, you agree to our terms and <Link href="/legal-privacy" className="underline">privacy policy</Link>.
                     </p>
                     <button
                         type="submit"

@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
 export const performanceSection = () => {
   const root = document.querySelector(".performance-section");
   const pin = document.querySelector(".pin-container");
-  let mm = gsap.matchMedia();
+  const mm = gsap.matchMedia();
 
   mm.add("(min-width: 1024px", () => {
 

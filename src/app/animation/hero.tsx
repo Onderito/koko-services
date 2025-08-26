@@ -117,8 +117,8 @@ export const buttonAnimation = () => {
   const buttons = gsap.utils.toArray(".button");
   buttons.forEach((item) => {
     const button = item as HTMLElement;
-    let span = button.querySelector(".button-content");
-    let tl = gsap.timeline({ pause: true });
+    const span = button.querySelector(".button-content");
+    const tl = gsap.timeline({ pause: true });
 
     tl.to(span, { duration: 0.4, yPercent: -150, ease: "back.in(1.3)" });
     tl.set(span, { yPercent: 150 });
