@@ -53,7 +53,7 @@ export default function Services() {
       >
         our services
       </span>
-      <h2 className="split text-gray-100 text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
+      <h2 className="split xl:text-gray-100 text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
         What We Offer
       </h2>
       <div className="card mt-10 flex flex-col gap-8 xl:gap-10 xl:flex-row ">

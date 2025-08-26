@@ -30,7 +30,7 @@ export default function HeroSection() {
     };
   }, []);
   return (
-    <section className="mt-10" ref={sectionRef}>
+    <section className="mt-10 md:mt-15 xl:mt-0" ref={sectionRef}>
       <div className="absolute inset-0 -z-10 w-full h-[700px] md:h-[900px] ">
         <Image
           className="rounded-b-[20px]"

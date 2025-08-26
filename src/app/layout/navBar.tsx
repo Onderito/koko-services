@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <nav className="sticky top-5 z-50">
+        <nav className="fixed w-full top-5 z-50">
             <div className="flex justify-center p-4">
                 {/* Background container centré */}
                 <div className="flex justify-between items-center w-full max-w-[1250px] h-16 md:h-18 
@@ -19,7 +19,7 @@ export default function NavBar() {
                     </Link>
 
                     {/* Liens centrés */}
-                    <ul className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+                    <ul className="hidden xl:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
                         <li>
                             <Link href="/our-services/transfer" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
                                 Transfer
@@ -54,14 +54,17 @@ export default function NavBar() {
                     {/* Bouton / Mobile burger à droite */}
                     <div className="flex items-center gap-4">
                         {/* Desktop button */}
-                        <button className="hidden md:block text-[16px] font-manrope-bold text-white bg-[#23C063] px-8 rounded-2xl h-[52px] cursor-pointer">
-                            Contact us
-                        </button>
+                        <a target="_blank"
+                            rel="noopener noreferrer" href="https://wa.me/33771698142">
+                            <button className="hidden xl:block text-[16px] font-manrope-bold text-white bg-[#23C063] px-8 rounded-2xl h-[52px] cursor-pointer">
+                                Contact us
+                            </button>
+                        </a>
 
                         {/* Mobile menu button */}
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="md:hidden flex flex-col justify-center items-center w-6 h-6 space-y-1"
+                            className="xl:hidden flex flex-col justify-center items-center w-6 h-6 space-y-1"
                         >
                             <span className={`w-6 h-0.5 bg-[#404040] transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
                             <span className={`w-6 h-0.5 bg-[#404040] transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
@@ -72,7 +75,7 @@ export default function NavBar() {
             </div>
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden bg-white rounded-3xl border-[0.5px]  border-[#E5E5E5] mt-2">
+                <div className="xl:hidden bg-white rounded-3xl border-[0.5px]  border-[#E5E5E5]">
                     <ul className="py-4 space-y-2 px-2 ">
                         <li>
                             <Link href={"/our-services/transfer"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
@@ -105,7 +108,8 @@ export default function NavBar() {
                             </Link>
                         </li>
                         <li>
-                            <a className="block px-4 py-4 font-manrope-bold text-[16px] text-white bg-[#23C063] rounded-2xl text-center">
+                            <a target="_blank"
+                                rel="noopener noreferrer" href='https://wa.me/33771698142' className="block px-4 py-4 font-manrope-bold text-[16px] text-white bg-[#23C063] rounded-2xl text-center">
                                 Contact us
                             </a>
                         </li>
