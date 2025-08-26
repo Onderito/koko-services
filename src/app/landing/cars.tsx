@@ -82,13 +82,13 @@ export default function Cars() {
               <div className="absolute bottom-0 left-0 right-0 h-64 xl:h-44 rounded-b-3xl bg-gradient-to-t from-[#7A25BB]/50  to-transparent"></div>
             )}
             <div className="absolute top-3/4 md:top-5/6 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
-              <h4 className="text-white font-manrope-bold text-[24px] md:text-[28px] ">
+              <h3 className="text-white font-manrope-bold text-[24px] md:text-[28px] ">
                 {v.name}
                 {/* Ajouter un espace manuel pour séparer le nom et le type */}
                 <span className="ml-2 font-light text-white/80 text-[16px] md:text-[18px] ">
                   ({v.type})
                 </span>
-              </h4>
+              </h3>
               <div className="text-[#C2C2C2] flex divide-x justify-center mt-4 font-manrope-regular pb-8 xl:pb-16 text-[16px]">
                 <span className="px-4">{v.guests}</span>
                 <span className="px-4">{v.bags}</span>
@@ -102,6 +102,7 @@ export default function Cars() {
                 className="block w-full text-[#404040] bg-white cursor-pointer inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300"
               >
                 {v.button}
+                <span className="sr-only"> about {v.name}</span>
               </button>
             </div>
           </div>

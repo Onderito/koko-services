@@ -92,10 +92,12 @@ export default function Services() {
             <div className="flex justify-center items-center w-full mt-4 gap-4">
               <Link aria-label="see more about the service" scroll={true} href={card.link} className="bg-white w-[40%] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
                 See More
+                <span className="sr-only"> about {card.title}</span>
               </Link>
               <Link aria-label="book now the service" className="w-[60%]" href={"/contact-me"}>
                 <button aria-label="book now the service" className="bg-[#404040] cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full">
                   Book Now
+                  <span className="sr-only"> about {card.title}</span>
                 </button>
               </Link>
             </div>

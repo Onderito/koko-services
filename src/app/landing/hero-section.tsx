@@ -30,7 +30,7 @@ export default function HeroSection() {
     };
   }, []);
   return (
-    <section className="mt-10 md:mt-15 xl:mt-0" ref={sectionRef}>
+    <section className="mt-14 md:mt-15 xl:mt-2" ref={sectionRef}>
       <div className="absolute inset-0 -z-10 w-full h-[700px] md:h-[900px] ">
         <Image
           className="rounded-b-[20px]"
@@ -99,11 +99,11 @@ export default function HeroSection() {
           alt="Hero image"
           quality={100}
           priority
-          width={1000}
-          height={600}
-          sizes="(max-width: 768px) 100vw, 
-          (max-width: 1200px) 50vw, 
-          1000px"
+          width={700}  // <= adapte ici à ta taille réelle max
+          height={450} // <= garde le bon ratio
+          sizes="(max-width: 768px) 100vw,
+         (max-width: 1280px) 50vw,
+         700px"
         />
       </div>
     </section>

@@ -20,9 +20,9 @@ export default function Pricing() {
         Tailored quotes from nice airport to :
       </p>
       <div className="mt-10 md:mt-12 xl:mt-12 flex flex-col justify-center items-center">
-        <h5 className="text-[18px] font-manrope-bold ">
+        <h3 className="text-[18px] font-manrope-bold ">
           Choose your destination
-        </h5>
+        </h3>
         <ul className="grid grid-cols-2 md:flex gap-2 md:gap-4 mt-4">
           {cities.map((c, index) => (
             <li
@@ -57,14 +57,14 @@ export default function Pricing() {
               )}
               <Image
                 src={v.image}
-                alt="image of car"
+                alt={v.name + " car front view"}
                 width={300}
                 height={200}
               />
               <div className="w-full flex flex-col items-start border-t border-b border-[#EBEBEB] py-4">
-                <h6 className="self-start font-manrope-bold text-[20px] ">
+                <h3 className="self-start font-manrope-bold text-[20px] ">
                   {v.name}
-                </h6>
+                </h3>
                 <p
                   className={`text-[#6B7280] text-[16px] font-manrope-regular ${index >= vehicles.length - 2 ? "card-secondary-text" : ""
                     }`}
@@ -82,9 +82,9 @@ export default function Pricing() {
                 >
                   Transfer
                 </p>
-                <h3 className="font-manrope-bold text-[32px]">
+                <h4 className="font-manrope-bold text-[32px]">
                   {v.prices[isCityActive.id].transfer}€
-                </h3>
+                </h4>
                 <p
                   className={`text-[#6B7280] text-[16px] font-manrope-regular ${index >= vehicles.length - 2 ? "card-secondary-text" : ""
                     }`}
@@ -104,9 +104,9 @@ export default function Pricing() {
                   >
                     Hourly
                   </p>
-                  <h3 className="font-manrope-bold text-[32px]">
+                  <h4 className="font-manrope-bold text-[32px]">
                     {v.prices[isCityActive.id].hourly}€
-                  </h3>
+                  </h4>
                   <p
                     className={`text-[#6B7280] text-[16px] font-manrope-regular ${index >= vehicles.length - 2 ? "card-secondary-text" : ""
                       }`}
@@ -124,9 +124,9 @@ export default function Pricing() {
                   >
                     Full Day
                   </p>
-                  <h3 className="font-manrope-bold text-[32px]">
+                  <h4 className="font-manrope-bold text-[32px]">
                     {v.prices[isCityActive.id].fullDay}€
-                  </h3>
+                  </h4>
                   <p
                     className={`text-[#6B7280] text-[16px] font-manrope-regular ${index >= vehicles.length - 2 ? "card-secondary-text" : ""
                       }`}
