@@ -2,33 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import NavBar from "./layout/navBar";
 import Script from "next/script";
-import localFont from "next/font/local";
-
-const manrope = localFont({
-  src: [
-    {
-      path: './assets/fonts/Manrope-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './assets/fonts/Manrope-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-manrope',
-  display: 'swap',
-})
-
-const gloria = localFont({
-  src: './assets/fonts/GloriaHallelujah-Regular.ttf',
-  weight: '400',
-  style: 'normal',
-  variable: '--font-gloria',
-  display: 'swap',
-})
-
 
 
 import "./globals.css";
@@ -54,37 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${gloria.variable}`}>
-      <head>
-        <link
-          rel="preload"
-          href="/app/assets/fonts/Manrope-Regular.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/app/assets/fonts/Manrope-Bold.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/app/assets/fonts/Manrope-Light.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/app/assets/fonts/GloriaHallelujah-Regular.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-      </head>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
