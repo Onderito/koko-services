@@ -86,10 +86,6 @@
   }
 }
 
-@layer base {
-  h1 { font-size: inherit; }
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;
