@@ -1,9 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useLayoutEffect } from "react"
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 const card = [
     {
@@ -29,43 +28,54 @@ export default function ForWhoTransfer() {
     const card1Ref = useRef<HTMLDivElement>(null);
     const card2Ref = useRef<HTMLDivElement>(null);
     const card3Ref = useRef<HTMLDivElement>(null);
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
-
+    useLayoutEffect(() => {
         const ctx = gsap.context(() => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top 20%",
-                    end: "bottom top+=100",
-                    pin: true,
-                    scrub: 2,
-                    anticipatePin: 1, // il nous permet de garder le pin même quand on quitte la section
-                }
+            const mm = gsap.matchMedia();
+
+            // Desktop uniquement (ta pile xl)
+            mm.add("(min-width: 1280px)", () => {
+                // States init (GPU + origine)
+                gsap.set([card1Ref.current, card2Ref.current, card3Ref.current], {
+                    transformOrigin: "50% 50%",
+                    force3D: true,
+                    willChange: "transform",
+                });
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top 40%",
+                        end: "bottom 30%",
+                        scrub: 1.5,
+                    },
+                    defaults: { ease: "none" },
+                });
+                tl.fromTo(
+                    card1Ref.current,
+                    { yPercent: 0, rotate: 0 },
+                    { yPercent: -520, rotate: 15 },
+                    0
+                );
+                tl.fromTo(
+                    card2Ref.current,
+                    { yPercent: 0, rotate: 5 },
+                    { yPercent: -620, rotate: -15 },
+                    0.2
+                );
+
+                tl.fromTo(
+                    card3Ref.current,
+                    { yPercent: 0, rotate: -5 },
+                    { yPercent: -420, rotate: 15 },
+                    0.4
+                );
             });
-            tl.to(card1Ref.current, {
-                yPercent: -520,
-                rotation: 15,
-                transformOrigin: "bottom center",
-                z: 100,
-            })
-            tl.to(card2Ref.current, {
-                yPercent: -620,
-                rotation: -15,
-                transformOrigin: "top center",
-                z: 100,
-                ease: "none",
-            }, "<30%")
-            tl.to(card3Ref.current, {
-                yPercent: -420,
-                rotation: 15,
-                transformOrigin: "bottom center",
-                z: 100,
-                ease: "none",
-            }, "<40%")
-        }, containerRef)
+
+            return () => mm.revert();
+        }, containerRef);
+
         return () => ctx.revert();
-    }, [])
+    }, []);
     return (
         <div ref={containerRef} className="mb-20">
             <h2 className="text-[32px] leading-10 tracking-[-2%] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center">

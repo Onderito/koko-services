@@ -7,7 +7,7 @@ export default function WhatIsTransfer() {
                 The Art of the Transfer
             </h2>
             <p className="text-[16px] md:text-[18px] text-center mt-4 ">
-                We believe a transfer is more than just a ride. It's the seamless transition between two moments of your journey.
+                We believe a transfer is more than just a ride. It&apos;s the seamless transition between two moments of your journey.
             </p>
 
             <div className="relative -z-10 flex flex-col xl:flex-row justify-center items-center gap-10 py-10 xl:py-24">

@@ -2,13 +2,10 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-// import { usePathname } from "next/navigation";
 
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // const pathname = usePathname();
-
     return (
         <nav className="sticky top-5 z-50">
             <div className="flex justify-center p-4">

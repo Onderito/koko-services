@@ -27,7 +27,7 @@ export default function ChauffeurServicesFrenchRiviera() {
             </h1>
 
             <p className="text-[16px] md:text-[20px] text-gray-200 max-w-2xl mx-auto mb-8">
-              Discover how VIP Limo Nice elevates your travel experience on the glamorous Côte d'Azur.
+              Discover how VIP Limo Nice elevates your travel experience on the glamorous Côte d&apos;Azur.
             </p>
 
             <div className="flex items-center justify-center gap-6 text-gray-300 text-[14px] md:text-[16px]">
@@ -55,7 +55,7 @@ export default function ChauffeurServicesFrenchRiviera() {
               <li><a href="#punctuality" className="hover:text-[#404040] transition-colors duration-300 text-sm">Punctuality and Reliability</a></li>
               <li><a href="#comfort-luxury" className="hover:text-[#404040] transition-colors duration-300 text-sm">Unmatched Comfort and Luxury</a></li>
               <li><a href="#discretion-professionalism" className="hover:text-[#404040] transition-colors duration-300 text-sm">Discretion and Professionalism</a></li>
-              <li><a href="#navigating-destinations" className="hover:text-[#404040] transition-colors duration-300 text-sm">Navigating the Riviera's Premier Destinations</a></li>
+              <li><a href="#navigating-destinations" className="hover:text-[#404040] transition-colors duration-300 text-sm">Navigating the Riviera&apos;s Premier Destinations</a></li>
               <li><a href="#conclusion" className="hover:text-[#404040] transition-colors duration-300 text-sm">Conclusion: Elevating Your French Riviera Experience</a></li>
             </ul>
           </nav>
@@ -82,7 +82,7 @@ export default function ChauffeurServicesFrenchRiviera() {
 
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  The French Riviera, or Côte d'Azur, is synonymous with luxury, glamour, and breathtaking landscapes. From the vibrant markets of Nice to the star-studded events in Cannes, the opulent casinos of Monaco, and the chic beaches of Saint-Tropez, this region attracts a discerning clientele seeking unparalleled experiences. However, navigating this popular destination, especially during peak season or major events, can be challenging. This is where a <strong>private chauffeur service</strong> from <strong>VIP Limo Nice</strong> becomes not just a convenience, but an absolute necessity for a truly refined and stress-free journey.
+                  The French Riviera, or Côte d&apos;Azur, is synonymous with luxury, glamour, and breathtaking landscapes. From the vibrant markets of Nice to the star-studded events in Cannes, the opulent casinos of Monaco, and the chic beaches of Saint-Tropez, this region attracts a discerning clientele seeking unparalleled experiences. However, navigating this popular destination, especially during peak season or major events, can be challenging. This is where a <strong>private chauffeur service</strong> from <strong>VIP Limo Nice</strong> becomes not just a convenience, but an absolute necessity for a truly refined and stress-free journey.
                 </p>
               </div>
             </section>
@@ -94,7 +94,7 @@ export default function ChauffeurServicesFrenchRiviera() {
               </h2>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                A <strong>luxury chauffeur service</strong> on the French Riviera offers far more than just a ride from point A to point B. It's an integral part of the high-end travel experience, designed to provide comfort, efficiency, and discretion. Imagine stepping off your private jet at Nice Côte d'Azur Airport and being greeted by a professional, multilingual chauffeur ready to whisk you away in a top-of-the-range vehicle like a Mercedes-Benz S-Class. This seamless <strong>airport transfer Nice</strong> sets the tone for your entire stay.
+                A <strong>luxury chauffeur service</strong> on the French Riviera offers far more than just a ride from point A to point B. It&apos;s an integral part of the high-end travel experience, designed to provide comfort, efficiency, and discretion. Imagine stepping off your private jet at Nice Côte d&apos;Azur Airport and being greeted by a professional, multilingual chauffeur ready to whisk you away in a top-of-the-range vehicle like a Mercedes-Benz S-Class. This seamless <strong>airport transfer Nice</strong> sets the tone for your entire stay.
               </p>
             </section>
 
@@ -105,7 +105,7 @@ export default function ChauffeurServicesFrenchRiviera() {
               </h3>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                In a region where time is often of the essence, particularly for business travelers or those attending exclusive events, punctuality is paramount. A dedicated <strong>chauffeur privé Côte d'Azur</strong> ensures you arrive at your destination on time, every time. With real-time traffic monitoring and intimate knowledge of local routes, delays are minimized, allowing you to focus on your schedule without worry. Whether it's a critical meeting in Monaco or a gala dinner in Cannes, your chauffeur's reliability is a cornerstone of their service.
+                In a region where time is often of the essence, particularly for business travelers or those attending exclusive events, punctuality is paramount. A dedicated <strong>chauffeur privé Côte d&apos;Azur</strong> ensures you arrive at your destination on time, every time. With real-time traffic monitoring and intimate knowledge of local routes, delays are minimized, allowing you to focus on your schedule without worry. Whether it&apos;s a critical meeting in Monaco or a gala dinner in Cannes, your chauffeur&apos;s reliability is a cornerstone of their service.
               </p>
             </section>
 
@@ -127,14 +127,14 @@ export default function ChauffeurServicesFrenchRiviera() {
               </h3>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                Privacy is a luxury in itself. Professional chauffeurs are trained to be discreet, respecting your need for confidentiality whether you're conducting business calls or simply enjoying the scenery. Their impeccable manners, local knowledge, and commitment to service ensure a smooth and unobtrusive experience. They are not just drivers; they are personal assistants on wheels, ready to assist with luggage, provide local insights, and adapt to your itinerary changes.
+                Privacy is a luxury in itself. Professional chauffeurs are trained to be discreet, respecting your need for confidentiality whether you&apos;re conducting business calls or simply enjoying the scenery. Their impeccable manners, local knowledge, and commitment to service ensure a smooth and unobtrusive experience. They are not just drivers; they are personal assistants on wheels, ready to assist with luggage, provide local insights, and adapt to your itinerary changes.
               </p>
             </section>
 
             <section id="navigating-destinations" className="scroll-mt-24 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
-                Navigating the Riviera's Premier Destinations
+                Navigating the Riviera&apos;s Premier Destinations
               </h2>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
@@ -155,7 +155,7 @@ export default function ChauffeurServicesFrenchRiviera() {
                     </div>
                     <div className="p-4 border border-gray-200 rounded-lg hover:shadow-sm transition-all duration-300">
                       <h5 className="font-manrope-bold text-[#404040] mb-1">Nice to Monaco</h5>
-                      <p className="text-gray-600 text-sm">Perfect for the Grand Prix or exploring the principality's attractions.</p>
+                      <p className="text-gray-600 text-sm">Perfect for the Grand Prix or exploring the principality&apos;s attractions.</p>
                     </div>
                   </div>
                   <div className="space-y-4">
