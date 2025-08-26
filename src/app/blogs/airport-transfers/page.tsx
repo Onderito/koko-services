@@ -8,7 +8,7 @@ export default function AirportTransfersNice() {
       <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/blogs-airport.webp"
+            src="/blogs/blog-airport.webp"
             alt="Airport transfers Nice"
             fill
             className="object-cover"

@@ -8,7 +8,7 @@ export default function LuxuryEventsFrenchRiviera() {
       <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/blogs-luxury-events.webp"
+            src="/blogs/blog-luxury-events.webp"
             alt="Luxury Events French Riviera"
             fill
             className="object-cover"
