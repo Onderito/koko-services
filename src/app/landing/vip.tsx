@@ -66,11 +66,11 @@ export default function Vip() {
               Phone chargers available
             </h3>
             <Image
-              className="absolute left-[-130px] bottom-[-170px]"
-              src={"/bento/phone.svg"}
+              className="absolute left-[-20px] bottom-[-90px]"
+              src={"/bento/phone.png"}
               alt="phone"
-              width={500}
-              height={500}
+              width={200}
+              height={200}
             />
           </div>
         </div>
