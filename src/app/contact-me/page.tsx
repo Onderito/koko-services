@@ -325,7 +325,7 @@ export default function ContactMe() {
                             Your request has been sent. We’ll get back to you shortly.
                         </p>
                         <div className="mt-6 flex gap-3 justify-end">
-                            <a href="/" className="px-4 py-2 rounded-xl border border-[#E5E5E5] cursor-pointer">Back Home</a>
+                            <Link href="/" className="px-4 py-2 rounded-xl border border-[#E5E5E5] cursor-pointer">Back Home</Link>
                             <button onClick={closeModal} className="px-4 py-2 rounded-xl bg-[#404040] cursor-pointer text-white">
                                 Close
                             </button>
