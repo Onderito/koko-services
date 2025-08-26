@@ -1,4 +1,3 @@
-// /animations/scrollSmoother.ts
 import gsap from "gsap";
 import { ScrollTrigger, ScrollSmoother } from "gsap/all";
 

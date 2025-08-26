@@ -27,7 +27,7 @@ export default function LuxuryEventsFrenchRiviera() {
             </h1>
 
             <p className="text-[16px] md:text-[20px] text-gray-200 max-w-2xl mx-auto mb-8">
-              Navigate the French Riviera's most exclusive events with VIP Limo Nice.
+              Navigate the French Riviera&apos;s most exclusive events with VIP Limo Nice.
             </p>
 
             <div className="flex items-center justify-center gap-6 text-gray-300 text-[14px] md:text-[16px]">
@@ -50,13 +50,13 @@ export default function LuxuryEventsFrenchRiviera() {
               Table of Contents
             </h2>
             <ul className="space-y-2 text-gray-600">
-              <li><a href="#introduction" className="hover:text-[#404040] transition-colors duration-300 text-sm">Introduction: The French Riviera's Calendar of Glamour</a></li>
+              <li><a href="#introduction" className="hover:text-[#404040] transition-colors duration-300 text-sm">Introduction: The French Riviera&apos;s Calendar of Glamour</a></li>
               <li><a href="#cannes-film-festival" className="hover:text-[#404040] transition-colors duration-300 text-sm">1. The Cannes Film Festival (May)</a></li>
               <li><a href="#monaco-grand-prix" className="hover:text-[#404040] transition-colors duration-300 text-sm">2. The Monaco Grand Prix (May)</a></li>
               <li><a href="#les-voiles-de-saint-tropez" className="hover:text-[#404040] transition-colors duration-300 text-sm">3. Les Voiles de Saint-Tropez (September/October)</a></li>
               <li><a href="#monaco-yacht-show" className="hover:text-[#404040] transition-colors duration-300 text-sm">4. Monaco Yacht Show (September)</a></li>
               <li><a href="#jazz-a-juan" className="hover:text-[#404040] transition-colors duration-300 text-sm">5. Jazz à Juan (July)</a></li>
-              <li><a href="#conclusion" className="hover:text-[#404040] transition-colors duration-300 text-sm">Conclusion: Your Gateway to Riviera's Elite Events</a></li>
+              <li><a href="#conclusion" className="hover:text-[#404040] transition-colors duration-300 text-sm">Conclusion: Your Gateway to Riviera&apos;s Elite Events</a></li>
             </ul>
           </nav>
 
@@ -77,12 +77,12 @@ export default function LuxuryEventsFrenchRiviera() {
             <section id="introduction" className="scroll-mt-24 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
-                Introduction: The French Riviera's Calendar of Glamour
+                Introduction: The French Riviera&apos;s Calendar of Glamour
               </h2>
 
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  The French Riviera is not just a geographical location; it's a lifestyle, a stage for some of the world's most prestigious and glamorous events. From film festivals to yacht shows and Formula 1 races, the Côte d'Azur's event calendar is packed with exclusive gatherings that attract celebrities, business magnates, and discerning travelers from across the globe. Attending these events requires not only an invitation but also seamless logistics, particularly when it comes to transportation. A <strong>private chauffeur service</strong> from <strong>VIP Limo Nice</strong> is the ultimate solution for navigating these high-profile occasions with elegance and efficiency.
+                  The French Riviera is not just a geographical location; it&apos;s a lifestyle, a stage for some of the world&apos;s most prestigious and glamorous events. From film festivals to yacht shows and Formula 1 races, the Côte d&apos;Azur&apos;s event calendar is packed with exclusive gatherings that attract celebrities, business magnates, and discerning travelers from across the globe. Attending these events requires not only an invitation but also seamless logistics, particularly when it comes to transportation. A <strong>private chauffeur service</strong> from <strong>VIP Limo Nice</strong> is the ultimate solution for navigating these high-profile occasions with elegance and efficiency.
                 </p>
               </div>
             </section>
@@ -97,7 +97,7 @@ export default function LuxuryEventsFrenchRiviera() {
                 <strong>Description:</strong> The most prestigious film festival in the world, bringing together cinematic legends, rising stars, and industry professionals. The Croisette transforms into a hub of red carpet glamour, exclusive parties, and film premieres.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>How a Chauffeur Helps:</strong> During the festival, traffic in Cannes can be notoriously dense. A <strong>chauffeur privé Cannes</strong> possesses an intimate knowledge of the city's intricate routes, ensuring timely arrivals for screenings, press conferences, and private soirées. They can navigate road closures and provide discreet access, allowing you to make a grand entrance without the stress of parking or congestion. Hourly services are ideal for flexibility between events.
+                <strong>How a Chauffeur Helps:</strong> During the festival, traffic in Cannes can be notoriously dense. A <strong>chauffeur privé Cannes</strong> possesses an intimate knowledge of the city&apos;s intricate routes, ensuring timely arrivals for screenings, press conferences, and private soirées. They can navigate road closures and provide discreet access, allowing you to make a grand entrance without the stress of parking or congestion. Hourly services are ideal for flexibility between events.
               </p>
             </section>
 
@@ -108,10 +108,10 @@ export default function LuxuryEventsFrenchRiviera() {
               </h2>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>Description:</strong> One of the most iconic and challenging races in the Formula 1 calendar, set against the stunning backdrop of Monaco's streets. The principality buzzes with an electrifying atmosphere, luxury yacht parties, and high-stakes glamour.
+                <strong>Description:</strong> One of the most iconic and challenging races in the Formula 1 calendar, set against the stunning backdrop of Monaco&apos;s streets. The principality buzzes with an electrifying atmosphere, luxury yacht parties, and high-stakes glamour.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>How a Chauffeur Helps:</strong> Access to Monaco during the Grand Prix is highly restricted. A <strong>chauffeur privé Monaco</strong> is indispensable for navigating the complex security zones and ensuring smooth passage. They can drop you off as close as possible to your desired location, whether it's a yacht in Port Hercule or a VIP suite overlooking the track. Pre-booked <strong>transfer Nice Monaco</strong> services are crucial, as demand is exceptionally high.
+                <strong>How a Chauffeur Helps:</strong> Access to Monaco during the Grand Prix is highly restricted. A <strong>chauffeur privé Monaco</strong> is indispensable for navigating the complex security zones and ensuring smooth passage. They can drop you off as close as possible to your desired location, whether it&apos;s a yacht in Port Hercule or a VIP suite overlooking the track. Pre-booked <strong>transfer Nice Monaco</strong> services are crucial, as demand is exceptionally high.
               </p>
             </section>
 
@@ -122,10 +122,10 @@ export default function LuxuryEventsFrenchRiviera() {
               </h2>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>Description:</strong> A spectacular regatta that sees traditional and modern sailing yachts compete in the bay of Saint-Tropez. It's a vibrant celebration of sailing, luxury, and the laid-back yet chic atmosphere of Saint-Tropez.
+                <strong>Description:</strong> A spectacular regatta that sees traditional and modern sailing yachts compete in the bay of Saint-Tropez. It&apos;s a vibrant celebration of sailing, luxury, and the laid-back yet chic atmosphere of Saint-Tropez.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>How a Chauffeur Helps:</strong> Saint-Tropez's charm comes with narrow, often congested roads, especially during popular events. A <strong>chauffeur privé Saint-Tropez</strong> can expertly navigate these challenges, providing comfortable and timely transport to the port, private villas, or exclusive beach clubs. A <strong>transfer Nice Saint-Tropez</strong> becomes a luxurious journey through the picturesque Provençal landscape, allowing you to relax before the festivities.
+                <strong>How a Chauffeur Helps:</strong> Saint-Tropez&apos;s charm comes with narrow, often congested roads, especially during popular events. A <strong>chauffeur privé Saint-Tropez</strong> can expertly navigate these challenges, providing comfortable and timely transport to the port, private villas, or exclusive beach clubs. A <strong>transfer Nice Saint-Tropez</strong> becomes a luxurious journey through the picturesque Provençal landscape, allowing you to relax before the festivities.
               </p>
             </section>
 
@@ -136,7 +136,7 @@ export default function LuxuryEventsFrenchRiviera() {
               </h2>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>Description:</strong> The world's leading superyacht show, showcasing over 100 of the most extraordinary yachts. It's a key event for yachting enthusiasts, industry professionals, and those seeking the pinnacle of maritime luxury.
+                <strong>Description:</strong> The world&apos;s leading superyacht show, showcasing over 100 of the most extraordinary yachts. It&apos;s a key event for yachting enthusiasts, industry professionals, and those seeking the pinnacle of maritime luxury.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
                 <strong>How a Chauffeur Helps:</strong> Similar to the Grand Prix, the Yacht Show attracts an elite crowd, making transportation a key consideration. A <strong>chauffeur privé Monaco</strong> ensures seamless transfers between hotels, the show, and private engagements. Their local knowledge is invaluable for avoiding delays and maintaining your schedule throughout this busy event.
