@@ -6,6 +6,10 @@ import { useState } from 'react';
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const closeMobileMenu = () => {
+        setIsMenuOpen(false);
+    }
     return (
         <nav className="fixed w-full top-5 z-50">
             <div className="flex justify-center p-4">
@@ -14,8 +18,8 @@ export default function NavBar() {
                         bg-white/80 backdrop-blur-xs rounded-3xl px-4 md:px-4 border-[0.5px] border-[#E5E5E5]">
 
                     {/* Logo à gauche */}
-                    <Link href="/" className="font-manrope-bold text-[18px] md:text-[20px] text-[#404040]">
-                        Koko limo
+                    <Link onClick={closeMobileMenu} href="/" className="font-manrope-bold text-[18px] md:text-[20px] text-[#404040]">
+                        VipLimoNice
                     </Link>
 
                     {/* Liens centrés */}
@@ -77,7 +81,7 @@ export default function NavBar() {
             </div>
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="xl:hidden bg-white relative rounded-3xl border-[0.5px] border-[#E5E5E5]">
+                <div onClick={closeMobileMenu} className="xl:hidden bg-white relative rounded-3xl border-[0.5px] border-[#E5E5E5]">
                     <ul className="py-4 space-y-2 px-2 ">
                         <li>
                             <Link href={"/our-services/transfer"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
