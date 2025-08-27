@@ -35,11 +35,15 @@ export default function HeroSection() {
         <Image
           className="rounded-b-[20px]"
           src="/bg-layout/bg-hero.jpg"
-          alt="Hero image"
-          quality={100}
-          layout="fill"
+          alt="Luxury car driving along the French Riviera coastline"
+          quality={85}
+          fill
           priority
-          objectFit="cover"
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
         />
       </div>
       <div className="flex flex-col justify-center items-center hero-container ">
@@ -96,14 +100,16 @@ export default function HeroSection() {
         <Image
           className="mt-16 rounded-[30px] border-5 xl:border-10 xl:w-full border-white shadow-lg img relative z-50"
           src="/bg-layout/nice-hero.webp"
-          alt="Hero image"
-          quality={100}
+          alt="Aerial view of Nice, France with the Mediterranean sea and Promenade des Anglais"
+          quality={85}
           priority
-          width={700}  // <= adapte ici à ta taille réelle max
-          height={450} // <= garde le bon ratio
-          sizes="(max-width: 768px) 100vw,
-         (max-width: 1280px) 50vw,
-         700px"
+          width={700}
+          height={450}
+          sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 75vw, 700px"
+          style={{
+            width: '100%',
+            height: 'auto'
+          }}
         />
       </div>
     </div>

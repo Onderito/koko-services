@@ -56,39 +56,44 @@ export default function Services() {
       <h2 className="split xl:text-gray-100 text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
         What We Offer
       </h2>
-      <div className="card mt-10 flex flex-col gap-8 xl:gap-10 xl:flex-row ">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
-            className=" card-wrapper bg-[#F9FAFB] border-1 border-[#EEEEEE] rounded-3xl p-4 h-full"
+            className="card flex flex-col bg-[#F9FAFB] border border-[#EEEEEE] rounded-3xl p-6 h-full"
           >
             <div className="flex items-center gap-2 md:gap-4">
               <span className="bg-[#404040] rounded-xl p-3 md:p-4 xl:p-3 inner-shadow-white">
                 <Image
                   className="md:w-8 md:h-8 xl:w-7 xl:h-7"
                   src={card.icon}
-                  alt="icon of service"
-                  width={20}
-                  height={20}
+                  alt={`${card.title} icon`}
+                  width={24}
+                  height={24}
+                  aria-hidden="true"
                 />
               </span>
               <h3 className="font-manrope-bold text-[20px] md:text-[32px]">
                 {card.title}
               </h3>
             </div>
-            <p className="mt-6 xl:mt-8 text-[16px] md:text-[18px] font-manrope-regular xl:h-24">
+            <p className="mt-6 xl:mt-8 text-[16px] md:text-[18px] font-manrope-regular flex-grow">
               {card.description}
             </p>
-            <Image
-              className="mt-8 xl:mt-16 rounded-2xl md:w-full object-cover md:h-64"
-              src={card.image}
-              alt="image of service"
-              width={400}
-              height={400}
-              sizes="(max-width: 768px) 100vw, 
-         (max-width: 1280px) 50vw, 
-         400px"
-            />
+            <div className="relative aspect-video w-full mt-8 xl:mt-16 rounded-2xl overflow-hidden">
+              <Image
+                src={card.image}
+                alt={`${card.title} service illustration`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 90vw, 
+                       (max-width: 768px) 85vw,
+                       (max-width: 1024px) 40vw,
+                       400px"
+                loading="lazy"
+                quality={80}
+              />
+            </div>
             <div className="flex justify-center items-center w-full mt-4 gap-4">
               <Link aria-label="see more about the service" scroll={true} href={card.link} className="bg-white w-[45%] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
                 See More
