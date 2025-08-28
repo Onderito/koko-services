@@ -25,46 +25,49 @@ export const heroSection = () => {
     "h1",
     {
       opacity: 0,
-      y: 40,
+      scale: 0.6,
+      y: 5,
     },
-    "-=0.7"
+    "<"
   );
 
   tl.from(
     ".description",
     {
       opacity: 0,
-      y: 20,
+      scale: 0.6,
+      y: 5,
     },
-    "-=0.6"
+    "<"
   );
 
   tl.from(
     ".button",
     {
       opacity: 0,
-      scale: 0.95,
+      scale: 0.6,
+      y: 5
     },
-    "-=0.6"
+    "<0.2"
   );
 
   tl.from(
     ".svg",
     {
       opacity: 0,
-      y: -60,
-      scale: 0.95,
+      scale: 0.6,
+      y: 10,
     },
-    "-=0.6"
+    "<"
   );
   tl.from(
     ".img",
     {
       opacity: 0,
-      y: -60,
-      scale: 0.95,
+      y: -20,
+      scale: 0.80,
     },
-    "-=0.6"
+    "<0.4"
   );
 };
 
