@@ -19,7 +19,7 @@ export const performanceSection = () => {
     if (!cards.length) return () => { };
 
     // SplitText
-    const split = SplitText.create(".perf-title", {
+    const split = SplitText.create(".text", {
       type: "words,chars",
     });
 
@@ -27,14 +27,13 @@ export const performanceSection = () => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: pin,                           // la zone à pinner
+        trigger: pin,
         pin: true,
         start: "top top",
         end: () => "+=" + window.innerHeight * 3, // durée relative au viewport
         scrub: 1.2,
         anticipatePin: 1,
         pinSpacing: true,
-        invalidateOnRefresh: true,
       },
     });
 
@@ -47,7 +46,8 @@ export const performanceSection = () => {
       .from(
         split.chars,
         {
-          y: 20,
+          y: 2,
+          scale: 0.85,
           autoAlpha: 0,
           stagger: 0.02,
           duration: 0.4,
@@ -55,64 +55,45 @@ export const performanceSection = () => {
         },
         "-=0.2"
       )
-      .from(
-        ".perf-desc",
-        {
-          y: 20,
-          autoAlpha: 0,
-          duration: 0.5,
-          ease: "power2.out",
-        },
-        "-=0.2"
-      )
       .from(cards, {
         autoAlpha: 0,
-        x: 80,
-        scale: 0.96,
+        y: "100px",
+        scale: 0.95,
         rotate: -2,
         duration: 0.6,
         ease: "none",
-        stagger: { each: 0.2, from: "end" },
+        stagger: { each: 0.01, from: "end" },
       })
       // First card
       .from(".first-card-illu", {
-        scale: 0.95,
+        scale: 0.50,
+        x: "100px",
         rotate: 1,
         autoAlpha: 0,
         duration: 0.8,
         ease: "power3.out",
       })
-      .from(
-        ".illu-content",
-        {
-          autoAlpha: 0,
-          x: 15,
-          duration: 0.6,
-          ease: "power3.out",
-        },
-        "-=0.4"
-      )
       // Second card
       .from(
         ".second-card-illu",
         {
-          scale: 0.8,
-          y: 20,
+          scale: 0.50,
+          y: "100px",
           autoAlpha: 0,
           duration: 0.6,
           ease: "power3.out",
         },
-        "+=0.2"
+        "<"
       )
       // Third card avec paths
       .from(
         ".first-path",
         {
           drawSVG: "100% 100%",
-          duration: 1.1,
-          ease: "power2.out",
+          duration: 0.8,
+          ease: "black.out(1.5)",
         },
-        "+=0.2"
+        "<"
       )
       .from(
         ".second-path",
@@ -121,49 +102,51 @@ export const performanceSection = () => {
           duration: 0.8,
           ease: "back.out(1.5)",
         },
-        "+=0.1"
+        "<"
       )
       .from(
         ".third-card-illu",
         {
+          scale: 0.50,
+          y: "100px",
           autoAlpha: 0,
-          x: 15,
-          duration: 0.6,
+          duration: 0.8,
           ease: "power3.out",
         },
-        "+=0.2"
+        "<"
       )
       // Fourth card
       .from(
         ".text-fourth-card",
         {
+          scale: 0.20,
+          y: "-50px",
           autoAlpha: 0,
-          x: 15,
-          duration: 1.2,
+          duration: 0.8,
           ease: "power3.out",
         },
-        "+=0.2"
+        "<"
       )
       .from(
         ".flag-card",
         {
-          scale: 0.8,
+          scale: 0.5,
           autoAlpha: 0,
           rotate: 2,
-          duration: 1.2,
+          duration: 0.9,
           ease: "bounce.out",
         },
-        "-=0.6"
+        "<"
       )
       .from(
         ".mouse-svg",
         {
           autoAlpha: 0,
-          x: 15,
+          y: "100px",
           duration: 0.6,
           ease: "power3.out",
         },
-        "start"
+        "<"
       );
 
 
@@ -176,5 +159,3 @@ export const performanceSection = () => {
     };
   })
 };
-
-
