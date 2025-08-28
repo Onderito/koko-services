@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import { SplitText } from "gsap/all";
 import { DrawSVGPlugin } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
 export const performanceSection = () => {
   const root = document.querySelector(".performance-section");
@@ -19,9 +19,9 @@ export const performanceSection = () => {
     if (!cards.length) return () => { };
 
     // SplitText
-    const split = SplitText.create(".text", {
-      type: "words,chars",
-    });
+    // const split = SplitText.create(".text", {
+    //   type: "words,chars",
+    // });
 
     gsap.set(".perf-card", { willChange: "transform,opacity", force3D: true });
 
@@ -43,14 +43,12 @@ export const performanceSection = () => {
       y: 20,
       duration: 0.5,
     })
-      .from(
-        split.chars,
+      .from((".text"),
         {
-          y: 2,
-          scale: 0.85,
+          y: "20px",
+          scale: 0.6,
           autoAlpha: 0,
-          stagger: 0.02,
-          duration: 0.4,
+          duration: 0.8,
           ease: "power2.out",
         },
         "-=0.2"
@@ -154,7 +152,6 @@ export const performanceSection = () => {
     return () => {
       tl.kill();
       tl.scrollTrigger?.kill();
-      split.revert();
       gsap.set(".perf-card", { clearProps: "all" });
     };
   })
