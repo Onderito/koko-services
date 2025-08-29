@@ -30,7 +30,8 @@ export const globalAnimation = () => {
 
         tl.to(".span-anim", {
             duration: 0.7,
-            scale: 0.8,
+            scale: 1,
+            opacity: 1,
             // clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
             ease: "power2.out"
         })

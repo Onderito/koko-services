@@ -41,7 +41,7 @@
   .heading-1 {
     @apply font-bold font-manrope text-[32px] leading-10 tracking-[-2px]
            md:text-[64px] md:leading-tight
-           xl:text-[74px] xl:leading-none xl:tracking-[-0.05em];
+           xl:text-[80px] xl:leading-none xl:tracking-[-0.05em];
   }
 
   .heading-2 {

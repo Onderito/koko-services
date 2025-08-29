@@ -77,10 +77,10 @@ export default function ForWhoHourlyServices() {
     }, []);
     return (
         <div ref={containerRef} className="mb-20">
-            <h2 className="text-[32px] leading-10 tracking-[-2%] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center">
+            <h2 className="heading-2 text-[#404040] mt-4 text-center">
                 Made For <span className="text-[#C5C5C5] ">Your Schedule</span>
             </h2>
-            <p className="text-[16px] md:text-[18px] text-center mt-4 ">
+            <p className="body-text text-center mt-4 ">
                 Exclusive full-day or half-day chauffeur service for freedom and privacy across the Côte d’Azur.
             </p>
 
@@ -89,8 +89,8 @@ export default function ForWhoHourlyServices() {
 
                     <div key={index} className="relative z-10 flex flex-col mx-auto items-center  max-w-lg mt-10 border-[0.5px] border-[#E5E5E5] p-4 rounded-2xl ">
                         <img src={c.icon} alt="icon suitcase" width={40} height={40} />
-                        <h4 className="text-[20px] tracking-[-1px] font-manrope-bold mt-2">{c.title}</h4>
-                        <p className="text-center text-[16px] font-manrope-regular mt-4">{c.text}</p>
+                        <h3 className="heading-3 text-[#404040] mt-2">{c.title}</h3>
+                        <p className="text-center card-text mt-4">{c.text}</p>
                     </div>
                 ))}
             </div>
@@ -98,8 +98,8 @@ export default function ForWhoHourlyServices() {
                 {/* Card 1 - devant */}
                 <div ref={card1Ref} className="relative z-8 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/suit-case.webp"} alt="icon suitcase" width={40} height={40} />
-                    <h4 className="text-[20px] tracking-[-1px] font-manrope-bold mt-2">Business & Executives</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">Business & Executives</h3>
+                    <p className="text-center card-text mt-4">
                         Full-day or half-day chauffeur on standby. Stay productive between meetings with quiet, punctual, and discreet service.
                     </p>
                 </div>
@@ -107,8 +107,8 @@ export default function ForWhoHourlyServices() {
                 {/* Card 2 - derrière */}
                 <div ref={card2Ref} className="absolute inset-0 rotate-5 z-6 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/clock.webp"} alt="icon of clock" width={40} height={40} />
-                    <h4 className="text-[20px] tracking-[-1px] font-manrope-bold mt-2">Flexible Day Hire</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">Flexible Day Hire</h3>
+                    <p className="text-center card-text mt-4">
                         Your driver, your pace: multiple stops, last-minute changes, luggage handled—freedom and privacy all day long.
                     </p>
                 </div>
@@ -116,8 +116,8 @@ export default function ForWhoHourlyServices() {
                 {/* Card 3 - encore plus derrière */}
                 <div ref={card3Ref} className="absolute inset-0 -rotate-5 z-4 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/star.webp"} alt="icon of star" width={40} height={40} />
-                    <h4 className="text-[20px] tracking-[-1px] font-manrope-bold mt-2">Events & Evenings</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">Events & Evenings</h3>
+                    <p className="text-center card-text mt-4">
                         Dinners, shopping, beach clubs, or night outs—door-to-door rides with a dedicated driver waiting for you.
                     </p>
                 </div>
