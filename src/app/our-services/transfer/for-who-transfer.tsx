@@ -86,7 +86,7 @@ export default function ForWhoTransfer() {
             <div className="block xl:hidden">
                 {card.map((c, index) => (
 
-                    <div key={index} className="relative z-10 flex flex-col mx-auto items-center  max-w-lg mt-10 border-[0.5px] border-[#E5E5E5] p-4 rounded-2xl ">
+                    <div key={index} className="relative z-10 flex flex-col mx-auto items-center max-w-lg mt-10 border-[0.5px] border-[#E5E5E5] p-4 rounded-2xl ">
                         <img src={c.icon} alt="icon suitcase" width={40} height={40} />
                         <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">{c.title}</h4>
                         <p className="text-center text-[16px] font-manrope-regular mt-4">{c.text}</p>
