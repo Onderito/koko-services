@@ -49,11 +49,11 @@ export default function Services() {
     <div className="main-container relative z-10 flex-center-column section-2">
       <span
         // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="span-anim text-[16px] scale-80 opacity-0 shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
+        className="span-anim text-[16px] xl:scale-80 xl:opacity-0 shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our services
       </span>
-      <h2 className="split xl:text-gray-100 text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
+      <h2 className="split xl:text-gray-100 text-[#404040] heading-2 mt-4 text-center">
         What We Offer
       </h2>
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-6 xl:gap-8">
@@ -73,11 +73,11 @@ export default function Services() {
                   aria-hidden="true"
                 />
               </span>
-              <h3 className="font-manrope-bold text-[20px] md:text-[32px]">
+              <h3 className="heading-3 text-[#404040]">
                 {card.title}
               </h3>
             </div>
-            <p className="mt-6 xl:mt-8 text-[16px] md:text-[18px] font-manrope-regular flex-grow">
+            <p className="mt-6 xl:mt-8 body-text flex-grow">
               {card.description}
             </p>
             <div className="relative aspect-video w-full mt-8 xl:mt-16 rounded-2xl overflow-hidden">
@@ -95,12 +95,12 @@ export default function Services() {
               />
             </div>
             <div className="flex justify-center items-center w-full mt-4 gap-4">
-              <Link aria-label="see more about the service" scroll={true} href={card.link} className="bg-white w-[45%] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
+              <Link aria-label="see more about the service" scroll={true} href={card.link} className="bg-white w-[45%] tracking-[-0.01em] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
                 See More
                 <span className="sr-only"> about {card.title}</span>
               </Link>
               <Link aria-label="book now the service" className="w-[60%]" href={"/contact-me"}>
-                <button aria-label="book now the service" className="bg-[#404040] cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full">
+                <button aria-label="book now the service" className="bg-[#404040] cursor-pointer inner-shadow-white tracking-[-0.01em] py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full">
                   Book Now
                   <span className="sr-only"> about {card.title}</span>
                 </button>

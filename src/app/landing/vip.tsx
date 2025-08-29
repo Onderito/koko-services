@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function Vip() {
   return (
     <div className="flex flex-col">
-      <h2 className=" text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
+      <h2 className="heading-2 text-[#404040] mt-4 text-center">
         VIP Service Included
       </h2>
-      <p className=" text-[16px] md:text-[18px] text-center mt-4 ">
+      <p className="body-text text-center mt-4 ">
         Tailored quotes for airport transfers, hourly services and custom
         journeys.
       </p>
@@ -14,7 +14,7 @@ export default function Vip() {
         {/* Mobile: flex-col */}
         <div className="flex flex-col gap-4 md:hidden">
           <div className="bg-[#F9FAFB] h-56 rounded-2xl p-4 shadow-xs relative overflow-hidden">
-            <h3 className="text-[20px] font-manrope-bold">
+            <h3 className="heading-3 text-[#404040]">
               Professional chauffeur <br /> in suit
             </h3>
             <Image
@@ -26,12 +26,12 @@ export default function Vip() {
             />
           </div>
           <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden h-32">
-            <h3 className="font-manrope-bold text-[20px] text-center">
+            <h3 className="heading-3 text-center text-[#404040]">
               Personalized airport pickup with name sign
             </h3>
           </div>
           <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden h-40">
-            <h3 className="text-white font-manrope-bold text-[20px] text-center">
+            <h3 className="text-white heading-3 text-center">
               Top-of-the-range, impeccably maintained vehicles
             </h3>
             <Image
@@ -43,7 +43,7 @@ export default function Vip() {
             />
           </div>
           <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden h-32">
-            <h3 className="font-manrope-bold text-[20px] text-center">
+            <h3 className="heading-3 text-center text-[#404040] ">
               Complimentary bottled water on board
             </h3>
             <Image
@@ -62,7 +62,7 @@ export default function Vip() {
             />
           </div>
           <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden h-56">
-            <h3 className="text-white font-manrope-bold text-[20px]">
+            <h3 className="text-white heading-3">
               Phone chargers available
             </h3>
             <Image
@@ -79,7 +79,7 @@ export default function Vip() {
         <div className="hidden md:grid md:grid-cols-4 md:gap-4 md:h-[450px]">
           {/* Colonne gauche - plus rectangulaire (1 colonne) */}
           <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden">
-            <h3 className="text-[20px] xl:text-[24px] font-manrope-bold leading-8">
+            <h3 className="heading-3 text-[#404040]">
               Professional chauffeur <br /> in suit
             </h3>
             <Image
@@ -95,7 +95,7 @@ export default function Vip() {
           <div className="col-span-2 flex flex-col gap-4">
             <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden flex-1">
               <div className="flex flex-row items-center justify-center h-full">
-                <h3 className="font-manrope-bold text-[20px] xl:text-[24px] text-center leading-8">
+                <h3 className="heading-3 text-[#404040] text-center">
                   Personalized airport pickup with{" "}
                   <br className="hidden xl:block" /> bname sign
                 </h3>
@@ -103,7 +103,7 @@ export default function Vip() {
             </div>
             <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden flex-1">
               <div className="flex flex-row items-center justify-center h-full">
-                <h3 className="text-white font-manrope-bold text-[20px] xl:text-[24px] text-center leading-8">
+                <h3 className="text-white heading-3 text-center ">
                   Top-of-the-range, impeccably{" "}
                   <br className="hidden xl:block" /> maintained vehicles
                 </h3>
@@ -119,7 +119,7 @@ export default function Vip() {
             </div>
             <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden flex-1">
               <div className="flex flex-row items-center justify-center h-full">
-                <h3 className="font-manrope-bold text-[20px] xl:text-[24px] text-center leading-8">
+                <h3 className="heading-3 text-[#404040] text-center">
                   Complimentary bottled water <br className="hidden xl:block" />{" "}
                   on board
                 </h3>
@@ -144,7 +144,7 @@ export default function Vip() {
           </div>
           {/* Colonne droite - plus rectangulaire (1 colonne) */}
           <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden">
-            <h3 className="text-white font-manrope-bold text-[20px] xl:text-[24px] leading-8 ">
+            <h3 className="text-white heading-3 ">
               Phone chargers <br className="hidden xl:block" /> available
             </h3>
             <Image

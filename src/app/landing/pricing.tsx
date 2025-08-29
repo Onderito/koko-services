@@ -13,21 +13,21 @@ export default function Pricing() {
       >
         our pricing
       </span>
-      <h2 className="text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center ">
+      <h2 className="heading-2 text-[#404040] mt-4 text-center ">
         Chauffeur Services Pricing Guide
       </h2>
-      <p className="text-[16px] md:text-[18px] text-center mt-4 ">
+      <p className="body-text text-center mt-4 ">
         Tailored quotes from nice airport to :
       </p>
       <div className="mt-10 md:mt-12 xl:mt-12 flex flex-col justify-center items-center">
-        <h3 className="text-[18px] font-manrope-bold ">
+        <h3 className="heading-3 text-[#404040]">
           Choose your destination
         </h3>
         <ul className="grid grid-cols-2 md:flex gap-2 md:gap-4 mt-4">
           {cities.map((c, index) => (
             <li
               onClick={() => setIsCityActive(c)}
-              className={`p-2 text-[16px] rounded-xl text-center cursor-pointer ${isCityActive === c
+              className={`p-2 text-[16px] rounded-xl text-center tracking-[-0.01em] cursor-pointer ${isCityActive === c
                 ? "inner-shadow-white bg-[#404040] text-white"
                 : "bg-white text-[#404040] inner-light-shadow"
                 } " `}
@@ -62,7 +62,7 @@ export default function Pricing() {
                 height={200}
               />
               <div className="w-full flex flex-col items-start border-t border-b border-[#EBEBEB] py-4">
-                <h3 className="self-start font-manrope-bold text-[20px] ">
+                <h3 className="self-start font-manrope-bold text-[20px]">
                   {v.name}
                 </h3>
                 <p

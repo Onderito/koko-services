@@ -43,10 +43,10 @@ export default function Blogs() {
       >
         our blogs
       </span>
-      <h2 className="text-[32px] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center">
+      <h2 className="heading-2 text-[#404040] mt-4 text-center">
         Chauffeur Insights & Luxury Travel Tips
       </h2>
-      <p className="text-[16px] md:text-[18px] text-center mt-4 ">
+      <p className="body-text text-center mt-4 ">
         Explore articles on premium transportation, airport transfers, and
         travel experiences along the French Riviera.
       </p>
@@ -65,7 +65,7 @@ export default function Blogs() {
               height={300}
             />
             <div className="flex flex-col justify-center items-start mt-4 font-manrope-regular text-[16px]">
-              <span className="pb-2 font-manrope-bold text-[18px]  ">
+              <span className="pb-2 font-manrope-bold text-[18px]">
                 {b.name}
               </span>
               <span className="py-1 font-manrope-regular text-[16px] ">

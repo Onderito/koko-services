@@ -50,10 +50,10 @@ export default function Performances() {
     <section aria-labelledby="perf-title" ref={sectionRef}>
       <div className="pin-container min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
         <div className="performance-section flex flex-col py-10 px-2 ">
-          <h2 id="perf-title" className="text-white text-[32px] md:text-[56px] text font-manrope-bold mt-4 text-center">
+          <h2 id="perf-title" className="text-white heading-2 mt-4 text-center">
             Performance that speaks for itself
           </h2>
-          <p className="text-white text-[16px] md:text-[18px] text-center mt-4 text">
+          <p className="text-white body-text text-center mt-4 text">
             Flawless execution, absolute discretion, and a reputation built on
             consistency.
           </p>
@@ -70,10 +70,10 @@ export default function Performances() {
                   {index === 3 && <FourthCard />}
                 </div>
 
-                <h3 className="font-manrope-bold text-center text-[18px] md:text-[20px] mt-8">
+                <h3 className="heading-3 text-white text-center mt-8">
                   {c.title}
                 </h3>
-                <p className="font-manrope-regular text-center mt-2 text-[16px]">{c.text}</p>
+                <p className="card-text text-white text-center mt-2">{c.text}</p>
               </li>
             ))}
           </ul>
