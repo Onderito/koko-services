@@ -7,7 +7,7 @@ const card = [
     {
         title: "Business & Executives",
         text: "Full-day or half-day chauffeur on standby. Stay productive between meetings with quiet, punctual, and discreet service.",
-        icon: "/icon-services/suit-case.svg"
+        icon: "/icon-services/suit-case.webp"
     },
     {
         title: "Flexible Day Hire",
