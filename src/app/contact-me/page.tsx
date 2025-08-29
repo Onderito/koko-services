@@ -56,12 +56,16 @@ export default function ContactMe() {
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
     ) => {
-        const { name, value } = e.target;
+        const { name, value, type } = e.target;
+
         setFormData((p) => ({
             ...p,
-            [name]: name === "passengers" || name === "baggage" ? Number(value) : value,
+            [name]: type === "number"
+                ? value === "" ? "" : parseInt(value, 10)  // 👉 normalise direct (02 → 2)
+                : value,
         }));
     };
+
 
     const handleBlur = (
         e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -181,35 +185,17 @@ export default function ContactMe() {
                     <div className="flex flex-col">
                         <label htmlFor="pickupDate" className="font-manrope-bold text-[16px]">Pick-up Date</label>
                         <input
-                            type="date"
-                            id="pickupDate"
-                            name="pickupDate"
-                            value={formData.pickupDate}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            className={`${inputCls("pickupDate")} appearance-none`}
-                            style={{
-                                WebkitAppearance: 'none',
-                                MozAppearance: 'textfield'
-                            }}
-                            required
+                            type="date" id="pickupDate" name="pickupDate"
+                            value={formData.pickupDate} onChange={handleChange} onBlur={handleBlur}
+                            className={inputCls("pickupDate")} required
                         />
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="pickupTime" className="font-manrope-bold text-[16px]">Pick-up Time</label>
                         <input
-                            type="time"
-                            id="pickupTime"
-                            name="pickupTime"
-                            value={formData.pickupTime}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            className={`${inputCls("pickupTime")} appearance-none`}
-                            style={{
-                                WebkitAppearance: 'none',
-                                MozAppearance: 'textfield'
-                            }}
-                            required
+                            type="time" id="pickupTime" name="pickupTime"
+                            value={formData.pickupTime} onChange={handleChange} onBlur={handleBlur}
+                            className={inputCls("pickupTime")} required
                         />
                     </div>
                 </fieldset>
@@ -281,8 +267,8 @@ export default function ContactMe() {
                     <div className="flex flex-col">
                         <label htmlFor="baggage" className="font-manrope-bold text-[16px]">Baggage</label>
                         <input
-                            type="number" id="baggage" name="baggage" min={0} max={12} inputMode="numeric"
-                            value={formData.baggage} onChange={handleChange} onBlur={handleBlur}
+                            type="number" id="baggage" name="baggage" min={1} max={7} inputMode="numeric"
+                            value={formData.baggage} onChange={handleChange} onBlur={handleBlur} pattern="[0-9]*"
                             className={inputCls("baggage")}
                         />
                     </div>
@@ -314,7 +300,7 @@ export default function ContactMe() {
                     <button
                         type="submit"
                         disabled={!isValid || status === "loading"}
-                        className={`py-3 px-6 font-manrope-bold text-[16px] w-[50%] rounded-xl xl:cursor-pointer text-white ${!isValid || status === "loading" ? "bg-[#404040]/40 cursor-not-allowed" : "bg-[#404040]"
+                        className={`py-3 px-6 font-manrope-bold text-[16px] w-[50%] rounded-xl cursor-pointer text-white ${!isValid || status === "loading" ? "bg-[#404040]/40 cursor-not-allowed" : "bg-[#404040]"
                             }`}
                     >
                         {status === "loading" ? "Sending..." : "Book Now"}
