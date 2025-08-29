@@ -31,10 +31,15 @@ export default function ClassVPage() {
             {/* Hero Section */}
             <div className="flex flex-col xl:flex-row justify-center items-center gap-10">
                 <div className="xl:w-2/3">
-                    <h1 className="font-manrope-bold text-[44px] leading-[40px] tracking-[-2%] md:text-[64px] md:leading-[56px] xl:text-[80px] xl:tracking-[-5%] xl:leading-[72px]  ">Mercedes V-Class -
+                    <h1 className="heading-1">
+                        Mercedes V-Class -
                         <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">Luxury Redefined</span></h1>
-                    <p className="font-manrope-regular text-[18px] tracking-[-1%] xl:tracking-[-2%] leading-[26px] md:text-[20px] mt-4 xl:mt-6">Travel in supreme comfort with premium leather seating, climate control, and spacious interior for up to 7 passengers</p>
-                    <Link href="/contact-me"><button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-2%] text-white rounded-xl mt-8 xl:mt-10 button">Book V-Class</button></Link>
+                    <p className="body-text mt-4 xl:mt-6">
+                        Travel in supreme comfort with premium leather seating, climate control, and spacious interior for up to 7 passengers
+                    </p>
+                    <Link href="/contact-me"><button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl mt-8 xl:mt-10 button">
+                        Book V-Class
+                    </button></Link>
                 </div>
 
                 <div className="relative xl:w-2/3">
@@ -60,10 +65,10 @@ export default function ClassVPage() {
             {/* Description Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 mt-16 xl:mt-56">
                 <div className="order-1 lg:order-2">
-                    <h2 className="font-manrope-bold text-[32px] md:text-[56px] leading-10 md:leading-14 xl:leading-16 text-[#404040] mb-6">
+                    <h2 className="heading-2 text-[#404040] mb-6">
                         Discover the Mercedes Class-V
                     </h2>
-                    <div className="space-y-4 text-gray-600 font-manrope-regular text-[14px] md:text-[16px] leading-relaxed">
+                    <div className="space-y-6 body-text">
                         <p>
                             The Mercedes Classe V sets the standard for luxury travel in a spacious and elegant van. Designed with premium leather seats, generous legroom, and adjustable seating, every journey offers unparalleled comfort for passengers.                            </p>
                         <p>
@@ -104,10 +109,10 @@ export default function ClassVPage() {
 
             {/* Features Section */}
             <div className="mb-16 lg:mb-20">
-                <h2 className="font-manrope-bold text-[32px] md:text-[56px] text-center">
+                <h2 className="heading-2 text-[#404040] text-center">
                     Vehicle Features
                 </h2>
-                <p className="text-gray-600 font-manrope-regular text-[16px] md:text-[18px] text-center mt-4 max-w-3xl mx-auto">
+                <p className="body-text text-center mt-4 max-w-3xl mx-auto">
                     Discover the key features and premium amenities of our vehicles, designed to provide maximum comfort, safety, and convenience on every journey.
                 </p>
 
@@ -118,10 +123,10 @@ export default function ClassVPage() {
                             <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 flex items-center justify-center">
                                 <Image src={f.icon} alt={f.name} width={50} height={50} />
                             </div>
-                            <h3 className="font-manrope-bold text-[16px] md:text-[18px] text-[#404040] mb-2">
+                            <h3 className="heading-3 text-[#404040] mb-2">
                                 {f.name}
                             </h3>
-                            <p className="text-gray-600 font-manrope-regular text-[13px] md:text-[14px] leading-relaxed">
+                            <p className="card-text ">
                                 {f.description}
                             </p>
                         </div>
@@ -132,17 +137,17 @@ export default function ClassVPage() {
             <Cars />
             {/* CTA Section */}
             <div className="text-center bg-gray-50 rounded-2xl p-8 md:p-12 mt-16 lg:mt-20">
-                <h2 className="font-manrope-bold text-[24px] md:text-[32px] text-[#404040] mb-4">
+                <h2 className="heading-2 text-[#404040] mb-4">
                     Ready to Experience Luxury?
                 </h2>
-                <p className="text-gray-600 font-manrope-regular text-[14px] md:text-[16px] mb-8 max-w-2xl mx-auto">
+                <p className="body-text mb-8 max-w-2xl mx-auto">
                     Book your Mercedes Class-V today and enjoy the ultimate in comfort, style, and sophistication for your next journey.
                 </p>
-                <button className="bg-[#404040] text-white rounded-xl px-8 py-4 font-manrope-bold text-[16px] hover:bg-[#505050] transition-colors duration-300 cursor-pointer">
+                <button className="bg-[#404040] text-white rounded-xl px-8 py-4 font-manrope-bold text-[16px] tracking-[-0.01em] hover:bg-[#505050] transition-colors duration-300 cursor-pointer">
                     Reserve Your Class-V
                 </button>
             </div>
 
-        </div>
+        </div >
     );
 }

@@ -56,16 +56,12 @@ export default function ContactMe() {
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
     ) => {
-        const { name, value, type } = e.target;
-
+        const { name, value } = e.target;
         setFormData((p) => ({
             ...p,
-            [name]: type === "number"
-                ? value === "" ? "" : parseInt(value, 10)  // 👉 normalise direct (02 → 2)
-                : value,
+            [name]: name === "passengers" || name === "baggage" ? Number(value) : value,
         }));
     };
-
 
     const handleBlur = (
         e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -267,8 +263,8 @@ export default function ContactMe() {
                     <div className="flex flex-col">
                         <label htmlFor="baggage" className="font-manrope-bold text-[16px]">Baggage</label>
                         <input
-                            type="number" id="baggage" name="baggage" min={1} max={7} inputMode="numeric"
-                            value={formData.baggage} onChange={handleChange} onBlur={handleBlur} pattern="[0-9]*"
+                            type="number" id="baggage" name="baggage" min={0} max={12} inputMode="numeric"
+                            value={formData.baggage} onChange={handleChange} onBlur={handleBlur}
                             className={inputCls("baggage")}
                         />
                     </div>

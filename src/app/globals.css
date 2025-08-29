@@ -33,8 +33,38 @@
   --font-mono: var(--font-geist-mono);
   --font-manrope: "Manrope", sans-serif;
   --font-gloria: "Gloria Hallelujah", cursive;
-
+  
 }
+
+/* Headings réutilisables */
+@layer components {
+  .heading-1 {
+    @apply font-bold font-manrope text-[32px] leading-10 tracking-[-2px]
+           md:text-[64px] md:leading-tight
+           xl:text-[74px] xl:leading-none xl:tracking-[-0.05em];
+  }
+
+  .heading-2 {
+    @apply font-bold font-manrope text-[28px] tracking-[-2px]
+           md:text-[48px]
+           xl:text-[56px] xl:tracking-[-0.03em] leading-tight text-foreground;
+  }
+
+  .heading-3 {
+    @apply font-bold font-manrope text-[18px] tracking-[-0.5px]
+           md:text-[20px] xl:text-[22px] leading-snug text-foreground;
+  }
+
+  .body-text {
+    @apply font-manrope text-[14px] md:text-[16px] xl:text-[18px] 
+           tracking-[-0.01em] leading-relaxed text-gray-600;
+  }
+  .card-text {
+    @apply font-manrope text-[14px] md:text-[15px] xl:text-[16px]
+           text-gray-600 leading-relaxed;
+  }
+}
+
 
 @layer utilities {
   .font-manrope-regular {
@@ -85,6 +115,7 @@
     border-width: 0.5px !important;
   }
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
