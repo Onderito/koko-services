@@ -28,7 +28,7 @@ export default function Footer() {
                     </button>
                 </Link>
             </div>
-            <Link className="text-white font-manrope-regular absolute bottom-5 left-5 underline" href="/legal-privacy">Legal privacy policy</Link>
+            <Link className="text-white font-manrope-regular absolute text-[12px] md:text-[16px] bottom-5 left-5 underline" href="/legal-privacy">Legal privacy policy</Link>
         </footer>
     )
 }
