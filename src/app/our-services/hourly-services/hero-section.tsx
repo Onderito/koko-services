@@ -19,7 +19,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="relative xl:w-2/3">
-                    <Image
+                    <img
                         width={1200}
                         height={1000}
                         src="/services/white-rectangle.svg"
