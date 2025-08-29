@@ -181,17 +181,35 @@ export default function ContactMe() {
                     <div className="flex flex-col">
                         <label htmlFor="pickupDate" className="font-manrope-bold text-[16px]">Pick-up Date</label>
                         <input
-                            type="date" id="pickupDate" name="pickupDate"
-                            value={formData.pickupDate} onChange={handleChange} onBlur={handleBlur}
-                            className={inputCls("pickupDate")} required
+                            type="date"
+                            id="pickupDate"
+                            name="pickupDate"
+                            value={formData.pickupDate}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            className={`${inputCls("pickupDate")} appearance-none`}
+                            style={{
+                                WebkitAppearance: 'none',
+                                MozAppearance: 'textfield'
+                            }}
+                            required
                         />
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="pickupTime" className="font-manrope-bold text-[16px]">Pick-up Time</label>
                         <input
-                            type="time" id="pickupTime" name="pickupTime"
-                            value={formData.pickupTime} onChange={handleChange} onBlur={handleBlur}
-                            className={inputCls("pickupTime")} required
+                            type="time"
+                            id="pickupTime"
+                            name="pickupTime"
+                            value={formData.pickupTime}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            className={`${inputCls("pickupTime")} appearance-none`}
+                            style={{
+                                WebkitAppearance: 'none',
+                                MozAppearance: 'textfield'
+                            }}
+                            required
                         />
                     </div>
                 </fieldset>
@@ -290,9 +308,9 @@ export default function ContactMe() {
                 </fieldset>
 
                 <div className="mt-6 flex items-start justify-between gap-4">
-                    {/* <p className="text-xs text-[#404040]/70">
+                    <p className="text-xs text-[#404040]/70">
                         By submitting, you agree to our terms and <Link href="/legal-privacy" className="underline">privacy policy</Link>.
-                    </p> */}
+                    </p>
                     <button
                         type="submit"
                         disabled={!isValid || status === "loading"}
