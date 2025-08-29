@@ -3,7 +3,7 @@
 import Image from "next/image"
 import React, { useRef, useLayoutEffect } from "react"
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+
 
 const card = [
     {

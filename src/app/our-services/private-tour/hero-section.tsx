@@ -21,7 +21,8 @@ export default function HeroSection() {
                         height={1000}
                         src="/services/white-rectangle.svg"
                         alt="Rectangle"
-                        className="w-full h-auto "
+                        className="w-full h-auto"
+                        unoptimized
                     />
 
                     {/* First Image */}
