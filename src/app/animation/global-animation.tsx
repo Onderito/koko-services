@@ -7,11 +7,10 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export const globalAnimation = () => {
     const mm = gsap.matchMedia();
-    mm.add("(min-width: 1024px", () => {
+    mm.add("(min-width: 1280px", () => {
         const el = document.querySelector(".main-container .split");
         if (!el) return;
         const split = SplitText.create(el, { type: "chars" });
-        console.log("mots:", split.chars.length);
 
         gsap.set(".card", {
             autoAlpha: 0,

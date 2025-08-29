@@ -74,13 +74,13 @@ export const heroSection = () => {
 export const heroScroll = () => {
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".hero-container",
+      trigger: ".hero-content",
       start: "1% top",
       end: "bottom",
       scrub: true,
     },
   });
-  tl.to(".hero-container", {
+  tl.to(".hero-content", {
     rotate: 2,
     scale: 0.9,
     yPercent: 10,

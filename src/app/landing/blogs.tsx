@@ -39,7 +39,6 @@ export default function Blogs() {
   return (
     <div className="flex-center-column">
       <span
-        // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
         className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
       >
         our blogs
@@ -56,7 +55,7 @@ export default function Blogs() {
         {blogsData.map((b, index) => (
           <div
             key={index}
-            className="flex-col md:flex md:justify-center md:items-center"
+            className="flex-col md:flex md:justify-center md:items-center lg:items-start"
           >
             <Image
               className="rounded-2xl object-conver md:w-full shadow-lg"

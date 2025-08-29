@@ -46,7 +46,7 @@ export default function HeroSection() {
           }}
         />
       </div>
-      <div className="flex flex-col justify-center items-center hero-container ">
+      <div className="flex flex-col justify-center items-center hero-content">
         <span
           style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
           className="hero-span rounded-4xl bg-[#404040] inner-shadow-white p-2 font-manrope-bold text-[12px] text-white w-fit"

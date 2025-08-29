@@ -56,7 +56,7 @@ export default function Services() {
       <h2 className="split xl:text-gray-100 text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center">
         What We Offer
       </h2>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-6 xl:gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
