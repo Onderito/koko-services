@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { ScrollTrigger } from 'gsap/all';
 
 
 export default function NavBar() {
@@ -9,6 +10,12 @@ export default function NavBar() {
 
     const closeMobileMenu = () => {
         setIsMenuOpen(false);
+    }
+
+    const handleResetScroll = () => {
+        ScrollTrigger.killAll();
+        ScrollTrigger.refresh();
+        window.scrollTo(0, 0);
     }
     return (
         <nav className="fixed w-full top-5 z-50">
@@ -25,32 +32,32 @@ export default function NavBar() {
                     {/* Liens centrés */}
                     <ul className="hidden xl:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
                         <li>
-                            <Link href="/our-services/transfer" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                            <Link onClick={handleResetScroll} href="/our-services/transfer" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
                                 Transfer
                             </Link>
                         </li>
                         <li>
-                            <Link href="/our-services/hourly-services" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                            <Link onClick={handleResetScroll} href="/our-services/hourly-services" className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
                                 Hourly Services
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/our-services/private-tour"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                            <Link onClick={handleResetScroll} href={"/our-services/private-tour"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
                                 Private tour
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/cars/class-v"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                            <Link onClick={handleResetScroll} href={"/cars/class-v"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
                                 Class-v
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/cars/class-s"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                            <Link onClick={handleResetScroll} href={"/cars/class-s"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
                                 Class-s
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/cars/maybach"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
+                            <Link onClick={handleResetScroll} href={"/cars/maybach"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
                                 Maybach
                             </Link>
                         </li>

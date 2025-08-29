@@ -49,15 +49,15 @@ export default function Performances() {
   return (
     <section aria-labelledby="perf-title" ref={sectionRef}>
       <div className="pin-container min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
-        <div className="performance-section flex flex-col py-10 px-2">
-          <h2 id="perf-title" className="text-white text-[32px] md:text-[56px] perf-title font-manrope-bold mt-4 text-center">
+        <div className="performance-section flex flex-col py-10 px-2 ">
+          <h2 id="perf-title" className="text-white text-[32px] md:text-[56px] text font-manrope-bold mt-4 text-center">
             Performance that speaks for itself
           </h2>
-          <p className="text-white text-[16px] md:text-[18px] text-center mt-4 perf-desc">
+          <p className="text-white text-[16px] md:text-[18px] text-center mt-4 text">
             Flawless execution, absolute discretion, and a reputation built on
             consistency.
           </p>
-          <ul className="flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row xl:px-16 gap-4 text-white mt-10">
+          <ul className="flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row px-2 xl:px-16 gap-4 text-white mt-10">
             {cards.map((c, index) => (
               <li
                 key={index}

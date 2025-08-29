@@ -146,7 +146,7 @@ export default function ContactMe() {
     };
 
     return (
-        <div className="container mx-auto px-2 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+        <div className="container mx-auto px-2 mt-10 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
             <h1 className="text-[44px] md:text-[64px] xl:text-[80px] font-manrope-bold text-center leading-12 md:leading-16 xl:leading-20 mt-4">
                 Contact Me
             </h1>
@@ -296,7 +296,7 @@ export default function ContactMe() {
                     <button
                         type="submit"
                         disabled={!isValid || status === "loading"}
-                        className={`py-3 px-6 font-manrope-bold text-[16px] rounded-xl cursor-pointer text-white ${!isValid || status === "loading" ? "bg-[#404040]/40 cursor-not-allowed" : "bg-[#404040]"
+                        className={`py-3 px-6 font-manrope-bold text-[16px] w-[50%] rounded-xl cursor-pointer text-white ${!isValid || status === "loading" ? "bg-[#404040]/40 cursor-not-allowed" : "bg-[#404040]"
                             }`}
                     >
                         {status === "loading" ? "Sending..." : "Book Now"}

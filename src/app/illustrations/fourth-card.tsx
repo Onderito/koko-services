@@ -4,7 +4,7 @@ export default function FourthCard() {
   return (
     <section className="py-12">
       {/* Titre centré */}
-      <h4 className="text-fourth-card text-center text-[16px] tracking-tight">
+      <h4 className="text-fourth-card font-gloria text-center text-[16px] tracking-tight">
         We speak
       </h4>
 

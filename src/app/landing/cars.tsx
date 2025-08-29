@@ -76,10 +76,15 @@ export default function Cars() {
               height={300}
             />
             {/* Gradient/blur avec transition plus douce */}
-            <div className="absolute bottom-0 left-0 right-0 h-64 xl:h-44 rounded-b-3xl bg-gradient-to-t from-black/30  to-transparent backdrop-blur-[2px]"></div>
-
+            <div
+              className="absolute bottom-0 left-0 right-0 h-80 xl:h-44 rounded-b-3xl backdrop-blur-[8px]"
+              style={{
+                maskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)'
+              }}
+            ></div>
             {index === 1 && (
-              <div className="absolute bottom-0 left-0 right-0 h-64 xl:h-44 rounded-b-3xl bg-gradient-to-t from-[#7A25BB]/50  to-transparent"></div>
+              <div className="absolute  bottom-0 left-0 right-0 h-64 xl:h-44 rounded-b-3xl bg-gradient-to-t from-[#7A25BB]/50  to-transparent"></div>
             )}
             <div className="absolute top-3/4 md:top-5/6 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
               <h3 className="text-white font-manrope-bold text-[24px] md:text-[28px] ">
