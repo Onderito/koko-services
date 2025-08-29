@@ -65,7 +65,7 @@ export const performanceSection = () => {
       // First card
       .from(".first-card-illu", {
         scale: 0.50,
-        x: "100px",
+        x: "10px",
         rotate: 1,
         autoAlpha: 0,
         duration: 0.8,
@@ -76,7 +76,7 @@ export const performanceSection = () => {
         ".second-card-illu",
         {
           scale: 0.50,
-          y: "100px",
+          y: "10px",
           autoAlpha: 0,
           duration: 0.6,
           ease: "power3.out",
@@ -106,7 +106,7 @@ export const performanceSection = () => {
         ".third-card-illu",
         {
           scale: 0.50,
-          y: "100px",
+          y: "10px",
           autoAlpha: 0,
           duration: 0.8,
           ease: "power3.out",
@@ -117,8 +117,9 @@ export const performanceSection = () => {
       .from(
         ".text-fourth-card",
         {
-          scale: 0.20,
-          y: "-50px",
+          scale: 0.50,
+          y: "-5px",
+          rotate: -5,
           autoAlpha: 0,
           duration: 0.8,
           ease: "power3.out",
@@ -130,7 +131,7 @@ export const performanceSection = () => {
         {
           scale: 0.5,
           autoAlpha: 0,
-          rotate: 2,
+          rotate: 10,
           duration: 0.9,
           ease: "bounce.out",
         },
@@ -140,7 +141,9 @@ export const performanceSection = () => {
         ".mouse-svg",
         {
           autoAlpha: 0,
-          y: "100px",
+          scale: 0.5,
+          rotate: 4,
+          y: "4px",
           duration: 0.6,
           ease: "power3.out",
         },
