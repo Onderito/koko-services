@@ -97,7 +97,7 @@ export default function ForWhoHourlyServices() {
             <div ref={stackRef} className="hidden xl:block relative w-fit mx-auto mt-24 isolate">
                 {/* Card 1 - devant */}
                 <div ref={card1Ref} className="relative z-8 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
-                    <img src={"/icon-services/suit-case.svg"} alt="icon suitcase" width={40} height={40} />
+                    <img src={"/icon-services/suit-case.webp"} alt="icon suitcase" width={40} height={40} />
                     <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">Business & Executives</h4>
                     <p className="text-center text-[16px] font-manrope-regular mt-4">
                         Full-day or half-day chauffeur on standby. Stay productive between meetings with quiet, punctual, and discreet service.

@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function HeroSection() {
     return (
-        <div className="min-h-[80vh]">
+        <div className="min-h-[70vh] mt-10 lg:min-h-[80vh]">
             {/* Hero Section */}
             <div className="flex flex-col xl:flex-row justify-center items-center gap-10">
                 <div className="xl:w-2/3">
@@ -20,15 +20,13 @@ export default function HeroSection() {
 
                 <div className="relative xl:w-2/3">
                     <img
-                        width={1200}
-                        height={1000}
                         src="/services/white-rectangle.svg"
                         alt="Rectangle"
-                        className="w-full h-auto "
+                        className="w-full h-auto"
                     />
 
                     {/* First Image */}
-                    <div className="absolute top-15 left-5 md:left-10">
+                    <div className="absolute top-8 md:top-15 left-5 md:left-10">
                         <h4 className="text-[10px] md:text-[14px] xl:text-[16px] p-1 px-4 xl:px-6 xl:py-2 ml-auto mb-6 bg-white rounded-lg xl:rounded-xl border-[0.5px] border-[#E5E5E5] w-fit font-gloria">Business Meeting</h4>
                         <Image
                             src="/services/luxury-hotel.webp"
@@ -36,15 +34,15 @@ export default function HeroSection() {
                             width={250}
                             height={250}
                             quality={100}
-                            className="object-cover rounded-xl no-blur-shadow-little w-[120px] md:w-[250px] xl:w-[269px] xl:h-[267px]"
+                            className="object-cover rounded-xl no-blur-shadow-little w-[130px] md:w-[250px] xl:w-[269px] xl:h-[267px]"
                         />
                     </div>
 
                     {/* Arrow Image */}
-                    <Image src={"/services/plane-arrow.svg"} alt="plane arrow" width={30} height={30} className="absolute top-18 md:top-35 xl:top-30 left-40 md:left-80 xl:left-85 md:w-[80px]" />
+                    <Image src={"/services/plane-arrow.svg"} alt="plane arrow" width={30} height={30} className="absolute top-18 md:top-35 xl:top-30 left-45 md:left-80 xl:left-85 md:w-[80px]" />
 
                     {/* Second Image */}
-                    <div className="absolute top-29 right-5 md:top-60 ">
+                    <div className="absolute top-30 right-5 md:top-60 ">
                         <h4 className="text-[10px] md:text-[14px] xl:text-[16px] p-1 px-4 xl:px-6 xl:py-2 mr-auto mb-6 bg-white rounded-lg xl:rounded-xl border-[0.5px] border-[#E5E5E5] w-fit font-gloria">Monaco Evening</h4>
                         <Image
                             src="/services/monaco.webp"
@@ -52,7 +50,7 @@ export default function HeroSection() {
                             width={300}
                             height={300}
                             quality={100}
-                            className="object-cover rounded-xl no-blur-shadow-little w-[120px] md:w-[300px] xl:w-[367px] xl:h-[245px]"
+                            className="object-cover rounded-xl no-blur-shadow-little w-[130px] md:w-[300px] xl:w-[330px] xl:h-[240px]"
                         />
                     </div>
                 </div>
