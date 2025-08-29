@@ -296,7 +296,7 @@ export default function ContactMe() {
                     <button
                         type="submit"
                         disabled={!isValid || status === "loading"}
-                        className={`py-3 px-6 font-manrope-bold text-[16px] w-[50%] rounded-xl cursor-pointer text-white ${!isValid || status === "loading" ? "bg-[#404040]/40 cursor-not-allowed" : "bg-[#404040]"
+                        className={`py-3 px-6 font-manrope-bold text-[16px] w-[50%] relative z-[9999] rounded-xl cursor-pointer text-white ${!isValid || status === "loading" ? "bg-[#404040]/40 cursor-not-allowed" : "bg-[#404040]"
                             }`}
                     >
                         {status === "loading" ? "Sending..." : "Book Now"}
