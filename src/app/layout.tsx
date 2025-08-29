@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import NavBar from "./layout/navBar";
+import SmoothScrollWrapper from "./animation/scrollWrapper";
 import Script from "next/script";
 
 
@@ -32,7 +33,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
-        {children}
+        <SmoothScrollWrapper>
+          {children}
+        </SmoothScrollWrapper>
 
         <Script id="structured-data" type="application/ld+json">
           {JSON.stringify({
