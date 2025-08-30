@@ -147,10 +147,10 @@ export default function ContactMe() {
 
     return (
         <div className="container mx-auto px-2 mt-10 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
-            <h1 className="text-[44px] md:text-[64px] xl:text-[80px] font-manrope-bold text-center leading-12 md:leading-16 xl:leading-20 mt-4">
+            <h1 className="heading-1 text-center l mt-4">
                 Contact Me
             </h1>
-            <p className="description text-[16px] md:text-[18px] text-center mt-4">
+            <p className="body-text text-center mt-4">
                 Fill out the form below and we&apos;ll get back to you as soon as possible.
             </p>
             <form

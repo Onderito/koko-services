@@ -58,7 +58,7 @@ export default function Maybach() {
             </div>
 
             {/* Description Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 xl:mt-56">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 mt-16 xl:mt-56">
                 <div className="order-1 lg:order-2">
                     <h2 className="heading-2 text-[#404040] mb-6">
                         Discover the Mercedes Maybach
