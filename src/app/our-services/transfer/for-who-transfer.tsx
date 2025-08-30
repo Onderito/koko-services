@@ -77,10 +77,10 @@ export default function ForWhoTransfer() {
     }, []);
     return (
         <div ref={containerRef} className="mb-20">
-            <h2 className="text-[32px] leading-10 tracking-[-2%] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center">
-                Made For <span className="text-[#C5C5C5] ">Every Journey</span>
+            <h2 className="heading-2 text-[#404040] mt-4 text-center">
+                Made For <span className="text-[#C5C5C5] "> <br className="block md:hidden" /> Every Journey</span>
             </h2>
-            <p className="text-[16px] md:text-[18px] text-center mt-4 ">
+            <p className="body-text text-center mt-4 ">
                 From business meetings to special celebrations, discover how our premium transfer service perfectly fits your needs.</p>
 
             <div className="block xl:hidden">
@@ -88,8 +88,8 @@ export default function ForWhoTransfer() {
 
                     <div key={index} className="relative z-10 flex flex-col mx-auto items-center max-w-lg mt-10 border-[0.5px] border-[#E5E5E5] p-4 rounded-2xl ">
                         <img src={c.icon} alt="icon suitcase" width={40} height={40} />
-                        <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">{c.title}</h4>
-                        <p className="text-center text-[16px] font-manrope-regular mt-4">{c.text}</p>
+                        <h3 className="heading-3 text-[#404040] mt-2">{c.title}</h3>
+                        <p className="text-center card-text mt-4">{c.text}</p>
                     </div>
                 ))}
             </div>
@@ -97,8 +97,8 @@ export default function ForWhoTransfer() {
                 {/* Card 1 - devant */}
                 <div ref={card1Ref} className="relative z-8 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/suit-case.webp"} alt="icon suitcase" width={40} height={40} />
-                    <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">Business Travelers</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">Business Travelers</h3>
+                    <p className="text-center card-text mt-4">
                         Executive transportation with guaranteed punctuality. Quiet, comfortable environment perfect for preparing meetings or making important calls during your journey.
                     </p>
                 </div>
@@ -106,8 +106,8 @@ export default function ForWhoTransfer() {
                 {/* Card 2 - derrière */}
                 <div ref={card2Ref} className="absolute inset-0 rotate-5 z-6 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/hand.webp"} alt="icon hand" width={40} height={40} />
-                    <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">First-Time Visitors</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">First-Time Visitors</h3>
+                    <p className="text-center card-text mt-4">
                         New to the French Riviera? Start your journey right with reliable transfers and local insights from our <br /> bilingual drivers.
                     </p>
                 </div>
@@ -115,8 +115,8 @@ export default function ForWhoTransfer() {
                 {/* Card 3 - encore plus derrière */}
                 <div ref={card3Ref} className="absolute inset-0 -rotate-5 z-4 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/multiple-suit-case.webp"} alt="icon multiple suitcase" width={40} height={40} />
-                    <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">Group Travelers</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">Group Travelers</h3>
+                    <p className="text-center card-text mt-4">
                         Families and groups who want to travel together comfortably. Premium vehicles with space for everyone and luggage assistance.
                     </p>
                 </div>

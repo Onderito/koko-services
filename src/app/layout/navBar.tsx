@@ -26,7 +26,7 @@ export default function NavBar() {
 
                     {/* Logo à gauche */}
                     <Link onClick={closeMobileMenu} href="/" className="font-manrope-bold text-[18px] md:text-[20px] text-[#404040]">
-                        VipLimoNice
+                        ViplimoNice
                     </Link>
 
                     {/* Liens centrés */}
@@ -43,17 +43,17 @@ export default function NavBar() {
                         </li>
                         <li>
                             <Link onClick={handleResetScroll} href={"/our-services/private-tour"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
-                                Private tour
+                                Private Tour
                             </Link>
                         </li>
                         <li>
                             <Link onClick={handleResetScroll} href={"/cars/class-v"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
-                                Class-v
+                                Class-V
                             </Link>
                         </li>
                         <li>
                             <Link onClick={handleResetScroll} href={"/cars/class-s"} className="font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300 cursor-pointer">
-                                Class-s
+                                Class-S
                             </Link>
                         </li>
                         <li>
@@ -102,17 +102,17 @@ export default function NavBar() {
                         </li>
                         <li>
                             <Link href={"/our-services/private-tour"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
-                                Private tour
+                                Private Tour
                             </Link>
                         </li>
                         <li>
                             <Link href={"/cars/class-v"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
-                                Class-v
+                                Class-V
                             </Link>
                         </li>
                         <li>
                             <Link href={"/cars/class-s"} className="block px-4 py-2 font-manrope-regular text-[16px] text-gray-600 hover:text-[#404040] transition-colors duration-300">
-                                Class-s
+                                Class-S
                             </Link>
                         </li>
                         <li>

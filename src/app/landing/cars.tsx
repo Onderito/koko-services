@@ -58,16 +58,16 @@ export default function Cars() {
       >
         our cars
       </span>
-      <h2 className="text-[32px] md:text-[56px] font-manrope-bold mt-4 text-center ">
+      <h2 className="heading-2 text-[#404040] mt-4 text-center ">
         Our Fleet, Your Comfort
       </h2>
-      <p className="text-[16px] md:text-[18px] text-center mt-4 ">
+      <p className="body-text text-center mt-4 ">
         Choose from our range of luxury vehicles — curated for style, space, and
         performance.{" "}
       </p>
       <div className="flex flex-col xl:grid xl:grid-cols-3 gap-8 mt-10">
         {vehiclesData.map((v, index) => (
-          <div className="overflow-hidden relative" key={index}>
+          <div className="overflow-hidden relative shadow-lg rounded-3xl" key={index}>
             <Image
               className="rounded-3xl object-cover md:w-full h-full"
               src={v.imageUrl}
@@ -77,24 +77,28 @@ export default function Cars() {
             />
             {/* Gradient/blur avec transition plus douce */}
             <div
-              className="absolute bottom-0 left-0 right-0 h-80 xl:h-44 rounded-b-3xl backdrop-blur-[8px]"
+              className="absolute bottom-0 left-0 right-0 h-80 xl:h-44 rounded-b-3xl backdrop-blur-[4px]"
               style={{
                 maskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)',
                 WebkitMaskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)'
               }}
             ></div>
             {index === 1 && (
-              <div className="absolute  bottom-0 left-0 right-0 h-64 xl:h-44 rounded-b-3xl bg-gradient-to-t from-[#7A25BB]/50  to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-80 xl:h-44 rounded-b-3xl  bg-gradient-to-t from-[#7A25BB]/50 to-transparent"
+                style={{
+                  maskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)'
+                }}></div>
             )}
             <div className="absolute top-3/4 md:top-5/6 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
-              <h3 className="text-white font-manrope-bold text-[24px] md:text-[28px] ">
+              <h3 className="text-white heading-3 ">
                 {v.name}
                 {/* Ajouter un espace manuel pour séparer le nom et le type */}
-                <span className="ml-2 font-light text-white/80 text-[16px] md:text-[18px] ">
+                <span className="ml-2 font-light text-white/80 body-text ">
                   ({v.type})
                 </span>
               </h3>
-              <div className="text-[#C2C2C2] flex divide-x justify-center mt-4 font-manrope-regular pb-8 xl:pb-16 text-[16px]">
+              <div className="text-[#C2C2C2] flex divide-x justify-center mt-4 font-manrope-regular pb-8 xl:pb-16 card-text">
                 <span className="px-4">{v.guests}</span>
                 <span className="px-4">{v.bags}</span>
                 <span className="px-4">{v.feature}</span>
@@ -104,7 +108,7 @@ export default function Cars() {
               <button
                 aria-label="see more about the car"
                 onClick={() => handleClick(v.link)}
-                className="block w-full text-[#404040] bg-white cursor-pointer inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300"
+                className="block w-full text-[#404040] bg-white cursor-pointer tracking-[-0.01em] inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300"
               >
                 {v.button}
                 <span className="sr-only"> about {v.name}</span>

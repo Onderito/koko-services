@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export const globalAnimation = () => {
     const mm = gsap.matchMedia();
-    mm.add("(min-width: 1280px", () => {
+    mm.add("(min-width: 1024px", () => {
         const el = document.querySelector(".main-container .split");
         if (!el) return;
         const split = SplitText.create(el, { type: "chars" });
@@ -30,7 +30,9 @@ export const globalAnimation = () => {
 
         tl.to(".span-anim", {
             duration: 0.7,
-            clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+            scale: 1,
+            opacity: 1,
+            // clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
             ease: "power2.out"
         })
             .to(split.chars, {

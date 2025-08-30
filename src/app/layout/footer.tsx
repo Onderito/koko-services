@@ -23,7 +23,7 @@ export default function Footer() {
             {/* Content layer */}
             <div className="relative z-20 flex items-center justify-center">
                 <Link href="/contact-me">
-                    <button className="bg-white rounded-xl px-8 py-4 cursor-pointer inner-shadow-dark font-manrope-bold text-[16px] hover:scale-105 transition-transform duration-300">
+                    <button className="bg-white rounded-xl px-8 py-4 cursor-pointer inner-shadow-dark font-manrope-bold tracking-[-0.01em] text-[16px] hover:scale-105 transition-transform duration-300">
                         Reserve Your Ride
                     </button>
                 </Link>

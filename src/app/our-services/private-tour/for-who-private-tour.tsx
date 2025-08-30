@@ -78,10 +78,10 @@ export default function ForWhoPrivateTour() {
     }, []);
     return (
         <div ref={containerRef} className="mb-20">
-            <h2 className="text-[32px] leading-10 tracking-[-2%] md:text-[56px] md:leading-16 font-manrope-bold mt-4 text-center">
+            <h2 className="heading-2 text-[#404040] mt-4 text-center">
                 Made For <span className="text-[#C5C5C5] ">Every Traveler</span>
             </h2>
-            <p className="text-[16px] md:text-[18px] text-center mt-4 ">
+            <p className="body-text text-center mt-4 ">
                 Custom private tours on the French Riviera—flexible routes, local insights, and zero logistics.
             </p>
 
@@ -90,8 +90,8 @@ export default function ForWhoPrivateTour() {
 
                     <div key={index} className="relative z-10 flex flex-col mx-auto items-center  max-w-lg mt-10 border-[0.5px] border-[#E5E5E5] p-4 rounded-2xl ">
                         <img src={c.icon} alt="icon suitcase" width={40} height={40} />
-                        <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">{c.title}</h4>
-                        <p className="text-center text-[16px] font-manrope-regular mt-4">{c.text}</p>
+                        <h3 className="heading-3 text-[#404040] mt-2">{c.title}</h3>
+                        <p className="body-text text-center mt-4">{c.text}</p>
                     </div>
                 ))}
             </div>
@@ -99,8 +99,8 @@ export default function ForWhoPrivateTour() {
                 {/* Card 1 - devant */}
                 <div ref={card1Ref} className="relative z-8 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/plane.webp"} alt="icon of plane" width={40} height={40} />
-                    <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">First-Time Visitors</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">First-Time Visitors</h3>
+                    <p className="body-text text-center mt-4">
                         See the must-sees without stress: tailored route, photo stops, café breaks, and a bilingual driver-guide sharing local tips.
                     </p>
                 </div>
@@ -108,8 +108,8 @@ export default function ForWhoPrivateTour() {
                 {/* Card 2 - derrière */}
                 <div ref={card2Ref} className="absolute inset-0 rotate-5 z-6 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/museum.webp"} alt="icon of museum" width={40} height={40} />
-                    <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">Culture & History Lovers</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">Culture & History Lovers</h3>
+                    <p className="body-text text-center mt-4">
                         Old towns, perched villages, museums, artisan stops—Èze, Antibes, Saint-Paul-de-Vence and more, at your own pace.
                     </p>
                 </div>
@@ -117,8 +117,8 @@ export default function ForWhoPrivateTour() {
                 {/* Card 3 - encore plus derrière */}
                 <div ref={card3Ref} className="absolute inset-0 -rotate-5 z-4 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform">
                     <img src={"/icon-services/van.webp"} alt="icon of van" width={40} height={40} />
-                    <h4 className="text-[20px] leading-7 tracking-[-2%] font-manrope-bold mt-2">Families & Small Groups</h4>
-                    <p className="text-center text-[16px] font-manrope-regular mt-4">
+                    <h3 className="heading-3 text-[#404040] mt-2">Families & Small Groups</h3>
+                    <p className="body-text text-center mt-4">
                         Comfortable vehicle, flexible timing, beach or village vibes, snack pauses—everyone enjoys the day, logistics handled.
                     </p>
                 </div>

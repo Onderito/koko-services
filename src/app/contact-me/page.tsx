@@ -56,16 +56,12 @@ export default function ContactMe() {
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
     ) => {
-        const { name, value, type } = e.target;
-
+        const { name, value } = e.target;
         setFormData((p) => ({
             ...p,
-            [name]: type === "number"
-                ? value === "" ? "" : parseInt(value, 10)  // 👉 normalise direct (02 → 2)
-                : value,
+            [name]: name === "passengers" || name === "baggage" ? Number(value) : value,
         }));
     };
-
 
     const handleBlur = (
         e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -151,10 +147,10 @@ export default function ContactMe() {
 
     return (
         <div className="container mx-auto px-2 mt-10 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
-            <h1 className="text-[44px] md:text-[64px] xl:text-[80px] font-manrope-bold text-center leading-12 md:leading-16 xl:leading-20 mt-4">
+            <h1 className="heading-1 text-center l mt-4">
                 Contact Me
             </h1>
-            <p className="description text-[16px] md:text-[18px] text-center mt-4">
+            <p className="body-text text-center mt-4">
                 Fill out the form below and we&apos;ll get back to you as soon as possible.
             </p>
             <form
@@ -267,8 +263,8 @@ export default function ContactMe() {
                     <div className="flex flex-col">
                         <label htmlFor="baggage" className="font-manrope-bold text-[16px]">Baggage</label>
                         <input
-                            type="number" id="baggage" name="baggage" min={1} max={7} inputMode="numeric"
-                            value={formData.baggage} onChange={handleChange} onBlur={handleBlur} pattern="[0-9]*"
+                            type="number" id="baggage" name="baggage" min={0} max={12} inputMode="numeric"
+                            value={formData.baggage} onChange={handleChange} onBlur={handleBlur}
                             className={inputCls("baggage")}
                         />
                     </div>

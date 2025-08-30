@@ -49,22 +49,22 @@ export default function HeroSection() {
       <div className="flex flex-col justify-center items-center hero-content">
         <span
           style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-          className="hero-span rounded-4xl bg-[#404040] inner-shadow-white p-2 font-manrope-bold text-[12px] text-white w-fit"
+          className="hero-span rounded-4xl bg-[#404040] inner-shadow-white p-2 font-manrope-bold text-[12px] xl:text-[14px] tracking-[0.01em] text-white w-fit"
         >
           Always ready to drive you
         </span>
-        <h1 className=" text-[44px] md:text-[64px] xl:text-[80px] font-manrope-bold text-center leading-12 md:leading-16 xl:leading-20 mt-4">
+        <h1 className=" heading-1 text-center  mt-4">
           Experience the French <br /> Riviera in{" "}
           <span className="gradient-text bg-gradient-to-b from-[#FFFFFF] from-0% to-[#404040] to-100% text-transparent bg-clip-text">
             style
           </span>
         </h1>
-        <p className="description text-[16px] md:text-[18px] text-center mt-4">
+        <p className="description body-text text-center mt-4">
           Private transfers. Unmatched comfort. Absolute peace of mind.
         </p>
         <div className=" relative ">
           <Link href="/contact-me">
-            <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl mt-8 button ">
+            <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[0.01em] text-white rounded-xl mt-8 button ">
               <span className="button-content inline-block !cursor-pointer">
                 Plan Your Transfer
               </span>
