@@ -100,6 +100,8 @@ export default function HeroSection() {
         <Image
           className="mt-16 rounded-[30px] border-5 xl:border-10 xl:w-full border-white shadow-lg img relative z-50"
           src="/bg-layout/nice-hero.webp"
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4ICgAAABwAgCdASoEAAQA..."
           alt="Aerial view of Nice, France with the Mediterranean sea and Promenade des Anglais"
           quality={85}
           priority

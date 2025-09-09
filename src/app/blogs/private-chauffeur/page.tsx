@@ -1,5 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Why Hire a Private Chauffeur in Nice & French Riviera? | Koko Limo",
+  description: "Discover the benefits of hiring a private chauffeur: comfort, punctuality, and local expertise. Ideal for airport transfers, sightseeing, and business travel.",
+  keywords: [
+    "why hire a private chauffeur",
+    "chauffeur service Nice",
+    "VTC Côte d’Azur",
+    "benefits private driver",
+    "chauffeur vs taxi",
+    "Koko Limo private driver",
+    "chauffeur service French Riviera"
+  ],
+  alternates: {
+    canonical: "https://kokolimonice.com/blog/private-chauffeur",
+  },
+};
+
 
 export default function ChauffeurServicesFrenchRiviera() {
   return (

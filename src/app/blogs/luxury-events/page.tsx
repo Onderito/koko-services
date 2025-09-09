@@ -1,5 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Private Chauffeur for Luxury Events in the French Riviera | Koko Limo",
+  description: "Attending a luxury event in Monaco, Cannes or Saint-Tropez? Book a professional chauffeur with Koko Limo for weddings, galas, red carpet, and business events.",
+  keywords: [
+    "chauffeur luxury event",
+    "private driver Cannes festival",
+    "chauffeur wedding Monaco",
+    "red carpet chauffeur",
+    "event transport French Riviera",
+    "Koko Limo luxury events",
+    "chauffeur gala Côte d’Azur"
+  ],
+  alternates: {
+    canonical: "https://kokolimonice.com/blog/luxury-events",
+  },
+};
+
 
 export default function LuxuryEventsFrenchRiviera() {
   return (

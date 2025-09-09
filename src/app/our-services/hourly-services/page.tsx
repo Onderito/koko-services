@@ -3,6 +3,24 @@ import HeroSection from "./hero-section";
 import WhatIsHourlyServices from "./what-is-hourly-services";
 import ForWhoHourlyServices from "./for-who-hourly-services";
 import FooterComponent from "../footer-component";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Hourly Chauffeur Services in Nice & French Riviera | Koko Limo",
+    description: "Book a private chauffeur by the hour in Nice, Cannes, Monaco. Luxury Mercedes vehicles, English-speaking drivers, 24/7 availability.",
+    keywords: [
+        "private chauffeur Nice",
+        "hourly car service French Riviera",
+        "chauffeur by the hour Nice",
+        "luxury VTC Cannes",
+        "chauffeur Monaco",
+        "Mercedes chauffeur service",
+        "Koko Limo"
+    ],
+    alternates: {
+        canonical: "https://kokolimonice.com/our-services/hourly-services",
+    },
+};
 
 export default function hourlyServices() {
     return (

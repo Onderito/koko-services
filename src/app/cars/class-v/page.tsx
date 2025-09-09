@@ -1,6 +1,25 @@
 import Cars from "@/app/landing/cars";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "Mercedes Class-V Chauffeur Service in French Riviera | Koko Limo",
+    description: "Travel in comfort with our spacious Mercedes-Benz Class-V. Ideal for families, business teams or group transfers from Nice to Monaco, Cannes and beyond.",
+    keywords: [
+        "Mercedes Class V chauffeur",
+        "van chauffeur Nice",
+        "group transfer French Riviera",
+        "chauffeur Class V Monaco",
+        "Koko Limo Class V",
+        "private van with driver Côte d’Azur"
+    ],
+    alternates: {
+        canonical: "https://kokolimonice.com/cars/class-v",
+    },
+};
+
 
 const featuresData = [
     {

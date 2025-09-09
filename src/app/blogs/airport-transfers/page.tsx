@@ -1,5 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Private Airport Transfers from Nice to Monaco, Cannes, St-Tropez | Koko Limo",
+  description: "Need a private airport transfer in the French Riviera? Our chauffeurs offer premium rides from Nice Airport to Monaco, Cannes, Saint-Tropez and more. Luxury Mercedes fleet.",
+  keywords: [
+    "Nice airport transfer",
+    "private driver Nice airport",
+    "VTC Monaco airport",
+    "airport chauffeur French Riviera",
+    "transfer Nice to Cannes",
+    "chauffeur service Côte d’Azur",
+    "Koko Limo airport"
+  ],
+  alternates: {
+    canonical: "https://kokolimonice.com/blog/airport-transfers",
+  },
+};
+
 
 export default function AirportTransfersNice() {
   return (

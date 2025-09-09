@@ -34,13 +34,13 @@ export default function Vip() {
             <h3 className="text-white heading-3 text-center">
               Top-of-the-range, impeccably maintained vehicles
             </h3>
-            <Image
+            {/* <Image
               className="absolute left-[-45px] bottom-[-15px]"
               src={"/bento/circle.svg"}
               alt="circle"
               width={100}
               height={100}
-            />
+            /> */}
           </div>
           <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden h-32">
             <h3 className="heading-3 text-center text-[#404040] ">
@@ -108,14 +108,14 @@ export default function Vip() {
                   <br className="hidden xl:block" /> maintained vehicles
                 </h3>
               </div>
-              <Image
+              {/* <Image
                 className="absolute left-[-45px] md:hidden bottom-[-40px]"
                 src={"/bento/circle.svg"}
                 alt="circle"
                 width={150}
                 quality={100}
                 height={100}
-              />
+              /> */}
             </div>
             <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden flex-1">
               <div className="flex flex-row items-center justify-center h-full">

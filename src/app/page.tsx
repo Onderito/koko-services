@@ -1,4 +1,3 @@
-"use client"
 
 import HeroSection from "./landing/hero-section";
 import Services from "./landing/services";
@@ -8,11 +7,17 @@ import Pricing from "./landing/pricing";
 import Vip from "./landing/vip";
 import Footer from "./layout/footer";
 import dynamic from "next/dynamic";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services - Koko Limo",
+  description: "Explore our chauffeur services: airport transfers, hourly hire, events & more.",
+};
+
 
 const Performances = dynamic(() => import("./landing/performances"), {
   loading: () => <p>Loading…</p>,
 });
-
 
 
 export default function Home() {

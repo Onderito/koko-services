@@ -1,6 +1,25 @@
 import Cars from "@/app/landing/cars";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "Mercedes Maybach Chauffeur Service in French Riviera | VIP VTC | Koko Limo",
+    description: "Enjoy the ultimate luxury ride with our Mercedes Maybach. Chauffeur service for VIPs, weddings, or executive transfers across the Côte d’Azur.",
+    keywords: [
+        "Mercedes Maybach chauffeur",
+        "Maybach Nice Monaco",
+        "luxury chauffeur French Riviera",
+        "VIP VTC Maybach",
+        "wedding car French Riviera",
+        "Koko Limo Maybach"
+    ],
+    alternates: {
+        canonical: "https://kokolimonice.com/our-cars/maybach",
+    },
+};
+
 
 const featuresData = [
     {

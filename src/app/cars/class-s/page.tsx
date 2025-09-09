@@ -1,6 +1,24 @@
 import Cars from "@/app/landing/cars";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Mercedes Class-S Chauffeur Nice & Monaco | Luxury VTC | Koko Limo",
+    description: "Book our Mercedes-Benz S-Class for a premium and elegant ride across the French Riviera. Perfect for business travel and VIP airport transfers.",
+    keywords: [
+        "Mercedes S-Class chauffeur",
+        "luxury VTC French Riviera",
+        "private driver Nice",
+        "chauffeur Class S Monaco",
+        "executive transfer Nice airport",
+        "Koko Limo Class S"
+    ],
+    alternates: {
+        canonical: "https://kokolimonice.com/cars/class-s",
+    },
+};
+
 
 
 const featuresData = [

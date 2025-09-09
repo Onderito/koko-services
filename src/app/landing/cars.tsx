@@ -72,6 +72,8 @@ export default function Cars() {
               className="rounded-3xl object-cover md:w-full h-full"
               src={v.imageUrl}
               alt="image of car"
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4ICgAAABwAgCdASoEAAQA..."
               width={400}
               height={300}
             />

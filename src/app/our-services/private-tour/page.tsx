@@ -3,6 +3,26 @@ import HeroSection from "./hero-section";
 import WhatIsPrivateTour from "./what-is-private-tour";
 import ForWhoPrivateTour from "./for-who-private-tour";
 import FooterComponent from "../footer-component";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "Private Chauffeur Tours in French Riviera | Nice, Monaco, Cannes | Koko Limo",
+    description: "Explore the Côte d’Azur with tailor-made chauffeur tours. Visit Monaco, Èze, Saint-Paul de Vence in a luxury Mercedes with English-speaking driver.",
+    keywords: [
+        "private tour French Riviera",
+        "chauffeur tour Nice",
+        "luxury tour Monaco",
+        "custom tour Côte d'Azur",
+        "VTC sightseeing tour",
+        "chauffeur guide French Riviera",
+        "Koko Limo"
+    ],
+    alternates: {
+        canonical: "https://kokolimonice.com/our-services/private-tours",
+    },
+};
+
 
 export default function PrivateHour() {
     return (
