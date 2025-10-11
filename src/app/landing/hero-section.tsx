@@ -53,7 +53,7 @@ export default function HeroSection() {
         >
           Always ready to drive you
         </span>
-        <h1 className=" heading-1 text-center  mt-4">
+        <h1 className="heading-1 text-center  mt-4">
           Experience the French <br /> Riviera in{" "}
           <span className="gradient-text bg-gradient-to-b from-[#FFFFFF] from-0% to-[#404040] to-100% text-transparent bg-clip-text">
             style
