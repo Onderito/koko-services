@@ -10,7 +10,7 @@ export const cities: City[] = [
 
 // Prix pour Class E
 const classEPrices: Record<string, VehiclePrice> = {
-  nice: { transfer: 95, hourly: 90, fullDay: 750 },
+  nice: { transfer: 90, hourly: 90, fullDay: 750 },
   antibes: { transfer: 120, hourly: 90, fullDay: 750 },
   cannes: { transfer: 150, hourly: 90, fullDay: 750 },
   monaco: { transfer: 150, hourly: 90, fullDay: 750 },
@@ -37,8 +37,8 @@ const classSPrices: Record<string, VehiclePrice> = {
 
 // Prix pour Maybach
 const maybachPrices: Record<string, VehiclePrice> = {
-  nice: { transfer: 220, hourly: 300, fullDay: 2400 },
-  antibes: { transfer: 260, hourly: 300, fullDay: 2400 },
+  nice: { transfer: 300, hourly: 300, fullDay: 2400 },
+  antibes: { transfer: 350, hourly: 300, fullDay: 2400 },
   cannes: { transfer: 450, hourly: 300, fullDay: 2400 },
   monaco: { transfer: 450, hourly: 300, fullDay: 2400 },
   "st-tropez": { transfer: 850, hourly: 300, fullDay: 2400 },
