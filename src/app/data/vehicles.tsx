@@ -23,7 +23,7 @@ const classVPrices: Record<string, VehiclePrice> = {
   antibes: { transfer: 150, hourly: 110, fullDay: 880 },
   cannes: { transfer: 180, hourly: 110, fullDay: 880 },
   monaco: { transfer: 180, hourly: 110, fullDay: 880 },
-  "st-tropez": { transfer: 50, hourly: 110, fullDay: 880 },
+  "st-tropez": { transfer: 500, hourly: 110, fullDay: 880 },
 };
 
 // Prix pour Class S
