@@ -4,7 +4,6 @@ import NavBar from "./layout/navBar";
 import SmoothScrollWrapper from "./animation/scrollWrapper";
 import Script from "next/script";
 
-
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,14 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
-        <SmoothScrollWrapper>
-          {children}
-        </SmoothScrollWrapper>
+        <SmoothScrollWrapper>{children}</SmoothScrollWrapper>
 
         <Script id="structured-data" type="application/ld+json">
           {JSON.stringify({

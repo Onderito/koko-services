@@ -112,6 +112,7 @@ export default function ForWhoHourlyServices() {
             alt="icon suitcase"
             width={40}
             height={40}
+            quality={100}
           />
           <h3 className="heading-3 text-[#404040] mt-2">
             Business & Executives
@@ -132,6 +133,7 @@ export default function ForWhoHourlyServices() {
             alt="icon of clock"
             width={40}
             height={40}
+            quality={100}
           />
           <h3 className="heading-3 text-[#404040] mt-2">Flexible Day Hire</h3>
           <p className="text-center card-text mt-4">
@@ -150,6 +152,7 @@ export default function ForWhoHourlyServices() {
             alt="icon of star"
             width={40}
             height={40}
+            quality={100}
           />
           <h3 className="heading-3 text-[#404040] mt-2">Events & Evenings</h3>
           <p className="text-center card-text mt-4">
