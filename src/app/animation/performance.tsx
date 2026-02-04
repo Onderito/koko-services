@@ -12,16 +12,10 @@ export const performanceSection = () => {
   const mm = gsap.matchMedia();
 
   mm.add("(min-width: 1024px", () => {
-
-    if (!root || !pin) return () => { };
+    if (!root || !pin) return () => {};
 
     const cards = gsap.utils.toArray<HTMLElement>(".perf-card");
-    if (!cards.length) return () => { };
-
-    // SplitText
-    // const split = SplitText.create(".text", {
-    //   type: "words,chars",
-    // });
+    if (!cards.length) return () => {};
 
     gsap.set(".perf-card", { willChange: "transform,opacity", force3D: true });
 
@@ -30,28 +24,28 @@ export const performanceSection = () => {
         trigger: pin,
         pin: true,
         start: "top top",
-        end: () => "+=" + window.innerHeight * 3, // durée relative au viewport
+        end: "bottom top+=300",
         scrub: 1.2,
         anticipatePin: 1,
         pinSpacing: true,
       },
     });
 
-
     tl.from(".performance-section", {
       autoAlpha: 0,
       y: 20,
       duration: 0.5,
     })
-      .from((".text"),
+      .from(
+        ".text",
         {
           y: "20px",
           scale: 0.6,
           autoAlpha: 0,
           duration: 0.8,
-          ease: "power2.out",
+          ease: "power1.out",
         },
-        "-=0.2"
+        "-=0.2",
       )
       .from(cards, {
         autoAlpha: 0,
@@ -64,24 +58,24 @@ export const performanceSection = () => {
       })
       // First card
       .from(".first-card-illu", {
-        scale: 0.50,
+        scale: 0.5,
         x: "10px",
         rotate: 1,
         autoAlpha: 0,
         duration: 0.8,
-        ease: "power3.out",
+        ease: "expo.out",
       })
       // Second card
       .from(
         ".second-card-illu",
         {
-          scale: 0.50,
+          scale: 0.5,
           y: "10px",
           autoAlpha: 0,
           duration: 0.6,
-          ease: "power3.out",
+          ease: "expo.out",
         },
-        "<"
+        "<",
       )
       // Third card avec paths
       .from(
@@ -89,42 +83,42 @@ export const performanceSection = () => {
         {
           drawSVG: "100% 100%",
           duration: 0.8,
-          ease: "black.out(1.5)",
+          ease: "expo.out",
         },
-        "<"
+        "<",
       )
       .from(
         ".second-path",
         {
           drawSVG: "100% 100%",
           duration: 0.8,
-          ease: "back.out(1.5)",
+          ease: "expot.out",
         },
-        "<"
+        "<",
       )
       .from(
         ".third-card-illu",
         {
-          scale: 0.50,
+          scale: 0.5,
           y: "10px",
           autoAlpha: 0,
           duration: 0.8,
-          ease: "power3.out",
+          ease: "power1.out",
         },
-        "<"
+        "<",
       )
       // Fourth card
       .from(
         ".text-fourth-card",
         {
-          scale: 0.50,
+          scale: 0.5,
           y: "-5px",
           rotate: -5,
           autoAlpha: 0,
           duration: 0.8,
-          ease: "power3.out",
+          ease: "power1.out",
         },
-        "<"
+        "<",
       )
       .from(
         ".flag-card",
@@ -135,7 +129,7 @@ export const performanceSection = () => {
           duration: 0.9,
           ease: "bounce.out",
         },
-        "<"
+        "<",
       )
       .from(
         ".mouse-svg",
@@ -145,11 +139,10 @@ export const performanceSection = () => {
           rotate: 4,
           y: "4px",
           duration: 0.6,
-          ease: "power3.out",
+          ease: "power1.out",
         },
-        "<"
+        "<",
       );
-
 
     // cleanup
     return () => {
@@ -157,5 +150,5 @@ export const performanceSection = () => {
       tl.scrollTrigger?.kill();
       gsap.set(".perf-card", { clearProps: "all" });
     };
-  })
+  });
 };

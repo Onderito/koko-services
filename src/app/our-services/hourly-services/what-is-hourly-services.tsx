@@ -7,7 +7,7 @@ export default function WhatIsHourlyServices() {
                 The Art of the Hourly Services
             </h2>
             <p className="body-text text-center mt-4 ">
-                More than just transportation—hourly service gives you the freedom of a dedicated chauffeur, ready whenever and wherever you need.
+                More than just transportation—hourly service gives you the freedom of a dedicated driver, ready whenever and wherever you need.
             </p>
 
             <div className="relative -z-10 flex flex-col xl:flex-row justify-center items-center gap-10 py-10 xl:py-24">

@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
 import Image from "next/image";
-import { useRouter } from 'next/navigation';
-
+import Link from "next/link";
 
 const vehiclesData = [
   {
@@ -37,39 +36,27 @@ const vehiclesData = [
   },
 ];
 
-
-
 export default function Cars() {
-  const router = useRouter();
-
-  const handleClick = (link: string): void => {
-    router.push(link);
-    // Scroll avec un petit délai pour s'assurer que la navigation est terminée
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-  };
-
   return (
     <div className="flex-center-column">
-      <span
-        // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
-      >
+      <span className="span-anim text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto">
         our cars
       </span>
-      <h2 className="heading-2 text-[#404040] mt-4 text-center ">
+      <h2 className="split heading-2 text-[#404040] mt-4 text-center ">
         Our Fleet, Your Comfort
       </h2>
-      <p className="body-text text-center mt-4 ">
+      <p className=" split body-text text-center mt-4 ">
         Choose from our range of luxury vehicles — curated for style, space, and
         performance.{" "}
       </p>
       <div className="flex flex-col xl:grid xl:grid-cols-3 gap-8 mt-10">
         {vehiclesData.map((v, index) => (
-          <div className="overflow-hidden relative shadow-lg rounded-3xl" key={index}>
+          <div
+            className="overflow-hidden card relative shadow-lg rounded-3xl xl:h-[620px]"
+            key={index}
+          >
             <Image
-              className="rounded-3xl object-cover md:w-full h-full"
+              className="rounded-3xl object-cover w-full h-full"
               src={v.imageUrl}
               alt="image of car"
               placeholder="blur"
@@ -79,46 +66,52 @@ export default function Cars() {
             />
             {/* Gradient/blur avec transition plus douce */}
             <div
-              className="absolute bottom-0 left-0 right-0 h-80 xl:h-44 rounded-b-3xl backdrop-blur-[4px]"
+              className="absolute bottom-0 left-0 right-0 h-80 xl:h-80 rounded-b-3xl backdrop-blur-[4px]"
               style={{
-                maskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)'
+                maskImage:
+                  "linear-gradient(to top, black 0%, black 30%, transparent 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to top, black 0%, black 30%, transparent 100%)",
               }}
             ></div>
             {index === 1 && (
-              <div className="absolute bottom-0 left-0 right-0 h-80 xl:h-44 rounded-b-3xl  bg-gradient-to-t from-[#7A25BB]/50 to-transparent"
+              <div
+                className="absolute bottom-0 left-0 right-0 h-80 xl:h-44 rounded-b-3xl  bg-gradient-to-t from-[#7A25BB]/50 to-transparent"
                 style={{
-                  maskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)'
-                }}></div>
+                  maskImage:
+                    "linear-gradient(to top, black 0%, black 30%, transparent 100%)",
+                  WebkitMaskImage:
+                    "linear-gradient(to top, black 0%, black 30%, transparent 100%)",
+                }}
+              ></div>
             )}
             <div className="absolute top-3/4 md:top-5/6 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
               <h3 className="text-white heading-3 ">
                 {v.name}
-                {/* Ajouter un espace manuel pour séparer le nom et le type */}
                 <span className="ml-2 font-light text-white/80 body-text ">
                   ({v.type})
                 </span>
               </h3>
-              <div className="text-[#C2C2C2] flex divide-x justify-center mt-4 font-manrope-regular pb-8 xl:pb-16 card-text">
+              <div className="text-white/80 flex divide-x justify-center mt-4 font-manrope-regular pb-8 xl:pb-16 card-text">
                 <span className="px-4">{v.guests}</span>
                 <span className="px-4">{v.bags}</span>
                 <span className="px-4">{v.feature}</span>
               </div>
             </div>
             <div className="absolute bottom-4 left-4 right-4">
-              <button
+              <Link
                 aria-label="see more about the car"
-                onClick={() => handleClick(v.link)}
+                href={v.link}
+                scroll
                 className="block w-full text-[#404040] bg-white cursor-pointer tracking-[-0.01em] inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300"
               >
                 {v.button}
                 <span className="sr-only"> about {v.name}</span>
-              </button>
+              </Link>
             </div>
           </div>
         ))}
       </div>
-    </div >
+    </div>
   );
-};
+}

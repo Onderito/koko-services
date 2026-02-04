@@ -46,7 +46,7 @@ export const heroSection = () => {
     {
       opacity: 0,
       scale: 0.6,
-      y: 5
+      y: 5,
     },
     "<0.2"
   );
@@ -65,7 +65,7 @@ export const heroSection = () => {
     {
       opacity: 0,
       y: -20,
-      scale: 0.80,
+      scale: 0.8,
     },
     "<0.4"
   );

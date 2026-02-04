@@ -4,14 +4,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Private Airport Transfers from Nice to Monaco, Cannes, St-Tropez | Koko Limo",
-  description: "Need a private airport transfer in the French Riviera? Our chauffeurs offer premium rides from Nice Airport to Monaco, Cannes, Saint-Tropez and more. Luxury Mercedes fleet.",
+  description: "Need a private airport transfer in the French Riviera? Our drivers offer premium rides from Nice Airport to Monaco, Cannes, Saint-Tropez and more. Luxury Mercedes fleet.",
   keywords: [
     "Nice airport transfer",
     "private driver Nice airport",
     "VTC Monaco airport",
-    "airport chauffeur French Riviera",
+    "airport driver French Riviera",
     "transfer Nice to Cannes",
-    "chauffeur service Côte d’Azur",
+    "driver service French Riviera",
     "Koko Limo airport"
   ],
   alternates: {
@@ -24,7 +24,7 @@ export default function AirportTransfersNice() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-[72vh] md:min-h-[78vh] flex items-end justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/blogs/blog-airport.webp"
@@ -33,16 +33,17 @@ export default function AirportTransfersNice() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70" />
         </div>
-        <div className="relative z-10 container mx-auto px-2 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24 text-center">
-          <div className="max-w-4xl mx-auto">
+        <div className="relative z-10 container mx-auto px-2 pb-12 pt-36 sm:px-8 md:px-12 md:pb-16 md:pt-40 lg:px-16 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto rounded-3xl border border-white/20 bg-black/35 px-4 py-8 shadow-2xl backdrop-blur-md md:px-10 md:py-10">
             <span className="inline-block text-[14px] md:text-[16px] bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full font-manrope-regular mb-6">
               Airport Transfer
             </span>
 
             <h1 className="text-[32px] md:text-[48px] lg:text-[56px] font-manrope-bold text-white leading-tight mb-6">
-              Airport Transfers in Nice: What to Expect From a Premium Chauffeur
+              Airport Transfers in Nice: What to Expect From a Premium Driver
             </h1>
 
             <p className="text-[16px] md:text-[20px] text-gray-200 max-w-2xl mx-auto mb-8">
@@ -52,7 +53,7 @@ export default function AirportTransfersNice() {
             <div className="flex items-center justify-center gap-6 text-gray-300 text-[14px] md:text-[16px]">
               <span>6 min read</span>
               <span>•</span>
-              <span>21 août 2025</span>
+              <span>21 August 2025</span>
             </div>
           </div>
         </div>
@@ -90,12 +91,12 @@ export default function AirportTransfersNice() {
                 <span itemProp="name">VIP Limo Nice</span>
               </span>
               <time itemProp="datePublished" dateTime="2025-08-21">2025-08-21</time>
-              <span itemProp="headline">Airport Transfers in Nice: What to Expect From a Premium Chauffeur</span>
-              <meta itemProp="description" content="Experience seamless airport transfers in Nice with VIP Limo Nice. Enjoy punctuality, luxury vehicles, and professional chauffeurs for a stress-free arrival on the French Riviera." />
-              <meta itemProp="keywords" content="transfert aéroport Nice, Nice airport transfers, VTC Nice aéroport, chauffeur aéroport Nice, chauffeur privé Nice, VIP Limo Nice" />
+              <span itemProp="headline">Airport Transfers in Nice: What to Expect From a Premium Driver</span>
+              <meta itemProp="description" content="Experience seamless airport transfers in Nice with VIP Limo Nice. Enjoy punctuality, luxury vehicles, and professional drivers for a stress-free arrival on the French Riviera." />
+              <meta itemProp="keywords" content="Nice airport transfer, Nice airport transfers, Nice airport private car service, Nice airport driver, private driver Nice, VIP Limo Nice" />
             </div>
 
-            <section id="introduction" className="scroll-mt-24 mb-12">
+            <section id="introduction" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 Introduction: Your First Impression of the French Riviera
@@ -103,78 +104,78 @@ export default function AirportTransfersNice() {
 
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Arriving at Nice Côte d&apos;Azur Airport (NCE) marks the beginning of your journey on the magnificent French Riviera. Whether you&apos;re here for a relaxing holiday, a crucial business meeting, or a glamorous event, your initial experience upon landing can significantly shape your entire stay. While taxis and public transport are options, for those who value comfort, efficiency, and a touch of luxury, <strong>VIP Limo Nice</strong> for your <strong>airport transfer Nice</strong> is not just a choice, but a necessity. It transforms a potentially stressful arrival into a seamless and sophisticated welcome to the Côte d&apos;Azur.
+                  Arriving at Nice Airport (NCE) marks the beginning of your journey on the magnificent French Riviera. Whether you&apos;re here for a relaxing holiday, a crucial business meeting, or a glamorous event, your initial experience upon landing can significantly shape your entire stay. While taxis and public transport are options, for those who value comfort, efficiency, and a touch of luxury, <strong>VIP Limo Nice</strong> for your <strong>airport transfer Nice</strong> is not just a choice, but a necessity. It transforms a potentially stressful arrival into a seamless and sophisticated welcome to the French Riviera.
                 </p>
               </div>
             </section>
 
-            <section id="advantages" className="scroll-mt-24 mb-12">
+            <section id="advantages" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 The Unparalleled Advantages of a Premium Airport Transfer
               </h2>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                A dedicated <strong>chauffeur privé Nice</strong> offers a level of service that goes far beyond conventional transportation. It&apos;s about providing a personalized, stress-free, and luxurious transition from the moment your plane touches down.
+                A dedicated <strong>private driver Nice</strong> offers a level of service that goes far beyond conventional transportation. It&apos;s about providing a personalized, stress-free, and luxurious transition from the moment your plane touches down.
               </p>
             </section>
 
-            <section id="meet-greet" className="scroll-mt-24 mb-12">
+            <section id="meet-greet" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h3 className="text-xl md:text-2xl font-manrope-bold text-[#404040] mb-8 flex items-center gap-3">
                 <span className="w-3 h-3 bg-[#404040] rounded-full"></span>
                 1. Seamless Meet & Greet Service
               </h3>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                Forget the hassle of navigating a busy airport or searching for your ride. With a premium service, your professional chauffeur will be waiting for you in the arrivals hall, holding a personalized sign. They monitor your flight in real-time, adjusting for any delays or early arrivals, ensuring they are there precisely when you need them. This proactive approach eliminates waiting times and provides immediate peace of mind.
+                Forget the hassle of navigating a busy airport or searching for your ride. With a premium service, your professional driver will be waiting for you in the arrivals hall, holding a personalized sign. They monitor your flight in real-time, adjusting for any delays or early arrivals, ensuring they are there precisely when you need them. This proactive approach eliminates waiting times and provides immediate peace of mind.
               </p>
             </section>
 
-            <section id="luggage-comfort" className="scroll-mt-24 mb-12">
+            <section id="luggage-comfort" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h3 className="text-xl md:text-2xl font-manrope-bold text-[#404040] mb-8 flex items-center gap-3">
                 <span className="w-3 h-3 bg-[#404040] rounded-full"></span>
                 2. Luggage Assistance and Comfort
               </h3>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                Your chauffeur will handle all your luggage with care, from the terminal to the vehicle. Once inside, you&apos;ll find yourself in a meticulously maintained, high-end vehicle – typically a Mercedes-Benz S-Class or E-Class – designed for ultimate comfort. Enjoy plush seating, climate control, complimentary Wi-Fi, and even refreshments, allowing you to relax or catch up on work after your flight. This is particularly valuable for longer <strong>transfer Nice Saint-Tropez</strong> or <strong>transfer Nice Monaco</strong> journeys.
+                Your driver will handle all your luggage with care, from the terminal to the vehicle. Once inside, you&apos;ll find yourself in a meticulously maintained, high-end vehicle – typically a Mercedes-Benz S-Class or E-Class – designed for ultimate comfort. Enjoy plush seating, climate control, complimentary Wi-Fi, and even refreshments, allowing you to relax or catch up on work after your flight. This is particularly valuable for longer <strong>transfer Nice Saint-Tropez</strong> or <strong>transfer Nice Monaco</strong> journeys.
               </p>
             </section>
 
-            <section id="punctuality-expertise" className="scroll-mt-24 mb-12">
+            <section id="punctuality-expertise" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h3 className="text-xl md:text-2xl font-manrope-bold text-[#404040] mb-8 flex items-center gap-3">
                 <span className="w-3 h-3 bg-[#404040] rounded-full"></span>
                 3. Punctuality and Route Expertise
               </h3>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                Time is a precious commodity, especially for travelers with tight schedules. Premium chauffeurs are renowned for their punctuality. They possess an intimate knowledge of the Riviera&apos;s road networks, including optimal routes to avoid traffic congestion. Whether your destination is the bustling city center of Nice, the elegant streets of Cannes, or the exclusive enclaves of Saint-Tropez, your chauffeur ensures a timely and efficient arrival. This expertise is crucial for business travelers heading to meetings or individuals attending time-sensitive events.
+                Time is a precious commodity, especially for travelers with tight schedules. Premium drivers are renowned for their punctuality. They possess an intimate knowledge of the Riviera&apos;s road networks, including optimal routes to avoid traffic congestion. Whether your destination is the bustling city center of Nice, the elegant streets of Cannes, or the exclusive enclaves of Saint-Tropez, your driver ensures a timely and efficient arrival. This expertise is crucial for business travelers heading to meetings or individuals attending time-sensitive events.
               </p>
             </section>
 
-            <section id="discretion-professionalism" className="scroll-mt-24 mb-12">
+            <section id="discretion-professionalism" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h3 className="text-xl md:text-2xl font-manrope-bold text-[#404040] mb-8 flex items-center gap-3">
                 <span className="w-3 h-3 bg-[#404040] rounded-full"></span>
                 4. Discretion and Professionalism
               </h3>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                Privacy and professionalism are hallmarks of a luxury chauffeur service. Your chauffeur is not just a driver; they are a discreet, well-dressed professional committed to providing an unobtrusive experience. They respect your privacy, allowing you to make calls, prepare for meetings, or simply enjoy the scenic drive without interruption. Their local insights can also be invaluable, offering recommendations or answering questions about the region.
+                Privacy and professionalism are hallmarks of a luxury driver service. Your driver is not just a driver; they are a discreet, well-dressed professional committed to providing an unobtrusive experience. They respect your privacy, allowing you to make calls, prepare for meetings, or simply enjoy the scenic drive without interruption. Their local insights can also be invaluable, offering recommendations or answering questions about the region.
               </p>
             </section>
 
-            <section id="tailored-needs" className="scroll-mt-24 mb-12">
+            <section id="tailored-needs" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h3 className="text-xl md:text-2xl font-manrope-bold text-[#404040] mb-8 flex items-center gap-3">
                 <span className="w-3 h-3 bg-[#404040] rounded-full"></span>
                 5. Tailored to Your Needs: Beyond the Airport
               </h3>
 
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                While <strong>airport transfers Nice</strong> are a primary service, premium chauffeurs offer flexibility for various travel needs. This includes transfers to and from private jets, inter-city transfers (e.g., <strong>transfer Nice Cannes</strong>), hourly bookings for shopping or sightseeing, and dedicated services for corporate clients or special events. The service adapts to your itinerary, providing a truly bespoke transportation solution.
+                While <strong>airport transfers Nice</strong> are a primary service, premium drivers offer flexibility for various travel needs. This includes transfers to and from private jets, inter-city transfers (e.g., <strong>transfer Nice Cannes</strong>), hourly bookings for shopping or sightseeing, and dedicated services for corporate clients or special events. The service adapts to your itinerary, providing a truly bespoke transportation solution.
               </p>
             </section>
 
-            <section id="popular-destinations" className="scroll-mt-24 mb-12">
+            <section id="popular-destinations" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 Popular Destinations from Nice Airport
@@ -243,5 +244,4 @@ export default function AirportTransfersNice() {
     </div>
   );
 }
-
 

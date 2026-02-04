@@ -14,30 +14,29 @@ const cards = [
     description:
       "Point-to-point luxury transportation for airports, hotels, events. Professional service with flight monitoring and personalized assistance throughout the French Riviera.",
     image: "/services/transfer.webp",
-    link: "/our-services/transfer"
+    link: "/our-services/transfer",
   },
   {
     title: "Hourly Services",
     icon: "/service.svg",
     description:
-      "Flexible chauffeur service by the hour for business meetings, shopping tours, or leisure activities. Your dedicated driver waits while you attend to your appointments.",
+      "Flexible driver service by the hour for business meetings, shopping tours, or leisure activities. Your dedicated driver waits while you attend to your appointments.",
     image: "/services/hourly.webp",
-    link: "/our-services/hourly-services"
+    link: "/our-services/hourly-services",
   },
   {
     title: "Private Tour",
     icon: "/private.svg",
     description:
-      "Exclusive full-day or half-day chauffeur service for complete freedom and privacy. Explore the Côte d'Azur at your own pace with a personal driver-guide.",
+      "Exclusive full-day or half-day driver service for complete freedom and privacy. Explore the Côte d'Azur at your own pace with a personal driver-guide.",
     image: "/services/private-tour.webp",
-    link: "/our-services/private-tour"
+    link: "/our-services/private-tour",
   },
 ];
 
 export default function Services() {
-
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
       globalAnimation();
     });
@@ -45,7 +44,6 @@ export default function Services() {
     return () => ctx.revert();
   }, []);
   return (
-
     <div className="main-container relative z-10 flex-center-column section-2">
       <span
         // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
@@ -73,9 +71,7 @@ export default function Services() {
                   aria-hidden="true"
                 />
               </span>
-              <h3 className="heading-3 text-[#404040]">
-                {card.title}
-              </h3>
+              <h3 className="heading-3 text-[#404040]">{card.title}</h3>
             </div>
             <p className="mt-6 xl:mt-8 body-text flex-grow">
               {card.description}
@@ -95,12 +91,24 @@ export default function Services() {
               />
             </div>
             <div className="flex justify-center items-center w-full mt-4 gap-4">
-              <Link aria-label="see more about the service" scroll={true} href={card.link} className="bg-white w-[45%] tracking-[-0.01em] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] ">
+              <Link
+                aria-label="see more about the service"
+                scroll={true}
+                href={card.link}
+                className="bg-white w-[45%] tracking-[-0.01em] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] "
+              >
                 See More
                 <span className="sr-only"> about {card.title}</span>
               </Link>
-              <Link aria-label="book now the service" className="w-[60%]" href={"/contact-me"}>
-                <button aria-label="book now the service" className="bg-[#404040] cursor-pointer inner-shadow-white tracking-[-0.01em] py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full">
+              <Link
+                aria-label="book now the service"
+                className="w-[60%]"
+                href={"/contact-me"}
+              >
+                <button
+                  aria-label="book now the service"
+                  className="bg-[#404040] cursor-pointer inner-shadow-white tracking-[-0.01em] py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full"
+                >
                   Book Now
                   <span className="sr-only"> about {card.title}</span>
                 </button>
@@ -111,5 +119,4 @@ export default function Services() {
       </div>
     </div>
   );
-};
-
+}

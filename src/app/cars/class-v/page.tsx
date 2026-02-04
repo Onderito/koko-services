@@ -4,14 +4,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mercedes Class-V Chauffeur Service in French Riviera | Koko Limo",
+  title: "Mercedes Class-V Driver Service in French Riviera | Koko Limo",
   description:
     "Travel in comfort with our spacious Mercedes-Benz Class-V. Ideal for families, business teams or group transfers from Nice to Monaco, Cannes and beyond.",
   keywords: [
-    "Mercedes Class V chauffeur",
-    "van chauffeur Nice",
+    "Mercedes Class V driver",
+    "van driver Nice",
     "group transfer French Riviera",
-    "chauffeur Class V Monaco",
+    "driver Class V Monaco",
     "Koko Limo Class V",
     "private van with driver Côte d’Azur",
   ],
@@ -46,9 +46,9 @@ const featuresData = [
 
 export default function ClassVPage() {
   return (
-    <div className="min-h-screen px-6 pt-28 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+    <>
       {/* Hero Section */}
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-10">
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 min-h-screen container">
         <div className="xl:w-2/3">
           <h1 className="heading-1">
             Mercedes V-Class -
@@ -88,10 +88,10 @@ export default function ClassVPage() {
       </div>
 
       {/* Description Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 mt-16 xl:mt-56">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ">
         <div className="order-1 lg:order-2">
           <h2 className="heading-2 text-[#404040] mb-6">
-            Discover the Mercedes Class-V
+            Discover the Mercedes <br className="block md:hidden" /> Class-V
           </h2>
           <div className="space-y-6 body-text">
             <p>
@@ -146,7 +146,7 @@ export default function ClassVPage() {
       </div>
 
       {/* Features Section */}
-      <div className="mb-16 lg:mb-20">
+      <div className="container">
         <h2 className="heading-2 text-[#404040] text-center">
           Vehicle Features
         </h2>
@@ -173,20 +173,24 @@ export default function ClassVPage() {
         </div>
       </div>
 
-      <Cars />
-      {/* CTA Section */}
-      <div className="text-center bg-gray-50 rounded-2xl p-8 md:p-12 mt-16 lg:mt-20">
-        <h2 className="heading-2 text-[#404040] mb-4">
-          Ready to Experience Luxury?
-        </h2>
-        <p className="body-text mb-8 max-w-2xl mx-auto">
-          Book your Mercedes Class-V today and enjoy the ultimate in comfort,
-          style, and sophistication for your next journey.
-        </p>
-        <button className="bg-[#404040] text-white rounded-xl px-8 py-4 font-manrope-bold text-[16px] tracking-[-0.01em] hover:bg-[#505050] transition-colors duration-300 cursor-pointer">
-          Reserve Your Class-V
-        </button>
+      <div className="container">
+        <Cars />
       </div>
-    </div>
+      {/* CTA Section */}
+      <div className="container">
+        <div className="text-center bg-gray-50 rounded-2xl p-8 md:p-12 mt-16 lg:mt-20">
+          <h2 className="heading-2 text-[#404040] mb-4">
+            Ready to Experience Luxury?
+          </h2>
+          <p className="body-text mb-8 max-w-2xl mx-auto">
+            Book your Mercedes Class-V today and enjoy the ultimate in comfort,
+            style, and sophistication for your next journey.
+          </p>
+          <button className="bg-[#404040] text-white rounded-xl px-8 py-4 font-manrope-bold text-[16px] tracking-[-0.01em] hover:bg-[#505050] transition-colors duration-300 cursor-pointer">
+            Reserve Your Class-V
+          </button>
+        </div>
+      </div>
+    </>
   );
 }

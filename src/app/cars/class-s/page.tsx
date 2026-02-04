@@ -4,167 +4,195 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Mercedes Class-S Chauffeur Nice & Monaco | Luxury VTC | Koko Limo",
-    description: "Book our Mercedes-Benz S-Class for a premium and elegant ride across the French Riviera. Perfect for business travel and VIP airport transfers.",
-    keywords: [
-        "Mercedes S-Class chauffeur",
-        "luxury VTC French Riviera",
-        "private driver Nice",
-        "chauffeur Class S Monaco",
-        "executive transfer Nice airport",
-        "Koko Limo Class S"
-    ],
-    alternates: {
-        canonical: "https://kokolimonice.com/cars/class-s",
-    },
+  title: "Mercedes Class-S Driver Nice & Monaco | Luxury VTC | Koko Limo",
+  description:
+    "Book our Mercedes-Benz S-Class for a premium and elegant ride across the French Riviera. Perfect for business travel and VIP airport transfers.",
+  keywords: [
+    "Mercedes S-Class driver",
+    "luxury VTC French Riviera",
+    "private driver Nice",
+    "driver Class S Monaco",
+    "executive transfer Nice airport",
+    "Koko Limo Class S",
+  ],
+  alternates: {
+    canonical: "https://kokolimonice.com/cars/class-s",
+  },
 };
 
-
-
 const featuresData = [
-    {
-        name: "Luxury Seats",
-        description: "Premium leather seating for maximum comfort on every journey.",
-        icon: "/star.svg"
-    },
-    {
-        name: "Safety Features",
-        description: "Equipped with top-tier safety systems to ensure peace of mind on every journey.",
-        icon: "/safety.svg"
-    },
-    {
-        name: "Advanced Tech",
-        description: "Cutting-edge infotainment, connectivity, and climate control for a modern travel experience.",
-        icon: "/mobile.svg"
-    },
-    {
-        name: "4 Passengers",
-        description: "Spacious seating for up to 4 passengers, ideal for business or personal travel.",
-        icon: "/users.svg"
-    }
-]
+  {
+    name: "Luxury Seats",
+    description:
+      "Premium leather seating for maximum comfort on every journey.",
+    icon: "/star.svg",
+  },
+  {
+    name: "Safety Features",
+    description:
+      "Equipped with top-tier safety systems to ensure peace of mind on every journey.",
+    icon: "/safety.svg",
+  },
+  {
+    name: "Advanced Tech",
+    description:
+      "Cutting-edge infotainment, connectivity, and climate control for a modern travel experience.",
+    icon: "/mobile.svg",
+  },
+  {
+    name: "4 Passengers",
+    description:
+      "Spacious seating for up to 4 passengers, ideal for business or personal travel.",
+    icon: "/users.svg",
+  },
+];
 
 export default function ClassSPage() {
-    return (
-        <div className="min-h-screen px-6 pt-28 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
-            {/* Hero Section */}
-            <div className="flex flex-col xl:flex-row justify-center items-center gap-10">
-                <div className="xl:w-2/3">
-                    <h1 className="heading-1">
-                        Mercedes S-Class -
-                        <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">Excellence Defined</span></h1>
-                    <p className="body-text mt-4 xl:mt-6">The pinnacle of luxury with handcrafted interior, advanced technology, and unparalleled comfort for discerning clients</p>
-                    <Link href="/contact-me"><button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-2%] text-white rounded-xl mt-8 xl:mt-10 button">Book S-Class</button></Link>
-                </div>
-
-                <div className="relative xl:w-2/3">
-                    <Image
-                        width={1200}
-                        height={1000}
-                        src="/rectangle.svg"
-                        alt="Rectangle"
-                        className="w-full h-auto "
-                    />
-
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <Image
-                            src="/cars/class-s/class-s.svg"
-                            alt="Class S"
-                            fill
-                            className="object-contain scale-120"
-                        />
-                    </div>
-                </div>
-            </div>
-
-            {/* Description Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 mt-16 xl:mt-56">
-                <div className="order-1 lg:order-2">
-                    <h2 className="heading-2 text-[#404040] mb-6">
-                        Discover the Mercedes Class-S
-                    </h2>
-                    <div className="space-y-4 body-text">
-                        <p>
-                            The Mercedes Class-S represents the pinnacle of luxury sedans, combining elegant design with cutting-edge technology. Its premium leather seats, spacious interior, and advanced safety features ensure an exceptionally smooth and comfortable ride.
-                        </p>
-                        <p>
-                            Perfect for business trips, airport transfers, or touring the French Riviera, the Class-S offers a sophisticated environment with customizable seating, ambient lighting, and advanced climate control for every passenger.
-                        </p>
-                        <p>
-                            Equipped with top-tier safety features and modern amenities, the Mercedes Class-S provides a first-class travel experience. Enjoy ample legroom, high-quality materials, and refined details that make every journey truly unforgettable.
-                        </p>
-                    </div>
-                </div>
-                <div className="order-1 lg:order-2">
-                    <div className="grid grid-cols-2 gap-3 md:gap-4">
-                        <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
-                            <Image
-                                src="/cars/class-s/class-s-first.webp"
-                                alt="Class S Interior"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                        <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
-                            <Image
-                                src="/cars/class-s/class-s-second.webp"
-                                alt="Class S Exterior"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                        <div className="aspect-[4/3] relative rounded-lg overflow-hidden col-span-2">
-                            <Image
-                                src="/cars/class-s/class-s-third.webp"
-                                alt="Class S Details"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Features Section */}
-            <div className="mb-16 lg:mb-20">
-                <h2 className="heading-2 text-[#404040] text-center">
-                    Vehicle Features
-                </h2>
-                <p className="body-text text-center mt-4 max-w-3xl mx-auto">
-                    Discover the key features and premium amenities of our vehicles, designed to provide maximum comfort, safety, and convenience on every journey.
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-10">
-                    {/* Features Card */}
-                    {featuresData.map((f, index) => (
-                        <div key={index} className="text-center border-[#E5E5E5] border-[0.5px] rounded-2xl py-4 px-2">
-                            <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 flex items-center justify-center">
-                                <Image src={f.icon} alt={f.name} width={50} height={50} />
-                            </div>
-                            <h3 className="heading-3 text-[#404040] mb-2">
-                                {f.name}
-                            </h3>
-                            <p className="card-text">
-                                {f.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            <Cars />
-            {/* CTA Section */}
-            <div className="text-center bg-gray-50 rounded-2xl p-8 md:p-12 mt-16 lg:mt-20">
-                <h2 className="heading-2 text-[#404040] mb-4">
-                    Ready to Experience Luxury?
-                </h2>
-                <p className="body-text mb-8 max-w-2xl mx-auto">
-                    Book your Mercedes Class-S today and enjoy the ultimate in comfort, style, and sophistication for your next journey.
-                </p>
-                <button className="bg-[#404040] text-white rounded-xl px-8 py-4 font-manrope-bold text-[16px] tracking-[-0.01em] hover:bg-[#505050] transition-colors duration-300 cursor-pointer">
-                    Reserve Your Class-S
-                </button>
-            </div>
+  return (
+    <>
+      {/* Hero Section */}
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 min-h-screen container">
+        <div className="xl:w-2/3">
+          <h1 className="heading-1">
+            Mercedes S-Class -
+            <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">
+              Excellence Defined
+            </span>
+          </h1>
+          <p className="body-text mt-4 xl:mt-6">
+            The pinnacle of luxury with handcrafted interior, advanced
+            technology, and unparalleled comfort for discerning clients
+          </p>
+          <Link href="/contact-me">
+            <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-2%] text-white rounded-xl mt-8 xl:mt-10 button">
+              Book S-Class
+            </button>
+          </Link>
         </div>
-    );
+
+        <div className="relative xl:w-2/3">
+          <Image
+            width={1200}
+            height={1000}
+            src="/rectangle.svg"
+            alt="Rectangle"
+            className="w-full h-auto "
+          />
+
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Image
+              src="/cars/class-s/class-s.svg"
+              alt="Class S"
+              fill
+              className="object-contain scale-120"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Description Section */}
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ">
+        <div className="order-1 lg:order-2">
+          <h2 className="heading-2 text-[#404040] mb-6">
+            Discover the Mercedes <br className="block md:hidden" /> Class-S
+          </h2>
+          <div className="space-y-4 body-text">
+            <p>
+              The Mercedes Class-S represents the pinnacle of luxury sedans,
+              combining elegant design with cutting-edge technology. Its premium
+              leather seats, spacious interior, and advanced safety features
+              ensure an exceptionally smooth and comfortable ride.
+            </p>
+            <p>
+              Perfect for business trips, airport transfers, or touring the
+              French Riviera, the Class-S offers a sophisticated environment
+              with customizable seating, ambient lighting, and advanced climate
+              control for every passenger.
+            </p>
+            <p>
+              Equipped with top-tier safety features and modern amenities, the
+              Mercedes Class-S provides a first-class travel experience. Enjoy
+              ample legroom, high-quality materials, and refined details that
+              make every journey truly unforgettable.
+            </p>
+          </div>
+        </div>
+        <div className="order-1 lg:order-2">
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+            <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
+              <Image
+                src="/cars/class-s/class-s-first.webp"
+                alt="Class S Interior"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
+              <Image
+                src="/cars/class-s/class-s-second.webp"
+                alt="Class S Exterior"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="aspect-[4/3] relative rounded-lg overflow-hidden col-span-2">
+              <Image
+                src="/cars/class-s/class-s-third.webp"
+                alt="Class S Details"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="container">
+        <h2 className="heading-2 text-[#404040] text-center">
+          Vehicle Features
+        </h2>
+        <p className="body-text text-center mt-4  mx-auto">
+          Discover the key features and premium amenities of our vehicles,
+          designed to provide maximum comfort, safety, and convenience on every
+          journey.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-10">
+          {/* Features Card */}
+          {featuresData.map((f, index) => (
+            <div
+              key={index}
+              className="text-center border-[#E5E5E5] border-[0.5px] rounded-2xl py-4 px-2"
+            >
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 flex items-center justify-center">
+                <Image src={f.icon} alt={f.name} width={50} height={50} />
+              </div>
+              <h3 className="heading-3 text-[#404040] mb-2">{f.name}</h3>
+              <p className="card-text">{f.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="container">
+        <Cars />
+      </div>
+      {/* CTA Section */}
+      <div className="container">
+        <div className=" text-center bg-gray-50 rounded-2xl p-8 md:p-12 mt-16 lg:mt-20">
+          <h2 className="heading-2 text-[#404040] mb-4">
+            Ready to Experience Luxury?
+          </h2>
+          <p className="body-text mb-8 max-w-2xl mx-auto">
+            Book your Mercedes Class-S today and enjoy the ultimate in comfort,
+            style, and sophistication for your next journey.
+          </p>
+          <button className="bg-[#404040] text-white rounded-xl px-8 py-4 font-manrope-bold text-[16px] tracking-[-0.01em] hover:bg-[#505050] transition-colors duration-300 cursor-pointer">
+            Reserve Your Class-S
+          </button>
+        </div>
+      </div>
+    </>
+  );
 }

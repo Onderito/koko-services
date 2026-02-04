@@ -1,4 +1,3 @@
-
 import HeroSection from "./landing/hero-section";
 import Services from "./landing/services";
 import Cars from "./landing/cars";
@@ -11,39 +10,37 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Services - Koko Limo",
-  description: "Explore our chauffeur services: airport transfers, hourly hire, events & more.",
+  description:
+    "Explore our driver services: airport transfers, hourly hire, events & more.",
 };
-
 
 const Performances = dynamic(() => import("./landing/performances"), {
   loading: () => <p>Loading…</p>,
 });
 
-
 export default function Home() {
-
   return (
     <>
-      <div className="container mx-auto px-4 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+      <div className="hero-container">
         <HeroSection />
       </div>
-      <div className="container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+      <div className="container">
         <Services />
       </div>
       <Performances />
-      <div className="container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+      <div className="container">
         <Cars />
       </div>
-      <div className="container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+      <div className="container">
         <Blogs />
       </div>
-      <div className="container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+      <div className="container">
         <Pricing />
       </div>
-      <div className="container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+      <div className="container">
         <Vip />
       </div>
-      <div className="container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+      <div className="container">
         <Footer />
       </div>
     </>

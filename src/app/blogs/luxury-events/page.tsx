@@ -3,16 +3,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Private Chauffeur for Luxury Events in the French Riviera | Koko Limo",
-  description: "Attending a luxury event in Monaco, Cannes or Saint-Tropez? Book a professional chauffeur with Koko Limo for weddings, galas, red carpet, and business events.",
+  title: "Private Driver for Luxury Events in the French Riviera | Koko Limo",
+  description: "Attending a luxury event in Monaco, Cannes or Saint-Tropez? Book a professional driver with Koko Limo for weddings, galas, red carpet, and business events.",
   keywords: [
-    "chauffeur luxury event",
+    "driver luxury event",
     "private driver Cannes festival",
-    "chauffeur wedding Monaco",
-    "red carpet chauffeur",
+    "driver wedding Monaco",
+    "red carpet driver",
     "event transport French Riviera",
     "Koko Limo luxury events",
-    "chauffeur gala Côte d’Azur"
+    "gala driver French Riviera"
   ],
   alternates: {
     canonical: "https://kokolimonice.com/blog/luxury-events",
@@ -24,7 +24,7 @@ export default function LuxuryEventsFrenchRiviera() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-[72vh] md:min-h-[78vh] flex items-end justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/blogs/blog-luxury-events.webp"
@@ -33,10 +33,11 @@ export default function LuxuryEventsFrenchRiviera() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70" />
         </div>
-        <div className="relative z-10 container mx-auto px-2 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24 text-center">
-          <div className="max-w-4xl mx-auto">
+        <div className="relative z-10 container mx-auto px-2 pb-12 pt-36 sm:px-8 md:px-12 md:pb-16 md:pt-40 lg:px-16 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto rounded-3xl border border-white/20 bg-black/35 px-4 py-8 shadow-2xl backdrop-blur-md md:px-10 md:py-10">
             <span className="inline-block text-[14px] md:text-[16px] bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full font-manrope-regular mb-6">
               Events & Glamour
             </span>
@@ -52,7 +53,7 @@ export default function LuxuryEventsFrenchRiviera() {
             <div className="flex items-center justify-center gap-6 text-gray-300 text-[14px] md:text-[16px]">
               <span>8 min read</span>
               <span>•</span>
-              <span>21 août 2025</span>
+              <span>21 August 2025</span>
             </div>
           </div>
         </div>
@@ -90,10 +91,10 @@ export default function LuxuryEventsFrenchRiviera() {
               <time itemProp="datePublished" dateTime="2025-08-21">2025-08-21</time>
               <span itemProp="headline">Top 5 Luxury Events in the South of France (and How to Get There)</span>
               <meta itemProp="description" content="Discover the top luxury events on the French Riviera and how VIP Limo Nice provides seamless, elegant transportation to each, from Cannes Film Festival to Monaco Grand Prix." />
-              <meta itemProp="keywords" content="événements luxe Côte d'Azur, festivals Cannes, Grand Prix Monaco, chauffeur privé Cannes, chauffeur privé Monaco, chauffeur privé Saint-Tropez, transfert Nice Monaco, transfert Nice Saint-Tropez, VIP Limo Nice" />
+              <meta itemProp="keywords" content="luxury events French Riviera, festivals Cannes, Grand Prix Monaco, private driver Cannes, private driver Monaco, private driver Saint-Tropez, transfer Nice Monaco, transfer Nice Saint-Tropez, VIP Limo Nice" />
             </div>
 
-            <section id="introduction" className="scroll-mt-24 mb-12">
+            <section id="introduction" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 Introduction: The French Riviera&apos;s Calendar of Glamour
@@ -101,12 +102,12 @@ export default function LuxuryEventsFrenchRiviera() {
 
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  The French Riviera is not just a geographical location; it&apos;s a lifestyle, a stage for some of the world&apos;s most prestigious and glamorous events. From film festivals to yacht shows and Formula 1 races, the Côte d&apos;Azur&apos;s event calendar is packed with exclusive gatherings that attract celebrities, business magnates, and discerning travelers from across the globe. Attending these events requires not only an invitation but also seamless logistics, particularly when it comes to transportation. A <strong>private chauffeur service</strong> from <strong>VIP Limo Nice</strong> is the ultimate solution for navigating these high-profile occasions with elegance and efficiency.
+                  The French Riviera is not just a geographical location; it&apos;s a lifestyle, a stage for some of the world&apos;s most prestigious and glamorous events. From film festivals to yacht shows and Formula 1 races, the French Riviera&apos;s event calendar is packed with exclusive gatherings that attract celebrities, business magnates, and discerning travelers from across the globe. Attending these events requires not only an invitation but also seamless logistics, particularly when it comes to transportation. A <strong>private driver service</strong> from <strong>VIP Limo Nice</strong> is the ultimate solution for navigating these high-profile occasions with elegance and efficiency.
                 </p>
               </div>
             </section>
 
-            <section id="cannes-film-festival" className="scroll-mt-24 mb-12">
+            <section id="cannes-film-festival" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 1. The Cannes Film Festival (May)
@@ -116,11 +117,11 @@ export default function LuxuryEventsFrenchRiviera() {
                 <strong>Description:</strong> The most prestigious film festival in the world, bringing together cinematic legends, rising stars, and industry professionals. The Croisette transforms into a hub of red carpet glamour, exclusive parties, and film premieres.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>How a Chauffeur Helps:</strong> During the festival, traffic in Cannes can be notoriously dense. A <strong>chauffeur privé Cannes</strong> possesses an intimate knowledge of the city&apos;s intricate routes, ensuring timely arrivals for screenings, press conferences, and private soirées. They can navigate road closures and provide discreet access, allowing you to make a grand entrance without the stress of parking or congestion. Hourly services are ideal for flexibility between events.
+                <strong>How a Driver Helps:</strong> During the festival, traffic in Cannes can be notoriously dense. A <strong>private driver Cannes</strong> possesses an intimate knowledge of the city&apos;s intricate routes, ensuring timely arrivals for screenings, press conferences, and private evening events. They can navigate road closures and provide discreet access, allowing you to make a grand entrance without the stress of parking or congestion. Hourly services are ideal for flexibility between events.
               </p>
             </section>
 
-            <section id="monaco-grand-prix" className="scroll-mt-24 mb-12">
+            <section id="monaco-grand-prix" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 2. The Monaco Grand Prix (May)
@@ -130,11 +131,11 @@ export default function LuxuryEventsFrenchRiviera() {
                 <strong>Description:</strong> One of the most iconic and challenging races in the Formula 1 calendar, set against the stunning backdrop of Monaco&apos;s streets. The principality buzzes with an electrifying atmosphere, luxury yacht parties, and high-stakes glamour.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>How a Chauffeur Helps:</strong> Access to Monaco during the Grand Prix is highly restricted. A <strong>chauffeur privé Monaco</strong> is indispensable for navigating the complex security zones and ensuring smooth passage. They can drop you off as close as possible to your desired location, whether it&apos;s a yacht in Port Hercule or a VIP suite overlooking the track. Pre-booked <strong>transfer Nice Monaco</strong> services are crucial, as demand is exceptionally high.
+                <strong>How a Driver Helps:</strong> Access to Monaco during the Grand Prix is highly restricted. A <strong>private driver Monaco</strong> is indispensable for navigating the complex security zones and ensuring smooth passage. They can drop you off as close as possible to your desired location, whether it&apos;s a yacht in Port Hercule or a VIP suite overlooking the track. Pre-booked <strong>transfer Nice Monaco</strong> services are crucial, as demand is exceptionally high.
               </p>
             </section>
 
-            <section id="les-voiles-de-saint-tropez" className="scroll-mt-24 mb-12">
+            <section id="les-voiles-de-saint-tropez" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 3. Les Voiles de Saint-Tropez (September/October)
@@ -144,11 +145,11 @@ export default function LuxuryEventsFrenchRiviera() {
                 <strong>Description:</strong> A spectacular regatta that sees traditional and modern sailing yachts compete in the bay of Saint-Tropez. It&apos;s a vibrant celebration of sailing, luxury, and the laid-back yet chic atmosphere of Saint-Tropez.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>How a Chauffeur Helps:</strong> Saint-Tropez&apos;s charm comes with narrow, often congested roads, especially during popular events. A <strong>chauffeur privé Saint-Tropez</strong> can expertly navigate these challenges, providing comfortable and timely transport to the port, private villas, or exclusive beach clubs. A <strong>transfer Nice Saint-Tropez</strong> becomes a luxurious journey through the picturesque Provençal landscape, allowing you to relax before the festivities.
+                <strong>How a Driver Helps:</strong> Saint-Tropez&apos;s charm comes with narrow, often congested roads, especially during popular events. A <strong>private driver Saint-Tropez</strong> can expertly navigate these challenges, providing comfortable and timely transport to the port, private villas, or exclusive beach clubs. A <strong>transfer Nice Saint-Tropez</strong> becomes a luxurious journey through the picturesque Provence landscape, allowing you to relax before the festivities.
               </p>
             </section>
 
-            <section id="monaco-yacht-show" className="scroll-mt-24 mb-12">
+            <section id="monaco-yacht-show" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 4. Monaco Yacht Show (September)
@@ -158,11 +159,11 @@ export default function LuxuryEventsFrenchRiviera() {
                 <strong>Description:</strong> The world&apos;s leading superyacht show, showcasing over 100 of the most extraordinary yachts. It&apos;s a key event for yachting enthusiasts, industry professionals, and those seeking the pinnacle of maritime luxury.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                <strong>How a Chauffeur Helps:</strong> Similar to the Grand Prix, the Yacht Show attracts an elite crowd, making transportation a key consideration. A <strong>chauffeur privé Monaco</strong> ensures seamless transfers between hotels, the show, and private engagements. Their local knowledge is invaluable for avoiding delays and maintaining your schedule throughout this busy event.
+                <strong>How a Driver Helps:</strong> Similar to the Grand Prix, the Yacht Show attracts an elite crowd, making transportation a key consideration. A <strong>private driver Monaco</strong> ensures seamless transfers between hotels, the show, and private engagements. Their local knowledge is invaluable for avoiding delays and maintaining your schedule throughout this busy event.
               </p>
             </section>
 
-            <section id="jazz-a-juan" className="scroll-mt-24 mb-12">
+            <section id="jazz-a-juan" className="scroll-mt-40 md:scroll-mt-44 mb-12">
               <h2 className="text-2xl md:text-3xl font-manrope-bold text-[#404040] mb-6 flex items-center gap-3">
                 <span className="w-1 h-8 bg-[#404040] rounded-full"></span>
                 5. Jazz à Juan (July)
@@ -172,7 +173,7 @@ export default function LuxuryEventsFrenchRiviera() {
                 <strong>Description:</strong> One of the oldest and most respected jazz festivals in Europe, held in the beautiful pine grove of Juan-les-Pins. It attracts world-renowned jazz artists and offers a more relaxed yet equally sophisticated atmosphere.
               </p>
               <p className="text-gray-700 leading-relaxed text-lg">
-                <strong>How a Chauffeur Helps:</strong> While less frenetic than the Grand Prix or Film Festival, attending Jazz à Juan still benefits from dedicated transport. A <strong>chauffeur privé Antibes</strong> (Juan-les-Pins is part of Antibes) can provide comfortable evening transfers to and from the festival, allowing you to enjoy the music without worrying about parking or late-night travel. This ensures a truly relaxing cultural experience.
+                <strong>How a Driver Helps:</strong> While less frenetic than the Grand Prix or Film Festival, attending Jazz à Juan still benefits from dedicated transport. A <strong>private driver Antibes</strong> (Juan-les-Pins is part of Antibes) can provide comfortable evening transfers to and from the festival, allowing you to enjoy the music without worrying about parking or late-night travel. This ensures a truly relaxing cultural experience.
               </p>
               <Link
                 href="/"
@@ -188,7 +189,7 @@ export default function LuxuryEventsFrenchRiviera() {
                 Ready to experience the glamour with VIP Limo Nice?
               </h3>
               <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
-                Book your luxury chauffeur service now and elevate your French Riviera event experience.
+                Book your luxury driver service now and elevate your French Riviera event experience.
               </p>
               <Link
                 href="/booking"
@@ -204,5 +205,4 @@ export default function LuxuryEventsFrenchRiviera() {
     </div>
   );
 }
-
 

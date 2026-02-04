@@ -7,7 +7,7 @@ import gsap from "gsap";
 const card = [
   {
     title: "Business & Executives",
-    text: "Full-day or half-day chauffeur on standby. Stay productive between meetings with quiet, punctual, and discreet service.",
+    text: "Full-day or half-day driver on standby. Stay productive between meetings with quiet, punctual, and discreet service.",
     icon: "/icon-services/suit-case.webp",
   },
   {
@@ -82,7 +82,7 @@ export default function ForWhoHourlyServices() {
         Made For <span className="text-[#C5C5C5] ">Your Schedule</span>
       </h2>
       <p className="body-text text-center mt-4 ">
-        Exclusive full-day or half-day chauffeur service for freedom and privacy
+        Exclusive full-day or half-day driver service for freedom and privacy
         across the Côte d’Azur.
       </p>
 
@@ -118,7 +118,7 @@ export default function ForWhoHourlyServices() {
             Business & Executives
           </h3>
           <p className="text-center card-text mt-4">
-            Full-day or half-day chauffeur on standby. Stay productive between
+            Full-day or half-day driver on standby. Stay productive between
             meetings with quiet, punctual, and discreet service.
           </p>
         </div>

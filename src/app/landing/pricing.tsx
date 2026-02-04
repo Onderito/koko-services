@@ -14,7 +14,7 @@ export default function Pricing() {
         our pricing
       </span>
       <h2 className="heading-2 text-[#404040] mt-4 text-center ">
-        Chauffeur Services Pricing Guide
+        Driver Services Pricing Guide
       </h2>
       <p className="body-text text-center mt-4 ">
         Tailored quotes from nice airport to :

@@ -1,15 +1,15 @@
 "use client"
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const blogsData = [
   {
-    imageUrl: "/blogs/blog-chauffeur.webp",
-    name: "Why Private Chauffeur Services Are Essential on the French Riviera",
+    imageUrl: "/blogs/blog-driver.webp",
+    name: "Why Private Driver Services Are Essential on the French Riviera",
     description:
       "Explore the key benefits of booking a personal driver in Nice, Cannes, and Monaco.",
-    link: "/blogs/private-chauffeur"
+    link: "/blogs/private-driver"
   },
   {
     imageUrl: "/blogs/blog-luxury-events.webp",
@@ -20,7 +20,7 @@ const blogsData = [
   },
   {
     imageUrl: "/blogs/blog-airport.webp",
-    name: "Airport Transfers in Nice: What to Expect From a Premium Chauffeur",
+    name: "Airport Transfers in Nice: What to Expect From a Premium Driver",
     description:
       "Stress-free pickups, punctuality, and high-end comfort for your next flight.",
     link: "/blogs/airport-transfers"
@@ -28,14 +28,6 @@ const blogsData = [
 ];
 
 export default function Blogs() {
-  const router = useRouter();
-
-  const handleClick = (link: string): void => {
-    router.push(link);
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-  }
   return (
     <div className="flex-center-column">
       <span
@@ -44,7 +36,7 @@ export default function Blogs() {
         our blogs
       </span>
       <h2 className="heading-2 text-[#404040] mt-4 text-center">
-        Chauffeur Insights & Luxury Travel Tips
+        Driver Insights & Luxury Travel Tips
       </h2>
       <p className="body-text text-center mt-4 ">
         Explore articles on premium transportation, airport transfers, and
@@ -71,9 +63,9 @@ export default function Blogs() {
               <span className="py-1 font-manrope-regular text-[16px] ">
                 {b.description}
               </span>
-              <button onClick={() => handleClick(b.link)} className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <Link href={b.link} scroll className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300 cursor-pointer">
                 Read More
-              </button>
+              </Link>
             </div>
           </div>
         ))}

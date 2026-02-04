@@ -5,12 +5,12 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "Mercedes Maybach Chauffeur Service in French Riviera | VIP VTC | Koko Limo",
-    description: "Enjoy the ultimate luxury ride with our Mercedes Maybach. Chauffeur service for VIPs, weddings, or executive transfers across the Côte d’Azur.",
+    title: "Mercedes Maybach Driver Service in French Riviera | VIP VTC | Koko Limo",
+    description: "Enjoy the ultimate luxury ride with our Mercedes Maybach. Driver service for VIPs, weddings, or executive transfers across the Côte d’Azur.",
     keywords: [
-        "Mercedes Maybach chauffeur",
+        "Mercedes Maybach driver",
         "Maybach Nice Monaco",
-        "luxury chauffeur French Riviera",
+        "luxury driver French Riviera",
         "VIP VTC Maybach",
         "wedding car French Riviera",
         "Koko Limo Maybach"
@@ -52,7 +52,7 @@ export default function Maybach() {
                 <div className="xl:w-2/3">
                     <h1 className="heading-1"> Mercedes Maybach -
                         <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">Prestige Perfected</span></h1>
-                    <p className="body-text mt-4 xl:mt-6">Experience unparalleled opulence with chauffeur-driven excellence, handcrafted details, and royal-level comfort</p>
+                    <p className="body-text mt-4 xl:mt-6">Experience unparalleled opulence with driver-driven excellence, handcrafted details, and royal-level comfort</p>
                     <Link href="/contact-me"><button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl mt-8 xl:mt-10 button">Book Maybach</button></Link>
                 </div>
 

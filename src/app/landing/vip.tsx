@@ -15,7 +15,7 @@ export default function Vip() {
         <div className="flex flex-col gap-4 md:hidden">
           <div className="bg-[#F9FAFB] h-56 rounded-2xl p-4 shadow-xs relative overflow-hidden">
             <h3 className="heading-3 text-[#404040]">
-              Professional chauffeur <br /> in suit
+              Professional driver <br /> in suit
             </h3>
             <Image
               className="absolute bottom-0 right-0"
@@ -80,7 +80,7 @@ export default function Vip() {
           {/* Colonne gauche - plus rectangulaire (1 colonne) */}
           <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden">
             <h3 className="heading-3 text-[#404040]">
-              Professional chauffeur <br /> in suit
+              Professional driver <br /> in suit
             </h3>
             <Image
               className="absolute bottom-0 right-0"

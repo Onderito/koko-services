@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import NavBar from "./layout/navBar";
-import SmoothScrollWrapper from "./animation/scrollWrapper";
 import Script from "next/script";
 
 import "./globals.css";
+import ClientWrapper from "./ui/client-wrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Koko Limo - Private Chauffeur in French Riviera",
-  description: "Koko Limo - Private Chauffeur in French Riviera",
+  title: "Koko Limo - Private Driver in French Riviera",
+  description: "Koko Limo - Private Driver in French Riviera",
 };
 
 export default function RootLayout({
@@ -32,13 +32,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
-        <SmoothScrollWrapper>{children}</SmoothScrollWrapper>
+        <ClientWrapper>{children}</ClientWrapper>
 
         <Script id="structured-data" type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "Koko Limo - Private Chauffeur in French Riviera",
+            name: "Koko Limo - Private Driver in French Riviera",
             image: "https://kokolimonice.com/logo.png",
             url: "https://kokolimonice.com",
             telephone: "+33771698142",
