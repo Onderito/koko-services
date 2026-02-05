@@ -10,7 +10,6 @@ const blogsData = [
     description:
       "Explore the key benefits of booking a personal driver in Nice, Cannes, and Monaco.",
     link: "/blogs/private-driver",
-    ariaLabel: "blog private driver",
   },
   {
     imageUrl: "/blogs/blog-luxury-events.webp",
@@ -18,7 +17,6 @@ const blogsData = [
     description:
       "From Cannes Film Festival to private galas — arrive in style and on time.",
     link: "/blogs/luxury-events",
-    ariaLabel: "blog luxury events",
   },
   {
     imageUrl: "/blogs/blog-airport.webp",
@@ -26,7 +24,6 @@ const blogsData = [
     description:
       "Stress-free pickups, punctuality, and high-end comfort for your next flight.",
     link: "/blogs/airport-transfers",
-    ariaLabel: "blog airport transfers",
   },
 ];
 
@@ -65,12 +62,12 @@ export default function Blogs() {
                 {b.description}
               </span>
               <Link
-                aria-label={b.ariaLabel}
                 href={b.link}
                 scroll
                 className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300 cursor-pointer"
               >
                 Read More
+                <span className="sr-only"> about {b.name}</span>
               </Link>
             </div>
           </div>
