@@ -43,7 +43,7 @@ export default function ForWhoTransfer() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 40%",
+            start: "top center",
             end: "bottom 30%",
             scrub: 0.8,
           },
@@ -76,7 +76,7 @@ export default function ForWhoTransfer() {
     return () => ctx.revert();
   }, []);
   return (
-    <div ref={containerRef} className="mb-20">
+    <div ref={containerRef} className="mb-20 container">
       <h2 className="heading-2 text-[#404040] mt-4 text-center">
         Made For{" "}
         <span className="text-[#C5C5C5] ">

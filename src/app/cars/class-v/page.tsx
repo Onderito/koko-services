@@ -24,7 +24,7 @@ const classVContent = {
   heroDescription:
     "Travel in supreme comfort with premium leather seating, climate control, and spacious interior for up to 7 passengers.",
   bookLabel: "Book V-Class",
-  heroImageSrc: "/cars/class-v/class-v.svg",
+  heroImageSrc: "/cars/class-v/class-v.webp",
   heroImageAlt: "Mercedes Class V",
   discoverTitle: "Discover the Mercedes Class-V",
   discoverParagraphs: [

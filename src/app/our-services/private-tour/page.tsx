@@ -26,17 +26,19 @@ export const metadata: Metadata = {
 
 export default function PrivateHour() {
   return (
-    <div className="container">
+    <>
       <HeroSection />
       <WhatIsPrivateTour />
       <ForWhoPrivateTour />
-      <Services />
+      <div className="container">
+        <Services />
+      </div>
       <FooterComponent
         title="Private Tours Await You"
         description="Explore the French Riviera’s iconic destinations with a luxury vehicle and personal driver guiding your journey."
         buttonText="Start Your Tour"
         buttonHref="/contact-me"
       />
-    </div>
+    </>
   );
 }

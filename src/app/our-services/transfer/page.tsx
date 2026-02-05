@@ -26,11 +26,13 @@ export const metadata: Metadata = {
 
 export default function Transfer() {
   return (
-    <div className="container">
+    <div>
       <HeroSection />
       <WhatIsTransfer />
       <ForWhoTransfer />
-      <Services />
+      <div className="container">
+        <Services />
+      </div>
       <FooterComponent
         title="Ready to Experience Luxury Transfers?"
         description="Book your private transfer today and enjoy a seamless, safe, and stylish journey across the French Riviera."

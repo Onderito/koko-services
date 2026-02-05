@@ -25,17 +25,19 @@ export const metadata: Metadata = {
 
 export default function hourlyServices() {
   return (
-    <div className="container">
+    <>
       <HeroSection />
       <WhatIsHourlyServices />
       <ForWhoHourlyServices />
-      <Services />
+      <div className="container">
+        <Services />
+      </div>
       <FooterComponent
         title="Discover Hourly Services"
         description="Enjoy the freedom of a bilingual driver at your disposal — flexible, punctual, and tailored to your schedule."
         buttonText="Book Hourly Service"
         buttonHref="/contact-me"
       />
-    </div>
+    </>
   );
 }

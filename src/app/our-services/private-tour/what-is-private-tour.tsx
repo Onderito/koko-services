@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WhatIsPrivateTour() {
   return (
-    <div className="">
+    <div className="container">
       <h2 className="heading-2 text-[#404040] mt-4 text-center">
         The Art of the Private Tour
       </h2>

@@ -25,7 +25,7 @@ const maybachContent = {
   heroDescription:
     "Experience unparalleled opulence with driver-driven excellence, handcrafted details, and royal-level comfort.",
   bookLabel: "Book Maybach",
-  heroImageSrc: "/cars/maybach/maybach.svg",
+  heroImageSrc: "/cars/maybach/maybach.webp",
   heroImageAlt: "Mercedes Maybach",
   discoverTitle: "Discover the Mercedes Maybach",
   discoverParagraphs: [

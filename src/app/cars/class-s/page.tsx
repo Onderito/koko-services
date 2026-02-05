@@ -24,7 +24,7 @@ const classSContent = {
   heroDescription:
     "The pinnacle of luxury with handcrafted interior, advanced technology, and unparalleled comfort for discerning clients.",
   bookLabel: "Book S-Class",
-  heroImageSrc: "/cars/class-s/class-s.svg",
+  heroImageSrc: "/cars/class-s/class-s.webp",
   heroImageAlt: "Mercedes Class S",
   discoverTitle: "Discover the Mercedes Class-S",
   discoverParagraphs: [
