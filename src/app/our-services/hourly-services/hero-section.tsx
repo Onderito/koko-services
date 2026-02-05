@@ -28,6 +28,7 @@ export default function HeroSection() {
               src="/services/monaco.webp"
               alt="heroImageAlt"
               fill
+              priority
               className="object-cover rounded-3xl ring-6 ring-gray-100 shadow-2xl"
             />
           </div>
