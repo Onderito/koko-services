@@ -17,7 +17,7 @@ export default function NavBar() {
     window.scrollTo(0, 0);
   };
   return (
-    <nav className="fixed w-full top-5 z-50">
+    <nav className="fixed w-full z-50">
       <div className="flex justify-center p-4">
         {/* Background container centré */}
         <div

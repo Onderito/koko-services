@@ -29,7 +29,7 @@ const cards = [
 ];
 
 export default function Performances() {
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -39,12 +39,12 @@ export default function Performances() {
         performanceSection();
         ScrollTrigger.refresh(); // Et encore après
       });
-    }, sectionRef)
+    }, sectionRef);
 
     return () => {
       ctx.revert();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
   return (
     <section aria-labelledby="perf-title" ref={sectionRef}>
@@ -63,7 +63,10 @@ export default function Performances() {
                 key={index}
                 className="bg-[#404040] perf-card shadow-white-thin flex flex-col rounded-3xl p-3 xl:max-w-xs"
               >
-                <div className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative" aria-hidden="true">
+                <div
+                  className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative"
+                  aria-hidden="true"
+                >
                   {index === 0 && <FirstCard />}
                   {index === 1 && <SecondCard />}
                   {index === 2 && <ThirdCard />}
@@ -73,7 +76,9 @@ export default function Performances() {
                 <h3 className="heading-3 text-white text-center mt-8">
                   {c.title}
                 </h3>
-                <p className="card-text text-white text-center mt-2">{c.text}</p>
+                <p className="card-text text-white text-center mt-2">
+                  {c.text}
+                </p>
               </li>
             ))}
           </ul>

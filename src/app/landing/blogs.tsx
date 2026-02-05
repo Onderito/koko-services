@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -9,30 +9,31 @@ const blogsData = [
     name: "Why Private Driver Services Are Essential on the French Riviera",
     description:
       "Explore the key benefits of booking a personal driver in Nice, Cannes, and Monaco.",
-    link: "/blogs/private-driver"
+    link: "/blogs/private-driver",
+    ariaLabel: "blog private driver",
   },
   {
     imageUrl: "/blogs/blog-luxury-events.webp",
     name: "Top 5 Luxury Events in the South of France (and How to Get There)",
     description:
       "From Cannes Film Festival to private galas — arrive in style and on time.",
-    link: "/blogs/luxury-events"
+    link: "/blogs/luxury-events",
+    ariaLabel: "blog luxury events",
   },
   {
     imageUrl: "/blogs/blog-airport.webp",
     name: "Airport Transfers in Nice: What to Expect From a Premium Driver",
     description:
       "Stress-free pickups, punctuality, and high-end comfort for your next flight.",
-    link: "/blogs/airport-transfers"
+    link: "/blogs/airport-transfers",
+    ariaLabel: "blog airport transfers",
   },
 ];
 
 export default function Blogs() {
   return (
     <div className="flex-center-column">
-      <span
-        className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
-      >
+      <span className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto">
         our blogs
       </span>
       <h2 className="heading-2 text-[#404040] mt-4 text-center">
@@ -63,7 +64,12 @@ export default function Blogs() {
               <span className="py-1 font-manrope-regular text-[16px] ">
                 {b.description}
               </span>
-              <Link href={b.link} scroll className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <Link
+                aria-label={b.ariaLabel}
+                href={b.link}
+                scroll
+                className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300 cursor-pointer"
+              >
                 Read More
               </Link>
             </div>
@@ -72,4 +78,4 @@ export default function Blogs() {
       </div>
     </div>
   );
-};
+}

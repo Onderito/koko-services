@@ -44,20 +44,24 @@ export default function CarPageTemplate({
 }: CarPageTemplateProps) {
   return (
     <>
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 min-h-screen container">
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 container pt-[var(--nav-clearance)] min-h-[calc(100vh-var(--nav-clearance))]">
         <div className="xl:w-2/3">
-          <h1 className="heading-1">
-            {titlePrefix}
-            <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">
-              {titleHighlight}
-            </span>
-          </h1>
-          <p className="body-text mt-4 xl:mt-6">{heroDescription}</p>
-          <Link href="/contact-me">
-            <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl mt-8 xl:mt-10">
-              {bookLabel}
-            </button>
-          </Link>
+          <div className="space-y-5 md:space-y-6 xl:space-y-7">
+            <h1 className="heading-1">
+              {titlePrefix}
+              <span className="bg-gradient-to-r from-[#D5D5D5] to-[#404040] bg-clip-text text-transparent">
+                {titleHighlight}
+              </span>
+            </h1>
+            <p className="body-text">{heroDescription}</p>
+            <div className="flex">
+              <Link href="/contact-me">
+                <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl">
+                  {bookLabel}
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
 
         <div className="w-full xl:w-2/3">

@@ -24,6 +24,7 @@
 :root {
   --background: #ffffff;
   --foreground: #ffffff;
+  --nav-clearance: 7.5rem;
 }
 
 @theme inline {

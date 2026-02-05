@@ -49,7 +49,7 @@ export default function Cars() {
         Choose from our range of luxury vehicles — curated for style, space, and
         performance.{" "}
       </p>
-      <div className="flex flex-col xl:grid xl:grid-cols-3 gap-8 mt-10">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3 gap-8 mt-10">
         {vehiclesData.map((v, index) => (
           <div
             className="overflow-hidden card relative shadow-lg rounded-3xl xl:h-[620px]"
