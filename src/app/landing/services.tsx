@@ -95,7 +95,7 @@ export default function Services() {
                 aria-label="see more about the service"
                 scroll={true}
                 href={card.link}
-                className="bg-white w-[45%] tracking-[-0.01em] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] "
+                className="bg-white w-[45%] tracking-[-0.01em] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] button-hover"
               >
                 See More
                 <span className="sr-only"> about {card.title}</span>
@@ -107,7 +107,7 @@ export default function Services() {
               >
                 <button
                   aria-label="book now the service"
-                  className="bg-[#404040] cursor-pointer inner-shadow-white tracking-[-0.01em] py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full"
+                  className="bg-[#404040] cursor-pointer inner-shadow-white tracking-[-0.01em] py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full button-hover"
                 >
                   Book Now
                   <span className="sr-only"> about {card.title}</span>

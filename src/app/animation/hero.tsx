@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 export const heroSection = () => {
-  const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 1 } });
+  const tl = gsap.timeline({ defaults: { ease: "power1.out", duration: 1 } });
 
   tl.to(".hero-content", {
     opacity: 1,
@@ -18,47 +18,48 @@ export const heroSection = () => {
       duration: 1,
       clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
     },
-    "-=0.7"
+    "-=0.7",
   );
 
   tl.from(
     "h1",
     {
       opacity: 0,
-      scale: 0.6,
+      scale: 0.9,
       y: 5,
     },
-    "<"
+    "<",
   );
 
   tl.from(
     ".description",
     {
       opacity: 0,
-      scale: 0.6,
+      scale: 0.9,
       y: 5,
     },
-    "<"
+    "<",
   );
 
   tl.from(
     ".button",
     {
       opacity: 0,
-      scale: 0.6,
+      scale: 0.9,
       y: 5,
     },
-    "<0.2"
+    "<0.2",
   );
 
   tl.from(
     ".svg",
     {
       opacity: 0,
-      scale: 0.6,
-      y: 10,
+      scale: 0.9,
+      y: 20,
+      ease: "elastic(1, 0.75)",
     },
-    "<"
+    "<0.4",
   );
   tl.from(
     ".img",
@@ -67,7 +68,7 @@ export const heroSection = () => {
       y: -20,
       scale: 0.8,
     },
-    "<0.4"
+    "<",
   );
 };
 
@@ -81,10 +82,10 @@ export const heroScroll = () => {
     },
   });
   tl.to(".hero-content", {
-    rotate: 2,
-    scale: 0.9,
+    rotate: 5,
+    scale: 1,
     yPercent: 10,
-    ease: "power2.out",
+    ease: "power1.out",
   });
 };
 

@@ -69,6 +69,9 @@
   .hero-container {
     @apply container mx-auto px-4 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24;
   }
+  .button-hover {
+    @apply transition-all hover:scale-105 duration-300;
+  }
 }
 
 @layer utilities {

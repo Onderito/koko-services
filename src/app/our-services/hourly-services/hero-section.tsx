@@ -14,7 +14,7 @@ export default function HeroSection() {
             </p>
             <div className="flex gap-4">
               <Link href="/contact-me">
-                <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-10 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl">
+                <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-10 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl  button-hover">
                   Book Now
                 </button>
               </Link>

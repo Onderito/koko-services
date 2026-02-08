@@ -99,7 +99,7 @@ export default function NavBar() {
               rel="noopener noreferrer"
               href="https://wa.me/33771698142"
             >
-              <button className="hidden xl:block text-[16px] font-manrope-bold text-white bg-[#23C063] px-8 rounded-2xl h-[52px] cursor-pointer">
+              <button className="hidden xl:block text-[16px] font-manrope-bold text-white bg-[#23C063] px-8 rounded-2xl h-[52px] cursor-pointer  button-hover">
                 Contact us
               </button>
             </a>

@@ -56,7 +56,7 @@ export default function CarPageTemplate({
             <p className="body-text">{heroDescription}</p>
             <div className="flex">
               <Link href="/contact-me">
-                <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl">
+                <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl button-hover">
                   {bookLabel}
                 </button>
               </Link>
@@ -152,7 +152,7 @@ export default function CarPageTemplate({
       </div>
 
       <div className="container">
-        <div className="text-center bg-gray-50 rounded-2xl p-8 md:p-12 mt-16 lg:mt-20">
+        <div className="text-center bg-gray-50 rounded-2xl p-8">
           <h2 className="heading-2 text-[#404040] mb-4">
             Ready to Experience Luxury?
           </h2>

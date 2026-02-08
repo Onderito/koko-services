@@ -77,7 +77,7 @@ export default function ForWhoHourlyServices() {
     return () => ctx.revert();
   }, []);
   return (
-    <div ref={containerRef} className="mb-20 container">
+    <div ref={containerRef} className="container">
       <h2 className="heading-2 text-[#404040] mt-4 text-center">
         Made For <span className="text-[#C5C5C5] ">Your Schedule</span>
       </h2>

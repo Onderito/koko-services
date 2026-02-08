@@ -26,7 +26,7 @@ export default function HeroSection() {
 
     return () => {
       ctx.revert();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
   return (
@@ -41,15 +41,15 @@ export default function HeroSection() {
           priority
           sizes="100vw"
           style={{
-            objectFit: 'cover',
-            objectPosition: 'center'
+            objectFit: "cover",
+            objectPosition: "center",
           }}
         />
       </div>
       <div className="flex flex-col justify-center items-center hero-content">
         <span
           style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-          className="hero-span rounded-4xl bg-[#404040] inner-shadow-white p-2 font-manrope-bold text-[12px] xl:text-[14px] tracking-[0.01em] text-white w-fit"
+          className="hero-span overflow-hidden rounded-4xl bg-[#404040] inner-shadow-white p-2 font-manrope-bold text-[12px] xl:text-[14px] tracking-[0.01em] text-white w-fit"
         >
           Always ready to drive you
         </span>
@@ -64,8 +64,8 @@ export default function HeroSection() {
         </p>
         <div className=" relative ">
           <Link href="/contact-me">
-            <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[0.01em] text-white rounded-xl mt-8 button ">
-              <span className="button-content inline-block !cursor-pointer">
+            <button className="bg-[#404040] overflow-hidden !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[0.01em] text-white rounded-xl mt-8 button ">
+              <span className="button-content relative inline-block !cursor-pointer">
                 Plan Your Transfer
               </span>
             </button>
@@ -109,8 +109,8 @@ export default function HeroSection() {
           height={450}
           sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 75vw, 700px"
           style={{
-            width: '100%',
-            height: 'auto'
+            width: "100%",
+            height: "auto",
           }}
         />
       </div>

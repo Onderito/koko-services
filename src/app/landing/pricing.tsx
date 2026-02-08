@@ -74,7 +74,7 @@ export default function Pricing() {
                 </p>
               </div>
               <div
-                className={`flex flex-col justify-center items-center bg-[#F9FAFB] w-full rounded-2xl mt-5 py-4 ${
+                className={`flex flex-col justify-center items-center bg-gray-100 w-full rounded-2xl mt-5 py-4 ${
                   index >= vehicles.length - 2 ? "dark-bg " : ""
                 } `}
               >

@@ -31,9 +31,7 @@ export default function ForWhoTransfer() {
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
-      // Desktop uniquement (ta pile xl)
       mm.add("(min-width: 1280px)", () => {
-        // States init (GPU + origine)
         gsap.set([card1Ref.current, card2Ref.current, card3Ref.current], {
           transformOrigin: "50% 50%",
           force3D: true,
@@ -76,10 +74,10 @@ export default function ForWhoTransfer() {
     return () => ctx.revert();
   }, []);
   return (
-    <div ref={containerRef} className="mb-20 container">
+    <div ref={containerRef} className="container">
       <h2 className="heading-2 text-[#404040] mt-4 text-center">
         Made For{" "}
-        <span className="text-[#C5C5C5] ">
+        <span className="text-[#C5C5C5]">
           {" "}
           <br className="block md:hidden" /> Every Journey
         </span>

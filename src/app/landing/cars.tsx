@@ -103,7 +103,7 @@ export default function Cars() {
                 aria-label="see more about the car"
                 href={v.link}
                 scroll
-                className="block w-full text-[#404040] bg-white cursor-pointer tracking-[-0.01em] inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center hover:scale-105 transition-transform duration-300"
+                className="block w-full text-[#404040] bg-white cursor-pointer tracking-[-0.01em] inner-shadow-dark py-4 rounded-2xl font-manrope-bold text-[16px] text-center button-hover"
               >
                 {v.button}
                 <span className="sr-only"> about {v.name}</span>
