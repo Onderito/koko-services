@@ -24,8 +24,8 @@ const maybachContent = {
   titleHighlight: "Prestige Perfected",
   heroDescription:
     "Experience unparalleled opulence with driver-driven excellence, handcrafted details, and royal-level comfort.",
-  bookLabel: "Book Maybach",
-  heroImageSrc: "/cars/maybach/maybach.webp",
+  bookLabel: "Request a Quote",
+  heroImageSrc: "/assets/images/cars/maybach/maybach.webp",
   heroImageAlt: "Mercedes Maybach",
   discoverTitle: "Discover the Mercedes Maybach",
   discoverParagraphs: [
@@ -34,39 +34,48 @@ const maybachContent = {
     "Equipped with cutting-edge technology, high-end entertainment systems, and top-tier safety features, the Mercedes Maybach ensures a seamless, safe, and luxurious travel experience.",
   ],
   gallery: [
-    { src: "/cars/maybach/maybach-first.webp", alt: "Maybach Interior" },
-    { src: "/cars/maybach/maybach-second.webp", alt: "Maybach Exterior" },
-    { src: "/cars/maybach/maybach-third.webp", alt: "Maybach Details" },
+    {
+      src: "/assets/images/cars/maybach/maybach-first.webp",
+      alt: "Maybach Interior",
+    },
+    {
+      src: "/assets/images/cars/maybach/maybach-second.webp",
+      alt: "Maybach Exterior",
+    },
+    {
+      src: "/assets/images/cars/maybach/maybach-third.webp",
+      alt: "Maybach Details",
+    },
   ],
   features: [
     {
       name: "Luxury Seats",
       description:
         "Premium leather seating for maximum comfort on every journey.",
-      icon: "/star.svg",
+      icon: "/assets/icons/features/star.svg",
     },
     {
       name: "Safety & Privacy",
       description:
         "Top-tier safety features and privacy options ensure a secure and discreet ride.",
-      icon: "/safety.svg",
+      icon: "/assets/icons/features/safety.svg",
     },
     {
       name: "Advanced Tech",
       description:
         "State-of-the-art infotainment, connectivity, and climate systems for a high-end experience.",
-      icon: "/mobile.svg",
+      icon: "/assets/icons/features/mobile.svg",
     },
     {
       name: "VIP Capacity",
       description:
         "Spacious seating for up to 4 passengers, ideal for VIP travel and executive journeys.",
-      icon: "/users.svg",
+      icon: "/assets/icons/features/users.svg",
     },
   ],
   ctaDescription:
     "Book your Mercedes Maybach today and enjoy the ultimate in comfort, style, and sophistication for your next journey.",
-  ctaButtonLabel: "Reserve Your Maybach",
+  ctaButtonLabel: "Request This Vehicle",
 };
 
 export default function MaybachPage() {

@@ -56,9 +56,9 @@ export default function CarPageTemplate({
             <p className="body-text">{heroDescription}</p>
             <div className="flex">
               <Link href="/contact-me">
-                <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-6 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl button-hover">
+                <span className="inline-flex items-center justify-center rounded-xl border border-[#404040] bg-[#404040] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2F2F2F]">
                   {bookLabel}
-                </button>
+                </span>
               </Link>
             </div>
           </div>
@@ -157,9 +157,12 @@ export default function CarPageTemplate({
             Ready to Experience Luxury?
           </h2>
           <p className="body-text mb-8 max-w-2xl mx-auto">{ctaDescription}</p>
-          <button className="bg-[#404040] text-white rounded-xl px-8 py-4 font-manrope-bold text-[16px] tracking-[-0.01em] hover:bg-[#505050] transition-colors duration-300 cursor-pointer">
+          <Link
+            href="/contact-me"
+            className="inline-flex items-center justify-center rounded-xl border border-[#404040] bg-[#404040] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2F2F2F]"
+          >
             {ctaButtonLabel}
-          </button>
+          </Link>
         </div>
       </div>
     </>

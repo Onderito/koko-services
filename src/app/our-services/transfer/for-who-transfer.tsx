@@ -7,17 +7,17 @@ const card = [
   {
     title: "Business Travelers",
     text: "Executive transportation with guaranteed punctuality. Quiet, comfortable environment perfect for preparing meetings or making important calls during your journey.",
-    icon: "/icon-services/suit-case.webp",
+    icon: "/assets/icons/services/suit-case.webp",
   },
   {
     title: "First-Time Visitors",
     text: "New to the French Riviera? Start your journey right with reliable transfers and local insights from our bilingual drivers.",
-    icon: "/icon-services/hand.webp",
+    icon: "/assets/icons/services/hand.webp",
   },
   {
     title: "Group Travelers",
     text: "Families and groups who want to travel together comfortably. Premium vehicles with space for everyone and luggage assistance.",
-    icon: "/icon-services/multiple-suit-case.webp",
+    icon: "/assets/icons/services/multiple-suit-case.webp",
   },
 ];
 
@@ -109,7 +109,7 @@ export default function ForWhoTransfer() {
           className="relative z-8 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <img
-            src={"/icon-services/suit-case.webp"}
+            src={"/assets/icons/services/suit-case.webp"}
             alt="icon suitcase"
             width={40}
             height={40}
@@ -128,7 +128,7 @@ export default function ForWhoTransfer() {
           className="absolute inset-0 rotate-5 z-6 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <img
-            src={"/icon-services/hand.webp"}
+            src={"/assets/icons/services/hand.webp"}
             alt="icon hand"
             width={40}
             height={40}
@@ -146,7 +146,7 @@ export default function ForWhoTransfer() {
           className="absolute inset-0 -rotate-5 z-4 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <img
-            src={"/icon-services/multiple-suit-case.webp"}
+            src={"/assets/icons/services/multiple-suit-case.webp"}
             alt="icon multiple suitcase"
             width={40}
             height={40}

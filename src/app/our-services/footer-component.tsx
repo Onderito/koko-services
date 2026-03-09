@@ -15,14 +15,26 @@ export default function FooterComponent({
 }: CTAProps) {
   return (
     <div className="container">
-      <div className="text-center bg-gray-100 rounded-2xl p-8 ">
-        <h2 className="heading-2 text-[#404040] mb-4">{title}</h2>
-        <p className="body-text mb-8 max-w-2xl mx-auto">{description}</p>
-        <Link href={buttonHref}>
-          <button className="bg-[#404040] text-white rounded-xl px-8 py-4 font-manrope-bold text-[16px] hover:bg-[#505050] tracking-[-0.01em] transition-colors duration-300 cursor-pointer">
+      <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#050505] px-6 py-10 text-center text-white md:px-8 md:py-12">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute left-0 top-0 h-40 w-40 rounded-full bg-white/6 blur-3xl" />
+          <div className="absolute right-0 top-8 h-48 w-48 rounded-full bg-[#8A6B3B]/20 blur-3xl" />
+        </div>
+        <div className="relative">
+          <span className="inline-flex rounded-full border border-white/12 bg-white/6 px-4 py-2 text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-white/72">
+            Premium service
+          </span>
+          <h2 className="heading-2 mb-4 mt-5 text-white">{title}</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-[15px] leading-relaxed text-white/66 md:text-[16px]">
+            {description}
+          </p>
+          <Link
+            href={buttonHref}
+            className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 font-manrope-bold text-[16px] tracking-[-0.01em] text-[#111111] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EDEDED]"
+          >
             {buttonText}
-          </button>
-        </Link>
+          </Link>
+        </div>
       </div>
     </div>
   );

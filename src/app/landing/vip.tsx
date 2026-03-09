@@ -19,7 +19,7 @@ export default function Vip() {
             </h3>
             <Image
               className="absolute bottom-0 right-0"
-              src={"/bento/suit.png"}
+              src={"/assets/images/bento/suit.png"}
               alt="suit"
               width={200}
               height={200}
@@ -36,7 +36,7 @@ export default function Vip() {
             </h3>
             {/* <Image
               className="absolute left-[-45px] bottom-[-15px]"
-              src={"/bento/circle.svg"}
+              src={"/assets/images/bento/circle.svg"}
               alt="circle"
               width={100}
               height={100}
@@ -48,26 +48,24 @@ export default function Vip() {
             </h3>
             <Image
               className="absolute left-[-40px] bottom-[-80px]"
-              src={"/bento/bottle.svg"}
+              src={"/assets/images/bento/bottle.svg"}
               alt="bottle"
               width={120}
               height={100}
             />
             <Image
               className="absolute right-[-40px] bottom-[-80px]"
-              src={"/bento/bottle2.svg"}
+              src={"/assets/images/bento/bottle2.svg"}
               alt="bottle"
               width={120}
               height={100}
             />
           </div>
           <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden h-56">
-            <h3 className="text-white heading-3">
-              Phone chargers available
-            </h3>
+            <h3 className="text-white heading-3">Phone chargers available</h3>
             <Image
               className="absolute left-[-20px] bottom-[-90px]"
-              src={"/bento/phone.png"}
+              src={"/assets/images/bento/phone.png"}
               alt="phone"
               width={200}
               height={200}
@@ -84,7 +82,7 @@ export default function Vip() {
             </h3>
             <Image
               className="absolute bottom-0 right-0"
-              src={"/bento/suit.png"}
+              src={"/assets/images/bento/suit.png"}
               alt="suit"
               width={300}
               quality={100}
@@ -97,7 +95,7 @@ export default function Vip() {
               <div className="flex flex-row items-center justify-center h-full">
                 <h3 className="heading-3 text-[#404040] text-center">
                   Personalized airport pickup with{" "}
-                  <br className="hidden xl:block" /> bname sign
+                  <br className="hidden xl:block" /> name sign
                 </h3>
               </div>
             </div>
@@ -110,7 +108,7 @@ export default function Vip() {
               </div>
               {/* <Image
                 className="absolute left-[-45px] md:hidden bottom-[-40px]"
-                src={"/bento/circle.svg"}
+                src={"/assets/images/bento/circle.svg"}
                 alt="circle"
                 width={150}
                 quality={100}
@@ -126,7 +124,7 @@ export default function Vip() {
               </div>
               <Image
                 className="absolute left-[-40px] bottom-[-80px] md:bottom-[-110px]"
-                src={"/bento/bottle.svg"}
+                src={"/assets/images/bento/bottle.svg"}
                 alt="bottle"
                 width={150}
                 quality={100}
@@ -134,7 +132,7 @@ export default function Vip() {
               />
               <Image
                 className="absolute right-[-40px] bottom-[-80px] md:bottom-[-110px]"
-                src={"/bento/bottle2.svg"}
+                src={"/assets/images/bento/bottle2.svg"}
                 alt="bottle"
                 width={150}
                 quality={100}
@@ -149,7 +147,7 @@ export default function Vip() {
             </h3>
             <Image
               className="absolute left-0 bottom-[-60px] "
-              src="/bento/phone.png"
+              src="/assets/images/bento/phone.png"
               alt="Phone"
               width={280}
               height={300}

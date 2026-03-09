@@ -7,17 +7,17 @@ const card = [
   {
     title: "First-Time Visitors",
     text: "See the must-sees without stress: tailored route, photo stops, café breaks, and a bilingual driver-guide sharing local tips.",
-    icon: "/icon-services/plane.webp",
+    icon: "/assets/icons/services/plane.webp",
   },
   {
     title: "Culture & History Lovers",
     text: "Old towns, perched villages, museums, artisan stops—Èze, Antibes, Saint-Paul-de-Vence and more, at your own pace.",
-    icon: "/icon-services/museum.webp",
+    icon: "/assets/icons/services/museum.webp",
   },
   {
     title: "Families & Small Groups",
     text: "Comfortable vehicle, flexible timing, beach or village vibes, snack pauses—everyone enjoys the day, logistics handled",
-    icon: "/icon-services/van.webp",
+    icon: "/assets/icons/services/van.webp",
   },
 ];
 
@@ -107,7 +107,7 @@ export default function ForWhoPrivateTour() {
           className="relative z-8 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <img
-            src={"/icon-services/plane.webp"}
+            src={"/assets/icons/services/plane.webp"}
             alt="icon of plane"
             width={40}
             height={40}
@@ -125,7 +125,7 @@ export default function ForWhoPrivateTour() {
           className="absolute inset-0 rotate-5 z-6 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <img
-            src={"/icon-services/museum.webp"}
+            src={"/assets/icons/services/museum.webp"}
             alt="icon of museum"
             width={40}
             height={40}
@@ -145,7 +145,7 @@ export default function ForWhoPrivateTour() {
           className="absolute inset-0 -rotate-5 z-4 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <img
-            src={"/icon-services/van.webp"}
+            src={"/assets/icons/services/van.webp"}
             alt="icon of van"
             width={40}
             height={40}

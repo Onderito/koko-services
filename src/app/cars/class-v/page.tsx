@@ -23,8 +23,8 @@ const classVContent = {
   titleHighlight: "Luxury Redefined",
   heroDescription:
     "Travel in supreme comfort with premium leather seating, climate control, and spacious interior for up to 7 passengers.",
-  bookLabel: "Book V-Class",
-  heroImageSrc: "/cars/class-v/class-v.webp",
+  bookLabel: "Request a Quote",
+  heroImageSrc: "/assets/images/cars/class-v/class-v.webp",
   heroImageAlt: "Mercedes Class V",
   discoverTitle: "Discover the Mercedes Class-V",
   discoverParagraphs: [
@@ -33,36 +33,45 @@ const classVContent = {
     "Perfect for airport transfers, city tours, and longer trips along the French Riviera, the Mercedes Class-V ensures safety, reliability, and premium amenities tailored to your needs.",
   ],
   gallery: [
-    { src: "/cars/class-v/class-v-first.webp", alt: "Class V Interior" },
-    { src: "/cars/class-v/class-v-second.webp", alt: "Class V Exterior" },
-    { src: "/cars/class-v/class-v-third.webp", alt: "Class V Details" },
+    {
+      src: "/assets/images/cars/class-v/class-v-first.webp",
+      alt: "Class V Interior",
+    },
+    {
+      src: "/assets/images/cars/class-v/class-v-second.webp",
+      alt: "Class V Exterior",
+    },
+    {
+      src: "/assets/images/cars/class-v/class-v-third.webp",
+      alt: "Class V Details",
+    },
   ],
   features: [
     {
       name: "Luxury Seats",
       description:
         "Premium leather seating for maximum comfort on every journey.",
-      icon: "/star.svg",
+      icon: "/assets/icons/features/star.svg",
     },
     {
       name: "Climate Control",
       description: "Multi-zone climate control for perfect comfort.",
-      icon: "/snow.svg",
+      icon: "/assets/icons/features/snow.svg",
     },
     {
       name: "Large Luggage",
       description: "Ample space for suitcases, bags, and travel gear.",
-      icon: "/suit-case.svg",
+      icon: "/assets/icons/features/suit-case.svg",
     },
     {
       name: "7 Passengers",
       description: "Spacious design ideal for group travel or family trips.",
-      icon: "/users.svg",
+      icon: "/assets/icons/features/users.svg",
     },
   ],
   ctaDescription:
     "Book your Mercedes Class-V today and enjoy the ultimate in comfort, style, and sophistication for your next journey.",
-  ctaButtonLabel: "Reserve Your Class-V",
+  ctaButtonLabel: "Request This Vehicle",
 };
 
 export default function ClassVPage() {

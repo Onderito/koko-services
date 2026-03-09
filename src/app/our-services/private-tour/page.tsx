@@ -4,6 +4,7 @@ import WhatIsPrivateTour from "./what-is-private-tour";
 import ForWhoPrivateTour from "./for-who-private-tour";
 import FooterComponent from "../footer-component";
 import type { Metadata } from "next";
+import { siteUrl } from "@/app/data/site-config";
 
 export const metadata: Metadata = {
   title:
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     "Koko Limo",
   ],
   alternates: {
-    canonical: "https://kokolimonice.com/our-services/private-tours",
+    canonical: `${siteUrl}/our-services/private-tour`,
   },
 };
 

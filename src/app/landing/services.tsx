@@ -1,87 +1,59 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { globalAnimation } from "../animation/global-animation";
 
 const cards = [
   {
     title: "Transfer",
-    icon: "/transfer.svg",
+    kicker: "Airport & city rides",
     description:
       "Point-to-point luxury transportation for airports, hotels, events. Professional service with flight monitoring and personalized assistance throughout the French Riviera.",
-    image: "/services/transfer.webp",
+    image: "/assets/images/services/transfer.webp",
     link: "/our-services/transfer",
   },
   {
     title: "Hourly Services",
-    icon: "/service.svg",
+    kicker: "Flexible by the hour",
     description:
       "Flexible driver service by the hour for business meetings, shopping tours, or leisure activities. Your dedicated driver waits while you attend to your appointments.",
-    image: "/services/hourly.webp",
+    image: "/assets/images/services/hourly.webp",
     link: "/our-services/hourly-services",
   },
   {
     title: "Private Tour",
-    icon: "/private.svg",
+    kicker: "Tailored Riviera days",
     description:
       "Exclusive full-day or half-day driver service for complete freedom and privacy. Explore the Côte d'Azur at your own pace with a personal driver-guide.",
-    image: "/services/private-tour.webp",
+    image: "/assets/images/services/private-tour.webp",
     link: "/our-services/private-tour",
   },
 ];
 
 export default function Services() {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const ctx = gsap.context(() => {
-      globalAnimation();
-    });
-
-    return () => ctx.revert();
-  }, []);
   return (
     <div className="main-container relative z-10 flex-center-column section-2">
-      <span
-        // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="span-anim text-[16px] xl:scale-80 xl:opacity-0 shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
-      >
+      <span className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto">
         our services
       </span>
-      <h2 className="split xl:text-gray-100 text-[#404040] heading-2 mt-4 text-center">
+      <h2 className="text-[#404040] heading-2 mt-4 text-center">
         What We Offer
       </h2>
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="card flex flex-col bg-[#F9FAFB] border border-[#EEEEEE] rounded-3xl p-6 h-full"
+            className="card group flex h-full flex-col overflow-hidden rounded-3xl border border-[#E7E7E7] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="flex items-center gap-2 md:gap-4">
-              <span className="bg-[#404040] rounded-xl p-3 md:p-4 xl:p-3 inner-shadow-white">
-                <Image
-                  className="md:w-8 md:h-8 xl:w-7 xl:h-7"
-                  src={card.icon}
-                  alt={`${card.title} icon`}
-                  width={24}
-                  height={24}
-                  aria-hidden="true"
-                />
-              </span>
-              <h3 className="heading-3 text-[#404040]">{card.title}</h3>
-            </div>
-            <p className="mt-6 xl:mt-8 body-text flex-grow">
-              {card.description}
-            </p>
-            <div className="relative aspect-video w-full mt-8 xl:mt-16 rounded-2xl overflow-hidden">
+            <Link
+              href={card.link}
+              scroll={true}
+              aria-label={`open ${card.title} service details`}
+              className="relative block aspect-[4/4.2] overflow-hidden"
+            >
               <Image
                 src={card.image}
                 alt={`${card.title} service illustration`}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 sizes="(max-width: 640px) 90vw, 
                        (max-width: 768px) 85vw,
                        (max-width: 1024px) 40vw,
@@ -89,30 +61,50 @@ export default function Services() {
                 loading="lazy"
                 quality={80}
               />
-            </div>
-            <div className="flex justify-center items-center w-full mt-4 gap-4">
-              <Link
-                aria-label="see more about the service"
-                scroll={true}
-                href={card.link}
-                className="bg-white w-[45%] tracking-[-0.01em] rounded-xl cursor-pointer text-center inner-shadow-dark py-4 px-6 font-manrope-bold text-[16px] button-hover"
-              >
-                See More
-                <span className="sr-only"> about {card.title}</span>
-              </Link>
-              <Link
-                aria-label="book now the service"
-                className="w-[60%]"
-                href={"/contact-me"}
-              >
-                <button
-                  aria-label="book now the service"
-                  className="bg-[#404040] cursor-pointer inner-shadow-white tracking-[-0.01em] py-4 px-6 font-manrope-bold text-[16px] text-white rounded-xl w-full button-hover"
-                >
-                  Book Now
-                  <span className="sr-only"> about {card.title}</span>
-                </button>
-              </Link>
+              <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/45 via-black/18 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/12 to-transparent" />
+              <div className="absolute left-5 top-5">
+                <span className="inline-flex rounded-full border border-white/25 bg-black/30 px-3 py-1 text-[12px] font-manrope-bold uppercase tracking-[0.12em] text-white shadow-lg backdrop-blur-md">
+                  {card.kicker}
+                </span>
+              </div>
+            </Link>
+
+            <div className="flex flex-1 flex-col p-6">
+              <div>
+                <h3 className="heading-3 text-[#404040]">
+                  <Link href={card.link} className="hover:text-[#1F1F1F]">
+                    {card.title}
+                  </Link>
+                </h3>
+                <p className="mt-3 text-[14px] leading-relaxed text-gray-600 flex-grow">
+                  {card.description}
+                </p>
+              </div>
+
+              <div className="mt-6 border-t border-[#EFEFEF] pt-6">
+                <div className="flex justify-center items-center w-full gap-4">
+                  <Link
+                    aria-label={`explore the ${card.title} service`}
+                    scroll={true}
+                    href={card.link}
+                    className="inline-flex w-[45%] items-center justify-center rounded-xl border border-[#DADADA] bg-white px-5 py-3 text-center font-manrope-bold text-[14px] tracking-[-0.01em] text-[#404040] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F7F7F7]"
+                  >
+                    Explore
+                    <span className="sr-only"> about {card.title}</span>
+                  </Link>
+                  <Link
+                    aria-label={`request a quote for ${card.title}`}
+                    className="w-[60%]"
+                    href={"/contact-me"}
+                  >
+                    <span className="inline-flex w-full items-center justify-center rounded-xl border border-[#404040] bg-[#404040] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2F2F2F]">
+                      Request a Quote
+                      <span className="sr-only"> for {card.title}</span>
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         ))}

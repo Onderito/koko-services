@@ -32,28 +32,29 @@ export default function Performances() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    let cleanupAnimation: (() => void) | undefined;
+
     const ctx = gsap.context(() => {
-      // Force un recalcul complet des positions AVANT de lancer l'animation
+      cleanupAnimation = performanceSection();
       ScrollTrigger.refresh();
-      gsap.delayedCall(0.1, () => {
-        performanceSection();
-        ScrollTrigger.refresh(); // Et encore après
-      });
     }, sectionRef);
 
     return () => {
+      cleanupAnimation?.();
       ctx.revert();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
   return (
     <section aria-labelledby="perf-title" ref={sectionRef}>
       <div className="pin-container min-h-dvh flex-center relative z-20 flex justify-center bg-[#292929]  rounded-3xl ">
         <div className="performance-section flex flex-col py-10 px-2 ">
-          <h2 id="perf-title" className="text-white heading-2 mt-4 text-center">
+          <h2
+            id="perf-title"
+            className="perf-title text-white heading-2 mt-4 text-center"
+          >
             Performance that speaks for itself
           </h2>
-          <p className="text-white body-text text-center mt-4 text">
+          <p className="perf-description text-white body-text text-center mt-4">
             Flawless execution, absolute discretion, and a reputation built on
             consistency.
           </p>

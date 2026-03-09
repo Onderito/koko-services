@@ -1,24 +1,38 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import NavBar from "./layout/navBar";
 import Script from "next/script";
 
 import "./globals.css";
 import ClientWrapper from "./ui/client-wrapper";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import {
+  businessName,
+  businessTitle,
+  contactEmail,
+  contactPhone,
+  serviceAreaText,
+  siteUrl,
+  socialPreviewImage,
+} from "./data/site-config";
 
 export const metadata: Metadata = {
-  title: "Koko Limo - Private Driver in French Riviera",
-  description: "Koko Limo - Private Driver in French Riviera",
+  metadataBase: new URL(siteUrl),
+  title: businessTitle,
+  description:
+    `${businessName} provides private driver service in Nice, Cannes, Monaco and Saint-Tropez for airport transfers, events and premium travel.`,
+  openGraph: {
+    title: businessName,
+    description:
+      "Private driver service in Nice, Cannes, Monaco and Saint-Tropez.",
+    url: siteUrl,
+    siteName: businessName,
+    type: "website",
+    images: [
+      {
+        url: socialPreviewImage,
+        alt: `${businessName} icon`,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -28,9 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <NavBar />
         <ClientWrapper>{children}</ClientWrapper>
 
@@ -38,10 +50,12 @@ export default function RootLayout({
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "Koko Limo - Private Driver in French Riviera",
-            image: "https://kokolimonice.com/logo.png",
-            url: "https://kokolimonice.com",
-            telephone: "+33771698142",
+            name: `${businessName} - Private Driver in French Riviera`,
+            image: socialPreviewImage,
+            logo: socialPreviewImage,
+            url: siteUrl,
+            telephone: contactPhone,
+            email: contactEmail,
             address: {
               "@type": "PostalAddress",
               streetAddress: "Nice Airport",
@@ -49,8 +63,8 @@ export default function RootLayout({
               postalCode: "06000",
               addressCountry: "FR",
             },
+            areaServed: serviceAreaText,
             priceRange: "€€",
-            servesCuisine: "Transportation",
           })}
         </Script>
       </body>

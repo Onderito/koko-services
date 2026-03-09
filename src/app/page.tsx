@@ -9,9 +9,12 @@ import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Services - Koko Limo",
+  title: "Private Driver in Nice, Cannes and Monaco | Koko Limo",
   description:
-    "Explore our driver services: airport transfers, hourly hire, events & more.",
+    "Luxury private driver service on the French Riviera. Book airport transfers, hourly chauffeur hire and premium travel in Nice, Cannes, Monaco and Saint-Tropez.",
+  alternates: {
+    canonical: "https://kokolimonice.com",
+  },
 };
 
 const Performances = dynamic(() => import("./landing/performances"), {

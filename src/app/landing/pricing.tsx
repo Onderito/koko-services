@@ -49,7 +49,7 @@ export default function Pricing() {
               {index === vehicles.length - 1 && (
                 <Image
                   className="absolute right-[-45px] top-[-200px] "
-                  src="/vector.svg"
+                  src="/assets/icons/ui/vector.svg"
                   alt="vector"
                   width={100}
                   height={100}

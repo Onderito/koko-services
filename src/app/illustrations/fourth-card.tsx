@@ -26,7 +26,7 @@ export default function FourthCard() {
         </span>
         <Image
           className="mouse-svg absolute right-20 bottom-1"
-          src={"/mouse.svg"}
+          src={"/assets/icons/ui/mouse.svg"}
           alt="mouse"
           width={25}
           height={25}

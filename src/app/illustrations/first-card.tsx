@@ -5,7 +5,7 @@ export default function FirstCard() {
   return (
     <div className="bg-[#404040] shadow-gray-offset -rotate-5 p-2 pr-8 flex-center w-fit rounded-2xl gap-2 first-card-illu">
       <Image
-        src="/check-marked.svg"
+        src="/assets/icons/ui/check-marked.svg"
         alt="check"
         width={20}
         height={20}

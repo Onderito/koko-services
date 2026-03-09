@@ -23,8 +23,8 @@ const classSContent = {
   titleHighlight: "Excellence Defined",
   heroDescription:
     "The pinnacle of luxury with handcrafted interior, advanced technology, and unparalleled comfort for discerning clients.",
-  bookLabel: "Book S-Class",
-  heroImageSrc: "/cars/class-s/class-s.webp",
+  bookLabel: "Request a Quote",
+  heroImageSrc: "/assets/images/cars/class-s/class-s.webp",
   heroImageAlt: "Mercedes Class S",
   discoverTitle: "Discover the Mercedes Class-S",
   discoverParagraphs: [
@@ -33,39 +33,48 @@ const classSContent = {
     "Equipped with top-tier safety features and modern amenities, the Mercedes Class-S provides a first-class travel experience. Enjoy ample legroom, high-quality materials, and refined details that make every journey truly unforgettable.",
   ],
   gallery: [
-    { src: "/cars/class-s/class-s-first.webp", alt: "Class S Interior" },
-    { src: "/cars/class-s/class-s-second.webp", alt: "Class S Exterior" },
-    { src: "/cars/class-s/class-s-third.webp", alt: "Class S Details" },
+    {
+      src: "/assets/images/cars/class-s/class-s-first.webp",
+      alt: "Class S Interior",
+    },
+    {
+      src: "/assets/images/cars/class-s/class-s-second.webp",
+      alt: "Class S Exterior",
+    },
+    {
+      src: "/assets/images/cars/class-s/class-s-third.webp",
+      alt: "Class S Details",
+    },
   ],
   features: [
     {
       name: "Luxury Seats",
       description:
         "Premium leather seating for maximum comfort on every journey.",
-      icon: "/star.svg",
+      icon: "/assets/icons/features/star.svg",
     },
     {
       name: "Safety Features",
       description:
         "Equipped with top-tier safety systems to ensure peace of mind on every journey.",
-      icon: "/safety.svg",
+      icon: "/assets/icons/features/safety.svg",
     },
     {
       name: "Advanced Tech",
       description:
         "Cutting-edge infotainment, connectivity, and climate control for a modern travel experience.",
-      icon: "/mobile.svg",
+      icon: "/assets/icons/features/mobile.svg",
     },
     {
       name: "4 Passengers",
       description:
         "Spacious seating for up to 4 passengers, ideal for business or personal travel.",
-      icon: "/users.svg",
+      icon: "/assets/icons/features/users.svg",
     },
   ],
   ctaDescription:
     "Book your Mercedes Class-S today and enjoy the ultimate in comfort, style, and sophistication for your next journey.",
-  ctaButtonLabel: "Reserve Your Class-S",
+  ctaButtonLabel: "Request This Vehicle",
 };
 
 export default function ClassSPage() {

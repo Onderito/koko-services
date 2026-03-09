@@ -1,76 +1,80 @@
 "use client";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { SplitText } from "gsap/all";
 import { DrawSVGPlugin } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
 export const performanceSection = () => {
-  const root = document.querySelector(".performance-section");
-  const pin = document.querySelector(".pin-container");
+  const title = document.querySelector(".perf-title");
+  const description = document.querySelector(".perf-description");
+  const pin = document.querySelector<HTMLElement>(".pin-container");
   const mm = gsap.matchMedia();
 
-  mm.add("(min-width: 1024px", () => {
-    if (!root || !pin) return () => {};
+  mm.add("(min-width: 1024px)", () => {
+    if (!title || !description || !pin) return () => {};
 
     const cards = gsap.utils.toArray<HTMLElement>(".perf-card");
     if (!cards.length) return () => {};
 
-    gsap.set(".perf-card", { willChange: "transform,opacity", force3D: true });
+    gsap.set([title, description, cards], {
+      willChange: "transform,opacity",
+      force3D: true,
+    });
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: pin,
         pin: true,
         start: "top top",
-        end: "bottom top+=300",
-        scrub: 1.2,
+        end: () => `+=${Math.max(pin.offsetHeight * 0.95, 780)}`,
+        scrub: 0.75,
         anticipatePin: 1,
         pinSpacing: true,
+        invalidateOnRefresh: true,
       },
     });
 
-    tl.from(".performance-section", {
+    tl.from(title, {
       autoAlpha: 0,
-      y: 20,
-      duration: 0.5,
+      y: 28,
+      duration: 0.7,
+      ease: "power2.out",
     })
       .from(
-        ".text",
+        description,
         {
-          y: "20px",
-          scale: 0.6,
+          y: 18,
           autoAlpha: 0,
-          duration: 0.8,
-          ease: "power1.out",
+          duration: 0.6,
+          ease: "power2.out",
         },
-        "-=0.2",
+        "-=0.3",
       )
       .from(cards, {
         autoAlpha: 0,
-        y: "100px",
-        scale: 0.95,
-        rotate: -2,
-        duration: 0.6,
-        ease: "none",
-        stagger: { each: 0.01, from: "end" },
+        y: 72,
+        scale: 0.96,
+        rotate: -1.5,
+        duration: 0.9,
+        ease: "power2.out",
+        stagger: { each: 0.08, from: "start" },
       })
       // First card
       .from(".first-card-illu", {
-        scale: 0.5,
-        x: "10px",
+        scale: 0.72,
+        x: 10,
         rotate: 1,
         autoAlpha: 0,
-        duration: 0.8,
+        duration: 0.7,
         ease: "expo.out",
       })
       // Second card
       .from(
         ".second-card-illu",
         {
-          scale: 0.5,
-          y: "10px",
+          scale: 0.72,
+          y: 10,
           autoAlpha: 0,
           duration: 0.6,
           ease: "expo.out",
@@ -92,18 +96,18 @@ export const performanceSection = () => {
         {
           drawSVG: "100% 100%",
           duration: 0.8,
-          ease: "expot.out",
+          ease: "expo.out",
         },
         "<",
       )
       .from(
         ".third-card-illu",
         {
-          scale: 0.5,
-          y: "10px",
+          scale: 0.72,
+          y: 10,
           autoAlpha: 0,
-          duration: 0.8,
-          ease: "power1.out",
+          duration: 0.7,
+          ease: "power2.out",
         },
         "<",
       )
@@ -111,23 +115,23 @@ export const performanceSection = () => {
       .from(
         ".text-fourth-card",
         {
-          scale: 0.5,
-          y: "-5px",
-          rotate: -5,
+          scale: 0.72,
+          y: -6,
+          rotate: -4,
           autoAlpha: 0,
-          duration: 0.8,
-          ease: "power1.out",
+          duration: 0.7,
+          ease: "power2.out",
         },
         "<",
       )
       .from(
         ".flag-card",
         {
-          scale: 0.5,
+          scale: 0.72,
           autoAlpha: 0,
-          rotate: 10,
-          duration: 0.9,
-          ease: "bounce.out",
+          rotate: 6,
+          duration: 0.75,
+          ease: "expo.out",
         },
         "<",
       )
@@ -135,20 +139,21 @@ export const performanceSection = () => {
         ".mouse-svg",
         {
           autoAlpha: 0,
-          scale: 0.5,
+          scale: 0.72,
           rotate: 4,
-          y: "4px",
+          y: 4,
           duration: 0.6,
-          ease: "power1.out",
+          ease: "power2.out",
         },
         "<",
       );
 
-    // cleanup
     return () => {
       tl.kill();
       tl.scrollTrigger?.kill();
-      gsap.set(".perf-card", { clearProps: "all" });
+      gsap.set([title, description, cards], { clearProps: "all" });
     };
   });
+
+  return () => mm.revert();
 };

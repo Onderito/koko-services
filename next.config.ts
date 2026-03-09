@@ -1,7 +1,4 @@
 const nextConfig = {
-  experimental: {
-    legacyBrowsers: false,
-  },
   async headers() {
     return [
       {

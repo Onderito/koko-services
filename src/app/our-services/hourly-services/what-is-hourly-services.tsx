@@ -21,7 +21,7 @@ export default function WhatIsHourlyServices() {
           </p>
           <Image
             className="absolute bottom-0 z-10 md:bottom-[-50px] xl:bottom-0"
-            src="/dark-abstract.svg"
+            src="/assets/icons/ui/dark-abstract.svg"
             alt="dark abstract"
             width={750}
             height={144}
@@ -36,7 +36,7 @@ export default function WhatIsHourlyServices() {
           </p>
           <Image
             className="absolute bottom-0 z-10 md:bottom-[-50px] xl:bottom-0"
-            src="/light-abstract.svg"
+            src="/assets/icons/ui/light-abstract.svg"
             alt="dark abstract"
             width={750}
             height={144}

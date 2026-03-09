@@ -2,21 +2,21 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/Manrope-Regular.ttf");
+  src: url("/assets/fonts/Manrope-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/Manrope-Bold.ttf");
+  src: url("/assets/fonts/Manrope-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gloria Hallelujah";
-  src: url("/fonts/GloriaHallelujah-Regular.ttf");
+  src: url("/assets/fonts/GloriaHallelujah-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -30,8 +30,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "Manrope", sans-serif;
   --font-manrope: "Manrope", sans-serif;
   --font-gloria: "Gloria Hallelujah", cursive;
 }
@@ -71,6 +71,11 @@
   }
   .button-hover {
     @apply transition-all hover:scale-105 duration-300;
+  }
+  .scale-animation {
+    @apply transform transition-transform
+         duration-700 ease-out
+         opacity-90 hover:opacity-100 hover:scale-105;
   }
 }
 
@@ -134,7 +139,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), sans-serif;
   color: #404040;
   overflow-x: hidden;
 }

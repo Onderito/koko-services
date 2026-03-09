@@ -8,17 +8,17 @@ const card = [
   {
     title: "Business & Executives",
     text: "Full-day or half-day driver on standby. Stay productive between meetings with quiet, punctual, and discreet service.",
-    icon: "/icon-services/suit-case.webp",
+    icon: "/assets/icons/services/suit-case.webp",
   },
   {
     title: "Flexible Day Hire",
     text: "Your driver, your pace: multiple stops, last-minute changes, luggage handled—freedom and privacy all day long.",
-    icon: "/icon-services/clock.webp",
+    icon: "/assets/icons/services/clock.webp",
   },
   {
     title: "Events & Evenings",
     text: "Dinners, shopping, beach clubs, or night outs—door-to-door rides with a dedicated driver waiting for you.",
-    icon: "/icon-services/star.webp",
+    icon: "/assets/icons/services/star.webp",
   },
 ];
 
@@ -108,7 +108,7 @@ export default function ForWhoHourlyServices() {
           className="relative z-8 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <Image
-            src={"/icon-services/suit-case.webp"}
+            src={"/assets/icons/services/suit-case.webp"}
             alt="icon suitcase"
             width={40}
             height={40}
@@ -129,7 +129,7 @@ export default function ForWhoHourlyServices() {
           className="absolute inset-0 rotate-5 z-6 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <Image
-            src={"/icon-services/clock.webp"}
+            src={"/assets/icons/services/clock.webp"}
             alt="icon of clock"
             width={40}
             height={40}
@@ -148,7 +148,7 @@ export default function ForWhoHourlyServices() {
           className="absolute inset-0 -rotate-5 z-4 flex flex-col items-center max-w-lg border-[0.5px] bg-white border-[#E5E5E5] p-4 rounded-2xl will-change-transform"
         >
           <Image
-            src={"/icon-services/star.webp"}
+            src={"/assets/icons/services/star.webp"}
             alt="icon of star"
             width={40}
             height={40}

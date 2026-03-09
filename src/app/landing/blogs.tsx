@@ -1,31 +1,7 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
 
-const blogsData = [
-  {
-    imageUrl: "/blogs/blog-driver.webp",
-    name: "Why Private Driver Services Are Essential on the French Riviera",
-    description:
-      "Explore the key benefits of booking a personal driver in Nice, Cannes, and Monaco.",
-    link: "/blogs/private-driver",
-  },
-  {
-    imageUrl: "/blogs/blog-luxury-events.webp",
-    name: "Top 5 Luxury Events in the South of France (and How to Get There)",
-    description:
-      "From Cannes Film Festival to private galas — arrive in style and on time.",
-    link: "/blogs/luxury-events",
-  },
-  {
-    imageUrl: "/blogs/blog-airport.webp",
-    name: "Airport Transfers in Nice: What to Expect From a Premium Driver",
-    description:
-      "Stress-free pickups, punctuality, and high-end comfort for your next flight.",
-    link: "/blogs/airport-transfers",
-  },
-];
+import BlogCard from "../blog/blog-card";
+import { featuredHomePosts } from "../data/blog-posts";
 
 export default function Blogs() {
   return (
@@ -41,38 +17,18 @@ export default function Blogs() {
         travel experiences along the French Riviera.
       </p>
 
-      <div className="flex flex-col xl:grid xl:grid-cols-3 gap-8 mt-10 md:mt-12 xl:mt-16">
-        {blogsData.map((b, index) => (
-          <div
-            key={index}
-            className="flex-col md:flex md:justify-center md:items-center lg:items-start"
-          >
-            <Image
-              className="rounded-2xl object-conver md:w-full shadow-lg"
-              src={b.imageUrl}
-              alt="image of car"
-              width={400}
-              height={300}
-            />
-            <div className="flex flex-col justify-center items-start mt-4 font-manrope-regular text-[16px]">
-              <span className="pb-2 font-manrope-bold text-[18px]">
-                {b.name}
-              </span>
-              <span className="py-1 font-manrope-regular text-[16px] ">
-                {b.description}
-              </span>
-              <Link
-                href={b.link}
-                scroll
-                className="text-gray-400 text-start underline hover:scale-105 transition-transform duration-300 cursor-pointer"
-              >
-                Read More
-                <span className="sr-only"> about {b.name}</span>
-              </Link>
-            </div>
-          </div>
+      <div className="mt-10 grid gap-8 md:mt-12 xl:mt-16 xl:grid-cols-3">
+        {featuredHomePosts.map((post, index) => (
+          <BlogCard key={post.slug} post={post} priority={index === 0} />
         ))}
       </div>
+
+      <Link
+        href="/blog"
+        className="mx-auto mt-10 inline-flex rounded-2xl border border-[#D8D8D8] px-6 py-3 text-[15px] font-manrope-bold text-[#404040] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#404040] hover:text-white md:mt-12"
+      >
+        View all articles
+      </Link>
     </div>
   );
 }

@@ -14,9 +14,9 @@ export default function HeroSection() {
             </p>
             <div className="flex gap-4">
               <Link href="/contact-me">
-                <button className="bg-[#404040] !cursor-pointer inner-shadow-white py-4 px-10 font-manrope-bold text-[16px] tracking-[-0.01em] text-white rounded-xl  button-hover">
-                  Book Now
-                </button>
+                <span className="inline-flex items-center justify-center rounded-xl border border-[#404040] bg-[#404040] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2F2F2F]">
+                  Request a Quote
+                </span>
               </Link>
             </div>
           </div>
@@ -25,7 +25,7 @@ export default function HeroSection() {
         <div className="w-full xl:w-2/3">
           <div className="relative w-full min-h-[220px] aspect-[16/14] rounded-3xl bg-white">
             <Image
-              src="/services/airport-arrivals.webp"
+              src="/assets/images/services/airport-arrivals.webp"
               alt="heroImageAlt"
               fill
               priority

@@ -37,7 +37,7 @@ export default function ThirdCard() {
         />
       </svg>
       <span className="third-card-illu absolute right-5 bottom-5 z-10 -rotate-5 bg-[#404040] shadow-gray-offset p-2 flex-center rounded-lg gap-2">
-        <Image src="/check-marked.svg" alt="check" width={20} height={20} />
+        <Image src="/assets/icons/ui/check-marked.svg" alt="check" width={20} height={20} />
         <p className="font-manrope-regular text-[12px]">
           On Time <br />
         </p>
