@@ -43,9 +43,9 @@ export default function HeroSection() {
       <div className="flex flex-col justify-center items-center hero-content">
         <span
           style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-          className="hero-span overflow-hidden rounded-4xl bg-[#404040] inner-shadow-white p-2 font-manrope-bold text-[12px] xl:text-[14px] tracking-[0.01em] text-white w-fit"
+          className="hero-span overflow-hidden rounded-full bg-[#2B2B2B] px-3.5 py-1.5 font-manrope-bold text-[11px] xl:text-[12px] uppercase tracking-[0.14em] text-white/90 w-fit"
         >
-          Always ready to drive you
+          Where timing meets comfort
         </span>
         <h1 className="heading-1 text-center  mt-4">
           Experience the French <br /> Riviera in {""}
@@ -61,8 +61,8 @@ export default function HeroSection() {
             <motion.button
               whileHover={{
                 y: -2,
-                scale: 1.02,
-                boxShadow: "0 16px 28px rgba(64,64,64,0.22)",
+                scale: 1.015,
+                boxShadow: "0 18px 34px rgba(0,0,0,0.22)",
               }}
               whileTap={{ scale: 0.985 }}
               transition={{
@@ -71,7 +71,7 @@ export default function HeroSection() {
                 damping: 24,
                 mass: 0.9,
               }}
-              className="button mt-8 overflow-hidden rounded-xl bg-[#404040] px-6 py-4 font-manrope-bold text-[16px] tracking-[0.01em] text-white inner-shadow-white !cursor-pointer"
+              className="button group mt-8 inline-flex items-center gap-3 overflow-hidden rounded-[18px] bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-6 py-4 font-manrope-bold text-[16px] tracking-[-0.02em] text-[#111111] shadow-[0_14px_28px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.72)] !cursor-pointer"
             >
               <motion.span
                 whileHover={{ x: 2 }}
@@ -83,8 +83,11 @@ export default function HeroSection() {
                 }}
                 className="relative inline-block !cursor-pointer"
               >
-                Plan Your Transfer
+                Request a Quote
               </motion.span>
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#111111] text-[14px] text-white transition-transform duration-200 group-hover:translate-x-0.5">
+                →
+              </span>
             </motion.button>
           </Link>
         </div>

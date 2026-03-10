@@ -66,7 +66,7 @@ export default function Pricing() {
                   {v.name}
                 </h3>
                 <p
-                  className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                  className={`text-[#4B5563] text-[16px] font-manrope-regular ${
                     index >= vehicles.length - 2 ? "card-secondary-text" : ""
                   }`}
                 >
@@ -79,7 +79,7 @@ export default function Pricing() {
                 } `}
               >
                 <p
-                  className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                  className={`text-[#4B5563] text-[16px] font-manrope-regular ${
                     index >= vehicles.length - 2 ? "card-secondary-text" : ""
                   }`}
                 >
@@ -89,7 +89,7 @@ export default function Pricing() {
                   {v.prices[isCityActive.id].transfer}€
                 </h4>
                 <p
-                  className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                  className={`text-[#4B5563] text-[16px] font-manrope-regular ${
                     index >= vehicles.length - 2 ? "card-secondary-text" : ""
                   }`}
                 >
@@ -104,7 +104,7 @@ export default function Pricing() {
                   }`}
                 >
                   <p
-                    className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                    className={`text-[#4B5563] text-[16px] font-manrope-regular ${
                       index >= vehicles.length - 2 ? "card-secondary-text" : ""
                     }`}
                   >
@@ -114,7 +114,7 @@ export default function Pricing() {
                     {v.prices[isCityActive.id].hourly}€
                   </h4>
                   <p
-                    className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                    className={`text-[#4B5563] text-[16px] font-manrope-regular ${
                       index >= vehicles.length - 2 ? "card-secondary-text" : ""
                     }`}
                   >
@@ -127,7 +127,7 @@ export default function Pricing() {
                   }`}
                 >
                   <p
-                    className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                    className={`text-[#4B5563] text-[16px] font-manrope-regular ${
                       index >= vehicles.length - 2 ? "card-secondary-text" : ""
                     }`}
                   >
@@ -137,7 +137,7 @@ export default function Pricing() {
                     {v.prices[isCityActive.id].fullDay}€
                   </h4>
                   <p
-                    className={`text-[#6B7280] text-[16px] font-manrope-regular ${
+                    className={`text-[#4B5563] text-[16px] font-manrope-regular ${
                       index >= vehicles.length - 2 ? "card-secondary-text" : ""
                     }`}
                   >

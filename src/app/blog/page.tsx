@@ -58,7 +58,7 @@ export default function BlogIndexPage() {
                 {blogPosts.length}
               </span>
               <p className="mt-2 text-[15px] text-gray-600">
-                Travel guides and chauffeur advice
+                Practical private driver guides
               </p>
             </div>
             <div className="rounded-[24px] bg-[#F6F6F6] p-5">
@@ -66,15 +66,15 @@ export default function BlogIndexPage() {
                 4
               </span>
               <p className="mt-2 text-[15px] text-gray-600">
-                Riviera destinations covered
+                Core Riviera destinations covered
               </p>
             </div>
             <div className="rounded-[24px] bg-[#F6F6F6] p-5">
               <span className="text-[34px] font-manrope-bold text-[#404040]">
-                1
+                3
               </span>
               <p className="mt-2 text-[15px] text-gray-600">
-                One place to find every article
+                Transfer, business and leisure intents
               </p>
             </div>
           </div>

@@ -167,17 +167,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </nav>
 
               <div className="mt-8 rounded-[24px] bg-[#404040] p-5 text-white">
-                <p className="text-[18px] font-manrope-bold">
-                  Need a chauffeur now?
-                </p>
+                <p className="text-[18px] font-manrope-bold">{post.ctaTitle}</p>
                 <p className="mt-3 text-[15px] leading-relaxed text-gray-200">
-                  Turn this search into a booking request with one clear CTA.
+                  {post.ctaDescription}
                 </p>
                 <Link
-                  href="/contact-me"
+                  href={post.ctaHref}
                   className="mt-5 inline-flex rounded-2xl bg-white px-5 py-3 text-[14px] font-manrope-bold text-[#404040]"
                 >
-                  Request your ride
+                  {post.ctaLabel}
                 </Link>
               </div>
             </aside>
@@ -245,14 +243,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl">
                 <span className="text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-gray-300">
-                  Booking CTA
+                  Tailored quote
                 </span>
                 <h2 className="mt-3 text-[30px] font-manrope-bold leading-tight">
                   Ready to book your private driver on the French Riviera?
                 </h2>
                 <p className="mt-4 text-[16px] leading-relaxed text-gray-200">
-                  Ask for a route, date and vehicle recommendation based on your
-                  transfer, event or hourly service need.
+                  Tell us your route, dates and preferred service and we will
+                  recommend the right vehicle and booking format for your stay.
                 </p>
               </div>
               <Link
@@ -272,7 +270,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 Related reading
               </span>
               <h2 className="mt-2 text-[34px] font-manrope-bold text-[#404040]">
-                Keep the internal linking tight
+                Continue planning your Riviera journey
               </h2>
             </div>
             <Link

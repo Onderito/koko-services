@@ -29,6 +29,10 @@ export type BlogPost = {
   sections: BlogSection[];
   faq: BlogFaq[];
   relatedSlugs: string[];
+  ctaTitle: string;
+  ctaDescription: string;
+  ctaHref: string;
+  ctaLabel: string;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -108,6 +112,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: ["airport-transfers", "nice-to-monaco-transfer", "monaco-business-chauffeur"],
+    ctaTitle: "Need a driver on standby across the Riviera?",
+    ctaDescription:
+      "Explore hourly chauffeur service for meetings, hotel transfers, shopping and flexible day schedules with one dedicated driver.",
+    ctaHref: "/our-services/hourly-services",
+    ctaLabel: "Explore hourly service",
   },
   {
     slug: "luxury-events",
@@ -185,6 +194,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: ["airport-transfers", "cannes-taxi-vs-private-driver", "saint-tropez-day-trip"],
+    ctaTitle: "Planning transport for an event stay?",
+    ctaDescription:
+      "Use a dedicated chauffeur for Cannes, Monaco and other high-demand dates when timing, waiting time and coordination matter.",
+    ctaHref: "/our-services/hourly-services",
+    ctaLabel: "Explore hourly service",
   },
   {
     slug: "airport-transfers",
@@ -262,6 +276,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: ["nice-to-cannes-transfer", "nice-to-monaco-transfer", "private-driver"],
+    ctaTitle: "Landing at Nice Airport soon?",
+    ctaDescription:
+      "Our transfer service covers meet and greet, luggage handling and direct rides to Monaco, Cannes, Saint-Tropez and beyond.",
+    ctaHref: "/our-services/transfer",
+    ctaLabel: "Explore transfer service",
   },
   {
     slug: "nice-to-monaco-transfer",
@@ -330,6 +349,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: ["airport-transfers", "monaco-business-chauffeur", "private-driver"],
+    ctaTitle: "Need a smooth transfer into Monaco?",
+    ctaDescription:
+      "See how our transfer service handles airport arrivals, hotel drop-offs and time-sensitive rides into the principality.",
+    ctaHref: "/our-services/transfer",
+    ctaLabel: "Explore transfer service",
   },
   {
     slug: "cannes-taxi-vs-private-driver",
@@ -397,6 +421,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: ["luxury-events", "nice-to-cannes-transfer", "private-driver"],
+    ctaTitle: "Prefer a planned ride in Cannes?",
+    ctaDescription:
+      "Book a private transfer or chauffeur service when arrival timing, hotel access and presentation matter more than improvisation.",
+    ctaHref: "/our-services/transfer",
+    ctaLabel: "Explore transfer service",
   },
   {
     slug: "saint-tropez-day-trip",
@@ -465,6 +494,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: ["luxury-events", "private-driver", "airport-transfers"],
+    ctaTitle: "Planning a Saint-Tropez day on your terms?",
+    ctaDescription:
+      "Our private tour service gives you one driver, a flexible itinerary and a more relaxed way to handle a full Riviera day.",
+    ctaHref: "/our-services/private-tour",
+    ctaLabel: "Explore private tours",
   },
   {
     slug: "monaco-business-chauffeur",
@@ -533,12 +567,17 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: ["nice-to-monaco-transfer", "private-driver", "airport-transfers"],
+    ctaTitle: "Need a chauffeur between meetings in Monaco?",
+    ctaDescription:
+      "Hourly service is built for airport arrivals, office stops, hotel check-ins and schedule changes without transport gaps.",
+    ctaHref: "/our-services/hourly-services",
+    ctaLabel: "Explore hourly service",
   },
   {
     slug: "nice-to-cannes-transfer",
     title: "Nice to Cannes Transfer Guide for Hotel Guests, Events and Airport Arrivals",
     description:
-      "A practical SEO-focused guide to booking a smooth transfer from Nice to Cannes for hotels, congresses and premium airport pickups.",
+      "A practical guide to booking a smooth transfer from Nice to Cannes for hotels, congresses and premium airport pickups.",
     excerpt:
       "Travel from Nice to Cannes works best when the transfer is planned around arrival time, event traffic and destination type.",
     category: "Cannes Transfer",
@@ -601,6 +640,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: ["airport-transfers", "cannes-taxi-vs-private-driver", "luxury-events"],
+    ctaTitle: "Need a reliable transfer into Cannes?",
+    ctaDescription:
+      "See our transfer service for hotel arrivals, congress schedules and airport rides between Nice and Cannes.",
+    ctaHref: "/our-services/transfer",
+    ctaLabel: "Explore transfer service",
   },
 ];
 

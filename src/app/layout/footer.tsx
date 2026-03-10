@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-white/42">
+            <h3 className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-white/60">
               Explore
             </h3>
             <div className="mt-4 grid gap-2">
@@ -85,7 +85,7 @@ export default function Footer() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="w-fit text-[15px] text-white/52 transition-colors duration-200 hover:text-white/78"
+                  className="w-fit text-[15px] text-white/72 transition-colors duration-200 hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -94,12 +94,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-white/42">
+            <h3 className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-white/60">
               Contact
             </h3>
             <div className="mt-4 space-y-4 rounded-[24px] border border-white/10 bg-white/5 p-5">
               <div>
-                <p className="text-[12px] uppercase tracking-[0.16em] text-white/38">
+                <p className="text-[12px] uppercase tracking-[0.16em] text-white/58">
                   Phone
                 </p>
                 <a
@@ -110,7 +110,7 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <p className="text-[12px] uppercase tracking-[0.16em] text-white/38">
+                <p className="text-[12px] uppercase tracking-[0.16em] text-white/58">
                   Email
                 </p>
                 <a
@@ -121,10 +121,10 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <p className="text-[12px] uppercase tracking-[0.16em] text-white/38">
+                <p className="text-[12px] uppercase tracking-[0.16em] text-white/58">
                   Service Area
                 </p>
-                <p className="mt-2 text-[15px] leading-relaxed text-white/66">
+                <p className="mt-2 text-[15px] leading-relaxed text-white/76">
                   {serviceAreaText}
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-5 text-[13px] text-white/42 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-5 text-[13px] text-white/62 md:flex-row md:items-center md:justify-between">
           <p>
             © {year} {businessName}. All rights reserved.
           </p>
@@ -141,7 +141,7 @@ export default function Footer() {
               href="/legal-privacy"
               aria-label="Legal & Privacy"
               target="_blank"
-              className="transition-colors duration-200 hover:text-white/72"
+              className="text-white/72 transition-colors duration-200 hover:text-white"
             >
               Legal & Privacy
             </Link>
@@ -150,7 +150,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat with us on WhatsApp"
-              className="transition-colors duration-200 hover:text-white/72"
+              className="text-white/72 transition-colors duration-200 hover:text-white"
             >
               WhatsApp
             </a>
