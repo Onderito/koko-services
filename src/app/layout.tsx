@@ -43,8 +43,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#111111] focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <NavBar />
-        <ClientWrapper>{children}</ClientWrapper>
+        <main id="main-content">
+          <ClientWrapper>{children}</ClientWrapper>
+        </main>
 
         <Script id="structured-data" type="application/ld+json">
           {JSON.stringify({

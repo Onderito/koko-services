@@ -29,6 +29,7 @@ export default function HeroSection() {
           quality={85}
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           style={{
             objectFit: "cover",
@@ -67,7 +68,7 @@ export default function HeroSection() {
                 damping: 24,
                 mass: 0.9,
               }}
-              className="button group mt-8 inline-flex items-center gap-3 overflow-hidden rounded-[18px] bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-6 py-4 font-manrope-bold text-[16px] tracking-[-0.02em] text-[#111111] shadow-[0_14px_28px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.72)] !cursor-pointer"
+              className="button group mt-8 inline-flex items-center gap-3 overflow-hidden rounded-[18px] bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-6 py-3 font-manrope-bold text-[16px] tracking-[-0.02em] text-[#111111] shadow-[0_14px_28px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.72)] !cursor-pointer"
             >
               <motion.span
                 whileHover={{ x: 2 }}
@@ -95,7 +96,6 @@ export default function HeroSection() {
           blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4ICgAAABwAgCdASoEAAQA..."
           alt="Aerial view of Nice, France with the Mediterranean sea and Promenade des Anglais"
           quality={85}
-          priority
           width={700}
           height={450}
           sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 75vw, 700px"
