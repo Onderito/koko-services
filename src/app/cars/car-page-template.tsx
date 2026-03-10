@@ -1,6 +1,7 @@
 import Cars from "@/app/landing/cars";
 import Image from "next/image";
 import Link from "next/link";
+import FooterComponent from "../our-services/footer-component";
 
 type Feature = {
   name: string;
@@ -151,20 +152,12 @@ export default function CarPageTemplate({
         <Cars />
       </div>
 
-      <div className="container">
-        <div className="text-center bg-gray-50 rounded-2xl p-8">
-          <h2 className="heading-2 text-[#404040] mb-4">
-            Ready to Experience Luxury?
-          </h2>
-          <p className="body-text mb-8 max-w-2xl mx-auto">{ctaDescription}</p>
-          <Link
-            href="/contact-me"
-            className="inline-flex items-center justify-center rounded-xl border border-[#404040] bg-[#404040] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2F2F2F]"
-          >
-            {ctaButtonLabel}
-          </Link>
-        </div>
-      </div>
+      <FooterComponent
+        title="Ready to Experience Luxury?"
+        description={ctaDescription}
+        buttonText={ctaButtonLabel}
+        buttonHref="/contact-me"
+      />
     </>
   );
 }

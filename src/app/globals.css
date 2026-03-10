@@ -5,6 +5,7 @@
   src: url("/assets/fonts/Manrope-Regular.ttf");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   src: url("/assets/fonts/Manrope-Bold.ttf");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -19,6 +21,7 @@
   src: url("/assets/fonts/GloriaHallelujah-Regular.ttf");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {

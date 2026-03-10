@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { motion } from "motion/react";
-import { heroSection, imgOnHover, heroScroll } from "../animation/hero";
-gsap.registerPlugin(ScrollTrigger);
+import { heroSection } from "../animation/hero";
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
@@ -15,9 +13,7 @@ export default function HeroSection() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       heroSection();
-      heroScroll();
-      imgOnHover();
-    }, sectionRef); // <-- animations limitées à ce composant
+    }, sectionRef);
 
     return () => {
       ctx.revert();
