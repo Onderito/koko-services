@@ -115,7 +115,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Need a driver on standby across the Riviera?",
     ctaDescription:
       "Explore hourly chauffeur service for meetings, hotel transfers, shopping and flexible day schedules with one dedicated driver.",
-    ctaHref: "/our-services/hourly-services",
+    ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "Explore hourly service",
   },
   {
@@ -197,7 +197,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Planning transport for an event stay?",
     ctaDescription:
       "Use a dedicated chauffeur for Cannes, Monaco and other high-demand dates when timing, waiting time and coordination matter.",
-    ctaHref: "/our-services/hourly-services",
+    ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "Explore hourly service",
   },
   {
@@ -279,7 +279,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Landing at Nice Airport soon?",
     ctaDescription:
       "Our transfer service covers meet and greet, luggage handling and direct rides to Monaco, Cannes, Saint-Tropez and beyond.",
-    ctaHref: "/our-services/transfer",
+    ctaHref: "/our-services/transfers",
     ctaLabel: "Explore transfer service",
   },
   {
@@ -352,7 +352,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Need a smooth transfer into Monaco?",
     ctaDescription:
       "See how our transfer service handles airport arrivals, hotel drop-offs and time-sensitive rides into the principality.",
-    ctaHref: "/our-services/transfer",
+    ctaHref: "/our-services/transfers",
     ctaLabel: "Explore transfer service",
   },
   {
@@ -424,7 +424,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Prefer a planned ride in Cannes?",
     ctaDescription:
       "Book a private transfer or chauffeur service when arrival timing, hotel access and presentation matter more than improvisation.",
-    ctaHref: "/our-services/transfer",
+    ctaHref: "/our-services/transfers",
     ctaLabel: "Explore transfer service",
   },
   {
@@ -497,7 +497,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Planning a Saint-Tropez day on your terms?",
     ctaDescription:
       "Our private tour service gives you one driver, a flexible itinerary and a more relaxed way to handle a full Riviera day.",
-    ctaHref: "/our-services/private-tour",
+    ctaHref: "/our-services/chauffeur-tours",
     ctaLabel: "Explore private tours",
   },
   {
@@ -570,7 +570,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Need a chauffeur between meetings in Monaco?",
     ctaDescription:
       "Hourly service is built for airport arrivals, office stops, hotel check-ins and schedule changes without transport gaps.",
-    ctaHref: "/our-services/hourly-services",
+    ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "Explore hourly service",
   },
   {
@@ -643,7 +643,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Need a reliable transfer into Cannes?",
     ctaDescription:
       "See our transfer service for hotel arrivals, congress schedules and airport rides between Nice and Cannes.",
-    ctaHref: "/our-services/transfer",
+    ctaHref: "/our-services/transfers",
     ctaLabel: "Explore transfer service",
   },
 ];

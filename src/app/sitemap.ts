@@ -1,18 +1,29 @@
 import type { MetadataRoute } from "next";
 
 import { blogPosts, siteUrl } from "./data/blog-posts";
+import {
+  chauffeurTourPages,
+  chauffeurToursPage,
+  hourlyChauffeurPage,
+  hourlyChauffeurPages,
+  transferPages,
+  transfersPage,
+} from "./data/service-pages";
 
 const staticRoutes = [
   "",
   "/blog",
   "/contact-me",
   "/legal-privacy",
-  "/our-services/transfer",
-  "/our-services/hourly-services",
-  "/our-services/private-tour",
+  transfersPage.path,
+  hourlyChauffeurPage.path,
+  chauffeurToursPage.path,
   "/cars/class-s",
   "/cars/class-v",
   "/cars/maybach",
+  ...Object.values(transferPages).map((page) => page.path),
+  ...Object.values(hourlyChauffeurPages).map((page) => page.path),
+  ...Object.values(chauffeurTourPages).map((page) => page.path),
 ];
 
 function getChangeFrequency(

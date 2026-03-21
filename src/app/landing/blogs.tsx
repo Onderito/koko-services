@@ -6,8 +6,8 @@ import { featuredHomePosts } from "../data/blog-posts";
 export default function Blogs() {
   return (
     <div className="flex-center-column">
-      <span className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto">
-        our blogs
+      <span className="section-label">
+        Our Blogs
       </span>
       <h2 className="heading-2 text-[#404040] mt-4 text-center">
         Driver Insights & Luxury Travel Tips

@@ -9,7 +9,7 @@ type Status = "idle" | "loading" | "success" | "error";
 
 export default function ContactMe() {
     const [formData, setFormData] = useState({
-        service: "transfer",
+        service: "transfers",
         pickupDate: "",
         pickupTime: "",
         pickupLocation: "",
@@ -93,7 +93,7 @@ export default function ContactMe() {
             setStatus("success");
             setOpenModal(true)
             setFormData({
-                service: "transfer",
+                service: "transfers",
                 pickupDate: "",
                 pickupTime: "",
                 pickupLocation: "",
@@ -171,9 +171,9 @@ export default function ContactMe() {
                         className={inputCls("service")} required
                     >
                         {/* valeurs normalisées (== state) */}
-                        <option value="transfer">Transfer</option>
-                        <option value="hourly">Hourly Services</option>
-                        <option value="tour">Private Tour</option>
+                        <option value="transfers">Transfers</option>
+                        <option value="hourly-chauffeur">Hourly Chauffeur Service</option>
+                        <option value="chauffeur-tours">Chauffeur Tours</option>
                     </select>
                 </fieldset>
 

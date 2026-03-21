@@ -45,13 +45,12 @@ export default function HeroSection() {
           Where timing meets comfort
         </span>
         <h1 className="heading-1 text-center  mt-4">
-          Experience the French <br /> Riviera in {""}
-          <span>style</span>
+          Luxury Chauffeur Service <br /> on the French Riviera
         </h1>
         <p className="description body-text text-center mt-4">
-          Private chauffeur service for airport transfers, business travel and
+          Private chauffeur service for airport transfers, business travel, and
           tailored <br className="hidden lg:block" /> journeys across Nice,
-          Cannes, Monaco and Saint-Tropez.
+          Cannes, Monaco, and Saint-Tropez.
         </p>
         <div className="relative">
           <Link href="/contact-me">
@@ -78,11 +77,11 @@ export default function HeroSection() {
                   damping: 22,
                   mass: 0.7,
                 }}
-                className="relative inline-block !cursor-pointer"
+                className="relative inline-block !cursor-pointer   text-[#6d5830]"
               >
                 Request a Quote
               </motion.span>
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#111111] text-[14px] text-white transition-transform duration-200 group-hover:translate-x-0.5">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full section-label text-[14px] text-[#6d5830] transition-transform duration-200 group-hover:translate-x-0.5">
                 →
               </span>
             </motion.button>

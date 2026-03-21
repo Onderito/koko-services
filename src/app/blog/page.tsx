@@ -7,7 +7,7 @@ import { blogPosts, featuredHomePosts, siteUrl } from "../data/blog-posts";
 export const metadata: Metadata = {
   title: "Blog | Private Driver Tips for Nice, Cannes and Monaco",
   description:
-    "Read Koko Limo articles about airport transfers, private driver services, Monaco business travel, Cannes events and luxury transport on the French Riviera.",
+    "Read My Riviera articles about airport transfers, private driver services, Monaco business travel, Cannes events and luxury transport on the French Riviera.",
   keywords: [
     "private driver blog French Riviera",
     "Nice airport transfer blog",
@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/blog`,
   },
   openGraph: {
-    title: "Koko Limo Blog",
+    title: "My Riviera Blog",
     description:
       "Luxury transport advice, airport transfer guides and private driver tips for the French Riviera.",
     url: `${siteUrl}/blog`,
-    siteName: "Koko Limo",
+    siteName: "My Riviera",
     type: "website",
   },
 };

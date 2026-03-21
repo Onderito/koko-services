@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CarPageTemplate from "../car-page-template";
 
 export const metadata: Metadata = {
-  title: "Mercedes Class-S Driver Nice & Monaco | Luxury VTC | Koko Limo",
+  title: "Mercedes Class-S Driver Nice & Monaco | Luxury VTC | My Riviera",
   description:
     "Book our Mercedes-Benz S-Class for a premium and elegant ride across the French Riviera. Perfect for business travel and VIP airport transfers.",
   keywords: [
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "private driver Nice",
     "driver Class S Monaco",
     "executive transfer Nice airport",
-    "Koko Limo Class S",
+    "My Riviera Class S",
   ],
   alternates: {
     canonical: "https://kokolimonice.com/cars/class-s",
@@ -27,6 +27,11 @@ const classSContent = {
   heroImageSrc: "/assets/images/cars/class-s/class-s.webp",
   heroImageAlt: "Mercedes Class S",
   discoverTitle: "Discover the Mercedes Class-S",
+  discoverTitleMobile: (
+    <>
+      Discover the Mercedes <br /> Class- S
+    </>
+  ),
   discoverParagraphs: [
     "The Mercedes Class-S represents the pinnacle of luxury sedans, combining elegant design with cutting-edge technology. Its premium leather seats, spacious interior, and advanced safety features ensure an exceptionally smooth and comfortable ride.",
     "Perfect for business trips, airport transfers, or touring the French Riviera, the Class-S offers a sophisticated environment with customizable seating, ambient lighting, and advanced climate control for every passenger.",

@@ -4,26 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { businessName, whatsappUrl } from "../data/site-config";
+import { serviceMenuLinks } from "../data/service-pages";
 
 const contactCtaLabel = "WhatsApp Us";
-
-const serviceLinks = [
-  {
-    href: "/our-services/transfer",
-    label: "Transfer",
-    description: "Airport, hotel and point-to-point rides",
-  },
-  {
-    href: "/our-services/hourly-services",
-    label: "Hourly Services",
-    description: "Flexible chauffeur service by the hour",
-  },
-  {
-    href: "/our-services/private-tour",
-    label: "Private Tour",
-    description: "Tailored Riviera experiences with a driver",
-  },
-];
 
 const vehicleLinks = [
   {
@@ -148,7 +131,7 @@ export default function NavBar() {
           <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 xl:flex">
             <DesktopDropdown
               label="Services"
-              links={serviceLinks}
+              links={serviceMenuLinks}
               isOpen={activeDropdown === "services"}
               onOpen={() => setActiveDropdown("services")}
               onClose={() => setActiveDropdown(null)}
@@ -227,7 +210,7 @@ export default function NavBar() {
                   Services
                 </span>
               </li>
-              {serviceLinks.map((item) => (
+              {serviceMenuLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     onClick={handleResetScroll}

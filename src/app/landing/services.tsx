@@ -1,44 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const cards = [
-  {
-    title: "Transfer",
-    kicker: "Airport & city rides",
-    description:
-      "Point-to-point luxury transportation for airports, hotels, events. Professional service with flight monitoring and personalized assistance throughout the French Riviera.",
-    image: "/assets/images/services/transfer.webp",
-    link: "/our-services/transfer",
-  },
-  {
-    title: "Hourly Services",
-    kicker: "Flexible by the hour",
-    description:
-      "Flexible driver service by the hour for business meetings, shopping tours, or leisure activities. Your dedicated driver waits while you attend to your appointments.",
-    image: "/assets/images/services/hourly.webp",
-    link: "/our-services/hourly-services",
-  },
-  {
-    title: "Private Tour",
-    kicker: "Tailored Riviera days",
-    description:
-      "Exclusive full-day or half-day driver service for complete freedom and privacy. Explore the Côte d'Azur at your own pace with a personal driver-guide.",
-    image: "/assets/images/services/private-tour.webp",
-    link: "/our-services/private-tour",
-  },
-];
+import { homeServiceCards } from "../data/service-pages";
 
 export default function Services() {
   return (
     <div className="main-container relative z-10 flex-center-column section-2">
-      <span className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto">
-        our services
+      <span className="section-label">
+        Our Services
       </span>
       <h2 className="text-[#404040] heading-2 mt-4 text-center">
         What We Offer
       </h2>
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
-        {cards.map((card, index) => (
+        {homeServiceCards.map((card, index) => (
           <div
             key={index}
             className="card group flex h-full flex-col overflow-hidden rounded-3xl border border-[#E7E7E7] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"

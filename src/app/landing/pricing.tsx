@@ -7,11 +7,8 @@ export default function Pricing() {
   const [isCityActive, setIsCityActive] = useState(cities[0]);
   return (
     <div className="flex-center-column">
-      <span
-        // style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
-        className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto"
-      >
-        our pricing
+      <span className="section-label">
+        Our Pricing
       </span>
       <h2 className="heading-2 text-[#404040] mt-4 text-center ">
         Driver Services Pricing Guide

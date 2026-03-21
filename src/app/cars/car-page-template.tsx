@@ -22,6 +22,7 @@ type CarPageTemplateProps = {
   heroImageSrc: string;
   heroImageAlt: string;
   discoverTitle: string;
+  discoverTitleMobile?: React.ReactNode;
   discoverParagraphs: string[];
   gallery: GalleryImage[];
   features: Feature[];
@@ -37,6 +38,7 @@ export default function CarPageTemplate({
   heroImageSrc,
   heroImageAlt,
   discoverTitle,
+  discoverTitleMobile,
   discoverParagraphs,
   gallery,
   features,
@@ -80,7 +82,12 @@ export default function CarPageTemplate({
 
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div className="order-1 lg:order-2">
-          <h2 className="heading-2 text-[#404040] mb-6">{discoverTitle}</h2>
+          <h2 className="heading-2 mb-6 text-[#404040]">
+            <span className="md:hidden">
+              {discoverTitleMobile ?? discoverTitle}
+            </span>
+            <span className="hidden md:inline">{discoverTitle}</span>
+          </h2>
           <div className="space-y-4 body-text">
             {discoverParagraphs.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>

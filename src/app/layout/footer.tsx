@@ -7,12 +7,11 @@ import {
   serviceAreaText,
   whatsappUrl,
 } from "../data/site-config";
+import { serviceMenuLinks } from "../data/service-pages";
 
 const primaryLinks = [
   { href: "/", label: "Home" },
-  { href: "/our-services/transfer", label: "Transfer" },
-  { href: "/our-services/hourly-services", label: "Hourly Services" },
-  { href: "/our-services/private-tour", label: "Private Tour" },
+  ...serviceMenuLinks.map(({ href, label }) => ({ href, label })),
 ];
 
 const secondaryLinks = [
@@ -43,8 +42,8 @@ export default function Footer() {
               seamless.
             </h2>
             <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-white/66 md:text-[16px]">
-              Airport transfers, hourly rides and premium journeys across Nice,
-              Cannes, Monaco and Saint-Tropez.
+              Airport transfers, hourly chauffeur service, and chauffeur tours
+              across Nice, Cannes, Monaco and Saint-Tropez.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">

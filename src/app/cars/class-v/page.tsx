@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CarPageTemplate from "../car-page-template";
 
 export const metadata: Metadata = {
-  title: "Mercedes Class-V Driver Service in French Riviera | Koko Limo",
+  title: "Mercedes Class-V Driver Service in French Riviera | My Riviera",
   description:
     "Travel in comfort with our spacious Mercedes-Benz Class-V. Ideal for families, business teams or group transfers from Nice to Monaco, Cannes and beyond.",
   keywords: [
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "van driver Nice",
     "group transfer French Riviera",
     "driver Class V Monaco",
-    "Koko Limo Class V",
+    "My Riviera Class V",
     "private van with driver French Riviera",
   ],
   alternates: {
@@ -27,6 +27,11 @@ const classVContent = {
   heroImageSrc: "/assets/images/cars/class-v/class-v.webp",
   heroImageAlt: "Mercedes Class V",
   discoverTitle: "Discover the Mercedes Class-V",
+  discoverTitleMobile: (
+    <>
+      Discover the Mercedes <br /> Class- V
+    </>
+  ),
   discoverParagraphs: [
     "The Mercedes Class-V sets the standard for luxury travel in a spacious and elegant van. Designed with premium leather seats, generous legroom, and adjustable seating, every journey offers unparalleled comfort for passengers.",
     "Ideal for families, business travelers, or groups, the Class-V combines style and functionality. Its advanced climate control, high-quality materials, and carefully designed interior create a first-class experience on every ride.",

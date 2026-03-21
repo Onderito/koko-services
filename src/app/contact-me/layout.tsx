@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact & Booking | Koko Limo",
+  title: "Contact & Booking | My Riviera",
   description:
     "Request a quote or book your private driver in the French Riviera. Airport transfers, hourly hire, private tours, and luxury car service from Nice to Monaco, Cannes, and Saint-Tropez.",
   alternates: {
@@ -14,4 +14,3 @@ export default function ContactMeLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return children;
 }
-

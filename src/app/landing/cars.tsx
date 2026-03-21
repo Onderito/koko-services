@@ -45,8 +45,8 @@ const vehiclesData = [
 export default function Cars() {
   return (
     <div className="flex-center-column">
-      <span className="text-[16px] shadow-lg inner-shadow-dark p-2 px-4 rounded-4xl font-manrope-regular w-fit mx-auto">
-        our cars
+      <span className="section-label">
+        Our Cars
       </span>
       <h2 className="heading-2 text-[#404040] mt-4 text-center ">
         Our Fleet, Your Comfort

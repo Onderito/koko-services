@@ -4,12 +4,13 @@ import Cars from "./landing/cars";
 import Blogs from "./landing/blogs";
 import Pricing from "./landing/pricing";
 import Vip from "./landing/vip";
+import Reviews from "./landing/reviews";
 import Footer from "./layout/footer";
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Private Driver in Nice, Cannes and Monaco | Koko Limo",
+  title: "Private Driver in Nice, Cannes and Monaco | My Riviera",
   description:
     "Luxury private driver service on the French Riviera. Book airport transfers, hourly chauffeur hire and premium travel in Nice, Cannes, Monaco and Saint-Tropez.",
   alternates: {
@@ -31,6 +32,9 @@ export default function Home() {
         <Services />
       </div>
       <Performances />
+      <div className="container">
+        <Reviews />
+      </div>
       <div className="container">
         <Cars />
       </div>

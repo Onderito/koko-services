@@ -1,4 +1,5 @@
 import Image from "next/image";
+import suitImage from "../../../public/assets/images/bento/suit.png";
 
 export default function Vip() {
   return (
@@ -19,8 +20,8 @@ export default function Vip() {
             </h3>
             <Image
               className="absolute bottom-0 right-0"
-              src={"/assets/images/bento/suit.png"}
-              alt="suit"
+              src={suitImage}
+              alt="Chauffeur in suit"
               width={200}
               height={200}
             />
@@ -82,8 +83,8 @@ export default function Vip() {
             </h3>
             <Image
               className="absolute bottom-0 right-0"
-              src={"/assets/images/bento/suit.png"}
-              alt="suit"
+              src={suitImage}
+              alt="Chauffeur in suit"
               width={300}
               quality={100}
               height={200}
