@@ -1,162 +1,115 @@
 import Image from "next/image";
+
 import suitImage from "../../../public/assets/images/bento/suit.png";
 
 export default function Vip() {
   return (
-    <div className="flex flex-col">
-      <h2 className="heading-2 text-[#404040] mt-4 text-center">
-        VIP Service Included
-      </h2>
-      <p className="body-text text-center mt-4 ">
-        Tailored quotes for airport transfers, hourly services and custom
-        journeys.
-      </p>
-      <div className="mt-10">
-        {/* Mobile: flex-col */}
-        <div className="flex flex-col gap-4 md:hidden">
-          <div className="bg-[#F9FAFB] h-56 rounded-2xl p-4 shadow-xs relative overflow-hidden">
-            <h3 className="heading-3 text-[#404040]">
-              Professional driver <br /> in suit
-            </h3>
-            <Image
-              className="absolute bottom-0 right-0"
-              src={suitImage}
-              alt="Chauffeur in suit"
-              width={200}
-              height={200}
-            />
-          </div>
-          <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden h-32">
-            <h3 className="heading-3 text-center text-[#404040]">
-              Personalized airport pickup with name sign
-            </h3>
-          </div>
-          <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden h-40">
-            <h3 className="text-white heading-3 text-center">
-              Top-of-the-range, impeccably maintained vehicles
-            </h3>
-            {/* <Image
-              className="absolute left-[-45px] bottom-[-15px]"
-              src={"/assets/images/bento/circle.svg"}
-              alt="circle"
-              width={100}
-              height={100}
-            /> */}
-          </div>
-          <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden h-32">
-            <h3 className="heading-3 text-center text-[#404040] ">
-              Complimentary bottled water on board
-            </h3>
-            <Image
-              className="absolute left-[-40px] bottom-[-80px]"
-              src={"/assets/images/bento/bottle.svg"}
-              alt="bottle"
-              width={120}
-              height={100}
-            />
-            <Image
-              className="absolute right-[-40px] bottom-[-80px]"
-              src={"/assets/images/bento/bottle2.svg"}
-              alt="bottle"
-              width={120}
-              height={100}
-            />
-          </div>
-          <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden h-56">
-            <h3 className="text-white heading-3">Phone chargers available</h3>
-            <Image
-              className="absolute left-[-20px] bottom-[-90px]"
-              src={"/assets/images/bento/phone.png"}
-              alt="phone"
-              width={200}
-              height={200}
-            />
-          </div>
-        </div>
+    <section className="relative px-0 py-0">
+      <div className="mx-auto max-w-3xl text-center">
+        <span className="section-label">VIP Service</span>
+        <h2 className="heading-2 mt-4 text-center text-[#404040]">
+          VIP Service Included
+        </h2>
+        <p className="body-text mt-4 text-center">
+          Elevated details that make the experience feel more polished from
+          airport arrival to the final stop of the day.
+        </p>
+      </div>
 
-        {/* Tablette/Desktop: grid avec proportions ajustées */}
-        <div className="hidden md:grid md:grid-cols-4 md:gap-4 md:h-[450px]">
-          {/* Colonne gauche - plus rectangulaire (1 colonne) */}
-          <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden">
-            <h3 className="heading-3 text-[#404040]">
-              Professional driver <br /> in suit
+      <div className="mt-10 md:mt-12">
+        <div className="grid grid-cols-1 gap-4 md:h-[500px] md:grid-cols-4">
+          <article className="relative min-h-[380px] overflow-hidden rounded-[28px] border border-[#E9DED0] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F0E5_100%)] p-5 pb-44 shadow-[0_18px_40px_rgba(47,35,18,0.08)] md:col-span-1 md:h-full md:pb-5">
+            <span className="relative z-10 inline-flex rounded-full border border-[#E3D3BC] bg-white/80 px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+              Chauffeur Detail
+            </span>
+            <h3 className="relative z-10 mt-4 text-[22px] font-manrope-bold leading-[1.08] tracking-[-0.04em] text-[#262626] md:text-[28px]">
+              Professional driver in suit
             </h3>
+            <p className="relative z-10 mt-3 max-w-[24ch] text-[14px] leading-relaxed text-[#6E6E6E]">
+              A more formal arrival style for clients who expect presentation
+              and discretion from the first contact.
+            </p>
             <Image
-              className="absolute bottom-0 right-0"
+              className="pointer-events-none absolute bottom-0 right-0 h-auto w-[58%] max-w-[250px] md:w-[72%] md:max-w-[320px]"
               src={suitImage}
               alt="Chauffeur in suit"
-              width={300}
+              width={320}
+              height={360}
               quality={100}
-              height={200}
             />
-          </div>
-          {/* Colonne centrale - plus d'espace (3 colonnes) */}
-          <div className="col-span-2 flex flex-col gap-4">
-            <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden flex-1">
-              <div className="flex flex-row items-center justify-center h-full">
-                <h3 className="heading-3 text-[#404040] text-center">
-                  Personalized airport pickup with{" "}
-                  <br className="hidden xl:block" /> name sign
+          </article>
+
+          <div className="flex flex-col gap-4 md:col-span-2 md:h-full">
+            <article className="relative flex min-h-[150px] items-center justify-center overflow-hidden rounded-[28px] border border-[#E9DED0] bg-[linear-gradient(180deg,#FFFFFF_0%,#F6F0E7_100%)] p-5 text-center shadow-[0_18px_40px_rgba(47,35,18,0.08)]">
+              <div className="relative z-10">
+                <span className="inline-flex rounded-full border border-[#E3D3BC] bg-white/80 px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+                  Airport Welcome
+                </span>
+                <h3 className="mt-4 text-[22px] font-manrope-bold leading-[1.08] tracking-[-0.04em] text-[#2A2A2A] md:text-[28px]">
+                  Personalized airport pickup with name sign
                 </h3>
               </div>
-            </div>
-            <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden flex-1">
-              <div className="flex flex-row items-center justify-center h-full">
-                <h3 className="text-white heading-3 text-center ">
-                  Top-of-the-range, impeccably{" "}
-                  <br className="hidden xl:block" /> maintained vehicles
+            </article>
+
+            <article className="relative flex min-h-[170px] items-center justify-center overflow-hidden rounded-[28px] border border-[#2D2A26] bg-[linear-gradient(180deg,#2E2B28_0%,#23211F_100%)] p-5 text-center shadow-[0_22px_44px_rgba(27,23,19,0.18)]">
+              <div className="relative z-10">
+                <span className="inline-flex rounded-full border border-[#6E6352] bg-white/8 px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#E8D8B8]">
+                  Fleet Standard
+                </span>
+                <h3 className="mt-4 text-[22px] font-manrope-bold leading-[1.08] tracking-[-0.04em] text-white md:text-[28px]">
+                  Top-of-the-range, impeccably maintained vehicles
                 </h3>
               </div>
-              {/* <Image
-                className="absolute left-[-45px] md:hidden bottom-[-40px]"
-                src={"/assets/images/bento/circle.svg"}
-                alt="circle"
-                width={150}
-                quality={100}
-                height={100}
-              /> */}
-            </div>
-            <div className="bg-[#F9FAFB] rounded-2xl p-4 shadow-xs relative overflow-hidden flex-1">
-              <div className="flex flex-row items-center justify-center h-full">
-                <h3 className="heading-3 text-[#404040] text-center">
-                  Complimentary bottled water <br className="hidden xl:block" />{" "}
-                  on board
+            </article>
+
+            <article className="relative flex min-h-[190px] items-center justify-center overflow-hidden rounded-[28px] border border-[#E9DED0] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7EFE4_100%)] p-5 pb-16 text-center shadow-[0_18px_40px_rgba(47,35,18,0.08)] md:min-h-[170px] md:pb-5">
+              <div className="relative z-10">
+                <span className="inline-flex rounded-full border border-[#E3D3BC] bg-white/80 px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+                  On Board
+                </span>
+                <h3 className="mt-4 text-[22px] font-manrope-bold leading-[1.08] tracking-[-0.04em] text-[#2A2A2A] md:text-[28px]">
+                  Complimentary bottled water on board
                 </h3>
               </div>
               <Image
-                className="absolute left-[-40px] bottom-[-80px] md:bottom-[-110px]"
-                src={"/assets/images/bento/bottle.svg"}
-                alt="bottle"
-                width={150}
-                quality={100}
-                height={100}
+                className="pointer-events-none absolute bottom-[-62px] left-[-18px] h-auto w-[88px] md:bottom-[-92px] md:left-[-26px] md:w-[138px]"
+                src="/assets/images/bento/bottle.svg"
+                alt="Bottle"
+                width={138}
+                height={138}
               />
               <Image
-                className="absolute right-[-40px] bottom-[-80px] md:bottom-[-110px]"
-                src={"/assets/images/bento/bottle2.svg"}
-                alt="bottle"
-                width={150}
-                quality={100}
-                height={100}
+                className="pointer-events-none absolute bottom-[-62px] right-[-16px] h-auto w-[88px] md:bottom-[-92px] md:right-[-24px] md:w-[138px]"
+                src="/assets/images/bento/bottle2.svg"
+                alt="Bottle"
+                width={138}
+                height={138}
               />
-            </div>
+            </article>
           </div>
-          {/* Colonne droite - plus rectangulaire (1 colonne) */}
-          <div className="bg-[#2A2A2A] rounded-2xl p-4 shadow-xs relative overflow-hidden">
-            <h3 className="text-white heading-3 ">
-              Phone chargers <br className="hidden xl:block" /> available
+
+          <article className="relative min-h-[360px] overflow-hidden rounded-[28px] border border-[#2D2A26] bg-[linear-gradient(180deg,#2E2B28_0%,#23211F_100%)] p-5 pb-44 shadow-[0_22px_44px_rgba(27,23,19,0.18)] md:col-span-1 md:h-full md:pb-5">
+            <span className="relative z-10 inline-flex rounded-full border border-[#6E6352] bg-white/8 px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#E8D8B8]">
+              On Board
+            </span>
+            <h3 className="relative z-10 mt-4 text-[22px] font-manrope-bold leading-[1.08] tracking-[-0.04em] text-white md:text-[28px]">
+              Phone chargers available
             </h3>
+            <p className="relative z-10 mt-3 max-w-[24ch] text-[14px] leading-relaxed text-[#C7C0B8]">
+              Small practical details still matter when clients need to stay
+              connected between meetings, flights, or arrivals.
+            </p>
             <Image
-              className="absolute left-0 bottom-[-60px] "
+              className="pointer-events-none absolute bottom-[-108px] left-[-18px] h-auto w-[64%] max-w-[210px] md:bottom-[-84px] md:left-[-6px] md:w-[92%] md:max-w-[340px]"
               src="/assets/images/bento/phone.png"
-              alt="Phone"
-              width={280}
-              height={300}
+              alt="Phone charger"
+              width={340}
+              height={360}
               quality={100}
             />
-          </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

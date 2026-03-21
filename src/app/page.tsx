@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Private Driver in Nice, Cannes and Monaco | My Riviera",
+  title: "Private Driver in Nice, Cannes and Monaco | MY Riviera",
   description:
     "Luxury private driver service on the French Riviera. Book airport transfers, hourly chauffeur hire and premium travel in Nice, Cannes, Monaco and Saint-Tropez.",
   alternates: {

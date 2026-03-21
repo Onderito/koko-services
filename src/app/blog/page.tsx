@@ -7,7 +7,7 @@ import { blogPosts, featuredHomePosts, siteUrl } from "../data/blog-posts";
 export const metadata: Metadata = {
   title: "Blog | Private Driver Tips for Nice, Cannes and Monaco",
   description:
-    "Read My Riviera articles about airport transfers, private driver services, Monaco business travel, Cannes events and luxury transport on the French Riviera.",
+    "Read MY Riviera articles about airport transfers, private driver services, Monaco business travel, Cannes events and luxury transport on the French Riviera.",
   keywords: [
     "private driver blog French Riviera",
     "Nice airport transfer blog",
@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/blog`,
   },
   openGraph: {
-    title: "My Riviera Blog",
+    title: "MY Riviera Blog",
     description:
       "Luxury transport advice, airport transfer guides and private driver tips for the French Riviera.",
     url: `${siteUrl}/blog`,
-    siteName: "My Riviera",
+    siteName: "MY Riviera",
     type: "website",
   },
 };
@@ -83,7 +83,11 @@ export default function BlogIndexPage() {
 
       <section className="container pt-0">
         <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr]">
-          <BlogCard post={featuredPost} priority />
+          <BlogCard
+            post={featuredPost}
+            priority
+            sizes="(min-width: 1024px) 58vw, 100vw"
+          />
 
           <div className="rounded-[28px] border border-[#E5E5E5] bg-[#404040] p-7 text-white shadow-sm md:p-8">
             <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-[13px] font-manrope-bold uppercase tracking-[0.12em]">

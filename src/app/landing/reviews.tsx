@@ -12,7 +12,7 @@ const reviews = [
   },
   {
     quote:
-      "Koko took good care of us, was welcoming and nice. Beautiful views and exciting info about Nice, good wine and specialties from Cannes.",
+      "MY Riviera took good care of us, was welcoming and nice. Beautiful views and exciting info about Nice, good wine and specialties from Cannes.",
     author: "Tripadvisor guest",
     context: "Jul 2024 · Wine tour",
   },

@@ -62,10 +62,10 @@ export default function Performances() {
             {cards.map((c, index) => (
               <li
                 key={index}
-                className="bg-[#404040] perf-card shadow-white-thin flex flex-col rounded-3xl p-3 xl:max-w-xs"
+                className="perf-card flex flex-col rounded-3xl border border-[#6F6250] bg-[#404040] p-3 shadow-[0_0_0_1px_rgba(245,232,208,0.08),inset_0_1px_0_rgba(255,245,228,0.06)] xl:max-w-xs"
               >
                 <div
-                  className="bg-[#292929] w-full h-34 shadow-white-thin rounded-2xl flex-center relative"
+                  className="relative flex-center h-34 w-full rounded-2xl border border-[#7A6B58] bg-[#292929] shadow-[inset_0_1px_0_rgba(255,244,225,0.05)]"
                   aria-hidden="true"
                 >
                   {index === 0 && <FirstCard />}

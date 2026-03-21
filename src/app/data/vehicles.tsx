@@ -47,21 +47,21 @@ const maybachPrices: Record<string, VehiclePrice> = {
 export const vehicles: Vehicle[] = [
   {
     id: "mercedes-e",
-    name: "Mercedes Class - E",
+    name: "Mercedes E-Class",
     passengers: 3,
     image: "/assets/images/cars/class-e/class-e.svg",
     prices: classEPrices,
   },
   {
     id: "mercedes-v",
-    name: "Mercedes Class - V",
+    name: "Mercedes V-Class",
     passengers: 7,
-    image: "/assets/images/cars/class-v/class-v.svg",
+    image: "/assets/images/cars/class-v/class-v-pricing.webp",
     prices: classVPrices,
   },
   {
     id: "mercedes-s",
-    name: "Mercedes Class - S",
+    name: "Mercedes S-Class",
     passengers: 3,
     image: "/assets/images/cars/class-s/class-s.svg",
     prices: classSPrices,

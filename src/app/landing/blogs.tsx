@@ -18,8 +18,12 @@ export default function Blogs() {
       </p>
 
       <div className="mt-10 grid gap-8 md:mt-12 xl:mt-16 xl:grid-cols-3">
-        {featuredHomePosts.map((post, index) => (
-          <BlogCard key={post.slug} post={post} priority={index === 0} />
+        {featuredHomePosts.map((post) => (
+          <BlogCard
+            key={post.slug}
+            post={post}
+            sizes="(min-width: 1280px) 30vw, (min-width: 768px) 44vw, 92vw"
+          />
         ))}
       </div>
 

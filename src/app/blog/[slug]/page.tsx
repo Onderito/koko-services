@@ -35,7 +35,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | My Riviera`,
+    title: `${post.title} | MY Riviera`,
     description: post.description,
     keywords: post.keywords,
     alternates: {
@@ -45,7 +45,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       url: `${siteUrl}/blog/${post.slug}`,
-      siteName: "My Riviera",
+      siteName: "MY Riviera",
       type: "article",
       publishedTime: post.publishedAt,
       images: [
@@ -77,11 +77,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     dateModified: post.publishedAt,
     author: {
       "@type": "Organization",
-      name: "My Riviera",
+      name: "MY Riviera",
     },
     publisher: {
       "@type": "Organization",
-      name: "My Riviera",
+      name: "MY Riviera",
     },
     mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
   };

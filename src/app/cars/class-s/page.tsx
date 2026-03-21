@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CarPageTemplate from "../car-page-template";
 
 export const metadata: Metadata = {
-  title: "Mercedes Class-S Driver Nice & Monaco | Luxury VTC | My Riviera",
+  title: "Mercedes Class-S Driver Nice & Monaco | Luxury VTC | MY Riviera",
   description:
     "Book our Mercedes-Benz S-Class for a premium and elegant ride across the French Riviera. Perfect for business travel and VIP airport transfers.",
   keywords: [
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "private driver Nice",
     "driver Class S Monaco",
     "executive transfer Nice airport",
-    "My Riviera Class S",
+    "MY Riviera Class S",
   ],
   alternates: {
     canonical: "https://kokolimonice.com/cars/class-s",

@@ -9,9 +9,14 @@ import { formatBlogDate, type BlogPost } from "../data/blog-posts";
 type BlogCardProps = {
   post: BlogPost;
   priority?: boolean;
+  sizes?: string;
 };
 
-export default function BlogCard({ post, priority = false }: BlogCardProps) {
+export default function BlogCard({
+  post,
+  priority = false,
+  sizes = "(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw",
+}: BlogCardProps) {
   return (
     <motion.article
       initial={false}
@@ -48,6 +53,7 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
               alt={post.imageAlt}
               fill
               priority={priority}
+              sizes={sizes}
               className="object-cover"
             />
           </motion.div>
