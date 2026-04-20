@@ -2,20 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Reveal, RevealGroup } from "../ui/reveal";
 
 const vehiclesData = [
-  {
-    name: "Mercedes V-CLASS",
-    type: "Van",
-    imageUrl: "/assets/images/cars/class-v/class-v.webp",
-    summary: "Best for families, luggage-heavy transfers and group travel.",
-    guests: "6 guests",
-    bags: "6 bags",
-    feature: "Ambient",
-    button: "View Vehicle",
-    link: "/cars/class-v",
-    featured: false,
-  },
   {
     name: "Maybach",
     type: "Limousine",
@@ -24,38 +13,54 @@ const vehiclesData = [
     guests: "3 guests",
     bags: "3 bags",
     feature: "VIP",
-    button: "View Vehicle",
     link: "/cars/maybach",
     featured: true,
+  },
+  {
+    name: "Mercedes V-CLASS",
+    type: "Van",
+    imageUrl: "/assets/images/cars/class-v/class-v-mercedes.webp",
+    summary: "Best for families, luggage-heavy transfers and group travel.",
+    guests: "6 guests",
+    bags: "6 bags",
+    feature: "Ambient",
+    link: "/cars/class-v",
+    featured: false,
   },
   {
     name: "Mercedes S-CLASS",
     type: "Berline",
     imageUrl: "/assets/images/cars/class-s/class-s.webp",
-    summary: "A refined executive ride for business and premium point-to-point travel.",
+    summary:
+      "A refined executive ride for business and premium point-to-point travel.",
     guests: "3 guests",
     bags: "2 bags",
     feature: "Ambient",
-    button: "View Vehicle",
     link: "/cars/class-s",
     featured: false,
   },
 ];
 
 export default function Cars() {
+  const ctaLabels = [
+    "Discover the Maybach",
+    "Discover the V-Class",
+    "Discover the S-Class",
+  ];
+
   return (
     <div className="flex-center-column">
-      <span className="section-label">
-        Our Cars
-      </span>
-      <h2 className="heading-2 text-[#404040] mt-4 text-center ">
-        Our Fleet, Your Comfort
-      </h2>
-      <p className="body-text text-center mt-4 ">
-        Choose from our range of luxury vehicles — curated for style, space, and
-        performance.{" "}
-      </p>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3 gap-8 mt-10">
+      <Reveal className="flex w-full flex-col items-center">
+        <span className="section-label">Our Cars</span>
+        <h2 className="heading-2 text-[#404040] mt-4 text-center ">
+          Our Fleet, Your Comfort
+        </h2>
+        <p className="body-text text-center mt-4 ">
+          Choose from our range of luxury vehicles — curated for style, space,
+          and performance.{" "}
+        </p>
+      </Reveal>
+      <RevealGroup className="flex flex-col lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3 gap-8 mt-10">
         {vehiclesData.map((v, index) => (
           <div
             className={`group flex h-full flex-col overflow-hidden rounded-3xl border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
@@ -136,14 +141,14 @@ export default function Cars() {
                   scroll
                   className="inline-flex w-full items-center justify-center rounded-xl border border-[#DADADA] bg-white px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-[#404040] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F7F7F7]"
                 >
-                  {v.button}
+                  {ctaLabels[index]}
                   <span className="sr-only"> about {v.name}</span>
                 </Link>
               </div>
             </div>
           </div>
         ))}
-      </div>
+      </RevealGroup>
     </div>
   );
 }

@@ -1,17 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { homeServiceCards } from "../data/service-pages";
+import { Reveal, RevealGroup } from "../ui/reveal";
 
 export default function Services() {
+  const ctaLabels = ["Book my transfer", "Book by the hour", "Plan my tour"];
+
   return (
     <div className="main-container relative z-10 flex-center-column section-2">
-      <span className="section-label">
-        Our Services
-      </span>
-      <h2 className="text-[#404040] heading-2 mt-4 text-center">
-        What We Offer
-      </h2>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
+      <Reveal className="flex w-full flex-col items-center">
+        <span className="section-label">Our Services</span>
+        <h2 className="text-[#404040] heading-2 mt-4 text-center">
+          What We Offer
+        </h2>
+      </Reveal>
+      <RevealGroup className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
         {homeServiceCards.map((card, index) => (
           <div
             key={index}
@@ -62,9 +65,9 @@ export default function Services() {
                     aria-label={`explore the ${card.title} service`}
                     scroll={true}
                     href={card.link}
-                    className="inline-flex w-[45%] items-center justify-center rounded-xl border border-[#DADADA] bg-white px-5 py-3 text-center font-manrope-bold text-[14px] tracking-[-0.01em] text-[#404040] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F7F7F7]"
+                    className="inline-flex w-[75%] items-center justify-center rounded-xl border border-[#DADADA] bg-white px-5 py-3 text-center font-manrope-bold text-[14px] tracking-[-0.01em] text-[#404040] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F7F7F7]"
                   >
-                    Explore
+                    Explore {card.title}
                     <span className="sr-only"> about {card.title}</span>
                   </Link>
                   <Link
@@ -73,7 +76,7 @@ export default function Services() {
                     href={"/contact-me"}
                   >
                     <span className="inline-flex w-full items-center justify-center rounded-xl border border-[#404040] bg-[#404040] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2F2F2F]">
-                      Request a Quote
+                      {ctaLabels[index]}
                       <span className="sr-only"> for {card.title}</span>
                     </span>
                   </Link>
@@ -82,7 +85,7 @@ export default function Services() {
             </div>
           </div>
         ))}
-      </div>
+      </RevealGroup>
     </div>
   );
 }

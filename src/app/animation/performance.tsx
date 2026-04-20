@@ -5,6 +5,12 @@ import { DrawSVGPlugin } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
+// Emil-inspired easing mapped to GSAP's built-in curves.
+// power3.out ≈ cubic-bezier(0.215, 0.61, 0.355, 1) — strong ease-out for UI entry
+// expo.out   ≈ cubic-bezier(0.19, 1, 0.22, 1)      — even steeper, used for drawSVG lines
+const EMIL_OUT = "power3.out";
+const LINE_OUT = "expo.out";
+
 export const performanceSection = () => {
   const title = document.querySelector(".perf-title");
   const description = document.querySelector(".perf-description");
@@ -16,6 +22,14 @@ export const performanceSection = () => {
 
     const cards = gsap.utils.toArray<HTMLElement>(".perf-card");
     if (!cards.length) return () => {};
+
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReduced) {
+      return () => {};
+    }
 
     gsap.set([title, description, cards], {
       willChange: "transform,opacity",
@@ -37,115 +51,115 @@ export const performanceSection = () => {
 
     tl.from(title, {
       autoAlpha: 0,
-      y: 28,
-      duration: 0.7,
-      ease: "power2.out",
+      y: 18,
+      duration: 0.6,
+      ease: EMIL_OUT,
     })
       .from(
         description,
         {
-          y: 18,
           autoAlpha: 0,
-          duration: 0.6,
-          ease: "power2.out",
+          y: 12,
+          duration: 0.5,
+          ease: EMIL_OUT,
         },
         "-=0.3",
       )
       .from(cards, {
         autoAlpha: 0,
-        y: 72,
-        scale: 0.96,
-        rotate: -1.5,
-        duration: 0.9,
-        ease: "power2.out",
-        stagger: { each: 0.08, from: "start" },
-      })
-      // First card
-      .from(".first-card-illu", {
-        scale: 0.72,
-        x: 10,
-        rotate: 1,
-        autoAlpha: 0,
+        y: 32,
+        scale: 0.97,
         duration: 0.7,
-        ease: "expo.out",
+        ease: EMIL_OUT,
+        stagger: { each: 0.06, from: "start" },
       })
-      // Second card
+      // First card illustration — the receipt tag
+      .from(
+        ".first-card-illu",
+        {
+          autoAlpha: 0,
+          scale: 0.94,
+          y: 8,
+          duration: 0.55,
+          ease: EMIL_OUT,
+        },
+        "-=0.2",
+      )
+      // Second card illustration
       .from(
         ".second-card-illu",
         {
-          scale: 0.72,
-          y: 10,
           autoAlpha: 0,
-          duration: 0.6,
-          ease: "expo.out",
+          scale: 0.94,
+          y: 8,
+          duration: 0.55,
+          ease: EMIL_OUT,
         },
-        "<",
+        "<0.06",
       )
-      // Third card avec paths
+      // Third card — draw the SVG paths in sequence
       .from(
         ".first-path",
         {
           drawSVG: "100% 100%",
           duration: 0.8,
-          ease: "expo.out",
+          ease: LINE_OUT,
         },
-        "<",
+        "<0.06",
       )
       .from(
         ".second-path",
         {
           drawSVG: "100% 100%",
           duration: 0.8,
-          ease: "expo.out",
+          ease: LINE_OUT,
         },
-        "<",
+        "<0.1",
       )
       .from(
         ".third-card-illu",
         {
-          scale: 0.72,
-          y: 10,
           autoAlpha: 0,
-          duration: 0.7,
-          ease: "power2.out",
+          scale: 0.94,
+          y: 8,
+          duration: 0.55,
+          ease: EMIL_OUT,
         },
-        "<",
+        "<0.06",
       )
-      // Fourth card
+      // Fourth card — language chip + flag + cursor
       .from(
         ".text-fourth-card",
         {
-          scale: 0.72,
-          y: -6,
-          rotate: -4,
           autoAlpha: 0,
-          duration: 0.7,
-          ease: "power2.out",
+          scale: 0.95,
+          y: 6,
+          duration: 0.55,
+          ease: EMIL_OUT,
         },
-        "<",
+        "<0.06",
       )
       .from(
         ".flag-card",
         {
-          scale: 0.72,
           autoAlpha: 0,
-          rotate: 6,
-          duration: 0.75,
-          ease: "expo.out",
+          scale: 0.95,
+          y: 6,
+          duration: 0.55,
+          ease: EMIL_OUT,
         },
-        "<",
+        "<0.06",
       )
       .from(
         ".mouse-svg",
         {
           autoAlpha: 0,
-          scale: 0.72,
-          rotate: 4,
+          scale: 0.95,
           y: 4,
-          duration: 0.6,
-          ease: "power2.out",
+          duration: 0.5,
+          ease: EMIL_OUT,
         },
-        "<",
+        "<0.06",
       );
 
     return () => {

@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 import { cities, vehicles } from "../data/vehicles";
+import { Reveal } from "../ui/reveal";
 
 const featuredVehicleIds = new Set(["mercedes-s", "mercedes-maybach"]);
 
@@ -12,7 +13,7 @@ export default function Pricing() {
 
   return (
     <section className="relative overflow-hidden rounded-[34px] border border-[#EEE5D9] bg-[radial-gradient(circle_at_top,#FFF8EE_0%,#FFFFFF_62%)] px-4 py-10 md:px-6 md:py-14 xl:px-8">
-      <div className="mx-auto max-w-3xl text-center">
+      <Reveal className="mx-auto max-w-3xl text-center">
         <span className="section-label">Our Pricing</span>
         <h2 className="heading-2 mt-4 text-center text-[#404040]">
           Driver Services Pricing Guide
@@ -21,7 +22,7 @@ export default function Pricing() {
           A cleaner way to compare transfer, hourly, and full-day pricing
           across the Riviera without losing the premium feel of the site.
         </p>
-      </div>
+      </Reveal>
 
       <div className="mx-auto mt-8 max-w-6xl rounded-[30px] border border-[#E9DECF] bg-[linear-gradient(180deg,#FFFDF9_0%,#F7EFE3_100%)] p-5 shadow-[0_18px_48px_rgba(45,33,15,0.08)] md:mt-10 md:p-6">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">

@@ -24,7 +24,7 @@ const maybachContent = {
   titleHighlight: "Prestige Perfected",
   heroDescription:
     "Experience unparalleled opulence with driver-driven excellence, handcrafted details, and royal-level comfort.",
-  bookLabel: "Request a Quote",
+  bookLabel: "Book this vehicle",
   heroImageSrc: "/assets/images/cars/maybach/maybach.webp",
   heroImageAlt: "Mercedes Maybach",
   discoverTitle: "Discover the Mercedes Maybach",
@@ -75,7 +75,7 @@ const maybachContent = {
   ],
   ctaDescription:
     "Book your Mercedes Maybach today and enjoy the ultimate in comfort, style, and sophistication for your next journey.",
-  ctaButtonLabel: "Request This Vehicle",
+  ctaButtonLabel: "Book this vehicle",
 };
 
 export default function MaybachPage() {

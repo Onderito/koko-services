@@ -124,8 +124,8 @@ export default function Reviews() {
           className="heading-2 mt-4 text-center text-[#404040]"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.4, margin: "0px 0px -10% 0px" }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
         >
           Trusted on Tripadvisor for Riviera tours and transfers
         </motion.h2>
@@ -133,8 +133,8 @@ export default function Reviews() {
           className="body-text mt-4 text-center"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.4, margin: "0px 0px -10% 0px" }}
+          transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
         >
           Public traveler feedback is one of the strongest signals of trust for
           a chauffeur business, so this section now highlights your Tripadvisor
@@ -146,8 +146,8 @@ export default function Reviews() {
         className="mx-auto mt-8 max-w-5xl rounded-[30px] border border-[#E8DDCC] bg-[linear-gradient(180deg,#FFFDF9_0%,#F7EFE3_100%)] p-5 shadow-[0_18px_48px_rgba(45,33,15,0.08)] md:mt-10 md:p-6"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.55, delay: 0.12, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.35, margin: "0px 0px -10% 0px" }}
+        transition={{ duration: 0.65, delay: 0.14, ease: "easeOut" }}
       >
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div>

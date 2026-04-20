@@ -23,7 +23,7 @@ const classSContent = {
   titleHighlight: "Excellence Defined",
   heroDescription:
     "The pinnacle of luxury with handcrafted interior, advanced technology, and unparalleled comfort for discerning clients.",
-  bookLabel: "Request a Quote",
+  bookLabel: "Book this vehicle",
   heroImageSrc: "/assets/images/cars/class-s/class-s.webp",
   heroImageAlt: "Mercedes Class S",
   discoverTitle: "Discover the Mercedes Class-S",
@@ -79,7 +79,7 @@ const classSContent = {
   ],
   ctaDescription:
     "Book your Mercedes Class-S today and enjoy the ultimate in comfort, style, and sophistication for your next journey.",
-  ctaButtonLabel: "Request This Vehicle",
+  ctaButtonLabel: "Book this vehicle",
 };
 
 export default function ClassSPage() {

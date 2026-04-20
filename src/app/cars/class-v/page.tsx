@@ -23,8 +23,8 @@ const classVContent = {
   titleHighlight: "Luxury Redefined",
   heroDescription:
     "Travel in supreme comfort with premium leather seating, climate control, and spacious interior for up to 7 passengers.",
-  bookLabel: "Request a Quote",
-  heroImageSrc: "/assets/images/cars/class-v/class-v.webp",
+  bookLabel: "Book this vehicle",
+  heroImageSrc: "/assets/images/cars/class-v/class-v-mercedes.webp",
   heroImageAlt: "Mercedes Class V",
   discoverTitle: "Discover the Mercedes Class-V",
   discoverTitleMobile: (
@@ -76,7 +76,7 @@ const classVContent = {
   ],
   ctaDescription:
     "Book your Mercedes Class-V today and enjoy the ultimate in comfort, style, and sophistication for your next journey.",
-  ctaButtonLabel: "Request This Vehicle",
+  ctaButtonLabel: "Book this vehicle",
 };
 
 export default function ClassVPage() {

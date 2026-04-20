@@ -51,7 +51,7 @@ export default function Footer() {
                 href="/contact-me"
                 className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-[#111111] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EDEDED]"
               >
-                Request a Quote
+                Reserve my driver
               </Link>
               <a
                 href={whatsappUrl}

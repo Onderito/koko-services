@@ -1,11 +1,12 @@
 import Image from "next/image";
 
 import suitImage from "../../../public/assets/images/bento/suit.png";
+import { Reveal } from "../ui/reveal";
 
 export default function Vip() {
   return (
     <section className="relative px-0 py-0">
-      <div className="mx-auto max-w-3xl text-center">
+      <Reveal className="mx-auto max-w-3xl text-center">
         <span className="section-label">VIP Service</span>
         <h2 className="heading-2 mt-4 text-center text-[#404040]">
           VIP Service Included
@@ -14,7 +15,7 @@ export default function Vip() {
           Elevated details that make the experience feel more polished from
           airport arrival to the final stop of the day.
         </p>
-      </div>
+      </Reveal>
 
       <div className="mt-10 md:mt-12">
         <div className="grid grid-cols-1 gap-4 md:h-[500px] md:grid-cols-4">

@@ -3,12 +3,14 @@ import Image from "next/image";
 export default function ThirdCard() {
   return (
     <>
-      {/* Span complètement à gauche */}
-      <span className="third-card-illu text-[12px] absolute left-3 top-3 -rotate-5  bg-[#404040] shadow-gray-offset p-2 rounded-lg">
-        <span className="text-[#C2C2C2]">08:45 ·</span> Nice Airport
+      {/* Pickup - haut gauche */}
+      <span className="third-card-illu absolute left-3 top-3 -rotate-[5deg] flex items-center gap-2 rounded-2xl border border-[#6A6A6A] bg-[linear-gradient(180deg,#4A4A4A_0%,#3A3A3A_100%)] p-2 pr-3 text-[12px] shadow-gray-offset">
+        <span className="font-manrope-bold text-[#C2C2C2]">08:45</span>
+        <span className="h-3 w-px bg-white/20" />
+        <span className="text-white">Nice Airport</span>
       </span>
 
-      {/* Flèche */}
+      {/* Flèche animée */}
       <svg
         width="58"
         height="58"
@@ -36,11 +38,14 @@ export default function ThirdCard() {
           strokeLinejoin="round"
         />
       </svg>
-      <span className="third-card-illu absolute right-5 bottom-5 z-10 -rotate-5 bg-[#404040] shadow-gray-offset p-2 flex-center rounded-lg gap-2">
-        <Image src="/assets/icons/ui/check-marked.svg" alt="check" width={20} height={20} />
-        <p className="font-manrope-regular text-[12px]">
-          On Time <br />
-        </p>
+
+      {/* Arrivée - bas droite avec dot pulsant */}
+      <span className="third-card-illu absolute right-5 bottom-5 z-10 -rotate-[5deg] flex items-center gap-2 rounded-2xl border border-[#6A6A6A] bg-[linear-gradient(180deg,#4A4A4A_0%,#3A3A3A_100%)] p-2 pr-3 shadow-gray-offset">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#16A34A] opacity-75" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-[#16A34A]" />
+        </span>
+        <p className="font-manrope-regular text-[12px] text-white">On Time</p>
       </span>
     </>
   );

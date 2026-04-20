@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import BlogCard from "./blog-card";
 import { blogPosts, featuredHomePosts, siteUrl } from "../data/blog-posts";
+import { Reveal, RevealGroup } from "../ui/reveal";
 
 export const metadata: Metadata = {
   title: "Blog | Private Driver Tips for Nice, Cannes and Monaco",
@@ -37,9 +38,9 @@ export default function BlogIndexPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] pb-20 pt-28 md:pt-32">
       <section className="container">
-        <div className="rounded-[36px] border border-[#E5E5E5] bg-white p-6 shadow-sm md:p-10 xl:p-14">
+        <Reveal className="rounded-[36px] border border-[#E8DCCB] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF3E9_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10 xl:p-14" amount={0.42}>
           <div className="max-w-3xl space-y-5">
-            <span className="inline-flex w-fit rounded-full bg-[#F2F2F2] px-4 py-2 text-[14px] font-manrope-bold text-[#404040]">
+            <span className="inline-flex w-fit rounded-full border border-[#E3D3BC] bg-white/85 px-4 py-2 text-[14px] font-manrope-bold text-[#6D5830]">
               French Riviera blog
             </span>
             <h1 className="heading-2 max-w-4xl text-[#404040]">
@@ -53,7 +54,7 @@ export default function BlogIndexPage() {
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="rounded-[24px] bg-[#F6F6F6] p-5">
+            <div className="rounded-[24px] border border-[#E9DECF] bg-white/75 p-5">
               <span className="text-[34px] font-manrope-bold text-[#404040]">
                 {blogPosts.length}
               </span>
@@ -61,7 +62,7 @@ export default function BlogIndexPage() {
                 Practical private driver guides
               </p>
             </div>
-            <div className="rounded-[24px] bg-[#F6F6F6] p-5">
+            <div className="rounded-[24px] border border-[#E9DECF] bg-white/75 p-5">
               <span className="text-[34px] font-manrope-bold text-[#404040]">
                 4
               </span>
@@ -69,7 +70,7 @@ export default function BlogIndexPage() {
                 Core Riviera destinations covered
               </p>
             </div>
-            <div className="rounded-[24px] bg-[#F6F6F6] p-5">
+            <div className="rounded-[24px] border border-[#E9DECF] bg-white/75 p-5">
               <span className="text-[34px] font-manrope-bold text-[#404040]">
                 3
               </span>
@@ -78,11 +79,11 @@ export default function BlogIndexPage() {
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="container pt-0">
-        <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr]">
+        <RevealGroup className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr]" amount={0.32}>
           <BlogCard
             post={featuredPost}
             priority
@@ -108,18 +109,18 @@ export default function BlogIndexPage() {
             </div>
             <Link
               href="/contact-me"
-              className="mt-8 inline-flex rounded-2xl bg-white px-6 py-3 text-[15px] font-manrope-bold text-[#404040] transition-transform duration-300 hover:scale-[1.02]"
+              className="mt-8 inline-flex rounded-[18px] bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-6 py-3 text-[15px] font-manrope-bold text-[#111111] transition-transform duration-300 hover:scale-[1.02]"
             >
               Request your ride
             </Link>
           </div>
-        </div>
+        </RevealGroup>
       </section>
 
       <section className="container pt-0">
-        <div className="mb-8 flex flex-col gap-4">
+        <Reveal className="mb-8 flex flex-col gap-4" amount={0.38}>
           <div>
-            <span className="text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-gray-500">
+            <span className="text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-[#8A6B3B]">
               All articles
             </span>
             <h2 className="mt-2 text-[34px] font-manrope-bold text-[#404040]">
@@ -132,13 +133,13 @@ export default function BlogIndexPage() {
             for getting around the French Riviera with comfort, timing and
             premium service in mind.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <RevealGroup className="grid gap-8 md:grid-cols-2 xl:grid-cols-3" amount={0.28}>
           {remainingPosts.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
-        </div>
+        </RevealGroup>
       </section>
     </div>
   );
