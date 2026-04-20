@@ -65,9 +65,9 @@ export default function Services() {
                     aria-label={`explore the ${card.title} service`}
                     scroll={true}
                     href={card.link}
-                    className="inline-flex w-[75%] items-center justify-center rounded-xl border border-[#DADADA] bg-white px-5 py-3 text-center font-manrope-bold text-[14px] tracking-[-0.01em] text-[#404040] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F7F7F7]"
+                    className="inline-flex w-[40%] items-center justify-center rounded-xl border border-[#DADADA] bg-white px-5 py-3 text-center font-manrope-bold text-[14px] tracking-[-0.01em] text-[#404040] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F7F7F7]"
                   >
-                    Explore {card.title}
+                    Explore more
                     <span className="sr-only"> about {card.title}</span>
                   </Link>
                   <Link
