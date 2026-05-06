@@ -6,7 +6,7 @@ import { Reveal, RevealGroup } from "../ui/reveal";
 
 export default function Blogs() {
   return (
-    <div className="flex-center-column">
+    <div className="flex-center-column w-full">
       <Reveal className="flex w-full flex-col items-center">
         <span className="section-label">Our Blogs</span>
         <h2 className="heading-2 text-[#404040] mt-4 text-center">
@@ -18,7 +18,7 @@ export default function Blogs() {
         </p>
       </Reveal>
 
-      <RevealGroup className="mt-10 grid gap-8 md:mt-12 xl:mt-16 xl:grid-cols-3">
+      <RevealGroup className="mt-10 grid w-full grid-cols-1 gap-8 md:mt-12 md:grid-cols-2 xl:mt-16 xl:grid-cols-3">
         {featuredHomePosts.map((post) => (
           <BlogCard
             key={post.slug}

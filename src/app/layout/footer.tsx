@@ -17,6 +17,7 @@ const primaryLinks = [
 const secondaryLinks = [
   { href: "/cars/class-s", label: "Our Cars" },
   { href: "/blog", label: "Blog" },
+  { href: "/partners", label: "Partner Program" },
   { href: "/contact-me", label: "Request a Quote" },
   { href: "/legal-privacy", label: "Legal & Privacy" },
 ];

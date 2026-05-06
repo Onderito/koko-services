@@ -15,6 +15,7 @@ const staticRoutes = [
   "/blog",
   "/contact-me",
   "/legal-privacy",
+  "/partners",
   transfersPage.path,
   hourlyChauffeurPage.path,
   chauffeurToursPage.path,

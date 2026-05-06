@@ -154,6 +154,15 @@ export default function NavBar() {
                 Blog
               </Link>
             </li>
+            <li>
+              <Link
+                onClick={handleResetScroll}
+                href="/partners"
+                className="whitespace-nowrap font-manrope-regular text-[14px] text-gray-600 transition-colors duration-200 hover:text-[#404040]"
+              >
+                Partners
+              </Link>
+            </li>
           </ul>
           {/* Bouton / Mobile burger à droite */}
           <div className="flex shrink-0 items-center gap-3">
@@ -244,6 +253,15 @@ export default function NavBar() {
                   className="block rounded-2xl px-4 py-3 font-manrope-regular text-[16px] text-gray-600 transition-colors duration-300 hover:bg-[#F6F6F6] hover:text-[#404040]"
                 >
                   Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={handleResetScroll}
+                  href="/partners"
+                  className="block rounded-2xl px-4 py-3 font-manrope-regular text-[16px] text-gray-600 transition-colors duration-300 hover:bg-[#F6F6F6] hover:text-[#404040]"
+                >
+                  Partners
                 </Link>
               </li>
               <li>

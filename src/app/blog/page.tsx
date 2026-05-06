@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 import BlogCard from "./blog-card";
 import { blogPosts, featuredHomePosts, siteUrl } from "../data/blog-posts";
-import { Reveal, RevealGroup } from "../ui/reveal";
+import { Reveal } from "../ui/reveal";
 
 export const metadata: Metadata = {
   title: "Blog | Private Driver Tips for Nice, Cannes and Monaco",
@@ -114,7 +114,7 @@ export default function BlogIndexPage() {
       </section>
 
       <section className="container pt-0">
-        <RevealGroup className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr]" amount={0.32}>
+        <div className="grid gap-6 md:gap-8 lg:grid-cols-[1.35fr_0.65fr]">
           <BlogCard
             post={featuredPost}
             priority
@@ -145,32 +145,30 @@ export default function BlogIndexPage() {
               Request your ride
             </Link>
           </div>
-        </RevealGroup>
+        </div>
       </section>
 
       <section className="container pt-0">
-        <Reveal className="mb-8 flex flex-col gap-4" amount={0.38}>
-          <div>
-            <span className="text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-[#8A6B3B]">
-              All articles
-            </span>
-            <h2 className="mt-2 text-[34px] font-manrope-bold text-[#404040]">
-              Explore airport transfers, events, business travel and private
-              tours
-            </h2>
-          </div>
-          <p className="max-w-[46rem] text-[15px] leading-relaxed text-gray-600">
+        <Reveal className="mb-8 md:mb-10 space-y-4" amount={0.2}>
+          <span className="block text-[12px] md:text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-[#8A6B3B]">
+            All articles
+          </span>
+          <h2 className="text-[24px] leading-[1.15] tracking-[-0.5px] md:text-[34px] md:leading-[1.08] md:tracking-[-1px] xl:text-[42px] xl:leading-[1.04] xl:tracking-[-1.4px] font-manrope-bold text-[#404040] max-w-[22ch]">
+            Explore airport transfers, events, business travel and private
+            tours
+          </h2>
+          <p className="max-w-[46rem] text-[14px] md:text-[15px] leading-relaxed text-gray-600">
             Each guide is designed to help clients understand the best options
             for getting around the French Riviera with comfort, timing and
             premium service in mind.
           </p>
         </Reveal>
 
-        <RevealGroup className="grid gap-8 md:grid-cols-2 xl:grid-cols-3" amount={0.28}>
+        <div className="grid gap-6 md:gap-8 md:grid-cols-2 xl:grid-cols-3">
           {remainingPosts.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
-        </RevealGroup>
+        </div>
       </section>
     </div>
   );

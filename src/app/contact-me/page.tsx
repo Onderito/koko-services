@@ -1,5 +1,4 @@
 "use client";
-import emailjs from "@emailjs/browser";
 import { useMemo, useRef, useState, useLayoutEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
@@ -21,10 +20,12 @@ export default function ContactMe() {
     notes: "",
   });
   const [status, setStatus] = useState<Status>("idle");
+  const [submitError, setSubmitError] = useState("");
 
   // --- affichage d'erreurs après 1er submit ou blur
   const [submitted, setSubmitted] = useState(false);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [honeypot, setHoneypot] = useState("");
   const backdropRef = useRef<HTMLDivElement>(null);
 
   const errors = useMemo(() => {
@@ -76,24 +77,31 @@ export default function ContactMe() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
+    setSubmitError("");
     if (!isValid) {
       setStatus("error");
       return;
     }
     setStatus("loading");
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          ...formData,
-          passengers: String(formData.passengers),
-          baggage: String(formData.baggage),
-          reply_to: formData.email,
-          from_name: formData.fullName,
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! },
-      );
+        body: JSON.stringify({
+          ...formData,
+          website: honeypot,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = (await response.json().catch(() => null)) as
+          | { error?: string }
+          | null;
+        throw new Error(data?.error || "Contact request failed");
+      }
+
       setStatus("success");
       setOpenModal(true);
       setFormData({
@@ -112,7 +120,11 @@ export default function ContactMe() {
       });
       setTouched({});
       setSubmitted(false);
-    } catch {
+      setHoneypot("");
+    } catch (error) {
+      if (error instanceof Error) {
+        setSubmitError(error.message);
+      }
       setStatus("error");
     }
   };
@@ -176,6 +188,18 @@ export default function ContactMe() {
         className="relative overflow-hidden mt-10 max-w-3xl mx-auto rounded-[36px] border border-[#EFE6D6] bg-[linear-gradient(180deg,#FFFFFF_0%,#FDF8EF_100%)] p-6 md:p-10 shadow-[0_18px_40px_rgba(45,33,15,0.06),inset_0_1px_0_rgba(255,255,255,0.9)]"
         aria-labelledby="contact-form-title"
       >
+        <div className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden">
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
+        </div>
+
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-40 -left-32 h-[380px] w-[380px] rounded-full bg-[radial-gradient(circle,rgba(232,217,196,0.25)_0%,rgba(232,217,196,0)_70%)] blur-3xl"
@@ -186,6 +210,12 @@ export default function ContactMe() {
         />
 
         <div className="relative z-10">
+        {status === "error" && (
+          <p className="mb-5 rounded-[16px] border border-red-200 bg-red-50 px-4 py-3 text-[14px] text-red-700">
+            {submitError ||
+              "Your request could not be sent. Please try again or contact us on WhatsApp."}
+          </p>
+        )}
         <h2 id="contact-form-title" className="sr-only">
           Booking form
         </h2>
