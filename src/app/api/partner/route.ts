@@ -216,7 +216,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const { error } = await resend.emails.send({
-      from: "viplimonice <onboarding@resend.dev>",
+      from: "viplimonice <contact@viplimonice.com>",
       to: toEmail,
       replyTo: `${sanitized.fullName} <${sanitized.email}>`,
       subject: `New partner application — ${sanitized.fullName} · ${sanitized.companyName}`,
