@@ -84,18 +84,23 @@ const partnerTypes = [
 const fleetRows = [
   {
     vehicle: "Mercedes S-Class",
-    capacity: "3 passengers · 2 bags",
+    capacity: "2 passengers · 2 bags",
     idealFor: "Executive transfers and VIP arrivals",
   },
   {
+    vehicle: "Mercedes E-Class",
+    capacity: "2 passengers · 2 bags",
+    idealFor: "Business travel, executive transfers and private chauffeur service",
+  },
+  {
     vehicle: "Mercedes V-Class",
-    capacity: "6 passengers · 6 bags",
+    capacity: "7 passengers · 7 bags",
     idealFor: "Groups, families, and airport runs",
   },
   {
     vehicle: "Mercedes Vito",
-    capacity: "2 passengers",
-    idealFor: "Ultra-discreet VIP transfers",
+    capacity: "8 passengers",
+    idealFor: "Perfect for large groups, luxury tours and business travel",
   },
 ];
 
@@ -491,16 +496,16 @@ export default function PartnersClientPage() {
           </Reveal>
 
           <Reveal className="mt-8 overflow-x-auto" amount={0.28}>
-            <table className="min-w-full overflow-hidden rounded-[24px] border border-[#E5D7C4] bg-white shadow-[0_14px_34px_rgba(45,33,15,0.06)]">
+            <table className="hidden md:table w-full table-fixed overflow-hidden rounded-[24px] border border-[#E5D7C4] bg-white shadow-[0_14px_34px_rgba(45,33,15,0.06)]">
               <thead className="bg-[#F8F1E7]">
                 <tr>
-                  <th className="px-5 py-4 text-left text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+                  <th className="w-1/4 px-6 py-5 text-center text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
                     Vehicle
                   </th>
-                  <th className="px-5 py-4 text-left text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+                  <th className="w-1/4 px-6 py-5 text-center text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
                     Capacity
                   </th>
-                  <th className="px-5 py-4 text-left text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+                  <th className="w-2/4 px-6 py-5 text-center text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
                     Ideal For
                   </th>
                 </tr>
@@ -515,19 +520,54 @@ export default function PartnersClientPage() {
                         : ""
                     }
                   >
-                    <td className="px-5 py-4 text-[15px] font-manrope-bold text-[#1F1F1F]">
+                    <td className="px-6 py-6 text-center align-middle text-[15px] font-manrope-bold text-[#1F1F1F]">
                       {row.vehicle}
                     </td>
-                    <td className="px-5 py-4 text-[15px] text-[#5E5A53]">
+                    <td className="px-6 py-6 text-center align-middle text-[15px] text-[#5E5A53]">
                       {row.capacity}
                     </td>
-                    <td className="px-5 py-4 text-[15px] text-[#5E5A53]">
+                    <td className="px-6 py-6 text-center align-middle text-[15px] leading-relaxed text-[#5E5A53]">
                       {row.idealFor}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
+
+            {/* Mobile cards */}
+            <div className="grid gap-4 md:hidden">
+              {fleetRows.map((row) => (
+                <div
+                  key={row.vehicle}
+                  className="overflow-hidden rounded-[24px] border border-[#E5D7C4] bg-white p-5 shadow-[0_14px_34px_rgba(45,33,15,0.06)] [-webkit-mask-image:-webkit-radial-gradient(white,black)] [transform:translateZ(0)]"
+                >
+                  <p className="text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+                    Vehicle
+                  </p>
+                  <p className="mt-1 text-[16px] font-manrope-bold text-[#1F1F1F]">
+                    {row.vehicle}
+                  </p>
+                  <div className="mt-4 grid grid-cols-2 gap-4 border-t border-[#EFE4D4] pt-4">
+                    <div>
+                      <p className="text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+                        Capacity
+                      </p>
+                      <p className="mt-1 text-[14px] text-[#5E5A53]">
+                        {row.capacity}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
+                        Ideal For
+                      </p>
+                      <p className="mt-1 text-[14px] leading-relaxed text-[#5E5A53]">
+                        {row.idealFor}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </Reveal>
         </div>
       </div>
