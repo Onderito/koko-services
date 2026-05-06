@@ -6,7 +6,10 @@ import { forwardRef, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
 import FooterComponent from "./footer-component";
-import type { ServiceAudienceCard, ServicePageConfig } from "../data/service-pages";
+import type {
+  ServiceAudienceCard,
+  ServicePageConfig,
+} from "../data/service-pages";
 import { Reveal, RevealGroup } from "../ui/reveal";
 
 const AudienceCard = forwardRef<
@@ -60,7 +63,11 @@ function AudienceStack({
   audienceAccent,
   audienceDescription,
 }: {
-  audienceCards: [ServiceAudienceCard, ServiceAudienceCard, ServiceAudienceCard];
+  audienceCards: [
+    ServiceAudienceCard,
+    ServiceAudienceCard,
+    ServiceAudienceCard,
+  ];
   audienceTitle: string;
   audienceAccent: string;
   audienceDescription: string;
@@ -122,14 +129,19 @@ function AudienceStack({
     <div ref={containerRef} className="container">
       <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
         <h2 className="heading-2 mt-4 text-center text-[#404040]">
-          {audienceTitle} <span className="text-[#B8AA92]">{audienceAccent}</span>
+          {audienceTitle}{" "}
+          <span className="text-[#B8AA92]">{audienceAccent}</span>
         </h2>
         <p className="body-text mt-4 text-center">{audienceDescription}</p>
       </Reveal>
 
       <RevealGroup className="block xl:hidden" amount={0.34}>
         {audienceCards.map((card) => (
-          <AudienceCard key={card.title} card={card} className="mx-auto mt-10 max-w-lg" />
+          <AudienceCard
+            key={card.title}
+            card={card}
+            className="mx-auto mt-10 max-w-lg"
+          />
         ))}
       </RevealGroup>
 
@@ -202,7 +214,10 @@ function LocalLinksSection({
           ))}
         </Reveal>
       ) : (
-        <RevealGroup className="mt-10 grid gap-6 md:grid-cols-2 xl:mt-12" amount={0.32}>
+        <RevealGroup
+          className="mt-10 grid gap-6 md:grid-cols-2 xl:mt-12"
+          amount={0.32}
+        >
           {links.map((link) => (
             <Link
               key={link.href}
@@ -262,14 +277,14 @@ export default function ServicePageTemplate({
         </Reveal>
 
         <Reveal className="w-full xl:w-2/3" delay={0.06} amount={0.42}>
-          <div className="relative min-h-[220px] w-full aspect-[16/14] rounded-[32px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1E8_100%)] p-2.5 shadow-[0_24px_60px_rgba(45,33,15,0.12)] md:p-3">
-            <div className="relative h-full w-full overflow-hidden rounded-[24px]">
+          <div className="relative overflow-hidden min-h-[220px] w-full aspect-[16/14] rounded-[32px]  border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1E8_100%)] p-2.5 shadow-[0_24px_60px_rgba(45,33,15,0.12)] md:p-3">
+            <div className="relative h-full w-full">
               <Image
                 src={config.heroImageSrc}
                 alt={config.heroImageAlt}
                 fill
                 priority
-                className="object-cover"
+                className="rounded-[24px] object-cover"
               />
             </div>
           </div>
@@ -281,10 +296,15 @@ export default function ServicePageTemplate({
           <h2 className="heading-2 mt-4 text-center text-[#404040]">
             {config.introTitle}
           </h2>
-          <p className="body-text mt-4 text-center">{config.introDescription}</p>
+          <p className="body-text mt-4 text-center">
+            {config.introDescription}
+          </p>
         </Reveal>
 
-        <RevealGroup className="relative flex flex-col items-center justify-center gap-10 py-10 xl:flex-row xl:py-24" amount={0.3}>
+        <RevealGroup
+          className="relative flex flex-col items-center justify-center gap-10 py-10 xl:flex-row xl:py-24"
+          amount={0.3}
+        >
           {config.panels.map((panel) => (
             <div
               key={panel.title}

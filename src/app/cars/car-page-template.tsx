@@ -70,70 +70,68 @@ export default function CarPageTemplate({
 
         <Reveal className="w-full xl:w-2/3" delay={0.06} amount={0.42}>
           <div className="relative aspect-[16/14] min-h-[220px] w-full rounded-[32px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1E8_100%)] p-2.5 shadow-[0_24px_60px_rgba(45,33,15,0.12)] md:p-3">
-            <div className="relative h-full w-full overflow-hidden rounded-[24px]">
+            <div className="relative h-full w-full">
               <Image
                 src={heroImageSrc}
                 alt={heroImageAlt}
                 fill
                 priority
-                className="object-cover"
+                className="rounded-[24px] object-cover"
               />
             </div>
           </div>
         </Reveal>
       </div>
 
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        <Reveal className="order-1 lg:order-2" amount={0.38}>
-          <h2 className="heading-2 mb-6 text-[#404040]">
-            <span className="md:hidden">
-              {discoverTitleMobile ?? discoverTitle}
-            </span>
-            <span className="hidden md:inline">{discoverTitle}</span>
-          </h2>
-          <div className="space-y-4 body-text">
-            {discoverParagraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-        </Reveal>
-        <RevealGroup className="order-1 lg:order-2 grid grid-cols-2 gap-3 md:gap-4" amount={0.32}>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-2 shadow-[0_18px_40px_rgba(45,33,15,0.08)]">
-            <div className="relative h-full w-full overflow-hidden rounded-[18px]">
-              <Image
-                src={gallery[0].src}
-                alt={gallery[0].alt}
-                fill
-                className="object-cover"
-              />
+      <div className="container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <Reveal amount={0.38}>
+            <h2 className="heading-2 mb-6 text-[#404040]">
+              <span className="md:hidden">
+                {discoverTitleMobile ?? discoverTitle}
+              </span>
+              <span className="hidden md:inline">{discoverTitle}</span>
+            </h2>
+            <div className="space-y-4 body-text">
+              {discoverParagraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-2 shadow-[0_18px_40px_rgba(45,33,15,0.08)]">
-            <div className="relative h-full w-full overflow-hidden rounded-[18px]">
-              <Image
-                src={gallery[1].src}
-                alt={gallery[1].alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </RevealGroup>
-      </div>
+          </Reveal>
 
-      <Reveal className="container" amount={0.28}>
-        <div className="relative h-[280px] md:h-[460px] lg:h-[560px] overflow-hidden rounded-[28px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-2 shadow-[0_22px_48px_rgba(45,33,15,0.10)]">
-          <div className="relative h-full w-full overflow-hidden rounded-[22px]">
-            <Image
-              src={gallery[2].src}
-              alt={gallery[2].alt}
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
-          </div>
+          <Reveal className="space-y-3 md:space-y-4" amount={0.32}>
+            <div className="flex flex-row gap-3 md:gap-4">
+              {gallery.slice(0, 2).map((image) => (
+                <div
+                  key={image.src}
+                  className="relative aspect-square flex-1 rounded-[24px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-2 shadow-[0_18px_40px_rgba(45,33,15,0.08)]"
+                >
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="rounded-[18px] object-cover"
+                      sizes="(min-width: 1024px) 25vw, 50vw"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="relative aspect-[4/3] w-full rounded-[28px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-2 shadow-[0_22px_48px_rgba(45,33,15,0.10)]">
+              <div className="relative h-full w-full">
+                <Image
+                  src={gallery[2].src}
+                  alt={gallery[2].alt}
+                  fill
+                  className="rounded-[22px] object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+              </div>
+            </div>
+          </Reveal>
         </div>
-      </Reveal>
+      </div>
 
       <div className="container">
         <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>

@@ -163,7 +163,7 @@ export const transfersPage: ServicePageConfig = {
   slug: "transfers",
   path: "/our-services/transfers",
   metadata: {
-    title: "Private Transfers on the French Riviera | MY Riviera",
+    title: "Private Transfers on the French Riviera | viplimonice",
     description:
       "Private chauffeur transfers for Nice Airport arrivals, hotel pickups, Monaco rides, Cannes events, and long-distance journeys across the French Riviera.",
     keywords: [
@@ -236,7 +236,7 @@ export const hourlyChauffeurPage: ServicePageConfig = {
   slug: "hourly-chauffeur",
   path: "/our-services/hourly-chauffeur",
   metadata: {
-    title: "Hourly Chauffeur Service on the French Riviera | MY Riviera",
+    title: "Hourly Chauffeur Service on the French Riviera | viplimonice",
     description:
       "Private hourly chauffeur service in Nice, Cannes, Monaco, and Saint-Tropez for business days, shopping, lunches, and flexible premium travel.",
     keywords: [
@@ -309,7 +309,7 @@ export const chauffeurToursPage: ServicePageConfig = {
   slug: "chauffeur-tours",
   path: "/our-services/chauffeur-tours",
   metadata: {
-    title: "Chauffeur Tours on the French Riviera | MY Riviera",
+    title: "Chauffeur Tours on the French Riviera | viplimonice",
     description:
       "Private chauffeur tours in Nice, Cannes, Monaco, and Saint-Tropez with luxury vehicles, flexible itineraries, and refined touring across the Riviera.",
     keywords: [
@@ -383,7 +383,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "nice-airport-transfer",
     path: "/our-services/transfers/nice-airport-transfer",
     metadata: {
-      title: "Nice Airport Transfer | Private Chauffeur Arrival | MY Riviera",
+      title: "Nice Airport Transfer | Private Chauffeur Arrival | viplimonice",
       description:
         "Premium Nice Airport transfer service with meet-and-greet, luggage assistance, and private chauffeur rides to Monaco, Cannes, Nice, and beyond.",
       keywords: [
@@ -455,7 +455,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "long-distance-transfer",
     path: "/our-services/transfers/long-distance-transfer",
     metadata: {
-      title: "Long-Distance Private Transfer | Chauffeur Service | MY Riviera",
+      title: "Long-Distance Private Transfer | Chauffeur Service | viplimonice",
       description:
         "Long-distance chauffeur transfers from the French Riviera to cities, resorts, villas, and airports with private comfort and premium execution.",
       keywords: [
@@ -530,7 +530,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "nice",
     path: "/our-services/hourly-chauffeur/nice",
     metadata: {
-      title: "Hourly Chauffeur Service in Nice | MY Riviera",
+      title: "Hourly Chauffeur Service in Nice | viplimonice",
       description:
         "Private hourly chauffeur service in Nice for hotels, shopping, lunches, meetings, appointments, and flexible premium city travel.",
       keywords: [
@@ -602,7 +602,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "cannes",
     path: "/our-services/hourly-chauffeur/cannes",
     metadata: {
-      title: "Hourly Chauffeur Service in Cannes | MY Riviera",
+      title: "Hourly Chauffeur Service in Cannes | viplimonice",
       description:
         "Private hourly chauffeur service in Cannes for congresses, Croisette hotels, shopping, dinners, and flexible premium travel.",
       keywords: [
@@ -674,7 +674,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "monaco",
     path: "/our-services/hourly-chauffeur/monaco",
     metadata: {
-      title: "Hourly Chauffeur Service in Monaco | MY Riviera",
+      title: "Hourly Chauffeur Service in Monaco | viplimonice",
       description:
         "Private hourly chauffeur service in Monaco for meetings, hotels, yacht access, executive travel, and refined standby transportation.",
       keywords: [
@@ -746,7 +746,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "saint-tropez",
     path: "/our-services/hourly-chauffeur/saint-tropez",
     metadata: {
-      title: "Hourly Chauffeur Service in Saint-Tropez | MY Riviera",
+      title: "Hourly Chauffeur Service in Saint-Tropez | viplimonice",
       description:
         "Private hourly chauffeur service in Saint-Tropez for villas, beach clubs, shopping, lunch reservations, and flexible summer travel.",
       keywords: [
@@ -821,7 +821,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "nice",
     path: "/our-services/chauffeur-tours/nice",
     metadata: {
-      title: "Chauffeur Tour in Nice | Private Riviera Touring | MY Riviera",
+      title: "Chauffeur Tour in Nice | Private Riviera Touring | viplimonice",
       description:
         "Private chauffeur tour in Nice with elegant city touring, coastal viewpoints, old town stops, and premium transportation throughout the day.",
       keywords: [
@@ -893,7 +893,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "cannes",
     path: "/our-services/chauffeur-tours/cannes",
     metadata: {
-      title: "Chauffeur Tour in Cannes | Private Riviera Touring | MY Riviera",
+      title: "Chauffeur Tour in Cannes | Private Riviera Touring | viplimonice",
       description:
         "Private chauffeur tour in Cannes with Croisette highlights, shopping areas, seafront touring, and premium day travel.",
       keywords: [
@@ -965,7 +965,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "monaco",
     path: "/our-services/chauffeur-tours/monaco",
     metadata: {
-      title: "Chauffeur Tour in Monaco | Private Riviera Touring | MY Riviera",
+      title: "Chauffeur Tour in Monaco | Private Riviera Touring | viplimonice",
       description:
         "Private chauffeur tour in Monaco with prestige landmarks, panoramic roads, elegant arrivals, and premium touring throughout the principality.",
       keywords: [
@@ -1038,7 +1038,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     path: "/our-services/chauffeur-tours/saint-tropez",
     metadata: {
       title:
-        "Chauffeur Tour in Saint-Tropez | Private Riviera Touring | MY Riviera",
+        "Chauffeur Tour in Saint-Tropez | Private Riviera Touring | viplimonice",
       description:
         "Private chauffeur tour in Saint-Tropez with village access, coastal roads, elegant beach-side stops, and premium touring comfort.",
       keywords: [

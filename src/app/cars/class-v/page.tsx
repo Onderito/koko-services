@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CarPageTemplate from "../car-page-template";
 
 export const metadata: Metadata = {
-  title: "Mercedes Class-V Driver Service in French Riviera | MY Riviera",
+  title: "Mercedes Class-V Driver Service in French Riviera | viplimonice",
   description:
     "Travel in comfort with our spacious Mercedes-Benz Class-V. Ideal for families, business teams or group transfers from Nice to Monaco, Cannes and beyond.",
   keywords: [
@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     "van driver Nice",
     "group transfer French Riviera",
     "driver Class V Monaco",
-    "MY Riviera Class V",
+    "viplimonice Class V",
     "private van with driver French Riviera",
   ],
   alternates: {
-    canonical: "https://kokolimonice.com/cars/class-v",
+    canonical: "https://viplimonice.com/cars/class-v",
   },
 };
 

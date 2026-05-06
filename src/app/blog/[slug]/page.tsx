@@ -35,7 +35,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | MY Riviera`,
+    title: `${post.title} | viplimonice`,
     description: post.description,
     keywords: post.keywords,
     alternates: {
@@ -45,7 +45,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       url: `${siteUrl}/blog/${post.slug}`,
-      siteName: "MY Riviera",
+      siteName: "viplimonice",
       type: "article",
       publishedTime: post.publishedAt,
       images: [
@@ -77,11 +77,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     dateModified: post.publishedAt,
     author: {
       "@type": "Organization",
-      name: "MY Riviera",
+      name: "viplimonice",
     },
     publisher: {
       "@type": "Organization",
-      name: "MY Riviera",
+      name: "viplimonice",
     },
     mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
   };
@@ -114,13 +114,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <section className="container">
           <div className="overflow-hidden rounded-[36px] border border-[#E5E5E5] bg-white shadow-sm">
             <div className="relative min-h-[420px] overflow-hidden md:min-h-[560px]">
-              <Image
-                src={post.imageUrl}
-                alt={post.imageAlt}
-                fill
-                priority
-                className="object-cover"
-              />
+              {post.heroImages && post.heroImages.length > 0 ? (
+                <div className="absolute inset-0 grid grid-cols-2 gap-0.5 md:flex md:gap-0.5">
+                  {post.heroImages.map((img, index) => (
+                    <div
+                      key={img.src}
+                      className="relative h-full w-full overflow-hidden md:flex-1"
+                    >
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        priority={index === 0}
+                        className="object-cover"
+                        sizes="(min-width: 768px) 25vw, 50vw"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <Image
+                  src={post.imageUrl}
+                  alt={post.imageAlt}
+                  fill
+                  priority
+                  className="object-cover"
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/75" />
               <div className="relative z-10 flex min-h-[420px] flex-col justify-end p-6 text-white md:min-h-[560px] md:p-10 xl:p-14">
                 <Link

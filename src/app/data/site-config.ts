@@ -1,6 +1,7 @@
-export const siteUrl = "https://kokolimonice.com";
-export const businessName = "MY Riviera";
-export const businessTitle = "MY Riviera | Private Driver in the French Riviera";
+export const siteUrl = "https://viplimonice.com";
+export const businessName = "Viplimonice";
+export const businessTitle =
+  "viplimonice | Private Driver in the French Riviera";
 export const contactPhone = "+33771698142";
 export const contactPhoneDisplay = "+33 7 71 69 81 42";
 export const contactEmail = "Info@myriviera.fr";

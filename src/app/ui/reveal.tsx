@@ -12,13 +12,13 @@ type RevealProps = {
 };
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
-const VIEWPORT_MARGIN = "0px 0px -10% 0px";
+const VIEWPORT_MARGIN = "0px 0px 15% 0px";
 
 export function Reveal({
   children,
   delay = 0,
   y = 18,
-  amount = 0.34,
+  amount = 0.1,
   className,
 }: RevealProps) {
   const prefersReduced = useReducedMotion();
@@ -56,7 +56,7 @@ export function RevealGroup({
   children,
   stagger = 0.08,
   y = 18,
-  amount = 0.28,
+  amount = 0.08,
   className,
 }: RevealGroupProps) {
   const prefersReduced = useReducedMotion();

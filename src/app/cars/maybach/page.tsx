@@ -3,7 +3,7 @@ import CarPageTemplate from "../car-page-template";
 
 export const metadata: Metadata = {
   title:
-    "Mercedes Maybach Driver Service in French Riviera | VIP VTC | MY Riviera",
+    "Mercedes Maybach Driver Service in French Riviera | VIP VTC | viplimonice",
   description:
     "Enjoy the ultimate luxury ride with our Mercedes Maybach. Driver service for VIPs, weddings, or executive transfers across the French Riviera.",
   keywords: [
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     "luxury driver French Riviera",
     "VIP VTC Maybach",
     "wedding car French Riviera",
-    "MY Riviera Maybach",
+    "viplimonice Maybach",
   ],
   alternates: {
-    canonical: "https://kokolimonice.com/cars/maybach",
+    canonical: "https://viplimonice.com/cars/maybach",
   },
 };
 

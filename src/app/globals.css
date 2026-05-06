@@ -83,6 +83,19 @@
   }
 }
 
+/* Safari iOS fix: overflow-hidden + rounded-* doesn't clip
+   absolutely-positioned descendants (e.g. next/image with fill).
+   `isolation: isolate` creates a stacking context and
+   `transform: translateZ(0)` forces a compositing layer,
+   which together make Safari respect border-radius clipping. */
+[class~="overflow-hidden"][class*="rounded"] {
+  isolation: isolate;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+}
+
 @layer utilities {
   .font-manrope-regular {
     font-family: var(--font-manrope);

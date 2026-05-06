@@ -8,7 +8,7 @@ import { Reveal, RevealGroup } from "../ui/reveal";
 export const metadata: Metadata = {
   title: "Blog | Private Driver Tips for Nice, Cannes and Monaco",
   description:
-    "Read MY Riviera articles about airport transfers, private driver services, Monaco business travel, Cannes events and luxury transport on the French Riviera.",
+    "Read viplimonice articles about airport transfers, private driver services, Monaco business travel, Cannes events and luxury transport on the French Riviera.",
   keywords: [
     "private driver blog French Riviera",
     "Nice airport transfer blog",
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/blog`,
   },
   openGraph: {
-    title: "MY Riviera Blog",
+    title: "viplimonice Blog",
     description:
       "Luxury transport advice, airport transfer guides and private driver tips for the French Riviera.",
     url: `${siteUrl}/blog`,
-    siteName: "MY Riviera",
+    siteName: "viplimonice",
     type: "website",
   },
 };
@@ -38,23 +38,54 @@ export default function BlogIndexPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] pb-20 pt-28 md:pt-32">
       <section className="container">
-        <Reveal className="rounded-[36px] border border-[#E8DCCB] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF3E9_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10 xl:p-14" amount={0.42}>
-          <div className="max-w-3xl space-y-5">
-            <span className="inline-flex w-fit rounded-full border border-[#E3D3BC] bg-white/85 px-4 py-2 text-[14px] font-manrope-bold text-[#6D5830]">
+        <Reveal className="relative overflow-hidden rounded-[36px] border border-[#E8DCCB] bg-[linear-gradient(160deg,#FBF3E5_0%,#F5E6CC_45%,#EAD6B4_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.10),inset_0_1px_0_rgba(255,255,255,0.8)] md:p-10 xl:p-14" amount={0.42}>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-40 -left-32 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(232,217,196,0.75)_0%,rgba(232,217,196,0)_65%)] blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-32 -right-24 h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle,rgba(198,164,112,0.35)_0%,rgba(198,164,112,0)_65%)] blur-3xl"
+          />
+          <svg
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-8 -right-8 h-[340px] w-[340px] text-[#C9A874] opacity-[0.18]"
+            viewBox="0 0 400 400"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 40 260 Q 120 160, 220 220 T 380 140"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              fill="none"
+            />
+            <path
+              d="M 20 320 Q 140 220, 240 290 T 400 220"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              fill="none"
+            />
+            <circle cx="320" cy="120" r="48" stroke="currentColor" strokeWidth="1.5" fill="none" />
+            <circle cx="320" cy="120" r="28" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          </svg>
+
+          <div className="relative z-10 max-w-3xl space-y-5">
+            <span className="inline-flex w-fit rounded-full border border-[#E3D3BC] bg-white/85 px-4 py-2 text-[14px] font-manrope-bold text-[#6D5830] shadow-[0_10px_24px_rgba(135,108,61,0.14),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-sm">
               French Riviera blog
             </span>
-            <h1 className="heading-2 max-w-4xl text-[#404040]">
+            <h1 className="heading-2 max-w-4xl text-[#1F1F1F]">
               Private driver guides for smoother travel on the French Riviera
             </h1>
-            <p className="body-text max-w-2xl">
+            <p className="body-text max-w-2xl !text-[#5C5C5C]">
               Explore practical advice for airport transfers, event travel,
               business rides and day trips across Nice, Cannes, Monaco and
               Saint-Tropez.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="rounded-[24px] border border-[#E9DECF] bg-white/75 p-5">
+          <div className="relative z-10 mt-8 grid gap-4 md:grid-cols-3">
+            <div className="rounded-[24px] border border-[#E9DECF] bg-white/80 p-5 backdrop-blur-sm shadow-[0_8px_20px_rgba(135,108,61,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
               <span className="text-[34px] font-manrope-bold text-[#404040]">
                 {blogPosts.length}
               </span>
@@ -62,7 +93,7 @@ export default function BlogIndexPage() {
                 Practical private driver guides
               </p>
             </div>
-            <div className="rounded-[24px] border border-[#E9DECF] bg-white/75 p-5">
+            <div className="rounded-[24px] border border-[#E9DECF] bg-white/80 p-5 backdrop-blur-sm shadow-[0_8px_20px_rgba(135,108,61,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
               <span className="text-[34px] font-manrope-bold text-[#404040]">
                 4
               </span>
@@ -70,7 +101,7 @@ export default function BlogIndexPage() {
                 Core Riviera destinations covered
               </p>
             </div>
-            <div className="rounded-[24px] border border-[#E9DECF] bg-white/75 p-5">
+            <div className="rounded-[24px] border border-[#E9DECF] bg-white/80 p-5 backdrop-blur-sm shadow-[0_8px_20px_rgba(135,108,61,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
               <span className="text-[34px] font-manrope-bold text-[#404040]">
                 3
               </span>
