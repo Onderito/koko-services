@@ -27,7 +27,7 @@ export default function HeroSection() {
           <div className="relative w-full min-h-[220px] aspect-[18/18] lg:aspect-[16/14] rounded-3xl bg-white">
             <Image
               src="/assets/images/services/driver.webp"
-              alt="heroImageAlt"
+              alt="Private chauffeur tour on the French Riviera"
               fill
               priority
               className="object-cover rounded-3xl ring-6 ring-gray-100 shadow-2xl"

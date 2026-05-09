@@ -8,7 +8,7 @@ import { Reveal } from "../ui/reveal";
 export const metadata: Metadata = {
   title: "Blog | Private Driver Tips for Nice, Cannes and Monaco",
   description:
-    "Read viplimonice articles about airport transfers, private driver services, Monaco business travel, Cannes events and luxury transport on the French Riviera.",
+    "Private driver guides for the French Riviera: airport transfers, Monaco business travel, Cannes events and luxury transport in Nice and Saint-Tropez.",
   keywords: [
     "private driver blog French Riviera",
     "Nice airport transfer blog",

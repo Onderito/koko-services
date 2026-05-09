@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title:
     "Partner With Viplimonice | Luxury Chauffeur French Riviera | Travel Agencies & Concierge",
   description:
-    "Join Viplimonice's partner program. Premium chauffeur service for travel agencies, concierge services, and luxury hotels on the French Riviera. Commission-based. Priority booking. 24/7.",
+    "Partner with Viplimonice — premium chauffeur service for agencies, concierge teams and luxury hotels on the French Riviera. Commission-based, 24/7 booking.",
   alternates: {
     canonical: "https://viplimonice.com/partners",
   },

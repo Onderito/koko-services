@@ -26,7 +26,7 @@ export default function HeroSection() {
           <div className="relative w-full min-h-[220px] aspect-[16/14] rounded-3xl bg-white">
             <Image
               src="/assets/images/services/monaco.webp"
-              alt="heroImageAlt"
+              alt="Hourly private chauffeur service in Monaco and the French Riviera"
               fill
               priority
               className="object-cover rounded-3xl ring-6 ring-gray-100 shadow-2xl"

@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Private Driver in Nice, Cannes and Monaco | viplimonice",
   description:
-    "Luxury private driver service on the French Riviera. Book airport transfers, hourly chauffeur hire and premium travel in Nice, Cannes, Monaco and Saint-Tropez.",
+    "Luxury private driver service in Nice, Cannes, Monaco and Saint-Tropez. Book airport transfers, hourly chauffeur hire and premium Riviera travel.",
   alternates: {
     canonical: "https://viplimonice.com",
   },
