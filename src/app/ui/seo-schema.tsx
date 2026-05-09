@@ -64,7 +64,70 @@ export default function SeoSchema() {
         closes: "23:59",
       },
     ],
-    sameAs: [],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "165",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Lisa W" },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        datePublished: "2025-07-01",
+        reviewBody:
+          "Amazing organic wineries so close to Nice. After a short ride we toured two unique locations and ended with tastings. Picture perfect.",
+        publisher: { "@type": "Organization", name: "Tripadvisor" },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Henrik" },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        datePublished: "2024-08-01",
+        reviewBody:
+          "Perfect, well distinguish between the different procedures of the vineyards in Nice. Super guide Marie. Knowledgeful and entertaining.",
+        publisher: { "@type": "Organization", name: "Tripadvisor" },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Cyndi K" },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        datePublished: "2024-06-01",
+        reviewBody:
+          "My family group of four scheduled with Marie on the day we arrived in Nice. It was the perfect way to acclimate while doing something fun and interesting.",
+        publisher: { "@type": "Organization", name: "Tripadvisor" },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Tripadvisor guest" },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        datePublished: "2024-07-01",
+        reviewBody:
+          "viplimonice took good care of us, was welcoming and nice. Beautiful views and exciting info about Nice, good wine and specialties from Cannes.",
+        publisher: { "@type": "Organization", name: "Tripadvisor" },
+      },
+    ],
+    sameAs: [
+      "https://www.tripadvisor.com/Attraction_Review-g187234-d7971865-Reviews-MY_Riviera_Tours_Transfers-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_.html",
+    ],
   };
 
   const transportService = {
