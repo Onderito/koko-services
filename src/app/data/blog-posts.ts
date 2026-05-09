@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "Full-Day Private Tour From Nice to Antibes, Cannes and Saint-Paul-de-Vence",
     description:
-      "Explore the western French Riviera with a private chauffeur: Old Antibes and Port Vauban, Picasso Museum, Cap d'Antibes panoramic drive, La Croisette in Cannes and the medieval village of Saint-Paul-de-Vence.",
+      "Western Riviera private tour with chauffeur: Old Antibes, Picasso Museum, Cap d'Antibes, La Croisette in Cannes and Saint-Paul-de-Vence.",
     excerpt:
       "A full-day private tour from Nice through Old Antibes, the Picasso Museum, Cap d'Antibes, La Croisette in Cannes and the medieval streets of Saint-Paul-de-Vence.",
     category: "Private Tour",
@@ -228,7 +228,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "Private Tour From Nice to Èze, Villa Rothschild, Saint-Jean-Cap-Ferrat and Monaco",
     description:
-      "Discover the ultimate French Riviera private tour from Nice with a chauffeur: Èze village, Villa Ephrussi de Rothschild, Saint-Jean-Cap-Ferrat, Monaco and Monte-Carlo in half a day or a full day.",
+      "Private chauffeur tour from Nice: Èze village, Villa Ephrussi de Rothschild, Saint-Jean-Cap-Ferrat, Monaco and Monte-Carlo in half or full day.",
     excerpt:
       "A chauffeur-led private tour from Nice through Èze, Villa Rothschild, Saint-Jean-Cap-Ferrat, Monaco and Monte-Carlo — half-day and full-day itineraries.",
     category: "Private Tour",
@@ -875,7 +875,7 @@ export const blogPosts: BlogPost[] = [
     slug: "monaco-business-chauffeur",
     title: "Why Business Travelers in Monaco Prefer a Dedicated Chauffeur",
     description:
-      "Monaco business travel often requires more than transport. This guide explains why executives choose dedicated chauffeur service for reliability and discretion.",
+      "Why executives choose dedicated chauffeur service for Monaco business travel: reliability, discretion and seamless logistics across the Riviera.",
     excerpt:
       "For Monaco business travel, a dedicated chauffeur is often a productivity and risk-management decision.",
     category: "Business Travel",
