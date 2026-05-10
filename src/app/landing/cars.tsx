@@ -6,17 +6,6 @@ import { Reveal, RevealGroup } from "../ui/reveal";
 
 const vehiclesData = [
   {
-    name: "Maybach",
-    type: "Limousine",
-    imageUrl: "/assets/images/cars/maybach/maybach.webp",
-    summary: "Our most elevated option for VIP arrivals and special moments.",
-    guests: "3 guests",
-    bags: "3 bags",
-    feature: "VIP",
-    link: "/cars/maybach",
-    featured: true,
-  },
-  {
     name: "Mercedes V-CLASS",
     type: "Van",
     imageUrl: "/assets/images/cars/class-v/class-v-mercedes.webp",
@@ -26,6 +15,17 @@ const vehiclesData = [
     feature: "Ambient",
     link: "/cars/class-v",
     featured: false,
+  },
+  {
+    name: "Mercedes Maybach",
+    type: "Limousine",
+    imageUrl: "/assets/images/cars/maybach/maybach.webp",
+    summary: "Our most elevated option for VIP arrivals and special moments.",
+    guests: "3 guests",
+    bags: "3 bags",
+    feature: "VIP",
+    link: "/cars/maybach",
+    featured: true,
   },
   {
     name: "Mercedes S-CLASS",
@@ -43,15 +43,15 @@ const vehiclesData = [
 
 export default function Cars() {
   const ctaLabels = [
-    "Discover the Maybach",
     "Discover the V-Class",
+    "Discover the Maybach",
     "Discover the S-Class",
   ];
 
   return (
     <div className="flex-center-column">
       <Reveal className="flex w-full flex-col items-center">
-        <span className="section-label">Our Cars</span>
+        <span className="section-label">Our Fleet</span>
         <h2 className="heading-2 text-[#404040] mt-4 text-center ">
           Our Fleet, Your Comfort
         </h2>
@@ -139,7 +139,7 @@ export default function Cars() {
                   aria-label={`view details about ${v.name}`}
                   href={v.link}
                   scroll
-                  className="inline-flex w-full items-center justify-center rounded-xl border border-[#DADADA] bg-white px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-[#404040] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F7F7F7]"
+                  className="inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-[#6D5830] shadow-[0_14px_30px_-8px_rgba(109,88,48,0.28),inset_0_1px_0_rgba(255,255,255,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-8px_rgba(109,88,48,0.32),inset_0_1px_0_rgba(255,255,255,0.9)]"
                 >
                   {ctaLabels[index]}
                   <span className="sr-only"> about {v.name}</span>

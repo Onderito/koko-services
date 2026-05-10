@@ -15,9 +15,9 @@ const primaryLinks = [
 ];
 
 const secondaryLinks = [
-  { href: "/cars/class-s", label: "Our Cars" },
+  { href: "/cars/class-s", label: "Our Fleet" },
   { href: "/blog", label: "Blog" },
-  { href: "/partners", label: "Partner Program" },
+  { href: "/partners", label: "Travel Partners" },
   { href: "/contact-me", label: "Request a Quote" },
   { href: "/legal-privacy", label: "Legal & Privacy" },
 ];

@@ -55,24 +55,24 @@ export type ServicePageConfig = {
 export const serviceMenuLinks: ServiceCardLink[] = [
   {
     href: "/our-services/transfers",
-    label: "Transfers",
+    label: "Airport Transfers",
     description: "Airport and long-distance chauffeur rides",
   },
   {
     href: "/our-services/hourly-chauffeur",
-    label: "Hourly Chauffeur",
+    label: "Hourly Chauffeur Service",
     description: "Flexible chauffeur service in key Riviera destinations",
   },
   {
     href: "/our-services/chauffeur-tours",
-    label: "Chauffeur Tours",
+    label: "Private Tours",
     description: "Private destination tours across the Riviera",
   },
 ];
 
 export const homeServiceCards = [
   {
-    title: "Transfers",
+    title: "Airport Transfers",
     kicker: "Airport & long-distance",
     description:
       "Point-to-point chauffeur service for airport arrivals, hotel pickups, events, and long-distance Riviera journeys with precise timing and premium comfort.",
@@ -80,7 +80,7 @@ export const homeServiceCards = [
     link: "/our-services/transfers",
   },
   {
-    title: "Hourly Chauffeur",
+    title: "Hourly Chauffeur Service",
     kicker: "Flexible by destination",
     description:
       "A dedicated chauffeur on standby for meetings, shopping, lunches, beach clubs, and multi-stop days in Nice, Cannes, Monaco, and Saint-Tropez.",
@@ -88,7 +88,7 @@ export const homeServiceCards = [
     link: "/our-services/hourly-chauffeur",
   },
   {
-    title: "Chauffeur Tours",
+    title: "Private Tours",
     kicker: "Curated Riviera days",
     description:
       "Private chauffeur-led tours with flexible itineraries, local guidance, and elegant door-to-door travel for discovering Riviera destinations at your pace.",
@@ -174,8 +174,8 @@ export const transfersPage: ServicePageConfig = {
       "long distance chauffeur Riviera",
     ],
   },
-  serviceLabel: "Transfers",
-  heroTitle: "Private Transfers Across the French Riviera",
+  serviceLabel: "Airport Transfers",
+  heroTitle: "Private Airport Transfers on the French Riviera",
   heroDescription:
     "Luxury chauffeur transfers for airport arrivals, hotel pickups, events, and longer journeys with precise coordination and discreet service.",
   heroImageSrc: "/assets/images/services/across-the-french-riviera.webp",
@@ -247,7 +247,7 @@ export const hourlyChauffeurPage: ServicePageConfig = {
       "Saint-Tropez hourly chauffeur",
     ],
   },
-  serviceLabel: "Hourly Chauffeur",
+  serviceLabel: "Hourly Chauffeur Service",
   heroTitle: "Hourly Chauffeur Service for Flexible Riviera Days",
   heroDescription:
     "A dedicated chauffeur on standby for business travel, shopping, lunches, meetings, and multi-stop days across the French Riviera.",
@@ -320,8 +320,8 @@ export const chauffeurToursPage: ServicePageConfig = {
       "Saint-Tropez chauffeur day trip",
     ],
   },
-  serviceLabel: "Chauffeur Tours",
-  heroTitle: "Chauffeur Tours for Refined Riviera Discovery",
+  serviceLabel: "Private Tours",
+  heroTitle: "Private Tours for Refined Riviera Discovery",
   heroDescription:
     "Private chauffeur-led touring for travelers who want scenic drives, elegant stops, and a flexible itinerary without handling the logistics themselves.",
   heroImageSrc: "/assets/images/services/driver.webp",
@@ -833,7 +833,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Nice Tour",
-    heroTitle: "Chauffeur Tour in Nice",
+    heroTitle: "Private Tour in Nice",
     heroDescription:
       "A private chauffeur-led tour of Nice with elegant city movement, scenic coastline, and refined pacing throughout the day.",
     heroImageSrc: "/assets/images/services/nice-transfer.jpeg",
@@ -905,7 +905,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Cannes Tour",
-    heroTitle: "Chauffeur Tour in Cannes",
+    heroTitle: "Private Tour in Cannes",
     heroDescription:
       "A private chauffeur-guided day in Cannes with seafront movement, elegant stops, shopping access, and a polished Riviera touring experience.",
     heroImageSrc: "/assets/images/services/cannes-transfer.webp",
@@ -977,7 +977,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Monaco Tour",
-    heroTitle: "Chauffeur Tour in Monaco",
+    heroTitle: "Private Tour in Monaco",
     heroDescription:
       "A private chauffeur-led Monaco experience shaped around prestige landmarks, panoramic movement, and refined touring comfort.",
     heroImageSrc: "/assets/images/services/monaco.webp",
@@ -1050,7 +1050,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Saint-Tropez Tour",
-    heroTitle: "Chauffeur Tour in Saint-Tropez",
+    heroTitle: "Private Tour in Saint-Tropez",
     heroDescription:
       "A private chauffeur-led Saint-Tropez day shaped around scenic arrivals, village atmosphere, beach-side stops, and premium flexibility.",
     heroImageSrc: "/assets/images/services/saint-tropez.webp",

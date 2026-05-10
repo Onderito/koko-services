@@ -11,17 +11,17 @@ const contactCtaLabel = "WhatsApp Us";
 const vehicleLinks = [
   {
     href: "/cars/class-v",
-    label: "Class V",
+    label: "Mercedes V-Class",
     description: "Spacious Mercedes van for groups and luggage",
   },
   {
     href: "/cars/class-s",
-    label: "Class S",
+    label: "Mercedes S-Class",
     description: "Executive comfort for premium transfers",
   },
   {
     href: "/cars/maybach",
-    label: "Maybach",
+    label: "Mercedes Maybach",
     description: "Flagship luxury for top-tier bookings",
   },
 ];
@@ -138,7 +138,7 @@ export default function NavBar() {
               onNavigate={handleResetScroll}
             />
             <DesktopDropdown
-              label="Vehicles"
+              label="Our Fleet"
               links={vehicleLinks}
               isOpen={activeDropdown === "vehicles"}
               onOpen={() => setActiveDropdown("vehicles")}
@@ -160,7 +160,7 @@ export default function NavBar() {
                 href="/partners"
                 className="whitespace-nowrap font-manrope-regular text-[14px] text-gray-600 transition-colors duration-200 hover:text-[#404040]"
               >
-                Partners
+                Travel Partners
               </Link>
             </li>
           </ul>
@@ -232,7 +232,7 @@ export default function NavBar() {
               ))}
               <li>
                 <span className="block px-4 pb-1 pt-3 font-manrope-bold text-[13px] uppercase tracking-[0.14em] text-gray-400">
-                  Vehicles
+                  Our Fleet
                 </span>
               </li>
               {vehicleLinks.map((item) => (
@@ -261,7 +261,7 @@ export default function NavBar() {
                   href="/partners"
                   className="block rounded-2xl px-4 py-3 font-manrope-regular text-[16px] text-gray-600 transition-colors duration-300 hover:bg-[#F6F6F6] hover:text-[#404040]"
                 >
-                  Partners
+                  Travel Partners
                 </Link>
               </li>
               <li>

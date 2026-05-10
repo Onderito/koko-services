@@ -12,19 +12,19 @@ gsap.registerPlugin(ScrollTrigger);
 const cards = [
   {
     title: "1,200+ transfers completed",
-    text: "Over a thousand successful journeys handled with precision, professionalism, and care — trusted by clients across the French Riviera.",
+    text: "Over a thousand successful journeys handled with precision, professionalism, and care, trusted by clients across the French Riviera.",
   },
   {
     title: "0 missed pickups",
-    text: "Never late, never absent. We’ve honored every reservation with punctuality and dedication — because your time matters.",
+    text: "Never late, never absent. We’ve honored every reservation with punctuality and dedication, because your time matters.",
   },
   {
     title: "100% on-time arrivals",
-    text: "Time is luxury. Our entire service is built to ensure you arrive precisely when you need to — no delays, no excuses.",
+    text: "Time is luxury. Our entire service is built to ensure you arrive precisely when you need to, no delays, no excuses.",
   },
   {
     title: "Multilingual service",
-    text: "We speak English, French, Turkish and Russian — to make your experience smooth, seamless, and understood at every moment.",
+    text: "We speak English, French, Turkish and Russian, to make your experience smooth, seamless, and understood at every moment.",
   },
 ];
 
