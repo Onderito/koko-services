@@ -2,9 +2,11 @@
 import { useMemo, useRef, useState, useLayoutEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import PhoneInput from "../ui/phone-input";
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function ContactMe() {
+  const [countryCode, setCountryCode] = useState("+33");
   const [formData, setFormData] = useState({
     service: "transfers",
     pickupDate: "",
@@ -91,6 +93,7 @@ export default function ContactMe() {
         },
         body: JSON.stringify({
           ...formData,
+          phone: `${countryCode} ${formData.phone}`,
           website: honeypot,
         }),
       });
@@ -104,6 +107,7 @@ export default function ContactMe() {
 
       setStatus("success");
       setOpenModal(true);
+      setCountryCode("+33");
       setFormData({
         service: "transfers",
         pickupDate: "",
@@ -368,18 +372,13 @@ export default function ContactMe() {
             <label htmlFor="phone" className="font-manrope-bold text-[15px] text-[#1F1F1F]">
               Phone Number
             </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              inputMode="tel"
-              autoComplete="tel"
-              value={formData.phone}
-              onChange={handleChange}
+            <PhoneInput
+              countryCode={countryCode}
+              phone={formData.phone}
+              onCountryChange={setCountryCode}
+              onPhoneChange={handleChange}
               onBlur={handleBlur}
-              placeholder="+33 6 12 34 56 78"
-              className={inputCls("phone")}
-              required
+              error={showError("phone")}
             />
             {showError("phone") && (
               <span className="text-xs text-red-600 mt-1">{errors.phone}</span>

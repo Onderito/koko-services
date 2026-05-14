@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 
 import Footer from "../layout/footer";
+import PhoneInput from "../ui/phone-input";
 import {
   businessName,
   contactEmail,
@@ -235,6 +236,7 @@ const initialFormData: PartnerFormData = {
 };
 
 export default function PartnersClientPage() {
+  const [countryCode, setCountryCode] = useState("+33");
   const [formData, setFormData] = useState<PartnerFormData>(initialFormData);
   const [status, setStatus] = useState<Status>("idle");
   const [submitted, setSubmitted] = useState(false);
@@ -326,7 +328,7 @@ export default function PartnersClientPage() {
       const response = await fetch("/api/partner", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, phone: `${countryCode} ${formData.phone}` }),
       });
 
       if (!response.ok) {
@@ -336,6 +338,7 @@ export default function PartnersClientPage() {
 
       setStatus("success");
       setOpenModal(true);
+      setCountryCode("+33");
       setFormData(initialFormData);
       setTouched({});
       setSubmitted(false);
@@ -851,15 +854,19 @@ export default function PartnersClientPage() {
                   >
                     Phone / WhatsApp *
                   </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={inputCls("phone")}
-                    required
-                  />
+                  <div className="mt-2">
+                    <PhoneInput
+                      countryCode={countryCode}
+                      phone={formData.phone}
+                      onCountryChange={setCountryCode}
+                      onPhoneChange={handleChange}
+                      onBlur={(e) => setTouched((prev) => ({ ...prev, phone: true }))}
+                      error={showError("phone")}
+                    />
+                  </div>
+                  {showError("phone") && (
+                    <span className="text-xs text-red-600 mt-1">{errors.phone}</span>
+                  )}
                 </div>
 
                 <fieldset>
