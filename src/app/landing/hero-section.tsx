@@ -31,7 +31,20 @@ export default function HeroSection() {
             </span>
           </div>
           <h1 className="heading-1 mt-5 text-left !text-[#111111] xl:text-[64px] text-pretty">
-            Luxury Chauffeur Service on the French Riviera
+            {"Luxury Chauffeur Service on the French Riviera"
+              .split(" ")
+              .map((word, i) => (
+                <span
+                  key={i}
+                  className="inline-block overflow-hidden"
+                  style={{ verticalAlign: "bottom" }}
+                >
+                  <span className="hero-word inline-block">
+                    {word}
+                    {i < 6 ? " " : ""}
+                  </span>
+                </span>
+              ))}
           </h1>
           <p className="description body-text mt-5 max-w-xl text-left text-[#404040]">
             Private chauffeur service for airport transfers, business travel,
