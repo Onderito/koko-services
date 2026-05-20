@@ -12,28 +12,20 @@ export const heroSection = () => {
 
   const tl = gsap.timeline({ defaults: { ease: EASE_OUT } });
 
-  // Proof pill
-  tl.from(".proof", { opacity: 0, y: 10, duration: 0.5 });
+  // Image — démarre en premier, en parallèle avec tout le reste
+  tl.from(".img", { opacity: 0, scale: 0.97, y: 12, duration: 0.7 });
 
-  // H1 — mot par mot, chaque mot monte depuis le bas de son masque
+  // Proof pill — démarre en même temps que l'image
+  tl.from(".proof", { opacity: 0, y: 8, duration: 0.45 }, "<");
+
+  // H1 — mot par mot, légèrement décalé après le pill
   tl.from(
     ".hero-word",
-    {
-      y: "108%",
-      duration: 0.65,
-      stagger: 0.055,
-    },
-    "<0.1",
+    { y: "108%", duration: 0.6, stagger: 0.05 },
+    "<0.08",
   );
 
-  // Description + button après le dernier mot
-  tl.from(".description", { opacity: 0, y: 10, duration: 0.5 }, "-=0.2");
-  tl.from(".button", { opacity: 0, y: 20, duration: 0.5 }, ">");
-
-  // Image — arrive une fois le texte posé
-  tl.from(
-    ".img",
-    { opacity: 0, scale: 0.96, x: 100, y: 50, duration: 0.5 },
-    "-=0.5",
-  );
+  // Description + button dans la foulée
+  tl.from(".description", { opacity: 0, y: 8, duration: 0.4 }, "-=0.25");
+  tl.from(".button", { opacity: 0, y: 6, duration: 0.35 }, "<0.07");
 };
