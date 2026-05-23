@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/blog`,
   },
   openGraph: {
-    title: "viplimonice Blog",
+    title: "kokolimo Blog",
     description:
       "Luxury transport advice, airport transfer guides and private driver tips for the French Riviera.",
     url: `${siteUrl}/blog`,
-    siteName: "viplimonice",
+    siteName: "kokolimo",
     type: "website",
   },
 };

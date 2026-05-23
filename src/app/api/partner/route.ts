@@ -72,7 +72,7 @@ function buildHtmlEmail(data: {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Partner Application — viplimonice</title>
+  <title>New Partner Application — kokolimo</title>
 </head>
 <body style="margin:0;padding:0;background-color:#F5F0E8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F5F0E8;padding:40px 16px;">
@@ -83,7 +83,7 @@ function buildHtmlEmail(data: {
           <!-- Header -->
           <tr>
             <td style="background:linear-gradient(160deg,#FBF3E5 0%,#EAD6B4 100%);border-radius:20px 20px 0 0;padding:28px 32px;border:1px solid #E8DCCB;border-bottom:none;">
-              <p style="margin:0 0 4px 0;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A6B3B;">viplimonice</p>
+              <p style="margin:0 0 4px 0;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A6B3B;">kokolimo</p>
               <h1 style="margin:0;font-size:22px;font-weight:700;color:#111111;letter-spacing:-0.4px;">New Partner Application</h1>
               <p style="margin:6px 0 0 0;font-size:14px;color:#6D5830;">A travel professional has submitted a partner application.</p>
             </td>
@@ -133,7 +133,7 @@ function buildHtmlEmail(data: {
           <!-- CTA -->
           <tr>
             <td style="background:#ffffff;border:1px solid #E8DCCB;border-top:none;border-bottom:none;padding:24px 32px;">
-              <a href="mailto:${data.email}?subject=Re: Partner Application — viplimonice"
+              <a href="mailto:${data.email}?subject=Re: Partner Application — kokolimo"
                  style="display:inline-block;background:linear-gradient(180deg,#F8F3EC 0%,#E8D9C5 100%);border:1px solid #E4D4BF;border-radius:14px;padding:12px 22px;font-size:14px;font-weight:700;color:#6D5830;text-decoration:none;">
                 Reply to ${data.fullName} →
               </a>
@@ -143,7 +143,7 @@ function buildHtmlEmail(data: {
           <!-- Footer -->
           <tr>
             <td style="background:#F5EDD8;border:1px solid #E8DCCB;border-top:1px solid #E8DCCB;border-radius:0 0 20px 20px;padding:16px 32px;text-align:center;">
-              <p style="margin:0;font-size:12px;color:#8A7560;">This message was sent from the partner form on <strong>viplimonice.com</strong></p>
+              <p style="margin:0;font-size:12px;color:#8A7560;">This message was sent from the partner form on <strong>kokolimo.com</strong></p>
             </td>
           </tr>
 
@@ -216,7 +216,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const { error } = await resend.emails.send({
-      from: "viplimonice <contact@viplimonice.com>",
+      from: "kokolimo <contact@kokolimo.com>",
       to: toEmail,
       replyTo: `${sanitized.fullName} <${sanitized.email}>`,
       subject: `New partner application — ${sanitized.fullName} · ${sanitized.companyName}`,

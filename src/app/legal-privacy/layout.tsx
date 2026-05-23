@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Legal Notice & Privacy Policy | viplimonice",
+  title: "Legal Notice & Privacy Policy | kokolimo",
   description:
-    "Read viplimonice's legal notice and privacy policy, including how we collect, use, and protect personal data and how to contact us about your information.",
+    "Read kokolimo's legal notice and privacy policy, including how we collect, use, and protect personal data and how to contact us about your information.",
   alternates: {
-    canonical: "https://viplimonice.com/legal-privacy",
+    canonical: "https://kokolimo.com/legal-privacy",
   },
 };
 

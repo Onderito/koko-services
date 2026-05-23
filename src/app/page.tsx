@@ -10,11 +10,11 @@ import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Private Driver in Nice, Cannes and Monaco | viplimonice",
+  title: "Private Driver in Nice, Cannes and Monaco | kokolimo",
   description:
     "Luxury private driver service in Nice, Cannes, Monaco and Saint-Tropez. Book airport transfers, hourly chauffeur hire and premium Riviera travel.",
   alternates: {
-    canonical: "https://viplimonice.com",
+    canonical: "https://kokolimo.com",
   },
 };
 

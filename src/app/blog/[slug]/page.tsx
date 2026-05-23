@@ -35,7 +35,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | viplimonice`,
+    title: `${post.title} | kokolimo`,
     description: post.description,
     keywords: post.keywords,
     alternates: {
@@ -45,7 +45,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       url: `${siteUrl}/blog/${post.slug}`,
-      siteName: "viplimonice",
+      siteName: "kokolimo",
       type: "article",
       publishedTime: post.publishedAt,
       images: [
@@ -77,11 +77,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     dateModified: post.publishedAt,
     author: {
       "@type": "Organization",
-      name: "viplimonice",
+      name: "kokolimo",
     },
     publisher: {
       "@type": "Organization",
-      name: "viplimonice",
+      name: "kokolimo",
     },
     mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
   };

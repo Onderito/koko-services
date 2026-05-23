@@ -131,7 +131,7 @@ const processSteps = [
 const testimonials = [
   {
     quote:
-      "Viplimonice has become our go-to ground transport partner on the French Riviera. Reliable, professional, and our clients always come back impressed.",
+      "Kokolimo has become our go-to ground transport partner on the French Riviera. Reliable, professional, and our clients always come back impressed.",
     author: "Luxury Travel Agency",
     location: "Istanbul",
   },

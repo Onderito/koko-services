@@ -121,7 +121,7 @@ export default function SeoSchema() {
         },
         datePublished: "2024-07-01",
         reviewBody:
-          "viplimonice took good care of us, was welcoming and nice. Beautiful views and exciting info about Nice, good wine and specialties from Cannes.",
+          "kokolimo took good care of us, was welcoming and nice. Beautiful views and exciting info about Nice, good wine and specialties from Cannes.",
         publisher: { "@type": "Organization", name: "Tripadvisor" },
       },
     ],
