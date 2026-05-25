@@ -8,7 +8,7 @@ export default function Vip() {
     <section className="relative px-0 py-0">
       <Reveal className="mx-auto max-w-3xl text-center">
         <span className="section-label">VIP Service</span>
-        <h2 className="heading-2 mt-4 text-center text-[#111111]">
+        <h2 className="heading-2 xl:text-[64px] mt-4 text-center text-[#111111]">
           VIP Service Included
         </h2>
         <p className="body-text mt-4 text-center">

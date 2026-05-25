@@ -9,7 +9,7 @@ export default function Blogs() {
     <div className="flex-center-column w-full">
       <Reveal className="flex w-full flex-col items-center">
         <span className="section-label">Our Blogs</span>
-        <h2 className="heading-2 text-[#111111] mt-4 text-center">
+        <h2 className="heading-2 xl:text-[64px] text-[#111111] mt-4 text-center">
           Driver Insights & Luxury Travel Tips
         </h2>
         <p className="body-text text-center mt-4 ">

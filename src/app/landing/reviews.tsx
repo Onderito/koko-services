@@ -121,7 +121,7 @@ export default function Reviews() {
         </span>
         <motion.h2
           id="reviews-title"
-          className="heading-2 mt-4 text-center text-[#111111]"
+          className="heading-2 xl:text-[64px] mt-4 text-center text-[#111111]"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4, margin: "0px 0px -10% 0px" }}

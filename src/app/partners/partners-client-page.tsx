@@ -348,7 +348,7 @@ export default function PartnersClientPage() {
   };
 
   const inputCls = (key: keyof PartnerFormData) =>
-    `mt-2 w-full rounded-[14px] border bg-white/90 p-3 text-[15px] text-[#1F1F1F] placeholder:text-[#9A8C73] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-sm transition-all duration-200 focus:outline-none focus:border-[#C9A874] focus:ring-2 focus:ring-[#E8D9C5] ${
+    `mt-2 w-full rounded-[14px] border bg-white/90 p-3 text-[15px] text-[#111111] placeholder:text-[#9A8C73] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-sm transition-all duration-200 focus:outline-none focus:border-[#C9A874] focus:ring-2 focus:ring-[#E8D9C5] ${
       showError(key) ? "border-red-400" : "border-[#E9DECF]"
     }`;
 
@@ -421,7 +421,7 @@ export default function PartnersClientPage() {
                 <span className="inline-flex rounded-full border border-[#E3D3BC] bg-[#F8F1E7] px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
                   {item.label}
                 </span>
-                <h2 className="mt-4 text-[34px] font-manrope-bold tracking-[-0.05em] text-[#1F1F1F]">
+                <h2 className="mt-4 text-[34px] font-manrope-bold tracking-[-0.05em] text-[#111111]">
                   {item.value}
                 </h2>
                 <p className="mt-3 text-[15px] leading-relaxed text-[#666666]">
@@ -436,7 +436,7 @@ export default function PartnersClientPage() {
       <div className="container">
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="section-label">Why Us</span>
-          <h2 className="heading-2 mt-4 text-[#404040]">Why Partner With Us</h2>
+          <h2 className="heading-2 mt-4 text-[#111111]">Why Partner With Us</h2>
           <p className="body-text mt-4">
             The offer is designed for teams who need premium transport that is
             operationally easy to book, consistent to deliver, and strong enough
@@ -453,7 +453,7 @@ export default function PartnersClientPage() {
               key={item.title}
               className="rounded-[28px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-6 shadow-[0_18px_40px_rgba(45,33,15,0.08)]"
             >
-              <h3 className="heading-3 text-[#404040]">{item.title}</h3>
+              <h3 className="heading-3 text-[#111111]">{item.title}</h3>
               <p className="card-text mt-3">{item.text}</p>
             </div>
           ))}
@@ -463,7 +463,7 @@ export default function PartnersClientPage() {
       <div className="container">
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="section-label">Partner Types</span>
-          <h2 className="heading-2 mt-4 text-[#404040]">Who We Work With</h2>
+          <h2 className="heading-2 mt-4 text-[#111111]">Who We Work With</h2>
           <p className="body-text mt-4">
             The program is built for travel-facing businesses that need reliable
             execution, strong presentation, and a booking process that stays
@@ -480,7 +480,7 @@ export default function PartnersClientPage() {
               key={item.title}
               className="rounded-[28px] border border-[#E7E1D8] bg-white p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)]"
             >
-              <h3 className="heading-3 text-[#404040]">{item.title}</h3>
+              <h3 className="heading-3 text-[#111111]">{item.title}</h3>
               <p className="card-text mt-3">{item.text}</p>
             </div>
           ))}
@@ -491,7 +491,7 @@ export default function PartnersClientPage() {
         <div className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFDF8_0%,#F7EFE4_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10">
           <Reveal className="max-w-3xl">
             <span className="section-label !mx-0">Fleet</span>
-            <h2 className="heading-2 mt-4 text-[#404040]">Our Fleet</h2>
+            <h2 className="heading-2 mt-4 text-[#111111]">Our Fleet</h2>
             <p className="body-text mt-4">
               All vehicles are maintained to showroom standard and equipped with
               Wi-Fi, phone chargers, and chilled water as standard.
@@ -523,7 +523,7 @@ export default function PartnersClientPage() {
                         : ""
                     }
                   >
-                    <td className="px-6 py-6 text-center align-middle text-[15px] font-manrope-bold text-[#1F1F1F]">
+                    <td className="px-6 py-6 text-center align-middle text-[15px] font-manrope-bold text-[#111111]">
                       {row.vehicle}
                     </td>
                     <td className="px-6 py-6 text-center align-middle text-[15px] text-[#5E5A53]">
@@ -547,7 +547,7 @@ export default function PartnersClientPage() {
                   <p className="text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
                     Vehicle
                   </p>
-                  <p className="mt-1 text-[16px] font-manrope-bold text-[#1F1F1F]">
+                  <p className="mt-1 text-[16px] font-manrope-bold text-[#111111]">
                     {row.vehicle}
                   </p>
                   <div className="mt-4 grid grid-cols-2 gap-4 border-t border-[#EFE4D4] pt-4">
@@ -578,7 +578,7 @@ export default function PartnersClientPage() {
       <div className="container">
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="section-label">Process</span>
-          <h2 className="heading-2 mt-4 text-[#404040]">How It Works</h2>
+          <h2 className="heading-2 mt-4 text-[#111111]">How It Works</h2>
         </Reveal>
 
         <RevealGroup
@@ -593,7 +593,7 @@ export default function PartnersClientPage() {
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#E3D3BC] bg-[#F8F1E7] text-[14px] font-manrope-bold text-[#7B6034]">
                 {index + 1}
               </span>
-              <h3 className="heading-3 mt-4 text-[#404040]">{step.title}</h3>
+              <h3 className="heading-3 mt-4 text-[#111111]">{step.title}</h3>
               <p className="card-text mt-3">{step.text}</p>
             </div>
           ))}
@@ -603,7 +603,7 @@ export default function PartnersClientPage() {
       <div className="container">
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="section-label">Partner Feedback</span>
-          <h2 className="heading-2 mt-4 text-[#404040]">
+          <h2 className="heading-2 mt-4 text-[#111111]">
             What Our Partners Say
           </h2>
         </Reveal>
@@ -618,7 +618,7 @@ export default function PartnersClientPage() {
                 &ldquo;{item.quote}&rdquo;
               </p>
               <div className="mt-6 border-t border-[#EADFCC] pt-4">
-                <p className="font-manrope-bold text-[15px] text-[#1F1F1F]">
+                <p className="font-manrope-bold text-[15px] text-[#111111]">
                   {item.author}
                 </p>
                 <p className="mt-1 text-[14px] text-[#7A7367]">
@@ -634,7 +634,7 @@ export default function PartnersClientPage() {
         <div className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10">
           <Reveal className="max-w-3xl">
             <span className="section-label !mx-0">Commercial Terms</span>
-            <h2 className="heading-2 mt-4 text-[#404040]">
+            <h2 className="heading-2 mt-4 text-[#111111]">
               Partner Rates & Commission
             </h2>
             <p className="body-text mt-4">
@@ -669,7 +669,7 @@ export default function PartnersClientPage() {
                         : ""
                     }
                   >
-                    <td className="px-5 py-4 text-[15px] font-manrope-bold text-[#1F1F1F]">
+                    <td className="px-5 py-4 text-[15px] font-manrope-bold text-[#111111]">
                       {row.bookingType}
                     </td>
                     <td className="px-5 py-4 text-[15px] text-[#5E5A53]">
@@ -689,7 +689,7 @@ export default function PartnersClientPage() {
       <div className="container">
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="section-label">Questions</span>
-          <h2 className="heading-2 mt-4 text-[#404040]">
+          <h2 className="heading-2 mt-4 text-[#111111]">
             Frequently Asked Questions
           </h2>
         </Reveal>
@@ -703,7 +703,7 @@ export default function PartnersClientPage() {
               key={item.question}
               className="rounded-[28px] border border-[#E7E1D8] bg-white p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)]"
             >
-              <h3 className="heading-3 text-[#404040]">{item.question}</h3>
+              <h3 className="heading-3 text-[#111111]">{item.question}</h3>
               <p className="card-text mt-3">{item.answer}</p>
             </div>
           ))}
@@ -714,7 +714,7 @@ export default function PartnersClientPage() {
         <div className="grid gap-8 xl:grid-cols-[1.05fr_0.95fr] xl:items-start">
           <Reveal className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10">
             <span className="section-label !mx-0">Become a Partner</span>
-            <h2 className="heading-2 mt-4 text-[#404040]">
+            <h2 className="heading-2 mt-4 text-[#111111]">
               Join the travel professionals who trust {businessName}
             </h2>
             <p className="body-text mt-4">
@@ -734,7 +734,7 @@ export default function PartnersClientPage() {
                 <div>
                   <label
                     htmlFor="fullName"
-                    className="font-manrope-bold text-[15px] text-[#1F1F1F]"
+                    className="font-manrope-bold text-[15px] text-[#111111]"
                   >
                     Full Name *
                   </label>
@@ -752,7 +752,7 @@ export default function PartnersClientPage() {
                 <div>
                   <label
                     htmlFor="companyName"
-                    className="font-manrope-bold text-[15px] text-[#1F1F1F]"
+                    className="font-manrope-bold text-[15px] text-[#111111]"
                   >
                     Company Name *
                   </label>
@@ -769,7 +769,7 @@ export default function PartnersClientPage() {
               </div>
 
               <fieldset className="mt-6">
-                <legend className="font-manrope-bold text-[15px] text-[#1F1F1F]">
+                <legend className="font-manrope-bold text-[15px] text-[#111111]">
                   Company Type *
                 </legend>
                 <div className="mt-3 grid gap-3 md:grid-cols-2">
@@ -793,7 +793,7 @@ export default function PartnersClientPage() {
                           onChange={handleChange}
                           className="sr-only"
                         />
-                        <span className="text-[15px] font-manrope-bold text-[#404040]">
+                        <span className="text-[15px] font-manrope-bold text-[#111111]">
                           {option}
                         </span>
                       </label>
@@ -811,7 +811,7 @@ export default function PartnersClientPage() {
                 <div>
                   <label
                     htmlFor="country"
-                    className="font-manrope-bold text-[15px] text-[#1F1F1F]"
+                    className="font-manrope-bold text-[15px] text-[#111111]"
                   >
                     Country *
                   </label>
@@ -829,7 +829,7 @@ export default function PartnersClientPage() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="font-manrope-bold text-[15px] text-[#1F1F1F]"
+                    className="font-manrope-bold text-[15px] text-[#111111]"
                   >
                     Email Address *
                   </label>
@@ -850,7 +850,7 @@ export default function PartnersClientPage() {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="font-manrope-bold text-[15px] text-[#1F1F1F]"
+                    className="font-manrope-bold text-[15px] text-[#111111]"
                   >
                     Phone / WhatsApp *
                   </label>
@@ -870,7 +870,7 @@ export default function PartnersClientPage() {
                 </div>
 
                 <fieldset>
-                  <legend className="font-manrope-bold text-[15px] text-[#1F1F1F]">
+                  <legend className="font-manrope-bold text-[15px] text-[#111111]">
                     Estimated Monthly Bookings *
                   </legend>
                   <div className="mt-3 grid grid-cols-2 gap-3">
@@ -894,7 +894,7 @@ export default function PartnersClientPage() {
                             onChange={handleChange}
                             className="sr-only"
                           />
-                          <span className="text-[15px] font-manrope-bold text-[#404040]">
+                          <span className="text-[15px] font-manrope-bold text-[#111111]">
                             {option}
                           </span>
                         </label>
@@ -912,7 +912,7 @@ export default function PartnersClientPage() {
               <div className="mt-6">
                 <label
                   htmlFor="clientSummary"
-                  className="font-manrope-bold text-[15px] text-[#1F1F1F]"
+                  className="font-manrope-bold text-[15px] text-[#111111]"
                 >
                   Tell us about your clients
                 </label>
@@ -952,7 +952,7 @@ export default function PartnersClientPage() {
           <RevealGroup className="grid gap-6" stagger={0.08}>
             <div className="rounded-[32px] border border-[#E8D9C4] bg-[linear-gradient(160deg,#FBF3E5_0%,#F5E6CC_100%)] p-6 shadow-[0_24px_56px_rgba(45,33,15,0.10)]">
               <span className="section-label !mx-0">Prefer to talk first?</span>
-              <h3 className="heading-3 mt-4 text-[#1F1F1F]">
+              <h3 className="heading-3 mt-4 text-[#111111]">
                 We can discuss your client profile and booking workflow first.
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-[#5C4A2E]">
@@ -968,7 +968,7 @@ export default function PartnersClientPage() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 block text-[16px] text-[#404040] transition-colors duration-200 hover:text-[#111111]"
+                    className="mt-2 block text-[16px] text-[#111111] transition-colors duration-200 hover:text-[#111111]"
                   >
                     {contactPhoneDisplay}
                   </a>
@@ -979,7 +979,7 @@ export default function PartnersClientPage() {
                   </p>
                   <a
                     href={`mailto:${contactEmail}`}
-                    className="mt-2 block text-[16px] text-[#404040] transition-colors duration-200 hover:text-[#111111]"
+                    className="mt-2 block text-[16px] text-[#111111] transition-colors duration-200 hover:text-[#111111]"
                   >
                     {contactEmail.toLowerCase()}
                   </a>
@@ -988,7 +988,7 @@ export default function PartnersClientPage() {
                   <p className="text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#8A6B3B]">
                     Response time
                   </p>
-                  <p className="mt-2 text-[16px] text-[#404040]">
+                  <p className="mt-2 text-[16px] text-[#111111]">
                     Within 15 minutes
                   </p>
                 </div>
@@ -1007,7 +1007,7 @@ export default function PartnersClientPage() {
               <span className="inline-flex rounded-full border border-[#E3D3BC] bg-[#F8F1E7] px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
                 Ideal fit
               </span>
-              <h3 className="heading-3 mt-4 text-[#404040]">
+              <h3 className="heading-3 mt-4 text-[#111111]">
                 Best suited for premium travel workflows
               </h3>
               <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-[#666666]">
@@ -1024,7 +1024,7 @@ export default function PartnersClientPage() {
       <div className="container pt-0">
         <Reveal className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 text-center shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10">
           <span className="section-label">Final CTA</span>
-          <h2 className="heading-2 mt-4 text-[#404040]">
+          <h2 className="heading-2 mt-4 text-[#111111]">
             Prefer to talk before applying?
           </h2>
           <p className="body-text mx-auto mt-4 max-w-2xl">

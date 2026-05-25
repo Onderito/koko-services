@@ -50,7 +50,7 @@ export default function Performances() {
         <div className="performance-section flex flex-col py-10 px-2 ">
           <h2
             id="perf-title"
-            className="perf-title text-white heading-2 mt-4 text-center"
+            className="perf-title text-white heading-2 xl:text-[64px] mt-4 text-center"
           >
             Performance that speaks for itself
           </h2>

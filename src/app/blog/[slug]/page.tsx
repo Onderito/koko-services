@@ -171,7 +171,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <section className="container pt-0">
           <div className="grid gap-8 xl:grid-cols-[0.7fr_1.3fr]">
             <aside className="h-fit rounded-[28px] border border-[#E5E5E5] bg-white p-6 shadow-sm xl:sticky xl:top-28">
-              <h2 className="text-[18px] font-manrope-bold text-[#404040]">
+              <h2 className="text-[18px] font-manrope-bold text-[#111111]">
                 Table of contents
               </h2>
               <nav className="mt-5 space-y-3">
@@ -179,7 +179,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className="block text-[15px] leading-relaxed text-gray-600 transition-colors duration-300 hover:text-[#404040]"
+                    className="block text-[15px] leading-relaxed text-gray-600 transition-colors duration-300 hover:text-[#111111]"
                   >
                     {section.title}
                   </a>
@@ -193,7 +193,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </p>
                 <Link
                   href={post.ctaHref}
-                  className="mt-5 inline-flex rounded-2xl bg-white px-5 py-3 text-[14px] font-manrope-bold text-[#404040]"
+                  className="mt-5 inline-flex rounded-2xl bg-white px-5 py-3 text-[14px] font-manrope-bold text-[#111111]"
                 >
                   {post.ctaLabel}
                 </Link>
@@ -213,7 +213,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   id={section.id}
                   className="scroll-mt-32 rounded-[28px] border border-[#E5E5E5] bg-white p-7 shadow-sm md:p-10"
                 >
-                  <h2 className="text-[28px] font-manrope-bold leading-tight text-[#404040]">
+                  <h2 className="text-[28px] font-manrope-bold leading-tight text-[#111111]">
                     {section.title}
                   </h2>
                   <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-gray-700 md:text-[18px]">
@@ -235,7 +235,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               ))}
 
               <section className="rounded-[28px] border border-[#E5E5E5] bg-white p-7 shadow-sm md:p-10">
-                <h2 className="text-[28px] font-manrope-bold text-[#404040]">
+                <h2 className="text-[28px] font-manrope-bold text-[#111111]">
                   Frequently asked questions
                 </h2>
                 <div className="mt-6 space-y-4">
@@ -244,7 +244,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       key={item.question}
                       className="rounded-[22px] border border-[#EAEAEA] bg-[#FAFAFA] p-5"
                     >
-                      <h3 className="text-[18px] font-manrope-bold text-[#404040]">
+                      <h3 className="text-[18px] font-manrope-bold text-[#111111]">
                         {item.question}
                       </h3>
                       <p className="mt-3 text-[15px] leading-relaxed text-gray-700">
@@ -275,7 +275,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
               <Link
                 href="/contact-me"
-                className="inline-flex w-fit rounded-2xl bg-white px-6 py-3 text-[15px] font-manrope-bold text-[#404040]"
+                className="inline-flex w-fit rounded-2xl bg-white px-6 py-3 text-[15px] font-manrope-bold text-[#111111]"
               >
                 Request your ride
               </Link>
@@ -289,13 +289,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span className="text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-gray-500">
                 Related reading
               </span>
-              <h2 className="mt-2 text-[34px] font-manrope-bold text-[#404040]">
+              <h2 className="mt-2 text-[34px] font-manrope-bold text-[#111111]">
                 Continue planning your Riviera journey
               </h2>
             </div>
             <Link
               href="/blog"
-              className="text-[15px] font-manrope-bold text-[#404040] underline underline-offset-4"
+              className="text-[15px] font-manrope-bold text-[#111111] underline underline-offset-4"
             >
               View all articles
             </Link>

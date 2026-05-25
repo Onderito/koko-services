@@ -115,14 +115,14 @@ export default function NavBar() {
         <div
           className="relative flex h-[60px] w-full items-center justify-between rounded-[22px]
                         border border-[#E8E8E8] bg-white/92 px-4 shadow-[0_10px_28px_rgba(64,64,64,0.06)]
-                        backdrop-blur-md md:h-[64px] md:w-[78%] md:max-w-[980px] md:px-5
-                        xl:h-[68px] xl:w-[56%] xl:max-w-[860px] xl:px-6 2xl:w-[50%]"
+                        backdrop-blur-md md:h-[64px] md:w-[88%] md:max-w-[1100px] md:px-5
+                        xl:h-[68px] xl:w-[78%] xl:max-w-[1140px] xl:px-6 2xl:w-[72%]"
         >
           {/* Logo à gauche */}
           <Link
             onClick={closeMobileMenu}
             href="/"
-            className="shrink-0 font-manrope-bold text-[17px] tracking-[-0.03em] text-[#404040] md:text-[18px] xl:text-[20px]"
+            className="shrink-0 font-manrope-bold text-[17px] tracking-[-0.03em] text-[#111111] md:text-[18px] xl:text-[20px]"
           >
             {businessName}
           </Link>
@@ -165,8 +165,14 @@ export default function NavBar() {
             </li>
           </ul>
           {/* Bouton / Mobile burger à droite */}
-          <div className="flex shrink-0 items-center gap-3">
-            {/* Desktop button */}
+          <div className="flex shrink-0 items-center gap-2">
+            {/* Reserve my driver */}
+            <Link href="/contact-me" onClick={handleResetScroll}>
+              <span className="hidden h-[38px] items-center rounded-[14px] bg-[#111111] px-4 text-[13px] font-manrope-bold text-white shadow-[0_8px_18px_rgba(0,0,0,0.18)] transition-all duration-200 hover:bg-[#2a2a2a] hover:-translate-y-0.5 xl:inline-flex">
+                Reserve my driver
+              </span>
+            </Link>
+            {/* WhatsApp */}
             <a
               href={whatsappUrl}
               target="_blank"
@@ -262,6 +268,15 @@ export default function NavBar() {
                   className="block rounded-2xl px-4 py-3 font-manrope-regular text-[16px] text-gray-600 transition-colors duration-300 hover:bg-[#F6F6F6] hover:text-[#404040]"
                 >
                   Travel Partners
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={closeMobileMenu}
+                  href="/contact-me"
+                  className="mt-2 block rounded-2xl bg-[#111111] px-4 py-4 text-center font-manrope-bold text-[16px] text-white shadow-[0_12px_24px_rgba(0,0,0,0.18)]"
+                >
+                  Reserve my driver
                 </Link>
               </li>
               <li>

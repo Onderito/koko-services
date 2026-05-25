@@ -8,7 +8,7 @@ export default function Services() {
     <div className="main-container relative z-10 flex-center-column section-2">
       <Reveal className="flex w-full flex-col items-center">
         <span className="section-label">Our Services</span>
-        <h2 className="text-[#111111] heading-2 mt-4 text-center">
+        <h2 className="heading-2 xl:text-[64px] text-[#111111] mt-4 text-center">
           What We Offer
         </h2>
       </Reveal>

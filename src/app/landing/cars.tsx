@@ -52,7 +52,7 @@ export default function Cars() {
     <div className="flex-center-column">
       <Reveal className="flex w-full flex-col items-center">
         <span className="section-label">Our Fleet</span>
-        <h2 className="heading-2 text-[#111111] mt-4 text-center ">
+        <h2 className="heading-2 xl:text-[64px] text-[#111111] mt-4 text-center ">
           Our Fleet, Your Comfort
         </h2>
         <p className="body-text text-center mt-4 ">

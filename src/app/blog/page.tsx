@@ -74,7 +74,7 @@ export default function BlogIndexPage() {
             <span className="inline-flex w-fit rounded-full border border-[#E3D3BC] bg-white/85 px-4 py-2 text-[14px] font-manrope-bold text-[#6D5830] shadow-[0_10px_24px_rgba(135,108,61,0.14),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-sm">
               French Riviera blog
             </span>
-            <h1 className="heading-2 max-w-4xl text-[#1F1F1F]">
+            <h1 className="heading-2 max-w-4xl text-[#111111]">
               Private driver guides for smoother travel on the French Riviera
             </h1>
             <p className="body-text max-w-2xl !text-[#5C5C5C]">
@@ -86,7 +86,7 @@ export default function BlogIndexPage() {
 
           <div className="relative z-10 mt-8 grid gap-4 md:grid-cols-3">
             <div className="rounded-[24px] border border-[#E9DECF] bg-white/80 p-5 backdrop-blur-sm shadow-[0_8px_20px_rgba(135,108,61,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
-              <span className="text-[34px] font-manrope-bold text-[#404040]">
+              <span className="text-[34px] font-manrope-bold text-[#111111]">
                 {blogPosts.length}
               </span>
               <p className="mt-2 text-[15px] text-gray-600">
@@ -94,7 +94,7 @@ export default function BlogIndexPage() {
               </p>
             </div>
             <div className="rounded-[24px] border border-[#E9DECF] bg-white/80 p-5 backdrop-blur-sm shadow-[0_8px_20px_rgba(135,108,61,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
-              <span className="text-[34px] font-manrope-bold text-[#404040]">
+              <span className="text-[34px] font-manrope-bold text-[#111111]">
                 4
               </span>
               <p className="mt-2 text-[15px] text-gray-600">
@@ -102,7 +102,7 @@ export default function BlogIndexPage() {
               </p>
             </div>
             <div className="rounded-[24px] border border-[#E9DECF] bg-white/80 p-5 backdrop-blur-sm shadow-[0_8px_20px_rgba(135,108,61,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
-              <span className="text-[34px] font-manrope-bold text-[#404040]">
+              <span className="text-[34px] font-manrope-bold text-[#111111]">
                 3
               </span>
               <p className="mt-2 text-[15px] text-gray-600">
@@ -153,7 +153,7 @@ export default function BlogIndexPage() {
           <span className="block text-[12px] md:text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-[#8A6B3B]">
             All articles
           </span>
-          <h2 className="text-[24px] leading-[1.15] tracking-[-0.5px] md:text-[34px] md:leading-[1.08] md:tracking-[-1px] xl:text-[42px] xl:leading-[1.04] xl:tracking-[-1.4px] font-manrope-bold text-[#404040] max-w-[22ch]">
+          <h2 className="text-[24px] leading-[1.15] tracking-[-0.5px] md:text-[34px] md:leading-[1.08] md:tracking-[-1px] xl:text-[42px] xl:leading-[1.04] xl:tracking-[-1.4px] font-manrope-bold text-[#111111] max-w-[22ch]">
             Explore airport transfers, events, business travel and private
             tours
           </h2>

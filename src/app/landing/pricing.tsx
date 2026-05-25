@@ -15,7 +15,7 @@ export default function Pricing() {
     <section className="relative overflow-hidden rounded-[34px] border border-[#EEE5D9] bg-[radial-gradient(circle_at_top,#FFF8EE_0%,#FFFFFF_62%)] px-4 py-10 md:px-6 md:py-14 xl:px-8">
       <Reveal className="mx-auto max-w-3xl text-center">
         <span className="section-label">Our Pricing</span>
-        <h2 className="heading-2 mt-4 text-center text-[#111111]">
+        <h2 className="heading-2 xl:text-[64px] mt-4 text-center text-[#111111]">
           Driver Services Pricing Guide
         </h2>
         <p className="body-text mt-4 text-center">

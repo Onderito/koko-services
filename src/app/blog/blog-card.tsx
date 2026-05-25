@@ -67,7 +67,7 @@ export default function BlogCard({
         className="flex flex-col gap-4 p-6 md:p-7"
       >
         <div className="flex flex-wrap items-center gap-3 text-[13px] text-gray-500 md:text-[14px]">
-          <span className="rounded-full bg-[#F4F4F4] px-3 py-1 font-manrope-bold text-[#404040]">
+          <span className="rounded-full bg-[#F4F4F4] px-3 py-1 font-manrope-bold text-[#111111]">
             {post.category}
           </span>
           <span>{post.readTime}</span>
@@ -75,8 +75,8 @@ export default function BlogCard({
         </div>
 
         <div className="space-y-3">
-          <h3 className="text-[22px] font-manrope-bold leading-tight text-[#404040]">
-            <Link href={`/blog/${post.slug}`} className="hover:text-[#1F1F1F]">
+          <h3 className="text-[22px] font-manrope-bold leading-tight text-[#111111]">
+            <Link href={`/blog/${post.slug}`} className="hover:text-[#111111]">
               {post.title}
             </Link>
           </h3>
@@ -93,7 +93,7 @@ export default function BlogCard({
             variants={{
               hovered: { x: 4 },
             }}
-            className="inline-block text-[15px] font-manrope-bold text-[#404040] underline underline-offset-4"
+            className="inline-block text-[15px] font-manrope-bold text-[#111111] underline underline-offset-4"
           >
             Read the article
           </motion.span>

@@ -264,7 +264,7 @@ export default function ServicePageTemplate({
       <div className="container flex min-h-[calc(100vh-var(--nav-clearance))] flex-col items-center justify-center gap-10 pt-[var(--nav-clearance)] xl:flex-row">
         <Reveal className="xl:w-2/3" amount={0.42}>
           <div className="space-y-5 md:space-y-6 xl:space-y-7">
-            <h1 className="heading-1 !text-[#111111]">{config.heroTitle}</h1>
+            <h1 className="heading-1 !text-[#111111] xl:text-[64px] text-pretty">{config.heroTitle}</h1>
             <p className="body-text">{config.heroDescription}</p>
             <div className="flex gap-4">
               <Link href="/contact-me">

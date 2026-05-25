@@ -51,7 +51,7 @@ export default function CarPageTemplate({
       <div className="flex flex-col xl:flex-row justify-center items-center gap-10 container pt-[var(--nav-clearance)] min-h-[calc(100vh-var(--nav-clearance))]">
         <Reveal className="xl:w-2/3" amount={0.42}>
           <div className="space-y-5 md:space-y-6 xl:space-y-7">
-            <h1 className="heading-1 !text-[#111111]">
+            <h1 className="heading-1 !text-[#111111] xl:text-[64px] text-pretty">
               {titlePrefix}
               <span className="!text-[#111111]">
                 {titleHighlight}
