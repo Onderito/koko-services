@@ -52,7 +52,7 @@ export default function Cars() {
     <div className="flex-center-column">
       <Reveal className="flex w-full flex-col items-center">
         <span className="section-label">Our Fleet</span>
-        <h2 className="heading-2 text-[#404040] mt-4 text-center ">
+        <h2 className="heading-2 text-[#111111] mt-4 text-center ">
           Our Fleet, Your Comfort
         </h2>
         <p className="body-text text-center mt-4 ">
@@ -102,7 +102,7 @@ export default function Cars() {
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-[#404040] heading-3">
+                  <h3 className="text-[#111111] heading-3">
                     <Link href={v.link} className="hover:text-[#1F1F1F]">
                       {v.name}
                     </Link>
@@ -115,7 +115,7 @@ export default function Cars() {
                   className={`rounded-full px-3 py-1 text-[12px] font-manrope-bold ${
                     v.featured
                       ? "border border-[#D9D1BF] bg-[#FBF8F0] text-[#6D5830]"
-                      : "bg-[#F4F4F4] text-[#404040]"
+                      : "bg-[#F4F4F4] text-[#111111]"
                   }`}
                 >
                   {v.feature}

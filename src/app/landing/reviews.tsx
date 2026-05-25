@@ -121,7 +121,7 @@ export default function Reviews() {
         </span>
         <motion.h2
           id="reviews-title"
-          className="heading-2 mt-4 text-center text-[#404040]"
+          className="heading-2 mt-4 text-center text-[#111111]"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4, margin: "0px 0px -10% 0px" }}
@@ -167,7 +167,7 @@ export default function Reviews() {
                   />
                 ))}
               </div>
-              <span className="text-[18px] text-[#404040] md:text-[20px]">
+              <span className="text-[18px] text-[#111111] md:text-[20px]">
                 165 public reviews
               </span>
             </div>

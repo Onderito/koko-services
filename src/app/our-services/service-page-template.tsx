@@ -48,7 +48,7 @@ const AudienceCard = forwardRef<
         <span className="mt-4 inline-flex rounded-full border border-[#E3D3BC] bg-[linear-gradient(180deg,rgba(255,252,247,0.92)_0%,rgba(247,238,225,0.84)_100%)] px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034] shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]">
           Standby Service
         </span>
-        <h3 className="heading-3 mt-4 text-[#2B2B2B]">{card.title}</h3>
+        <h3 className="heading-3 mt-4 text-[#111111]">{card.title}</h3>
         <p className="card-text mt-4 max-w-[32ch] text-center text-[#666666]">
           {card.text}
         </p>
@@ -128,7 +128,7 @@ function AudienceStack({
   return (
     <div ref={containerRef} className="container">
       <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
-        <h2 className="heading-2 mt-4 text-center text-[#404040]">
+        <h2 className="heading-2 mt-4 text-center text-[#111111]">
           {audienceTitle}{" "}
           <span className="text-[#B8AA92]">{audienceAccent}</span>
         </h2>
@@ -186,7 +186,7 @@ function LocalLinksSection({
         <p className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-[#8A6B3B]">
           Keep Exploring
         </p>
-        <h2 className="heading-2 mt-4 text-[#404040]">{title}</h2>
+        <h2 className="heading-2 mt-4 text-[#111111]">{title}</h2>
         <p className="body-text mt-4">{description}</p>
       </Reveal>
 
@@ -202,7 +202,7 @@ function LocalLinksSection({
                 <span className="inline-flex rounded-full border border-[#E2D3BE] bg-[#F8F1E7] px-3 py-1 text-[12px] font-manrope-bold uppercase tracking-[0.12em] text-[#6D5830]">
                   Other page
                 </span>
-                <h3 className="heading-3 mt-4 text-[#404040]">{link.label}</h3>
+                <h3 className="heading-3 mt-4 text-[#111111]">{link.label}</h3>
                 <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-gray-600">
                   {link.description}
                 </p>
@@ -232,7 +232,7 @@ function LocalLinksSection({
                   →
                 </span>
               </div>
-              <h3 className="heading-3 mt-5 text-[#404040]">{link.label}</h3>
+              <h3 className="heading-3 mt-5 text-[#111111]">{link.label}</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
                 {link.description}
               </p>
@@ -264,7 +264,7 @@ export default function ServicePageTemplate({
       <div className="container flex min-h-[calc(100vh-var(--nav-clearance))] flex-col items-center justify-center gap-10 pt-[var(--nav-clearance)] xl:flex-row">
         <Reveal className="xl:w-2/3" amount={0.42}>
           <div className="space-y-5 md:space-y-6 xl:space-y-7">
-            <h1 className="heading-1">{config.heroTitle}</h1>
+            <h1 className="heading-1 !text-[#111111]">{config.heroTitle}</h1>
             <p className="body-text">{config.heroDescription}</p>
             <div className="flex gap-4">
               <Link href="/contact-me">
@@ -293,7 +293,7 @@ export default function ServicePageTemplate({
 
       <div className="container">
         <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
-          <h2 className="heading-2 mt-4 text-center text-[#404040]">
+          <h2 className="heading-2 mt-4 text-center text-[#111111]">
             {config.introTitle}
           </h2>
           <p className="body-text mt-4 text-center">
@@ -338,7 +338,7 @@ export default function ServicePageTemplate({
                 {panel.theme === "dark" ? "Our Standard" : "Client Comfort"}
               </span>
               <h3
-                className={`relative z-20 mt-5 heading-3 text-center ${panel.theme === "dark" ? "text-white" : "text-[#2B2B2B]"}`}
+                className={`relative z-20 mt-5 heading-3 text-center ${panel.theme === "dark" ? "text-white" : "text-[#111111]"}`}
               >
                 {panel.title}
               </h3>

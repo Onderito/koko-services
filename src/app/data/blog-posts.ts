@@ -220,7 +220,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Book your full-day private tour to Antibes, Cannes and Saint-Paul",
     ctaDescription:
       "Reserve your full-day private tour from Nice through Old Antibes, the Picasso Museum, Cap d'Antibes, La Croisette in Cannes and the medieval village of Saint-Paul-de-Vence.",
-    ctaHref: "/our-services/chauffeur-tours",
+    ctaHref: "/our-services/private-tours",
     ctaLabel: "Explore private tours",
   },
   {
@@ -404,7 +404,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Book your private Riviera tour from Nice",
     ctaDescription:
       "Reserve your half-day or full-day private tour from Nice through Èze, Villa Rothschild, Saint-Jean-Cap-Ferrat and Monaco with a dedicated English-speaking chauffeur.",
-    ctaHref: "/our-services/chauffeur-tours",
+    ctaHref: "/our-services/private-tours",
     ctaLabel: "Explore private tours",
   },
   {
@@ -868,7 +868,7 @@ export const blogPosts: BlogPost[] = [
     ctaTitle: "Planning a Saint-Tropez day on your terms?",
     ctaDescription:
       "Our private tour service gives you one driver, a flexible itinerary and a more relaxed way to handle a full Riviera day.",
-    ctaHref: "/our-services/chauffeur-tours",
+    ctaHref: "/our-services/private-tours",
     ctaLabel: "Explore private tours",
   },
   {

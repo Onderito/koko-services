@@ -51,9 +51,9 @@ export default function CarPageTemplate({
       <div className="flex flex-col xl:flex-row justify-center items-center gap-10 container pt-[var(--nav-clearance)] min-h-[calc(100vh-var(--nav-clearance))]">
         <Reveal className="xl:w-2/3" amount={0.42}>
           <div className="space-y-5 md:space-y-6 xl:space-y-7">
-            <h1 className="heading-1">
+            <h1 className="heading-1 !text-[#111111]">
               {titlePrefix}
-              <span className="text-[#404040]">
+              <span className="!text-[#111111]">
                 {titleHighlight}
               </span>
             </h1>
@@ -86,7 +86,7 @@ export default function CarPageTemplate({
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <Reveal amount={0.38}>
-            <h2 className="heading-2 mb-6 text-[#404040]">
+            <h2 className="heading-2 mb-6 text-[#111111]">
               <span className="md:hidden">
                 {discoverTitleMobile ?? discoverTitle}
               </span>
@@ -135,7 +135,7 @@ export default function CarPageTemplate({
 
       <div className="container">
         <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
-          <h2 className="heading-2 text-[#404040] text-center">
+          <h2 className="heading-2 text-[#111111] text-center">
             Vehicle Features
           </h2>
           <p className="body-text text-center mt-4 max-w-3xl mx-auto">
@@ -159,7 +159,7 @@ export default function CarPageTemplate({
                   height={36}
                 />
               </div>
-              <h3 className="heading-3 text-[#404040] mb-2">{feature.name}</h3>
+              <h3 className="heading-3 text-[#111111] mb-2">{feature.name}</h3>
               <p className="card-text">{feature.description}</p>
             </div>
           ))}

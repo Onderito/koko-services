@@ -8,7 +8,7 @@ export default function Services() {
     <div className="main-container relative z-10 flex-center-column section-2">
       <Reveal className="flex w-full flex-col items-center">
         <span className="section-label">Our Services</span>
-        <h2 className="text-[#404040] heading-2 mt-4 text-center">
+        <h2 className="text-[#111111] heading-2 mt-4 text-center">
           What We Offer
         </h2>
       </Reveal>
@@ -44,7 +44,7 @@ export default function Services() {
             {/* Content */}
             <div className="flex flex-1 flex-col p-6">
               <div>
-                <h3 className="heading-3 text-[#404040]">
+                <h3 className="heading-3 text-[#111111]">
                   <Link href={card.link} className="hover:text-[#1F1F1F]">
                     {card.title}
                   </Link>

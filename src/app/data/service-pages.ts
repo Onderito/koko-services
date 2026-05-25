@@ -64,7 +64,7 @@ export const serviceMenuLinks: ServiceCardLink[] = [
     description: "Flexible chauffeur service in key Riviera destinations",
   },
   {
-    href: "/our-services/chauffeur-tours",
+    href: "/our-services/private-tours",
     label: "Private Tours",
     description: "Private destination tours across the Riviera",
   },
@@ -93,7 +93,7 @@ export const homeServiceCards = [
     description:
       "Private chauffeur-led tours with flexible itineraries, local guidance, and elegant door-to-door travel for discovering Riviera destinations at your pace.",
     image: "/assets/images/services/private-tour.webp",
-    link: "/our-services/chauffeur-tours",
+    link: "/our-services/private-tours",
   },
 ];
 
@@ -122,24 +122,24 @@ const hourlyCityLinks: ServiceCardLink[] = [
 
 const tourCityLinks: ServiceCardLink[] = [
   {
-    href: "/our-services/chauffeur-tours/nice",
+    href: "/our-services/private-tours/nice",
     label: "Nice",
     description: "Old town, coastal viewpoints, markets, and nearby escapes.",
   },
   {
-    href: "/our-services/chauffeur-tours/cannes",
+    href: "/our-services/private-tours/cannes",
     label: "Cannes",
     description:
       "Boulevard touring, shopping stops, and elegant coastal drives.",
   },
   {
-    href: "/our-services/chauffeur-tours/monaco",
+    href: "/our-services/private-tours/monaco",
     label: "Monaco",
     description:
       "Prestige landmarks, panoramic roads, and refined day itineraries.",
   },
   {
-    href: "/our-services/chauffeur-tours/saint-tropez",
+    href: "/our-services/private-tours/saint-tropez",
     label: "Saint-Tropez",
     description:
       "Village streets, beaches, scenic arrivals, and stylish day trips.",
@@ -307,7 +307,7 @@ export const hourlyChauffeurPage: ServicePageConfig = {
 
 export const chauffeurToursPage: ServicePageConfig = {
   slug: "chauffeur-tours",
-  path: "/our-services/chauffeur-tours",
+  path: "/our-services/private-tours",
   metadata: {
     title: "Chauffeur Tours on the French Riviera | kokolimo",
     description:
@@ -819,7 +819,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
 export const chauffeurTourPages: Record<string, ServicePageConfig> = {
   nice: {
     slug: "nice",
-    path: "/our-services/chauffeur-tours/nice",
+    path: "/our-services/private-tours/nice",
     metadata: {
       title: "Chauffeur Tour in Nice | Private Riviera Touring | kokolimo",
       description:
@@ -891,7 +891,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
   },
   cannes: {
     slug: "cannes",
-    path: "/our-services/chauffeur-tours/cannes",
+    path: "/our-services/private-tours/cannes",
     metadata: {
       title: "Chauffeur Tour in Cannes | Private Riviera Touring | kokolimo",
       description:
@@ -963,7 +963,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
   },
   monaco: {
     slug: "monaco",
-    path: "/our-services/chauffeur-tours/monaco",
+    path: "/our-services/private-tours/monaco",
     metadata: {
       title: "Chauffeur Tour in Monaco | Private Riviera Touring | kokolimo",
       description:
@@ -1035,7 +1035,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
   },
   "saint-tropez": {
     slug: "saint-tropez",
-    path: "/our-services/chauffeur-tours/saint-tropez",
+    path: "/our-services/private-tours/saint-tropez",
     metadata: {
       title:
         "Chauffeur Tour in Saint-Tropez | Private Riviera Touring | kokolimo",

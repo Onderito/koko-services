@@ -97,7 +97,7 @@ function buildHtmlEmail(data: {
   const serviceLabels: Record<string, string> = {
     transfers: "Airport / Point-to-Point Transfer",
     "hourly-chauffeur": "Hourly Chauffeur Service",
-    "chauffeur-tours": "Chauffeur Tour",
+    "private-tours": "Private Tour",
   };
   const serviceLabel = serviceLabels[data.service] ?? data.service;
 
@@ -221,7 +221,7 @@ function buildPlainTextEmail(data: {
   const serviceLabels: Record<string, string> = {
     transfers: "Airport / Point-to-Point Transfer",
     "hourly-chauffeur": "Hourly Chauffeur Service",
-    "chauffeur-tours": "Chauffeur Tour",
+    "private-tours": "Private Tour",
   };
   const serviceLabel = serviceLabels[data.service] ?? data.service;
 

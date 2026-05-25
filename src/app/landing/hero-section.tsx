@@ -25,7 +25,7 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_1.3fr] lg:gap-12 xl:gap-16">
         <div className="hero-content flex flex-col items-start text-left">
           <div className="proof inline-flex items-center rounded-full border border-[#E7D9BF] bg-white/90 px-4 py-2 shadow-[0_10px_24px_rgba(135,108,61,0.14),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-sm">
-            <span className="text-[13px] leading-tight text-[#404040] xl:text-[14px]">
+            <span className="text-[13px] leading-tight text-[#111111] xl:text-[14px]">
               <span className="font-manrope-bold text-[#1F1F1F]">10 years</span>{" "}
               of chauffeur experience on the Riviera
             </span>
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 </span>
               ))}
           </h1>
-          <p className="description body-text mt-5 w-full text-left text-[#404040]">
+          <p className="description body-text mt-5 w-full text-left text-[#111111]">
             Private chauffeur service for airport transfers, business travel, and tailored journeys across Nice, Cannes, Monaco, and Saint-Tropez.
           </p>
 

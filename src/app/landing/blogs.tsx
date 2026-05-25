@@ -9,7 +9,7 @@ export default function Blogs() {
     <div className="flex-center-column w-full">
       <Reveal className="flex w-full flex-col items-center">
         <span className="section-label">Our Blogs</span>
-        <h2 className="heading-2 text-[#404040] mt-4 text-center">
+        <h2 className="heading-2 text-[#111111] mt-4 text-center">
           Driver Insights & Luxury Travel Tips
         </h2>
         <p className="body-text text-center mt-4 ">
@@ -31,7 +31,7 @@ export default function Blogs() {
       <Reveal delay={0.1}>
         <Link
           href="/blog"
-          className="mx-auto mt-10 inline-flex rounded-2xl border border-[#D8D8D8] px-6 py-3 text-[15px] font-manrope-bold text-[#404040] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#404040] hover:text-white md:mt-12"
+          className="mx-auto mt-10 inline-flex rounded-2xl border border-[#D8D8D8] px-6 py-3 text-[15px] font-manrope-bold text-[#111111] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#404040] hover:text-white md:mt-12"
         >
           View all articles
         </Link>

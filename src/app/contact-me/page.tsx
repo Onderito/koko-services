@@ -241,7 +241,7 @@ export default function ContactMe() {
             {/* valeurs normalisées (== state) */}
             <option value="transfers">Transfers</option>
             <option value="hourly-chauffeur">Hourly Chauffeur Service</option>
-            <option value="chauffeur-tours">Chauffeur Tours</option>
+            <option value="private-tours">Private Tours</option>
           </select>
         </fieldset>
 
