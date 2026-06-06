@@ -43,8 +43,9 @@ export default function Footer() {
               seamless.
             </h2>
             <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-white/66 md:text-[16px]">
-              Airport transfers, hourly chauffeur service, and chauffeur tours
-              across Nice, Cannes, Monaco and Saint-Tropez.
+                Airport transfers, hourly chauffeur services, and private tours across Nice,
+                Cannes, Monaco, Saint-Tropez, and the French Riviera, with seasonal coverage
+                in Megève, Courchevel, and Chamonix during the winter season.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">

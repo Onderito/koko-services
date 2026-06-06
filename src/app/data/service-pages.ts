@@ -11,6 +11,12 @@ export type ServiceAudienceCard = {
   iconAlt: string;
 };
 
+export type ServiceFaq = {
+  question: string;
+  answer: string;
+};
+
+
 export type ServicePanel = {
   title: string;
   text: string;
@@ -41,6 +47,10 @@ export type ServicePageConfig = {
     ServiceAudienceCard,
     ServiceAudienceCard,
   ];
+  faq?: {
+    question: string;
+    answer: string;
+  }[];
   localLinksTitle?: string;
   localLinksDescription?: string;
   localLinks?: ServiceCardLink[];
@@ -61,12 +71,12 @@ export const serviceMenuLinks: ServiceCardLink[] = [
   {
     href: "/our-services/hourly-chauffeur",
     label: "Hourly Chauffeur Service",
-    description: "Flexible chauffeur service in key Riviera destinations",
+    description: "Flexible chauffeur service in key Riviera destinations and prestigious Alpine winter resorts",
   },
   {
     href: "/our-services/private-tours",
     label: "Private Tours",
-    description: "Private destination tours across the Riviera",
+    description: "Private destination tours across the Riviera and the French Alps during the winter season.",
   },
 ];
 
@@ -83,15 +93,15 @@ export const homeServiceCards = [
     title: "Hourly Chauffeur Service",
     kicker: "Flexible by destination",
     description:
-      "A dedicated chauffeur on standby for meetings, shopping, lunches, beach clubs, and multi-stop days in Nice, Cannes, Monaco, and Saint-Tropez.",
+      "A dedicated chauffeur on standby for meetings, shopping, lunches, beach clubs, and multi-stop days in Nice, Cannes, Monaco, Saint-Tropez and selected Alpine destinations during the winter season.",
     image: "/assets/images/services/hourly.webp",
     link: "/our-services/hourly-chauffeur",
   },
   {
     title: "Private Tours",
-    kicker: "Curated Riviera days",
+    kicker: "Riviera & Alpine escapes",
     description:
-      "Private chauffeur-led tours with flexible itineraries, local guidance, and elegant door-to-door travel for discovering Riviera destinations at your pace.",
+      "Private chauffeur-led tours across the French Riviera and selected Alpine winter destinations, with flexible itineraries, local insight, and premium comfort.",
     image: "/assets/images/services/private-tour.webp",
     link: "/our-services/private-tours",
   },
@@ -101,22 +111,37 @@ const hourlyCityLinks: ServiceCardLink[] = [
   {
     href: "/our-services/hourly-chauffeur/nice",
     label: "Nice",
-    description: "Hotels, shopping, seafront appointments, and city mobility.",
+    description: "Luxury hotels, shopping, business meetings, and flexible chauffeur service across Nice.",
   },
   {
     href: "/our-services/hourly-chauffeur/cannes",
     label: "Cannes",
-    description: "Croisette stays, congresses, shopping, and dinner service.",
+    description: "The Croisette, luxury hotels, events, shopping, and private chauffeur service throughout Cannes.",
   },
   {
     href: "/our-services/hourly-chauffeur/monaco",
     label: "Monaco",
-    description: "Business days, hotel arrivals, yacht access, and meetings.",
+    description: "Business travel, yacht transfers, luxury hotels, and dedicated chauffeur service in Monaco.",
   },
   {
     href: "/our-services/hourly-chauffeur/saint-tropez",
     label: "Saint-Tropez",
-    description: "Beach clubs, villas, seasonal events, and flexible day hire.",
+    description: "Beach clubs, private villas, fine dining, and flexible chauffeur service in Saint-Tropez.",
+  },
+  {
+    href: "/our-services/hourly-chauffeur/megeve",
+    label: "Megève",
+    description: "Luxury hotels, private chalets, shopping, fine dining, and flexible chauffeur service throughout Megève.",
+  },
+  {
+    href: "/our-services/hourly-chauffeur/courchevel",
+    label: "Courchevel",
+    description: "Five-star hotels, private chalets, ski resorts, and premium chauffeur service across Courchevel.",
+  },
+  {
+    href: "/our-services/hourly-chauffeur/chamonix",
+    label: "Chamonix",
+    description: "Mountain adventures, luxury accommodation, ski holidays, and flexible chauffeur service in Chamonix.",
   },
 ];
 
@@ -144,6 +169,21 @@ const tourCityLinks: ServiceCardLink[] = [
     description:
       "Village streets, beaches, scenic arrivals, and stylish day trips.",
   },
+  {
+    href: "/our-services/private-tours/megeve",
+    label: "Megève",
+    description: "Luxury hotels, Alpine villages, scenic mountain drives, gourmet restaurants, and tailor-made private tours.",
+  },
+  {
+    href: "/our-services/private-tours/courchevel",
+    label: "Courchevel",
+    description: "Prestigious resorts, luxury chalets, panoramic Alpine landscapes, and personalized private touring experiences.",
+  },
+  {
+    href: "/our-services/private-tours/chamonix",
+    label: "Chamonix",
+    description: "Mont Blanc scenery, mountain villages, outdoor attractions, and customized private tours in the Alps.",
+  },
 ];
 
 const transferLinks: ServiceCardLink[] = [
@@ -164,8 +204,7 @@ export const transfersPage: ServicePageConfig = {
   path: "/our-services/transfers",
   metadata: {
     title: "Private Transfers on the French Riviera | kokolimo",
-    description:
-      "Private chauffeur transfers for Nice Airport arrivals, hotel pickups, Monaco rides, Cannes events, and long-distance journeys across the French Riviera.",
+    description: "Private chauffeur transfers for Nice Airport arrivals, hotel pickups, Monaco rides, Cannes events, and long-distance journeys across the French Riviera.",
     keywords: [
       "private transfers French Riviera",
       "Nice airport transfer",
@@ -176,13 +215,11 @@ export const transfersPage: ServicePageConfig = {
   },
   serviceLabel: "Airport Transfers",
   heroTitle: "Private Airport Transfers on the French Riviera",
-  heroDescription:
-    "Luxury chauffeur transfers for airport arrivals, hotel pickups, events, and longer journeys with precise coordination and discreet service.",
+  heroDescription: "Luxury chauffeur transfers for airport arrivals, hotel pickups, events, and longer journeys with precise coordination and discreet service.",
   heroImageSrc: "/assets/images/services/across-the-french-riviera.webp",
   heroImageAlt: "Private chauffeur transfer arrival on the French Riviera",
   introTitle: "The Art of the Transfer",
-  introDescription:
-    "A transfer should feel calm, controlled, and impeccably timed from the first minute to the last.",
+  introDescription: "A transfer should feel calm, controlled, and impeccably timed from the first minute to the last.",
   panels: [
     {
       title: "Our Commitment",
@@ -197,8 +234,7 @@ export const transfersPage: ServicePageConfig = {
   ],
   audienceTitle: "Built For",
   audienceAccent: "Precise Mobility",
-  audienceDescription:
-    "From short airport connections to intercity journeys, our transfer service adapts to the pace and expectations of premium travel.",
+  audienceDescription: "From short airport connections to intercity journeys, our transfer service adapts to the pace and expectations of premium travel.",
   audienceCards: [
     {
       title: "Airport Clients",
@@ -220,16 +256,46 @@ export const transfersPage: ServicePageConfig = {
     },
   ],
   localLinksTitle: "Explore Transfer Types",
-  localLinksDescription:
-    "Choose the transfer page that matches the route style your clients are most likely to book.",
+  localLinksDescription: "Choose the transfer page that matches the route style your clients are most likely to book.",
   localLinks: transferLinks,
   cta: {
     title: "Ready to Book Your Transfer?",
-    description:
-      "Tell us your route, timing, and passenger details and we will prepare the right chauffeur transfer for your stay.",
+    description: "Tell us your route, timing, and passenger details and we will prepare the right chauffeur transfer for your stay.",
     buttonText: "Request a Transfer",
     buttonHref: "/contact-me",
   },
+  faq: [
+    {
+      question: "What is included in your private transfer service?",
+      answer:
+        "Our private transfer service includes a professional chauffeur, meet and greet service, luggage assistance, and direct transportation to your destination.",
+    },
+    {
+      question: "Do you provide airport transfers from Nice Airport?",
+      answer:
+        "Yes. We provide private transfers from Nice Côte d'Azur Airport to Monaco, Cannes, Saint-Tropez, and destinations across the French Riviera.",
+    },
+    {
+      question: "Can I book a transfer in advance?",
+      answer:
+        "Absolutely. We recommend booking in advance to guarantee vehicle availability, especially during peak season and major events.",
+    },
+    {
+      question: "Are your transfer prices fixed?",
+      answer:
+        "Yes. Transfer prices are agreed upon before the journey, with no hidden fees. The price depends on the route, vehicle choice, and any additional services requested.",
+    },
+    {
+      question: "Which vehicles are available for transfers?",
+      answer:
+        "We offer luxury sedans and premium vans suitable for individuals, families, business travellers, and groups. The most common vehicles include the Mercedes S-Class and Mercedes V-Class, but we can recommend the best option based on your route and passenger needs.",
+    },
+    {
+      question: "Do you provide long-distance transfers?",
+      answer:
+        "Yes. We regularly provide transfers between airports, resorts, hotels, and destinations throughout the French Riviera and the French Alps. Long-distance transfers are ideal for clients who prefer a private, comfortable road journey over fragmented transport chains.",
+    },
+  ]
 };
 
 export const hourlyChauffeurPage: ServicePageConfig = {
@@ -292,6 +358,38 @@ export const hourlyChauffeurPage: ServicePageConfig = {
       iconAlt: "Events icon",
     },
   ],
+  faq: [
+  {
+    question: "How does an hourly chauffeur service work?",
+    answer:
+      "An hourly chauffeur service gives you a dedicated driver and vehicle for a set period of time. Your chauffeur remains available throughout your booking, allowing you to make multiple stops, attend meetings, enjoy shopping, or change plans as needed without arranging separate transfers.",
+  },
+  {
+    question: "What is the minimum booking duration?",
+    answer:
+      "Booking requirements vary depending on the itinerary, vehicle, and season. Whether you need a chauffeur for a few hours, a half-day, or a full day, we can tailor the service to your schedule and travel needs.",
+  },
+  {
+    question: "Can the chauffeur wait between meetings, restaurants, or appointments?",
+    answer:
+      "Yes. Your chauffeur remains on standby throughout the booking period, ensuring seamless transportation between meetings, hotels, restaurants, shopping destinations, and events across the French Riviera.",
+  },
+   {
+    question: "Which destinations are covered by the hourly chauffeur service?",
+    answer:
+      "Our hourly chauffeur service is available throughout the French Riviera, including Nice, Cannes, Monaco, Saint-Tropez, Antibes, and surrounding destinations. The itinerary remains fully flexible during your booking.",
+  },
+   {
+    question: "Which vehicles are available for hourly bookings?",
+    answer:
+      "Clients can choose from luxury vehicles including the Mercedes S-Class, Mercedes V-Class, Mercedes Maybach, and other premium options depending on passenger numbers and travel requirements.",
+  },
+   {
+    question: "Is an hourly chauffeur service suitable for business travel and events?",
+    answer:
+      "Absolutely. Hourly chauffeur service is ideal for business meetings, roadshows, conferences, shopping days, yacht charters, weddings, and major Riviera events where flexibility and punctuality are essential.",
+  },
+],
   localLinksTitle: "Choose Your Destination",
   localLinksDescription:
     "Each destination page is tuned to the type of hourly chauffeur demand most common in that city.",
@@ -310,8 +408,7 @@ export const chauffeurToursPage: ServicePageConfig = {
   path: "/our-services/private-tours",
   metadata: {
     title: "Chauffeur Tours on the French Riviera | kokolimo",
-    description:
-      "Private chauffeur tours in Nice, Cannes, Monaco, and Saint-Tropez with luxury vehicles, flexible itineraries, and refined touring across the Riviera.",
+    description: "Private chauffeur tours in Nice, Cannes, Monaco, and Saint-Tropez with luxury vehicles, flexible itineraries, and refined touring across the Riviera.",
     keywords: [
       "chauffeur tours French Riviera",
       "private tour Nice chauffeur",
@@ -322,13 +419,11 @@ export const chauffeurToursPage: ServicePageConfig = {
   },
   serviceLabel: "Private Tours",
   heroTitle: "Private Tours for Refined Riviera Discovery",
-  heroDescription:
-    "Private chauffeur-led touring for travelers who want scenic drives, elegant stops, and a flexible itinerary without handling the logistics themselves.",
+  heroDescription: "Private chauffeur-led touring for travelers who want scenic drives, elegant stops, and a flexible itinerary without handling the logistics themselves.",
   heroImageSrc: "/assets/images/services/driver.webp",
   heroImageAlt: "Private chauffeur tour on the French Riviera",
   introTitle: "The Art of the Chauffeur Tour",
-  introDescription:
-    "A chauffeur tour should feel curated and effortless, with the right rhythm, the right stops, and a premium vehicle throughout the day.",
+  introDescription: "A chauffeur tour should feel curated and effortless, with the right rhythm, the right stops, and a premium vehicle throughout the day.",
   panels: [
     {
       title: "Our Commitment",
@@ -343,8 +438,7 @@ export const chauffeurToursPage: ServicePageConfig = {
   ],
   audienceTitle: "Created For",
   audienceAccent: "Riviera Discovery",
-  audienceDescription:
-    "This service works best for travelers who want a destination experience, not just a point-to-point journey.",
+  audienceDescription: "This service works best for travelers who want a destination experience, not just a point-to-point journey.",
   audienceCards: [
     {
       title: "First-Time Visitors",
@@ -366,16 +460,56 @@ export const chauffeurToursPage: ServicePageConfig = {
     },
   ],
   localLinksTitle: "Tour by Destination",
-  localLinksDescription:
-    "Each destination page gives the tour concept a stronger local angle for both clients and search visibility.",
+  localLinksDescription: "Each destination page gives the tour concept a stronger local angle for both clients and search visibility.",
   localLinks: tourCityLinks,
   cta: {
     title: "Plan Your Chauffeur Tour",
-    description:
-      "Tell us which destination interests you and we will shape a private touring day around your pace, preferences, and pickup point.",
+    description: "Tell us which destination interests you and we will shape a private touring day around your pace, preferences, and pickup point.",
     buttonText: "Start Your Tour",
     buttonHref: "/contact-me",
   },
+  faq: [
+    {
+      question: "What is a private tour with Kokolimo?",
+      answer:
+        "A private tour with Kokolimo offers a fully personalized travel experience with a dedicated chauffeur and luxury vehicle. You can explore the French Riviera at your own pace, with complete flexibility in stops, timing, and itinerary."
+    },
+    {
+      question: "Can I customize my private tour itinerary?",
+      answer:
+        "Yes. Every private tour is fully customizable. You can choose your destinations, schedule, and stops, whether it includes coastal villages, luxury hotels, viewpoints, shopping areas, or restaurants along the French Riviera."
+    },
+    {
+      question: "Which destinations can be included in a private tour?",
+      answer:
+        "Popular destinations include Nice, Cannes, Monaco, Èze, Saint-Paul-de-Vence, Antibes, Saint-Tropez, and scenic villages along the French Riviera. Longer itineraries can also include the Italian Riviera such as Ventimiglia or San Remo."
+    },
+    {
+      question: "What is the difference between a private tour and an hourly chauffeur service?",
+      answer:
+        "A private tour is designed around sightseeing and curated experiences, while an hourly chauffeur service is focused on flexible transportation for meetings, shopping, and daily schedules. Both offer a private vehicle and chauffeur available throughout the booking."
+    },
+    {
+      question: "Is the chauffeur available for the entire duration of the tour?",
+      answer:
+        "Yes. Your chauffeur remains at your disposal for the full duration of your private tour, ensuring smooth transitions between destinations without waiting time or additional bookings."
+    },
+    {
+      question: "Can private tours include restaurants, beach clubs, or wineries?",
+      answer:
+        "Absolutely. Private tours can include luxury restaurants, beach clubs, wine tastings, hotels, scenic stops, and curated experiences tailored to your preferences."
+    },
+    {
+      question: "Are private tours suitable for families and VIP travelers?",
+      answer:
+        "Yes. Private tours are ideal for families, couples, and VIP clients seeking comfort, privacy, and a premium travel experience across the French Riviera."
+    },
+    {
+      question: "Can the tour include airport or hotel pickup?",
+      answer:
+        "Yes. Your private tour can start from your hotel, villa, yacht, or directly from Nice Côte d’Azur Airport, depending on your itinerary."
+    }
+  ]
 };
 
 export const transferPages: Record<string, ServicePageConfig> = {
@@ -450,6 +584,43 @@ export const transferPages: Record<string, ServicePageConfig> = {
       buttonText: "Request Airport Transfer",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "Do you provide private transfers from Nice Airport?",
+        answer:
+          "Yes. We provide private airport transfers from Nice Côte d’Azur Airport to Monaco, Cannes, Saint-Tropez, Antibes, and destinations throughout the French Riviera.",
+      },
+      {
+        question: "Where will my chauffeur meet me at Nice Airport?",
+        answer:
+          "Your chauffeur will meet you in the arrivals area with a personalized name sign and assist you with your luggage before escorting you to the vehicle.",
+      },
+      {
+        question: "Do you monitor flight delays?",
+        answer:
+          "Yes. We monitor flight arrivals in real time and adjust pickup times accordingly to ensure a smooth airport transfer experience.",
+      },
+      {
+        question: "Can I book a transfer from Nice Airport to Monaco?",
+        answer:
+          "Absolutely. Transfers between Nice Airport and Monaco are among our most requested services, offering a comfortable and reliable alternative to taxis and public transport.",
+      },
+      {
+        question: "Which vehicles are available for airport transfers?",
+        answer:
+          "We offer luxury vehicles including the Mercedes S-Class, Mercedes V-Class, and Mercedes Maybach, depending on your group size and travel preferences.",
+      },
+      {
+        question: "Can I book a return transfer to Nice Airport?",
+        answer:
+          "Yes. Many clients reserve both arrival and departure transfers to ensure a seamless travel experience throughout their stay on the French Riviera.",
+      },
+      {
+      question: "Which destinations do you serve from Nice Airport?",
+      answer:
+        "We regularly provide transfers to Monaco, Cannes, Antibes, Saint-Tropez, Èze, Cap d’Ail, Villefranche-sur-Mer, and other destinations across the French Riviera.",
+      }
+    ]
   },
   "long-distance-transfer": {
     slug: "long-distance-transfer",
@@ -522,6 +693,43 @@ export const transferPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Long-Distance Transfer",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "What is considered a long-distance transfer?",
+        answer:
+          "A long-distance transfer typically covers journeys between cities, regions, airports, ski resorts, and destinations that require several hours of travel.",
+      },
+      {
+        question: "Can I book a transfer between the French Riviera and the Alps?",
+        answer:
+          "Yes. We regularly provide long-distance transfers between destinations such as Nice, Monaco, Cannes, Saint-Tropez, Courchevel, Megève, and Chamonix.",
+      },
+      {
+        question: "Do you provide international long-distance transfers?",
+        answer:
+          "Yes. Depending on your itinerary, we can arrange private transfers between France, Monaco, Switzerland, and other nearby European destinations.",
+      },
+      {
+        question: "Can I request stops during a long-distance journey?",
+        answer:
+          "Absolutely. Stops can be arranged in advance for meals, meetings, sightseeing, or personal convenience throughout the journey.",
+      },
+      {
+        question: "Which vehicle is best for a long-distance transfer?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class offers additional space and comfort for families, groups, and extra luggage.",
+      },
+      {
+        question: "Are long-distance transfer prices fixed in advance?",
+        answer:
+          "Yes. Your quote is agreed upon before the journey, providing complete transparency with no unexpected charges.",
+      },
+      {
+        question: "Can I book a return long-distance transfer?",
+        answer:
+          "Yes. Many clients book both outbound and return journeys to ensure seamless transportation throughout their trip.",
+      },
+    ]
   },
 };
 
@@ -530,15 +738,19 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "nice",
     path: "/our-services/hourly-chauffeur/nice",
     metadata: {
-      title: "Hourly Chauffeur Service in Nice | kokolimo",
+      title: "Hourly Chauffeur Service in Nice | Private Driver in Nice | Kokolimo",
       description:
-        "Private hourly chauffeur service in Nice for hotels, shopping, lunches, meetings, appointments, and flexible premium city travel.",
+        "Book a private hourly chauffeur in Nice for business meetings, luxury hotels, shopping, airport pickups, and flexible travel across the French Riviera.",
       keywords: [
         "hourly chauffeur Nice",
-        "private driver Nice by the hour",
-        "Nice chauffeur standby",
-        "Nice hourly car service",
-        "chauffeur service Nice hotels",
+        "private driver Nice",
+        "chauffeur service Nice",
+        "Nice chauffeur by the hour",
+        "private chauffeur Nice",
+        "business chauffeur Nice",
+        "luxury chauffeur Nice",
+        "Nice airport chauffeur",
+        "French Riviera chauffeur service",
       ],
     },
     serviceLabel: "Nice",
@@ -597,12 +809,44 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Nice Chauffeur",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "How does an hourly chauffeur service in Nice work?",
+        answer:
+          "Your chauffeur and vehicle remain at your disposal for the duration of your booking. Whether you need transportation between hotels, business meetings, restaurants, shopping districts, or multiple destinations, your driver stays available and adapts to your schedule throughout the day.",
+      },
+      {
+        question: "Can I book an hourly chauffeur from Nice Airport?",
+        answer:
+          "Yes. We can meet you directly at Nice Côte d’Azur Airport and remain available for meetings, hotel transfers, sightseeing, shopping, or appointments across Nice and the French Riviera.",
+      },
+      {
+        question: "What are the most popular destinations in Nice for hourly chauffeur bookings?",
+        answer:
+          "Clients frequently use our hourly chauffeur service for the Promenade des Anglais, Vieux-Nice, Port Lympia, luxury hotels, Avenue Jean Médecin, Nice Côte d’Azur Airport, and business appointments throughout the city. Many bookings also include day trips to Monaco, Cannes, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat and Saint-Paul-de-Vence.",
+      },
+      {
+        question: "Can the chauffeur wait while I attend meetings or appointments?",
+        answer:
+          "Absolutely. Your chauffeur remains on standby between stops, allowing you to attend meetings, lunches, shopping appointments, or events without arranging additional transportation.",
+      },
+      {
+        question: "Which vehicle is best for an hourly chauffeur service in Nice?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, and clients travelling with additional luggage. We can recommend the most suitable vehicle based on your itinerary.",
+      },
+      {
+        question: "Is an hourly chauffeur service suitable for business travel in Nice?",
+        answer:
+          "Yes. Many clients use this service for conferences, corporate meetings, roadshows, hotel visits, and business appointments. A dedicated chauffeur ensures punctuality, flexibility, and a seamless travel experience throughout the day.",
+      },
+    ],
   },
   cannes: {
     slug: "cannes",
     path: "/our-services/hourly-chauffeur/cannes",
     metadata: {
-      title: "Hourly Chauffeur Service in Cannes | kokolimo",
+      title:   "Hourly Chauffeur Service in Cannes | Private Driver in Cannes | Kokolimo",
       description:
         "Private hourly chauffeur service in Cannes for congresses, Croisette hotels, shopping, dinners, and flexible premium travel.",
       keywords: [
@@ -669,14 +913,51 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Cannes Chauffeur",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "Why book an hourly chauffeur service in Cannes?",
+        answer:
+          "An hourly chauffeur service gives you complete flexibility throughout the day. Whether you are attending meetings, visiting luxury boutiques, enjoying restaurants along La Croisette, or moving between multiple locations, your chauffeur remains available whenever you need transportation."
+      },
+      {
+        question: "Can I hire a chauffeur during the Cannes Film Festival?",
+        answer:
+          "Yes. Our hourly chauffeur service is particularly popular during the Cannes Film Festival, providing reliable transportation between hotels, events, private venues, restaurants, and the Palais des Festivals throughout the day and evening."
+      },
+      {
+        question: "Is the service suitable for Cannes Lions and business events?",
+        answer:
+          "Absolutely. Many clients use our hourly chauffeur service for conferences, corporate meetings, networking events, and executive travel during Cannes Lions and other international business events held in Cannes."
+      },
+      {
+        question: "Can the chauffeur wait while I attend meetings or events?",
+        answer:
+          "Yes. Your chauffeur remains on standby during the booking period, allowing you to attend meetings, lunches, shopping appointments, or events without arranging additional transportation."
+      },
+      {
+        question: "Which destinations can I visit from Cannes with an hourly chauffeur?",
+        answer:
+           "Popular destinations include Monaco, Nice, Antibes, Cap d’Antibes, Saint-Paul-de-Vence, Saint-Tropez, and other locations across the French Riviera. Many clients also combine several destinations within the same day while keeping the same chauffeur available throughout the journey."
+      },
+      {
+        question: "Which vehicle is recommended for hourly chauffeur bookings in Cannes?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is often preferred by families, small groups, and event attendees requiring additional space and comfort."
+      },
+      {
+        question: "What are the most popular reasons to book an hourly chauffeur in Cannes?",
+        answer:
+          "Clients frequently book an hourly chauffeur for luxury hotel transfers, meetings, shopping on La Croisette, private villa visits, business events, fine dining, yacht access, Port Canto, and transportation throughout Cannes and the French Riviera.",
+      }
+    ]
   },
   monaco: {
     slug: "monaco",
     path: "/our-services/hourly-chauffeur/monaco",
     metadata: {
-      title: "Hourly Chauffeur Service in Monaco | kokolimo",
+      title: "Hourly Chauffeur Service in Monaco | Private Driver in Monaco | Kokolimo",
       description:
-        "Private hourly chauffeur service in Monaco for meetings, hotels, yacht access, executive travel, and refined standby transportation.",
+         "Book a private hourly chauffeur in Monaco for business meetings, yacht visits, luxury hotels, shopping, and VIP travel across Monaco and the French Riviera.",
       keywords: [
         "hourly chauffeur Monaco",
         "Monaco private driver by the hour",
@@ -741,14 +1022,46 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Monaco Chauffeur",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "Why choose an hourly chauffeur service in Monaco?",
+        answer:
+          "An hourly chauffeur service offers complete flexibility throughout the day. Whether you have business meetings, luxury shopping, restaurant reservations, yacht visits, or multiple appointments, your chauffeur remains available and adapts to your schedule."
+      },
+      {
+        question: "Can I book an hourly chauffeur during the Monaco Grand Prix?",
+        answer:
+          "Yes. Hourly chauffeur service is one of the most convenient transportation options during the Monaco Grand Prix, allowing flexible travel between hotels, hospitality venues, yachts, restaurants, and event locations throughout the Principality."
+      },
+      {
+        question: "Is the service available for the Monaco Yacht Show?",
+        answer:
+          "Absolutely. Many clients use our hourly chauffeur service during the Monaco Yacht Show for airport arrivals, yacht visits, business meetings, hotel transfers, and evening events throughout Monaco and the French Riviera."
+      },
+      {
+        question: "Can the chauffeur wait while I attend meetings, events, or shopping appointments?",
+        answer:
+          "Yes. Your chauffeur remains on standby during the booking period, ensuring seamless transportation between meetings, luxury boutiques, restaurants, hotels, and private events without the need to arrange additional transport."
+      },
+      {
+        question: "Which locations are most popular for hourly chauffeur bookings in Monaco?",
+        answer:
+          "Clients frequently travel between Monte-Carlo, the Casino de Monte-Carlo, Hôtel de Paris, Port Hercule, Monaco Yacht Club, luxury residences, business venues, and nearby destinations such as Nice, Cannes, Èze, Saint-Jean-Cap-Ferrat and Saint-Tropez."
+      },
+      {
+        question: "Which vehicle is best for an hourly chauffeur service in Monaco?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, event attendees, and clients requiring additional space and comfort throughout the day."
+      }
+    ]
   },
   "saint-tropez": {
     slug: "saint-tropez",
     path: "/our-services/hourly-chauffeur/saint-tropez",
     metadata: {
-      title: "Hourly Chauffeur Service in Saint-Tropez | kokolimo",
+      title: "Hourly Chauffeur Service in Saint-Tropez | Private Driver in Saint-Tropez | Kokolimo",
       description:
-        "Private hourly chauffeur service in Saint-Tropez for villas, beach clubs, shopping, lunch reservations, and flexible summer travel.",
+        "Hire a private chauffeur in Saint-Tropez by the hour for villa stays, yacht access, beach clubs, restaurants, and luxury travel.",
       keywords: [
         "hourly chauffeur Saint-Tropez",
         "Saint-Tropez private driver by the hour",
@@ -813,6 +1126,348 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Saint-Tropez Chauffeur",
       buttonHref: "/contact-me",
     },
+    faq: [
+    {
+      question: "Why choose an hourly chauffeur service in Saint-Tropez?",
+      answer:
+        "An hourly chauffeur service offers complete flexibility throughout the day. Whether you are visiting beach clubs, attending private events, enjoying lunch by the sea, shopping, or moving between villas and hotels, your chauffeur remains available whenever you need transportation.",
+    },
+    {
+      question: "Can I book a chauffeur for beach clubs and restaurants in Saint-Tropez?",
+      answer:
+        "Yes. Many clients use our hourly chauffeur service for transportation between beach clubs, restaurants, luxury hotels, marinas, and private residences. Your chauffeur remains on standby throughout the booking, allowing you to move freely without arranging separate transfers.",
+    },
+    {
+      question: "Is the service suitable for yacht charters and marina transfers?",
+      answer:
+        "Absolutely. Our hourly chauffeur service is frequently used for yacht departures, marina transfers, port arrivals, and VIP guest transportation. Your chauffeur can remain available throughout the day to accommodate changing schedules and last-minute requests.",
+    },
+    {
+      question: "Can the chauffeur wait while I enjoy lunch, shopping, or private events?",
+      answer:
+        "Yes. Your chauffeur remains available during the entire booking period, ensuring seamless transportation between restaurants, boutiques, beach clubs, hotels, villas, and event venues across Saint-Tropez and the surrounding area.",
+    },
+    {
+      question: "What are the most popular destinations for hourly chauffeur bookings in Saint-Tropez?",
+      answer:
+        "Clients frequently visit Pampelonne Beach, Club 55, Nikki Beach, the Port of Saint-Tropez, luxury villas, five-star hotels, beach restaurants, and nearby destinations throughout the French Riviera.",
+    },
+    {
+      question: "Which vehicle is recommended for an hourly chauffeur service in Saint-Tropez?",
+      answer:
+        "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, beach club transfers, and guests travelling with additional luggage or shopping purchases.",
+    },
+  ]
+  },
+  "megeve": {
+    slug: "megeve",
+    path: "/our-services/hourly-chauffeur/megeve",
+    metadata: {
+      title: "Hourly Chauffeur Service in Megève | Private Driver in Megève | Kokolimo",
+      description:
+       "Private hourly chauffeur service in Megève for ski holidays, luxury hotels, chalet transfers, shopping, dining and flexible alpine travel.",
+      keywords: [
+        "hourly chauffeur Megève",
+        "private driver Megève",
+        "chauffeur service Megève",
+        "Megève luxury chauffeur",
+        "chauffeur at disposal Megève",
+      ],
+    },
+    serviceLabel: "Megève",
+    heroTitle: "Hourly Chauffeur Service in Megève",
+    heroDescription:
+      "A private chauffeur on standby for luxury hotels, chalet stays, shopping, restaurants, ski holidays, and flexible travel throughout Megève and the French Alps.",
+    heroImageSrc: "/assets/images/services/megeve.webp", 
+    heroImageAlt: "Luxury hourly chauffeur service in Megève",
+    introTitle: "Hourly Chauffeur Service for Luxury Stays in Megève",
+    introDescription:
+      "Megève combines luxury hotels, private chalets, fine dining, shopping, and mountain experiences. An hourly chauffeur service allows you to move freely throughout the day while enjoying comfort, discretion, and complete flexibility.",    panels: [
+      {
+        title: "Flexible Alpine Travel",
+        text: "Whether you're travelling between your chalet, the village centre, ski facilities, restaurants, or nearby destinations, your chauffeur remains available throughout the day.",
+        theme: "dark",
+      },
+      {
+        title: "Premium Guest Experience",
+        text: "Avoid the challenges of parking, winter driving, and coordinating multiple transfers. Your vehicle and chauffeur stay ready whenever you need them.",
+        theme: "light",
+      },
+    ],
+    audienceTitle: "Designed For",
+    audienceAccent: "Megève Guests",
+    audienceDescription:
+       "Our hourly chauffeur service is ideal for visitors seeking flexibility, comfort, and seamless transportation during their stay in Megève.",    audienceCards: [
+      {
+        title: "Luxury Hotel Guests",
+        text: "Travel effortlessly between hotels, boutiques, restaurants, and leisure activities throughout Megève.",
+        icon: "/assets/icons/services/hand.webp",
+        iconAlt: "Luxury hotel guest icon",
+      },
+      {
+        title: "Chalet Residents",
+        text: "Enjoy convenient transportation between private chalets, ski facilities, shopping districts, and dining venues.",
+        icon: "/assets/icons/services/star.webp",
+        iconAlt: "Chalet resident icon",
+      },
+      {
+        title: "Flexible Leisure",
+        text: "A polished setup for clients who want freedom throughout the day without handling the transport layer themselves.",
+        icon: "/assets/icons/services/clock.webp",
+        iconAlt: "Flexible leisure icon",
+      },
+    ],
+    localLinksTitle: "Choose Another Destination",
+    localLinksDescription: 
+      "Explore our hourly chauffeur services across the French Riviera and premium Alpine destinations.",    
+      localLinks: hourlyCityLinks,
+    cta: {
+    title: "Need an Hourly Chauffeur in Megève?",
+      description:
+        "Share your itinerary, hotel or chalet location, and planned activities, and we'll recommend the ideal chauffeur service for your stay.",
+      buttonText: "Book a Chauffeur in Megève",
+      buttonHref: "/contact-me",
+    },
+    faq: [
+      {
+        question: "Why choose an hourly chauffeur service in Megève?",
+        answer:
+          "An hourly chauffeur service offers complete flexibility throughout your stay. Whether you're travelling between your chalet, luxury hotel, restaurants, boutiques, or ski facilities, your chauffeur remains available whenever you need transportation.",
+      },
+      {
+        question: "Can I book a chauffeur for a full day in Megève?",
+        answer:
+          "Yes. Many clients reserve a chauffeur for half-day or full-day bookings, allowing seamless transportation throughout Megève and the surrounding Alpine region.",
+      },
+      {
+        question: "Is the service suitable for ski holidays?",
+        answer:
+          "Absolutely. Our hourly chauffeur service is ideal for ski holidays, providing comfortable transportation between chalets, hotels, ski areas, restaurants, and après-ski venues.",
+      },
+      {
+        question: "Can the chauffeur wait while I shop, dine, or attend appointments?",
+        answer:
+          "Yes. Your chauffeur remains on standby during the booking period, ensuring smooth transportation throughout the day without the need to arrange additional transfers.",
+      },
+      {
+        question: "Which locations are commonly visited during hourly bookings in Megève?",
+        answer:
+          "Clients frequently travel between luxury hotels, private chalets, Mont d'Arbois, the village centre, restaurants, boutiques, and nearby Alpine destinations.",
+      },
+      {
+        question: "Which vehicle is best for an hourly chauffeur service in Megève?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, and guests travelling with ski equipment or additional luggage.",
+      },
+    ]
+  },
+  "courchevel": {
+    slug: "courchevel",
+    path: "/our-services/hourly-chauffeur/courchevel",
+    metadata: {
+      title: "Hourly Chauffeur Service in Courchevel | Private Driver in Courchevel | Kokolimo",
+      description:
+        "Private hourly chauffeur service in Courchevel for luxury hotels, chalets, ski holidays, shopping, dining and flexible alpine travel.",
+      keywords: [
+        "hourly chauffeur Courchevel",
+        "private driver Courchevel",
+        "chauffeur service Courchevel",
+        "Courchevel luxury chauffeur",
+        "chauffeur at disposal Courchevel",
+      ],
+    },
+    serviceLabel: "Courchevel",
+    heroTitle: "Hourly Chauffeur Service in Courchevel",
+    heroDescription:
+      "A private chauffeur on standby for luxury hotels, private chalets, ski holidays, shopping, dining, and flexible travel throughout Courchevel and the French Alps.",
+    heroImageSrc: "/assets/images/services/courchevel.webp",
+    heroImageAlt: "Luxury hourly chauffeur service in Courchevel",
+    introTitle: "Premium Chauffeur Service for Courchevel Stays",
+    introDescription:
+      "Courchevel is one of the world's most prestigious ski destinations, known for its luxury hotels, private chalets, fine dining, and exclusive alpine experiences. An hourly chauffeur service gives you complete flexibility while enjoying comfort, discretion, and seamless transportation throughout your stay.",    panels: [
+      {
+        title: "Luxury Mobility Throughout the Day",
+        text: "Whether travelling between your chalet, ski facilities, restaurants, boutiques, or nearby resorts, your chauffeur remains available whenever your schedule changes.",
+        theme: "dark",
+      },
+      {
+        title: "A Seamless Guest Experience",
+        text: "Avoid parking challenges, winter driving, and multiple transport arrangements. Your chauffeur and vehicle remain at your disposal throughout the booking.",
+        theme: "light",
+      },
+    ],
+    audienceTitle: "Perfect For",
+    audienceAccent: "Courchevel Guests",
+    audienceDescription:
+      "Our hourly chauffeur service is designed for travellers seeking flexibility, comfort, and premium transportation throughout their stay in Courchevel.",    audienceCards: [
+      {
+        title: "Luxury Hotel Guests",
+         text: "Move effortlessly between five-star hotels, restaurants, boutiques, and leisure activities while enjoying a dedicated chauffeur service.",
+        icon: "/assets/icons/services/multiple-suit-case.webp",
+        iconAlt: "Luxury Hotel icon",
+      },
+      {
+        title: "Private Chalet Residents",
+        text: "Travel comfortably between chalets, ski areas, shopping districts, restaurants, and nearby Alpine destinations.",
+        icon: "/assets/icons/services/star.webp",
+        iconAlt: "Chalet icon",
+      },
+      {
+        title: "Ski & Leisure Travel",
+        text: "Perfect for flexible schedules, multiple stops, family travel, and full-day chauffeur service throughout Courchevel.",
+        icon: "/assets/icons/services/clock.webp",
+        iconAlt: "Flexible leisure icon",
+      },
+    ],
+    localLinksTitle: "Choose Another Destination",
+    localLinksDescription: 
+      "Explore our hourly chauffeur services across the French Riviera and premium Alpine destinations.",    
+    localLinks: hourlyCityLinks,
+    cta: {
+      title: "Need an Hourly Chauffeur in Courchevel?",
+      description:
+       "Share your chalet, hotel, or travel plans and we'll recommend the ideal chauffeur service for your stay.",
+      buttonText: "Book a Chauffeur in Courchevel",
+      buttonHref: "/contact-me",
+    },
+    faq: [
+      {
+        question: "Why choose an hourly chauffeur service in Courchevel?",
+        answer:
+          "An hourly chauffeur service offers complete flexibility throughout your stay. Whether travelling between chalets, luxury hotels, restaurants, boutiques, or ski facilities, your chauffeur remains available whenever you need transportation.",
+      },
+      {
+        question: "Can I keep the same chauffeur for an entire day in Courchevel?",
+        answer:
+          "Absolutely. Many clients reserve a chauffeur for half-day or full-day bookings, allowing continuous transportation between hotels, chalets, restaurants, shopping areas, ski resorts, and business appointments throughout Courchevel.",
+      },
+      {
+        question: "Is an hourly chauffeur service suitable for ski holidays in Courchevel?",
+        answer:
+          "Yes. An hourly chauffeur is particularly popular during ski holidays, providing seamless transportation between Courchevel 1850, Courchevel 1650, private chalets, ski facilities, hotels, and après-ski venues. Your chauffeur remains available throughout the day, allowing maximum flexibility without the need to arrange separate transfers.",
+      },
+      {
+        question: "Can the chauffeur wait while I shop, dine, or attend activities?",
+        answer:
+          "Yes. Your chauffeur remains available throughout the booking period, ensuring smooth transportation between destinations without arranging additional transfers.",
+      },
+      {
+        question: "Which locations are commonly served during hourly chauffeur bookings in Courchevel?",
+        answer:
+          "Our chauffeurs regularly serve luxury hotels and residences throughout Courchevel, including Cheval Blanc Courchevel, Airelles Courchevel, Six Senses Residences Courchevel, private chalets, fine dining venues, ski resorts, and nearby Alpine destinations.",
+      },
+      {
+        question: "Is an hourly chauffeur service suitable for luxury chalet stays in Courchevel?",
+        answer:
+          "Yes. Many guests staying in private chalets use an hourly chauffeur for transportation between ski resorts, restaurants, luxury hotels, shopping areas, and private events while enjoying complete flexibility throughout the day.",
+      },
+      {
+        question: "Which vehicle is recommended for an hourly chauffeur service in Courchevel?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, and guests travelling with ski equipment or additional luggage.",
+      },
+    ]
+  },
+  "chamonix": {
+    slug: "chamonix",
+    path: "/our-services/hourly-chauffeur/chamonix",
+    metadata: {
+      title: "Hourly Chauffeur Service in Chamonix | Private Driver in Chamonix | Kokolimo",
+      description:
+       "Private hourly chauffeur service in Chamonix for ski holidays, luxury hotels, mountain excursions, shopping, dining and flexible alpine travel.",
+      keywords: [
+        "hourly chauffeur Chamonix",
+        "private driver Chamonix",
+        "chauffeur service Chamonix",
+        "Chamonix luxury chauffeur",
+        "chauffeur at disposal Chamonix",
+      ],
+    },
+    serviceLabel: "Chamonix",
+    heroTitle: "Hourly Chauffeur Service in Chamonix",
+    heroDescription:
+       "A private chauffeur on standby for luxury hotels, ski holidays, mountain experiences, restaurants, shopping, and flexible travel throughout Chamonix and the Alps.",
+    heroImageSrc: "/assets/images/services/chamonix.webp",
+    heroImageAlt: "Luxury hourly chauffeur service in Chamonix",
+    introTitle: "Flexible Chauffeur Service for Chamonix Stays",
+    introDescription: "Chamonix attracts visitors from around the world for skiing, mountain adventures, luxury accommodation, and year-round alpine experiences. An hourly chauffeur service allows you to travel comfortably between destinations while keeping complete flexibility throughout the day.",    panels: [
+      {
+        title: "Explore Chamonix Freely",
+        text: "From luxury hotels and ski areas to restaurants and mountain attractions, your chauffeur remains available whenever your plans evolve throughout the day.",
+        theme: "dark",
+      },
+      {
+        title: "Comfort in Every Season",
+        text: "Whether visiting during winter ski season or summer mountain escapes, enjoy seamless transportation without worrying about parking, traffic, or changing schedules.",
+        theme: "light",
+      },
+    ],
+    audienceTitle: "Perfect For",
+    audienceAccent: "Chamonix Visitors",
+    audienceDescription: "Our hourly chauffeur service is ideal for travellers seeking flexibility, comfort, and premium transportation throughout their stay in Chamonix.",
+    audienceCards: [
+      {
+        title: "Luxury Hotel Guests",
+        text: "Move easily between hotels, restaurants, boutiques, and attractions while enjoying a dedicated chauffeur throughout the day.",
+        icon: "/assets/icons/services/multiple-suit-case.webp",
+        iconAlt: "Luxury hotel icon",
+      },
+      {
+        title: "Ski Holidays",
+        text: "Travel comfortably between hotels, chalets, ski lifts, and après-ski venues with a chauffeur available whenever needed.",
+        icon: "/assets/icons/services/star.webp",
+        iconAlt: "Ski lodge icon",
+      },
+      {
+        title: "Mountain Experiences",
+        text: "Ideal for visitors exploring Chamonix's alpine attractions, scenic viewpoints, and nearby destinations throughout the region.",
+        icon: "/assets/icons/services/mountain.webp",
+        iconAlt: "Mountain experience icon",
+      },
+    ],
+    localLinksTitle: "Choose Another Destination",
+    localLinksDescription:
+        "Explore our hourly chauffeur services across the French Riviera and premium Alpine destinations.",    
+    localLinks: hourlyCityLinks,
+    cta: {
+      title: "Need an Hourly Chauffeur in Chamonix?",
+      description:
+    "Share your itinerary, accommodation, and travel plans, and we'll recommend the ideal chauffeur service for your stay.",
+      buttonText: "Book a Chauffeur in Chamonix",
+      buttonHref: "/contact-me",
+    },
+    faq: [
+      {
+        question: "Why choose an hourly chauffeur service in Chamonix?",
+        answer:
+          "An hourly chauffeur service gives you complete flexibility throughout your stay. Whether you're travelling between hotels, ski areas, restaurants, shopping locations, or mountain attractions, your chauffeur remains available whenever you need transportation.",
+      },
+      {
+        question: "Can I book a chauffeur for a full day in Chamonix?",
+        answer:
+          "Yes. Many clients choose half-day or full-day chauffeur bookings to enjoy maximum flexibility while exploring Chamonix and the surrounding Alpine region.",
+      },
+      {
+        question: "Is the service suitable for ski holidays?",
+        answer:
+          "Absolutely. Our hourly chauffeur service is ideal for ski holidays, providing comfortable transportation between hotels, chalets, ski lifts, restaurants, and après-ski venues.",
+      },
+      {
+        question: "Can the chauffeur wait while I dine, shop, or attend activities?",
+        answer:
+          "Yes. Your chauffeur remains available throughout the booking period, ensuring smooth transportation between destinations without the need to arrange separate transfers.",
+      },
+      {
+        question: "What are the most popular destinations during hourly bookings in Chamonix?",
+        answer:
+          "Clients frequently travel between luxury hotels, the town centre, ski areas, restaurants, mountain attractions, and nearby Alpine destinations throughout the Chamonix Valley.",
+      },
+      {
+        question: "Which vehicle is recommended for an hourly chauffeur service in Chamonix?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, and guests travelling with ski equipment or additional luggage.",
+      },
+    ]
   },
 };
 
@@ -888,6 +1543,56 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Nice Tour",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "How do I book a Nice Chauffeur Tour?",
+        answer: "You can book a Nice Chauffeur Tour by contacting us directly through our website or phone number."
+      },
+      {
+        question: "What are the operating hours for the Nice Chauffeur Tour?",
+        answer: "Our Nice Chauffeur Tour operates 24/7, ensuring you have reliable transportation whenever you need it."
+      },
+      {
+        question: "What are the most popular private tours from Nice?",
+        answer:
+          "Popular private tours from Nice include Monaco, Èze, Saint-Paul-de-Vence, Cannes, Antibes, Cap d’Antibes, and scenic drives along the French Riviera. Each itinerary can be tailored to your interests and schedule."
+      },
+      {
+        question: "Can I customize my private tour from Nice?",
+        answer:
+          "Yes. Every private tour is fully customizable. You can choose the destinations, duration, sightseeing stops, restaurants, shopping areas, and viewpoints that best match your preferences."
+      },
+      {
+        question: "Can the tour start from my hotel or Nice Airport?",
+        answer:
+          "Absolutely. We can arrange pickup from your hotel, villa, yacht, cruise terminal, or directly from Nice Côte d’Azur Airport, providing a seamless start to your private tour."
+      },
+      {
+        question: "Is a private tour from Nice suitable for a day trip to Monaco?",
+        answer:
+          "Yes. Monaco is one of the most requested destinations from Nice. A private tour allows you to visit Monte-Carlo, Port Hercule, the Prince's Palace area, luxury boutiques, and panoramic viewpoints at your own pace."
+      },
+      {
+        question: "Can I visit several destinations in one day?",
+        answer:
+          "Yes. Many guests combine destinations such as Nice, Èze, Monaco, Antibes, and Cannes within the same day. Your itinerary remains flexible throughout the tour."
+      },
+      {
+        question: "Are private tours suitable for families and small groups?",
+        answer:
+          "Yes. Private tours are ideal for couples, families, and small groups seeking comfort, privacy, and a personalized way to discover the French Riviera."
+      },
+      {
+        question: "Can the tour include restaurants, shopping, or wine tastings?",
+        answer:
+          "Absolutely. Private tours can include seaside restaurants, luxury shopping, local markets, wineries, and other experiences based on your interests."
+      },
+      {
+        question: "Which vehicle is recommended for a private tour from Nice?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is well suited to families, small groups, and guests requiring additional space and comfort."
+      }
+    ]
   },
   cannes: {
     slug: "cannes",
@@ -960,6 +1665,48 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Cannes Tour",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "What are the most popular private tours from Cannes?",
+        answer:
+          "Popular private tours from Cannes include Monaco, Nice, Antibes, Saint-Paul-de-Vence, Èze, Cap d’Antibes, and Saint-Tropez. Each itinerary can be customized to match your interests and schedule."
+      },
+      {
+        question: "Can I customize my private tour from Cannes?",
+        answer:
+          "Yes. Every private tour is fully customizable. You can choose the destinations, timing, sightseeing stops, restaurants, shopping areas, and experiences you would like to include."
+      },
+      {
+        question: "Can the tour start from my hotel, villa, or yacht in Cannes?",
+        answer:
+          "Absolutely. We can arrange pickup from hotels along La Croisette, private villas, Cannes Vieux Port, Port Canto, or other locations throughout Cannes and the French Riviera."
+      },
+      {
+        question: "Which landmarks are commonly included in a Cannes private tour?",
+        answer:
+          "Guests often visit La Croisette, the Palais des Festivals, Le Suquet, luxury boutiques, Port Canto, Cap d’Antibes, and scenic viewpoints overlooking the Mediterranean coastline."
+      },
+      {
+        question: "Can I combine Cannes with other French Riviera destinations in one day?",
+        answer:
+          "Yes. Many guests combine Cannes with Antibes, Nice, Monaco, Saint-Paul-de-Vence, Èze, or Saint-Tropez within a single private tour. The itinerary remains flexible throughout the day."
+      },
+      {
+        question: "Are private tours from Cannes suitable during major events?",
+        answer:
+          "Yes. Private tours are particularly popular during the Cannes Film Festival, Cannes Lions, and other international events, offering a comfortable and flexible way to explore the French Riviera between engagements."
+      },
+      {
+        question: "Can the tour include fine dining, shopping, or wine experiences?",
+        answer:
+          "Absolutely. Your itinerary can include Michelin-starred restaurants, luxury shopping, local markets, wine tastings, seaside dining, and other curated experiences tailored to your preferences."
+      },
+      {
+        question: "Which vehicle is recommended for a private tour from Cannes?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, small groups, and guests requiring additional space and comfort."
+      }
+    ]
   },
   monaco: {
     slug: "monaco",
@@ -1032,6 +1779,48 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Monaco Tour",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "What are the most popular private tours to Monaco?",
+        answer:
+          "Popular private tours to Monaco often include Monte-Carlo, Casino Square, Port Hercule, Monaco-Ville, the Prince's Palace area, luxury shopping districts, and panoramic viewpoints overlooking the Mediterranean."
+      },
+      {
+        question: "Can I customize my private tour to Monaco?",
+        answer:
+          "Yes. Every private tour is fully customizable. You can choose the sightseeing stops, restaurants, shopping experiences, coastal routes, and viewpoints that best suit your plans."
+      },
+      {
+        question: "Can the tour include pickup from my hotel, residence, or yacht?",
+        answer:
+          "Absolutely. We can arrange pickup from hotels, private residences, villas, Port Hercule, Fontvieille Marina, yachts, or other locations across the French Riviera."
+      },
+      {
+        question: "Which landmarks are commonly included in a Monaco private tour?",
+        answer:
+          "Guests often visit Monte-Carlo, Casino Square, Port Hercule, the Prince's Palace area, Monaco-Ville, luxury shopping districts, and panoramic viewpoints overlooking the Mediterranean."
+      },
+      {
+        question: "Can Monaco be combined with other Riviera destinations in one day?",
+        answer:
+          "Yes. Many guests combine Monaco with Èze, Nice, Saint-Jean-Cap-Ferrat, Antibes, Cannes, or Saint-Paul-de-Vence within a single private tour. The itinerary remains flexible throughout the day."
+      },
+      {
+        question: "Are Monaco private tours suitable for cruise passengers and yacht guests?",
+        answer:
+          "Yes. Private tours to Monaco are particularly popular with yacht guests, cruise passengers, families, and VIP travelers seeking a comfortable and personalized way to discover the French Riviera."
+      },
+      {
+        question: "Can the tour include fine dining, luxury shopping, or coastal experiences?",
+        answer:
+          "Absolutely. Your itinerary can include Michelin-starred restaurants, luxury boutiques in Monte-Carlo, waterfront dining, beach clubs, scenic coastal drives, and other curated experiences."
+      },
+      {
+        question: "Which vehicle is recommended for a private tour to Monaco?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, small groups, and guests requiring additional space and comfort."
+      }
+    ]
   },
   "saint-tropez": {
     slug: "saint-tropez",
@@ -1105,5 +1894,402 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       buttonText: "Book Saint-Tropez Tour",
       buttonHref: "/contact-me",
     },
+    faq: [
+      {
+        question: "What are the most popular private tours from Saint-Tropez?",
+        answer:
+          "Popular private tours from Saint-Tropez include Port Grimaud, Ramatuelle, Gassin, Cannes, Antibes, Nice, Monaco, and scenic drives through the French Riviera and Provence. Each itinerary can be tailored to your preferences and schedule."
+      },
+      {
+        question: "Can I customize my private tour from Saint-Tropez?",
+        answer:
+          "Yes. Every private tour is fully customizable. You can choose the destinations, timing, sightseeing stops, restaurants, beach clubs, shopping areas, and experiences you would like to include."
+      },
+      {
+        question: "Can the tour start from my hotel, villa, or yacht in Saint-Tropez?",
+        answer:
+          "Absolutely. We can arrange pickup from luxury hotels, private villas, beach clubs, Port de Saint-Tropez, or other locations throughout Saint-Tropez and the surrounding area."
+      },
+      {
+        question: "Which landmarks are commonly included in a Saint-Tropez private tour?",
+        answer:
+          "Guests often visit the Port de Saint-Tropez, Citadel of Saint-Tropez, Place des Lices, Pampelonne Beach, Ramatuelle, Gassin, and panoramic viewpoints overlooking the Mediterranean coastline."
+      },
+      {
+        question: "Can I combine Saint-Tropez with other destinations in one day?",
+        answer:
+          "Yes. Many guests combine Saint-Tropez with Port Grimaud, Ramatuelle, Gassin, Cannes, Antibes, or other Riviera destinations. Your itinerary remains flexible throughout the day."
+      },
+      {
+        question: "Are private tours suitable for beach clubs and luxury experiences?",
+        answer:
+          "Absolutely. Private tours are ideal for visiting beach clubs, luxury hotels, fine dining venues, vineyards, shopping areas, and exclusive destinations across Saint-Tropez and the French Riviera."
+      },
+      {
+        question: "Can the tour include wineries and Provençal villages?",
+        answer:
+          "Yes. Many guests choose to combine Saint-Tropez with vineyard visits, wine tastings, and picturesque villages throughout the Var region and Provence."
+      },
+      {
+        question: "Which vehicle is recommended for a private tour from Saint-Tropez?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, small groups, and guests requiring additional space and comfort."
+      }
+    ]
+  },
+  megeve: {
+    slug: "megeve",
+    path: "/our-services/private-tours/megeve",
+    metadata: {
+      title: "Private Tour in Megève | Winter Chauffeur Tours in the French Alps | Kokolimo",
+      description:
+        "Discover Megève during the winter season with a private chauffeur tour. Luxury chalets, ski resorts, gourmet restaurants, scenic Alpine drives, and tailor-made experiences in the French Alps.",
+      keywords: [
+        "private tours Megève",
+        "Megève chauffeur tour",
+        "winter tour Megève",
+        "French Alps private tour",
+        "Megève ski resort tour",
+        "luxury chalet Megève",
+        "winter chauffeur Megève",
+      ],
+    },
+    serviceLabel: "Mégeve",
+    heroTitle: "Private Tour in Mégeve",
+    heroDescription:
+      "Explore Megève during the winter season with a private chauffeur and luxury vehicle. Discover luxury chalets, ski resorts, mountain villages, gourmet restaurants, and tailor-made Alpine experiences throughout the French Alps.",      heroImageSrc: "/assets/images/services/megeve.webp",
+    heroImageAlt: "Private chauffeur tour in Megève",
+    introTitle: "Discover Megève During the Winter Season",
+    introDescription:
+      "From luxury chalets and prestigious ski resorts to panoramic mountain scenery and authentic Alpine villages, a private tour in Megève offers comfort, flexibility, and a personalized way to experience the French Alps during winter.",      panels: [
+      {
+        title: "Winter Alpine Discovery",
+        text: "Explore Megève, nearby mountain villages, scenic Alpine roads, luxury ski resorts, and breathtaking winter landscapes with a private chauffeur.",
+        theme: "dark",
+      },
+      {
+        title: "Private Touring Comfort",
+        text: "Travel throughout the day with one dedicated chauffeur and premium vehicle, enjoying complete flexibility between chalets, resorts, restaurants, and Alpine destinations.",
+        theme: "light",
+      },
+    ],
+    audienceTitle: "Great For",
+    audienceAccent: "Winter in Megève",
+    audienceDescription:
+      "Ideal for guests enjoying a winter stay in Megève who wish to discover nearby Alpine destinations, luxury resorts, and mountain scenery with complete comfort and flexibility.",    audienceCards: [
+      {
+        title: "Winter Holiday Guests",
+        text: "Enjoy seamless transportation between luxury hotels, ski resorts, and winter attractions throughout Megève.",
+        icon: "/assets/icons/services/plane.webp",
+        iconAlt: "Winter holiday guest icon",
+      },
+      {
+        title: "Couples & Ski Groups",
+        text: "Travel comfortably between chalets, restaurants, ski facilities, and Alpine destinations during your winter stay.",
+        icon: "/assets/icons/services/star.webp",
+        iconAlt: "Families and ski groups icon",
+      },
+      {
+        title: "Luxury Chalet Stays",
+        text: "Explore Megève and the French Alps from prestigious chalets and mountain resorts with a dedicated chauffeur.",
+        icon: "/assets/icons/services/hand.webp",
+        iconAlt: "Luxury chalet icon",
+      },
+    ],
+    localLinksTitle: "Tour by Destination",
+    localLinksDescription:
+      "Explore other private chauffeur tour destinations across the French Alps and the French Riviera.",   
+       localLinks: tourCityLinks,
+    cta: {
+      title: "Plan Your Megève Winter private Tour",
+      description:
+        "Tell us where you are staying, your preferred destinations, and your travel dates, and we will create a personalized Alpine winter experience.",
+      buttonText: "Book Megève Tour",
+      buttonHref: "/contact-me",
+    },
+    faq: [
+      {
+        question: "What are the most popular winter tours from Megève?",
+        answer:
+          "Popular winter tours from Megève include Chamonix, Annecy, Courchevel, scenic Alpine drives, luxury ski resorts, and charming mountain villages throughout the French Alps.",
+      },
+      {
+        question: "Can I customize my private tour from Megève?",
+        answer:
+          "Yes. Every private tour is fully customizable. You can choose the destinations, timing, restaurants, viewpoints, shopping areas, and Alpine experiences you would like to include.",
+      },
+      {
+        question: "Can the tour start from my chalet or hotel in Megève?",
+        answer:
+          "Absolutely. We can arrange pickup from luxury hotels, private chalets, ski resorts, and residences throughout Megève and the surrounding Alpine region.",
+      },
+      {
+        question: "Can I visit Chamonix, Annecy, or Courchevel during the same day?",
+        answer:
+          "Yes. Many guests combine Megève with Chamonix, Annecy, Courchevel, or other Alpine destinations as part of a full-day private chauffeur tour.",
+      },
+      {
+        question: "Are private tours suitable during the ski season?",
+        answer:
+          "Absolutely. Private tours are particularly popular during the winter season, offering comfortable transportation between ski resorts, restaurants, luxury hotels, and Alpine attractions.",
+      },
+      {
+        question: "Can a private tour be combined with a ski holiday in Megève?",
+        answer:
+          "Yes. Many guests book private tours during their ski holiday to explore nearby Alpine villages, scenic viewpoints, gourmet restaurants, and luxury resorts beyond the slopes.",
+      },
+      {
+        question: "Can the tour include shopping and fine dining experiences?",
+        answer:
+          "Yes. Your itinerary can include luxury boutiques, gourmet restaurants, mountain hotels, wellness facilities, and other premium experiences in and around Megève.",
+      },
+      {
+        question: "Which luxury hotels are commonly included during a private tour in Megève?",
+        answer:
+          "Guests frequently visit renowned properties such as Four Seasons Hotel Megève, Les Fermes de Marie, luxury chalets, gourmet restaurants, and exclusive winter destinations throughout the region.",
+      },
+      {
+        question: "Which vehicle is recommended for a private tour in Megève?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, and guests travelling with ski equipment or additional luggage.",
+      },
+    ]
+  },
+  courchevel: {
+    slug: "courchevel",
+    path: "/our-services/private-tours/courchevel",
+    metadata: {
+      title: "Private Tour in Courchevel | Winter Chauffeur Tours in the French Alps | Kokolimo",
+      description:
+        "Discover Courchevel during the winter season with a private chauffeur tour. Luxury chalets, ski resorts, gourmet restaurants, scenic Alpine drives, and tailor-made experiences in the French Alps.",
+      keywords: [
+        "private tours Courchevel",
+        "Courchevel chauffeur tour",
+        "winter tour Courchevel",
+        "Courchevel ski resort tour",
+        "luxury chalet Courchevel",
+        "French Alps private tour",
+        "winter chauffeur Courchevel",
+      ],
+    },
+    serviceLabel: "Courchevel",
+    heroTitle: "Private Tour in Courchevel",
+    heroDescription:
+      "Explore Courchevel during the winter season with a private chauffeur and luxury vehicle. Discover prestigious ski resorts, luxury chalets, gourmet restaurants, Alpine villages, and tailor-made experiences throughout the French Alps.",
+    heroImageSrc: "/assets/images/services/courchevel.webp",
+    heroImageAlt: "Private chauffeur tour in Courchevel",
+    introTitle: "Discover Courchevel During the Winter Season",
+    introDescription:
+    "From luxury chalets and world-renowned hotels to exceptional ski resorts and breathtaking Alpine scenery, a private tour in Courchevel offers comfort, flexibility, and a personalized way to experience the French Alps during winter.",   panels: [
+      {
+        title: "Winter Alpine Discovery",
+        text: "Explore Courchevel, Les 3 Vallées, luxury ski resorts, Alpine villages, and spectacular winter landscapes with a private chauffeur.",
+        theme: "dark",
+      },
+      {
+        title: "Private Touring Comfort",
+        text: "Travel at your own pace with one dedicated chauffeur and premium vehicle, enjoying complete flexibility between chalets, hotels, restaurants, and winter destinations.",
+        theme: "light",
+      },
+    ],
+    audienceTitle: "Great For",
+    audienceAccent: "Winter in Courchevel",
+    audienceDescription:
+    "Ideal for guests enjoying a winter stay in Courchevel who wish to discover luxury resorts, Alpine scenery, and nearby mountain destinations with complete comfort and flexibility.",  audienceCards: [ 
+      {
+        title: "Winter Holiday Guests",
+        text: "Enjoy seamless transportation between luxury hotels, ski resorts, and winter attractions throughout Courchevel.",
+        icon: "/assets/icons/services/plane.webp",
+        iconAlt: "Winter holiday guest icon",
+      },
+      {
+        title: "Families & Ski Groups",
+        text: "Travel comfortably between chalets, ski facilities, restaurants, and Alpine destinations during your stay.",
+        icon: "/assets/icons/services/star.webp",
+        iconAlt: "Families and ski groups icon",
+      },
+      {
+        title: "Luxury Chalet Stays",
+        text: "Discover Courchevel and the French Alps from prestigious chalets and world-class ski resorts with a dedicated chauffeur.",
+        icon: "/assets/icons/services/hand.webp",
+        iconAlt: "Luxury chalet icon",
+      },
+    ],
+    localLinksTitle: "Tour by Destination",
+    localLinksDescription:
+      "Explore other private chauffeur tour destinations across the French Alps and the French Riviera.",   
+       localLinks: tourCityLinks,
+    cta: {
+      title: "Plan Your Courchevel Winter Tour",
+      description:
+         "Tell us where you are staying, your preferred destinations, and your travel dates, and we will create a personalized Alpine winter experience.",
+      buttonText: "Book Courchevel Tour",
+      buttonHref: "/contact-me",
+    },
+    faq: [
+      {
+        question: "What are the most popular winter tours from Courchevel?",
+        answer:
+          "Popular winter tours from Courchevel include Méribel, Megève, Annecy, Chamonix, scenic Alpine drives, luxury ski resorts, and charming mountain villages throughout the French Alps.",
+      },
+      {
+        question: "Can I customize my private tour from Courchevel?",
+        answer:
+          "Yes. Every private tour is fully customizable. You can choose the destinations, restaurants, viewpoints, shopping areas, and Alpine experiences you would like to include.",
+      },
+      {
+        question: "Can the tour start from my chalet or hotel in Courchevel?",
+        answer:
+          "Absolutely. We can arrange pickup from luxury hotels, private chalets, ski resorts, and residences throughout Courchevel and the surrounding Alpine region.",
+      },
+      {
+        question: "Can I visit Megève, Annecy, or Chamonix during the same day?",
+        answer:
+          "Yes. Many guests combine Courchevel with Megève, Annecy, Chamonix, or other Alpine destinations as part of a full-day private chauffeur tour.",
+      },
+      {
+        question: "Are private tours suitable during the ski season?",
+        answer:
+          "Absolutely. Private tours are particularly popular during the winter season, offering comfortable transportation between ski resorts, restaurants, luxury hotels, and Alpine attractions.",
+      },
+      {
+        question: "Can a private tour be combined with a ski holiday in Courchevel?",
+        answer:
+          "Yes. Many guests book private tours during their ski holiday to explore nearby Alpine villages, panoramic viewpoints, gourmet restaurants, and luxury resorts beyond the slopes.",
+      },
+      {
+        question: "Can the tour include shopping and fine dining experiences?",
+        answer:
+          "Yes. Your itinerary can include luxury boutiques, Michelin-starred restaurants, wellness facilities, and premium experiences throughout Courchevel and the surrounding Alpine region.",
+      },
+      {
+        question: "Which luxury hotels are commonly included during a private tour in Courchevel?",
+        answer:
+          "Guests frequently visit renowned properties such as Cheval Blanc Courchevel, Airelles Courchevel, Six Senses Residences Courchevel, luxury chalets, gourmet restaurants, and exclusive winter destinations throughout the resort.",
+      },
+      {
+        question: "Which vehicle is recommended for a private tour in Courchevel?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, and guests travelling with ski equipment or additional luggage.",
+      },
+    ]
+  },
+  chamonix: {
+    slug: "chamonix",
+    path: "/our-services/private-tours/chamonix",
+    metadata: {
+      title:     "Private Tour in Chamonix | Winter Chauffeur Tours in the French Alps | Kokolimo",
+      description:
+       "Discover Chamonix during the winter season with a private chauffeur tour. Mont Blanc viewpoints, luxury hotels, Alpine villages, scenic drives, and tailor-made experiences in the French Alps.",
+      keywords: [
+         "private tours Chamonix",
+          "Chamonix chauffeur tour",
+          "winter tour Chamonix",
+          "Mont Blanc tour",
+          "French Alps private tour",
+          "Aiguille du Midi tour",
+          "winter chauffeur Chamonix",
+      ],
+    },
+    serviceLabel: "Chamonix",
+    heroTitle: "Private Tour in Chamonix",
+    heroDescription:
+      "Explore Chamonix during the winter season with a private chauffeur and luxury vehicle. Discover Mont Blanc viewpoints, Alpine villages, ski resorts, gourmet restaurants, and tailor-made experiences throughout the French Alps.",    heroImageSrc: "/assets/images/services/chamonix.webp",
+    heroImageAlt: "Private chauffeur tour in Chamonix",
+    introTitle: "Discover Chamonix During the Winter Season",
+    introDescription:
+      "From iconic mountain landscapes and world-famous viewpoints to luxury hotels and charming Alpine villages, a private tour in Chamonix offers comfort, flexibility, and a personalized way to experience the French Alps during winter.",      
+      panels: [{
+        title: "Winter Alpine Discovery",
+        text: "Explore Chamonix, Mont Blanc viewpoints, Alpine villages, scenic mountain roads, and some of the most spectacular winter landscapes in the French Alps.",
+        theme: "dark",
+      },
+      {
+        title: "Private Touring Comfort",
+        text: "Travel at your own pace with one dedicated chauffeur and premium vehicle, enjoying complete flexibility throughout your stay in Chamonix and the surrounding Alpine region.",
+        theme: "light",
+      },
+    ],
+    audienceTitle: "Great For",
+    audienceAccent: "Winter in Chamonix",
+    audienceDescription:
+      "Ideal for guests enjoying a winter stay in Chamonix who wish to discover Mont Blanc, Alpine scenery, luxury resorts, and nearby mountain destinations with complete comfort and flexibility.",  audienceCards: [ 
+       {
+          title: "Winter Holiday Guests",
+          text: "Enjoy seamless transportation between luxury hotels, ski resorts, and winter attractions throughout Chamonix.",
+          icon: "/assets/icons/services/plane.webp",
+          iconAlt: "Winter holiday icon",
+        },
+        {
+          title: "Couples & Families",
+          text: "Experience panoramic viewpoints, mountain villages, restaurants, and Alpine scenery at a relaxed pace.",
+          icon: "/assets/icons/services/star.webp",
+          iconAlt: "Couples and families icon",
+        },
+        {
+          title: "Mont Blanc Explorers",
+          text: "Discover iconic Alpine landmarks, scenic roads, and breathtaking mountain landscapes throughout the Chamonix Valley.",
+          icon: "/assets/icons/services/hand.webp",
+          iconAlt: "Mont Blanc explorer icon",
+        },
+    ],
+    localLinksTitle: "Tour by Destination",
+    localLinksDescription:
+    "Explore other private chauffeur tour destinations across the French Alps and the French Riviera.",
+         localLinks: tourCityLinks,
+    cta: {
+      title: "Plan Your Chamonix Winter Tour",
+      description:
+        "Tell us where you are staying, your preferred destinations, and your travel dates, and we will create a personalized Alpine winter experience.",
+      buttonText: "Book Chamonix Tour",
+      buttonHref: "/contact-me",
+    },
+    faq: [
+      {
+        question: "What are the most popular winter tours from Chamonix?",
+        answer:
+          "Popular winter tours from Chamonix include Megève, Annecy, Courchevel, Mont Blanc viewpoints, scenic Alpine drives, and charming mountain villages throughout the French Alps.",
+      },
+      {
+        question: "Can I customize my private tour from Chamonix?",
+        answer:
+          "Yes. Every private tour is fully customizable. You can choose the destinations, timing, restaurants, viewpoints, shopping areas, and Alpine experiences you would like to include.",
+      },
+      {
+        question: "Can the tour start from my hotel or chalet in Chamonix?",
+        answer:
+          "Absolutely. We can arrange pickup from luxury hotels, chalets, ski resorts, and residences throughout Chamonix and the surrounding Alpine region.",
+      },
+      {
+        question: "Can I visit Megève, Annecy, or Courchevel during the same day?",
+        answer:
+          "Yes. Many guests combine Chamonix with Megève, Annecy, Courchevel, or other Alpine destinations as part of a full-day private chauffeur tour.",
+      },
+      {
+        question: "Are private tours suitable during the ski season?",
+        answer:
+          "Absolutely. Private tours are particularly popular during the winter season, offering comfortable transportation between ski resorts, restaurants, luxury hotels, and Alpine attractions.",
+      },
+      {
+        question: "Can a private tour be combined with a ski holiday in Chamonix?",
+        answer:
+          "Yes. Many guests book private tours during their ski holiday to explore nearby Alpine villages, panoramic viewpoints, gourmet restaurants, and mountain attractions beyond the slopes.",
+      },
+      {
+        question: "Which landmarks are commonly included during a private tour in Chamonix?",
+        answer:
+          "Guests frequently visit the Aiguille du Midi, Mer de Glace, Mont Blanc viewpoints, the historic centre of Chamonix, and scenic Alpine roads offering spectacular mountain scenery.",
+      },
+      {
+        question: "Can the tour include sightseeing, shopping, and fine dining experiences?",
+        answer:
+          "Yes. Your itinerary can include panoramic viewpoints, luxury shopping, gourmet restaurants, mountain villages, and other curated experiences throughout the Chamonix Valley.",
+      },
+      {
+        question: "Which vehicle is recommended for a private tour in Chamonix?",
+        answer:
+          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, and guests travelling with ski equipment or additional luggage.",
+      },
+    ]
   },
 };

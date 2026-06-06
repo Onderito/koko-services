@@ -46,6 +46,9 @@ export default function SeoSchema() {
       { "@type": "City", name: "Monaco" },
       { "@type": "City", name: "Saint-Tropez" },
       { "@type": "AdministrativeArea", name: "French Riviera" },
+      { "@type": "City", name: "Courchevel" },
+      { "@type": "City", name: "Chamonix" },
+      { "@type": "City", name: "Megève" },  
     ],
     priceRange: "€€€",
     openingHoursSpecification: [

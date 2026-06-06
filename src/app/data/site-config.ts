@@ -8,5 +8,5 @@ export const contactEmail = "Info@myriviera.fr";
 export const whatsappUrl = "https://wa.me/33771698142";
 export const legalPostalCode = "06000";
 export const serviceAreaText =
-  "Nice, Cannes, Monaco, Saint-Tropez and the wider French Riviera.";
+  "Nice, Cannes, Monaco, Saint-Tropez, the French Riviera, and selected French Alpine destinations during the winter season.";
 export const socialPreviewImage = `${siteUrl}/favicon.ico`;

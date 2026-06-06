@@ -47,9 +47,9 @@ export default function HeroSection() {
               ))}
           </h1>
           <p className="description body-text mt-5 w-full text-left text-[#111111]">
-            Private chauffeur service for airport transfers, business travel, and tailored journeys across Nice, Cannes, Monaco, and Saint-Tropez.
+            Private chauffeur service for airport transfers, business travel, and tailored journeys across Nice, Cannes, Monaco, and Saint-Tropez, with seasonal winter coverage in Megève, Courchevel, and Chamonix.
           </p>
-
+ 
           <Link href="/contact-me">
             <motion.button
               whileHover={{

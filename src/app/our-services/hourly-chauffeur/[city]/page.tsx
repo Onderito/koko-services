@@ -5,6 +5,8 @@ import { siteUrl } from "@/app/data/site-config";
 import { hourlyChauffeurPages } from "@/app/data/service-pages";
 import ServicePageTemplate from "../../service-page-template";
 
+import BreadcrumbSchema from "@/app/ui/schema/breadcrumb-schema";
+
 type HourlyCityPageProps = {
   params: Promise<{
     city: string;
@@ -43,5 +45,25 @@ export default async function HourlyCityPage({ params }: HourlyCityPageProps) {
     notFound();
   }
 
-  return <ServicePageTemplate config={config} />;
+  const breadcrumbs = [
+    {
+      name: "Home",
+      url: siteUrl,
+    },
+    {
+      name: "Hourly Chauffeur",
+      url: `${siteUrl}/our-services/hourly-chauffeur`,
+    },
+    {
+      name: config.heroTitle,
+      url: `${siteUrl}${config.path}`,
+    },
+  ];
+
+  return (
+    <>
+      <BreadcrumbSchema items={breadcrumbs} />
+      <ServicePageTemplate config={config} />
+    </>
+  );
 }

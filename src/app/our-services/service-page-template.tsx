@@ -387,6 +387,31 @@ export default function ServicePageTemplate({
         />
       ) : null}
 
+      {config.faq && config.faq.length > 0 && (<div className="container">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <span className="section-label">Questions</span>
+          <h2 className="heading-2 mt-4 text-[#111111]">
+            Frequently Asked Questions
+          </h2>
+        </Reveal>
+
+        <RevealGroup
+          className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+          amount={0.26}
+        >
+          {config.faq.map((item) => (
+            <div
+              key={item.question}
+              className="rounded-[28px] border border-[#E7E1D8] bg-white p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)]"
+            >
+              <h3 className="heading-3 text-[#111111]">{item.question}</h3>
+              <p className="card-text mt-3">{item.answer}</p>
+            </div>
+          ))}
+        </RevealGroup>
+      </div>)}
+
+
       <FooterComponent
         title={config.cta.title}
         description={config.cta.description}
