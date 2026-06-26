@@ -29,7 +29,7 @@ export default function SeoSchema() {
       "Luxury private driver and chauffeur service across Nice, Cannes, Monaco and Saint-Tropez.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Nice Côte d'Azur Airport",
+      streetAddress: "33 RUE DE CHATEAUNEUF",
       addressLocality: "Nice",
       postalCode: "06000",
       addressRegion: "Provence-Alpes-Côte d'Azur",
