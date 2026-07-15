@@ -91,7 +91,8 @@ const fleetRows = [
   {
     vehicle: "Mercedes E-Class",
     capacity: "2 passengers · 2 bags",
-    idealFor: "Business travel, executive transfers and private chauffeur service",
+    idealFor:
+      "Business travel, executive transfers and private chauffeur service",
   },
   {
     vehicle: "Mercedes V-Class",
@@ -328,11 +329,16 @@ export default function PartnersClientPage() {
       const response = await fetch("/api/partner", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, phone: `${countryCode} ${formData.phone}` }),
+        body: JSON.stringify({
+          ...formData,
+          phone: `${countryCode} ${formData.phone}`,
+        }),
       });
 
       if (!response.ok) {
-        const data = (await response.json().catch(() => null)) as { error?: string } | null;
+        const data = (await response.json().catch(() => null)) as {
+          error?: string;
+        } | null;
         throw new Error(data?.error || "Partner application failed");
       }
 
@@ -860,12 +866,16 @@ export default function PartnersClientPage() {
                       phone={formData.phone}
                       onCountryChange={setCountryCode}
                       onPhoneChange={handleChange}
-                      onBlur={(e) => setTouched((prev) => ({ ...prev, phone: true }))}
+                      onBlur={(e) =>
+                        setTouched((prev) => ({ ...prev, phone: true }))
+                      }
                       error={showError("phone")}
                     />
                   </div>
                   {showError("phone") && (
-                    <span className="text-xs text-red-600 mt-1">{errors.phone}</span>
+                    <span className="text-xs text-red-600 mt-1">
+                      {errors.phone}
+                    </span>
                   )}
                 </div>
 
@@ -1043,6 +1053,7 @@ export default function PartnersClientPage() {
             </a>
             <a
               href={`tel:${contactPhone}`}
+              aria-label={`Call ${contactPhoneDisplay}`}
               className="inline-flex items-center justify-center rounded-[18px] border border-[#E3D5C2] bg-white px-6 py-3 font-manrope-bold text-[15px] text-[#6D5830] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#FAF6EF]"
             >
               Call {contactPhoneDisplay}

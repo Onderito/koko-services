@@ -15,7 +15,7 @@ export default function FourthCard() {
           <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-[#2F2F2F] text-[18px]">
             🇫🇷
           </span>
-          <span className="font-manrope-bold text-[10px] uppercase tracking-[0.12em] text-white/45">
+          <span className="font-manrope-bold text-[10px] uppercase tracking-[0.12em] text-white/80">
             FR
           </span>
         </div>
@@ -25,7 +25,7 @@ export default function FourthCard() {
           <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-[#2F2F2F] text-[18px]">
             🇷🇺
           </span>
-          <span className="font-manrope-bold text-[10px] uppercase tracking-[0.12em] text-white/45">
+          <span className="font-manrope-bold text-[10px] uppercase tracking-[0.12em] text-white/80">
             RU
           </span>
         </div>
@@ -53,7 +53,7 @@ export default function FourthCard() {
           <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-[#2F2F2F] text-[18px]">
             🇹🇷
           </span>
-          <span className="font-manrope-bold text-[10px] uppercase tracking-[0.12em] text-white/45">
+          <span className="font-manrope-bold text-[10px] uppercase tracking-[0.12em] text-white/80">
             TR
           </span>
         </div>
