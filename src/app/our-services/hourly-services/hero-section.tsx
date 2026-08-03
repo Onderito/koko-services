@@ -1,0 +1,39 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function HeroSection() {
+  return (
+    <>
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 container pt-[var(--nav-clearance)] min-h-[calc(100vh-var(--nav-clearance))]">
+        <div className="xl:w-2/3">
+          <div className="space-y-5 md:space-y-6 xl:space-y-7">
+            <h1 className="heading-1">Hourly Services</h1>
+            <p className="body-text">
+              Half-day or full-day hire—your driver on standby for total freedom
+              and privacy
+            </p>
+            <div className="flex gap-4">
+              <Link href="/contact-me">
+                <span className="inline-flex items-center justify-center rounded-xl border border-[#404040] bg-[#404040] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2F2F2F]">
+                  Request a Quote
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full xl:w-2/3">
+          <div className="relative w-full min-h-[220px] aspect-[16/14] rounded-3xl bg-white">
+            <Image
+              src="/assets/images/services/monaco.webp"
+              alt="Hourly private chauffeur service in Monaco and the French Riviera"
+              fill
+              priority
+              className="object-cover rounded-3xl ring-6 ring-gray-100 shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

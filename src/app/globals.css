@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/Manrope-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/Manrope-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+  --nav-clearance: 7.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "Manrope", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+}
+
+/* Headings réutilisables */
+@layer components {
+  .heading-1 {
+    @apply font-bold font-manrope text-[32px] leading-10 tracking-[-2px]
+           md:text-[64px] md:leading-tight
+           xl:text-[80px] xl:leading-none xl:tracking-[-0.05em];
+  }
+
+  .heading-2 {
+    @apply font-bold font-manrope text-[28px] tracking-[-1px]
+           md:text-[48px]
+           xl:text-[56px] xl:tracking-[-0.03em] leading-tight text-foreground;
+  }
+
+  .heading-3 {
+    @apply font-bold font-manrope text-[18px] tracking-[-0.5px]
+           md:text-[20px] xl:text-[22px] leading-snug text-foreground;
+  }
+
+  .body-text {
+    @apply font-manrope text-[14px] md:text-[16px] xl:text-[18px]
+           tracking-[-0.01em] leading-relaxed text-gray-600;
+  }
+  .card-text {
+    @apply font-manrope text-[14px] md:text-[15px] xl:text-[16px]
+           text-gray-600 leading-relaxed;
+  }
+  .container {
+    @apply container mx-auto px-4 py-10 sm:px-8 md:px-12 lg:px-12 xl:py-24 xl:px-20;
+  }
+  .hero-container {
+    @apply container mx-auto px-4 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24;
+  }
+  .button-hover {
+    @apply transition-all hover:scale-105 duration-300;
+  }
+  .scale-animation {
+    @apply transform transition-transform
+         duration-700 ease-out
+         opacity-90 hover:opacity-100 hover:scale-105;
+  }
+  .section-label {
+    @apply mx-auto inline-flex w-fit rounded-full border px-3.5 py-1.5 text-[12px]
+           md:text-[13px] font-bold font-manrope tracking-[0.08em] uppercase;
+    border-color: #e4d4bf;
+    background: linear-gradient(180deg, #f8f0e4 0%, #efdfc8 100%);
+    color: #6d5830;
+    box-shadow:
+      0 10px 24px rgba(135, 108, 61, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Safari iOS fix: overflow-hidden + rounded-* doesn't clip
+   absolutely-positioned descendants (e.g. next/image with fill).
+   `isolation: isolate` creates a stacking context and
+   `transform: translateZ(0)` forces a compositing layer,
+   which together make Safari respect border-radius clipping. */
+[class~="overflow-hidden"][class*="rounded"] {
+  isolation: isolate;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+}
+
+@layer utilities {
+  .font-manrope-regular {
+    font-family: var(--font-manrope);
+    font-weight: 400;
+  }
+
+  .font-manrope-bold {
+    font-family: var(--font-manrope);
+    font-weight: 700;
+  }
+  .inner-shadow-white {
+    box-shadow: inset 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+  }
+  .inner-shadow-dark {
+    box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  }
+  .shadow-white-thin {
+    box-shadow: 0px 0px 1px 0px #ffffff;
+  }
+  .shadow-gray-offset {
+    box-shadow: 4px 4px 0px 0px rgba(64, 64, 64, 0.25);
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-center-column {
+    @apply flex flex-col justify-center;
+  }
+  .inner-light-shadow {
+    box-shadow: inset 0px 0px 2px 0px rgba(64, 64, 64, 0.25);
+  }
+  .no-blur-shadow-little {
+    box-shadow: 3px 3px 0px 0px #404040;
+  }
+  .card-dark {
+    background-color: #2a2a2a !important;
+    color: white !important;
+  }
+  .card-secondary-text {
+    color: #c9c9c9 !important;
+  }
+  .dark-bg {
+    background-color: #353535 !important;
+  }
+  .dark-border {
+    border-color: #5e5e5e !important;
+    border-width: 0.5px !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fdfdfd;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+  color: #404040;
+  overflow-x: hidden;
+}
