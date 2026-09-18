@@ -234,13 +234,13 @@ export const yachtPosts: BlogPost[] = [
       "Nice airport to Monaco port",
     ],
     intro:
-      "Port Hercule is Monaco's grand stage — the principality's deep-water harbour, ringed by the Monte-Carlo skyline and threaded by the Grand Prix circuit. It fills with superyachts for the race in May and the Monaco Yacht Show in September, and lies about 30 minutes from Nice Airport. Here is how transfers to Port Hercule work.",
+      "Port Hercule is Monaco's grand stage — the principality's deep-water harbour, ringed by the Monte-Carlo skyline and threaded by the Grand Prix circuit. It fills with superyachts for the Formula 1 race in early June and the Monaco Yacht Show in September, and lies about 30 minutes from Nice Airport. Here is how transfers to Port Hercule work.",
     sections: [
       {
         id: "about-port-hercule",
         title: "Monaco's superyacht harbour",
         paragraphs: [
-          "Carved into the coast between the Rock and Monte-Carlo, Port Hercule is Monaco's only deep-water port and its social centrepiece. Superyachts line the quays year-round, and the harbour takes centre stage twice a year — for the Formula 1 Grand Prix in late May, whose circuit runs right along the water, and the Monaco Yacht Show each September.",
+          "Carved into the coast between the Rock and Monte-Carlo, Port Hercule is Monaco's only deep-water port and its social centrepiece. Superyachts line the quays year-round, and the harbour takes centre stage twice a year — for the Formula 1 Grand Prix in early June, whose circuit runs right along the water, and the Monaco Yacht Show each September.",
           "Few marinas put a yacht closer to the heart of the action.",
         ],
         bullets: [
@@ -295,7 +295,7 @@ export const yachtPosts: BlogPost[] = [
       {
         question: "When is the Monaco Yacht Show?",
         answer:
-          "Each September, when Port Hercule fills with the world's largest superyachts and the harbour becomes the centre of the yachting calendar.",
+          "The 2026 Monaco Yacht Show takes place from Wednesday 23 to Saturday 26 September at Port Hercule.",
       },
       {
         question: "Is a chauffeur worth it for Grand Prix arrivals?",
@@ -642,7 +642,7 @@ export const yachtPosts: BlogPost[] = [
       "MYS transfer",
     ],
     intro:
-      "Each September, Port Hercule hosts the Monaco Yacht Show — the world's premier gathering of superyachts, brokers and buyers. For a few days the principality runs at full capacity, roads close and every hotel and quay is busy. A private chauffeur is the calm way to arrive and move through it. Here is how transfers for the show work.",
+      "From 23 to 26 September 2026, Port Hercule hosts the Monaco Yacht Show — the world's premier gathering of superyachts, brokers and buyers. For four days the principality runs at full capacity, roads close and every hotel and quay is busy. A private chauffeur is the calm way to arrive and move through it.",
     sections: [
       {
         id: "the-worlds-premier-show",
@@ -652,7 +652,7 @@ export const yachtPosts: BlogPost[] = [
           "Getting to and from the quays smoothly, on time and in comfort is half the challenge of attending.",
         ],
         bullets: [
-          "Held each September at Port Hercule",
+          "2026 dates: 23–26 September",
           "The world's leading superyacht show",
           "Owners, brokers, designers and media attend",
           "Monaco's busiest and most congested week",
@@ -693,7 +693,7 @@ export const yachtPosts: BlogPost[] = [
       {
         question: "When is the Monaco Yacht Show?",
         answer:
-          "Each September, when Port Hercule fills with the world's largest superyachts and Monaco becomes the centre of the yachting calendar.",
+          "The 2026 Monaco Yacht Show takes place from Wednesday 23 to Saturday 26 September at Port Hercule.",
       },
       {
         question: "How do I get to the Monaco Yacht Show from Nice Airport?",
@@ -897,7 +897,7 @@ export const yachtPosts: BlogPost[] = [
       {
         question: "When is the Cannes Yachting Festival?",
         answer:
-          "Each September, across the Vieux Port and Port Pierre Canto — Europe's leading in-water boat show, in the same month as the Monaco Yacht Show.",
+          "It is held each September across the Vieux Port and Port Pierre Canto. The official 2027 dates have not yet been published.",
       },
       {
         question: "How do I get to the Cannes Yachting Festival from Nice Airport?",

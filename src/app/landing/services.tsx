@@ -13,10 +13,10 @@ export default function Services() {
         </h2>
       </Reveal>
       <RevealGroup className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
-        {homeServiceCards.map((card, index) => (
+        {homeServiceCards.map((card) => (
           <div
             key={card.title}
-            className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[#E7E7E7] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[#E7E7E7] bg-white shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             {/* Photo */}
             <Link
@@ -43,7 +43,7 @@ export default function Services() {
 
             {/* Content */}
             <div className="flex flex-1 flex-col p-6">
-              <div>
+              <div className="pb-6">
                 <h3 className="heading-3 text-[#111111]">
                   <Link href={card.link} className="hover:text-[#1F1F1F]">
                     {card.title}
@@ -54,12 +54,12 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="mt-6 border-t border-[#EFEFEF] pt-6 flex items-center gap-3">
+              <div className="mt-auto flex items-center gap-3 border-t border-[#EFEFEF] pt-6">
                 <Link
                   aria-label={`explore the ${card.title} service`}
                   scroll
                   href={card.link}
-                  className="inline-flex w-[48%] cursor-pointer items-center justify-center rounded-xl border border-[#E4D4BF] bg-white px-5 py-3 text-center font-manrope-bold text-[14px] tracking-[-0.01em] text-[#6D5830] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#FAF6EF]"
+                  className="inline-flex min-h-11 flex-1 cursor-pointer items-center justify-center rounded-xl border border-[#E4D4BF] bg-white px-5 py-3 text-center font-manrope-bold text-[14px] tracking-[-0.01em] text-[#6D5830] transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#FAF6EF] active:scale-[0.96]"
                 >
                   Explore more
                   <span className="sr-only"> about {card.title}</span>
@@ -67,9 +67,9 @@ export default function Services() {
                 <Link
                   aria-label={`request a quote for ${card.title}`}
                   href="/contact-me"
-                  className="w-[60%]"
+                  className="flex-1"
                 >
-                  <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-[#6D5830] shadow-[0_14px_30px_-8px_rgba(109,88,48,0.28),inset_0_1px_0_rgba(255,255,255,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-8px_rgba(109,88,48,0.32),inset_0_1px_0_rgba(255,255,255,0.9)]">
+                  <span className="inline-flex min-h-11 w-full cursor-pointer items-center justify-center rounded-xl bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-[#6D5830] shadow-[0_14px_30px_-8px_rgba(109,88,48,0.28),inset_0_1px_0_rgba(255,255,255,0.8)] transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-8px_rgba(109,88,48,0.32),inset_0_1px_0_rgba(255,255,255,0.9)] active:scale-[0.96]">
                     Book now
                     <span className="sr-only"> for {card.title}</span>
                   </span>

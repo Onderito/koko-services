@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import suitImage from "../../../public/assets/images/bento/suit.png";
+import suitImage from "../../../public/assets/images/bento/suit.webp";
 import { Reveal } from "../ui/reveal";
 
 export default function Vip() {
@@ -74,14 +74,14 @@ export default function Vip() {
               </div>
               <Image
                 className="pointer-events-none absolute bottom-[-62px] left-[-18px] h-auto w-[88px] md:bottom-[-92px] md:left-[-26px] md:w-[138px]"
-                src="/assets/images/bento/bottle.svg"
+                src="/assets/images/bento/bottle.webp"
                 alt="Bottle"
                 width={138}
                 height={138}
               />
               <Image
                 className="pointer-events-none absolute bottom-[-62px] right-[-16px] h-auto w-[88px] md:bottom-[-92px] md:right-[-24px] md:w-[138px]"
-                src="/assets/images/bento/bottle2.svg"
+                src="/assets/images/bento/bottle2.webp"
                 alt="Bottle"
                 width={138}
                 height={138}

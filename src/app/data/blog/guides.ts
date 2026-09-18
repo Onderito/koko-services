@@ -246,13 +246,13 @@ export const guidePosts: BlogPost[] = [
         id: "spring",
         title: "Spring (April–June)",
         paragraphs: [
-          "Spring is many people's favourite: mild, bright weather, gardens in bloom and the sea warming, without the peak-summer crowds until June. It is also the great season of events — the Monaco Grand Prix and the Cannes Film Festival both fall in May.",
+          "Spring is many people's favourite: mild, bright weather, gardens in bloom and the sea warming, without the peak-summer crowds until June. It is also the great season of events — the Cannes Film Festival in May and, from 2026 onward, the Monaco Grand Prix in early June.",
           "For sightseeing, villages and comfortable days, late spring is hard to beat.",
         ],
         bullets: [
           "Mild, bright weather and blooms",
           "Fewer crowds until June",
-          "Monaco Grand Prix and Cannes festival in May",
+          "Cannes festival in May; Monaco Grand Prix in early June",
           "Ideal for sightseeing and villages",
         ],
       },
@@ -326,7 +326,7 @@ export const guidePosts: BlogPost[] = [
       {
         question: "When are the big Riviera events?",
         answer:
-          "The Monaco Grand Prix and Cannes Film Festival in May, summer fireworks, yacht shows in September and carnivals in February.",
+          "The Cannes Film Festival in May, the Monaco Grand Prix in early June, summer fireworks, yacht shows in September and carnivals in February.",
       },
     ],
     relatedSlugs: [

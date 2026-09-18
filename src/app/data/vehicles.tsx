@@ -49,7 +49,7 @@ export const vehicles: Vehicle[] = [
     id: "mercedes-e",
     name: "Mercedes E-Class",
     passengers: 3,
-    image: "/assets/images/cars/class-e/class-e.svg",
+    image: "/assets/images/cars/class-e/class-e-pricing.webp",
     prices: classEPrices,
   },
   {
@@ -63,14 +63,14 @@ export const vehicles: Vehicle[] = [
     id: "mercedes-s",
     name: "Mercedes S-Class",
     passengers: 3,
-    image: "/assets/images/cars/class-s/class-s.svg",
+    image: "/assets/images/cars/class-s/class-s-pricing.webp",
     prices: classSPrices,
   },
   {
     id: "mercedes-maybach",
     name: "Mercedes Maybach",
     passengers: 3,
-    image: "/assets/images/cars/maybach/maybach.svg",
+    image: "/assets/images/cars/maybach/maybach-pricing.webp",
     prices: maybachPrices,
   },
 ];

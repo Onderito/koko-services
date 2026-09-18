@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import heroImage from "../../../public/assets/hero-section-image.webp";
 import gsap from "gsap";
 import { motion } from "motion/react";
 import { heroSection } from "../animation/hero";
@@ -76,19 +77,18 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        <div className="img relative w-full">
+        <div className="img relative block w-full">
           <div className="relative aspect-[4/3] md:aspect-[5/4] lg:aspect-[4/3] w-full rounded-[32px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1E8_100%)] p-2.5 shadow-[0_24px_60px_rgba(45,33,15,0.12)] md:p-3">
             <div className="relative h-full w-full">
               <Image
-                src="/assets/hero-section-image.webp"
+                src={heroImage}
                 placeholder="blur"
-                blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4ICgAAABwAgCdASoEAAQA..."
-                alt="Aerial view of Nice, France with the Mediterranean sea and Promenade des Anglais"
+                alt="Black luxury chauffeur van parked in a landscaped Riviera setting"
                 quality={85}
                 priority
                 fetchPriority="high"
                 fill
-                sizes="(max-width: 1024px) 90vw, 70vw"
+                sizes="(max-width: 1024px) calc(100vw - 2rem), 46vw"
                 className="rounded-[24px] object-cover"
               />
             </div>

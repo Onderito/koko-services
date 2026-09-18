@@ -95,7 +95,7 @@ export const routePosts: BlogPost[] = [
         id: "grand-prix",
         title: "Travelling during the Monaco Grand Prix",
         paragraphs: [
-          "During the Formula 1 Monaco Grand Prix in late May, large parts of the principality close for the circuit and drop-off points move outside the restricted zone. Transfers still run, but they need extra time and careful planning.",
+          "During the Formula 1 Monaco Grand Prix in early June, large parts of the principality close for the circuit and drop-off points move outside the restricted zone. Transfers still run, but they need extra time and careful planning.",
           "If you are arriving for the Grand Prix — or the Monaco Yacht Show in September — book early and share your exact hotel or grandstand so your chauffeur can plan the closest legal drop-off and the smartest route.",
         ],
       },

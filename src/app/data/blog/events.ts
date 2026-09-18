@@ -25,20 +25,20 @@ export const eventPosts: BlogPost[] = [
       "Monaco F1 chauffeur",
     ],
     intro:
-      "The Monaco Grand Prix is the jewel of the Formula 1 calendar — run each May on the streets of Monte-Carlo, around Port Hercule and up through the Casino square. For that week the principality is at bursting point and its roads all but close, which makes a private chauffeur the only relaxed way to move. Here is how to attend the Monaco Grand Prix.",
+      "The Monaco Grand Prix is the jewel of the Formula 1 calendar — the 2027 edition runs from 4 to 6 June on the streets of Monte-Carlo, around Port Hercule and up through Casino Square. For that week the principality is at bursting point and its roads all but close, which makes a private chauffeur the only relaxed way to move. Here is how to attend the Monaco Grand Prix.",
     sections: [
       {
         id: "the-jewel-of-formula-one",
         title: "The jewel of Formula 1",
         paragraphs: [
-          "Raced through Monaco's streets since 1929, the Grand Prix is unlike any other round — barriers inches from the harbour, superyachts moored feet from the track, and the whole principality turned into a grandstand. The action builds from practice on Thursday to qualifying on Saturday and the race on Sunday, in late May.",
+          "Raced through Monaco's streets since 1929, the Grand Prix is unlike any other round — barriers inches from the harbour, superyachts moored feet from the track, and the whole principality turned into a grandstand. In 2027, the race weekend runs from Friday 4 to Sunday 6 June, with the Grand Prix on Sunday.",
           "It is as much a society occasion as a sporting one, and demand for every seat, terrace and berth is intense.",
         ],
         bullets: [
           "A street circuit raced since 1929",
           "Superyachts and grandstands around the harbour",
           "Practice, qualifying and race across the weekend",
-          "Held each year in late May",
+          "2027 race weekend: 4–6 June",
         ],
       },
       {
@@ -76,7 +76,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is the Monaco Grand Prix?",
         answer:
-          "Each year in late May, with practice on Thursday, qualifying on Saturday and the race on Sunday, on the streets of Monte-Carlo.",
+          "The 2027 Monaco Grand Prix takes place from 4 to 6 June, with the race on Sunday 6 June, on the streets of Monte-Carlo.",
       },
       {
         question: "How do I get to the Monaco Grand Prix?",
@@ -127,20 +127,20 @@ export const eventPosts: BlogPost[] = [
       "Cannes Festival car service",
     ],
     intro:
-      "For two weeks each May, the Cannes Film Festival turns the Croisette into the centre of the film world — red-carpet premieres at the Palais, parties along the seafront and black-tie evenings that run late. Arriving in style, and moving through the crowds and closures, is where a private chauffeur comes in. Here is how to attend the Cannes Film Festival.",
+      "From 11 to 22 May 2027, the 80th Cannes Film Festival turns the Croisette into the centre of the film world — red-carpet premieres at the Palais, parties along the seafront and black-tie evenings that run late. Arriving in style, and moving through the crowds and closures, is where a private chauffeur comes in. Here is how to attend the Cannes Film Festival.",
     sections: [
       {
         id: "the-centre-of-cinema",
         title: "The centre of cinema",
         paragraphs: [
           "The festival centres on the Palais des Festivals and its famous red-carpeted staircase, the Montée des Marches, where stars arrive each evening for the premieres. Around it, the Croisette fills with screenings, parties and the grand hotels — the Carlton, the Martinez — at the heart of it all.",
-          "It is glamorous, crowded and tightly scheduled, held over two weeks in May.",
+          "It is glamorous, crowded and tightly scheduled; the 2027 edition runs from 11 to 22 May.",
         ],
         bullets: [
           "Centred on the Palais des Festivals",
           "The Montée des Marches red-carpet staircase",
           "Premieres, parties and the grand hotels",
-          "Held over two weeks each May",
+          "2027 dates: 11–22 May",
         ],
       },
       {
@@ -178,7 +178,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is the Cannes Film Festival?",
         answer:
-          "Over two weeks each May, centred on the Palais des Festivals and its red-carpeted Montée des Marches along the Croisette.",
+          "The 80th Festival de Cannes takes place from 11 to 22 May 2027, centred on the Palais des Festivals and its red-carpeted Montée des Marches.",
       },
       {
         question: "How do I arrive at the Cannes red carpet?",
@@ -280,7 +280,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is the Nice Carnival?",
         answer:
-          "Over roughly two weeks each February, with afternoon and evening parades centred on Place Masséna in the heart of Nice.",
+          "It is held over roughly two weeks each February. The official 2027 dates have not yet been published; the parades remain centred on Place Masséna.",
       },
       {
         question: "What are the flower battles?",
@@ -365,7 +365,7 @@ export const eventPosts: BlogPost[] = [
         id: "planning-your-visit",
         title: "Planning your visit",
         paragraphs: [
-          "The Fête du Citron runs from around mid-February to early March. It makes an ideal day trip, easily combined with Menton's Italianate old town and famous gardens, and with the wider quiet pleasures of the Riviera in winter.",
+          "The 2027 Fête du Citron runs from 13 to 28 February under the theme Douce France. It makes an ideal day trip, easily combined with Menton's Italianate old town and famous gardens, and with the wider quiet pleasures of the Riviera in winter.",
           "Weekends and parade days are busiest, so an early start rewards.",
         ],
       },
@@ -382,7 +382,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is the Menton Lemon Festival?",
         answer:
-          "From around mid-February to early March each year, with sculpture displays, golden-fruit parades and evening illuminations.",
+          "The 2027 Fête du Citron runs from 13 to 28 February, with sculpture displays, golden-fruit parades and evening illuminations.",
       },
       {
         question: "What is the Fête du Citron?",
@@ -413,13 +413,13 @@ export const eventPosts: BlogPost[] = [
   },
   {
     slug: "monte-carlo-masters-tennis",
-    title: "Monte-Carlo Masters Tennis Guide",
+    title: "Rolex Monte-Carlo Masters 2027 Guide",
     description:
       "A guide to the Rolex Monte-Carlo Masters tennis — the clay-court spectacle each April by the sea, and the easy way to reach the club.",
     excerpt:
       "The Monte-Carlo Masters — top clay-court tennis by the sea each April, and the easy way to reach the club.",
     category: "Events",
-    heroKicker: "Monte-Carlo Masters",
+    heroKicker: "Rolex Monte-Carlo Masters",
     readTime: "6 min read",
     publishedAt: "2026-07-06",
     imageUrl: "/assets/images/blog/monte-carlo-masters-tennis.webp",
@@ -433,20 +433,20 @@ export const eventPosts: BlogPost[] = [
       "Monaco tennis chauffeur",
     ],
     intro:
-      "Each April, the Rolex Monte-Carlo Masters brings the best of men's clay-court tennis to one of the sport's most beautiful settings — a club terraced above the sea on the edge of Monaco. It is a glamorous spring fixture, and reaching the cliffside courts is easiest with a chauffeur. Here is a guide to the Monte-Carlo Masters.",
+      "From 3 to 11 April 2027, the Rolex Monte-Carlo Masters brings the best of men's clay-court tennis to one of the sport's most beautiful settings — a club terraced above the sea on the edge of Monaco. It is a glamorous spring fixture, and reaching the cliffside courts is easiest with a chauffeur.",
     sections: [
       {
         id: "clay-tennis-by-the-sea",
         title: "Clay tennis by the sea",
         paragraphs: [
           "A Masters 1000 event on the spring clay swing, the tournament is played at the Monte-Carlo Country Club, set on terraces that drop toward the Mediterranean just over the border from Monaco. The world's leading players compete with the deep blue sea as a backdrop — a setting no other tournament can match.",
-          "Held across a week in April, it is as much a Riviera occasion as a sporting one.",
+          "The 2027 tournament runs from qualifying on 3 April to the finals on 11 April, making it as much a Riviera occasion as a sporting one.",
         ],
         bullets: [
           "A prestigious clay-court Masters event",
           "Played at the Monte-Carlo Country Club",
           "Terraced above the sea by Monaco",
-          "Held across a week each April",
+          "2027 dates: 3–11 April",
         ],
       },
       {
@@ -484,7 +484,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is the Monte-Carlo Masters?",
         answer:
-          "Each April, across a week of clay-court tennis at the Monte-Carlo Country Club on the coast just east of Monaco.",
+          "The 2027 Rolex Monte-Carlo Masters runs from 3 to 11 April at the Monte-Carlo Country Club, with the singles final on Sunday 11 April.",
       },
       {
         question: "Where is the Monte-Carlo Masters played?",
@@ -535,7 +535,7 @@ export const eventPosts: BlogPost[] = [
       "Cannes creativity festival",
     ],
     intro:
-      "Each June, Cannes Lions — the International Festival of Creativity — fills the Palais and the Croisette with the advertising, media and technology world. It is a week of back-to-back meetings, brand events and late nights, where moving efficiently between venues matters. Here is how to attend Cannes Lions with a chauffeur.",
+      "From 21 to 25 June 2027, Cannes Lions — the International Festival of Creativity — fills the Palais and the Croisette with the advertising, media and technology world. It is a week of back-to-back meetings, brand events and late nights, where moving efficiently between venues matters.",
     sections: [
       {
         id: "the-festival-of-creativity",
@@ -548,7 +548,7 @@ export const eventPosts: BlogPost[] = [
           "The International Festival of Creativity",
           "Centred on the Palais des Festivals",
           "Advertising, media and technology delegates",
-          "Held each June",
+          "2027 dates: 21–25 June",
         ],
       },
       {
@@ -586,7 +586,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is Cannes Lions?",
         answer:
-          "Each June, when the International Festival of Creativity fills the Palais des Festivals and the Croisette with the advertising and media world.",
+          "Cannes Lions 2027 takes place from 21 to 25 June at the Palais des Festivals and across the Croisette.",
       },
       {
         question: "Why use a chauffeur for Cannes Lions?",
@@ -688,7 +688,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is the Nice Jazz Festival?",
         answer:
-          "Each July, over several evenings in the heart of Nice around the Jardins Albert 1er and Place Masséna.",
+          "The Nice Jazz Fest has confirmed it will return in 2027, but its exact dates have not yet been published.",
       },
       {
         question: "Where is the Nice Jazz Festival held?",
@@ -790,7 +790,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is Les Voiles de Saint-Tropez?",
         answer:
-          "In late September and early October each year, when classic and modern yachts race in the Gulf of Saint-Tropez.",
+          "The 2026 edition runs from 26 September to 4 October, when classic and modern yachts race in the Gulf of Saint-Tropez.",
       },
       {
         question: "Where can you watch Les Voiles de Saint-Tropez?",
@@ -994,7 +994,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is the Cannes Fireworks Festival?",
         answer:
-          "The Festival d'Art Pyrotechnique runs across several evenings in July and August, with displays launched over the Bay of Cannes after dark.",
+          "It normally runs across several evenings in July and August. The official 2027 programme and dates have not yet been published.",
       },
       {
         question: "Where can you watch the Cannes fireworks?",
@@ -1096,7 +1096,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is Jazz à Juan?",
         answer:
-          "Each July, with evening concerts across the festival dates in the seaside Pinède Gould at Juan-les-Pins, part of Antibes.",
+          "It returns each July to the Pinède Gould at Juan-les-Pins. The official 2027 dates have not yet been published.",
       },
       {
         question: "Where is Jazz à Juan held?",
@@ -1122,6 +1122,108 @@ export const eventPosts: BlogPost[] = [
     ctaTitle: "Enjoy Jazz à Juan with ease",
     ctaDescription:
       "Dropped by the Pinède, collected after the encore — a private chauffeur for the legendary Jazz à Juan festival.",
+    ctaHref: "/our-services/hourly-chauffeur",
+    ctaLabel: "See hourly chauffeur",
+  },
+  {
+    slug: "monaco-e-prix-guide",
+    title: "Monaco E-Prix 2027 Chauffeur Guide",
+    description:
+      "How to attend the Monaco E-Prix on 1–2 May 2027 — electric racing on the full Monaco circuit, access, road closures and chauffeur transport.",
+    excerpt:
+      "The Monaco E-Prix returns for a two-day electric racing weekend on 1–2 May 2027. Here is how to plan the event and move around Monaco.",
+    category: "Events",
+    heroKicker: "Monaco E-Prix",
+    readTime: "7 min read",
+    publishedAt: "2026-09-18",
+    imageUrl: "/assets/images/blog/monaco-e-prix-guide.webp",
+    imageAlt:
+      "Electric single-seater race car on the Monaco street circuit above Port Hercule",
+    keywords: [
+      "Monaco E-Prix 2027",
+      "Formula E Monaco",
+      "Monaco E-Prix chauffeur",
+      "Monaco electric racing",
+      "Monaco E-Prix transport",
+    ],
+    intro:
+      "The Monaco E-Prix returns on 1 and 2 May 2027 for a double-header on the principality's legendary full-length street circuit. With the all-electric GEN4 era beginning and two days of racing around Port Hercule, Casino Square and the harbour tunnels, it is one of Formula E's most prestigious weekends — and one that rewards careful transport planning.",
+    sections: [
+      {
+        id: "electric-racing-on-the-monaco-circuit",
+        title: "Electric racing on the Monaco circuit",
+        paragraphs: [
+          "Formula E now races on the full Monaco layout shared with the principality's other single-seater events. The combination of elevation changes, tight streets and harbour views makes the E-Prix a genuine sporting highlight rather than a shortened exhibition.",
+          "The 2027 weekend is scheduled for Saturday 1 and Sunday 2 May and forms part of the first season for the new GEN4 cars.",
+        ],
+        bullets: [
+          "Two-day event on 1–2 May 2027",
+          "Full-length Monaco street circuit",
+          "All-electric single-seater racing",
+          "A double-header in the GEN4 era",
+        ],
+      },
+      {
+        id: "planning-the-race-weekend",
+        title: "Planning the race weekend",
+        paragraphs: [
+          "The programme spans two days, so visitors can build a weekend around qualifying, racing and time in Monaco. Grandstands and hospitality overlook sections around Port Hercule, while restaurants and hotels fill quickly once the calendar is announced.",
+          "Booking accommodation, race tickets and transport together keeps the weekend coherent, especially for guests arriving through Nice Airport.",
+        ],
+        bullets: [
+          "Reserve tickets and hotels well ahead",
+          "Plan for two separate race days",
+          "Allow time for security and pedestrian routes",
+          "Coordinate airport arrival with circuit closures",
+        ],
+      },
+      {
+        id: "road-closures-and-access",
+        title: "Road closures and access",
+        paragraphs: [
+          "Building a street circuit means central roads close and normal routes through Monaco change. The last part of most journeys is on foot, through controlled access points near the grandstands and harbour.",
+          "A local chauffeur monitors the closures, chooses the closest permitted drop-off and agrees a realistic collection point away from the heaviest pedestrian flow.",
+        ],
+      },
+      {
+        id: "arriving-from-nice-airport",
+        title: "Arriving from Nice Airport",
+        paragraphs: [
+          "Nice Côte d'Azur Airport is normally around 30 to 40 minutes from Monaco, but event traffic can extend the journey considerably. A pre-booked chauffeur removes the uncertainty of taxi queues and coordinates the arrival around the live access plan.",
+          "For the tightest schedules, helicopter services reach Monaco in minutes, with a car waiting at the heliport for the final connection to the hotel or permitted circuit drop-off.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "When is the Monaco E-Prix 2027?",
+        answer:
+          "The Monaco E-Prix takes place on Saturday 1 and Sunday 2 May 2027 as a two-day Formula E double-header.",
+      },
+      {
+        question: "Does Formula E use the full Monaco circuit?",
+        answer:
+          "Yes. Formula E races on the full-length Monaco street circuit around Port Hercule, Casino Square and the principality's famous corners.",
+      },
+      {
+        question: "Can a chauffeur drive directly to the grandstand?",
+        answer:
+          "Not always. Central circuit roads close, so the chauffeur uses the closest permitted drop-off and arranges collection at an accessible meeting point.",
+      },
+      {
+        question: "How far is Monaco from Nice Airport during the E-Prix?",
+        answer:
+          "The normal drive is around 30 to 40 minutes, but event traffic and closures require extra time. A helicopter connection is available for tighter schedules.",
+      },
+    ],
+    relatedSlugs: [
+      "monaco-grand-prix-chauffeur",
+      "getting-around-monaco",
+      "nice-airport-to-monaco",
+    ],
+    ctaTitle: "A chauffeur for the Monaco E-Prix",
+    ctaDescription:
+      "Airport arrival, permitted circuit drop-offs and collection after the racing — coordinated transport for the Monaco E-Prix weekend.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -1197,7 +1299,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "When is the Monaco Historic Grand Prix?",
         answer:
-          "Every two years, a couple of weeks before the Formula 1 Grand Prix, on the streets of Monte-Carlo in spring.",
+          "The event returns in 2028; the Automobile Club de Monaco has not yet published the exact dates.",
       },
       {
         question: "How is it different from the Formula 1 Grand Prix?",

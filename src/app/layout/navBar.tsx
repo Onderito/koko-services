@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { businessName, whatsappUrl } from "../data/site-config";
 import { serviceMenuLinks } from "../data/service-pages";
@@ -108,9 +108,21 @@ export default function NavBar() {
     window.scrollTo(0, 0);
     setActiveDropdown(null);
   };
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMenuOpen]);
+
   return (
     <nav className="fixed w-full z-50">
-      <div className="flex justify-center px-4 py-4 md:px-5 md:py-4">
+      <div className="relative z-30 flex justify-center px-4 py-4 md:px-5 md:py-4">
         {/* Background container centré */}
         <div
           className="relative flex h-[60px] w-full items-center justify-between rounded-[22px]
@@ -167,8 +179,13 @@ export default function NavBar() {
           {/* Bouton / Mobile burger à droite */}
           <div className="flex shrink-0 items-center gap-2">
             {/* Reserve my driver */}
-            <Link href="/contact-me" onClick={handleResetScroll}>
-              <span className="hidden h-[38px] items-center rounded-[14px] bg-[#111111] px-4 text-[13px] font-manrope-bold text-white shadow-[0_8px_18px_rgba(0,0,0,0.18)] transition-all duration-200 hover:bg-[#2a2a2a] hover:-translate-y-0.5 xl:inline-flex">
+            <Link
+              href="/contact-me"
+              onClick={handleResetScroll}
+              aria-label="Reserve a private driver"
+              className="hidden xl:block"
+            >
+              <span className="inline-flex h-[38px] items-center rounded-[14px] bg-[#111111] px-4 text-[13px] font-manrope-bold text-white shadow-[0_8px_18px_rgba(0,0,0,0.18)] transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#2a2a2a] active:scale-[0.96]">
                 Reserve my driver
               </span>
             </Link>
@@ -206,55 +223,109 @@ export default function NavBar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen ? (
-          <motion.div
-            initial={{ opacity: 0, y: -10, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -8, scale: 0.98 }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 24,
-              mass: 0.9,
-            }}
-            onClick={closeMobileMenu}
-            className="relative rounded-[24px] border border-[#E5E5E5] bg-white px-2 py-2 shadow-[0_12px_32px_rgba(64,64,64,0.08)] xl:hidden"
-          >
+          <>
+            <motion.button
+              type="button"
+              aria-label="Close mobile menu"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              onClick={closeMobileMenu}
+              className="fixed inset-0 z-10 bg-black/25 backdrop-blur-[2px] xl:hidden"
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -8, scale: 0.98 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 24,
+                mass: 0.9,
+              }}
+              className="relative z-20 mx-4 max-h-[calc(100dvh-92px)] overflow-y-auto overscroll-contain rounded-[24px] border border-[#E5E5E5] bg-white px-2 py-2 shadow-[0_12px_32px_rgba(64,64,64,0.08)] xl:hidden"
+            >
             <ul className="space-y-2 px-2 py-3">
               <li>
-                <span className="block px-4 pb-1 pt-2 font-manrope-bold text-[13px] uppercase tracking-[0.14em] text-gray-400">
-                  Services
-                </span>
-              </li>
-              {serviceMenuLinks.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    onClick={handleResetScroll}
-                    href={item.href}
-                    className="block rounded-2xl px-4 py-3 font-manrope-regular text-[16px] text-gray-600 transition-colors duration-300 hover:bg-[#F6F6F6] hover:text-[#404040]"
+                <button
+                  type="button"
+                  aria-expanded={activeDropdown === "mobile-services"}
+                  aria-controls="mobile-services-menu"
+                  onClick={() =>
+                    setActiveDropdown((current) =>
+                      current === "mobile-services" ? null : "mobile-services",
+                    )
+                  }
+                  className="flex min-h-11 w-full items-center justify-between rounded-2xl px-4 py-3 text-left font-manrope-bold text-[15px] text-[#404040] transition-colors duration-200 hover:bg-[#F6F6F6]"
+                >
+                  <span>Services</span>
+                  <span
+                    aria-hidden="true"
+                    className={`text-[18px] transition-transform duration-200 ${activeDropdown === "mobile-services" ? "rotate-45" : ""}`}
                   >
-                    {item.label}
-                  </Link>
+                    +
+                  </span>
+                </button>
+              </li>
+              {activeDropdown === "mobile-services" ? (
+                <li id="mobile-services-menu">
+                  <ul className="space-y-1 border-l border-[#E7D9BF] pl-3">
+                    {serviceMenuLinks.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          onClick={closeMobileMenu}
+                          href={item.href}
+                          className="block rounded-2xl px-4 py-3 font-manrope-regular text-[15px] text-gray-600 transition-colors duration-200 hover:bg-[#F6F6F6] hover:text-[#404040]"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
-              ))}
+              ) : null}
               <li>
-                <span className="block px-4 pb-1 pt-3 font-manrope-bold text-[13px] uppercase tracking-[0.14em] text-gray-400">
-                  Our Fleet
-                </span>
-              </li>
-              {vehicleLinks.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    onClick={handleResetScroll}
-                    href={item.href}
-                    className="block rounded-2xl px-4 py-3 font-manrope-regular text-[16px] text-gray-600 transition-colors duration-300 hover:bg-[#F6F6F6] hover:text-[#404040]"
+                <button
+                  type="button"
+                  aria-expanded={activeDropdown === "mobile-fleet"}
+                  aria-controls="mobile-fleet-menu"
+                  onClick={() =>
+                    setActiveDropdown((current) =>
+                      current === "mobile-fleet" ? null : "mobile-fleet",
+                    )
+                  }
+                  className="flex min-h-11 w-full items-center justify-between rounded-2xl px-4 py-3 text-left font-manrope-bold text-[15px] text-[#404040] transition-colors duration-200 hover:bg-[#F6F6F6]"
+                >
+                  <span>Our Fleet</span>
+                  <span
+                    aria-hidden="true"
+                    className={`text-[18px] transition-transform duration-200 ${activeDropdown === "mobile-fleet" ? "rotate-45" : ""}`}
                   >
-                    {item.label}
-                  </Link>
+                    +
+                  </span>
+                </button>
+              </li>
+              {activeDropdown === "mobile-fleet" ? (
+                <li id="mobile-fleet-menu">
+                  <ul className="space-y-1 border-l border-[#E7D9BF] pl-3">
+                    {vehicleLinks.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          onClick={closeMobileMenu}
+                          href={item.href}
+                          className="block rounded-2xl px-4 py-3 font-manrope-regular text-[15px] text-gray-600 transition-colors duration-200 hover:bg-[#F6F6F6] hover:text-[#404040]"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
-              ))}
+              ) : null}
               <li>
                 <Link
-                  onClick={handleResetScroll}
+                  onClick={closeMobileMenu}
                   href="/blog"
                   className="block rounded-2xl px-4 py-3 font-manrope-regular text-[16px] text-gray-600 transition-colors duration-300 hover:bg-[#F6F6F6] hover:text-[#404040]"
                 >
@@ -263,7 +334,7 @@ export default function NavBar() {
               </li>
               <li>
                 <Link
-                  onClick={handleResetScroll}
+                  onClick={closeMobileMenu}
                   href="/partners"
                   className="block rounded-2xl px-4 py-3 font-manrope-regular text-[16px] text-gray-600 transition-colors duration-300 hover:bg-[#F6F6F6] hover:text-[#404040]"
                 >
@@ -291,7 +362,8 @@ export default function NavBar() {
                 </a>
               </li>
             </ul>
-          </motion.div>
+            </motion.div>
+          </>
         ) : null}
       </AnimatePresence>
     </nav>

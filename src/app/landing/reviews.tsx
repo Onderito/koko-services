@@ -32,6 +32,7 @@ const reviews = [
 
 const tripadvisorListingUrl =
   "https://www.tripadvisor.com/Attraction_Review-g187234-d7971865-Reviews-MY_Riviera_Tours_Transfers-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_.html";
+const googleReviewUrl = "https://g.page/r/CXSXgZXVNYkwEAE/review";
 
 type ReviewTrackProps = {
   items: typeof reviews;
@@ -40,15 +41,17 @@ type ReviewTrackProps = {
 };
 
 function ReviewTrack({ items, duration, reverse = false }: ReviewTrackProps) {
+  const repeatedItems = [...items, ...items];
+
   return (
     <div className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#fdfdfd] to-transparent md:w-24" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#fdfdfd] to-transparent md:w-24" />
 
       <motion.div
-        className="flex w-max gap-4 py-2"
+        className="flex w-max py-2"
         animate={{
-          x: reverse ? ["-4%", "4%", "-4%"] : ["4%", "-4%", "4%"],
+          x: reverse ? ["-50%", "0%"] : ["0%", "-50%"],
         }}
         transition={{
           duration,
@@ -56,11 +59,13 @@ function ReviewTrack({ items, duration, reverse = false }: ReviewTrackProps) {
           ease: "linear",
         }}
       >
-        {items.map((review, index) => (
-          <article
+        {repeatedItems.map((review, index) => (
+          <div
             key={`${review.author}-${review.context}-${index}`}
-            className="flex min-h-[240px] w-[300px] flex-col justify-between rounded-[28px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1E8_100%)] p-6 shadow-[0_20px_50px_rgba(25,25,25,0.08)] md:w-[360px]"
+            className="shrink-0 pr-4"
+            aria-hidden={index >= items.length ? true : undefined}
           >
+            <article className="flex min-h-[240px] w-[300px] flex-col justify-between rounded-[28px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1E8_100%)] p-6 shadow-[0_20px_50px_rgba(25,25,25,0.08)] md:w-[360px]">
             <div>
               <div className="flex items-center justify-between gap-3">
                 <span className="rounded-full border border-[#D9C9AF] bg-white px-3 py-1 text-[12px] font-manrope-bold uppercase tracking-[0.12em] text-[#6D5830]">
@@ -85,7 +90,8 @@ function ReviewTrack({ items, duration, reverse = false }: ReviewTrackProps) {
                 {review.context}
               </p>
             </div>
-          </article>
+            </article>
+          </div>
         ))}
       </motion.div>
     </div>
@@ -93,8 +99,8 @@ function ReviewTrack({ items, duration, reverse = false }: ReviewTrackProps) {
 }
 
 export default function Reviews() {
-  const firstTrack = reviews.slice(0, 3);
-  const secondTrack = reviews.slice(3);
+  const firstTrack = reviews;
+  const secondTrack = [...reviews.slice(2), ...reviews.slice(0, 2)];
 
   return (
     <section
@@ -169,9 +175,18 @@ export default function Reviews() {
               href={tripadvisorListingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl border border-[#111111] bg-[#111111] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2B2B2B]"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-[#111111] bg-[#111111] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#2B2B2B] active:scale-[0.96]"
             >
               View on Tripadvisor
+            </Link>
+            <Link
+              href={googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Leave Kokolimo a review on Google"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-[#D8C7AD] bg-white px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-[#6D5830] shadow-[0_10px_24px_rgba(109,88,48,0.10)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#FFF9F0] hover:shadow-[0_14px_30px_rgba(109,88,48,0.16)] active:scale-[0.96]"
+            >
+              Leave a Google review
             </Link>
             <span className="text-center text-[12px] text-gray-500 sm:text-left">
               Based on the public Tripadvisor listing.
