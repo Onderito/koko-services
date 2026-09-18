@@ -316,7 +316,7 @@ export const yachtPosts: BlogPost[] = [
   },
   {
     slug: "saint-tropez-yacht-transfer",
-    title: "Saint-Tropez Yacht Transfer",
+    title: "Saint-Tropez Yacht & Marina Transfer Guide",
     description:
       "Private chauffeur transfer to the old port of Saint-Tropez, where superyachts moor stern-to along the quay — from Nice Airport by road or boat.",
     excerpt:

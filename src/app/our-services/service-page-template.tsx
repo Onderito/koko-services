@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { forwardRef, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import FooterComponent from "./footer-component";
 import type {
@@ -11,6 +12,8 @@ import type {
   ServicePageConfig,
 } from "../data/service-pages";
 import { Reveal, RevealGroup } from "../ui/reveal";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AudienceCard = forwardRef<
   HTMLDivElement,
@@ -244,6 +247,103 @@ function LocalLinksSection({
   );
 }
 
+function ItinerarySection({ config }: { config: ServicePageConfig }) {
+  if (
+    !config.itinerariesTitle ||
+    !config.itinerariesDescription ||
+    !config.itineraries?.length
+  ) {
+    return null;
+  }
+
+  return (
+    <section className="container">
+      <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
+        <p className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-[#8A6B3B]">
+          Suggested itineraries
+        </p>
+        <h2 className="heading-2 mt-4 text-[#111111]">
+          {config.itinerariesTitle}
+        </h2>
+        <p className="body-text mt-4">{config.itinerariesDescription}</p>
+      </Reveal>
+
+      <RevealGroup
+        className="mt-10 grid gap-6 lg:grid-cols-2 xl:mt-12"
+        amount={0.3}
+      >
+        {config.itineraries.map((itinerary) => (
+          <article
+            key={itinerary.title}
+            className="rounded-[30px] border border-[#E7E1D8] bg-white p-7 shadow-[0_18px_44px_rgba(25,25,25,0.07)] md:p-9"
+          >
+            <span className="inline-flex rounded-full border border-[#E2D3BE] bg-[#F8F1E7] px-3 py-1 text-[12px] font-manrope-bold uppercase tracking-[0.12em] text-[#6D5830]">
+              {itinerary.duration}
+            </span>
+            <h3 className="heading-3 mt-5 text-[#111111]">
+              {itinerary.title}
+            </h3>
+            <p className="card-text mt-4">{itinerary.description}</p>
+            <ol className="mt-6 space-y-3">
+              {itinerary.stops.map((stop, index) => (
+                <li key={stop} className="flex gap-3 text-[15px] leading-relaxed text-gray-700">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#F3E9DA] font-manrope-bold text-[#6D5830]">
+                    {index + 1}
+                  </span>
+                  <span>{stop}</span>
+                </li>
+              ))}
+            </ol>
+          </article>
+        ))}
+      </RevealGroup>
+    </section>
+  );
+}
+
+function PracticalSection({ config }: { config: ServicePageConfig }) {
+  if (
+    !config.practicalTitle ||
+    !config.practicalDescription ||
+    !config.practicalDetails?.length
+  ) {
+    return null;
+  }
+
+  return (
+    <section className="container">
+      <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
+        <p className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-[#8A6B3B]">
+          Plan your tour
+        </p>
+        <h2 className="heading-2 mt-4 text-[#111111]">
+          {config.practicalTitle}
+        </h2>
+        <p className="body-text mt-4">{config.practicalDescription}</p>
+      </Reveal>
+
+      <RevealGroup
+        className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4"
+        amount={0.28}
+      >
+        {config.practicalDetails.map((detail) => (
+          <article
+            key={detail.title}
+            className="rounded-[26px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_14px_34px_rgba(25,25,25,0.06)]"
+          >
+            <h3 className="text-[19px] font-manrope-bold text-[#111111]">
+              {detail.title}
+            </h3>
+            <p className="mt-3 text-[15px] leading-relaxed text-gray-700">
+              {detail.text}
+            </p>
+          </article>
+        ))}
+      </RevealGroup>
+    </section>
+  );
+}
+
 export default function ServicePageTemplate({
   config,
 }: {
@@ -288,6 +388,7 @@ export default function ServicePageTemplate({
                 alt={config.heroImageAlt}
                 fill
                 priority
+                sizes="(min-width: 1280px) 42vw, 100vw"
                 className="rounded-[24px] object-cover"
               />
             </div>
@@ -373,6 +474,10 @@ export default function ServicePageTemplate({
         </RevealGroup>
       </div>
 
+      <ItinerarySection config={config} />
+
+      <PracticalSection config={config} />
+
       <AudienceStack
         audienceCards={config.audienceCards}
         audienceTitle={config.audienceTitle}
@@ -388,6 +493,14 @@ export default function ServicePageTemplate({
           title={config.localLinksTitle}
           description={config.localLinksDescription}
           links={availableLocalLinks}
+        />
+      ) : null}
+
+      {config.relatedGuides?.length && config.relatedGuidesTitle ? (
+        <LocalLinksSection
+          title={config.relatedGuidesTitle}
+          description="Use these practical guides to compare routes, timings, and ways to experience Monaco before confirming your tour."
+          links={config.relatedGuides}
         />
       ) : null}
 

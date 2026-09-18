@@ -215,8 +215,8 @@ export const destinationPosts: BlogPost[] = [
     ctaTitle: "Discover Monaco with a private chauffeur",
     ctaDescription:
       "Make the most of a day in Monaco with a private driver linking the Rock, the museum and Monte-Carlo — and Èze on the way.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
+    ctaHref: "/our-services/private-tours/monaco",
+    ctaLabel: "See the Monaco private tour",
   },
   {
     slug: "best-things-to-do-in-cannes",
@@ -1659,8 +1659,8 @@ export const destinationPosts: BlogPost[] = [
     ctaTitle: "Arrive in Monaco the easy way",
     ctaDescription:
       "Skip the tunnels and car parks — a private chauffeur brings you to your Monaco door and on around the coast.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
+    ctaHref: "/our-services/private-tours/monaco",
+    ctaLabel: "See the Monaco private tour",
   },
   {
     slug: "french-riviera-in-winter",

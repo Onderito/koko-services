@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 import {
   businessName,
   contactEmail,
@@ -21,7 +19,7 @@ export default function SeoSchema() {
     "@id": `${siteUrl}#localbusiness`,
     name: `${businessName} - Private Driver in French Riviera`,
     image: socialPreviewImage,
-    logo: socialPreviewImage,
+    logo: `${siteUrl}/favicon.ico`,
     url: siteUrl,
     telephone: contactPhone,
     email: contactEmail,
@@ -183,16 +181,14 @@ export default function SeoSchema() {
 
   return (
     <>
-      <Script
+      <script
         id="schema-localbusiness"
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
       />
-      <Script
+      <script
         id="schema-transportservice"
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(transportService) }}
       />
     </>

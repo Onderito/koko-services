@@ -40,6 +40,8 @@ const staticRoutes = [
   ...Object.values(eventPages).map((page) => page.path),
 ];
 
+const contentLastModified = new Date("2026-09-18T00:00:00.000Z");
+
 function getChangeFrequency(
   route: string,
 ): MetadataRoute.Sitemap[number]["changeFrequency"] {
@@ -49,6 +51,7 @@ function getChangeFrequency(
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries = staticRoutes.map((route) => ({
     url: `${siteUrl}${route}`,
+    lastModified: contentLastModified,
     changeFrequency: getChangeFrequency(route),
     priority: route === "" ? 1 : 0.8,
   }));
@@ -64,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((cluster) => getPostsByCluster(cluster.id).length > 0)
     .map((cluster) => ({
       url: `${siteUrl}/blog/category/${cluster.slug}`,
+      lastModified: contentLastModified,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     }));

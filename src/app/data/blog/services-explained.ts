@@ -1083,7 +1083,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ctaTitle: "Your driver for the whole trip",
     ctaDescription:
       "The same chauffeur and car across your stay — multi-day chauffeur hire for a tour or full itinerary on the Riviera.",
-    ctaHref: "/our-services/chauffeur-tours",
+    ctaHref: "/our-services/private-tours",
     ctaLabel: "See chauffeur tours",
   },
   {

@@ -23,6 +23,18 @@ export type ServicePanel = {
   theme: "dark" | "light";
 };
 
+export type ServiceItinerary = {
+  duration: string;
+  title: string;
+  description: string;
+  stops: string[];
+};
+
+export type ServicePracticalDetail = {
+  title: string;
+  text: string;
+};
+
 export type ServicePageConfig = {
   slug: string;
   path: string;
@@ -47,6 +59,14 @@ export type ServicePageConfig = {
     ServiceAudienceCard,
     ServiceAudienceCard,
   ];
+  itinerariesTitle?: string;
+  itinerariesDescription?: string;
+  itineraries?: ServiceItinerary[];
+  practicalTitle?: string;
+  practicalDescription?: string;
+  practicalDetails?: ServicePracticalDetail[];
+  relatedGuidesTitle?: string;
+  relatedGuides?: ServiceCardLink[];
   faq?: {
     question: string;
     answer: string;
@@ -2554,9 +2574,9 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "monaco",
     path: "/our-services/private-tours/monaco",
     metadata: {
-      title: "Monaco Private Chauffeur Tour | kokolimo",
+      title: "Private Monaco Tour With Chauffeur | Kokolimo",
       description:
-        "Private chauffeur tour in Monaco with prestige landmarks, panoramic roads, elegant arrivals, and premium touring throughout the principality.",
+        "Book a private Monaco tour with a chauffeur. Choose a 4-hour Monaco itinerary or an 8-hour Monaco and Èze tour with flexible hotel, yacht or airport pickup.",
       keywords: [
         "chauffeur tour Monaco",
         "private tour Monaco driver",
@@ -2566,24 +2586,76 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Monaco Tour",
-    heroTitle: "Private Tour in Monaco",
+    heroTitle: "Private Monaco Tour With a Chauffeur",
     heroDescription:
-      "A private chauffeur-led Monaco experience shaped around prestige landmarks, panoramic movement, and refined touring comfort.",
+      "Explore Monte-Carlo, Monaco-Ville, Port Hercule and the coastal viewpoints at your own pace, with door-to-door pickup and a dedicated chauffeur for the full itinerary.",
     heroImageSrc: "/assets/images/services/monaco.webp",
     heroImageAlt: "Private chauffeur tour in Monaco",
-    introTitle: "Monaco Needs Precision and Elegance",
+    introTitle: "A Monaco Itinerary Built Around Your Time",
     introDescription:
-      "Monaco is compact but layered, and a chauffeur tour helps the guest experience it with style, timing control, and premium ease.",
+      "Monaco is compact, steep and busy. A private chauffeur connects the Rock, Casino Square, the harbour and Larvotto without repeated parking, taxi queues or rigid group-tour timings.",
     panels: [
       {
-        title: "Prestige Touring",
-        text: "We shape the route around Monaco's emblematic landmarks, scenic approaches, and refined stops without breaking the pace of the day.",
+        title: "Door-to-Door Sightseeing",
+        text: "Start at your hotel, yacht, villa or Nice Airport. Your chauffeur handles the one-way streets and drop-off points while you spend your time at the places you came to see.",
         theme: "dark",
       },
       {
-        title: "Controlled Movement",
-        text: "A chauffeur tour works especially well here because movement between viewpoints, hotels, and local highlights stays smooth and polished.",
+        title: "Flexible Stops and Timing",
+        text: "Stay longer in Monaco-Ville, add lunch near Port Hercule, shop around the Carré d'Or or include Èze. The route adjusts to your interests and reservation times.",
         theme: "light",
+      },
+    ],
+    itinerariesTitle: "Choose a Half-Day or Full-Day Monaco Tour",
+    itinerariesDescription:
+      "These sample routes give the day a clear structure while leaving room for restaurant bookings, museum visits, shopping and extra photo stops.",
+    itineraries: [
+      {
+        duration: "Approximately 4 hours",
+        title: "Monaco Highlights Private Tour",
+        description:
+          "A focused introduction to the principality for first-time visitors, cruise guests or travelers with a free morning or afternoon.",
+        stops: [
+          "Pickup in Monaco, Cap-d'Ail, Beausoleil or at your yacht in Port Hercule",
+          "Monaco-Ville, the Prince's Palace square and Saint Nicholas Cathedral",
+          "Port Hercule viewpoint and a drive along part of the Grand Prix circuit",
+          "Casino Square, Hôtel de Paris and the Carré d'Or",
+          "Return to your hotel, yacht or preferred Monaco address",
+        ],
+      },
+      {
+        duration: "Approximately 8 hours",
+        title: "Monaco and Èze Full-Day Tour",
+        description:
+          "A complete Riviera day combining Monaco's landmarks with the medieval village of Èze and the panoramic Middle Corniche.",
+        stops: [
+          "Pickup from Nice, Cannes, Monaco, a private residence or Nice Airport",
+          "Èze village, with time for the old streets and optional Exotic Garden",
+          "Panoramic drive on the Moyenne Corniche toward Monaco",
+          "Monaco-Ville, Port Hercule, Casino Square and Monte-Carlo",
+          "Flexible lunch, shopping or museum time before the return journey",
+        ],
+      },
+    ],
+    practicalTitle: "What to Know Before Booking",
+    practicalDescription:
+      "Share your pickup point, preferred duration and must-see stops. We then confirm the vehicle, realistic timing and any event-day access constraints.",
+    practicalDetails: [
+      {
+        title: "Pickup points",
+        text: "Hotels, villas, Port Hercule, Fontvieille, Nice Airport and addresses across Nice, Cannes and the eastern Riviera.",
+      },
+      {
+        title: "Vehicles",
+        text: "Mercedes S-Class for up to three guests or Mercedes V-Class for families and groups requiring more passenger or luggage space.",
+      },
+      {
+        title: "Included",
+        text: "Private vehicle, professional chauffeur, door-to-door pickup, waiting between stops and bottled water on board.",
+      },
+      {
+        title: "Not included",
+        text: "Museum and garden tickets, meals, licensed walking guides and special access fees unless these are added to the quotation.",
       },
     ],
     audienceTitle: "Ideal For",
@@ -2614,6 +2686,27 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     localLinksDescription:
       "Keep the chauffeur tour destinations visible on each city page so visitors can switch directly to another Riviera tour.",
     localLinks: tourCityLinks,
+    relatedGuidesTitle: "Plan the Monaco Part of Your Riviera Stay",
+    relatedGuides: [
+      {
+        href: "/blog/eze-monaco-private-tour-from-nice",
+        label: "Èze and Monaco Tour From Nice",
+        description:
+          "Compare half-day and full-day routes from Nice through Èze, Cap-Ferrat and Monaco.",
+      },
+      {
+        href: "/blog/getting-around-monaco",
+        label: "Getting Around Monaco",
+        description:
+          "Understand Monaco's districts, slopes, transport options and the situations where a chauffeur saves time.",
+      },
+      {
+        href: "/our-services/hourly-chauffeur/monaco",
+        label: "Hourly Chauffeur in Monaco",
+        description:
+          "Choose an on-call chauffeur when meetings, shopping, dining or yacht visits matter more than a sightseeing itinerary.",
+      },
+    ],
     cta: {
       title: "Plan a Monaco Chauffeur Tour",
       description:

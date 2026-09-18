@@ -33,7 +33,7 @@ export const clusters: ClusterConfig[] = [
     label: "Yacht Transfers",
     title: "Yacht & Marina Transfer Guides",
     description:
-      "Yacht, marina and superyacht transfer guides across Monaco, Cannes, Antibes and the French Riviera.",
+      "Plan yacht, marina and superyacht transfers across Monaco, Cannes, Antibes, Saint-Tropez and the French Riviera.",
   },
   {
     id: "events",
@@ -65,7 +65,7 @@ export const clusters: ClusterConfig[] = [
     label: "Chauffeur Services",
     title: "Chauffeur Service Guides & Comparisons",
     description:
-      "How private chauffeur, hourly hire and executive transfer services work on the French Riviera.",
+      "Practical guides to private chauffeurs, hourly hire, executive travel and premium transfer services on the French Riviera.",
   },
 ];
 

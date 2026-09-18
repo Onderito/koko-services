@@ -366,8 +366,8 @@ export const legacyPosts: BlogPost[] = [
     ctaTitle: "Book your private Riviera tour from Nice",
     ctaDescription:
       "Reserve your half-day or full-day private tour from Nice through Èze, Villa Rothschild, Saint-Jean-Cap-Ferrat and Monaco with a dedicated English-speaking chauffeur.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "Explore private tours",
+    ctaHref: "/our-services/private-tours/monaco",
+    ctaLabel: "See the Monaco private tour",
   },
   {
     slug: "private-driver",

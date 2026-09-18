@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import CarPageTemplate from "../car-page-template";
 
 export const metadata: Metadata = {
-  title:
-    "Mercedes Maybach Driver Service in French Riviera | VIP VTC | kokolimo",
+  title: "Mercedes Maybach Chauffeur | French Riviera | Kokolimo",
   description:
     "Enjoy the ultimate luxury ride with our Mercedes Maybach. Driver service for VIPs, weddings, or executive transfers across the French Riviera.",
   keywords: [
