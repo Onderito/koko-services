@@ -314,7 +314,11 @@ function PracticalSection({ config }: { config: ServicePageConfig }) {
     <section className="container">
       <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
         <p className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-[#8A6B3B]">
-          Plan your tour
+          {config.path.startsWith("/our-services/transfers")
+            ? "Booking details"
+            : config.path.startsWith("/our-services/hourly-chauffeur")
+              ? "Rates and conditions"
+              : "Plan your tour"}
         </p>
         <h2 className="heading-2 mt-4 text-[#111111]">
           {config.practicalTitle}

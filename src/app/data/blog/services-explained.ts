@@ -146,12 +146,12 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "a-fixed-price-door-to-door",
         title: "A fixed price, door to door",
         paragraphs: [
-          "The fare is agreed when you book, based on the destination, and includes waiting and tolls — so traffic and delays do not change the price. The chauffeur takes you directly to your hotel, villa or yacht, not to a distant rank or stop.",
+          "The fare is agreed when you book, based on the destination, and includes tolls plus one hour of waiting from the reserved pickup time. The chauffeur takes you directly to your hotel, villa or yacht, not to a distant rank or stop.",
           "You know the cost in advance and arrive at the door.",
         ],
         bullets: [
           "Price fixed at booking",
-          "Waiting and tolls included",
+          "Tolls and one hour of arrival waiting included",
           "No meter, whatever the traffic",
           "Direct to your door",
         ],
@@ -188,7 +188,7 @@ export const servicesExplainedPosts: BlogPost[] = [
       {
         question: "Is the airport transfer price fixed?",
         answer:
-          "Yes. The fare is agreed at booking based on the destination and includes waiting and tolls, so traffic and delays do not change it.",
+          "Yes. The fare is agreed at booking based on the destination and includes tolls plus one hour of waiting from the reserved pickup time.",
       },
       {
         question: "What vehicle will collect me from the airport?",

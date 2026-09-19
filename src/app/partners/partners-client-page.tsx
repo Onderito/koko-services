@@ -928,6 +928,12 @@ export default function PartnersClientPage() {
                 />
               </div>
 
+              <p className="mt-6 text-sm leading-relaxed text-gray-600">
+                MY NICE TOURS uses your professional details to assess and respond to
+                your partnership enquiry. Please do not include personal details of
+                your clients. Read our <Link href="/legal-privacy#privacy" className="underline">privacy policy</Link> for retention and your rights.
+              </p>
+
               <div className="mt-8">
                 <button
                   type="submit"

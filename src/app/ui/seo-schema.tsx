@@ -18,6 +18,10 @@ export default function SeoSchema() {
     "@type": "LocalBusiness",
     "@id": `${siteUrl}#localbusiness`,
     name: `${businessName} - Private Driver in French Riviera`,
+    legalName: "MY NICE TOURS",
+    alternateName: "My Riviera Tours",
+    taxID: "838777787",
+    vatID: "FR16838777787",
     image: socialPreviewImage,
     logo: `${siteUrl}/favicon.ico`,
     url: siteUrl,
@@ -27,16 +31,11 @@ export default function SeoSchema() {
       "Luxury private driver and chauffeur service across Nice, Cannes, Monaco and Saint-Tropez.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Nice Côte d'Azur Airport",
+      streetAddress: "Le Wagram, 33 rue de Châteauneuf",
       addressLocality: "Nice",
       postalCode: "06000",
       addressRegion: "Provence-Alpes-Côte d'Azur",
       addressCountry: "FR",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 43.6584,
-      longitude: 7.2159,
     },
     areaServed: [
       { "@type": "City", name: "Nice" },

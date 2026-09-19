@@ -65,7 +65,7 @@ export const routePosts: BlogPost[] = [
         ],
         bullets: [
           "Meet-and-greet inside arrivals with a name sign",
-          "Flight tracking with a complimentary waiting window",
+          "Flight tracking with one hour of waiting from the reserved pickup time",
           "Fixed, all-in price agreed before travel",
           "Help with luggage and a clean, air-conditioned vehicle",
         ],
@@ -119,7 +119,7 @@ export const routePosts: BlogPost[] = [
       {
         question: "What happens if my flight is delayed?",
         answer:
-          "The driver tracks your flight and adjusts the pickup time automatically, with a complimentary waiting window after you land, so a delay is not a problem.",
+          "The driver tracks your flight, and one hour of waiting is included from the pickup time stated in your reservation. Please contact us if a major delay affects that time.",
       },
       {
         question: "Can you handle groups and large luggage?",
@@ -135,8 +135,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Monaco transfer",
     ctaDescription:
       "Reserve a private chauffeur for a smooth, door-to-door arrival in Monaco with meet-and-greet and flight tracking.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/monaco-airport-transfer",
+    ctaLabel: "See Monaco transfer details",
   },
   {
     slug: "nice-airport-to-cannes",
@@ -194,7 +194,7 @@ export const routePosts: BlogPost[] = [
         ],
         bullets: [
           "Meet-and-greet inside the terminal with a name sign",
-          "Flight tracking and a complimentary waiting window",
+          "Flight tracking and one hour of waiting from the reserved pickup time",
           "Direct drop-off at Croisette hotels, residences or the port",
           "Vehicle matched to your group size and luggage",
         ],
@@ -256,8 +256,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Cannes transfer",
     ctaDescription:
       "Reserve a private chauffeur for a smooth, door-to-door arrival in Cannes — ideal for the Film Festival, congresses and Croisette hotels.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/cannes-airport-transfer",
+    ctaLabel: "See Cannes transfer details",
   },
   {
     slug: "nice-airport-to-saint-tropez",
@@ -383,8 +383,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Saint-Tropez transfer",
     ctaDescription:
       "Reserve a private chauffeur for the long run west to Saint-Tropez — comfortable, fixed-price and planned around the summer traffic.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/saint-tropez-transfer",
+    ctaLabel: "See Saint-Tropez transfer details",
   },
   {
     slug: "nice-airport-to-antibes",
@@ -448,7 +448,7 @@ export const routePosts: BlogPost[] = [
         ],
         bullets: [
           "Meet-and-greet in the arrivals hall with a name sign",
-          "Flight tracking and a complimentary waiting window",
+          "Flight tracking and one hour of waiting from the reserved pickup time",
           "Door-to-door to hotels, villas or the marina",
           "Fixed price agreed in advance",
         ],
@@ -510,8 +510,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Antibes transfer",
     ctaDescription:
       "Reserve a private chauffeur for a quick, door-to-door arrival in Antibes, Juan-les-Pins or Cap d'Antibes — including yacht transfers to Port Vauban.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/antibes-transfer",
+    ctaLabel: "See Antibes transfer details",
   },
   {
     slug: "nice-airport-to-cap-dantibes",
@@ -617,8 +617,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Cap d'Antibes transfer",
     ctaDescription:
       "Reserve a discreet private chauffeur for a door-to-door arrival at Cap d'Antibes hotels and villas, with meet-and-greet and flight tracking.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/antibes-transfer",
+    ctaLabel: "See Antibes transfer details",
   },
   {
     slug: "nice-airport-to-saint-jean-cap-ferrat",
@@ -724,8 +724,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Cap-Ferrat transfer",
     ctaDescription:
       "Reserve a private chauffeur for a quiet, door-to-door arrival on Saint-Jean-Cap-Ferrat, with meet-and-greet and flight tracking.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/saint-jean-cap-ferrat-transfer",
+    ctaLabel: "See Cap-Ferrat transfer details",
   },
   {
     slug: "nice-airport-to-eze",
@@ -831,8 +831,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Èze transfer",
     ctaDescription:
       "Reserve a private chauffeur for a scenic corniche arrival at Èze village or Èze-sur-Mer, with meet-and-greet and flight tracking.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/eze-transfer",
+    ctaLabel: "See Èze transfer details",
   },
   {
     slug: "nice-airport-to-villefranche-sur-mer",
@@ -938,8 +938,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Villefranche transfer",
     ctaDescription:
       "Reserve a private chauffeur for an easy arrival in Villefranche-sur-Mer — ideal for cruise calls, hotels and the old town.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/villefranche-transfer",
+    ctaLabel: "See Villefranche transfer details",
   },
   {
     slug: "nice-airport-to-beaulieu-sur-mer",
@@ -1040,8 +1040,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Beaulieu transfer",
     ctaDescription:
       "Reserve a private chauffeur for an easy, door-to-door arrival in Beaulieu-sur-Mer, with meet-and-greet and flight tracking.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport transfer details",
   },
   {
     slug: "nice-airport-to-menton",
@@ -1147,8 +1147,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Menton transfer",
     ctaDescription:
       "Reserve a private chauffeur for a scenic arrival in Menton, with meet-and-greet, flight tracking and optional Italian border day trips.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/menton-transfer",
+    ctaLabel: "See Menton transfer details",
   },
   {
     slug: "nice-airport-to-mougins",
@@ -1249,8 +1249,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Mougins transfer",
     ctaDescription:
       "Reserve a private chauffeur for a door-to-door arrival in Mougins, the hilltop village of gastronomy and art above Cannes.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport transfer details",
   },
   {
     slug: "nice-airport-to-grasse",
@@ -1351,8 +1351,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Grasse transfer",
     ctaDescription:
       "Reserve a private chauffeur for a door-to-door arrival in Grasse, the world's perfume capital, with meet-and-greet and flight tracking.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport transfer details",
   },
   {
     slug: "nice-airport-to-monaco-heliport",
@@ -1445,8 +1445,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Plan your Nice Airport to Monaco transfer",
     ctaDescription:
       "Whether by road or with a helicopter leg, reserve a private chauffeur for a seamless, door-to-door arrival in Monaco.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/monaco-airport-transfer",
+    ctaLabel: "See Monaco transfer details",
   },
   {
     slug: "nice-cote-dazur-airport-terminals-guide",
@@ -1539,8 +1539,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Arrange your Nice Airport pickup",
     ctaDescription:
       "Reserve a private chauffeur to meet you in the arrivals hall and take you door-to-door anywhere on the French Riviera.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport pickup details",
   },
   {
     slug: "airport-meet-and-greet-explained",
@@ -1584,12 +1584,12 @@ export const routePosts: BlogPost[] = [
         id: "flight-tracking",
         title: "Flight tracking and delays",
         paragraphs: [
-          "A good meet-and-greet service tracks your flight, so if you land early or late the driver adjusts automatically. There is usually a complimentary waiting window after landing to allow for passport control and baggage.",
-          "This is why a pre-booked chauffeur is so reassuring: even if your flight is delayed by hours, someone is still there to meet you when you finally walk out.",
+          "A good meet-and-greet service tracks your flight. Kokolimo includes one hour of waiting from the pickup time stated in your reservation to allow for passport control and baggage.",
+          "If a significant flight delay will take you beyond that included hour, contact us as soon as possible so the pickup can be reorganized.",
         ],
         bullets: [
-          "Live flight tracking adjusts the pickup time",
-          "A complimentary wait after you land",
+          "Live flight tracking before pickup",
+          "One hour of waiting from the reserved pickup time",
           "Peace of mind for delayed or early arrivals",
           "Ideal for long-haul, families and first-time visitors",
         ],
@@ -1612,7 +1612,7 @@ export const routePosts: BlogPost[] = [
       {
         question: "Does meet-and-greet include flight tracking?",
         answer:
-          "Yes. The driver tracks your flight and adjusts the pickup time, with a complimentary waiting window after you land.",
+          "Yes. The driver tracks your flight, and one hour of waiting is included from the pickup time stated in your reservation.",
       },
       {
         question: "Is meet-and-greet worth it?",
@@ -1633,8 +1633,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book a meet-and-greet transfer",
     ctaDescription:
       "Reserve a private chauffeur to meet you in arrivals with a name sign and take you door-to-door across the French Riviera.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport pickup details",
   },
   {
     slug: "nice-airport-late-night-arrival-transfer",
@@ -1727,8 +1727,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book a late-night airport transfer",
     ctaDescription:
       "Reserve a private chauffeur for a safe, door-to-door arrival at any hour, with flight tracking and 24/7 service across the Riviera.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport pickup details",
   },
   {
     slug: "nice-to-saint-tropez-road-vs-boat",
@@ -1835,8 +1835,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Plan your journey to Saint-Tropez",
     ctaDescription:
       "By road, boat or helicopter, reserve a private chauffeur to tie your Saint-Tropez journey together, door to door.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/saint-tropez-transfer",
+    ctaLabel: "See Saint-Tropez transfer details",
   },
   {
     slug: "nice-airport-to-isola-2000-ski-transfer",
@@ -1929,8 +1929,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Isola 2000 transfer",
     ctaDescription:
       "Reserve a private chauffeur for a safe, comfortable winter transfer from Nice Airport to the slopes of Isola 2000.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/long-distance-transfer",
+    ctaLabel: "See long-distance transfer details",
   },
   {
     slug: "nice-airport-to-sophia-antipolis",
@@ -2025,7 +2025,7 @@ export const routePosts: BlogPost[] = [
       {
         question: "Will the driver wait if my flight is delayed?",
         answer:
-          "Yes. The chauffeur tracks your flight and adjusts the pickup, with a complimentary waiting window, so a delay will not cost you your meeting.",
+          "Yes. The chauffeur tracks your flight, and one hour of waiting is included from the pickup time stated in your reservation. Contact us if a major delay affects that time.",
       },
     ],
     relatedSlugs: [
@@ -2036,8 +2036,8 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Sophia Antipolis business transfer",
     ctaDescription:
       "Reserve a punctual private chauffeur for meetings and conferences at Sophia Antipolis, with flight tracking and executive vehicles.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport transfer details",
   },
   {
     slug: "nice-airport-to-sanremo-italy",
@@ -2143,7 +2143,7 @@ export const routePosts: BlogPost[] = [
     ctaTitle: "Book your Nice Airport to Sanremo transfer",
     ctaDescription:
       "Reserve a private chauffeur for a seamless cross-border trip to Sanremo and the Italian Riviera, with meet-and-greet and flight tracking.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer service",
+    ctaHref: "/our-services/transfers/long-distance-transfer",
+    ctaLabel: "See long-distance transfer details",
   },
 ];

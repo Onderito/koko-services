@@ -128,9 +128,8 @@ export default function Reviews() {
           viewport={{ once: true, amount: 0.4, margin: "0px 0px -10% 0px" }}
           transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
         >
-          Public traveler feedback is one of the strongest signals of trust for
-          a chauffeur business, so this section now highlights your Tripadvisor
-          reputation first.
+          Read recent feedback from travelers who booked tours and transfers in
+          Nice and across the French Riviera.
         </motion.p>
       </div>
 
@@ -164,9 +163,8 @@ export default function Reviews() {
               </span>
             </div>
             <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-gray-600 md:text-[15px]">
-              The strongest social proof for this business lives on Tripadvisor,
-              where travelers publicly rate the experience after tours and
-              transfers in Nice and across the Riviera.
+              Independent traveler reviews covering private tours, airport
+              transfers and chauffeur journeys across the Riviera.
             </p>
           </div>
 

@@ -19,8 +19,8 @@ export default function Pricing() {
           Driver Services Pricing Guide
         </h2>
         <p className="body-text mt-4 text-center">
-          A cleaner way to compare transfer, hourly, and full-day pricing
-          across the Riviera without losing the premium feel of the site.
+          Compare indicative transfer, hourly and eight-hour chauffeur rates by
+          vehicle before requesting your confirmed quote.
         </p>
       </Reveal>
 

@@ -107,8 +107,8 @@ export const yachtPosts: BlogPost[] = [
     ctaTitle: "Transfer from the airport to your yacht",
     ctaDescription:
       "Meet and greet, luggage handled, delivered to the quay — a private chauffeur from Nice Airport to your marina.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
+    ctaHref: "/our-services/yacht-transfers/nice-airport",
+    ctaLabel: "See Nice Airport yacht transfers",
   },
   {
     slug: "antibes-port-vauban-yacht-transfer",
@@ -209,8 +209,8 @@ export const yachtPosts: BlogPost[] = [
     ctaTitle: "Transfer to Port Vauban, Antibes",
     ctaDescription:
       "Straight from Nice Airport to the quay — a private chauffeur for Port Vauban arrivals, crew and provisioning.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
+    ctaHref: "/our-services/yacht-transfers/antibes",
+    ctaLabel: "See Antibes yacht transfers",
   },
   {
     slug: "monaco-port-hercule-yacht-transfer",
@@ -311,8 +311,8 @@ export const yachtPosts: BlogPost[] = [
     ctaTitle: "Transfer to Port Hercule, Monaco",
     ctaDescription:
       "Skip the tunnels and parking — a private chauffeur from Nice Airport to your yacht in Port Hercule.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
+    ctaHref: "/our-services/yacht-transfers/monaco",
+    ctaLabel: "See Monaco yacht transfers",
   },
   {
     slug: "saint-tropez-yacht-transfer",
@@ -413,8 +413,8 @@ export const yachtPosts: BlogPost[] = [
     ctaTitle: "Transfer to Saint-Tropez",
     ctaDescription:
       "By road or by boat, timed around the traffic — a private chauffeur from Nice Airport to the old port of Saint-Tropez.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
+    ctaHref: "/our-services/yacht-transfers/saint-tropez",
+    ctaLabel: "See Saint-Tropez yacht transfers",
   },
   {
     slug: "cannes-vieux-port-yacht-transfer",
@@ -515,8 +515,8 @@ export const yachtPosts: BlogPost[] = [
     ctaTitle: "Transfer to the port of Cannes",
     ctaDescription:
       "From Nice Airport to the Vieux Port or Port Canto — a private chauffeur for Cannes arrivals and festival season.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
+    ctaHref: "/our-services/yacht-transfers/cannes",
+    ctaLabel: "See Cannes yacht transfers",
   },
   {
     slug: "villefranche-anchorage-yacht-transfer",
@@ -719,8 +719,8 @@ export const yachtPosts: BlogPost[] = [
     ctaTitle: "Transfers for the Monaco Yacht Show",
     ctaDescription:
       "Arrive calm through the crowds — a private chauffeur from Nice Airport to Port Hercule for the Monaco Yacht Show.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
+    ctaHref: "/our-services/events/monaco-yacht-show",
+    ctaLabel: "See Monaco Yacht Show transport",
   },
   {
     slug: "superyacht-crew-transfers",
@@ -821,8 +821,8 @@ export const yachtPosts: BlogPost[] = [
     ctaTitle: "Chauffeur support for your crew",
     ctaDescription:
       "Crew changes, provisioning and guest runs — a dedicated chauffeur partner for superyachts across the Riviera.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
+    ctaHref: "/our-services/yacht-transfers/crew-transportation",
+    ctaLabel: "See crew transportation",
   },
   {
     slug: "cannes-yachting-festival-transfers",

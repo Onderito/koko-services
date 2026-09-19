@@ -3,7 +3,7 @@ import NavBar from "./layout/navBar";
 
 import "./globals.css";
 import ClientWrapper from "./ui/client-wrapper";
-import Analytics, { GtmNoScript } from "./ui/analytics";
+import Analytics from "./ui/analytics";
 import SeoSchema from "./ui/seo-schema";
 import {
   businessName,
@@ -66,7 +66,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
         <Analytics />
-        <GtmNoScript />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#111111] focus:shadow-lg"

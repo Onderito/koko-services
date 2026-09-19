@@ -612,8 +612,8 @@ export const legacyPosts: BlogPost[] = [
     ctaTitle: "Landing at Nice Airport soon?",
     ctaDescription:
       "Our transfer service covers meet and greet, luggage handling and direct rides to Monaco, Cannes, Saint-Tropez and beyond.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "Explore transfer service",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport transfer details",
   },
   {
     slug: "nice-to-monaco-transfer",
@@ -685,8 +685,8 @@ export const legacyPosts: BlogPost[] = [
     ctaTitle: "Need a smooth transfer into Monaco?",
     ctaDescription:
       "See how our transfer service handles airport arrivals, hotel drop-offs and time-sensitive rides into the principality.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "Explore transfer service",
+    ctaHref: "/our-services/transfers/monaco-airport-transfer",
+    ctaLabel: "See Monaco transfer details",
   },
   {
     slug: "cannes-taxi-vs-private-driver",
@@ -903,8 +903,8 @@ export const legacyPosts: BlogPost[] = [
     ctaTitle: "Need a chauffeur between meetings in Monaco?",
     ctaDescription:
       "Hourly service is built for airport arrivals, office stops, hotel check-ins and schedule changes without transport gaps.",
-    ctaHref: "/our-services/hourly-chauffeur",
-    ctaLabel: "Explore hourly service",
+    ctaHref: "/our-services/hourly-chauffeur/monaco",
+    ctaLabel: "See Monaco hourly service",
   },
   {
     slug: "nice-to-cannes-transfer",

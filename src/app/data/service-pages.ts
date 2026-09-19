@@ -326,7 +326,7 @@ export const transfersPage: ServicePageConfig = {
     },
   ],
   localLinksTitle: "Explore Transfer Types",
-  localLinksDescription: "Choose the transfer page that matches the route style your clients are most likely to book.",
+    localLinksDescription: "Choose the transfer service that matches your route and destination.",
   localLinks: transferLinks,
   cta: {
     title: "Ready to Book Your Transfer?",
@@ -349,6 +349,16 @@ export const transfersPage: ServicePageConfig = {
       question: "Can I book a transfer in advance?",
       answer:
         "Absolutely. We recommend booking in advance to guarantee vehicle availability, especially during peak season and major events.",
+    },
+    {
+      question: "How much waiting time is included for arrivals?",
+      answer:
+        "One hour of waiting is included for every arrival, counted from the pickup time stated in your reservation.",
+    },
+    {
+      question: "What is your cancellation policy?",
+      answer:
+        "Cancellation is free of charge until five days before the booked date and pickup time. If a booking is cancelled less than five days before departure, the full fare is charged.",
     },
     {
       question: "Are your transfer prices fixed?",
@@ -437,7 +447,17 @@ export const hourlyChauffeurPage: ServicePageConfig = {
   {
     question: "What is the minimum booking duration?",
     answer:
-      "Booking requirements vary depending on the itinerary, vehicle, and season. Whether you need a chauffeur for a few hours, a half-day, or a full day, we can tailor the service to your schedule and travel needs.",
+      "The minimum booking duration is four hours. Each booked hour includes 20 kilometres, giving you 80 included kilometres with the minimum four-hour reservation.",
+  },
+  {
+    question: "How many kilometres are included in an hourly booking?",
+    answer:
+      "Each booked hour includes 20 kilometres. For example, a four-hour booking includes 80 kilometres and an eight-hour booking includes 160 kilometres. Any additional distance is confirmed in your quote before booking.",
+  },
+  {
+    question: "What is the cancellation policy for hourly service?",
+    answer:
+      "Cancellation is free of charge until five days before the booked date and pickup time. If the service is cancelled less than five days before departure, the full fare is charged.",
   },
   {
     question: "Can the chauffeur wait between meetings, restaurants, or appointments?",
@@ -462,7 +482,7 @@ export const hourlyChauffeurPage: ServicePageConfig = {
 ],
   localLinksTitle: "Choose Your Destination",
   localLinksDescription:
-    "Each destination page is tuned to the type of hourly chauffeur demand most common in that city.",
+    "Compare hourly chauffeur options in each destination.",
   localLinks: hourlyCityLinks,
   cta: {
     title: "Need a Chauffeur on Standby?",
@@ -530,7 +550,7 @@ export const chauffeurToursPage: ServicePageConfig = {
     },
   ],
   localLinksTitle: "Tour by Destination",
-  localLinksDescription: "Each destination page gives the tour concept a stronger local angle for both clients and search visibility.",
+  localLinksDescription: "Choose a destination to explore its private tour options.",
   localLinks: tourCityLinks,
   cta: {
     title: "Plan Your Chauffeur Tour",
@@ -578,6 +598,11 @@ export const chauffeurToursPage: ServicePageConfig = {
       question: "Can the tour include airport or hotel pickup?",
       answer:
         "Yes. Your private tour can start from your hotel, villa, yacht, or directly from Nice Côte d’Azur Airport, depending on your itinerary."
+    },
+    {
+      question: "What is the cancellation policy for a private tour?",
+      answer:
+        "Cancellation is free of charge until five days before the booked tour date and pickup time. If the tour is cancelled less than five days before departure, the full fare is charged."
     }
   ]
 };
@@ -619,10 +644,31 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    practicalTitle: "Nice Airport Pickup, Pricing and Booking Conditions",
+    practicalDescription:
+      "Your confirmation sets out the terminal, vehicle and fixed fare. Every arrival includes one hour of waiting from the pickup time stated in the reservation.",
+    practicalDetails: [
+      {
+        title: "Terminal 1 pickup",
+        text: "Your chauffeur monitors the flight and meets you in the Terminal 1 arrivals hall with a name board before assisting with luggage.",
+      },
+      {
+        title: "Terminal 2 pickup",
+        text: "For Terminal 2 arrivals, the meeting point is inside the arrivals hall. The terminal and flight number are checked again before pickup.",
+      },
+      {
+        title: "Indicative fixed fares",
+        text: "Nice from €90 in an E-Class; Cannes or Monaco from €150. V-Class, S-Class and Maybach options are available, with the final fixed fare confirmed before booking.",
+      },
+      {
+        title: "Waiting and cancellation",
+        text: "One hour of waiting is included from the reserved pickup time. Cancellation is free until five days before that date and time; less than five days before departure, the full fare is charged.",
+      },
+    ],
     audienceTitle: "Ideal For",
     audienceAccent: "Smooth Arrivals",
     audienceDescription:
-      "This page is built for airport-led journeys where timing, comfort, and a premium first impression matter immediately.",
+      "For airport journeys where accurate flight monitoring, luggage assistance and a calm door-to-door arrival matter.",
     audienceCards: [
       {
         title: "International Arrivals",
@@ -668,7 +714,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Do you monitor flight delays?",
         answer:
-          "Yes. We monitor flight arrivals in real time and adjust pickup times accordingly to ensure a smooth airport transfer experience.",
+          "Yes. We monitor flight arrivals in real time. One hour of waiting is included from the pickup time stated in your reservation, so please contact us as soon as possible if a major delay affects that time.",
+      },
+      {
+        question: "What is the cancellation policy for an airport transfer?",
+        answer:
+          "Cancellation is free of charge until five days before the booked date and pickup time. If the transfer is cancelled less than five days before departure, the full fare is charged.",
       },
       {
         question: "Can I book a transfer from Nice Airport to Monaco?",
@@ -1662,7 +1713,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Choose Another Destination",
     localLinksDescription:
-      "Keep the hourly chauffeur section available across all city pages so users can switch destination without going back.",
+      "Compare hourly chauffeur service in other Riviera destinations.",
     localLinks: hourlyCityLinks,
     cta: {
       title: "Need an Hourly Chauffeur in Nice?",
@@ -1740,10 +1791,31 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    practicalTitle: "Cannes Hourly Chauffeur Rates",
+    practicalDescription:
+      "Choose the vehicle that suits your party and schedule. Hourly and eight-hour guide rates are confirmed in writing with the booking conditions for your date.",
+    practicalDetails: [
+      {
+        title: "Mercedes E-Class",
+        text: "From €90 per hour or €750 for eight hours, with chauffeur standby between the agreed stops.",
+      },
+      {
+        title: "Mercedes V-Class",
+        text: "From €110 per hour or €880 for eight hours for groups and clients requiring additional luggage space.",
+      },
+      {
+        title: "S-Class and Maybach",
+        text: "S-Class from €130 per hour or €1,040 for eight hours; Maybach from €300 per hour or €2,400 for eight hours.",
+      },
+      {
+        title: "Minimum time and distance",
+        text: "Minimum booking: four hours, including 20 kilometres per booked hour (80 kilometres for four hours). Any extra distance, toll or event-access charge is confirmed in advance.",
+      },
+    ],
     audienceTitle: "Best For",
     audienceAccent: "Cannes Timing",
     audienceDescription:
-      "This page targets the kind of chauffeur demand Cannes creates most often: event-led, hotel-led, and lifestyle-led movement.",
+      "Ideal for congress schedules, Croisette hotels, shopping, dinners and multi-stop days when the vehicle needs to remain available.",
     audienceCards: [
       {
         title: "Congress Guests",
@@ -1766,7 +1838,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Choose Another Destination",
     localLinksDescription:
-      "Keep the hourly chauffeur section available across all city pages so users can switch destination without going back.",
+      "Compare hourly chauffeur service in other Riviera destinations.",
     localLinks: hourlyCityLinks,
     cta: {
       title: "Book a Cannes Hourly Chauffeur",
@@ -1849,10 +1921,31 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    practicalTitle: "Monaco Hourly Chauffeur Rates",
+    practicalDescription:
+      "Guide rates cover a dedicated vehicle and chauffeur on standby, with a four-hour minimum and 20 kilometres included per booked hour.",
+    practicalDetails: [
+      {
+        title: "Mercedes E-Class",
+        text: "From €90 per hour or €750 for eight hours for meetings, hotels, restaurants and appointments.",
+      },
+      {
+        title: "Mercedes V-Class",
+        text: "From €110 per hour or €880 for eight hours for groups, yacht guests and additional luggage.",
+      },
+      {
+        title: "S-Class and Maybach",
+        text: "S-Class from €130 per hour or €1,040 for eight hours; Maybach from €300 per hour or €2,400 for eight hours.",
+      },
+      {
+        title: "Minimum time and distance",
+        text: "Minimum booking: four hours, including 20 kilometres per booked hour (80 kilometres for four hours). Any extra distance, toll, road-closure or event-access charge is confirmed in advance.",
+      },
+    ],
     audienceTitle: "Made For",
     audienceAccent: "Monaco Standards",
     audienceDescription:
-      "This page addresses the type of transport clients expect in Monaco: discreet, composed, and consistently available.",
+      "For business meetings, hotel stays, yacht visits and event schedules that require discreet transport to remain available.",
     audienceCards: [
       {
         title: "Executive Clients",
@@ -1875,7 +1968,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Choose Another Destination",
     localLinksDescription:
-      "Keep the hourly chauffeur section available across all city pages so users can switch destination without going back.",
+      "Compare hourly chauffeur service in other Riviera destinations.",
     localLinks: hourlyCityLinks,
     cta: {
       title: "Need a Monaco Chauffeur on Standby?",
@@ -1956,7 +2049,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     audienceTitle: "Perfect For",
     audienceAccent: "Saint-Tropez Days",
     audienceDescription:
-      "This page suits the kind of luxury travel rhythm Saint-Tropez is known for: villas, beach clubs, shopping, and evening transitions.",
+      "Ideal for villa stays, beach clubs, shopping, dining and evening plans around Saint-Tropez.",
     audienceCards: [
       {
         title: "Villa Guests",
@@ -1979,7 +2072,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Choose Another Destination",
     localLinksDescription:
-      "Keep the hourly chauffeur section available across all city pages so users can switch destination without going back.",
+      "Compare hourly chauffeur service in other Riviera destinations.",
     localLinks: hourlyCityLinks,
     cta: {
       title: "Book a Saint-Tropez Chauffeur",
@@ -2396,7 +2489,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Tour by Destination",
     localLinksDescription:
-      "Keep the chauffeur tour destinations visible on each city page so visitors can switch directly to another Riviera tour.",
+      "Compare private chauffeur tours in other Riviera destinations.",
     localLinks: tourCityLinks,
     cta: {
       title: "Plan Your Nice Chauffeur Tour",
@@ -2495,7 +2588,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     audienceTitle: "Great For",
     audienceAccent: "Cannes Exploration",
     audienceDescription:
-      "This page is tailored for guests who want Cannes to feel polished, easy, and visually rewarding throughout the day.",
+      "For guests who want to explore Cannes at an easy pace, with convenient stops for landmarks, shopping and dining.",
     audienceCards: [
       {
         title: "Luxury Visitors",
@@ -2518,7 +2611,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Tour by Destination",
     localLinksDescription:
-      "Keep the chauffeur tour destinations visible on each city page so visitors can switch directly to another Riviera tour.",
+      "Compare private chauffeur tours in other Riviera destinations.",
     localLinks: tourCityLinks,
     cta: {
       title: "Book Your Cannes Chauffeur Tour",
@@ -2661,7 +2754,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     audienceTitle: "Ideal For",
     audienceAccent: "Monaco Discovery",
     audienceDescription:
-      "This page suits guests who want the Monaco experience to feel elevated, composed, and properly paced.",
+      "For guests who want to explore Monaco at a comfortable pace with door-to-door transport between its main sights.",
     audienceCards: [
       {
         title: "Prestige Travelers",
@@ -2684,7 +2777,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Tour by Destination",
     localLinksDescription:
-      "Keep the chauffeur tour destinations visible on each city page so visitors can switch directly to another Riviera tour.",
+      "Compare private chauffeur tours in other Riviera destinations.",
     localLinks: tourCityLinks,
     relatedGuidesTitle: "Plan the Monaco Part of Your Riviera Stay",
     relatedGuides: [
@@ -2819,7 +2912,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Tour by Destination",
     localLinksDescription:
-      "Keep the chauffeur tour destinations visible on each city page so visitors can switch directly to another Riviera tour.",
+      "Compare private chauffeur tours in other Riviera destinations.",
     localLinks: tourCityLinks,
     cta: {
       title: "Book a Saint-Tropez Chauffeur Tour",

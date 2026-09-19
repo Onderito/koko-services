@@ -466,7 +466,7 @@ export default function ContactMe() {
 
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-[12px] text-[#5C4A2E]/80 max-w-xs">
-            By submitting, you agree to our terms and{" "}
+            MY NICE TOURS uses your details to respond and prepare your quote. This is not a confirmed booking. Read our{" "}
             <Link href="/legal-privacy" className="underline hover:text-[#6D5830]">
               privacy policy
             </Link>
