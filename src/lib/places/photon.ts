@@ -50,7 +50,7 @@ export async function photonSuggestions(query: string, language: string, limit =
   const lang = language === "fr" || language === "de" ? language : "en";
   // Centred on Nice; the box runs from the Var coast to Liguria and up to the Alps.
   const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&lat=43.70&lon=7.25&limit=${limit}&lang=${lang}&bbox=5.9,42.95,8.3,44.6`;
-  const res = await fetch(url, { headers: { "User-Agent": "kokolimo.com booking bar (Info@myriviera.fr)" }, signal: AbortSignal.timeout(3500), next: { revalidate: 86400 } });
+  const res = await fetch(url, { headers: { "User-Agent": "kokolimo.com booking bar (kokolimo@myriviera.fr)" }, signal: AbortSignal.timeout(3500), next: { revalidate: 86400 } });
   if (!res.ok) throw new Error(`photon ${res.status}`);
   const data = (await res.json()) as { features?: Feature[] };
   const seen = new Set<string>();

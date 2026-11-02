@@ -14,7 +14,7 @@ const sections = [
   { id: "publisher", title: "1. Website publisher", paragraphs: [
     "Kokolimo is the commercial name used on this website for services operated by MY NICE TOURS, also known as My Riviera Tours, a French limited liability company (SARL) with share capital of €5,000.",
     "Registered office: Le Wagram, 33 rue de Châteauneuf, 06000 Nice, France. SIREN: 838 777 787. RCS Nice: 838 777 787. VAT number: FR16 838 777 787. Activity code: 49.32Z.",
-    "Company manager and publication director: Marie-Pierre Gouliardon. Website design and technical maintenance: Ulas Önder. Business enquiries and personal data requests: info@myriviera.fr. Company contact telephone: +33 6 50 02 00 19. The Kokolimo booking contact is listed below.",
+    "Company manager and publication director: Marie-Pierre Gouliardon. Website design and technical maintenance: Ulas Önder. Business enquiries and personal data requests: kokolimo@myriviera.fr. Company contact telephone: +33 6 50 02 00 19. The Kokolimo booking contact is listed below.",
   ] },
   { id: "hosting", title: "2. Hosting and website content", paragraphs: [
     "Hosting provider: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States. Published contact telephone: +1 559 288 7060. Website: vercel.com.",
@@ -45,7 +45,7 @@ const sections = [
   ] },
   { id: "rights", title: "7. Your rights and complaints", paragraphs: [
     "Depending on the processing and legal conditions, you may request access, correction, erasure, restriction, portability, object to processing based on legitimate interests and withdraw consent. You may also provide instructions concerning your data after your death under French law.",
-    "Send your request to info@myriviera.fr or MY NICE TOURS, Le Wagram, 33 rue de Châteauneuf, 06000 Nice, France. We may ask for proportionate identity verification when necessary. Requests are normally answered within one month; a permitted extension will be explained where the request is complex.",
+    "Send your request to kokolimo@myriviera.fr or MY NICE TOURS, Le Wagram, 33 rue de Châteauneuf, 06000 Nice, France. We may ask for proportionate identity verification when necessary. Requests are normally answered within one month; a permitted extension will be explained where the request is complex.",
     "You may lodge a complaint with the CNIL, the French supervisory authority, at cnil.fr. This does not prevent you from exercising other available rights or remedies.",
   ] },
 ];

@@ -4,7 +4,7 @@ export const businessTitle =
   "Kokolimo | Private Driver in the French Riviera";
 export const contactPhone = "+33771698142";
 export const contactPhoneDisplay = "+33 7 71 69 81 42";
-export const contactEmail = "Info@myriviera.fr";
+export const contactEmail = "kokolimo@myriviera.fr";
 export const whatsappUrl = "https://wa.me/33771698142";
 export const legalPostalCode = "06000";
 export const serviceAreaText =

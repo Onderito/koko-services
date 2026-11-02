@@ -59,7 +59,7 @@ async function google(key: string, from: PlaceDetails, to: PlaceDetails): Promis
 
 async function osrm(from: PlaceDetails, to: PlaceDetails): Promise<Route> {
   const url = `https://router.project-osrm.org/route/v1/driving/${from.lng},${from.lat};${to.lng},${to.lat}?overview=full&geometries=polyline6`;
-  const res = await fetch(url, { headers: { "User-Agent": "kokolimo.com quote page (Info@myriviera.fr)" }, signal: AbortSignal.timeout(5000), next: { revalidate: 86400 } });
+  const res = await fetch(url, { headers: { "User-Agent": "kokolimo.com quote page (kokolimo@myriviera.fr)" }, signal: AbortSignal.timeout(5000), next: { revalidate: 86400 } });
   if (!res.ok) throw new Error(`osrm ${res.status}`);
   const d = (await res.json()) as { code: string; routes?: { geometry: string; distance: number; duration: number }[] };
   const r = d.routes?.[0];

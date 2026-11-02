@@ -8,7 +8,7 @@ const BODY = `# Kokolimo
 
 > Private chauffeur and airport transfer service on the French Riviera, based in Nice. Transfers from Nice Côte d'Azur Airport (NCE) to Monaco, Cannes, Antibes and Saint-Tropez, hourly chauffeur hire, private tours, yacht and event transport. Mercedes E-Class, S-Class, V-Class and Maybach. Fixed fare confirmed before booking, flight tracking, meet and greet, one hour of waiting included.
 
-Kokolimo (My Riviera Tours & Transfers) is run by MY NICE TOURS, 33 rue de Châteauneuf, 06000 Nice (SIRET 838 777 787 00014). Chauffeurs speak English, French, Turkish and Russian. Winter service in Megève, Courchevel and Chamonix. Indicative fares from €90 (Nice Airport to Nice, E-Class); quotes are confirmed before the ride. Contact: +33 7 71 69 81 42 (phone, WhatsApp), Info@myriviera.fr. Every page has a Markdown version at its address + .md. Sitemap: https://kokolimo.com/sitemap.xml
+Kokolimo (My Riviera Tours & Transfers) is run by MY NICE TOURS, 33 rue de Châteauneuf, 06000 Nice (SIRET 838 777 787 00014). Chauffeurs speak English, French, Turkish and Russian. Winter service in Megève, Courchevel and Chamonix. Indicative fares from €90 (Nice Airport to Nice, E-Class); quotes are confirmed before the ride. Contact: +33 7 71 69 81 42 (phone, WhatsApp), kokolimo@myriviera.fr. Every page has a Markdown version at its address + .md. Sitemap: https://kokolimo.com/sitemap.xml
 
 ## Core pages
 
