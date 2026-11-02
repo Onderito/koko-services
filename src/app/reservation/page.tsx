@@ -1,9 +1,15 @@
-// /reservation?id=<temporary id> — step 01 of the quote request (Vehicle). Never indexed.
-// Demo stage: shows the trip summary. The immersive route map and the vehicle cards come next.
+// /reservation?t=<signed trip> — the quote request in three steps (01 Vehicle · 02 Details · 03 Confirm), with
+// Transfeero's layout and route effect (teardown of 20 Oct 2026, docs/design in the koko project). Quotes, not
+// payments: each car shows "Starting from" (the site's own price guide) and the request goes to the owner's inbox.
+// Never indexed; the trip travels in the link (lib/reservations/trip.ts) and expires after 7 days.
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getReservation } from "@/lib/reservations/store";
+import { readTrip } from "@/lib/reservations/trip";
+import { carOffers } from "@/lib/reservations/pricing";
+import { getRoute, type RoutePoint } from "@/lib/routes/route";
+import { getRatings } from "@/lib/reviews/ratings";
+import QuoteFlow, { type QuoteRating, type QuoteTrip } from "./quote-flow";
 
 export const dynamic = "force-dynamic";
 
@@ -12,65 +18,52 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 };
 
-const ID_RE = /^[A-Za-z0-9]{22}$/;
-
-function formatDate(d: string) {
-  const [y, m, day] = d.split("-").map(Number);
-  return new Intl.DateTimeFormat("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(Date.UTC(y, m - 1, day)));
+/** At most `max` points, keeping the first and the last: enough for a smooth line, light for the page. */
+function thin(points: RoutePoint[], max = 300): RoutePoint[] {
+  if (points.length <= max) return points;
+  const step = (points.length - 1) / (max - 1);
+  return Array.from({ length: max }, (_, i) => points[Math.round(i * step)]);
 }
 
-export default async function ReservationPage({ searchParams }: { searchParams: Promise<{ id?: string }> }) {
-  const { id = "" } = await searchParams;
-  const r = ID_RE.test(id) ? await getReservation(id) : null;
+export default async function ReservationPage({ searchParams }: { searchParams: Promise<{ t?: string }> }) {
+  const { t = "" } = await searchParams;
+  const trip = readTrip(t);
 
-  if (!r) {
+  if (!trip) {
     return (
       <section className="mx-auto max-w-xl px-4 pb-24 pt-[calc(var(--nav-clearance)+2rem)] text-center">
         <h1 className="text-[28px] font-bold text-[#0f1115]">This quote is no longer available</h1>
         <p className="mt-3 text-[16px] text-[#5b6472]">Quotes are kept for 7 days. Start a new one in a few seconds.</p>
-        <Link href="/demo" className="mt-6 inline-flex rounded-2xl bg-[#e2b04a] px-6 py-3 font-bold text-[#0f1115]">Get a new quote</Link>
+        <Link href="/#book" className="mt-6 inline-flex rounded-full bg-[#e8ba64] px-6 py-3 font-bold text-[#0f1115]">
+          Get a new quote
+        </Link>
       </section>
     );
   }
 
-  const steps = ["Vehicle", "Details", "Confirm"];
+  const route = trip.mode === "transfer" && trip.to ? await getRoute(trip.from, trip.to) : null;
+  const pub: QuoteTrip = {
+    mode: trip.mode,
+    from: { id: trip.from.id, name: trip.from.name, address: trip.from.address, kind: trip.from.kind, lat: trip.from.lat, lng: trip.from.lng },
+    to: trip.to ? { id: trip.to.id, name: trip.to.name, address: trip.to.address, kind: trip.to.kind, lat: trip.to.lat, lng: trip.to.lng } : null,
+    date: trip.date,
+    time: trip.time,
+    trip: trip.trip,
+    returnDate: trip.returnDate,
+    returnTime: trip.returnTime,
+    passengers: trip.passengers,
+    hours: trip.hours,
+  };
+
+  const ratings: QuoteRating[] = (await getRatings()).map(r => ({ source: r.source, rating: r.rating, count: r.count, url: r.url }));
+
   return (
-    <section className="mx-auto max-w-6xl px-4 pb-24 pt-[calc(var(--nav-clearance)+1.5rem)]">
-      <ol className="mb-8 flex gap-6 text-[14px]" aria-label="Steps">
-        {steps.map((s, i) => (
-          <li key={s} aria-current={i === 0 ? "step" : undefined} className={i === 0 ? "border-b-2 border-[#e2b04a] pb-1 font-semibold text-[#0f1115]" : "pb-1 text-[#8a92a0]"}>
-            <span className="mr-1.5 text-[12px]">{String(i + 1).padStart(2, "0")}</span>
-            {s}
-          </li>
-        ))}
-      </ol>
-      <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
-        <div className="grid min-h-[420px] place-items-center rounded-2xl bg-[#eef1f2] p-6 text-center text-[#5b6472]">
-          The route map and the cars (with &ldquo;starting from&rdquo; prices) appear here in the next demo step.
-        </div>
-        <aside className="h-fit rounded-2xl border border-black/10 bg-white p-6">
-          <h2 className="text-[20px] font-bold text-[#0f1115]">Your booking</h2>
-          <p className="mt-1 text-[14px] text-[#5b6472]">
-            {formatDate(r.date)} · {r.time} · {r.passengers} passenger{r.passengers > 1 ? "s" : ""}
-            {r.mode === "hourly" ? ` · ${r.hours} hours` : ""}
-          </p>
-          <ul className="mt-5 space-y-4">
-            <li>
-              <p className="text-[12px] uppercase tracking-wide text-[#8a92a0]">{r.mode === "transfer" ? "Pick-up" : "Pick-up (by the hour)"}</p>
-              <p className="font-semibold text-[#0f1115]">{r.from.name}</p>
-              <p className="text-[13px] text-[#5b6472]">{r.from.address}</p>
-            </li>
-            {r.to && (
-              <li>
-                <p className="text-[12px] uppercase tracking-wide text-[#8a92a0]">Drop-off</p>
-                <p className="font-semibold text-[#0f1115]">{r.to.name}</p>
-                <p className="text-[13px] text-[#5b6472]">{r.to.address}</p>
-              </li>
-            )}
-          </ul>
-          <p className="mt-6 rounded-xl bg-[#f1f3f5] p-4 text-[14px] text-[#0f1115]">Your fixed fare is confirmed by your chauffeur before the ride. No payment online.</p>
-        </aside>
-      </div>
-    </section>
+    <QuoteFlow
+      ratings={ratings}
+      token={t}
+      trip={pub}
+      route={route ? { points: thin(route.points), km: Math.round(route.distanceM / 100) / 10, minutes: Math.max(1, Math.round(route.durationS / 60)), estimated: route.source === "estimate" } : null}
+      offers={carOffers(trip)}
+    />
   );
 }

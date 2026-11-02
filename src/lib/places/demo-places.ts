@@ -1,9 +1,12 @@
 // Built-in list of Riviera places, used only when no Google key is configured (demo and local development).
 // Coordinates are approximate public positions, good enough to draw a demonstration route.
+// 21 Oct 2026, at the user's request: every commune of the Alpes-Maritimes and of the Var coast (riviera-communes.ts)
+// is suggested too, written like Google ("06360 Èze, France"), and the list shown before typing is the user's own.
 
 import type { PlaceDetails, PlaceSuggestion } from "./types";
+import { RIVIERA_COMMUNES } from "./riviera-communes";
 
-export const DEMO_PLACES: PlaceDetails[] = [
+const HAND_PICKED: PlaceDetails[] = [
   { id: "demo-nce-t1", name: "Nice Côte d'Azur Airport, Terminal 1", address: "Nice, France", lat: 43.6653, lng: 7.215, kind: "airport" },
   { id: "demo-nce-t2", name: "Nice Côte d'Azur Airport, Terminal 2", address: "Nice, France", lat: 43.6589, lng: 7.2058, kind: "airport" },
   { id: "demo-nice", name: "Nice city centre", address: "Place Masséna, Nice, France", lat: 43.697, lng: 7.2706, kind: "city" },
@@ -38,8 +41,31 @@ export const DEMO_PLACES: PlaceDetails[] = [
   { id: "demo-chamonix", name: "Chamonix-Mont-Blanc", address: "Chamonix, France", lat: 45.9237, lng: 6.8694, kind: "city" },
 ];
 
-/** Shown before the visitor types: the places most clients start from or go to. */
-export const QUICK_PICK_IDS = ["demo-nce-t1", "demo-nce-t2", "demo-nice", "demo-monaco", "demo-cannes", "demo-antibes"];
+const fold0 = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+// Communes as places: the town centre, "06360 Èze, France". Monaco and the Alpes-Maritimes as a whole come first.
+const COMMUNES: PlaceDetails[] = [
+  { id: "area-monaco", name: "Monaco", address: "Monaco", lat: 43.7384, lng: 7.4246, kind: "city" },
+  { id: "area-alpes-maritimes", name: "Alpes-Maritimes", address: "France", lat: 43.9386, lng: 7.1167, kind: "city" },
+  ...RIVIERA_COMMUNES.map(c => ({ id: `fr-${c.code}`, name: c.name, address: `${c.postcode} ${c.name}, France`, lat: c.lat, lng: c.lng, kind: "city" as const })),
+];
+
+// A hand-picked town centre gives way to its commune entry (same place, written "06500 Menton, France"); hand-picked
+// points (airport terminals, ports, hotels, "Èze village"…) stay.
+const communeNames = new Set(COMMUNES.map(c => fold0(c.name)));
+export const DEMO_PLACES: PlaceDetails[] = [...HAND_PICKED.filter(p => !(p.kind === "city" && communeNames.has(fold0(p.name)))), ...COMMUNES];
+
+const communeId = (name: string) => COMMUNES.find(c => fold0(c.name) === fold0(name))?.id ?? "";
+
+/** Shown before the visitor types: the airport, then the user's list (21 Oct 2026), in its order. */
+export const QUICK_PICK_IDS = [
+  "demo-nce-t1",
+  "demo-nce-t2",
+  "area-monaco",
+  ...["Nice", "Cannes", "Antibes", "Èze", "Menton", "Mougins", "Cap-d'Ail"].map(communeId),
+  "area-alpes-maritimes",
+  ...["Ramatuelle", "Beaulieu-sur-Mer", "Saint-Tropez", "Saint-Paul-de-Vence", "Villefranche-sur-Mer", "Saint-Jean-Cap-Ferrat"].map(communeId),
+].filter(Boolean);
 
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/['’-]/g, " ");
 
@@ -55,7 +81,7 @@ const ALIASES: Record<string, string> = {
 
 const toSuggestion = (p: PlaceDetails): PlaceSuggestion => ({ id: p.id, title: p.name, subtitle: p.address, kind: p.kind });
 
-export function demoSuggestions(query: string, limit = 6): PlaceSuggestion[] {
+export function demoSuggestions(query: string, limit = 8): PlaceSuggestion[] {
   const q = fold(query).trim();
   if (!q) return QUICK_PICK_IDS.map(id => DEMO_PLACES.find(p => p.id === id)!).map(toSuggestion);
   const words = q.split(/\s+/);
@@ -63,7 +89,8 @@ export function demoSuggestions(query: string, limit = 6): PlaceSuggestion[] {
     const hayWords = fold(`${p.name} ${p.address} ${ALIASES[p.kind] ?? ""}`).split(/[\s,.]+/);
     if (!words.every(w => hayWords.some(h => h.startsWith(w)))) return null;
     const starts = fold(p.name).startsWith(words[0]) ? 0 : 1;
-    return { p, score: starts };
+    const popular = QUICK_PICK_IDS.includes(p.id) ? -0.5 : 0; // the user's list ranks first among matches
+    return { p, score: starts + popular };
   }).filter((x): x is { p: PlaceDetails; score: number } => x !== null);
   return scored.sort((a, b) => a.score - b.score).slice(0, limit).map(x => toSuggestion(x.p));
 }

@@ -1,7 +1,17 @@
-"use client";
+// Client reviews, laid out as Anti's "What Our Customers Say" (IMG_8800): light-grey section, the Tripadvisor rating
+// summary in a white card, then each review once in a white card that opens with yellow stars and "4.8/5" (21 Oct 2026,
+// at the user's request: no initials avatar, no "Tripadvisor review" label, no badge at the bottom).
+// 21 Oct 2026, also at the user's request: each quote links to where it was published, so a visitor can check it is
+// real; the "Based on the public Tripadvisor listing" line is gone (it widened the summary card), and the card stacks
+// cleanly on narrow screens. The links open the Tripadvisor reviews page: direct links to each review need their
+// addresses (Tripadvisor refuses automated reads), to add when the owner or the Tripadvisor API provides them.
+// The looping marquee is gone. Texts unchanged.
 
-import Link from "next/link";
-import { motion } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
+import { AntiHeading, AntiOutlinePill, AntiSection } from "../ui/anti";
+import { Stars } from "../ui/kit";
+import ArrowButton from "../ui/arrow-button";
+import RollingNumber from "../ui/rolling-number";
 
 const reviews = [
   {
@@ -30,173 +40,78 @@ const reviews = [
   },
 ];
 
-const tripadvisorListingUrl =
+export const tripadvisorListingUrl =
   "https://www.tripadvisor.com/Attraction_Review-g187234-d7971865-Reviews-MY_Riviera_Tours_Transfers-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_.html";
+// Where the quotes were published: the listing's reviews (#REVIEWS opens them).
+const reviewSourceUrl = `${tripadvisorListingUrl}#REVIEWS`;
 const googleReviewUrl = "https://g.page/r/CXSXgZXVNYkwEAE/review";
 
-type ReviewTrackProps = {
-  items: typeof reviews;
-  duration: number;
-  reverse?: boolean;
-};
-
-function ReviewTrack({ items, duration, reverse = false }: ReviewTrackProps) {
-  const repeatedItems = [...items, ...items];
-
+export default function Reviews() {
   return (
-    <div className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#fdfdfd] to-transparent md:w-24" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#fdfdfd] to-transparent md:w-24" />
+    <AntiSection tone="grey" labelledBy="reviews-title">
+      <AntiHeading
+        id="reviews-title"
+        title="Trusted on Tripadvisor for Riviera tours and transfers"
+        intro="Read recent feedback from travelers who booked tours and transfers in Nice and across the French Riviera."
+      />
 
-      <motion.div
-        className="flex w-max py-2"
-        animate={{
-          x: reverse ? ["-50%", "0%"] : ["0%", "-50%"],
-        }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      >
-        {repeatedItems.map((review, index) => (
-          <div
-            key={`${review.author}-${review.context}-${index}`}
-            className="shrink-0 pr-4"
-            aria-hidden={index >= items.length ? true : undefined}
-          >
-            <article className="flex min-h-[240px] w-[300px] flex-col justify-between rounded-[28px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1E8_100%)] p-6 shadow-[0_20px_50px_rgba(25,25,25,0.08)] md:w-[360px]">
-            <div>
-              <div className="flex items-center justify-between gap-3">
-                <span className="rounded-full border border-[#D9C9AF] bg-white px-3 py-1 text-[12px] font-manrope-bold uppercase tracking-[0.12em] text-[#6D5830]">
-                  Tripadvisor review
-                </span>
-                <span className="rounded-full bg-[#2C2C2C] px-3 py-1 text-[12px] font-manrope-bold text-white">
-                  4.8 / 5
-                </span>
-              </div>
-              <p className="mt-5 text-[18px] leading-[1.55] tracking-[-0.02em] text-[#2E2E2E]">
+      <div className="mt-8 flex flex-col gap-6 rounded-[10px] bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)] lg:flex-row lg:items-center lg:justify-between md:p-7">
+        <div className="min-w-0">
+          <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#9a7a3e]">Tripadvisor</p>
+          <div className="mt-2 flex flex-wrap items-center gap-3">
+            <RollingNumber value="4.8" className="text-[40px] font-bold leading-none tracking-[-0.03em] text-[#101828]" />
+            <span className="flex items-center gap-1.5" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <span key={i} className="h-4 w-4 rounded-full bg-[#34e0a1] ring-1 ring-[#1fae7a]/40" />
+              ))}
+            </span>
+            <span className="text-[17px] text-[#101828]">165 public reviews</span>
+          </div>
+          <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-[#667085] md:text-[15px]">
+            Independent traveler reviews covering private tours, airport transfers and chauffeur journeys across the Riviera.
+          </p>
+        </div>
+        <div className="flex shrink-0 flex-wrap items-center gap-3">
+          <ArrowButton text="View on Tripadvisor" href={tripadvisorListingUrl} tone="dark" target="_blank" rel="noopener noreferrer" />
+          <AntiOutlinePill href={googleReviewUrl} dark={false} external ariaLabel="Leave Kokolimo a review on Google">
+            Leave a Google review
+          </AntiOutlinePill>
+        </div>
+      </div>
+
+      <ul className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {reviews.map(r => (
+          <li key={`${r.author}-${r.context}`}>
+            <article className="flex h-full flex-col rounded-[10px] bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]">
+              <p className="flex items-center gap-2">
+                <Stars className="[&_svg]:h-4 [&_svg]:w-4" />
+                <span className="text-[14px] font-semibold text-[#101828]">4.8/5</span>
+              </p>
+              <p className="mt-4 text-[15px] leading-relaxed text-[#344054]">
                 <span aria-hidden="true">&ldquo;</span>
-                {review.quote}
+                {r.quote}
                 <span aria-hidden="true">&rdquo;</span>
               </p>
-            </div>
-
-            <div className="mt-6 border-t border-[#E6DED3] pt-5">
-              <p className="text-[15px] font-manrope-bold text-[#1F1F1F]">
-                {review.author}
-              </p>
-              <p className="mt-1 text-[14px] text-[#6A6A6A]">
-                {review.context}
-              </p>
-            </div>
-            </article>
-          </div>
-        ))}
-      </motion.div>
-    </div>
-  );
-}
-
-export default function Reviews() {
-  const firstTrack = reviews;
-  const secondTrack = [...reviews.slice(2), ...reviews.slice(0, 2)];
-
-  return (
-    <section
-      aria-labelledby="reviews-title"
-      className="relative overflow-hidden rounded-[32px] border border-[#EEE6DB] bg-[radial-gradient(circle_at_top,#FFF7EC_0%,#FFFFFF_58%)] px-4 py-10 md:px-6 md:py-14 xl:px-8"
-    >
-      <div className="mx-auto max-w-3xl text-center">
-        <span className="section-label">
-          Client Reviews
-        </span>
-        <motion.h2
-          id="reviews-title"
-          className="heading-2 xl:text-[64px] mt-4 text-center text-[#111111]"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4, margin: "0px 0px -10% 0px" }}
-          transition={{ duration: 0.65, ease: "easeOut" }}
-        >
-          Trusted on Tripadvisor for Riviera tours and transfers
-        </motion.h2>
-        <motion.p
-          className="body-text mt-4 text-center"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4, margin: "0px 0px -10% 0px" }}
-          transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
-        >
-          Read recent feedback from travelers who booked tours and transfers in
-          Nice and across the French Riviera.
-        </motion.p>
-      </div>
-
-      <motion.div
-        className="mx-auto mt-8 max-w-5xl rounded-[30px] border border-[#E8DDCC] bg-[linear-gradient(180deg,#FFFDF9_0%,#F7EFE3_100%)] p-5 shadow-[0_18px_48px_rgba(45,33,15,0.08)] md:mt-10 md:p-6"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.35, margin: "0px 0px -10% 0px" }}
-        transition={{ duration: 0.65, delay: 0.14, ease: "easeOut" }}
-      >
-        <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-[#6D5830]">
-              Tripadvisor
-            </p>
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-              <span className="text-[34px] font-manrope-bold tracking-[-0.04em] text-[#111111] md:text-[42px]">
-                4.8
-              </span>
-              <div className="flex items-center gap-2">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <span
-                    key={index}
-                    className="h-4 w-4 rounded-full bg-[#16A34A]"
-                    aria-hidden="true"
-                  />
-                ))}
+              <div className="mt-auto flex items-end justify-between gap-3 pt-6">
+                <div>
+                  <p className="text-[15px] font-semibold text-[#101828]">{r.author}</p>
+                  <p className="mt-0.5 text-[13px] text-[#667085]">{r.context}</p>
+                </div>
+                <a
+                  href={reviewSourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Read ${r.author}'s review on Tripadvisor`}
+                  className="group inline-flex shrink-0 items-center gap-1 text-[13px] font-semibold text-[#9a7a3e] transition-colors hover:text-[#101828]"
+                >
+                  Tripadvisor
+                  <ArrowUpRight size={14} strokeWidth={2} aria-hidden="true" className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
               </div>
-              <span className="text-[18px] text-[#111111] md:text-[20px]">
-                165 public reviews
-              </span>
-            </div>
-            <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-gray-600 md:text-[15px]">
-              Independent traveler reviews covering private tours, airport
-              transfers and chauffeur journeys across the Riviera.
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
-            <Link
-              href={tripadvisorListingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-[#111111] bg-[#111111] px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#2B2B2B] active:scale-[0.96]"
-            >
-              View on Tripadvisor
-            </Link>
-            <Link
-              href={googleReviewUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Leave Kokolimo a review on Google"
-              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-[#D8C7AD] bg-white px-5 py-3 font-manrope-bold text-[14px] tracking-[-0.01em] text-[#6D5830] shadow-[0_10px_24px_rgba(109,88,48,0.10)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#FFF9F0] hover:shadow-[0_14px_30px_rgba(109,88,48,0.16)] active:scale-[0.96]"
-            >
-              Leave a Google review
-            </Link>
-            <span className="text-center text-[12px] text-gray-500 sm:text-left">
-              Based on the public Tripadvisor listing.
-            </span>
-          </div>
-        </div>
-      </motion.div>
-
-      <div className="mt-10 space-y-4 md:mt-12 md:space-y-5">
-        <ReviewTrack items={firstTrack} duration={22} />
-        <ReviewTrack items={secondTrack} duration={26} reverse />
-      </div>
-    </section>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </AntiSection>
   );
 }

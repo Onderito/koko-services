@@ -1,7 +1,17 @@
+// Blog article in Kokolimo's Anti blocks (inspirations/IMG_8800):
+// - a dark photo hero with the header inside it (the article photo, or Anti's gallery mosaic for the two legacy tours
+//   that carry several photos), "Back to blog", the H1, its text and the meta line (kicker pill, read time, date,
+//   category pill; the kicker no longer sits above the title);
+// - the article in one readable column, with a sticky table of contents card and the navy request card beside it;
+// - the questions as white cards that open (native <details>, answers in the HTML), Anti's dark CTA card, the related
+//   articles as Anti cards, then the footer columns.
+// Texts, headings and their levels, links, alts, ids, metadata and both JSON-LD blocks unchanged.
+
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { ArrowLeft, CalendarDays, Clock3 } from "lucide-react";
 
 import BlogCard from "../blog-card";
 import {
@@ -10,7 +20,13 @@ import {
   getBlogPost,
   getRelatedPosts,
   siteUrl,
+  type BlogFaq,
+  type BlogPost,
 } from "../../data/blog-posts";
+import Footer from "../../layout/footer";
+import { AntiHeading, AntiSection, AntiTextLink, GoldArrow } from "../../ui/anti";
+import FaqList from "../../ui/faq-list";
+import ArrowButton from "../../ui/arrow-button";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -58,6 +74,151 @@ export async function generateMetadata({
   };
 }
 
+const cardShadow = "shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]";
+const pageTop = "pt-[calc(var(--header-h)+3.5rem)] lg:pt-[calc(var(--header-h)+4.5rem)]";
+const anchorOffset = "scroll-mt-[calc(var(--header-h)+1.5rem)]";
+
+/** "Back to blog", the H1, the post text and the meta line, on the dark hero. */
+function HeroText({ post, compact = false }: { post: BlogPost; compact?: boolean }) {
+  return (
+    <>
+      <Link
+        href="/blog"
+        className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-white/75 transition-colors hover:text-white"
+      >
+        <ArrowLeft size={16} strokeWidth={2} aria-hidden="true" />
+        Back to blog
+      </Link>
+      <div className="mt-10">
+        <h1
+          className={`max-w-[820px] text-[36px] font-bold leading-[1.06] tracking-[-0.025em] sm:text-[46px] ${compact ? "lg:text-[50px]" : "lg:text-[56px]"}`}
+          style={{ textWrap: "balance" }}
+        >
+          {post.title}
+        </h1>
+        <p className="mt-5 max-w-[640px] text-[17px] leading-relaxed text-white/80 md:text-[18px]">
+          {post.description}
+        </p>
+        <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 text-[14px] text-white/75 md:text-[15px]">
+          <span className="rounded-full bg-[#e2b04a] px-3.5 py-1.5 text-[13px] font-semibold text-[#0d1922]">
+            {post.heroKicker}
+          </span>
+          <span className="inline-flex items-center gap-2">
+            <Clock3 size={16} strokeWidth={1.8} className="text-[#e2b04a]" aria-hidden="true" />
+            {post.readTime}
+          </span>
+          <span className="inline-flex items-center gap-2">
+            <CalendarDays size={16} strokeWidth={1.8} className="text-[#e2b04a]" aria-hidden="true" />
+            <time dateTime={post.publishedAt}>{formatBlogDate(post.publishedAt)}</time>
+          </span>
+          <span className="rounded-full border border-white/25 px-3.5 py-1 text-[13px] font-semibold text-white">
+            {post.category}
+          </span>
+        </div>
+      </div>
+    </>
+  );
+}
+
+/** Anti's hero: the article photo full-bleed behind a navy fade, the text on the left, no empty band. */
+function PostHero({ post }: { post: BlogPost }) {
+  const gallery = post.heroImages ?? [];
+
+  if (gallery.length > 0) {
+    // Several photos: Anti's "Moments That Move Us" mosaic on the right of a navy hero.
+    const three = gallery.length === 3;
+    return (
+      <section data-hero-tone="dark" data-nav-tone="dark" className="bg-[#0d1922] text-white">
+        <div className={`mx-auto grid max-w-[1240px] gap-10 px-4 pb-12 md:px-6 md:pb-16 lg:grid-cols-2 lg:items-end lg:gap-14 ${pageTop}`}>
+          <div className="flex flex-col">
+            <HeroText post={post} compact />
+          </div>
+          <div className={`grid h-[300px] grid-cols-2 gap-2 sm:h-[380px] lg:h-[440px] ${three ? "grid-rows-2" : "auto-rows-fr"}`}>
+            {gallery.map((img, index) => (
+              <div
+                key={img.src}
+                className={`relative overflow-hidden rounded-[8px] bg-[#1a2a36] ${three && index === 0 ? "row-span-2" : ""}`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  priority={index === 0}
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 300px, 50vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section data-hero-tone="dark" data-nav-tone="dark" className="relative isolate bg-[#0d1922] text-white">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <Image
+          src={post.imageUrl}
+          alt={post.imageAlt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,25,34,0.5)_0%,rgba(13,25,34,0.72)_55%,rgba(13,25,34,0.94)_100%)] lg:bg-[linear-gradient(90deg,rgba(13,25,34,0.92)_0%,rgba(13,25,34,0.72)_38%,rgba(13,25,34,0.18)_70%,rgba(13,25,34,0.05)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 hidden h-1/3 bg-gradient-to-t from-[#0d1922]/80 to-transparent lg:block" />
+      </div>
+      <div className={`mx-auto flex min-h-[520px] max-w-[1240px] flex-col justify-between px-4 pb-10 md:px-6 md:pb-14 lg:min-h-[560px] ${pageTop}`}>
+        <HeroText post={post} />
+      </div>
+    </section>
+  );
+}
+
+/** Questions with the home page's animated FAQ (Hyperiux, user, 21 Oct 2026): the question stays an h3, the answer
+ *  stays in the HTML. */
+function FaqCards({ items }: { items: BlogFaq[] }) {
+  return <FaqList items={items.map(item => ({ question: item.question, answer: <p>{item.answer}</p> }))} />;
+}
+
+/** Anti's dark CTA card: navy, rounded, the title with one gold accent, text and the gold pill; a photo fades in on the right. */
+function CtaCard() {
+  return (
+    <section data-nav-tone="light" aria-labelledby="post-cta-title" className="bg-white text-[#101828]">
+      <div className="mx-auto max-w-[1240px] px-4 py-16 md:px-6 md:py-24">
+        <div data-nav-tone="dark" className="relative overflow-hidden rounded-[12px] bg-[#0d1922] text-white md:min-h-[340px]">
+          <div className="relative z-10 p-8 md:max-w-[58%] md:p-12">
+            <h2
+              id="post-cta-title"
+              className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[38px]"
+              style={{ textWrap: "balance" }}
+            >
+              Ready to book your private driver on the <span className="text-[#e2b04a]">French Riviera</span>?
+            </h2>
+            <p className="mt-4 max-w-[480px] text-[16px] leading-relaxed text-white/75">
+              Tell us your route, dates and preferred service and we will recommend the right vehicle and booking format for your stay.
+            </p>
+            <div className="mt-8">
+              <ArrowButton text="Request your ride" href="/contact-me" />
+            </div>
+          </div>
+          <div aria-hidden="true" className="relative h-52 sm:h-64 md:absolute md:inset-y-0 md:right-0 md:h-auto md:w-[55%]">
+            <Image
+              src="/assets/images/services/long-distance.webp"
+              alt=""
+              fill
+              sizes="(min-width: 1280px) 660px, (min-width: 768px) 55vw, 100vw"
+              className="object-cover object-[50%_62%]"
+            />
+            <div className="absolute -inset-px bg-[linear-gradient(180deg,#0d1922_0%,rgba(13,25,34,0.35)_45%,rgba(13,25,34,0.1)_100%)] md:bg-[linear-gradient(90deg,#0d1922_0%,rgba(13,25,34,0.6)_28%,rgba(13,25,34,0.05)_70%)]" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = getBlogPost(slug);
@@ -100,7 +261,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#FCFCFA] pb-20 pt-24 md:pt-28">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -111,121 +272,73 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       />
 
       <article>
-        <section className="container">
-          <div className="overflow-hidden rounded-[36px] border border-[#E5E5E5] bg-white shadow-sm">
-            <div className="relative min-h-[420px] overflow-hidden md:min-h-[560px]">
-              {post.heroImages && post.heroImages.length > 0 ? (
-                <div className="absolute inset-0 grid grid-cols-2 gap-0.5 md:flex md:gap-0.5">
-                  {post.heroImages.map((img, index) => (
-                    <div
-                      key={img.src}
-                      className="relative h-full w-full overflow-hidden md:flex-1"
-                    >
-                      <Image
-                        src={img.src}
-                        alt={img.alt}
-                        fill
-                        priority={index === 0}
-                        className="object-cover"
-                        sizes="(min-width: 768px) 25vw, 50vw"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <Image
-                  src={post.imageUrl}
-                  alt={post.imageAlt}
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              )}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/75" />
-              <div className="relative z-10 flex min-h-[420px] flex-col justify-end p-6 text-white md:min-h-[560px] md:p-10 xl:p-14">
-                <Link
-                  href="/blog"
-                  className="mb-5 inline-flex w-fit rounded-full bg-white/12 px-4 py-2 text-[14px] font-manrope-bold backdrop-blur-sm"
-                >
-                  Back to blog
-                </Link>
-                <span className="inline-flex w-fit rounded-full bg-white/12 px-4 py-2 text-[14px] font-manrope-bold backdrop-blur-sm">
-                  {post.heroKicker}
-                </span>
-                <h1 className="mt-5 max-w-4xl text-[34px] font-manrope-bold leading-tight md:text-[52px] lg:text-[60px]">
-                  {post.title}
-                </h1>
-                <p className="mt-5 max-w-3xl text-[17px] leading-relaxed text-gray-100 md:text-[20px]">
-                  {post.description}
-                </p>
-                <div className="mt-6 flex flex-wrap items-center gap-4 text-[14px] text-gray-200 md:text-[15px]">
-                  <span>{post.readTime}</span>
-                  <span>{formatBlogDate(post.publishedAt)}</span>
-                  <span>{post.category}</span>
+        <PostHero post={post} />
+
+        <AntiSection tone="white">
+          <div className="grid gap-10 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[300px_minmax(0,760px)] xl:justify-between">
+            {/* The contents card stays in view while reading; the request card closes the column at the end. */}
+            <aside className="flex flex-col gap-6">
+              <div className="lg:flex-1">
+                <div className={`rounded-[10px] bg-white p-6 ${cardShadow} lg:sticky lg:top-[calc(var(--header-h)+1.5rem)]`}>
+                  <h2 className="text-[17px] font-semibold text-[#101828]">
+                    Table of contents
+                  </h2>
+                  <nav aria-label="Table of contents" className="mt-3">
+                    <ul className="divide-y divide-[#eaecf0]">
+                      {post.sections.map((section) => (
+                        <li key={section.id}>
+                          <a
+                            href={`#${section.id}`}
+                            className="block py-2.5 text-[14.5px] leading-snug text-[#475467] transition-colors duration-200 hover:text-[#a97c25]"
+                          >
+                            {section.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        <section className="container pt-0">
-          <div className="grid gap-8 xl:grid-cols-[0.7fr_1.3fr]">
-            <aside className="h-fit rounded-[28px] border border-[#E5E5E5] bg-white p-6 shadow-sm xl:sticky xl:top-28">
-              <h2 className="text-[18px] font-manrope-bold text-[#111111]">
-                Table of contents
-              </h2>
-              <nav className="mt-5 space-y-3">
-                {post.sections.map((section) => (
-                  <a
-                    key={section.id}
-                    href={`#${section.id}`}
-                    className="block text-[15px] leading-relaxed text-gray-600 transition-colors duration-300 hover:text-[#111111]"
-                  >
-                    {section.title}
-                  </a>
-                ))}
-              </nav>
-
-              <div className="mt-8 rounded-[24px] bg-[#404040] p-5 text-white">
-                <p className="text-[18px] font-manrope-bold">{post.ctaTitle}</p>
-                <p className="mt-3 text-[15px] leading-relaxed text-gray-200">
+              <div data-nav-tone="dark" className="rounded-[12px] bg-[#0d1922] p-6 text-white">
+                <p className="text-[18px] font-semibold leading-snug tracking-[-0.01em]">{post.ctaTitle}</p>
+                <p className="mt-3 text-[14px] leading-relaxed text-white/70">
                   {post.ctaDescription}
                 </p>
                 <Link
                   href={post.ctaHref}
-                  className="mt-5 inline-flex rounded-2xl bg-white px-5 py-3 text-[14px] font-manrope-bold text-[#111111]"
+                  className="group mt-5 flex items-center justify-between gap-3 border-t border-white/10 pt-4 text-[15px] font-semibold text-white transition-colors hover:text-[#e2b04a]"
                 >
                   {post.ctaLabel}
+                  <GoldArrow dark />
                 </Link>
               </div>
             </aside>
 
-            <div className="space-y-10">
-              <div className="rounded-[28px] border border-[#E5E5E5] bg-white p-7 shadow-sm md:p-10">
-                <p className="text-[18px] leading-relaxed text-gray-700 md:text-[20px]">
-                  {post.intro}
-                </p>
-              </div>
+            <div className="min-w-0">
+              <p className="text-[18px] leading-[1.7] text-[#344054] md:text-[20px]">
+                {post.intro}
+              </p>
 
               {post.sections.map((section) => (
                 <section
                   key={section.id}
                   id={section.id}
-                  className="scroll-mt-32 rounded-[28px] border border-[#E5E5E5] bg-white p-7 shadow-sm md:p-10"
+                  className={`mt-12 border-t border-[#eaecf0] pt-10 md:mt-14 md:pt-12 ${anchorOffset}`}
                 >
-                  <h2 className="text-[28px] font-manrope-bold leading-tight text-[#111111]">
+                  <h2 className="text-[26px] font-bold leading-[1.18] tracking-[-0.02em] text-[#101828] md:text-[30px]">
                     {section.title}
                   </h2>
-                  <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-gray-700 md:text-[18px]">
+                  <div className="mt-5 space-y-5 text-[17px] leading-[1.75] text-[#475467]">
                     {section.paragraphs.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
                   {section.bullets ? (
-                    <ul className="mt-6 space-y-3 rounded-[24px] bg-[#F6F6F6] p-6 text-[15px] text-gray-700">
+                    <ul className="mt-7 space-y-3 rounded-[10px] bg-[#f5f6f8] p-6 text-[16px] leading-relaxed text-[#344054] md:p-7">
                       {section.bullets.map((bullet) => (
                         <li key={bullet} className="flex gap-3">
-                          <span className="mt-[7px] h-2 w-2 rounded-full bg-[#404040]" />
+                          <span aria-hidden="true" className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#e2b04a]" />
                           <span>{bullet}</span>
                         </li>
                       ))}
@@ -233,81 +346,37 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   ) : null}
                 </section>
               ))}
-
-              <section className="rounded-[28px] border border-[#E5E5E5] bg-white p-7 shadow-sm md:p-10">
-                <h2 className="text-[28px] font-manrope-bold text-[#111111]">
-                  Frequently asked questions
-                </h2>
-                <div className="mt-6 space-y-4">
-                  {post.faq.map((item) => (
-                    <div
-                      key={item.question}
-                      className="rounded-[22px] border border-[#EAEAEA] bg-[#FAFAFA] p-5"
-                    >
-                      <h3 className="text-[18px] font-manrope-bold text-[#111111]">
-                        {item.question}
-                      </h3>
-                      <p className="mt-3 text-[15px] leading-relaxed text-gray-700">
-                        {item.answer}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </section>
             </div>
           </div>
-        </section>
+        </AntiSection>
 
-        <section className="container pt-0">
-          <div className="rounded-[32px] border border-[#E5E5E5] bg-[#404040] p-8 text-white shadow-sm md:p-10">
-            <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-2xl">
-                <span className="text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-gray-300">
-                  Tailored quote
-                </span>
-                <h2 className="mt-3 text-[30px] font-manrope-bold leading-tight">
-                  Ready to book your private driver on the French Riviera?
-                </h2>
-                <p className="mt-4 text-[16px] leading-relaxed text-gray-200">
-                  Tell us your route, dates and preferred service and we will
-                  recommend the right vehicle and booking format for your stay.
-                </p>
-              </div>
-              <Link
-                href="/contact-me"
-                className="inline-flex w-fit rounded-2xl bg-white px-6 py-3 text-[15px] font-manrope-bold text-[#111111]"
-              >
-                Request your ride
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="container pt-0">
-          <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <AntiSection tone="grey" labelledBy="post-faq-title">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)] lg:gap-16">
             <div>
-              <span className="text-[14px] font-manrope-bold uppercase tracking-[0.14em] text-gray-500">
-                Related reading
-              </span>
-              <h2 className="mt-2 text-[34px] font-manrope-bold text-[#111111]">
-                Continue planning your Riviera journey
-              </h2>
+              <AntiHeading id="post-faq-title" title="Frequently asked questions" />
             </div>
-            <Link
-              href="/blog"
-              className="text-[15px] font-manrope-bold text-[#111111] underline underline-offset-4"
-            >
-              View all articles
-            </Link>
+            <FaqCards items={post.faq} />
           </div>
+        </AntiSection>
 
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <CtaCard />
+
+        <AntiSection tone="grey" labelledBy="post-related-title">
+          <AntiHeading
+            id="post-related-title"
+            title="Continue planning your Riviera journey"
+            action={<AntiTextLink href="/blog">View all articles</AntiTextLink>}
+          />
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {relatedPosts.map((relatedPost) => (
               <BlogCard key={relatedPost.slug} post={relatedPost} />
             ))}
           </div>
-        </section>
+        </AntiSection>
       </article>
-    </div>
+
+      <Footer withCta={false} />
+    </>
   );
 }

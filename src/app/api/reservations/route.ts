@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { saveReservation } from "@/lib/reservations/store";
+import { signTrip } from "@/lib/reservations/trip";
 import type { PlaceDetails, PlaceKind } from "@/lib/places/types";
 import { clientIp, rateLimit } from "@/lib/rate-limit";
 
@@ -36,6 +36,9 @@ export async function POST(req: NextRequest) {
   const to = mode === "transfer" ? place(body.to) : null;
   const date = typeof body.date === "string" && DATE_RE.test(body.date) ? body.date : "";
   const time = typeof body.time === "string" && TIME_RE.test(body.time) ? body.time : "";
+  const trip = mode === "transfer" && body.trip === "return" ? "return" : "oneway";
+  const returnDate = trip === "return" && typeof body.returnDate === "string" && DATE_RE.test(body.returnDate) ? body.returnDate : null;
+  const returnTime = trip === "return" && typeof body.returnTime === "string" && TIME_RE.test(body.returnTime) ? body.returnTime : null;
   const passengers = Math.round(Number(body.passengers));
   const hours = mode === "hourly" ? Math.round(Number(body.hours)) : null;
 
@@ -44,9 +47,11 @@ export async function POST(req: NextRequest) {
   if (mode === "transfer" && (!to || to.id === from.id)) return NextResponse.json({ error: "to" }, { status: 400 });
   if (!date || date < parisToday()) return NextResponse.json({ error: "date" }, { status: 400 });
   if (!time) return NextResponse.json({ error: "time" }, { status: 400 });
+  if (trip === "return" && (!returnDate || !returnTime || returnDate < date || (returnDate === date && returnTime <= time))) return NextResponse.json({ error: "return" }, { status: 400 });
   if (!(passengers >= 1 && passengers <= 16)) return NextResponse.json({ error: "passengers" }, { status: 400 });
   if (mode === "hourly" && !(hours !== null && hours >= 4 && hours <= 24)) return NextResponse.json({ error: "hours" }, { status: 400 });
 
-  const r = await saveReservation({ mode, from, to, date, time, passengers, hours });
-  return NextResponse.json({ id: r.id }, { status: 201, headers: { "Cache-Control": "no-store", "X-Robots-Tag": "noindex" } });
+  // The trip travels in the quote link as a signed token (no server memory needed on Vercel).
+  const token = signTrip({ mode, from, to, date, time, trip, returnDate, returnTime, passengers, hours });
+  return NextResponse.json({ token }, { status: 201, headers: { "Cache-Control": "no-store", "X-Robots-Tag": "noindex" } });
 }

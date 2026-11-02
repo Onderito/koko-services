@@ -1,358 +1,303 @@
-"use client";
+// Service pages (38 URLs: the protected hubs /our-services/transfers, /private-tours and /hourly-chauffeur, yacht
+// transfers, events and every city or route page), built from the "Anti" blocks of the approved home page
+// (koko/inspirations/IMG_8800): a dark photo hero with the header inside it, white and grey sections, a navy split card
+// with gold circles, white photo cards, the FAQ, the closing banner, then the site footer.
+// Server component; every text is in the HTML. Texts, heading levels, links and the hero photo come from
+// data/service-pages.ts unchanged. The small labels above titles ("Keep Exploring", "Questions"…) are gone at the user's
+// request (20 Oct 2026). 21 Oct 2026, at the user's request: the FAQ uses the home page's animated FAQ (Hyperiux, answers
+// kept in the HTML, questions still h3), and the closing banner is the home page's banner with a dusk photo for the
+// page family and "Discover All of Our Services".
 
 import Image from "next/image";
 import Link from "next/link";
-import { forwardRef, useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Fragment, type ReactNode } from "react";
+import { BadgeCheck, BriefcaseBusiness, CarFront, Clock3, ConciergeBell, Landmark, Luggage, MountainSnow, Plane, Star } from "lucide-react";
 
 import FooterComponent from "./footer-component";
-import type {
-  ServiceAudienceCard,
-  ServicePageConfig,
+import Footer from "../layout/footer";
+import { getBlogPost } from "../data/blog-posts";
+import {
+  chauffeurTourPages,
+  chauffeurToursPage,
+  eventPages,
+  eventsPage,
+  hourlyChauffeurPage,
+  hourlyChauffeurPages,
+  transferPages,
+  transfersPage,
+  yachtTransferPages,
+  yachtTransfersPage,
+  type ServiceCardLink,
+  type ServicePageConfig,
 } from "../data/service-pages";
-import { Reveal, RevealGroup } from "../ui/reveal";
+import { AntiCard, AntiHeading, AntiSection, AntiSplit, GoldArrow, SpecChip, type AntiTone } from "../ui/anti";
+import ArrowButton from "../ui/arrow-button";
+import FaqList from "../ui/faq-list";
+import { Accent } from "../ui/kit";
 
-gsap.registerPlugin(ScrollTrigger);
+const SHADOW = "shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]";
 
-const AudienceCard = forwardRef<
-  HTMLDivElement,
-  {
-    card: ServiceAudienceCard;
-    className?: string;
-  }
->(function AudienceCard({ card, className = "" }, ref) {
+/* ------------------------------------------------------------------ photos */
+
+const allServicePages: ServicePageConfig[] = [
+  transfersPage,
+  hourlyChauffeurPage,
+  chauffeurToursPage,
+  yachtTransfersPage,
+  eventsPage,
+  ...Object.values(transferPages),
+  ...Object.values(hourlyChauffeurPages),
+  ...Object.values(chauffeurTourPages),
+  ...Object.values(yachtTransferPages),
+  ...Object.values(eventPages),
+];
+const servicePageByPath = new Map(allServicePages.map(page => [page.path, page]));
+
+/** Photo of a linked page: a service page's own hero photo, or a blog post's cover. */
+function photoFor(href: string): string | undefined {
+  const page = servicePageByPath.get(href);
+  if (page) return page.heroImageSrc;
+  const slug = href.match(/^\/blog\/([^/?#]+)$/)?.[1];
+  return slug ? getBlogPost(slug)?.imageUrl : undefined;
+}
+
+// Where the subject (the car, the sign, the village) sits in each hero photo, so it shows on the right of the hero on
+// desktop and in the photo band on phones instead of empty sky. Literal classes so Tailwind generates them.
+const HERO_FOCUS: Record<string, string> = {
+  "/assets/images/services/across-the-french-riviera.webp": "object-[50%_70%]",
+  "/assets/images/services/riviera-days.webp": "object-[50%_70%]",
+  "/assets/images/services/driver.webp": "object-[50%_82%]",
+  "/assets/images/services/yacht-transfers.webp": "object-[35%_70%]",
+  "/assets/images/services/events.webp": "object-[35%_60%]",
+  "/assets/images/services/airport-arrivals.webp": "object-[90%_50%]",
+  "/assets/images/services/long-distance.webp": "object-[0%_60%]",
+  "/assets/images/services/monaco-airport-transfer.webp": "object-[35%_70%]",
+  "/assets/images/services/cannes-airport-transfer.webp": "object-[0%_70%]",
+  "/assets/images/services/saint-tropez-transfer.webp": "object-[10%_70%]",
+  "/assets/images/services/antibes-transfer.webp": "object-[50%_70%]",
+  "/assets/images/services/saint-jean-cap-ferrat-transfer.webp": "object-[35%_70%]",
+  "/assets/images/services/eze-transfer.webp": "object-[35%_70%]",
+  "/assets/images/services/villefranche-transfer.webp": "object-[85%_70%]",
+  "/assets/images/services/menton-transfer.webp": "object-[35%_65%]",
+  "/assets/images/services/nice-transfer.jpeg": "object-[50%_42%]",
+  "/assets/images/services/cannes-transfer.webp": "object-[60%_50%]",
+  "/assets/images/services/monaco.webp": "object-[80%_60%]",
+  "/assets/images/services/saint-tropez.webp": "object-[0%_60%]",
+  "/assets/images/services/megeve.webp": "object-[10%_55%]",
+  "/assets/images/services/courchevel.webp": "object-[60%_60%]",
+  "/assets/images/services/chamonix.webp": "object-[10%_65%]",
+  "/assets/images/services/yacht-monaco.webp": "object-[10%_70%]",
+  "/assets/images/services/yacht-cannes.webp": "object-[0%_70%]",
+  "/assets/images/services/yacht-saint-tropez.webp": "object-[0%_70%]",
+  "/assets/images/services/yacht-antibes.webp": "object-[0%_70%]",
+  "/assets/images/services/yacht-nice-airport.webp": "object-[100%_70%]",
+  "/assets/images/services/yacht-crew.webp": "object-[10%_70%]",
+  "/assets/images/services/event-monaco-grand-prix.webp": "object-[0%_75%]",
+  "/assets/images/services/event-cannes-film-festival.webp": "object-[0%_65%]",
+  "/assets/images/services/event-monaco-yacht-show.webp": "object-[0%_65%]",
+};
+
+// Photo of the navy split card (decorative), by service family. Dark photos, so the white title on it stays readable;
+// the first one not already shown on the page is used.
+const SPLIT_PHOTOS: [prefix: string, src: string][] = [
+  ["/our-services/transfers", "/assets/images/services/transfer.webp"],
+  ["/our-services/hourly-chauffeur", "/assets/images/cars/class-v/class-v-third.webp"],
+  ["/our-services/private-tours", "/assets/images/services/private-tour.webp"],
+  ["/our-services/yacht-transfers", "/assets/images/cars/class-v/class-v-third.webp"],
+  ["/our-services/events", "/assets/images/services/private-tour.webp"],
+];
+const SPLIT_FALLBACKS = ["/assets/images/cars/class-v/class-v-third.webp", "/assets/images/services/transfer.webp", "/assets/images/services/private-tour.webp"];
+
+function splitPhoto(path: string, used: Set<string>) {
+  const preferred = SPLIT_PHOTOS.find(([prefix]) => path.startsWith(prefix))?.[1];
+  return [preferred, ...SPLIT_FALLBACKS].find((src): src is string => !!src && !used.has(src)) ?? SPLIT_FALLBACKS[0]!;
+}
+
+// Line icons for the gold circles of the split card, in place of the coloured 3D icon images.
+const AUDIENCE_ICONS: Record<string, typeof Plane> = {
+  "plane.webp": Plane,
+  "hand.webp": ConciergeBell,
+  "multiple-suit-case.webp": Luggage,
+  "suit-case.webp": BriefcaseBusiness,
+  "clock.webp": Clock3,
+  "star.webp": Star,
+  "museum.webp": Landmark,
+  "van.webp": CarFront,
+  "mountain.webp": MountainSnow,
+};
+
+function audienceIcon(src: string) {
+  const Icon = AUDIENCE_ICONS[src.split("/").pop() ?? ""] ?? BadgeCheck;
+  return <Icon size={20} strokeWidth={1.8} />;
+}
+
+/* ------------------------------------------------------------------ texts */
+
+/** The H1's gold words: what follows its last "on the / in / for / with / to", else its first word. Text unchanged. */
+function heroAccent(title: string) {
+  const tail = title.match(/^.+(?:,\s+| on the | in | for | with an? | with | to the | to )(.+)$/i)?.[1];
+  if (tail && tail.split(/\s+/).length <= 3) return tail;
+  return title.split(/\s+/)[0];
+}
+
+/* ------------------------------------------------------------------ blocks */
+
+function Hero({ config, actionLabel }: { config: ServicePageConfig; actionLabel: string }) {
+  const focus = HERO_FOCUS[config.heroImageSrc] ?? "object-[30%_65%]";
   return (
-    <div
-      ref={ref}
-      className={`relative overflow-hidden rounded-[30px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFDF8_0%,#F8F1E7_58%,#F4EBDD_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] ${className}`}
-    >
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[radial-gradient(ellipse_at_top,rgba(244,228,198,0.78)_0%,rgba(244,228,198,0.24)_34%,rgba(244,228,198,0)_74%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-[22%] h-28 bg-[radial-gradient(circle,rgba(250,243,230,0.7)_0%,rgba(250,243,230,0)_78%)]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-[-76px] h-44 bg-[radial-gradient(circle_at_bottom,rgba(222,194,148,0.28)_0%,rgba(222,194,148,0.10)_45%,transparent_72%)] blur-2xl" />
-      <Image
-        src="/assets/icons/ui/light-abstract.svg"
-        alt=""
-        width={750}
-        height={146}
-        className="pointer-events-none absolute inset-x-0 bottom-0 opacity-55 mix-blend-multiply"
-      />
+    <section data-hero-tone="dark" data-nav-tone="dark" className="relative isolate overflow-hidden bg-[#0d1424] text-white">
+      {/* Phones: a photo band under the text. Desktop: the photo fills the right of the hero. Either way the photo itself
+          fades into the navy (a mask, so no seam), and a light shade keeps the header and the text readable. */}
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-[300px] [mask-image:linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.6)_30%,#000_60%)] sm:h-[340px] lg:inset-y-0 lg:left-auto lg:right-0 lg:h-auto lg:w-[58%] lg:[mask-image:linear-gradient(90deg,transparent_0%,rgba(0,0,0,0.3)_22%,rgba(0,0,0,0.8)_44%,#000_62%)] xl:w-[64%]">
+        <Image src={config.heroImageSrc} alt={config.heroImageAlt} fill priority sizes="(min-width: 1280px) 64vw, (min-width: 1024px) 58vw, 100vw" className={`object-cover ${focus}`} />
+        <div className="absolute inset-x-0 top-0 hidden h-40 bg-gradient-to-b from-[#0d1424]/70 to-transparent lg:block" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0d1424]/50 to-transparent" />
+      </div>
 
-      <div className="relative z-10 flex flex-col items-center text-center">
-        <div className="flex h-16 w-16 items-center justify-center rounded-[20px] border border-[#E8D8BF] bg-[linear-gradient(180deg,rgba(255,252,247,0.96)_0%,rgba(246,237,223,0.9)_100%)] shadow-[0_12px_28px_rgba(109,88,48,0.14)]">
-          <Image
-            src={card.icon}
-            alt={card.iconAlt}
-            width={40}
-            height={40}
-            quality={100}
-          />
+      <div className="mx-auto flex max-w-[1240px] flex-col justify-center px-4 pb-[268px] pt-[calc(var(--header-h)+3.5rem)] sm:pb-[300px] md:px-6 lg:min-h-[600px] lg:pb-20 lg:pt-[calc(var(--header-h)+4.5rem)]">
+        <h1 className="max-w-[640px] text-[38px] font-bold leading-[1.06] tracking-[-0.025em] sm:text-[48px] lg:text-[56px]" style={{ textWrap: "balance" }}>
+          <Accent text={config.heroTitle} accent={heroAccent(config.heroTitle)} tone="dark" />
+        </h1>
+        <p className="mt-5 max-w-[540px] text-[17px] leading-relaxed text-white/80 md:text-[18px]">{config.heroDescription}</p>
+        <div className="mt-9 flex flex-wrap items-center gap-4">
+          <ArrowButton text={actionLabel} href="/contact-me" size="lg" />
         </div>
-        <span className="mt-4 inline-flex rounded-full border border-[#E3D3BC] bg-[linear-gradient(180deg,rgba(255,252,247,0.92)_0%,rgba(247,238,225,0.84)_100%)] px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034] shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]">
-          Standby Service
-        </span>
-        <h3 className="heading-3 mt-4 text-[#111111]">{card.title}</h3>
-        <p className="card-text mt-4 max-w-[32ch] text-center text-[#666666]">
-          {card.text}
-        </p>
       </div>
-    </div>
-  );
-});
-
-function AudienceStack({
-  audienceCards,
-  audienceTitle,
-  audienceAccent,
-  audienceDescription,
-}: {
-  audienceCards: [
-    ServiceAudienceCard,
-    ServiceAudienceCard,
-    ServiceAudienceCard,
-  ];
-  audienceTitle: string;
-  audienceAccent: string;
-  audienceDescription: string;
-}) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const stackRef = useRef<HTMLDivElement>(null);
-  const card1Ref = useRef<HTMLDivElement>(null);
-  const card2Ref = useRef<HTMLDivElement>(null);
-  const card3Ref = useRef<HTMLDivElement>(null);
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 1280px)", () => {
-        gsap.set([card1Ref.current, card2Ref.current, card3Ref.current], {
-          transformOrigin: "50% 50%",
-          force3D: true,
-          willChange: "transform",
-        });
-
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 38%",
-            end: "bottom 8%",
-            scrub: 1.15,
-          },
-          defaults: { ease: "none" },
-        });
-
-        tl.fromTo(
-          card1Ref.current,
-          { yPercent: 0, rotate: 0 },
-          { yPercent: -430, rotate: 12 },
-          0,
-        );
-        tl.fromTo(
-          card2Ref.current,
-          { yPercent: 0, rotate: 4 },
-          { yPercent: -520, rotate: -12 },
-          0.2,
-        );
-        tl.fromTo(
-          card3Ref.current,
-          { yPercent: 0, rotate: -4 },
-          { yPercent: -380, rotate: 10 },
-          0.4,
-        );
-      });
-
-      return () => mm.revert();
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <div ref={containerRef} className="container">
-      <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
-        <h2 className="heading-2 mt-4 text-center text-[#111111]">
-          {audienceTitle}{" "}
-          <span className="text-[#B8AA92]">{audienceAccent}</span>
-        </h2>
-        <p className="body-text mt-4 text-center">{audienceDescription}</p>
-      </Reveal>
-
-      <RevealGroup className="block xl:hidden" amount={0.34}>
-        {audienceCards.map((card) => (
-          <AudienceCard
-            key={card.title}
-            card={card}
-            className="mx-auto mt-10 max-w-lg"
-          />
-        ))}
-      </RevealGroup>
-
-      <div
-        ref={stackRef}
-        className="relative mx-auto mt-24 hidden w-fit isolate xl:block"
-      >
-        {[card1Ref, card2Ref, card3Ref].map((ref, index) => {
-          const card = audienceCards[index];
-          const rotations = ["", " rotate-[4deg]", " -rotate-[4deg]"];
-          const zIndexes = [" z-8", " z-6", " z-4"];
-          const positioning = index === 0 ? "relative" : "absolute inset-0";
-
-          return (
-            <AudienceCard
-              key={card.title}
-              card={card}
-              className={`${positioning}${rotations[index]}${zIndexes[index]} flex max-w-lg will-change-transform`}
-              ref={ref}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-function LocalLinksSection({
-  title,
-  description,
-  links,
-}: {
-  title: string;
-  description: string;
-  links: NonNullable<ServicePageConfig["localLinks"]>;
-}) {
-  const isSingleLink = links.length === 1;
-
-  return (
-    <div className="container">
-      <Reveal className="mx-auto max-w-3xl text-center" amount={0.38}>
-        <p className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-[#8A6B3B]">
-          Keep Exploring
-        </p>
-        <h2 className="heading-2 mt-4 text-[#111111]">{title}</h2>
-        <p className="body-text mt-4">{description}</p>
-      </Reveal>
-
-      {isSingleLink ? (
-        <Reveal className="mx-auto mt-10 max-w-3xl xl:mt-12" amount={0.34}>
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="group flex items-center justify-between gap-5 rounded-[28px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(25,25,25,0.10)]"
-            >
-              <div>
-                <span className="inline-flex rounded-full border border-[#E2D3BE] bg-[#F8F1E7] px-3 py-1 text-[12px] font-manrope-bold uppercase tracking-[0.12em] text-[#6D5830]">
-                  Other page
-                </span>
-                <h3 className="heading-3 mt-4 text-[#111111]">{link.label}</h3>
-                <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-gray-600">
-                  {link.description}
-                </p>
-              </div>
-              <span className="shrink-0 text-[22px] text-[#8A6B3B] transition-transform duration-200 group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
-          ))}
-        </Reveal>
-      ) : (
-        <RevealGroup
-          className="mt-10 grid gap-6 md:grid-cols-2 xl:mt-12"
-          amount={0.32}
-        >
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="group relative block h-full overflow-hidden rounded-[28px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(25,25,25,0.10)]"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <span className="inline-flex rounded-full border border-[#E2D3BE] bg-[#F8F1E7] px-3 py-1 text-[12px] font-manrope-bold uppercase tracking-[0.12em] text-[#6D5830]">
-                  Open page
-                </span>
-                <span className="text-[18px] text-[#6D5830] transition-transform duration-200 group-hover:translate-x-1">
-                  →
-                </span>
-              </div>
-              <h3 className="heading-3 mt-5 text-[#111111]">{link.label}</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-                {link.description}
-              </p>
-            </Link>
-          ))}
-        </RevealGroup>
-      )}
-    </div>
-  );
-}
-
-function ItinerarySection({ config }: { config: ServicePageConfig }) {
-  if (
-    !config.itinerariesTitle ||
-    !config.itinerariesDescription ||
-    !config.itineraries?.length
-  ) {
-    return null;
-  }
-
-  return (
-    <section className="container">
-      <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
-        <p className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-[#8A6B3B]">
-          Suggested itineraries
-        </p>
-        <h2 className="heading-2 mt-4 text-[#111111]">
-          {config.itinerariesTitle}
-        </h2>
-        <p className="body-text mt-4">{config.itinerariesDescription}</p>
-      </Reveal>
-
-      <RevealGroup
-        className="mt-10 grid gap-6 lg:grid-cols-2 xl:mt-12"
-        amount={0.3}
-      >
-        {config.itineraries.map((itinerary) => (
-          <article
-            key={itinerary.title}
-            className="rounded-[30px] border border-[#E7E1D8] bg-white p-7 shadow-[0_18px_44px_rgba(25,25,25,0.07)] md:p-9"
-          >
-            <span className="inline-flex rounded-full border border-[#E2D3BE] bg-[#F8F1E7] px-3 py-1 text-[12px] font-manrope-bold uppercase tracking-[0.12em] text-[#6D5830]">
-              {itinerary.duration}
-            </span>
-            <h3 className="heading-3 mt-5 text-[#111111]">
-              {itinerary.title}
-            </h3>
-            <p className="card-text mt-4">{itinerary.description}</p>
-            <ol className="mt-6 space-y-3">
-              {itinerary.stops.map((stop, index) => (
-                <li key={stop} className="flex gap-3 text-[15px] leading-relaxed text-gray-700">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#F3E9DA] font-manrope-bold text-[#6D5830]">
-                    {index + 1}
-                  </span>
-                  <span>{stop}</span>
-                </li>
-              ))}
-            </ol>
-          </article>
-        ))}
-      </RevealGroup>
     </section>
   );
 }
 
-function PracticalSection({ config }: { config: ServicePageConfig }) {
-  if (
-    !config.practicalTitle ||
-    !config.practicalDescription ||
-    !config.practicalDetails?.length
-  ) {
-    return null;
-  }
-
+/** "Our Commitment" / "Your Arrival": one two-tone card, the dark panel in navy and the light one in grey. */
+function Panels({ panels }: { panels: ServicePageConfig["panels"] }) {
   return (
-    <section className="container">
-      <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
-        <p className="text-[12px] font-manrope-bold uppercase tracking-[0.16em] text-[#8A6B3B]">
-          {config.path.startsWith("/our-services/transfers")
-            ? "Booking details"
-            : config.path.startsWith("/our-services/hourly-chauffeur")
-              ? "Rates and conditions"
-              : "Plan your tour"}
-        </p>
-        <h2 className="heading-2 mt-4 text-[#111111]">
-          {config.practicalTitle}
-        </h2>
-        <p className="body-text mt-4">{config.practicalDescription}</p>
-      </Reveal>
-
-      <RevealGroup
-        className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4"
-        amount={0.28}
-      >
-        {config.practicalDetails.map((detail) => (
-          <article
-            key={detail.title}
-            className="rounded-[26px] border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_14px_34px_rgba(25,25,25,0.06)]"
-          >
-            <h3 className="text-[19px] font-manrope-bold text-[#111111]">
-              {detail.title}
-            </h3>
-            <p className="mt-3 text-[15px] leading-relaxed text-gray-700">
-              {detail.text}
-            </p>
+    <div className="mt-10 grid overflow-hidden rounded-[12px] md:grid-cols-2">
+      {panels.map(panel => {
+        const dark = panel.theme === "dark";
+        return (
+          <article key={panel.title} data-nav-tone={dark ? "dark" : "light"} className={`p-8 md:p-10 ${dark ? "bg-[#0d1424] text-white" : "bg-[#f5f6f8] text-[#101828]"}`}>
+            <h3 className="text-[22px] font-bold leading-tight tracking-[-0.02em] md:text-[26px]">{panel.title}</h3>
+            <p className={`mt-4 max-w-[46ch] text-[15px] leading-relaxed md:text-[16px] ${dark ? "text-white/70" : "text-[#667085]"}`}>{panel.text}</p>
           </article>
-        ))}
-      </RevealGroup>
-    </section>
+        );
+      })}
+    </div>
   );
 }
 
-export default function ServicePageTemplate({
-  config,
-}: {
-  config: ServicePageConfig;
-}) {
+/** Suggested itineraries: white cards whose stops are Anti's numbered steps (gold circles joined by a thin line). */
+function Itineraries({ itineraries }: { itineraries: NonNullable<ServicePageConfig["itineraries"]> }) {
+  return (
+    <div className="mt-10 grid gap-6 lg:grid-cols-2">
+      {itineraries.map(itinerary => (
+        <article key={itinerary.title} className={`flex flex-col rounded-[10px] bg-white p-7 md:p-9 ${SHADOW}`}>
+          <div>
+            <SpecChip>{itinerary.duration}</SpecChip>
+          </div>
+          <h3 className="mt-5 text-[22px] font-bold leading-tight tracking-[-0.02em] text-[#101828] md:text-[24px]">{itinerary.title}</h3>
+          <p className="mt-3 text-[15px] leading-relaxed text-[#667085]">{itinerary.description}</p>
+          <ol className="mt-7">
+            {itinerary.stops.map((stop, index) => (
+              <li key={stop} className="relative flex gap-4 pb-6 last:pb-0">
+                {index < itinerary.stops.length - 1 && <span aria-hidden="true" className="absolute bottom-0 left-[17px] top-9 w-px bg-[#e2b04a]/45" />}
+                <span aria-hidden="true" className="relative grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#e2b04a] text-[14px] font-bold text-[#0d1424]">
+                  {index + 1}
+                </span>
+                <span className="pt-1.5 text-[15px] leading-relaxed text-[#344054]">{stop}</span>
+              </li>
+            ))}
+          </ol>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+/** Practical details as Anti's services row: one white card, the items side by side, split by hairlines. */
+function Practical({ details }: { details: NonNullable<ServicePageConfig["practicalDetails"]> }) {
+  return (
+    <div className={`mt-10 grid gap-px overflow-hidden rounded-[10px] bg-[#eaecf0] md:grid-cols-2 xl:grid-cols-4 ${SHADOW}`}>
+      {details.map(detail => (
+        <article key={detail.title} className="bg-white p-6 md:p-7">
+          <h3 className="text-[17px] font-semibold leading-snug tracking-[-0.01em] text-[#101828]">{detail.title}</h3>
+          <p className="mt-2.5 text-[15px] leading-relaxed text-[#667085]">{detail.text}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function cardLayout(count: number) {
+  if (count <= 1) return { grid: "max-w-[420px]", aspect: "aspect-[16/10]", sizes: "(min-width: 768px) 420px, 92vw", small: false };
+  if (count === 2) return { grid: "md:grid-cols-2", aspect: "aspect-[16/9]", sizes: "(min-width: 1280px) 600px, (min-width: 768px) 46vw, 92vw", small: false };
+  if (count === 5 || count === 10)
+    return { grid: "gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5", aspect: "aspect-[4/3]", sizes: "(min-width: 1280px) 230px, (min-width: 1024px) 31vw, (min-width: 768px) 46vw, 92vw", small: true };
+  if (count === 4 || count === 7 || count === 8)
+    return { grid: "md:grid-cols-2 lg:grid-cols-4", aspect: "aspect-[4/3]", sizes: "(min-width: 1280px) 290px, (min-width: 1024px) 23vw, (min-width: 768px) 46vw, 92vw", small: true };
+  return { grid: "md:grid-cols-2 lg:grid-cols-3", aspect: "aspect-[16/11]", sizes: "(min-width: 1280px) 390px, (min-width: 1024px) 31vw, (min-width: 768px) 46vw, 92vw", small: false };
+}
+
+/** Other pages as Anti's vehicle cards: the page's photo inset, its name (the link) and description, a gold arrow. */
+function LinkCards({ links }: { links: ServiceCardLink[] }) {
+  const layout = cardLayout(links.length);
+  const title = `font-semibold leading-snug tracking-[-0.01em] text-[#101828] ${layout.small ? "text-[16px]" : "text-[18px]"}`;
+  // The name's link covers the whole card, so the card opens on any click.
+  const cover = "transition-colors after:absolute after:inset-0 after:rounded-[10px] after:content-[''] group-hover:text-[#a97c25] focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-[#e2b04a]";
+  const body = (link: ServiceCardLink) => (
+    <>
+      <h3 className={title}>
+        <Link href={link.href} className={cover}>
+          {link.label}
+        </Link>
+      </h3>
+      <p className="mt-2 text-[14px] leading-relaxed text-[#667085]">{link.description}</p>
+      <div className="mt-auto flex justify-end pt-5">
+        <GoldArrow />
+      </div>
+    </>
+  );
+
+  return (
+    <ul className={`mt-10 grid gap-6 ${layout.grid}`}>
+      {links.map(link => {
+        const photo = photoFor(link.href);
+        return (
+          <li key={link.href}>
+            {photo ? (
+              <AntiCard href={link.href} image={photo} imageAlt="" imageLinkLabel={link.label} imageAspect={layout.aspect} imageSizes={layout.sizes} className="relative">
+                {body(link)}
+              </AntiCard>
+            ) : (
+              <article className={`group relative flex h-full flex-col rounded-[10px] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_2px_4px_rgba(16,24,40,0.06),0_18px_44px_rgba(16,24,40,0.12)] ${SHADOW}`}>
+                {body(link)}
+              </article>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+/** FAQ as on the home page: the title on the left (sticky on wide screens), Hyperiux's animated FAQ on the right; the
+ *  questions stay h3 and the answers stay in the HTML. */
+function Faq({ items }: { items: NonNullable<ServicePageConfig["faq"]> }) {
+  return (
+    <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+      <div className="lg:sticky lg:top-28 lg:self-start">
+        <h2 id="service-faq-title" className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[40px]" style={{ textWrap: "balance" }}>
+          Frequently Asked <span className="text-[#d4b471]">Questions</span>
+        </h2>
+      </div>
+      <FaqList items={items.map(item => ({ question: item.question, answer: <p>{item.answer}</p> }))} />
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ page */
+
+type Block = { key: string; glued?: boolean; render: (tone: AntiTone, glued: boolean) => ReactNode };
+
+export default function ServicePageTemplate({ config }: { config: ServicePageConfig }) {
   const primaryActionLabel = config.path.startsWith("/our-services/transfers")
     ? "Book my transfer"
     : config.path.startsWith("/our-services/hourly-chauffeur")
@@ -363,182 +308,146 @@ export default function ServicePageTemplate({
           ? "Plan my event"
           : "Plan my tour";
 
-  const availableLocalLinks = config.localLinks?.filter(
-    (link) => link.href !== config.path,
-  );
+  // The closing banner's photo, by page family (dusk art direction of the banners, 21 Oct 2026).
+  const ctaPhoto = config.path.startsWith("/our-services/transfers")
+    ? "/assets/images/banners/svc-transfers.jpg"
+    : config.path.startsWith("/our-services/hourly-chauffeur")
+      ? "/assets/images/banners/svc-hourly.jpg"
+      : config.path.startsWith("/our-services/yacht-transfers")
+        ? "/assets/images/banners/svc-yacht.jpg"
+        : config.path.startsWith("/our-services/events")
+          ? "/assets/images/banners/svc-events.jpg"
+          : "/assets/images/banners/svc-tours.jpg";
+
+  const availableLocalLinks = config.localLinks?.filter(link => link.href !== config.path);
+  const showLocalLinks = !!(availableLocalLinks && availableLocalLinks.length > 0 && config.localLinksTitle && config.localLinksDescription);
+  const showGuides = !!(config.relatedGuides?.length && config.relatedGuidesTitle);
+
+  const used = new Set<string>([config.heroImageSrc]);
+  for (const link of [...(showLocalLinks ? availableLocalLinks! : []), ...(showGuides ? config.relatedGuides! : [])]) {
+    const photo = photoFor(link.href);
+    if (photo) used.add(photo);
+  }
+
+  const blocks: Block[] = [
+    {
+      key: "intro",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-intro-title">
+          <AntiHeading id="service-intro-title" title={config.introTitle} intro={config.introDescription} />
+          <Panels panels={config.panels} />
+        </AntiSection>
+      ),
+    },
+  ];
+
+  if (config.itinerariesTitle && config.itinerariesDescription && config.itineraries?.length) {
+    const itineraries = config.itineraries;
+    blocks.push({
+      key: "itineraries",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-itineraries-title">
+          <AntiHeading id="service-itineraries-title" title={config.itinerariesTitle!} intro={config.itinerariesDescription} />
+          <Itineraries itineraries={itineraries} />
+        </AntiSection>
+      ),
+    });
+  }
+
+  if (config.practicalTitle && config.practicalDescription && config.practicalDetails?.length) {
+    const details = config.practicalDetails;
+    blocks.push({
+      key: "practical",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-practical-title">
+          <AntiHeading id="service-practical-title" title={config.practicalTitle!} intro={config.practicalDescription} />
+          <Practical details={details} />
+        </AntiSection>
+      ),
+    });
+  }
+
+  // The navy split card sits right under the previous section, on the same background (as on the home page).
+  blocks.push({
+    key: "audience",
+    glued: true,
+    render: (tone, glued) => (
+      <AntiSection tone={tone} labelledBy="service-audience-title" innerClassName={glued ? "!pt-0" : ""}>
+        <AntiSplit
+          image={splitPhoto(config.path, used)}
+          imageAlt=""
+          title={`${config.audienceTitle} ${config.audienceAccent}`}
+          titleId="service-audience-title"
+          intro={config.audienceDescription}
+          items={config.audienceCards.map(card => ({ icon: audienceIcon(card.icon), title: card.title, text: card.text }))}
+        />
+      </AntiSection>
+    ),
+  });
+
+  if (showLocalLinks) {
+    blocks.push({
+      key: "links",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-links-title">
+          <AntiHeading id="service-links-title" title={config.localLinksTitle!} intro={config.localLinksDescription} />
+          <LinkCards links={availableLocalLinks!} />
+        </AntiSection>
+      ),
+    });
+  }
+
+  if (showGuides) {
+    blocks.push({
+      key: "guides",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-guides-title">
+          <AntiHeading
+            id="service-guides-title"
+            title={config.relatedGuidesTitle!}
+            intro="Use these practical guides to compare routes, timings, and ways to experience Monaco before confirming your tour."
+          />
+          <LinkCards links={config.relatedGuides!} />
+        </AntiSection>
+      ),
+    });
+  }
+
+  if (config.faq && config.faq.length > 0) {
+    const faq = config.faq;
+    blocks.push({
+      key: "faq",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-faq-title">
+          <Faq items={faq} />
+        </AntiSection>
+      ),
+    });
+  }
+
+  // White and grey alternate under the hero; a glued block keeps the tone of the block above it. The CTA card always sits
+  // on white, without top padding when the last section is white too.
+  const sections: ReactNode[] = [];
+  let tone: AntiTone = "grey";
+  for (const [index, block] of blocks.entries()) {
+    const glued = !!block.glued && index > 0;
+    if (!glued) tone = tone === "white" ? "grey" : "white";
+    sections.push(<Fragment key={block.key}>{block.render(tone, glued)}</Fragment>);
+  }
 
   return (
     <>
-      <div className="container flex min-h-[calc(100vh-var(--nav-clearance))] flex-col items-center justify-center gap-10 pt-[var(--nav-clearance)] xl:flex-row">
-        <Reveal className="xl:w-2/3" amount={0.42}>
-          <div className="space-y-5 md:space-y-6 xl:space-y-7">
-            <h1 className="heading-1 !text-[#111111] xl:text-[64px] text-pretty">{config.heroTitle}</h1>
-            <p className="body-text">{config.heroDescription}</p>
-            <div className="flex gap-4">
-              <Link href="/contact-me">
-                <span className="inline-flex items-center justify-center rounded-[18px] bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-6 py-3 font-manrope-bold text-[15px] tracking-[-0.02em] text-[#6D5830] shadow-[0_14px_30px_-8px_rgba(109,88,48,0.28),inset_0_1px_0_rgba(255,255,255,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-8px_rgba(109,88,48,0.32),inset_0_1px_0_rgba(255,255,255,0.9)]">
-                  {primaryActionLabel}
-                </span>
-              </Link>
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal className="w-full xl:w-2/3" delay={0.06} amount={0.42}>
-          <div className="relative overflow-hidden min-h-[220px] w-full aspect-[16/14] rounded-[32px]  border border-[#E7E1D8] bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1E8_100%)] p-2.5 shadow-[0_24px_60px_rgba(45,33,15,0.12)] md:p-3">
-            <div className="relative h-full w-full">
-              <Image
-                src={config.heroImageSrc}
-                alt={config.heroImageAlt}
-                fill
-                priority
-                sizes="(min-width: 1280px) 42vw, 100vw"
-                className="rounded-[24px] object-cover"
-              />
-            </div>
-          </div>
-        </Reveal>
-      </div>
-
-      <div className="container">
-        <Reveal className="mx-auto max-w-4xl text-center" amount={0.38}>
-          <h2 className="heading-2 mt-4 text-center text-[#111111]">
-            {config.introTitle}
-          </h2>
-          <p className="body-text mt-4 text-center">
-            {config.introDescription}
-          </p>
-        </Reveal>
-
-        <RevealGroup
-          className="relative flex flex-col items-center justify-center gap-10 py-10 xl:flex-row xl:py-24"
-          amount={0.3}
-        >
-          {config.panels.map((panel) => (
-            <div
-              key={panel.title}
-              className={`relative flex min-h-[280px] w-full flex-1 basis-0 flex-col items-center justify-start overflow-hidden rounded-[30px] px-6 py-10 md:min-h-[320px] md:px-8 xl:h-[410px] xl:min-h-0 ${
-                panel.theme === "dark"
-                  ? "border border-[#4A443B] bg-[#23211F] text-white shadow-[0_24px_52px_rgba(22,18,14,0.18)]"
-                  : "border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] shadow-[0_20px_48px_rgba(45,33,15,0.08)]"
-              }`}
-            >
-              {panel.theme === "light" ? (
-                <>
-                  <div className="pointer-events-none absolute left-[-10%] top-[-4%] h-36 w-40 bg-[radial-gradient(circle,rgba(244,228,198,0.34)_0%,rgba(244,228,198,0.08)_40%,transparent_74%)] blur-2xl" />
-                  <div className="pointer-events-none absolute right-[-10%] top-[-4%] h-36 w-40 bg-[radial-gradient(circle,rgba(244,228,198,0.34)_0%,rgba(244,228,198,0.08)_40%,transparent_74%)] blur-2xl" />
-                  <div className="pointer-events-none absolute left-[-8%] bottom-[18%] h-40 w-44 bg-[radial-gradient(circle,rgba(244,228,198,0.22)_0%,rgba(244,228,198,0.06)_42%,transparent_76%)] blur-3xl" />
-                  <div className="pointer-events-none absolute right-[-8%] bottom-[18%] h-40 w-44 bg-[radial-gradient(circle,rgba(244,228,198,0.22)_0%,rgba(244,228,198,0.06)_42%,transparent_76%)] blur-3xl" />
-                  <div className="pointer-events-none absolute inset-x-0 bottom-[-80px] h-44 bg-[radial-gradient(circle_at_bottom,rgba(222,194,148,0.26)_0%,rgba(222,194,148,0.08)_45%,transparent_72%)] blur-2xl" />
-                </>
-              ) : (
-                <>
-                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(232,216,184,0.10)_0%,rgba(232,216,184,0)_60%)]" />
-                  <div className="pointer-events-none absolute inset-x-0 bottom-[-40px] h-48 bg-[radial-gradient(ellipse_at_bottom,rgba(120,96,56,0.22)_0%,rgba(120,96,56,0)_70%)] blur-2xl" />
-                </>
-              )}
-              <span
-                className={`relative z-20 inline-flex rounded-full px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] ${
-                  panel.theme === "dark"
-                    ? "border border-[#6E6352] bg-white/8 text-[#E8D8B8]"
-                    : "border border-[#E3D3BC] bg-white/80 text-[#7B6034]"
-                }`}
-              >
-                {panel.theme === "dark" ? "Our Standard" : "Client Comfort"}
-              </span>
-              <h3
-                className={`relative z-20 mt-5 heading-3 text-center ${panel.theme === "dark" ? "text-white" : "text-[#111111]"}`}
-              >
-                {panel.title}
-              </h3>
-              <p
-                className={`body-text relative z-20 mt-4 max-w-[34ch] text-center ${
-                  panel.theme === "dark" ? "text-[#EEE7DE]" : "text-[#666666]"
-                }`}
-              >
-                {panel.text}
-              </p>
-              <Image
-                className={`pointer-events-none absolute inset-x-0 bottom-0 z-10 md:bottom-[-18px] xl:bottom-0 ${
-                  panel.theme === "dark"
-                    ? "opacity-20 mix-blend-screen"
-                    : "opacity-70 mix-blend-multiply"
-                }`}
-                src={
-                  panel.theme === "dark"
-                    ? "/assets/icons/ui/dark-abstract.svg"
-                    : "/assets/icons/ui/light-abstract.svg"
-                }
-                alt=""
-                width={750}
-                height={144}
-              />
-            </div>
-          ))}
-        </RevealGroup>
-      </div>
-
-      <ItinerarySection config={config} />
-
-      <PracticalSection config={config} />
-
-      <AudienceStack
-        audienceCards={config.audienceCards}
-        audienceTitle={config.audienceTitle}
-        audienceAccent={config.audienceAccent}
-        audienceDescription={config.audienceDescription}
-      />
-
-      {availableLocalLinks &&
-      availableLocalLinks.length > 0 &&
-      config.localLinksTitle &&
-      config.localLinksDescription ? (
-        <LocalLinksSection
-          title={config.localLinksTitle}
-          description={config.localLinksDescription}
-          links={availableLocalLinks}
-        />
-      ) : null}
-
-      {config.relatedGuides?.length && config.relatedGuidesTitle ? (
-        <LocalLinksSection
-          title={config.relatedGuidesTitle}
-          description="Use these practical guides to compare routes, timings, and ways to experience Monaco before confirming your tour."
-          links={config.relatedGuides}
-        />
-      ) : null}
-
-      {config.faq && config.faq.length > 0 && (<div className="container">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Questions</span>
-          <h2 className="heading-2 mt-4 text-[#111111]">
-            Frequently Asked Questions
-          </h2>
-        </Reveal>
-
-        <RevealGroup
-          className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-          amount={0.26}
-        >
-          {config.faq.map((item) => (
-            <div
-              key={item.question}
-              className="rounded-[28px] border border-[#E7E1D8] bg-white p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)]"
-            >
-              <h3 className="heading-3 text-[#111111]">{item.question}</h3>
-              <p className="card-text mt-3">{item.answer}</p>
-            </div>
-          ))}
-        </RevealGroup>
-      </div>)}
-
-
+      <Hero config={config} actionLabel={primaryActionLabel} />
+      {sections}
       <FooterComponent
         title={config.cta.title}
         description={config.cta.description}
         buttonText={primaryActionLabel}
         buttonHref={config.cta.buttonHref}
+        flushTop={tone === "white"}
+        image={ctaPhoto}
       />
+      <Footer withCta={false} />
     </>
   );
 }

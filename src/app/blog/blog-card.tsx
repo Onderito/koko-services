@@ -1,10 +1,11 @@
-"use client";
+// Blog card in the Anti style (IMG_8800 cards): white, soft shadow, the photo inset, category, date and read time,
+// title, excerpt and "Read the article" with a gold arrow. Shared by the home page and the blog pages.
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
 
 import { clusterById, formatBlogDate, type BlogPost } from "../data/blog-posts";
+import { GoldArrow } from "../ui/anti";
 
 type BlogCardProps = {
   post: BlogPost;
@@ -12,104 +13,43 @@ type BlogCardProps = {
   sizes?: string;
 };
 
-export default function BlogCard({
-  post,
-  priority = false,
-  sizes = "(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw",
-}: BlogCardProps) {
+export default function BlogCard({ post, priority = false, sizes = "(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw" }: BlogCardProps) {
   const clusterConfig = post.cluster ? clusterById[post.cluster] : undefined;
+  const chip = "rounded-full bg-[#f6ecd6] px-2.5 py-0.5 text-[12px] font-semibold text-[#7a5a17]";
 
   return (
-    <motion.article
-      initial={false}
-      whileHover="hovered"
-      transition={{
-        type: "spring",
-        stiffness: 260,
-        damping: 24,
-        mass: 0.9,
-      }}
-      className="group overflow-hidden rounded-[28px] border border-[#E5E5E5] bg-white shadow-sm"
-    >
-      <Link href={`/blog/${post.slug}`} className="block">
-        <motion.div
-          variants={{
-            hovered: { y: -4, boxShadow: "0 20px 40px rgba(64,64,64,0.12)" },
-          }}
-          className="relative aspect-[4/3] overflow-hidden"
-        >
-          <motion.div
-            variants={{
-              hovered: { scale: 1.035 },
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 240,
-              damping: 22,
-              mass: 0.8,
-            }}
-            className="h-full w-full"
-          >
-            <Image
-              src={post.imageUrl}
-              alt={post.imageAlt}
-              fill
-              priority={priority}
-              sizes={sizes}
-              className="object-cover"
-            />
-          </motion.div>
-        </motion.div>
+    <article className="group flex h-full flex-col rounded-[10px] bg-white p-2.5 shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)] transition-shadow duration-200 hover:shadow-[0_2px_4px_rgba(16,24,40,0.06),0_18px_44px_rgba(16,24,40,0.12)]">
+      <Link href={`/blog/${post.slug}`} className="relative block aspect-[16/10] overflow-hidden rounded-[8px] bg-[#eef0f3]">
+        <Image src={post.imageUrl} alt={post.imageAlt} fill priority={priority} sizes={sizes} className="object-cover" />
       </Link>
 
-      <motion.div
-        variants={{
-          hovered: { y: -4 },
-        }}
-        className="flex flex-col gap-4 p-6 md:p-7"
-      >
-        <div className="flex flex-wrap items-center gap-3 text-[13px] text-gray-500 md:text-[14px]">
+      <div className="flex flex-1 flex-col px-2.5 pb-2 pt-4">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-[#667085]">
           {clusterConfig ? (
-            <Link
-              href={`/blog/category/${clusterConfig.slug}`}
-              className="rounded-full bg-[#F4F4F4] px-3 py-1 font-manrope-bold text-[#111111] transition-colors duration-200 hover:bg-[#ECECEC]"
-            >
+            <Link href={`/blog/category/${clusterConfig.slug}`} className={`${chip} transition-colors hover:bg-[#efdcae]`}>
               {post.category}
             </Link>
           ) : (
-            <span className="rounded-full bg-[#F4F4F4] px-3 py-1 font-manrope-bold text-[#111111]">
-              {post.category}
-            </span>
+            <span className={chip}>{post.category}</span>
           )}
           <span>{post.readTime}</span>
           <span>{formatBlogDate(post.publishedAt)}</span>
         </div>
 
-        <div className="space-y-3">
-          <h3 className="text-[22px] font-manrope-bold leading-tight text-[#111111]">
-            <Link href={`/blog/${post.slug}`} className="hover:text-[#111111]">
-              {post.title}
-            </Link>
-          </h3>
-          <p className="text-[14px] leading-relaxed text-gray-600">
-            {post.excerpt}
-          </p>
-        </div>
+        <h3 className="mt-3 text-[19px] font-semibold leading-snug tracking-[-0.01em] text-[#101828]">
+          <Link href={`/blog/${post.slug}`} className="transition-colors hover:text-[#9a7a3e]">
+            {post.title}
+          </Link>
+        </h3>
+        <p className="mt-2 text-[14px] leading-relaxed text-[#667085]">{post.excerpt}</p>
 
-        <Link
-          href={`/blog/${post.slug}`}
-          className="w-fit"
-        >
-          <motion.span
-            variants={{
-              hovered: { x: 4 },
-            }}
-            className="inline-block text-[15px] font-manrope-bold text-[#111111] underline underline-offset-4"
-          >
+        <div className="mt-auto pt-5">
+          <Link href={`/blog/${post.slug}`} className="flex items-center justify-between gap-3 border-t border-[#eaecf0] pt-4 text-[15px] font-semibold text-[#101828]">
             Read the article
-          </motion.span>
-        </Link>
-      </motion.div>
-    </motion.article>
+            <GoldArrow />
+          </Link>
+        </div>
+      </div>
+    </article>
   );
 }

@@ -1,0 +1,155 @@
+/* Header inside the hero: transparent at the top of the page, then the colour of whatever is under it
+   (light text over dark sections, dark text over light ones), with a solid bar once the page scrolls.
+   Plain transitions only: colour, background, shadow, and a short fade for the menus. */
+
+.header {
+  --fg: #0f1115;
+  --fg-soft: rgba(15, 17, 21, 0.72);
+  --line: rgba(15, 17, 21, 0.18);
+  --hover: rgba(15, 17, 21, 0.06);
+  --bar: rgba(255, 255, 255, 0);
+  --bar-line: rgba(15, 17, 21, 0);
+  color: var(--fg);
+  transition: color 280ms ease;
+}
+
+/* Dark tone: set by the probe in site-header.tsx, or, before it runs, when the page declares a dark hero. */
+.header[data-tone="dark"],
+:global(body:has([data-hero-tone="dark"])) .header[data-tone="auto"] {
+  --fg: #ffffff;
+  --fg-soft: rgba(255, 255, 255, 0.8);
+  --line: rgba(255, 255, 255, 0.32);
+  --hover: rgba(255, 255, 255, 0.12);
+}
+
+.header[data-solid="true"] {
+  --bar: rgba(255, 255, 255, 0.96);
+  --bar-line: rgba(15, 17, 21, 0.08);
+}
+
+.header[data-solid="true"][data-tone="dark"] {
+  --bar: rgba(15, 17, 21, 0.94);
+  --bar-line: rgba(255, 255, 255, 0.08);
+}
+
+.bar {
+  background-color: var(--bar);
+  box-shadow: 0 1px 0 var(--bar-line);
+  transition: background-color 280ms ease, box-shadow 280ms ease;
+}
+
+.header[data-solid="true"] .bar {
+  -webkit-backdrop-filter: saturate(1.3) blur(12px);
+  backdrop-filter: saturate(1.3) blur(12px);
+}
+
+.link {
+  color: var(--fg-soft);
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.link:hover,
+.link[aria-expanded="true"] {
+  color: var(--fg);
+  background-color: var(--hover);
+}
+
+/* The section the visitor is in: full colour and a gold rule under the label. */
+.current {
+  color: var(--fg);
+  box-shadow: inset 0 -2px 0 #e8ba64;
+}
+
+.ghost {
+  color: var(--fg);
+  border: 1px solid var(--line);
+  transition: color 280ms ease, border-color 280ms ease, background-color 160ms ease;
+}
+
+.ghost:hover {
+  background-color: var(--hover);
+}
+
+/* WhatsApp's own green for its logo and label (the button itself keeps the header style): brand green over dark
+   backgrounds, a deeper green on the white bar so it stays readable. */
+.wa {
+  color: #1a9e4f;
+  transition: color 280ms ease;
+}
+
+.header[data-tone="dark"] .wa,
+:global(body:has([data-hero-tone="dark"])) .header[data-tone="auto"] .wa {
+  color: #25d366;
+}
+
+/* Menu panel: Hyperiux's Directional Menu, rebuilt in CSS with its own values (power2.out ≈ easeOutQuad).
+   The panel height follows the content in 220ms; moving to another item slides the new content in 56px from the
+   side of travel over 260ms while the old content leaves the other way; the first opening fades the content in. */
+.panelShell {
+  transition: height 220ms cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 220ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    background-color 280ms ease, color 280ms ease;
+}
+
+/* Panel colours: the opposite of the page under the header (user, 21 Oct 2026). A black panel over white sections, so
+   the menu never sits white on white in the middle of a page; the white panel over the dark heroes. */
+.panel {
+  --p-bg: #0f1115;
+  --p-fg: #ffffff;
+  --p-soft: rgba(255, 255, 255, 0.66);
+  --p-line: rgba(255, 255, 255, 0.12);
+  --p-hover: rgba(255, 255, 255, 0.07);
+  --p-gold: #d4b471;
+  --p-ring: rgba(255, 255, 255, 0.08);
+  --p-shadow: rgba(15, 17, 21, 0.35);
+  background-color: var(--p-bg);
+  color: var(--p-fg);
+  box-shadow: 0 24px 60px var(--p-shadow), 0 0 0 1px var(--p-ring);
+}
+
+.header[data-tone="dark"] .panel,
+:global(body:has([data-hero-tone="dark"])) .header[data-tone="auto"] .panel {
+  --p-bg: #ffffff;
+  --p-fg: #0f1115;
+  --p-soft: #5b6472;
+  --p-line: #e4e1d9;
+  --p-hover: #f6f5f1;
+  --p-gold: #9a7a3e;
+  --p-ring: rgba(15, 17, 21, 0.05);
+  --p-shadow: rgba(15, 17, 21, 0.18);
+}
+
+.layer {
+  position: absolute;
+  inset: 0 0 auto 0;
+}
+
+.enterFromRight { animation: dmFromRight 260ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.enterFromLeft { animation: dmFromLeft 260ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.enterFade { animation: dmFade 180ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 60ms both; }
+.exitToLeft { animation: dmToLeft 260ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.exitToRight { animation: dmToRight 260ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+@keyframes dmFromRight { from { opacity: 0; transform: translateX(56px); } to { opacity: 1; transform: none; } }
+@keyframes dmFromLeft { from { opacity: 0; transform: translateX(-56px); } to { opacity: 1; transform: none; } }
+@keyframes dmFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dmToLeft { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateX(-56px); } }
+@keyframes dmToRight { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateX(56px); } }
+
+.sheet {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.sheetOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chevron { transition: transform 160ms ease; }
+.chevronOpen { transform: rotate(180deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  .header, .bar, .link, .ghost, .panelShell, .sheet, .chevron { transition: none; }
+  .enterFromRight, .enterFromLeft, .enterFade, .exitToLeft, .exitToRight { animation: none; }
+}

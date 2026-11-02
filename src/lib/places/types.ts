@@ -20,5 +20,5 @@ export type PlaceDetails = {
   kind: PlaceKind;
 };
 
-/** Which source answered: Google Places, or the built-in demo list when no key is configured. */
-export type PlaceProviderName = "google" | "demo";
+/** Which source answered: Google Places, our own list with OpenStreetMap search (Photon), or our own list alone. */
+export type PlaceProviderName = "google" | "osm" | "demo";

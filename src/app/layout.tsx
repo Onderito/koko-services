@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import NavBar from "./layout/navBar";
+import SiteHeader from "./layout/site-header";
+import { archivo } from "./fonts";
 
 import "./globals.css";
 import ClientWrapper from "./ui/client-wrapper";
+import ScrollMotion from "./ui/scroll-motion";
 import Analytics from "./ui/analytics";
 import SeoSchema from "./ui/seo-schema";
 import {
@@ -63,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={archivo.variable} suppressHydrationWarning>
       <body className="antialiased">
         <Analytics />
         <a
@@ -72,7 +74,8 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <NavBar />
+        <SiteHeader fontClassName={archivo.className} />
+        <ScrollMotion />
         <main id="main-content">
           <ClientWrapper>{children}</ClientWrapper>
         </main>

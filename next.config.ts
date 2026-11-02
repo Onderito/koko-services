@@ -1,4 +1,6 @@
 const nextConfig = {
+  // The live preview (next dev) can write to its own folder, so production builds can run beside it.
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   async headers() {
     return [
       {

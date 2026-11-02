@@ -1,18 +1,35 @@
+// Blog topic hub in Kokolimo's Anti blocks (inspirations/IMG_8800): a navy band hero with the breadcrumb, the H1 and
+// its text; then the hub's articles as Anti cards under the topic pills (this hub's pill gold), pill pagination, the
+// "View all articles" outline pill and the footer columns. Texts, headings, links, metadata and schema unchanged.
+
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import BlogCard from "../../blog-card";
+import { BlogBandHero, CategoryPills } from "../../blog-ui";
 import Pagination from "../../pagination";
-import { Reveal } from "../../../ui/reveal";
 import {
   clusters,
   clusterBySlug,
   getPostsByCluster,
   siteUrl,
 } from "../../../data/blog-posts";
+import Footer from "../../../layout/footer";
+import { AntiOutlinePill, AntiSection } from "../../../ui/anti";
 
 const PAGE_SIZE = 12;
+
+// The one word group shown in gold in each hub's H1 (the text itself never changes).
+const titleAccent: Record<string, string> = {
+  "airport-transfers": "Airport Transfers",
+  destinations: "French Riviera",
+  "yacht-transfers": "Yacht & Marina",
+  events: "Luxury Event",
+  "luxury-hotels": "Luxury Hotel",
+  "travel-guides": "French Riviera",
+  "chauffeur-services": "Chauffeur Service",
+};
 
 type CategoryPageProps = {
   params: Promise<{ slug: string }>;
@@ -101,35 +118,31 @@ export default async function BlogCategoryPage({
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] pb-20 pt-28 md:pt-32">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
-      <section className="container">
-        <Reveal
-          className="relative overflow-hidden rounded-[36px] border border-[#E8DCCB] bg-[linear-gradient(160deg,#FBF3E5_0%,#F5E6CC_45%,#EAD6B4_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.10),inset_0_1px_0_rgba(255,255,255,0.8)] md:p-10 xl:p-14"
-          amount={0.42}
-        >
-          <div className="relative z-10 max-w-3xl space-y-5">
-            <nav className="flex items-center gap-2 text-[13px] font-manrope-bold text-[#8A6B3B] md:text-[14px]">
-              <Link href="/blog" className="hover:text-[#6D5830]">
-                Blog
-              </Link>
-              <span aria-hidden="true">/</span>
-              <span className="text-[#6D5830]">{cluster.label}</span>
-            </nav>
-            <h1 className="heading-2 max-w-4xl text-[#111111]">{cluster.title}</h1>
-            <p className="body-text max-w-2xl !text-[#5C5C5C]">
-              {cluster.description}
-            </p>
-          </div>
-        </Reveal>
-      </section>
+      <BlogBandHero
+        before={
+          <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-[14px] text-white/60">
+            <Link href="/blog" className="font-semibold text-white/80 underline-offset-4 transition-colors hover:text-white hover:underline">
+              Blog
+            </Link>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page" className="text-white">{cluster.label}</span>
+          </nav>
+        }
+        title={cluster.title}
+        accent={titleAccent[cluster.slug]}
+        intro={cluster.description}
+      />
 
-      <section className="container pt-0">
-        <div className="grid gap-6 md:gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <AntiSection tone="grey">
+        <CategoryPills active={cluster.slug} />
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {pagePosts.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
@@ -141,15 +154,14 @@ export default async function BlogCategoryPage({
           basePath={`/blog/category/${cluster.slug}`}
         />
 
-        <div className="mt-12 text-center">
-          <Link
-            href="/blog"
-            className="inline-flex rounded-2xl border border-[#E5E5E5] bg-white px-6 py-3 text-[15px] font-manrope-bold text-[#111111] transition-colors duration-200 hover:bg-[#F6F6F6]"
-          >
+        <div className="mt-12 flex justify-center">
+          <AntiOutlinePill href="/blog" dark={false}>
             View all articles
-          </Link>
+          </AntiOutlinePill>
         </div>
-      </section>
-    </div>
+      </AntiSection>
+
+      <Footer withCta={false} />
+    </>
   );
 }

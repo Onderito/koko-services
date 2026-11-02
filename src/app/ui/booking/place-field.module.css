@@ -1,0 +1,35 @@
+/* Suggestions open with the motion of Hyperiux's Directional Menu panel: the list unfolds downward (220ms, power2.out
+   ≈ easeOutQuad), then the places come in one after another (fade + 8px rise, 180ms, 60ms delay, 28ms apart). */
+
+.list {
+  animation: listOpen 220ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Opened upwards (not enough room below): it unfolds from the field upwards. */
+.listUp {
+  animation: listOpenUp 220ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.item {
+  animation: itemIn 180ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: calc(60ms + var(--i, 0) * 28ms);
+}
+
+@keyframes listOpen {
+  from { clip-path: inset(0 0 100% 0 round 6px); }
+  to { clip-path: inset(0 0 0 0 round 6px); }
+}
+
+@keyframes listOpenUp {
+  from { clip-path: inset(100% 0 0 0 round 6px); }
+  to { clip-path: inset(0 0 0 0 round 6px); }
+}
+
+@keyframes itemIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .list, .listUp, .item { animation: none; }
+}

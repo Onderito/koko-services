@@ -1,12 +1,16 @@
-import HeroSection from "./landing/hero-section";
+import HomeHero from "./landing/home-hero";
 import Services from "./landing/services";
+import Performances from "./landing/performances";
 import Cars from "./landing/cars";
-import Blogs from "./landing/blogs";
-import Pricing from "./landing/pricing";
-import Vip from "./landing/vip";
+import CtaCloser from "./landing/cta-closer";
 import Reviews from "./landing/reviews";
+import Pricing from "./landing/pricing";
+import Steps from "./landing/steps";
+import Vip from "./landing/vip";
+import Faq from "./landing/faq";
+import Blogs from "./landing/blogs";
+import Trust from "./landing/trust";
 import Footer from "./layout/footer";
-import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,38 +22,25 @@ export const metadata: Metadata = {
   },
 };
 
-const Performances = dynamic(() => import("./landing/performances"), {
-  loading: () => <p>Loading…</p>,
-});
-
+// The home page follows the Anti reference (inspirations/IMG_8800) block by block, in the order the user set on
+// 21 Oct 2026: services, performance, fleet, CTA banner, reviews, pricing, process, VIP, articles gallery, reviews
+// reminder, then the footer's CTA banner and columns. Each section is a full-width band that sets its header tone.
 export default function Home() {
   return (
     <>
-      <div className="hero-container">
-        <HeroSection />
-      </div>
-      <div className="container">
-        <Services />
-      </div>
+      <HomeHero />
+      <Services />
       <Performances />
-      <div className="container">
-        <Reviews />
-      </div>
-      <div className="container">
-        <Cars />
-      </div>
-      <div className="container">
-        <Blogs />
-      </div>
-      <div className="container">
-        <Pricing />
-      </div>
-      <div className="container">
-        <Vip />
-      </div>
-      <div className="container">
-        <Footer />
-      </div>
+      <Cars />
+      <CtaCloser />
+      <Reviews />
+      <Pricing />
+      <Steps />
+      <Vip />
+      <Faq />
+      <Blogs />
+      <Trust />
+      <Footer />
     </>
   );
 }

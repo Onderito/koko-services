@@ -1,0 +1,19 @@
+/* Kokolimo sizing of Hyperiux's Link Button (src/components/effects/link-button, kept unchanged): normal scale and a
+   fixed text size instead of its showcase scale-150 and vw sizes, and the label visible before JavaScript runs. */
+
+.lk {
+  scale: none !important;
+  font-size: var(--lk-fs, 15px) !important;
+  font-weight: 600;
+  line-height: 1.3 !important;
+}
+
+.lk :global(.btn-link-line) {
+  visibility: visible !important;
+}
+
+.lk:focus-visible {
+  outline: 2px solid #d4b471;
+  outline-offset: 4px;
+  border-radius: 2px;
+}

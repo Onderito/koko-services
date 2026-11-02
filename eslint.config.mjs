@@ -10,6 +10,8 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Hyperiux Vault effects are installed as their authors ship them (MPL 2.0, "do not rewrite"): not linted here.
+  { ignores: ["src/components/effects/**"] },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 

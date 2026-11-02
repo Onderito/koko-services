@@ -19,34 +19,45 @@
 :root {
   --background: #ffffff;
   --foreground: #ffffff;
-  --nav-clearance: 7.5rem;
+  /* Height of the fixed header (site-header.tsx: h-16, lg:h-[76px]). */
+  --header-h: 4rem;
+  /* Room left above page content on pages without a photo hero (was a fixed 7.5rem for the old floating navbar). */
+  --nav-clearance: calc(var(--header-h) + 2.75rem);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 4.75rem;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Manrope", sans-serif;
-  --font-mono: "Manrope", sans-serif;
-  --font-manrope: "Manrope", sans-serif;
+  /* Rebrand typeface: Archivo (next/font, variable --font-archivo on <html>). The old "manrope" names now point to it. */
+  --font-sans: var(--font-archivo), sans-serif;
+  --font-mono: var(--font-archivo), sans-serif;
+  --font-manrope: var(--font-archivo), sans-serif;
+  /* Rebrand corners: crisp, not bubbly. Tune the whole look here (rounded-card, rounded-control). */
+  --radius-card: 10px;
+  --radius-control: 6px;
 }
 
 /* Headings réutilisables */
 @layer components {
   .heading-1 {
-    @apply font-bold font-manrope text-[32px] leading-10 tracking-[-2px]
-           md:text-[64px] md:leading-tight
-           xl:text-[80px] xl:leading-none xl:tracking-[-0.05em];
+    @apply font-bold font-manrope text-[36px] leading-[1.06] tracking-[-0.025em]
+           md:text-[56px] xl:text-[68px];
   }
 
   .heading-2 {
-    @apply font-bold font-manrope text-[28px] tracking-[-1px]
-           md:text-[48px]
-           xl:text-[56px] xl:tracking-[-0.03em] leading-tight text-foreground;
+    @apply font-bold font-manrope text-[30px] leading-[1.1] tracking-[-0.02em]
+           md:text-[40px] xl:text-[46px] text-foreground;
   }
 
   .heading-3 {
-    @apply font-bold font-manrope text-[18px] tracking-[-0.5px]
-           md:text-[20px] xl:text-[22px] leading-snug text-foreground;
+    @apply font-bold font-manrope text-[18px] tracking-[-0.01em]
+           md:text-[20px] leading-snug text-foreground;
   }
 
   .body-text {
@@ -63,23 +74,32 @@
   .hero-container {
     @apply container mx-auto px-4 py-16 xl:py-32 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24;
   }
+  /* Rebrand: plain hover feedback only (no scaling). */
   .button-hover {
-    @apply transition-all hover:scale-105 duration-300;
+    @apply transition-colors duration-150;
   }
   .scale-animation {
-    @apply transform transition-transform
-         duration-700 ease-out
-         opacity-90 hover:opacity-100 hover:scale-105;
+    @apply transition-opacity duration-200 opacity-90 hover:opacity-100;
   }
+  /* Section labels ("VIP SERVICE", "OUR FLEET"…) are removed at the user's request (20 Oct 2026); hidden here until
+     the components drop them. The style below only matters if one is re-enabled. */
   .section-label {
-    @apply mx-auto inline-flex w-fit rounded-full border px-3.5 py-1.5 text-[12px]
-           md:text-[13px] font-bold font-manrope tracking-[0.08em] uppercase;
-    border-color: #e4d4bf;
-    background: linear-gradient(180deg, #f8f0e4 0%, #efdfc8 100%);
-    color: #6d5830;
-    box-shadow:
-      0 10px 24px rgba(135, 108, 61, 0.12),
-      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    display: none !important;
+  }
+  .section-label-legacy {
+    @apply mx-auto inline-flex w-fit items-center gap-3 text-[12px] font-semibold font-manrope uppercase tracking-[0.14em];
+    color: #9a7a3e;
+  }
+  .section-label::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    flex-shrink: 0;
+    background: #e8ba64;
+  }
+  [data-nav-tone="dark"] .section-label,
+  .card-dark .section-label {
+    color: #e8ba64;
   }
 }
 
@@ -98,12 +118,12 @@
 
 @layer utilities {
   .font-manrope-regular {
-    font-family: var(--font-manrope);
+    font-family: var(--font-archivo), sans-serif;
     font-weight: 400;
   }
 
   .font-manrope-bold {
-    font-family: var(--font-manrope);
+    font-family: var(--font-archivo), sans-serif;
     font-weight: 700;
   }
   .inner-shadow-white {
@@ -156,7 +176,114 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-archivo), sans-serif;
   color: #404040;
   overflow-x: hidden;
+}
+
+/* Scroll reveals (ui/scroll-motion.tsx): only once its script has run, so nothing waits for JavaScript. Lighter than
+   the original Motion reveal: 14px and 0.6s, no scale. */
+html.reveal-ready [data-reveal="pending"] {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+}
+
+html.reveal-ready [data-reveal] {
+  transition:
+    opacity 600ms cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms),
+    transform 600ms cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-ready [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Quote page (/reservation), 28 Oct 2026: going into and out of Details, the map moves between the left column and the
+   wide banner, morphed by the browser's view transition. The boxes glide on the sliding buttons' spring (Motion's
+   { bounce: 0.2, duration: 0.6 }, sampled as a curve); the map's snapshots keep their proportions (cover), the text
+   columns are clipped rather than scaled, and the step slides out and in like the Motion steps (Back reverses it). */
+:root {
+  --quote-spring: linear(0, 0.038, 0.13, 0.249, 0.375, 0.498, 0.609, 0.706, 0.787, 0.852, 0.903, 0.941, 0.969, 0.988, 1.001, 1.009, 1.013, 1.015, 1.015, 1.014, 1.012, 1.01, 1.008, 1.007, 1.005, 1.004, 1.003, 1.002, 1.001, 1.001, 1);
+}
+
+::view-transition-group(quote-map),
+::view-transition-group(quote-main),
+::view-transition-group(quote-aside) {
+  animation-duration: 600ms;
+  animation-timing-function: var(--quote-spring);
+}
+
+::view-transition-group(quote-map) {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+::view-transition-old(quote-map),
+::view-transition-new(quote-map) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+::view-transition-group(quote-main),
+::view-transition-group(quote-aside) {
+  overflow: hidden;
+}
+
+::view-transition-old(quote-main),
+::view-transition-new(quote-main),
+::view-transition-old(quote-aside),
+::view-transition-new(quote-aside) {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  object-position: left top;
+}
+
+::view-transition-old(quote-main) {
+  animation: quote-step-out 240ms cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+::view-transition-new(quote-main) {
+  animation: quote-step-in 600ms var(--quote-spring) 120ms both;
+}
+
+html[data-quote-dir="back"]::view-transition-old(quote-main) {
+  animation-name: quote-step-out-back;
+}
+
+html[data-quote-dir="back"]::view-transition-new(quote-main) {
+  animation-name: quote-step-in-back;
+}
+
+@keyframes quote-step-out {
+  to {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+}
+
+@keyframes quote-step-in {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+}
+
+@keyframes quote-step-out-back {
+  to {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+}
+
+@keyframes quote-step-in-back {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
 }

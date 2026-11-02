@@ -82,7 +82,7 @@ export default function Analytics() {
   // precedence to avoid duplicate GA/Ads tracking via GTM.
   const gtmId = !process.env.NEXT_PUBLIC_GA_ID && !process.env.NEXT_PUBLIC_GOOGLE_ADS_ID && consent?.analytics && consent?.advertising ? process.env.NEXT_PUBLIC_GTM_ID : undefined;
   const tagId = gaId || adsId;
-  const button = "min-h-11 rounded-xl border border-[#D8C7AD] bg-white px-4 py-3 text-sm font-semibold text-[#40331F] hover:bg-[#F7EFE3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
+  const button = "min-h-11 rounded-control border border-[#D8C7AD] bg-white px-4 py-3 text-sm font-semibold text-[#40331F] hover:bg-[#F7EFE3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
   return <>
     {(tagId || gtmId) && <Script id="consented-google-tags" strategy="afterInteractive">{`
       window.dataLayer = window.dataLayer || [];
@@ -98,12 +98,12 @@ export default function Analytics() {
       script.src = ${JSON.stringify(gtmId ? `https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(gtmId)}` : `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(tagId || "")}`)};
       document.head.appendChild(script);
     `}</Script>}
-    <button type="button" onClick={() => { setChoices(consent || denied); setOpen(true); setCustomize(true); }} className="fixed bottom-3 left-3 z-[90] min-h-11 rounded-full border border-[#D8C7AD] bg-white px-4 text-xs text-[#40331F] shadow-md">Cookie settings</button>
-    {open && <section aria-label="Cookie preferences" className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-h-[85dvh] max-w-3xl overflow-y-auto overscroll-contain rounded-2xl border border-[#D8C7AD] bg-[#FFFCF7] p-5 text-[#29231B] shadow-[0_8px_50px_rgba(0,0,0,0.25)] sm:p-6">
+    <button type="button" onClick={() => { setChoices(consent || denied); setOpen(true); setCustomize(true); }} aria-label="Cookie settings" title="Cookie settings" className="fixed bottom-3 left-3 z-[90] grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-[#0d1922] shadow-md transition-colors hover:bg-[#f6ecd6]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 3 3 0 0 1-3.5-3A3 3 0 0 1 14 5.5 3 3 0 0 1 12 3z" /><circle cx="8.5" cy="11" r=".8" fill="currentColor" /><circle cx="12" cy="15.5" r=".8" fill="currentColor" /><circle cx="15.5" cy="13" r=".8" fill="currentColor" /></svg><span className="sr-only">Cookie settings</span></button>
+    {open && <section aria-label="Cookie preferences" className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-h-[85dvh] max-w-3xl overflow-y-auto overscroll-contain rounded-card border border-[#D8C7AD] bg-[#FFFCF7] p-5 text-[#29231B] shadow-[0_8px_50px_rgba(0,0,0,0.25)] sm:p-6">
       <h2 className="text-xl font-bold">Your cookie choices</h2>
       <p className="mt-2 text-sm leading-relaxed">With your permission, MY NICE TOURS (Kokolimo) uses Google Analytics 4 to measure visits and Google Ads to measure advertising and personalise ads. Optional Google tags stay blocked until you agree. Refusing does not prevent you from browsing or requesting a quote.</p>
       <p className="mt-2 text-sm">Your choice is stored on this browser for 6 months. Change it anytime using Cookie settings. <Link className="underline" href="/legal-privacy#cookies">Privacy and cookies</Link></p>
-      {customize && <fieldset className="my-4 space-y-3 rounded-xl border border-[#D8C7AD] p-4">
+      {customize && <fieldset className="my-4 space-y-3 rounded-card border border-[#D8C7AD] p-4">
         <legend className="px-2 font-semibold">Choose by purpose</legend>
         <p className="text-sm">Essential: always active — stores your cookie choice.</p>
         <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.analytics} onChange={e => setChoices({ ...choices, analytics: e.target.checked })} className="h-5 w-5" />Statistics — Google Analytics 4</label>

@@ -1,5 +1,13 @@
-import Link from "next/link";
+// /legal-privacy in the Anti language (inspirations/IMG_8800): a navy band hero with the header inside it (h1 and
+// update date), then the legal text in one readable column on white, its contents list beside it (sticky on wide
+// screens, on top on phones), the contact line and links in a grey panel, then the site footer. Texts, links, anchors
+// and ids unchanged; no animation.
+
+import { ArrowUpRight } from "lucide-react";
 import Footer from "../layout/footer";
+import { AntiSection } from "../ui/anti";
+import ArrowButton from "../ui/arrow-button";
+import { Accent } from "../ui/kit";
 import { contactEmail, contactPhone, contactPhoneDisplay } from "../data/site-config";
 
 const sections = [
@@ -42,26 +50,54 @@ const sections = [
   ] },
 ];
 
+const references = [
+  { href: "https://www.cnil.fr/fr/plaintes", label: "Contact the CNIL" },
+  { href: "https://policies.google.com/technologies/partner-sites", label: "How Google uses data" },
+  { href: "https://vercel.com/legal/privacy-policy", label: "Vercel privacy" },
+  { href: "https://resend.com/legal/privacy-policy", label: "Resend privacy" },
+];
+
+const inlineLink = "font-medium text-[#101828] underline decoration-[#e2b04a] decoration-2 underline-offset-[5px] transition-colors hover:text-[#a97c25]";
+
 export default function LegalNotice() {
   return <>
-    <article className="mx-auto max-w-4xl px-6 pb-16 pt-32 text-[#404040]">
-      <h1 className="text-3xl font-bold md:text-5xl">Legal notice & privacy policy</h1>
-      <p className="mt-4 text-sm text-gray-600">Updated 19 September 2026</p>
-      <nav aria-label="Legal page contents" className="my-8 flex flex-wrap gap-3">
-        {sections.map(section => <a key={section.id} href={`#${section.id}`} className="rounded-lg border px-3 py-2 text-sm underline">{section.title}</a>)}
-      </nav>
-      {sections.map(section => <section key={section.id} id={section.id} className="mb-9 scroll-mt-28">
-        <h2 className="mb-4 text-2xl font-semibold">{section.title}</h2>
-        {section.paragraphs.map(p => <p key={p} className="mt-3 leading-relaxed">{p}</p>)}
-      </section>)}
-      <p className="leading-relaxed">Contact: <a className="underline" href={`mailto:${contactEmail}`}>{contactEmail}</a> · <a className="underline" href={`tel:${contactPhone}`}>{contactPhoneDisplay}</a>.</p>
-      <div className="mt-6 flex flex-wrap gap-4 text-sm underline">
-        <a href="https://www.cnil.fr/fr/plaintes">Contact the CNIL</a>
-        <a href="https://policies.google.com/technologies/partner-sites">How Google uses data</a>
-        <a href="https://vercel.com/legal/privacy-policy">Vercel privacy</a>
-        <a href="https://resend.com/legal/privacy-policy">Resend privacy</a>
-        <Link href="/contact-me">Request a quote</Link>
-      </div>
+    <article>
+      <header data-hero-tone="dark" data-nav-tone="dark" className="bg-[#0d1922] text-white">
+        <div className="mx-auto max-w-[1240px] px-4 pb-14 pt-[calc(var(--header-h)+3.5rem)] md:px-6 md:pb-16 lg:pb-20 lg:pt-[calc(var(--header-h)+4.5rem)]">
+          <h1 className="max-w-[780px] text-[40px] font-bold leading-[1.04] tracking-[-0.025em] sm:text-[54px] lg:text-[64px]" style={{ textWrap: "balance" }}>
+            <Accent text="Legal notice & privacy policy" accent="privacy policy" tone="dark" />
+          </h1>
+          <p className="mt-5 text-[17px] text-white/70 md:text-[18px]">Updated 19 September 2026</p>
+        </div>
+      </header>
+
+      <AntiSection tone="white" innerClassName="grid gap-10 lg:grid-cols-[264px_minmax(0,760px)] lg:gap-16 xl:gap-24">
+        <nav aria-label="Legal page contents" className="lg:sticky lg:top-[calc(var(--header-h)+1.5rem)] lg:self-start">
+          <ul className="rounded-[10px] bg-[#f5f6f8] p-2">
+            {sections.map(section => <li key={section.id}>
+              <a href={`#${section.id}`} className="block rounded-[8px] px-3.5 py-2.5 text-[14px] font-medium leading-snug text-[#475467] transition-colors duration-150 hover:bg-white hover:text-[#101828]">{section.title}</a>
+            </li>)}
+          </ul>
+        </nav>
+
+        <div className="min-w-0 text-[17px] leading-[1.75] text-[#344054]">
+          {sections.map((section, i) => <section key={section.id} id={section.id} className={`scroll-mt-28 ${i > 0 ? "mt-12 border-t border-[#eaecf0] pt-12" : ""}`}>
+            <h2 className="text-[24px] font-bold leading-tight tracking-[-0.015em] text-[#101828] md:text-[28px]">{section.title}</h2>
+            {section.paragraphs.map(p => <p key={p} className="mt-5">{p}</p>)}
+          </section>)}
+
+          <div className="mt-14 rounded-[10px] bg-[#f5f6f8] p-6 md:p-8">
+            <p>Contact: <a className={inlineLink} href={`mailto:${contactEmail}`}>{contactEmail}</a> · <a className={`${inlineLink} whitespace-nowrap`} href={`tel:${contactPhone}`}>{contactPhoneDisplay}</a>.</p>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              {references.map(link => <a key={link.href} href={link.href} className="inline-flex h-11 items-center gap-2 rounded-full border border-[#101828]/15 bg-white px-5 text-[14px] font-semibold text-[#101828] transition-colors duration-200 hover:border-[#101828]/40">
+                {link.label}
+                <ArrowUpRight size={15} strokeWidth={2} aria-hidden="true" className="text-[#a97c25]" />
+              </a>)}
+              <ArrowButton text="Request a quote" href="/contact-me" />
+            </div>
+          </div>
+        </div>
+      </AntiSection>
     </article>
     <Footer />
   </>;

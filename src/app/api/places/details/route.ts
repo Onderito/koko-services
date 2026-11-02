@@ -3,7 +3,7 @@ import { details } from "@/lib/places/provider";
 import { clientIp, rateLimit } from "@/lib/rate-limit";
 
 const SESSION_RE = /^[A-Za-z0-9_-]{8,64}$/;
-const ID_RE = /^[A-Za-z0-9_-]{3,300}$/;
+const ID_RE = /^[A-Za-z0-9_-]{3,600}$/; // OpenStreetMap ids carry their place ("ph-…")
 const LANGS = new Set(["en", "fr", "it", "ru", "tr", "de", "es"]);
 
 export async function GET(req: NextRequest) {

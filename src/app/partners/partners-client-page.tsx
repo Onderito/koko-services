@@ -1,11 +1,35 @@
-"use client";
+// /partners in the Anti language (inspirations/IMG_8800), the same blocks as the approved home page:
+// a navy band hero with the header inside it (h1, line and text, gold and outline pills, Anti's hero figures with thin
+// dividers), "Why Partner With Us" as Anti's navy split card (photo and title, gold-circle list), the partner types as
+// white photo cards, the fleet as a white table card, "How It Works" as Anti's numbered process beside a photo panel,
+// partner quotes as Anti testimonials, the commission table on a navy band, FAQs as white cards that open, the
+// application form (partner-form.tsx, the only client part), Anti's dark CTA card, then the site footer.
+// Texts, heading levels, links, form fields and ids unchanged; the small labels above titles are gone (user's request);
+// the photos are the site's own, shown as decoration (empty alt). No animation: server component, no gsap, no Reveal.
 
-import gsap from "gsap";
-import Link from "next/link";
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
+import {
+  Award,
+  CalendarCheck2,
+  CarFront,
+  Check,
+  Clock3,
+  HandCoins,
+  Languages,
+  Mail,
+  MessageCircle,
+  Minus,
+  Phone,
+  Plus,
+  Tag,
+  Timer,
+  type LucideIcon,
+} from "lucide-react";
 
 import Footer from "../layout/footer";
-import PhoneInput from "../ui/phone-input";
+import { AntiHeading, AntiOutlinePill, AntiSection, AntiTestimonial, SpecChip } from "../ui/anti";
+import ArrowButton from "../ui/arrow-button";
+import { Accent } from "../ui/kit";
 import {
   businessName,
   contactEmail,
@@ -13,72 +37,90 @@ import {
   contactPhoneDisplay,
   whatsappUrl,
 } from "../data/site-config";
-import { Reveal, RevealGroup } from "../ui/reveal";
+import PartnerForm from "./partner-form";
 
-type Status = "idle" | "loading" | "success" | "error";
+const heroFigures = [
+  {
+    label: "Response time",
+    value: "15 minutes",
+    text: "Fast confirmation for new bookings and late changes.",
+  },
+  {
+    label: "Commission",
+    value: "Up to 15%",
+    text: "Structured around booking type and monthly volume.",
+  },
+  {
+    label: "Coverage",
+    value: "24/7 Riviera",
+    text: "Nice, Cannes, Monaco, Saint-Tropez, airports, marinas, and events.",
+  },
+];
 
-type PartnerFormData = {
-  fullName: string;
-  companyName: string;
-  companyType: string;
-  country: string;
-  email: string;
-  phone: string;
-  monthlyBookings: string;
-  clientSummary: string;
-};
-
-const whyPartnerItems = [
+const whyPartnerItems: { title: string; text: string; icon: LucideIcon }[] = [
   {
     title: "Dedicated Commission Program",
     text: "Earn competitive commission on every booking you send our way. Clear terms, dependable reporting, and monthly payments without admin friction.",
+    icon: HandCoins,
   },
   {
     title: "Priority Booking Access",
     text: "Partner requests are prioritized during peak dates, major congresses, and Riviera event periods when availability matters most.",
+    icon: CalendarCheck2,
   },
   {
     title: "Instant Confirmation",
     text: "Send a booking by WhatsApp or email and receive confirmation within 15 minutes, day or night, for fast-moving client requests.",
+    icon: Timer,
   },
   {
     title: "White-Label Service",
     text: "We can operate discreetly under your brand so your client experience stays seamless from first contact to final drop-off.",
+    icon: Tag,
   },
   {
     title: "Multilingual Drivers",
     text: "English, French, Turkish, and Russian speaking chauffeurs support international guests who expect clarity and discretion.",
+    icon: Languages,
   },
   {
     title: "Impeccable Fleet",
     text: "Mercedes S-Class, V-Class, and Vito vehicles are maintained and presented to a standard suited to premium hospitality and VIP travel.",
+    icon: CarFront,
   },
   {
     title: "10 Years of Riviera Experience",
     text: "From Nice Airport arrivals to Monaco yacht pickups and Cannes event logistics, the operational side is already under control.",
+    icon: Award,
   },
 ];
 
+// Photos: the site's own images, chosen for each partner type and shown as decoration.
 const partnerTypes = [
   {
     title: "Luxury Hotels & Palace Concierge",
     text: "We coordinate directly with front desk and concierge teams to deliver smooth arrivals, departures, and guest movements without extra back-and-forth.",
+    image: "/assets/images/services/luxury-hotel.webp",
   },
   {
     title: "Travel Agencies & Tour Operators",
     text: "Ground transportation can slot directly into premium packages for airport arrivals, touring days, VIP clients, and late changes.",
+    image: "/assets/images/blog/airport-meet-and-greet-explained.webp",
   },
   {
     title: "Yacht & Marina Services",
     text: "Port pickups and coastal movements are handled with the same care as hotel and airport transfers across Monaco, Antibes, and Saint-Tropez.",
+    image: "/assets/images/services/yacht-transfers.webp",
   },
   {
     title: "Event & DMC Agencies",
     text: "For Monaco Grand Prix, Cannes Film Festival, MIPIM, Cannes Lions, and private events, we can coordinate single VIP trips or larger guest flows.",
+    image: "/assets/images/services/events.webp",
   },
   {
     title: "Corporate & PA Services",
     text: "Executive assistants and travel managers rely on us for punctual, discreet transfers where timing and presentation are non-negotiable.",
+    image: "/assets/images/blog/corporate-chauffeur-service.webp",
   },
 ];
 
@@ -213,898 +255,403 @@ const faqs = [
   },
 ];
 
-const companyTypes = [
-  "Travel Agency",
-  "Hotel / Concierge",
-  "Yacht / Marina Service",
-  "Event / DMC Agency",
-  "Corporate / PA Service",
-  "Other",
-] as const;
+const idealFit = [
+  "Airport arrivals and departures",
+  "VIP FIT clients and executive transfers",
+  "Monaco and Cannes event movement",
+  "Hotel, villa, yacht, and concierge logistics",
+];
 
-const monthlyBookingRanges = ["1-5", "5-10", "10-20", "20+"] as const;
-
-const initialFormData: PartnerFormData = {
-  fullName: "",
-  companyName: "",
-  companyType: "",
-  country: "",
-  email: "",
-  phone: "",
-  monthlyBookings: "",
-  clientSummary: "",
-};
+const cardShadow = "shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]";
+const goldCircle = "grid shrink-0 place-items-center rounded-full bg-[#e2b04a] text-[#0d1424]";
 
 export default function PartnersClientPage() {
-  const [countryCode, setCountryCode] = useState("+33");
-  const [formData, setFormData] = useState<PartnerFormData>(initialFormData);
-  const [status, setStatus] = useState<Status>("idle");
-  const [submitted, setSubmitted] = useState(false);
-  const [touched, setTouched] = useState<Record<string, boolean>>({});
-  const [openModal, setOpenModal] = useState(false);
-  const backdropRef = useRef<HTMLDivElement>(null);
-  const modalRef = useRef<HTMLDivElement>(null);
-
-  const errors = useMemo(() => {
-    const e: Record<string, string> = {};
-    const isEmpty = (value: string) => value.trim().length === 0;
-    const emailOk =
-      !isEmpty(formData.email) &&
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
-    const phoneOk =
-      !isEmpty(formData.phone) &&
-      formData.phone.replace(/\s+/g, "").length >= 8;
-
-    if (isEmpty(formData.fullName)) e.fullName = "Required";
-    if (isEmpty(formData.companyName)) e.companyName = "Required";
-    if (isEmpty(formData.companyType)) e.companyType = "Required";
-    if (isEmpty(formData.country)) e.country = "Required";
-    if (!emailOk) e.email = "Invalid email";
-    if (!phoneOk) e.phone = "Invalid phone";
-    if (isEmpty(formData.monthlyBookings)) e.monthlyBookings = "Required";
-
-    return e;
-  }, [formData]);
-
-  const showError = (key: keyof PartnerFormData) =>
-    (submitted || touched[key]) && !!errors[key];
-
-  const isValid = Object.keys(errors).length === 0;
-
-  useLayoutEffect(() => {
-    if (status !== "success" || !openModal) return;
-
-    gsap.set(backdropRef.current, { autoAlpha: 0 });
-    gsap.set(modalRef.current, { autoAlpha: 0, y: 12, scale: 0.96 });
-
-    gsap
-      .timeline({ defaults: { duration: 0.25, ease: "power2.out" } })
-      .to(
-        backdropRef.current,
-        { autoAlpha: 1, duration: 0.15, ease: "linear" },
-        0,
-      )
-      .to(modalRef.current, { autoAlpha: 1, y: 0, scale: 1 }, 0.05);
-  }, [status, openModal]);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleBlur = (
-    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setTouched((prev) => ({ ...prev, [e.target.name]: true }));
-  };
-
-  const closeModal = () => {
-    gsap
-      .timeline({
-        defaults: { duration: 0.2, ease: "power1.in" },
-        onComplete: () => {
-          setOpenModal(false);
-          setStatus("idle");
-        },
-      })
-      .to(modalRef.current, { autoAlpha: 0, y: 12, scale: 0.96 }, 0)
-      .to(backdropRef.current, { autoAlpha: 0, duration: 0.15 }, 0);
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitted(true);
-
-    if (!isValid) {
-      setStatus("error");
-      return;
-    }
-
-    setStatus("loading");
-
-    try {
-      const response = await fetch("/api/partner", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, phone: `${countryCode} ${formData.phone}` }),
-      });
-
-      if (!response.ok) {
-        const data = (await response.json().catch(() => null)) as { error?: string } | null;
-        throw new Error(data?.error || "Partner application failed");
-      }
-
-      setStatus("success");
-      setOpenModal(true);
-      setCountryCode("+33");
-      setFormData(initialFormData);
-      setTouched({});
-      setSubmitted(false);
-    } catch {
-      setStatus("error");
-    }
-  };
-
-  const inputCls = (key: keyof PartnerFormData) =>
-    `mt-2 w-full rounded-[14px] border bg-white/90 p-3 text-[15px] text-[#111111] placeholder:text-[#9A8C73] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-sm transition-all duration-200 focus:outline-none focus:border-[#C9A874] focus:ring-2 focus:ring-[#E8D9C5] ${
-      showError(key) ? "border-red-400" : "border-[#E9DECF]"
-    }`;
-
   return (
     <>
-      <div className="hero-container pt-[var(--nav-clearance)]">
-        <div className="grid gap-8 xl:grid-cols-[1.15fr_0.85fr] xl:items-start">
-          <Reveal className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10 xl:p-12">
-            <span className="section-label">Partner Program</span>
-            <h1 className="heading-1 mt-5 max-w-4xl !text-[#111111] text-pretty xl:text-[68px]">
-              Partner With {businessName}
-            </h1>
-            <p className="mt-4 text-[18px] font-manrope-bold tracking-[-0.02em] text-[#6D5830] md:text-[22px]">
-              The French Riviera&apos;s premium chauffeur service for travel
-              professionals
-            </p>
-            <p className="body-text mt-5 max-w-3xl">
-              Your clients expect the best. So do you. {businessName} works with
-              selected travel agencies, concierge services, yacht providers, and
-              luxury hospitality partners to deliver a seamless five-star ground
-              transportation experience across the French Riviera.
-            </p>
-            <p className="body-text mt-4 max-w-3xl">
-              Whether your clients are landing at Nice Airport, attending the
-              Cannes Film Festival, or moving through Monaco by private
-              chauffeur, the transport side stays under control without adding
-              work to your team.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="#partner-form"
-                className="inline-flex items-center justify-center rounded-[18px] bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-6 py-3 font-manrope-bold text-[15px] text-[#111111] shadow-[0_14px_30px_-8px_rgba(109,88,48,0.28),inset_0_1px_0_rgba(255,255,255,0.8)] transition-all duration-200 hover:-translate-y-0.5"
-              >
-                Become a partner
-              </Link>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-[18px] border border-[#E3D5C2] bg-white px-6 py-3 font-manrope-bold text-[15px] text-[#6D5830] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#FAF6EF]"
-              >
-                Discuss on WhatsApp
-              </a>
+      {/* Hero: navy band (the page has no photo of its own), header inside, Anti's figures row at the bottom. */}
+      <section data-hero-tone="dark" data-nav-tone="dark" className="bg-[#0d1424] text-white">
+        <div className="mx-auto max-w-[1240px] px-4 pb-8 pt-[calc(var(--header-h)+3.5rem)] md:px-6 md:pb-10 lg:pt-[calc(var(--header-h)+4.5rem)]">
+          <div className="grid gap-y-6 lg:grid-cols-2 lg:gap-x-16">
+            <div className="lg:col-start-1 lg:row-start-1">
+              <h1 className="text-[40px] font-bold leading-[1.04] tracking-[-0.025em] sm:text-[54px] lg:text-[68px]" style={{ textWrap: "balance" }}>
+                <Accent text={`Partner With ${businessName}`} accent={businessName} tone="dark" />
+              </h1>
+              <p className="mt-5 max-w-[520px] text-[18px] font-semibold leading-snug tracking-[-0.01em] md:text-[20px]">
+                The French Riviera&apos;s premium chauffeur service for travel
+                professionals
+              </p>
             </div>
-          </Reveal>
+            <div className="space-y-4 text-[16px] leading-relaxed text-white/75 md:text-[17px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-end">
+              <p>
+                Your clients expect the best. So do you. {businessName} works with
+                selected travel agencies, concierge services, yacht providers, and
+                luxury hospitality partners to deliver a seamless five-star ground
+                transportation experience across the French Riviera.
+              </p>
+              <p>
+                Whether your clients are landing at Nice Airport, attending the
+                Cannes Film Festival, or moving through Monaco by private
+                chauffeur, the transport side stays under control without adding
+                work to your team.
+              </p>
+            </div>
+            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-3 lg:col-start-1 lg:row-start-2 lg:self-end">
+              <ArrowButton text="Become a partner" href="#partner-form" />
+              <AntiOutlinePill href={whatsappUrl} external>
+                Discuss on WhatsApp
+              </AntiOutlinePill>
+            </div>
+          </div>
 
-          <RevealGroup className="grid gap-4" stagger={0.07}>
-            {[
-              {
-                label: "Response time",
-                value: "15 minutes",
-                text: "Fast confirmation for new bookings and late changes.",
-              },
-              {
-                label: "Commission",
-                value: "Up to 15%",
-                text: "Structured around booking type and monthly volume.",
-              },
-              {
-                label: "Coverage",
-                value: "24/7 Riviera",
-                text: "Nice, Cannes, Monaco, Saint-Tropez, airports, marinas, and events.",
-              },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="rounded-[28px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-6 shadow-[0_18px_40px_rgba(45,33,15,0.08)]"
-              >
-                <span className="inline-flex rounded-full border border-[#E3D3BC] bg-[#F8F1E7] px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                  {item.label}
-                </span>
-                <h2 className="mt-4 text-[34px] font-manrope-bold tracking-[-0.05em] text-[#111111]">
-                  {item.value}
-                </h2>
-                <p className="mt-3 text-[15px] leading-relaxed text-[#666666]">
-                  {item.text}
-                </p>
+          {/* Each figure keeps its reading order (label, value, text); the value is drawn above its label, as in Anti. */}
+          <div className="mt-8 grid divide-y divide-white/10 border-t border-white/10 md:grid-cols-3 md:divide-x md:divide-y-0 lg:mt-10">
+            {heroFigures.map((item) => (
+              <div key={item.label} className="py-5 md:px-6 md:first:pl-0 lg:px-10">
+                <div className="flex flex-col-reverse">
+                  <p className="mt-2 text-[14px] font-medium text-white/60">{item.label}</p>
+                  <h2 className="text-[30px] font-bold leading-none tracking-[-0.02em] md:text-[28px] lg:text-[34px]">{item.value}</h2>
+                </div>
+                <p className="mt-3 max-w-[320px] text-[14px] leading-relaxed text-white/70">{item.text}</p>
               </div>
             ))}
-          </RevealGroup>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Why Us</span>
-          <h2 className="heading-2 mt-4 text-[#111111]">Why Partner With Us</h2>
-          <p className="body-text mt-4">
-            The offer is designed for teams who need premium transport that is
-            operationally easy to book, consistent to deliver, and strong enough
-            to protect their client experience under pressure.
-          </p>
-        </Reveal>
-
-        <RevealGroup
-          className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-          amount={0.28}
-        >
-          {whyPartnerItems.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-[28px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-6 shadow-[0_18px_40px_rgba(45,33,15,0.08)]"
-            >
-              <h3 className="heading-3 text-[#111111]">{item.title}</h3>
-              <p className="card-text mt-3">{item.text}</p>
-            </div>
-          ))}
-        </RevealGroup>
-      </div>
-
-      <div className="container">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Partner Types</span>
-          <h2 className="heading-2 mt-4 text-[#111111]">Who We Work With</h2>
-          <p className="body-text mt-4">
-            The program is built for travel-facing businesses that need reliable
-            execution, strong presentation, and a booking process that stays
-            easy even during busy periods.
-          </p>
-        </Reveal>
-
-        <RevealGroup
-          className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-          amount={0.28}
-        >
-          {partnerTypes.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-[28px] border border-[#E7E1D8] bg-white p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)]"
-            >
-              <h3 className="heading-3 text-[#111111]">{item.title}</h3>
-              <p className="card-text mt-3">{item.text}</p>
-            </div>
-          ))}
-        </RevealGroup>
-      </div>
-
-      <div className="container">
-        <div className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFDF8_0%,#F7EFE4_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10">
-          <Reveal className="max-w-3xl">
-            <span className="section-label !mx-0">Fleet</span>
-            <h2 className="heading-2 mt-4 text-[#111111]">Our Fleet</h2>
-            <p className="body-text mt-4">
-              All vehicles are maintained to showroom standard and equipped with
-              Wi-Fi, phone chargers, and chilled water as standard.
-            </p>
-          </Reveal>
-
-          <Reveal className="mt-8 overflow-x-auto" amount={0.28}>
-            <table className="hidden md:table w-full table-fixed overflow-hidden rounded-[24px] border border-[#E5D7C4] bg-white shadow-[0_14px_34px_rgba(45,33,15,0.06)]">
-              <thead className="bg-[#F8F1E7]">
-                <tr>
-                  <th className="w-1/4 px-6 py-5 text-center text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                    Vehicle
-                  </th>
-                  <th className="w-1/4 px-6 py-5 text-center text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                    Capacity
-                  </th>
-                  <th className="w-2/4 px-6 py-5 text-center text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                    Ideal For
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {fleetRows.map((row, index) => (
-                  <tr
-                    key={row.vehicle}
-                    className={
-                      index !== fleetRows.length - 1
-                        ? "border-b border-[#EFE4D4]"
-                        : ""
-                    }
-                  >
-                    <td className="px-6 py-6 text-center align-middle text-[15px] font-manrope-bold text-[#111111]">
-                      {row.vehicle}
-                    </td>
-                    <td className="px-6 py-6 text-center align-middle text-[15px] text-[#5E5A53]">
-                      {row.capacity}
-                    </td>
-                    <td className="px-6 py-6 text-center align-middle text-[15px] leading-relaxed text-[#5E5A53]">
-                      {row.idealFor}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
-            {/* Mobile cards */}
-            <div className="grid gap-4 md:hidden">
-              {fleetRows.map((row) => (
-                <div
-                  key={row.vehicle}
-                  className="overflow-hidden rounded-[24px] border border-[#E5D7C4] bg-white p-5 shadow-[0_14px_34px_rgba(45,33,15,0.06)] [-webkit-mask-image:-webkit-radial-gradient(white,black)] [transform:translateZ(0)]"
-                >
-                  <p className="text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                    Vehicle
-                  </p>
-                  <p className="mt-1 text-[16px] font-manrope-bold text-[#111111]">
-                    {row.vehicle}
-                  </p>
-                  <div className="mt-4 grid grid-cols-2 gap-4 border-t border-[#EFE4D4] pt-4">
-                    <div>
-                      <p className="text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                        Capacity
-                      </p>
-                      <p className="mt-1 text-[14px] text-[#5E5A53]">
-                        {row.capacity}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                        Ideal For
-                      </p>
-                      <p className="mt-1 text-[14px] leading-relaxed text-[#5E5A53]">
-                        {row.idealFor}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </div>
-
-      <div className="container">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Process</span>
-          <h2 className="heading-2 mt-4 text-[#111111]">How It Works</h2>
-        </Reveal>
-
-        <RevealGroup
-          className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-5"
-          amount={0.25}
-        >
-          {processSteps.map((step, index) => (
-            <div
-              key={step.title}
-              className="rounded-[28px] border border-[#E7E1D8] bg-white p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)]"
-            >
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#E3D3BC] bg-[#F8F1E7] text-[14px] font-manrope-bold text-[#7B6034]">
-                {index + 1}
-              </span>
-              <h3 className="heading-3 mt-4 text-[#111111]">{step.title}</h3>
-              <p className="card-text mt-3">{step.text}</p>
-            </div>
-          ))}
-        </RevealGroup>
-      </div>
-
-      <div className="container">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Partner Feedback</span>
-          <h2 className="heading-2 mt-4 text-[#111111]">
-            What Our Partners Say
-          </h2>
-        </Reveal>
-
-        <RevealGroup className="mt-10 grid gap-6 xl:grid-cols-3" amount={0.28}>
-          {testimonials.map((item) => (
-            <div
-              key={`${item.author}-${item.location}`}
-              className="rounded-[28px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F1E7_100%)] p-6 shadow-[0_18px_40px_rgba(45,33,15,0.08)]"
-            >
-              <p className="text-[16px] leading-relaxed text-[#494949]">
-                &ldquo;{item.quote}&rdquo;
+      {/* Why partner: Anti's navy split card ("More Than Just A Car Dealership"), its list holding the seven items. */}
+      <AntiSection tone="white" labelledBy="partners-why-title">
+        <div data-nav-tone="dark" className="grid overflow-hidden rounded-[12px] bg-[#0d1424] text-white lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative min-h-[340px] lg:min-h-[480px]">
+            <Image src="/assets/images/services/driver.webp" alt="" fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover object-[50%_55%]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,20,36,0.82)_0%,rgba(13,20,36,0.25)_55%,rgba(13,20,36,0.55)_100%)] lg:bg-[linear-gradient(90deg,rgba(13,20,36,0.55)_0%,rgba(13,20,36,0.15)_60%,rgba(13,20,36,1)_100%)]" />
+            <div className="relative max-w-[460px] p-8 md:p-10">
+              <h2 id="partners-why-title" className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[38px]" style={{ textWrap: "balance" }}>
+                Why Partner With Us
+              </h2>
+              <p className="mt-4 text-[16px] leading-relaxed text-white/80">
+                The offer is designed for teams who need premium transport that is
+                operationally easy to book, consistent to deliver, and strong enough
+                to protect their client experience under pressure.
               </p>
-              <div className="mt-6 border-t border-[#EADFCC] pt-4">
-                <p className="font-manrope-bold text-[15px] text-[#111111]">
-                  {item.author}
-                </p>
-                <p className="mt-1 text-[14px] text-[#7A7367]">
-                  {item.location}
-                </p>
-              </div>
             </div>
-          ))}
-        </RevealGroup>
-      </div>
-
-      <div className="container">
-        <div className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10">
-          <Reveal className="max-w-3xl">
-            <span className="section-label !mx-0">Commercial Terms</span>
-            <h2 className="heading-2 mt-4 text-[#111111]">
-              Partner Rates & Commission
-            </h2>
-            <p className="body-text mt-4">
-              All rates are fixed and agreed upfront. No hidden fees, no late
-              surprises, and a commercial structure that remains easy to explain
-              to your team.
-            </p>
-          </Reveal>
-
-          <Reveal className="mt-8 overflow-x-auto" amount={0.28}>
-            <table className="min-w-full overflow-hidden rounded-[24px] border border-[#E5D7C4] bg-white shadow-[0_14px_34px_rgba(45,33,15,0.06)]">
-              <thead className="bg-[#F8F1E7]">
-                <tr>
-                  <th className="px-5 py-4 text-left text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                    Booking Type
-                  </th>
-                  <th className="px-5 py-4 text-left text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                    Partner Rate
-                  </th>
-                  <th className="px-5 py-4 text-left text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                    Commission
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {commissionRows.map((row, index) => (
-                  <tr
-                    key={row.bookingType}
-                    className={
-                      index !== commissionRows.length - 1
-                        ? "border-b border-[#EFE4D4]"
-                        : ""
-                    }
-                  >
-                    <td className="px-5 py-4 text-[15px] font-manrope-bold text-[#111111]">
-                      {row.bookingType}
-                    </td>
-                    <td className="px-5 py-4 text-[15px] text-[#5E5A53]">
-                      {row.partnerRate}
-                    </td>
-                    <td className="px-5 py-4 text-[15px] text-[#5E5A53]">
-                      {row.commission}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </Reveal>
+          </div>
+          <ul className="flex flex-col justify-center gap-6 p-8 md:p-10 xl:px-12">
+            {whyPartnerItems.map(({ title, text, icon: ItemIcon }) => (
+              <li key={title} className="flex gap-4">
+                <span aria-hidden="true" className={`${goldCircle} h-11 w-11`}>
+                  <ItemIcon size={20} strokeWidth={1.8} />
+                </span>
+                <div>
+                  <h3 className="text-[17px] font-semibold leading-snug">{title}</h3>
+                  <p className="mt-1 text-[14px] leading-relaxed text-white/70">{text}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      </AntiSection>
 
-      <div className="container">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Questions</span>
-          <h2 className="heading-2 mt-4 text-[#111111]">
-            Frequently Asked Questions
-          </h2>
-        </Reveal>
-
-        <RevealGroup
-          className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-          amount={0.26}
-        >
-          {faqs.map((item) => (
-            <div
-              key={item.question}
-              className="rounded-[28px] border border-[#E7E1D8] bg-white p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)]"
-            >
-              <h3 className="heading-3 text-[#111111]">{item.question}</h3>
-              <p className="card-text mt-3">{item.answer}</p>
-            </div>
-          ))}
-        </RevealGroup>
-      </div>
-
-      <div id="partner-form" className="container scroll-mt-32">
-        <div className="grid gap-8 xl:grid-cols-[1.05fr_0.95fr] xl:items-start">
-          <Reveal className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10">
-            <span className="section-label !mx-0">Become a Partner</span>
-            <h2 className="heading-2 mt-4 text-[#111111]">
-              Join the travel professionals who trust {businessName}
-            </h2>
-            <p className="body-text mt-4">
-              Send your application and we&apos;ll come back with the commercial
-              structure, workflow, and direct booking contact.
-            </p>
-
-            {status === "error" ? (
-              <p className="mt-5 rounded-[16px] border border-red-200 bg-red-50 px-4 py-3 text-[14px] text-red-700">
-                Something went wrong while sending the application. Please try
-                again or contact us directly on WhatsApp.
-              </p>
-            ) : null}
-
-            <form className="mt-8" onSubmit={handleSubmit}>
-              <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="fullName"
-                    className="font-manrope-bold text-[15px] text-[#111111]"
-                  >
-                    Full Name *
-                  </label>
-                  <input
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={inputCls("fullName")}
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="companyName"
-                    className="font-manrope-bold text-[15px] text-[#111111]"
-                  >
-                    Company Name *
-                  </label>
-                  <input
-                    id="companyName"
-                    name="companyName"
-                    value={formData.companyName}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={inputCls("companyName")}
-                    required
-                  />
-                </div>
-              </div>
-
-              <fieldset className="mt-6">
-                <legend className="font-manrope-bold text-[15px] text-[#111111]">
-                  Company Type *
-                </legend>
-                <div className="mt-3 grid gap-3 md:grid-cols-2">
-                  {companyTypes.map((option) => {
-                    const checked = formData.companyType === option;
-
-                    return (
-                      <label
-                        key={option}
-                        className={`cursor-pointer rounded-[18px] border p-4 transition-all duration-200 ${
-                          checked
-                            ? "border-[#C9A874] bg-[#FCF7EF] shadow-[0_12px_24px_rgba(109,88,48,0.08)]"
-                            : "border-[#E9DECF] bg-white/90 hover:border-[#DCC8A9]"
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          name="companyType"
-                          value={option}
-                          checked={checked}
-                          onChange={handleChange}
-                          className="sr-only"
-                        />
-                        <span className="text-[15px] font-manrope-bold text-[#111111]">
-                          {option}
-                        </span>
-                      </label>
-                    );
-                  })}
-                </div>
-                {showError("companyType") ? (
-                  <p className="mt-2 text-[13px] text-red-600">
-                    Please select a company type.
-                  </p>
-                ) : null}
-              </fieldset>
-
-              <div className="mt-6 grid gap-5 md:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="country"
-                    className="font-manrope-bold text-[15px] text-[#111111]"
-                  >
-                    Country *
-                  </label>
-                  <input
-                    id="country"
-                    name="country"
-                    value={formData.country}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={inputCls("country")}
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="font-manrope-bold text-[15px] text-[#111111]"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={inputCls("email")}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="mt-6 grid gap-5 md:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="font-manrope-bold text-[15px] text-[#111111]"
-                  >
-                    Phone / WhatsApp *
-                  </label>
-                  <div className="mt-2">
-                    <PhoneInput
-                      countryCode={countryCode}
-                      phone={formData.phone}
-                      onCountryChange={setCountryCode}
-                      onPhoneChange={handleChange}
-                      onBlur={(e) => setTouched((prev) => ({ ...prev, phone: true }))}
-                      error={showError("phone")}
+      {/* Who we work with: white photo cards like Anti's vehicle cards (three, then two wider ones). */}
+      <AntiSection tone="white" labelledBy="partners-types-title" innerClassName="!pt-0">
+        <AntiHeading
+          id="partners-types-title"
+          title="Who We Work With"
+          intro="The program is built for travel-facing businesses that need reliable execution, strong presentation, and a booking process that stays easy even during busy periods."
+        />
+        <ul className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-6">
+          {partnerTypes.map((item, index) => {
+            const last = index === partnerTypes.length - 1;
+            const wide = index >= 3;
+            return (
+              <li key={item.title} className={wide ? (last ? "md:col-span-2 xl:col-span-3" : "xl:col-span-3") : "xl:col-span-2"}>
+                <article className={`flex h-full flex-col rounded-[10px] bg-white p-2.5 ${cardShadow}`}>
+                  <div className="relative h-[220px] overflow-hidden rounded-[8px] bg-[#eef0f3] md:h-[240px]">
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      sizes={last ? "(min-width: 1280px) 600px, 100vw" : wide ? "(min-width: 1280px) 600px, (min-width: 768px) 50vw, 100vw" : "(min-width: 1280px) 400px, (min-width: 768px) 50vw, 100vw"}
+                      className="object-cover"
                     />
                   </div>
-                  {showError("phone") && (
-                    <span className="text-xs text-red-600 mt-1">{errors.phone}</span>
-                  )}
-                </div>
-
-                <fieldset>
-                  <legend className="font-manrope-bold text-[15px] text-[#111111]">
-                    Estimated Monthly Bookings *
-                  </legend>
-                  <div className="mt-3 grid grid-cols-2 gap-3">
-                    {monthlyBookingRanges.map((option) => {
-                      const checked = formData.monthlyBookings === option;
-
-                      return (
-                        <label
-                          key={option}
-                          className={`cursor-pointer rounded-[18px] border p-4 text-center transition-all duration-200 ${
-                            checked
-                              ? "border-[#C9A874] bg-[#FCF7EF] shadow-[0_12px_24px_rgba(109,88,48,0.08)]"
-                              : "border-[#E9DECF] bg-white/90 hover:border-[#DCC8A9]"
-                          }`}
-                        >
-                          <input
-                            type="radio"
-                            name="monthlyBookings"
-                            value={option}
-                            checked={checked}
-                            onChange={handleChange}
-                            className="sr-only"
-                          />
-                          <span className="text-[15px] font-manrope-bold text-[#111111]">
-                            {option}
-                          </span>
-                        </label>
-                      );
-                    })}
+                  <div className="px-2.5 pb-3 pt-4">
+                    <h3 className="text-[19px] font-semibold tracking-[-0.01em] text-[#101828]">{item.title}</h3>
+                    <p className="mt-2 text-[14px] leading-relaxed text-[#667085]">{item.text}</p>
                   </div>
-                  {showError("monthlyBookings") ? (
-                    <p className="mt-2 text-[13px] text-red-600">
-                      Please select a monthly booking range.
-                    </p>
+                </article>
+              </li>
+            );
+          })}
+        </ul>
+      </AntiSection>
+
+      {/* Fleet: a white table card on grey (cards on phones, as before). */}
+      <AntiSection tone="grey" labelledBy="partners-fleet-title">
+        <AntiHeading
+          id="partners-fleet-title"
+          title="Our Fleet"
+          intro="All vehicles are maintained to showroom standard and equipped with Wi-Fi, phone chargers, and chilled water as standard."
+        />
+        <div className={`mt-10 hidden rounded-[10px] bg-white md:block ${cardShadow}`}>
+          <table className="w-full table-fixed text-left">
+            <thead>
+              <tr className="border-b border-[#eaecf0]">
+                <th scope="col" className="w-[27%] px-6 py-4 text-[13px] font-semibold text-[#667085] lg:px-8">
+                  Vehicle
+                </th>
+                <th scope="col" className="w-[25%] px-6 py-4 text-[13px] font-semibold text-[#667085] lg:px-8">
+                  Capacity
+                </th>
+                <th scope="col" className="px-6 py-4 text-[13px] font-semibold text-[#667085] lg:px-8">
+                  Ideal For
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#eaecf0]">
+              {fleetRows.map((row) => (
+                <tr key={row.vehicle}>
+                  <td className="px-6 py-5 text-[16px] font-semibold text-[#101828] lg:px-8">{row.vehicle}</td>
+                  <td className="px-6 py-5 lg:px-8">
+                    <SpecChip>{row.capacity}</SpecChip>
+                  </td>
+                  <td className="px-6 py-5 text-[15px] leading-relaxed text-[#667085] lg:px-8">{row.idealFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <ul className="mt-8 grid gap-4 md:hidden">
+          {fleetRows.map((row) => (
+            <li key={row.vehicle} className={`rounded-[10px] bg-white p-5 ${cardShadow}`}>
+              <p className="text-[13px] font-medium text-[#667085]">Vehicle</p>
+              <p className="mt-1 text-[17px] font-semibold text-[#101828]">{row.vehicle}</p>
+              <div className="mt-4 grid grid-cols-2 gap-4 border-t border-[#eaecf0] pt-4">
+                <div>
+                  <p className="text-[13px] font-medium text-[#667085]">Capacity</p>
+                  <p className="mt-1 text-[14px] text-[#101828]">{row.capacity}</p>
+                </div>
+                <div>
+                  <p className="text-[13px] font-medium text-[#667085]">Ideal For</p>
+                  <p className="mt-1 text-[14px] leading-relaxed text-[#667085]">{row.idealFor}</p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </AntiSection>
+
+      {/* How it works: Anti's "A Simple Process" — gold numbered circles on a thin line, a photo panel on the right. */}
+      <AntiSection tone="white" labelledBy="partners-process-title">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
+          <div>
+            <AntiHeading id="partners-process-title" title="How It Works" />
+            <ol className="mt-10">
+              {processSteps.map((step, index) => (
+                <li key={step.title} className="relative flex gap-5 pb-9 last:pb-0">
+                  {index < processSteps.length - 1 ? (
+                    <span aria-hidden="true" className="absolute bottom-0 left-[21px] top-12 w-px bg-[#e2b04a]/45" />
                   ) : null}
-                </fieldset>
-              </div>
-
-              <div className="mt-6">
-                <label
-                  htmlFor="clientSummary"
-                  className="font-manrope-bold text-[15px] text-[#111111]"
-                >
-                  Tell us about your clients
-                </label>
-                <textarea
-                  id="clientSummary"
-                  name="clientSummary"
-                  value={formData.clientSummary}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  rows={5}
-                  className={inputCls("clientSummary")}
-                  placeholder="Luxury FIT, airport arrivals, event guests, concierge requests, executive travel..."
-                />
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-gray-600">
-                MY NICE TOURS uses your professional details to assess and respond to
-                your partnership enquiry. Please do not include personal details of
-                your clients. Read our <Link href="/legal-privacy#privacy" className="underline">privacy policy</Link> for retention and your rights.
-              </p>
-
-              <div className="mt-8">
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="group inline-flex cursor-pointer items-center gap-3 rounded-[18px] bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-6 py-3 font-manrope-bold text-[15px] text-[#6D5830] shadow-[0_14px_30px_-8px_rgba(109,88,48,0.28),inset_0_1px_0_rgba(255,255,255,0.8)] transition-all duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
-                >
-                  <span>
-                    {status === "loading"
-                      ? "Sending application..."
-                      : "Send Partner Application"}
+                  <span aria-hidden="true" className={`${goldCircle} relative h-11 w-11 text-[15px] font-semibold ring-4 ring-[#e2b04a]/15`}>
+                    {index + 1}
                   </span>
-                  {status !== "loading" ? (
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#E4D4BF] bg-[linear-gradient(180deg,#F8F0E4_0%,#EFDFC8_100%)] text-[14px] text-[#6D5830] transition-transform duration-200 group-hover:translate-x-0.5">
-                      →
-                    </span>
-                  ) : null}
-                </button>
-              </div>
-            </form>
-          </Reveal>
+                  <div className="pt-2.5">
+                    <h3 className="text-[17px] font-semibold leading-snug text-[#101828]">{step.title}</h3>
+                    <p className="mt-1.5 text-[15px] leading-relaxed text-[#667085]">{step.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="relative min-h-[320px] overflow-hidden rounded-[12px] bg-[#eef0f3] lg:min-h-0 lg:[clip-path:polygon(12%_0,100%_0,100%_100%,26%_100%,0_46%)]">
+            <Image src="/assets/images/hero-img.webp" alt="" fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover object-[50%_68%]" />
+          </div>
+        </div>
+      </AntiSection>
 
-          <RevealGroup className="grid gap-6" stagger={0.08}>
-            <div className="rounded-[32px] border border-[#E8D9C4] bg-[linear-gradient(160deg,#FBF3E5_0%,#F5E6CC_100%)] p-6 shadow-[0_24px_56px_rgba(45,33,15,0.10)]">
-              <span className="section-label !mx-0">Prefer to talk first?</span>
-              <h3 className="heading-3 mt-4 text-[#111111]">
+      {/* Partner quotes: Anti's testimonial cards on light grey. */}
+      <AntiSection tone="grey" labelledBy="partners-quotes-title">
+        <AntiHeading id="partners-quotes-title" title="What Our Partners Say" />
+        <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+          {testimonials.map((item) => (
+            <li key={`${item.author}-${item.location}`}>
+              <AntiTestimonial quote={item.quote} author={item.author} context={item.location} />
+            </li>
+          ))}
+        </ul>
+      </AntiSection>
+
+      {/* Rates: a navy band like Anti's gallery, the table on a night card, commissions in gold. */}
+      <AntiSection tone="navy" labelledBy="partners-rates-title">
+        <AntiHeading
+          dark
+          id="partners-rates-title"
+          title="Partner Rates & Commission"
+          intro="All rates are fixed and agreed upfront. No hidden fees, no late surprises, and a commercial structure that remains easy to explain to your team."
+        />
+        <div className="mt-10 overflow-x-auto rounded-[12px] border border-white/10 bg-[#162034]">
+          <table className="w-full text-left">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th scope="col" className="px-4 py-4 text-[13px] font-semibold text-white/60 md:px-8">
+                  Booking Type
+                </th>
+                <th scope="col" className="px-4 py-4 text-[13px] font-semibold text-white/60 md:px-8">
+                  Partner Rate
+                </th>
+                <th scope="col" className="px-4 py-4 text-[13px] font-semibold text-white/60 md:px-8">
+                  Commission
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/10">
+              {commissionRows.map((row) => (
+                <tr key={row.bookingType}>
+                  <td className="px-4 py-5 text-[15px] font-semibold text-white md:px-8 md:text-[16px]">{row.bookingType}</td>
+                  <td className="px-4 py-5 text-[14px] text-white/70 md:px-8 md:text-[15px]">{row.partnerRate}</td>
+                  <td className="px-4 py-5 text-[15px] font-semibold text-[#e2b04a] md:px-8 md:text-[16px]">{row.commission}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </AntiSection>
+
+      {/* FAQs: white cards that open (answers stay in the HTML). */}
+      <AntiSection tone="white" labelledBy="partners-faq-title">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-16">
+          <AntiHeading id="partners-faq-title" title="Frequently Asked Questions" />
+          <div className="flex flex-col gap-3">
+            {faqs.map((item) => (
+              <details key={item.question} className={`group rounded-[10px] bg-white ${cardShadow}`}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 rounded-[10px] px-5 py-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e2b04a] md:px-6 md:py-5 [&::-webkit-details-marker]:hidden">
+                  <h3 className="text-[16px] font-semibold leading-snug text-[#101828] md:text-[17px]">{item.question}</h3>
+                  <span aria-hidden="true" className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#f6ecd6] text-[#101828] transition-colors duration-200 group-open:bg-[#e2b04a]">
+                    <Plus size={16} strokeWidth={2} className="group-open:hidden" />
+                    <Minus size={16} strokeWidth={2} className="hidden group-open:block" />
+                  </span>
+                </summary>
+                <p className="px-5 pb-5 text-[15px] leading-relaxed text-[#667085] md:px-6 md:pb-6">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </AntiSection>
+
+      {/* Application: the form in a white card, a navy contact card and the fit list beside it. */}
+      <AntiSection tone="grey" id="partner-form" labelledBy="partners-form-title" className="scroll-mt-[calc(var(--header-h)-2rem)]">
+        <AntiHeading
+          id="partners-form-title"
+          title={`Join the travel professionals who trust ${businessName}`}
+          intro="Send your application and we'll come back with the commercial structure, workflow, and direct booking contact."
+        />
+        <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-start">
+          <PartnerForm />
+
+          <div className="flex flex-col gap-6">
+            <div data-nav-tone="dark" className="rounded-[12px] bg-[#0d1424] p-6 text-white md:p-8">
+              <h3 className="text-[22px] font-bold leading-[1.2] tracking-[-0.015em]">
                 We can discuss your client profile and booking workflow first.
               </h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-[#5C4A2E]">
+              <p className="mt-3 text-[15px] leading-relaxed text-white/70">
                 WhatsApp is the fastest route if you want to qualify the
                 partnership before sending the form.
               </p>
-              <div className="mt-6 space-y-4 rounded-[24px] border border-[#E6D6BF] bg-white/70 p-5">
-                <div>
-                  <p className="text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#8A6B3B]">
-                    WhatsApp
-                  </p>
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 block text-[16px] text-[#111111] transition-colors duration-200 hover:text-[#111111]"
-                  >
-                    {contactPhoneDisplay}
-                  </a>
-                </div>
-                <div>
-                  <p className="text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#8A6B3B]">
-                    Email
-                  </p>
-                  <a
-                    href={`mailto:${contactEmail}`}
-                    className="mt-2 block text-[16px] text-[#111111] transition-colors duration-200 hover:text-[#111111]"
-                  >
-                    {contactEmail.toLowerCase()}
-                  </a>
-                </div>
-                <div>
-                  <p className="text-[12px] font-manrope-bold uppercase tracking-[0.14em] text-[#8A6B3B]">
-                    Response time
-                  </p>
-                  <p className="mt-2 text-[16px] text-[#111111]">
-                    Within 15 minutes
-                  </p>
-                </div>
+              <ul className="mt-6 space-y-4 border-t border-white/10 pt-6">
+                <li className="flex items-center gap-4">
+                  <span aria-hidden="true" className={`${goldCircle} h-10 w-10`}>
+                    <MessageCircle size={18} strokeWidth={1.8} />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-[13px] text-white/60">WhatsApp</p>
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-0.5 block text-[16px] font-semibold text-white transition-colors duration-200 hover:text-[#e2b04a]"
+                    >
+                      {contactPhoneDisplay}
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span aria-hidden="true" className={`${goldCircle} h-10 w-10`}>
+                    <Mail size={18} strokeWidth={1.8} />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-[13px] text-white/60">Email</p>
+                    <a
+                      href={`mailto:${contactEmail}`}
+                      className="mt-0.5 block break-all text-[16px] font-semibold text-white transition-colors duration-200 hover:text-[#e2b04a]"
+                    >
+                      {contactEmail.toLowerCase()}
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span aria-hidden="true" className={`${goldCircle} h-10 w-10`}>
+                    <Clock3 size={18} strokeWidth={1.8} />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-[13px] text-white/60">Response time</p>
+                    <p className="mt-0.5 text-[16px] font-semibold text-white">Within 15 minutes</p>
+                  </div>
+                </li>
+              </ul>
+              <div className="mt-7">
+                <ArrowButton text="WhatsApp Us Now" href={whatsappUrl} target="_blank" rel="noopener noreferrer" />
               </div>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center rounded-[18px] bg-[#23C063] px-5 py-3 font-manrope-bold text-[15px] text-white shadow-[0_12px_24px_rgba(35,192,99,0.24)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1DAA57]"
-              >
-                WhatsApp Us Now
-              </a>
             </div>
 
-            <div className="rounded-[32px] border border-[#E7E1D8] bg-white p-6 shadow-[0_16px_40px_rgba(25,25,25,0.06)]">
-              <span className="inline-flex rounded-full border border-[#E3D3BC] bg-[#F8F1E7] px-3 py-1 text-[11px] font-manrope-bold uppercase tracking-[0.14em] text-[#7B6034]">
-                Ideal fit
-              </span>
-              <h3 className="heading-3 mt-4 text-[#111111]">
+            <div className={`rounded-[10px] bg-white p-6 md:p-8 ${cardShadow}`}>
+              <h3 className="text-[20px] font-bold leading-snug tracking-[-0.01em] text-[#101828]">
                 Best suited for premium travel workflows
               </h3>
-              <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-[#666666]">
-                <li>Airport arrivals and departures</li>
-                <li>VIP FIT clients and executive transfers</li>
-                <li>Monaco and Cannes event movement</li>
-                <li>Hotel, villa, yacht, and concierge logistics</li>
+              <ul className="mt-5 space-y-3">
+                {idealFit.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-[#667085]">
+                    <span aria-hidden="true" className={`${goldCircle} mt-[3px] h-5 w-5`}>
+                      <Check size={12} strokeWidth={2.6} />
+                    </span>
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
-          </RevealGroup>
-        </div>
-      </div>
-
-      <div className="container pt-0">
-        <Reveal className="rounded-[36px] border border-[#E8D9C4] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF4EC_100%)] p-6 text-center shadow-[0_20px_48px_rgba(45,33,15,0.08)] md:p-10">
-          <span className="section-label">Final CTA</span>
-          <h2 className="heading-2 mt-4 text-[#111111]">
-            Prefer to talk before applying?
-          </h2>
-          <p className="body-text mx-auto mt-4 max-w-2xl">
-            We&apos;re happy to jump on a quick call or WhatsApp conversation to
-            discuss how the partnership can work for your agency, concierge
-            desk, or events team.
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-[18px] bg-[#23C063] px-6 py-3 font-manrope-bold text-[15px] text-white shadow-[0_12px_24px_rgba(35,192,99,0.24)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1DAA57]"
-            >
-              WhatsApp Us Now
-            </a>
-            <a
-              href={`tel:${contactPhone}`}
-              className="inline-flex items-center justify-center rounded-[18px] border border-[#E3D5C2] bg-white px-6 py-3 font-manrope-bold text-[15px] text-[#6D5830] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#FAF6EF]"
-            >
-              Call {contactPhoneDisplay}
-            </a>
           </div>
-        </Reveal>
-      </div>
+        </div>
+      </AntiSection>
 
-      <div className="container">
-        <Footer />
-      </div>
-
-      {openModal ? (
-        <div
-          ref={backdropRef}
-          className="fixed inset-0 z-50 grid place-items-center bg-[#1F1610]/50 p-4 backdrop-blur-sm"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="partner-modal-title"
-          onClick={closeModal}
-        >
-          <div
-            ref={modalRef}
-            className="max-w-md rounded-[28px] border border-[#E8DCCB] bg-[linear-gradient(160deg,#FBF3E5_0%,#F5E6CC_100%)] p-7 shadow-[0_30px_80px_rgba(45,33,15,0.25),inset_0_1px_0_rgba(255,255,255,0.8)]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <span className="inline-flex items-center rounded-full border border-[#E7D9BF] bg-white/90 px-3.5 py-1.5 text-[12px] font-manrope-bold uppercase tracking-[0.08em] text-[#6D5830]">
-              Application sent
-            </span>
-            <h3
-              id="partner-modal-title"
-              className="mt-4 text-[24px] font-manrope-bold tracking-[-0.02em] text-[#111111]"
-            >
-              Thank you
-            </h3>
-            <p className="mt-3 text-[15px] leading-relaxed text-[#5C4A2E]">
-              Your partner application has been sent. We&apos;ll review it and
-              come back to you shortly.
+      {/* Final call to action: Anti's dark CTA card ("Your Dream Car Is Closer Than You Think"), the photo fading in on the right. */}
+      <AntiSection tone="white" labelledBy="partners-cta-title">
+        <div data-nav-tone="dark" className="relative isolate overflow-hidden rounded-[12px] bg-[#0d1424] text-white">
+          <div className="absolute inset-0 -z-10 md:left-auto md:w-[58%]">
+            <Image src="/assets/images/cars/class-v/class-v-third.webp" alt="" fill sizes="(min-width: 768px) 720px, 100vw" className="object-cover object-[50%_62%]" />
+            <div className="absolute inset-0 bg-[#0d1424]/80 md:bg-transparent md:bg-[linear-gradient(90deg,#0d1424_0%,rgba(13,20,36,0.55)_38%,rgba(13,20,36,0.08)_100%)]" />
+          </div>
+          <div className="max-w-[620px] px-6 py-10 md:px-12 md:py-14">
+            <h2 id="partners-cta-title" className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[40px]" style={{ textWrap: "balance" }}>
+              <Accent text="Prefer to talk before applying?" accent="before applying?" tone="dark" />
+            </h2>
+            <p className="mt-4 max-w-[540px] text-[16px] leading-relaxed text-white/75">
+              We&apos;re happy to jump on a quick call or WhatsApp conversation to
+              discuss how the partnership can work for your agency, concierge
+              desk, or events team.
             </p>
-            <div className="mt-7 flex flex-wrap justify-end gap-3">
-              <Link
-                href="/"
-                className="rounded-[14px] border border-[#E4D4BF] bg-white/80 px-5 py-2.5 text-[14px] font-manrope-bold text-[#6D5830] transition-all duration-200 hover:-translate-y-0.5 hover:bg-white"
-              >
-                Back Home
-              </Link>
-              <button
-                onClick={closeModal}
-                className="rounded-[14px] bg-[linear-gradient(180deg,#F8F3EC_0%,#E8D9C5_100%)] px-5 py-2.5 text-[14px] font-manrope-bold text-[#6d5830] shadow-[0_10px_22px_-6px_rgba(109,88,48,0.28),inset_0_1px_0_rgba(255,255,255,0.8)] transition-all duration-200 hover:-translate-y-0.5"
-              >
-                Close
-              </button>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <ArrowButton text="WhatsApp Us Now" href={whatsappUrl} target="_blank" rel="noopener noreferrer" />
+              <a href={`tel:${contactPhone}`} className="group inline-flex items-center gap-3 text-[15px] font-semibold text-white transition-colors duration-200 hover:text-[#e2b04a]">
+                <span aria-hidden="true" className="grid h-11 w-11 place-items-center rounded-full border border-white/30 transition-colors duration-200 group-hover:border-[#e2b04a]">
+                  <Phone size={18} strokeWidth={1.8} />
+                </span>
+                Call {contactPhoneDisplay}
+              </a>
             </div>
           </div>
         </div>
-      ) : null}
+      </AntiSection>
+
+      <Footer />
     </>
   );
 }
