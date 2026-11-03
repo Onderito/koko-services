@@ -33,6 +33,7 @@ import {
 import { AntiCard, AntiHeading, AntiSection, AntiSplit, GoldArrow, SpecChip, type AntiTone } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import FaqList from "../ui/faq-list";
+import { cityForPage, RoutePrices } from "../ui/destination-prices";
 import { Accent } from "../ui/kit";
 
 const SHADOW = "shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]";
@@ -340,6 +341,26 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
       ),
     },
   ];
+
+  // A destination of the home's price guide (3 Nov 2026): its prices as a table, right after the introduction.
+  const priceCity = cityForPage(config.path);
+  if (priceCity) {
+    blocks.push({
+      key: "prices",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-prices-title">
+          <AntiHeading
+            id="service-prices-title"
+            title={`Nice Airport to ${priceCity.displayName}: prices`}
+            intro="Starting prices by vehicle for a private transfer, by the hour or for a full day."
+          />
+          <div className="mt-8">
+            <RoutePrices cityId={priceCity.id} path={config.path} />
+          </div>
+        </AntiSection>
+      ),
+    });
+  }
 
   if (config.itinerariesTitle && config.itinerariesDescription && config.itineraries?.length) {
     const itineraries = config.itineraries;

@@ -16,6 +16,7 @@ import { cities, vehicles } from "../data/vehicles";
 import { AntiHeading } from "../ui/anti";
 import ModelCard from "../ui/model-card";
 import RollingNumber from "../ui/rolling-number";
+import { AllDestinationPrices } from "../ui/destination-prices";
 import { useSlidingPill } from "../ui/sliding-pill";
 
 // Card photos generated in the site's art direction (Codex, user's account), one per vehicle.
@@ -109,6 +110,9 @@ export default function Pricing() {
             );
           })}
         </div>
+
+        {/* Every destination's price as text, for visitors comparing and for crawlers (the cards show one at a time). */}
+        <AllDestinationPrices />
 
         <p className="mx-auto mt-8 max-w-4xl text-center text-[13px] leading-relaxed text-[#667085] md:text-[14px]">
           Guide prices are shown for clarity. For events, late-night timing, custom itineraries, or multi-stop journeys, we prepare a tailored quote adapted to the
