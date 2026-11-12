@@ -9,7 +9,7 @@ import { Check } from "lucide-react";
 import BlogCard from "./blog-card";
 import { BlogBandHero, CategoryPills } from "./blog-ui";
 import Pagination from "./pagination";
-import { blogPosts, featuredHomePosts, siteUrl } from "../data/blog-posts";
+import { blogPosts, featuredHomePosts, latestFirst, siteUrl } from "../data/blog-posts";
 import Footer from "../layout/footer";
 import { AntiHeading, AntiSection } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
@@ -63,16 +63,10 @@ export async function generateMetadata({
 }
 
 const featuredPost = featuredHomePosts[0];
-// Posts written after the rebuilt site went live (2 Nov 2026) are shown first, newest first, in a "Latest articles" row
-// on the first page (user, 13 Nov 2026). The paginated list keeps every earlier post in its order and on its page, so
-// the protected terminals guide stays where it is.
-const SITE_LAUNCH = "2026-11-02";
-const isNew = (post: (typeof blogPosts)[number]) => post.publishedAt >= SITE_LAUNCH;
-const latestPosts = blogPosts
-  .filter((post) => post.slug !== featuredPost.slug && isNew(post))
-  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
-const remainingPosts = blogPosts.filter(
-  (post) => post.slug !== featuredPost.slug && !isNew(post),
+// Posts written after the rebuilt site went live lead "All articles" on page 1, newest first (latestFirst, data/blog);
+// every earlier post keeps its order and its page, so the protected terminals guide stays on page 2.
+const { latest: latestPosts, rest: remainingPosts } = latestFirst(
+  blogPosts.filter((post) => post.slug !== featuredPost.slug),
 );
 
 const heroFigures = [
@@ -159,17 +153,6 @@ export default async function BlogIndexPage({
         </AntiSection>
       )}
 
-      {isFirstPage && latestPosts.length > 0 && (
-        <AntiSection tone="white" labelledBy="latest-articles-title">
-          <AntiHeading id="latest-articles-title" title="Latest articles" />
-          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {latestPosts.map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
-          </div>
-        </AntiSection>
-      )}
-
       <AntiSection tone="grey" labelledBy="all-articles-title">
         <AntiHeading
           id="all-articles-title"
@@ -180,7 +163,7 @@ export default async function BlogIndexPage({
         <CategoryPills active="all" className="mt-8" />
 
         <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {pagePosts.map((post) => (
+          {(isFirstPage ? [...latestPosts, ...pagePosts] : pagePosts).map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
         </div>

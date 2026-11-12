@@ -127,6 +127,13 @@ const AUDIENCE_ICONS: Record<string, typeof Plane> = {
   "mountain.webp": MountainSnow,
 };
 
+/** "**words**" in a story paragraph are shown in bold (user, 13 Nov 2026: a few important words, not only keywords). */
+function withBold(text: string) {
+  return text
+    .split(/\*\*(.+?)\*\*/g)
+    .map((part, index) => (index % 2 === 1 ? <strong key={index} className="font-semibold text-[#101828]">{part}</strong> : part));
+}
+
 function audienceIcon(src: string) {
   const Icon = AUDIENCE_ICONS[src.split("/").pop() ?? ""] ?? BadgeCheck;
   return <Icon size={20} strokeWidth={1.8} />;
@@ -355,9 +362,10 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
       render: tone => (
         <AntiSection tone={tone} labelledBy="service-story-title">
           <AntiHeading id="service-story-title" title={story.title} />
-          <div className="mt-8 max-w-[760px] space-y-5 text-[17px] leading-[1.75] text-[#475467]">
+          {/* Two columns across the width on desktop (user, 13 Nov 2026), one column on phones. */}
+          <div className="mt-8 grid gap-x-12 gap-y-5 text-[17px] leading-[1.75] text-[#475467] lg:grid-cols-2">
             {story.paragraphs.map(paragraph => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>{withBold(paragraph)}</p>
             ))}
           </div>
         </AntiSection>

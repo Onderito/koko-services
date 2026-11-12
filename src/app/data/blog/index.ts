@@ -66,6 +66,19 @@ export function getPostsByCluster(cluster: ClusterId) {
   return blogPosts.filter((post) => post.cluster === cluster);
 }
 
+// The rebuilt site went live on 2 Nov 2026. Posts written after it lead the blog's listings (user, 13 Nov 2026: new
+// articles must show at the top of "All articles"): page 1 shows them first, newest first, above the usual first page;
+// every earlier post keeps its order and its page, so the protected terminals guide does not move.
+export const SITE_LAUNCH = "2026-11-02";
+
+export function latestFirst(posts: BlogPost[]) {
+  const latest = posts
+    .filter((post) => post.publishedAt >= SITE_LAUNCH)
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  const rest = posts.filter((post) => post.publishedAt < SITE_LAUNCH);
+  return { latest, rest };
+}
+
 // Returns explicit relatedSlugs as-is when there are enough (preserving the
 // original behaviour). When a post has fewer than `minCount`, it is padded with
 // other posts from the same cluster so new articles get related links for free.

@@ -13,6 +13,7 @@ import {
   clusters,
   clusterBySlug,
   getPostsByCluster,
+  latestFirst,
   siteUrl,
 } from "../../../data/blog-posts";
 import Footer from "../../../layout/footer";
@@ -95,12 +96,15 @@ export default async function BlogCategoryPage({
   }
 
   const { page } = await searchParams;
-  const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
+  // Posts written after the launch lead page 1, newest first; the others keep their order and page (latestFirst).
+  const { latest, rest } = latestFirst(posts);
+  const totalPages = Math.max(1, Math.ceil(rest.length / PAGE_SIZE));
   const currentPage = Math.min(parsePageParam(page), totalPages);
-  const pagePosts = posts.slice(
+  const restPagePosts = rest.slice(
     (currentPage - 1) * PAGE_SIZE,
     currentPage * PAGE_SIZE,
   );
+  const pagePosts = currentPage === 1 ? [...latest, ...restPagePosts] : restPagePosts;
 
   const breadcrumb = {
     "@context": "https://schema.org",
