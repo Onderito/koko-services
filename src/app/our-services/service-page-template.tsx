@@ -161,7 +161,7 @@ function Hero({ config, actionLabel }: { config: ServicePageConfig; actionLabel:
         </h1>
         <p className="mt-5 max-w-[540px] text-[17px] leading-relaxed text-white/80 md:text-[18px]">{config.heroDescription}</p>
         <div className="mt-9 flex flex-wrap items-center gap-4">
-          <ArrowButton text={actionLabel} href="/contact-me" size="lg" />
+          <ArrowButton text={actionLabel} href={config.heroAction?.href ?? "/contact-me"} size="lg" />
         </div>
       </div>
     </section>
@@ -299,7 +299,9 @@ function Faq({ items }: { items: NonNullable<ServicePageConfig["faq"]> }) {
 type Block = { key: string; glued?: boolean; render: (tone: AntiTone, glued: boolean) => ReactNode };
 
 export default function ServicePageTemplate({ config }: { config: ServicePageConfig }) {
-  const primaryActionLabel = config.path.startsWith("/our-services/transfers")
+  const primaryActionLabel = config.heroAction
+    ? config.heroAction.label
+    : config.path.startsWith("/our-services/transfers")
     ? "Book my transfer"
     : config.path.startsWith("/our-services/hourly-chauffeur")
       ? "Book by the hour"
@@ -310,7 +312,9 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
           : "Plan my tour";
 
   // The closing banner's photo, by page family (dusk art direction of the banners, 21 Oct 2026).
-  const ctaPhoto = config.path.startsWith("/our-services/transfers")
+  const ctaPhoto = config.ctaPhoto
+    ? config.ctaPhoto
+    : config.path.startsWith("/our-services/transfers")
     ? "/assets/images/banners/svc-transfers.jpg"
     : config.path.startsWith("/our-services/hourly-chauffeur")
       ? "/assets/images/banners/svc-hourly.jpg"
@@ -341,6 +345,25 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
       ),
     },
   ];
+
+  // An optional short text after the introduction (12 Nov 2026, the Monaco-style blog post): a few readable paragraphs
+  // that explain how the service works. Absent on every service page, which therefore renders as before.
+  if (config.story) {
+    const story = config.story;
+    blocks.push({
+      key: "story",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-story-title">
+          <AntiHeading id="service-story-title" title={story.title} />
+          <div className="mt-8 max-w-[760px] space-y-5 text-[17px] leading-[1.75] text-[#475467]">
+            {story.paragraphs.map(paragraph => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </AntiSection>
+      ),
+    });
+  }
 
   // A destination of the home's price guide (3 Nov 2026): its prices as a table, right after the introduction.
   const priceCity = cityForPage(config.path);
@@ -426,7 +449,10 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
           <AntiHeading
             id="service-guides-title"
             title={config.relatedGuidesTitle!}
-            intro="Use these practical guides to compare routes, timings, and ways to experience Monaco before confirming your tour."
+            intro={
+              config.relatedGuidesDescription ??
+              "Use these practical guides to compare routes, timings, and ways to experience Monaco before confirming your tour."
+            }
           />
           <LinkCards links={config.relatedGuides!} />
         </AntiSection>

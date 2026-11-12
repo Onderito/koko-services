@@ -111,6 +111,193 @@ export const guidePosts: BlogPost[] = [
     ctaLabel: "See transfer options",
   },
   {
+    // 12 Nov 2026: "nice airport taxi" is the second-largest airport search (Google Trends 37, 7 Oct) and had no page.
+    // Keyword gap of 12 Nov: "transfer fixed", "vip transfer", "arriving at nice", "côte d'azur airport". Taxi fares:
+    // the airport's official taxi page (nice.aeroport.fr/en/directions/taxis, "Indicated price 2026 TTC - Excluding
+    // supplements", read 12 Nov 2026); private prices: data/vehicles.tsx. A fair comparison: the taxi is cheaper.
+    slug: "nice-airport-taxi-vs-private-driver",
+    title: "Nice Airport Transfer: Taxi or Private Driver?",
+    description:
+      "Nice Airport transfer: taxi or private driver in Nice? The official 2026 taxi fares to Nice, Cannes and Monaco, private driver prices, and which to choose.",
+    excerpt:
+      "The official fixed taxi fares from Nice Airport, what a private driver adds, and which to choose for your arrival on the Côte d'Azur.",
+    category: "Travel Guides",
+    heroKicker: "Taxi or private driver",
+    readTime: "7 min read",
+    publishedAt: "2026-11-12",
+    imageUrl: "/assets/images/blog/nice-airport-taxi-vs-private-driver.webp",
+    imageAlt:
+      "Taxis waiting at the rank outside Nice Airport arrivals, and a chauffeur with a name board greeting travellers beside a black Mercedes E-Class",
+    // The user's requested keywords lead (12 Nov 2026), all judged by Jev above 0.95 fit
+    // (runs/keyword-gap/2026-11-12/article-keywords-judged.json).
+    keywords: [
+      "private driver Nice",
+      "Nice airport transfer",
+      "Nice airport to Monaco transfer",
+      "Nice to Monaco taxi",
+      "private driver Nice airport",
+      "Nice airport private transfer",
+      "VIP transfer Nice airport",
+      "transfert aéroport Nice",
+      "chauffeur privé aéroport",
+    ],
+    intro:
+      "Landing at Nice Côte d'Azur Airport, you have two door-to-door ways to reach your hotel on the French Riviera: the taxi rank outside arrivals, or a private driver in Nice booked in advance. The taxi is cheaper (the airport publishes fixed fares of €32 to central Nice and €95 to Monaco for 2026), while a private driver costs more but meets you inside, tracks your flight and waits. Here are the official fares and private transfer prices side by side, checked on 12 November 2026, and when each one makes sense.",
+    sections: [
+      {
+        id: "official-taxi-fares",
+        title: "The official taxi fares from Nice Airport",
+        paragraphs: [
+          "Nice Côte d'Azur Airport's taxi page lists these fixed fares for 2026, tax included and excluding supplements (for example for a booking made in advance). Destinations not on the list are charged on the meter.",
+        ],
+        bullets: [
+          "Nice centre: €32",
+          "Antibes / Juan-les-Pins: €72",
+          "Cannes: €85",
+          "Monaco: €95",
+        ],
+      },
+      {
+        id: "taxi-rank",
+        title: "How the taxi rank works",
+        paragraphs: [
+          "Taxis wait at the signposted rank outside arrivals at Terminal 1 and Terminal 2. No booking is needed, but the queue depends on how many flights have just landed, and most taxis take up to four passengers, with limited room for luggage, golf bags or skis.",
+        ],
+      },
+      {
+        id: "private-driver",
+        title: "What a private driver in Nice adds",
+        paragraphs: [
+          "A private driver (a chauffeur privé, or VTC for voiture de transport avec chauffeur, in French) is booked before you fly, at a fixed fare agreed in advance. The driver follows your flight, waits for you inside the arrivals hall with a name board, takes your luggage and drives you to the door of your hotel or villa.",
+          "With Kokolimo, one hour of waiting is included from the pickup time stated in your reservation, so a late landing or a long wait at baggage claim costs nothing extra, and cancellation is free until five days before the ride.",
+        ],
+        bullets: [
+          "Fixed fare confirmed before you fly",
+          "Flight monitoring and a name board in arrivals",
+          "One hour of waiting included",
+          "Mercedes E-Class, V-Class, S-Class or Maybach",
+        ],
+      },
+      {
+        id: "prices-compared",
+        title: "Taxi vs private driver: prices compared",
+        paragraphs: [
+          "The taxi fares below are the airport's 2026 fixed fares, excluding supplements. Kokolimo's prices are starting fares for a Mercedes E-Class with up to 3 passengers, confirmed as a fixed fare before the ride.",
+        ],
+        bullets: [
+          "Nice centre: taxi €32 · private driver from €90",
+          "Antibes / Juan-les-Pins: taxi €72 · private driver from €120",
+          "Cannes: taxi €85 · private driver from €150",
+          "Monaco: taxi €95 · Nice Airport to Monaco transfer from €150",
+          "Saint-Tropez: taxi on the meter · private driver from €400",
+        ],
+      },
+      {
+        id: "groups",
+        title: "Families and groups",
+        paragraphs: [
+          "For families and groups, a Mercedes V-Class carries up to 7 passengers with their luggage in one vehicle: from €110 to central Nice, €150 to Antibes and €180 to Cannes or Monaco. It avoids splitting the group between two taxis and waiting twice at the rank.",
+        ],
+      },
+      {
+        // Monaco is the highest-value search of the article (Jev, 12 Nov 2026: "nice airport to monaco transfer" fit
+        // 0.97, value 2.97; "nice to monaco taxi" 0.96). Distance and times: our nice-airport-to-monaco guide.
+        id: "monaco",
+        title: "Nice Airport to Monaco transfer: taxi or private driver",
+        paragraphs: [
+          "Monaco is about 30 km east of Nice Côte d'Azur Airport. On the A8 motorway the drive takes about 30 minutes off-peak and 45 to 50 minutes in traffic; the coastal Basse Corniche is slower but far more scenic.",
+          "A Nice to Monaco taxi costs €95 at the airport's fixed 2026 fare, excluding supplements. A Nice Airport to Monaco transfer with Kokolimo starts from €150 in a Mercedes E-Class for up to 3 passengers, or €180 in a V-Class for up to 7, with your driver waiting in arrivals and one hour of waiting included. During the Monaco Grand Prix and the Monaco Yacht Show, booking ahead matters most: streets close for the events and taxi queues grow.",
+        ],
+        bullets: [
+          "About 30 km, 30 minutes on the A8 off-peak",
+          "45 to 50 minutes in traffic or on event days",
+          "Nice to Monaco taxi: €95 fixed fare (supplements extra)",
+          "Nice Airport to Monaco transfer: from €150 (E-Class) or €180 (V-Class)",
+        ],
+      },
+      {
+        id: "when-taxi",
+        title: "When the taxi is the better choice",
+        paragraphs: [
+          "If you travel light, land in the daytime and are going to central Nice, the €32 taxi is hard to beat, and the rank is usually quick outside the busiest hours. A taxi also suits a last-minute change of plan when nothing is booked.",
+        ],
+      },
+      {
+        id: "when-private-driver",
+        title: "When a private driver is worth it",
+        paragraphs: [
+          "A private driver is the only one of the two that can stay with you: the same driver can wait during a stop, continue to a second address or be booked by the hour. It is worth it when:",
+        ],
+        bullets: [
+          "You land late at night or your flight is delayed",
+          "You travel with family, a group, children's seats or a lot of luggage",
+          "You arrive at a luxury hotel or villa and want a known car and driver",
+          "You want a VIP transfer or a limousine service: a Mercedes S-Class or Maybach with chauffeur",
+          "It is an event week (Monaco Grand Prix, Cannes Film Festival, Monaco Yacht Show), when taxi queues grow",
+          "You continue to Saint-Tropez, Èze or the ski resorts, where taxi fares run on the meter",
+        ],
+      },
+      {
+        id: "how-to-book",
+        title: "How to book a Nice Airport private transfer",
+        paragraphs: [
+          "Book online with your flight number, terminal and number of passengers. Your confirmation sets out the terminal, vehicle and fixed fare. Your driver tracks the flight and is waiting when you come through arrivals at Terminal 1 or Terminal 2, for a Nice airport transfer to Nice, Antibes, Cannes, Monaco, Saint-Tropez or anywhere on the Côte d'Azur.",
+          "In French, the same service is a transfert aéroport Nice with a chauffeur privé: the booking, the fixed fare and the meeting in arrivals are the same.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How much is a taxi from Nice Airport to Nice centre?",
+        answer:
+          "€32. Nice Côte d'Azur Airport publishes this as the fixed 2026 taxi fare to Nice centre, tax included and excluding supplements.",
+      },
+      {
+        question: "How much is a Nice to Monaco taxi?",
+        answer:
+          "€95, the airport's fixed 2026 taxi fare, excluding supplements. A private transfer from Nice to Monaco with Kokolimo starts from €150 in a Mercedes E-Class, with a driver waiting in arrivals and one hour of waiting included.",
+      },
+      {
+        question: "Is a private driver more expensive than a taxi from Nice Airport?",
+        answer:
+          "Yes, for one person travelling light. A private driver costs more (from €90 to Nice centre against a €32 taxi), but includes a fixed fare agreed in advance, flight monitoring, a driver waiting in arrivals and room for luggage, or up to 7 passengers in a V-Class.",
+      },
+      {
+        question: "What is a VTC in Nice?",
+        answer:
+          "A VTC (voiture de transport avec chauffeur) is a licensed private-hire car with a driver, booked in advance rather than taken at a rank. Kokolimo is a VTC chauffeur service, not a taxi.",
+      },
+      {
+        question: "Can I book a limousine from Nice Airport?",
+        answer:
+          "Yes. A private transfer in a Mercedes S-Class starts from €150 to central Nice and in a Mercedes-Maybach from €300, booked in advance with a chauffeur waiting in arrivals.",
+      },
+      {
+        question: "Does a private driver wait if my flight is late?",
+        answer:
+          "Yes. With Kokolimo the driver monitors your flight, and one hour of waiting is included from the pickup time stated in your reservation.",
+      },
+    ],
+    relatedSlugs: [
+      "nice-cote-dazur-airport-terminals-guide",
+      "airport-meet-and-greet-explained",
+      "nice-airport-to-monaco",
+    ],
+    ctaTitle: "Book your Nice Airport transfer",
+    ctaDescription:
+      "A fixed fare, a driver waiting in arrivals with your name and one hour of waiting included. From €90 to central Nice.",
+    ctaHref: "/our-services/transfers/nice-airport-transfer",
+    ctaLabel: "See Nice Airport transfers",
+    bookingCta: {
+      afterSection: "prices-compared",
+      schema: {
+        kind: "transfer",
+        serviceName: "Nice Airport private transfer",
+        place: { name: "Nice Côte d'Azur Airport", latitude: 43.6653, longitude: 7.2153 },
+      },
+    },
+  },
+  {
     slug: "chauffeur-vs-taxi-vs-rental-car-riviera",
     title: "Chauffeur vs Taxi vs Rental Car",
     description:

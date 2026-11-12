@@ -19,7 +19,6 @@ import {
   formatBlogDate,
   getBlogPost,
   getRelatedPosts,
-  siteUrl,
   type BlogFaq,
   type BlogPost,
 } from "../../data/blog-posts";
@@ -27,6 +26,8 @@ import Footer from "../../layout/footer";
 import { AntiHeading, AntiSection, AntiTextLink, GoldArrow } from "../../ui/anti";
 import FaqList from "../../ui/faq-list";
 import ArrowButton from "../../ui/arrow-button";
+// Metadata and JSON-LD live in ../post-seo.tsx, shared with the posts that have their own route (landing posts).
+import { PostSchemas, postMetadata } from "../post-seo";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -35,7 +36,8 @@ type BlogPostPageProps = {
 };
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
+  // Posts rendered with the service-page layout have their own route (blog/<slug>/page.tsx).
+  return blogPosts.filter((post) => !post.landing).map((post) => ({
     slug: post.slug,
   }));
 }
@@ -50,28 +52,7 @@ export async function generateMetadata({
     return {};
   }
 
-  return {
-    title: `${post.title} | kokolimo`,
-    description: post.description,
-    keywords: post.keywords,
-    alternates: {
-      canonical: `${siteUrl}/blog/${post.slug}`,
-    },
-    openGraph: {
-      title: post.title,
-      description: post.description,
-      url: `${siteUrl}/blog/${post.slug}`,
-      siteName: "kokolimo",
-      type: "article",
-      publishedTime: post.publishedAt,
-      images: [
-        {
-          url: post.imageUrl,
-          alt: post.imageAlt,
-        },
-      ],
-    },
-  };
+  return postMetadata(post);
 }
 
 const cardShadow = "shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]";
@@ -115,8 +96,42 @@ function HeroText({ post, compact = false }: { post: BlogPost; compact?: boolean
             {post.category}
           </span>
         </div>
+        {post.bookingCta ? (
+          // "Get a quote" goes to the home booking bar with its glide and veil (scroll-motion.tsx catches /#book).
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <ArrowButton text="Get a quote" href="/#book" />
+            <Link
+              href={post.ctaHref}
+              className="text-[15px] font-semibold text-white/85 underline-offset-4 transition-colors hover:text-white hover:underline"
+            >
+              {post.ctaLabel}
+            </Link>
+          </div>
+        ) : null}
       </div>
     </>
+  );
+}
+
+/** The quote card placed after the post's chosen section (bookingCta), to the home booking bar. */
+function BookingCard({ post }: { post: BlogPost }) {
+  return (
+    <div data-nav-tone="dark" className="mt-10 rounded-[12px] bg-[#0d1922] p-6 text-white md:p-8">
+      <p className="text-[22px] font-bold leading-snug tracking-[-0.01em] md:text-[24px]">Get your fixed quote</p>
+      <p className="mt-3 max-w-[560px] text-[15.5px] leading-relaxed text-white/75">
+        Tell us the date, the pick-up and the drop-off: your fixed fare is confirmed before the ride, with one hour of
+        waiting included for airport arrivals and free cancellation until five days before.
+      </p>
+      <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <ArrowButton text="Get a quote" href="/#book" />
+        <Link
+          href={post.ctaHref}
+          className="text-[15px] font-semibold text-white/85 underline-offset-4 transition-colors hover:text-white hover:underline"
+        >
+          {post.ctaLabel}
+        </Link>
+      </div>
+    </div>
   );
 }
 
@@ -228,48 +243,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = getRelatedPosts(post);
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    image: `${siteUrl}${post.imageUrl}`,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    author: {
-      "@type": "Organization",
-      name: "kokolimo",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "kokolimo",
-    },
-    mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
-  };
-
-  const faqStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: post.faq.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
+  // Landing posts are served by their own route; this one renders articles only.
+  if (post.landing) notFound();
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-      />
+      <PostSchemas post={post} />
 
       <article>
         <PostHero post={post} />
@@ -344,8 +323,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       ))}
                     </ul>
                   ) : null}
+                  {post.bookingCta?.afterSection === section.id ? <BookingCard post={post} /> : null}
                 </section>
               ))}
+              {/* And once more at the end of the article (user, 12 Nov 2026), unless the chosen section is the last one. */}
+              {post.bookingCta && post.sections.at(-1)?.id !== post.bookingCta.afterSection ? (
+                <div className="mt-12 border-t border-[#eaecf0] pt-2 md:mt-14">
+                  <BookingCard post={post} />
+                </div>
+              ) : null}
             </div>
           </div>
         </AntiSection>

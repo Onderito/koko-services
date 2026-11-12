@@ -80,6 +80,17 @@ export type ServicePageConfig = {
     buttonText: string;
     buttonHref: string;
   };
+  /**
+   * Optional overrides (12 Nov 2026) for a page rendered with this template outside /our-services (the Monaco-style
+   * blog post): the hero and closing button's label and target, and the closing banner's photo. Absent on every
+   * service page, which therefore renders exactly as before.
+   */
+  heroAction?: { label: string; href: string };
+  ctaPhoto?: string;
+  /** The guides section's intro; without it the template keeps its fixed sentence. */
+  relatedGuidesDescription?: string;
+  /** A short readable text after the introduction (a few paragraphs); absent on the service pages. */
+  story?: { title: string; paragraphs: string[] };
 };
 
 export const serviceMenuLinks: ServiceCardLink[] = [

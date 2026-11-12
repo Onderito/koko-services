@@ -1,5 +1,44 @@
 import type { BlogPost } from "./types";
 
+// The questions of the Monaco-style Cannes post (12 Nov 2026), shown on the page and declared as FAQPage.
+const CANNES_FAQ = [
+  {
+    question: "How much does a private chauffeur in Cannes cost?",
+    answer:
+      "With Kokolimo, a private chauffeur in Cannes starts at €90 an hour in a Mercedes E-Class, with a four-hour minimum and 20 km included per booked hour. A full day of eight hours starts at €750.",
+  },
+  {
+    question: "Can I book a chauffeur during the Cannes Film Festival?",
+    answer:
+      "Yes. A chauffeur on standby is one of the easiest ways to move during the Film Festival, when roads around the Palais des Festivals are closed or filtered and taxis are in high demand. Book in advance.",
+  },
+  {
+    question: "Is Cannes walkable?",
+    answer:
+      "Yes. The Palais des Festivals, the Old Port, Le Suquet and Rue d'Antibes are a few minutes apart, and the Croisette runs for about two kilometres along the bay. You need transport for the airport, the hills and the neighbouring towns.",
+  },
+  {
+    question: "How far is Nice Airport from Cannes, and how much is a taxi?",
+    answer:
+      "About 26 km: around 30 minutes on the A8 when traffic is light, 45 to 60 minutes during major events. The airport's fixed taxi fare to Cannes is €85 (2026, excluding supplements); a private transfer with Kokolimo starts from €150.",
+  },
+  {
+    question: "Can the chauffeur wait while I am at the Palais, a meeting or dinner?",
+    answer:
+      "Yes. Your chauffeur stays on standby during the booking, waits nearby and collects you when you are ready, including at the hotel doors of the Croisette.",
+  },
+  {
+    question: "Where is Cannes-Mandelieu Airport?",
+    answer:
+      "A few kilometres west of central Cannes. It serves private jets and business aviation only; your chauffeur meets you at the terminal.",
+  },
+  {
+    question: "Which car is best for a private chauffeur in Cannes?",
+    answer:
+      "The Mercedes E-Class or S-Class suits meetings and evenings, the V-Class carries up to 7 passengers for families and festival teams, and the Mercedes-Maybach is for galas and the red carpet.",
+  },
+];
+
 // Cluster B — Destination / city guides (getting-around + things-to-do).
 export const destinationPosts: BlogPost[] = [
   {
@@ -1661,6 +1700,181 @@ export const destinationPosts: BlogPost[] = [
       "Skip the tunnels and car parks — a private chauffeur brings you to your Monaco door and on around the coast.",
     ctaHref: "/our-services/private-tours/monaco",
     ctaLabel: "See the Monaco private tour",
+  },
+  {
+    // 12 Nov 2026, the Monaco-strategy test (user: apply what works on /our-services/hourly-chauffeur/monaco, position
+    // ~4: "not too many keywords but strong CTA and information with keywords right"). Rendered with the service-page
+    // layout (landing): short hero with a button, two panels, rate cards, three cards, day-trip cards, FAQ and a closing
+    // banner. One phrase, "private chauffeur in Cannes" (our Cannes hourly service page owns "hourly chauffeur"), in the
+    // title, H1, URL, description, rates heading, closing banner and two answers. Prices: data/vehicles.tsx; taxi fare:
+    // nice.aeroport.fr/en/directions/taxis (2026, read 12 Nov 2026). Compare with the keyword-rich Nice post ~26 Nov.
+    slug: "private-chauffeur-cannes",
+    title: "Private Chauffeur in Cannes: Rates and Tips",
+    description:
+      "Book a private chauffeur in Cannes for the Croisette, the festivals and day trips: hourly rates from €90, Nice Airport times and how to get around Cannes.",
+    excerpt:
+      "A private chauffeur in Cannes on standby for the Croisette, the festivals and day trips: rates, airport times and getting around.",
+    category: "Destinations",
+    heroKicker: "Private chauffeur in Cannes",
+    readTime: "4 min read",
+    publishedAt: "2026-11-12",
+    imageUrl: "/assets/images/blog/private-chauffeur-cannes.webp",
+    imageAlt:
+      "A private chauffeur in Cannes holding open the door of a black Mercedes S-Class on the Boulevard de la Croisette, with palm trees and the sea",
+    // Jev fit above 0.95 (runs/keyword-gap/2026-11-12/*-judged.json), the set first proposed for Cannes on 12 Nov.
+    keywords: ["private chauffeur Cannes", "private driver Cannes", "chauffeur in Cannes", "Cannes hourly chauffeur", "chauffeur privé Cannes", "service de chauffeur privé"],
+    intro:
+      "A private chauffeur in Cannes on standby for the Croisette, the Palais des Festivals, hotel arrivals, dinners in the hills and day trips along the Côte d'Azur.",
+    sections: [],
+    faq: CANNES_FAQ,
+    relatedSlugs: ["best-things-to-do-in-cannes", "nice-airport-to-cannes", "cannes-film-festival-chauffeur"],
+    ctaTitle: "Need a private chauffeur in Cannes?",
+    ctaDescription: "Your fixed fare is confirmed before the ride, with free cancellation until five days before.",
+    ctaHref: "/our-services/hourly-chauffeur/cannes",
+    ctaLabel: "See the Cannes hourly chauffeur",
+    bookingCta: {
+      afterSection: "rates",
+      schema: {
+        kind: "hourly",
+        cityId: "cannes",
+        serviceName: "Private chauffeur in Cannes",
+        place: { name: "Cannes", latitude: 43.5513, longitude: 7.0128 },
+      },
+    },
+    landing: {
+      slug: "private-chauffeur-cannes",
+      path: "/blog/private-chauffeur-cannes",
+      metadata: {
+        title: "Private Chauffeur in Cannes: Rates and Tips | kokolimo",
+        description:
+          "Book a private chauffeur in Cannes for the Croisette, the festivals and day trips: hourly rates from €90, Nice Airport times and how to get around Cannes.",
+        keywords: ["private chauffeur Cannes", "private driver Cannes", "chauffeur in Cannes", "Cannes hourly chauffeur", "chauffeur privé Cannes", "service de chauffeur privé"],
+      },
+      serviceLabel: "Cannes",
+      heroTitle: "Private Chauffeur in Cannes",
+      heroDescription:
+        "A chauffeur on standby for the Croisette, the Palais des Festivals, hotel arrivals, dinners in the hills and day trips along the Côte d'Azur.",
+      heroImageSrc: "/assets/images/blog/private-chauffeur-cannes.webp",
+      heroImageAlt:
+        "A private chauffeur in Cannes holding open the door of a black Mercedes S-Class on the Boulevard de la Croisette",
+      heroAction: { label: "Get a quote", href: "/#book" },
+      introTitle: "Why a Private Chauffeur Fits Cannes",
+      introDescription:
+        "Central Cannes is walkable, but festival days, closed roads and evening plans make a chauffeur on standby the easiest way to move.",
+      panels: [
+        {
+          title: "Festival Days",
+          text: "During the Film Festival, Cannes Lions, the Yachting Festival and MIPCOM, roads around the Palais are closed or filtered and taxis are scarce. Your driver drops you at the access points and waits nearby.",
+          theme: "dark",
+        },
+        {
+          title: "Croisette Arrivals",
+          text: "Door to door at the Carlton, the Martinez and the hotels of the Croisette, where parking is almost impossible, with the car ready when you leave.",
+          theme: "light",
+        },
+      ],
+      // The user, 12 Nov 2026: "a little bit thin": one short readable section that explains how the service works.
+      story: {
+        title: "A Day in Cannes With a Private Chauffeur",
+        paragraphs: [
+          "A private chauffeur in Cannes is an hourly service: you book the car and driver for a block of time rather than a single ride. Your driver collects you at your hotel, your villa or the airport, stays with you for the day and waits nearby between stops, so you never look for a taxi, a parking space or a bus timetable. The minimum is four hours, with 20 kilometres included per booked hour.",
+          "A typical business day starts with a drop-off at the Palais des Festivals, continues with lunch on the Croisette and a meeting in town, and ends with dinner in the hills of Mougins or Le Cannet and a late return. On a leisure day, the same car takes you along the Croisette and up to Le Suquet, then out to Antibes, Grasse or the beaches of Saint-Tropez.",
+          "Choose the car for the day: a Mercedes E-Class for up to three passengers, a V-Class for up to seven with their luggage, an S-Class for executive travel, or a Mercedes-Maybach for galas and the red carpet. Your fixed fare is confirmed before the ride, and cancellation is free until five days before. French-speaking guests know it as a service de chauffeur privé, a chauffeur privé à Cannes.",
+          "For the Film Festival in May and Cannes Lions in June, book early: demand for cars peaks, the streets around the Palais are closed or filtered, and a driver who knows the access points saves you time between screenings, meetings and evening events.",
+        ],
+      },
+      practicalTitle: "Cannes Private Chauffeur Rates",
+      practicalDescription:
+        "Guide rates for a Cannes hourly chauffeur: a dedicated car and driver on standby, with a four-hour minimum and 20 kilometres included per booked hour.",
+      practicalDetails: [
+        {
+          title: "Mercedes E-Class",
+          text: "From €90 per hour or €750 for eight hours, for meetings, hotels, shopping and dinners.",
+        },
+        {
+          title: "Mercedes V-Class",
+          text: "From €110 per hour or €880 for eight hours, for families, groups and festival teams with luggage (up to 7 passengers).",
+        },
+        {
+          title: "S-Class and Maybach",
+          text: "S-Class from €130 per hour or €1,040 for eight hours; Maybach from €300 per hour or €2,400 for eight hours: a limousine service with chauffeur for galas and the red carpet.",
+        },
+        {
+          title: "Minimum time and distance",
+          text: "Four hours minimum, including 20 kilometres per booked hour (80 kilometres for four hours). Your fixed fare is confirmed before the ride.",
+        },
+      ],
+      audienceTitle: "Getting Around",
+      audienceAccent: "Cannes",
+      audienceDescription: "The centre is a few minutes on foot. For everything beyond it, this is what works.",
+      audienceCards: [
+        {
+          title: "On Foot and by Palm Bus",
+          text: "The Palais, the Old Port, Le Suquet and Rue d'Antibes are minutes apart; Palm Bus links Le Cannet, Mandelieu and Mougins.",
+          icon: "/assets/icons/services/hand.webp",
+          iconAlt: "On foot icon",
+        },
+        {
+          title: "From Nice Airport",
+          text: "About 26 km, 30 minutes on the A8 off-peak. Taxi: €85 fixed fare. Private transfer: from €150, your driver waiting in arrivals.",
+          icon: "/assets/icons/services/plane.webp",
+          iconAlt: "Airport icon",
+        },
+        {
+          title: "Cannes-Mandelieu Jets",
+          text: "Business aviation a few kilometres west of the centre; your chauffeur meets you at the terminal.",
+          icon: "/assets/icons/services/star.webp",
+          iconAlt: "Private jet icon",
+        },
+      ],
+      localLinksTitle: "Day Trips From Cannes",
+      localLinksDescription: "With a private driver in Cannes for the day, the Riviera's classics are within reach, or choose one of our private tours.",
+      localLinks: [
+        {
+          href: "/our-services/private-tours/saint-tropez",
+          label: "Saint-Tropez",
+          description: "The port, the old town and the beaches of Pampelonne, west along the coast.",
+        },
+        {
+          href: "/our-services/private-tours/monaco",
+          label: "Monaco",
+          description: "Monte-Carlo, the Rock and the corniches, with Èze on the way.",
+        },
+        {
+          href: "/our-services/private-tours/nice",
+          label: "Nice",
+          description: "The Promenade des Anglais, the Old Town and the hills above the bay.",
+        },
+      ],
+      relatedGuidesTitle: "Plan Your Stay in Cannes",
+      relatedGuidesDescription: "Practical guides to the Croisette, the festivals and the road from Nice Airport.",
+      relatedGuides: [
+        {
+          href: "/blog/best-things-to-do-in-cannes",
+          label: "Best Things to Do in Cannes",
+          description: "La Croisette, Le Suquet, the Lérins Islands and the red carpet.",
+        },
+        {
+          href: "/blog/cannes-film-festival-chauffeur",
+          label: "The Film Festival by Chauffeur",
+          description: "Road closures, the red carpet and black-tie evenings in May.",
+        },
+        {
+          href: "/blog/nice-airport-to-cannes",
+          label: "Nice Airport to Cannes",
+          description: "Distance, journey times and transfer options.",
+        },
+      ],
+      faq: CANNES_FAQ,
+      cta: {
+        title: "Need a Private Chauffeur in Cannes?",
+        description:
+          "Tell us your dates and plans: your fixed fare is confirmed before the ride, with free cancellation until five days before.",
+        buttonText: "Get a quote",
+        buttonHref: "/#book",
+      },
+      ctaPhoto: "/assets/images/banners/svc-hourly.jpg",
+    },
   },
   {
     slug: "french-riviera-in-winter",
