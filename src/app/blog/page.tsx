@@ -63,8 +63,16 @@ export async function generateMetadata({
 }
 
 const featuredPost = featuredHomePosts[0];
+// Posts written after the rebuilt site went live (2 Nov 2026) are shown first, newest first, in a "Latest articles" row
+// on the first page (user, 13 Nov 2026). The paginated list keeps every earlier post in its order and on its page, so
+// the protected terminals guide stays where it is.
+const SITE_LAUNCH = "2026-11-02";
+const isNew = (post: (typeof blogPosts)[number]) => post.publishedAt >= SITE_LAUNCH;
+const latestPosts = blogPosts
+  .filter((post) => post.slug !== featuredPost.slug && isNew(post))
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 const remainingPosts = blogPosts.filter(
-  (post) => post.slug !== featuredPost.slug,
+  (post) => post.slug !== featuredPost.slug && !isNew(post),
 );
 
 const heroFigures = [
@@ -147,6 +155,17 @@ export default async function BlogIndexPage({
                 <ArrowButton text="Request your ride" href="/contact-me" />
               </div>
             </div>
+          </div>
+        </AntiSection>
+      )}
+
+      {isFirstPage && latestPosts.length > 0 && (
+        <AntiSection tone="white" labelledBy="latest-articles-title">
+          <AntiHeading id="latest-articles-title" title="Latest articles" />
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {latestPosts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
           </div>
         </AntiSection>
       )}
