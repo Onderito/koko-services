@@ -152,14 +152,14 @@ export const guidePosts: BlogPost[] = [
       "transfert aéroport Nice Monaco",
     ],
     intro:
-      "Landing at Nice Côte d'Azur Airport, the simplest way to reach your hotel, villa or yacht on the French Riviera is a private driver who is already waiting for you. With a Kokolimo Nice airport transfer, your chauffeur follows your flight, meets you in the arrivals hall with your name on a board, takes your luggage and drives you door to door at a fixed price confirmed before you fly. Here is how a Nice Airport private transfer works, the prices to Nice, Antibes, Cannes, Monaco and Saint-Tropez, and how to book your driver.",
+      "Landing at Nice Côte d'Azur Airport, the simplest way to reach your hotel, villa or yacht on the French Riviera is a private driver who is already waiting for you. With a Kokolimo **Nice airport transfer**, your chauffeur follows your flight, meets you in the arrivals hall with your name on a board, takes your luggage and drives you door to door at a **fixed price confirmed before you fly**. Here is how a Nice Airport private transfer works, the prices to Nice, Antibes, Cannes, Monaco and Saint-Tropez, and how to book your driver.",
     sections: [
       {
         id: "how-it-works",
         title: "How your Nice Airport private transfer works",
         paragraphs: [
-          "You book before you travel, with your flight number, terminal, number of passengers and destination. Your confirmation sets out the terminal, the vehicle and the fixed fare, so the price of your Nice airport transfer is known before you leave home.",
-          "On the day, your private driver at Nice Airport monitors your flight in real time and adapts to an early or late landing. Your chauffeur waits for you inside the arrivals hall of Terminal 1 or Terminal 2 with a name board, helps with your luggage and walks with you to the car. One hour of waiting is included from the pickup time stated in your reservation, so a long wait at passport control or baggage claim costs nothing extra.",
+          "You book before you travel, with your flight number, terminal, number of passengers and destination. Your confirmation sets out the terminal, the vehicle and the fixed fare, so the price of your Nice airport transfer is **known before you leave home**.",
+          "On the day, your private driver at Nice Airport **monitors your flight in real time** and adapts to an early or late landing. Your chauffeur waits for you inside the arrivals hall of Terminal 1 or Terminal 2 with a name board, helps with your luggage and walks with you to the car. **One hour of waiting is included** from the pickup time stated in your reservation, so a long wait at passport control or baggage claim costs nothing extra.",
         ],
         bullets: [
           "A fixed fare, confirmed before you fly",
@@ -174,7 +174,7 @@ export const guidePosts: BlogPost[] = [
         id: "prices",
         title: "Nice Airport transfer prices",
         paragraphs: [
-          "These are Kokolimo's starting fares from Nice Côte d'Azur Airport in a Mercedes E-Class for up to 3 passengers. The final fixed fare is confirmed before booking and does not change with traffic or a late landing within your waiting time.",
+          "These are Kokolimo's starting fares from Nice Côte d'Azur Airport in a Mercedes E-Class for up to 3 passengers. The **final fixed fare is confirmed before booking** and does not change with traffic or a late landing within your waiting time.",
         ],
         bullets: [
           "Nice city centre: from €90",
@@ -188,8 +188,8 @@ export const guidePosts: BlogPost[] = [
         id: "monaco",
         title: "Nice Airport to Monaco transfer",
         paragraphs: [
-          "Monaco is about 30 km east of the airport. Your private driver from Nice to Monaco takes the A8 motorway, about 30 minutes off-peak and 45 to 50 minutes in traffic or on event days, and drops you at your hotel in Monte-Carlo, at Port Hercule or at the Casino, with no tunnels or parking to deal with.",
-          "Many travellers search for a Nice to Monaco taxi. A Nice Airport transfer to Monaco with Kokolimo is booked in advance instead: a fixed fare from €150 in a Mercedes E-Class, or €180 in a V-Class for up to 7, your chauffeur waiting in arrivals and one hour of waiting included. During the Monaco Grand Prix, when streets close, and the Monaco Yacht Show, booking ahead matters most.",
+          "Monaco is about 30 km east of the airport. Your **private driver from Nice to Monaco** takes the A8 motorway, **about 30 minutes off-peak** and 45 to 50 minutes in traffic or on event days, and drops you at your hotel in Monte-Carlo, at Port Hercule or at the Casino, with no tunnels or parking to deal with.",
+          "Many travellers search for a Nice to Monaco taxi. A **Nice Airport transfer to Monaco** with Kokolimo is booked in advance instead: a **fixed fare from €150** in a Mercedes E-Class, or €180 in a V-Class for up to 7, your chauffeur waiting in arrivals and one hour of waiting included. During the Monaco Grand Prix, when streets close, and the Monaco Yacht Show, booking ahead matters most.",
         ],
         bullets: [
           "About 30 km, 30 minutes off-peak on the A8",
@@ -201,24 +201,24 @@ export const guidePosts: BlogPost[] = [
         id: "cannes-and-antibes",
         title: "Nice Airport to Cannes and Antibes",
         paragraphs: [
-          "Cannes is about 26 km west of the airport: around 30 minutes off-peak, and up to an hour during the Film Festival, the congresses or the summer peak. Your driver takes you to the Croisette, your hotel or the Palais des Festivals, from €150 in an E-Class.",
-          "Antibes is closer, around 25 minutes, for Juan-les-Pins, Cap d'Antibes or Port Vauban, from €120. For the Film Festival and the big congress weeks in Cannes, book your car as early as you can.",
+          "Cannes is about 26 km west of the airport: **around 30 minutes off-peak**, and up to an hour during the Film Festival, the congresses or the summer peak. Your driver takes you to the Croisette, your hotel or the Palais des Festivals, **from €150** in an E-Class.",
+          "Antibes is closer, around 25 minutes, for Juan-les-Pins, Cap d'Antibes or Port Vauban, **from €120**. For the Film Festival and the big congress weeks in Cannes, **book your car as early as you can**.",
         ],
       },
       {
         id: "whole-riviera",
         title: "A private driver from Nice Airport to the whole Riviera",
         paragraphs: [
-          "A private driver in Nice covers the rest of the coast too. Saint-Tropez is about 110 km away, around 1 hour 30 minutes outside the summer season, from €400. Villefranche-sur-Mer is about 20 minutes away, Saint-Jean-Cap-Ferrat about 25 and Menton about 40, past Monaco. Your driver takes you to a hotel, a private villa or straight to your yacht in the port.",
-          "The same service works for your departure: your chauffeur collects you from your hotel or villa and brings you to the right terminal at Nice Airport in good time for your flight.",
+          "A private driver in Nice covers the rest of the coast too. Saint-Tropez is about 110 km away, around 1 hour 30 minutes outside the summer season, **from €400**. Villefranche-sur-Mer is about 20 minutes away, Saint-Jean-Cap-Ferrat about 25 and Menton about 40, past Monaco. Your driver takes you to a hotel, a private villa or **straight to your yacht** in the port.",
+          "The same service works **for your departure**: your chauffeur collects you from your hotel or villa and brings you to the right terminal at Nice Airport in good time for your flight.",
         ],
       },
       {
         id: "vehicles",
         title: "VIP transfer from Nice Airport: choose your car",
         paragraphs: [
-          "Every Kokolimo Nice airport transfer is made in a Mercedes, chosen for your group and your luggage. Families and groups travel together in a V-Class for up to 7 passengers, from €110 to Nice, €150 to Antibes, €180 to Cannes or Monaco and €500 to Saint-Tropez.",
-          "For a VIP transfer from Nice Airport or a limousine service, the S-Class and the Mercedes-Maybach add more space and comfort, with the same meet and greet in arrivals. A Nice Airport limousine suits business arrivals, weddings and special occasions.",
+          "Every Kokolimo Nice airport transfer is made in a Mercedes, chosen for your group and your luggage. Families and groups travel together in a **V-Class for up to 7 passengers**, from €110 to Nice, €150 to Antibes, €180 to Cannes or Monaco and €500 to Saint-Tropez.",
+          "For a **VIP transfer from Nice Airport** or a **limousine service**, the S-Class and the Mercedes-Maybach add more space and comfort, with the same meet and greet in arrivals. A Nice Airport limousine suits business arrivals, weddings and special occasions.",
         ],
         bullets: [
           "Mercedes E-Class: up to 3 passengers, from €90",
@@ -231,8 +231,8 @@ export const guidePosts: BlogPost[] = [
         id: "how-to-book",
         title: "How to book your Nice Airport chauffeur",
         paragraphs: [
-          "Book online or send us your request with your flight number, terminal, number of passengers, luggage and destination. You receive a confirmation with the vehicle, the meeting point and the fixed fare. Cancellation is free until five days before the date and time of your transfer; less than five days before, the full fare is charged.",
-          "French-speaking travellers book the same service as a transfert aéroport Nice avec chauffeur privé: a chauffeur privé aéroport Nice meets you in arrivals at a fixed price, including for a transfert aéroport Nice Monaco from €150.",
+          "Book online or send us your request with your flight number, terminal, number of passengers, luggage and destination. You receive a confirmation with the vehicle, the meeting point and the fixed fare. **Cancellation is free until five days before** the date and time of your transfer; less than five days before, the full fare is charged.",
+          "French-speaking travellers book the same service as a **transfert aéroport Nice** avec chauffeur privé: a **chauffeur privé aéroport Nice** meets you in arrivals at a fixed price, including for a transfert aéroport Nice Monaco from €150.",
         ],
       },
     ],

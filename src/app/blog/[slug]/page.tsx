@@ -35,6 +35,21 @@ type BlogPostPageProps = {
   }>;
 };
 
+// **Marked** words in an article's intro and paragraphs show in bold, as on the Cannes post (user, 13 Nov 2026). Text
+// without a marker is returned as it is, so every other article renders exactly as before.
+function withBold(text: string) {
+  if (!text.includes("**")) return text;
+  return text.split(/\*\*(.+?)\*\*/g).map((part, index) =>
+    index % 2 === 1 ? (
+      <strong key={index} className="font-semibold text-[#101828]">
+        {part}
+      </strong>
+    ) : (
+      part
+    ),
+  );
+}
+
 export async function generateStaticParams() {
   // Posts rendered with the service-page layout have their own route (blog/<slug>/page.tsx).
   return blogPosts.filter((post) => !post.landing).map((post) => ({
@@ -296,7 +311,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             <div className="min-w-0">
               <p className="text-[18px] leading-[1.7] text-[#344054] md:text-[20px]">
-                {post.intro}
+                {withBold(post.intro)}
               </p>
 
               {post.sections.map((section) => (
@@ -310,7 +325,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </h2>
                   <div className="mt-5 space-y-5 text-[17px] leading-[1.75] text-[#475467]">
                     {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
+                      <p key={paragraph}>{withBold(paragraph)}</p>
                     ))}
                   </div>
                   {section.bullets ? (
