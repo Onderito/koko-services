@@ -1,4 +1,4 @@
-// Blog article in Kokolimo's Anti blocks (inspirations/IMG_8800):
+// Blog article in Kokolimo's Anti blocks:
 // - a dark photo hero with the header inside it (the article photo, or Anti's gallery mosaic for the two legacy tours
 //   that carry several photos), "Back to blog", the H1, its text and the meta line (kicker pill, read time, date,
 //   category pill; the kicker no longer sits above the title);
@@ -23,6 +23,7 @@ import {
   type BlogPost,
 } from "../../data/blog-posts";
 import Footer from "../../layout/footer";
+import { altFor } from "../../data/image-alts";
 import { AntiHeading, AntiSection, AntiTextLink, GoldArrow } from "../../ui/anti";
 import FaqList from "../../ui/faq-list";
 import ArrowButton from "../../ui/arrow-button";
@@ -35,7 +36,7 @@ type BlogPostPageProps = {
   }>;
 };
 
-// **Marked** words in an article's intro and paragraphs show in bold, as on the Cannes post (user, 13 Nov 2026). Text
+// **Marked** words in an article's intro and paragraphs show in bold, as on the Cannes post. Text
 // without a marker is returned as it is, so every other article renders exactly as before.
 function withBold(text: string) {
   if (!text.includes("**")) return text;
@@ -236,7 +237,7 @@ function CtaCard() {
           <div aria-hidden="true" className="relative h-52 sm:h-64 md:absolute md:inset-y-0 md:right-0 md:h-auto md:w-[55%]">
             <Image
               src="/assets/images/services/long-distance.webp"
-              alt=""
+              alt={altFor("/assets/images/services/long-distance.webp")}
               fill
               sizes="(min-width: 1280px) 660px, (min-width: 768px) 55vw, 100vw"
               className="object-cover object-[50%_62%]"
@@ -341,7 +342,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   {post.bookingCta?.afterSection === section.id ? <BookingCard post={post} /> : null}
                 </section>
               ))}
-              {/* And once more at the end of the article (user, 12 Nov 2026), unless the chosen section is the last one. */}
+              {/* And once more at the end of the article, unless the chosen section is the last one. */}
               {post.bookingCta && post.sections.at(-1)?.id !== post.bookingCta.afterSection ? (
                 <div className="mt-12 border-t border-[#eaecf0] pt-2 md:mt-14">
                   <BookingCard post={post} />

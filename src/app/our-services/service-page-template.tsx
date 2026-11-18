@@ -35,6 +35,7 @@ import ArrowButton from "../ui/arrow-button";
 import FaqList from "../ui/faq-list";
 import { cityForPage, RoutePrices } from "../ui/destination-prices";
 import { servicePrices } from "../ui/service-prices";
+import { altFor } from "../data/image-alts";
 import { Accent } from "../ui/kit";
 
 const SHADOW = "shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]";
@@ -61,6 +62,14 @@ function photoFor(href: string): string | undefined {
   if (page) return page.heroImageSrc;
   const slug = href.match(/^\/blog\/([^/?#]+)$/)?.[1];
   return slug ? getBlogPost(slug)?.imageUrl : undefined;
+}
+
+/** The same photo's alt text: the linked service page's hero alt, or the blog post's cover alt. */
+function photoAltFor(href: string): string {
+  const page = servicePageByPath.get(href);
+  if (page) return page.heroImageAlt;
+  const slug = href.match(/^\/blog\/([^/?#]+)$/)?.[1];
+  return (slug ? getBlogPost(slug)?.imageAlt : undefined) ?? "";
 }
 
 // Where the subject (the car, the sign, the village) sits in each hero photo, so it shows on the right of the hero on
@@ -274,7 +283,7 @@ function LinkCards({ links }: { links: ServiceCardLink[] }) {
         return (
           <li key={link.href}>
             {photo ? (
-              <AntiCard href={link.href} image={photo} imageAlt="" imageLinkLabel={link.label} imageAspect={layout.aspect} imageSizes={layout.sizes} className="relative">
+              <AntiCard href={link.href} image={photo} imageAlt={photoAltFor(link.href)} imageLinkLabel={link.label} imageAspect={layout.aspect} imageSizes={layout.sizes} className="relative">
                 {body(link)}
               </AntiCard>
             ) : (
@@ -437,7 +446,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
       <AntiSection tone={tone} labelledBy="service-audience-title" innerClassName={glued ? "!pt-0" : ""}>
         <AntiSplit
           image={splitPhoto(config.path, used)}
-          imageAlt=""
+          imageAlt={altFor(splitPhoto(config.path, used))}
           title={`${config.audienceTitle} ${config.audienceAccent}`}
           titleId="service-audience-title"
           intro={config.audienceDescription}

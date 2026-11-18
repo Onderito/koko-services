@@ -1,14 +1,14 @@
-// Site footer, laid out as Anti's last two blocks (IMG_8800): the photo call-to-action band ("Let's Find Your Next
-// Adventure"), then the navy footer with link columns, contact and the bottom bar.
-// 21 Oct 2026, at the user's request: the band is as compact as Anti's and carries the user's slogan, "Let's Find Your
-// Next Destination", over an S-Class above Monaco at dusk (the art direction of the banners); "Ask your favourite AI
-// about Kokolimo" sits above the bottom bar. Other texts and links unchanged.
+// Site footer, laid out as Anti's last two blocks: the photo call-to-action band, then the navy footer with link
+// columns, contact and the bottom bar. The compact band carries the slogan "Let's Find Your Next Destination" over an
+// S-Class above Monaco at dusk (the art direction of the banners; alt text from data/image-alts.ts); "Ask your favourite
+// AI about Kokolimo" sits above the bottom bar.
 
 import Image from "next/image";
 import Link from "next/link";
 import { Building2, Mail, MapPin, Phone } from "lucide-react";
 import { businessName, contactEmail, contactPhone, contactPhoneDisplay, serviceAreaText, whatsappUrl } from "../data/site-config";
 import { serviceMenuLinks } from "../data/service-pages";
+import { altFor } from "../data/image-alts";
 import { AntiOutlinePill } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import AskAi from "../ui/ask-ai";
@@ -32,7 +32,7 @@ export default function Footer({ withCta = true }: { withCta?: boolean }) {
       {/* Call-to-action band (Anti's "Let's Find Your Next Adventure"): an S-Class above Monaco at dusk */}
       {withCta && <div className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <Image src="/assets/images/banners/footer-monaco-dusk.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="object-cover object-[70%_62%]" />
+          <Image src="/assets/images/banners/footer-monaco-dusk.jpg" alt={altFor("/assets/images/banners/footer-monaco-dusk.jpg")} aria-hidden="true" fill sizes="100vw" className="object-cover object-[70%_62%]" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,#0d1922_0%,rgba(13,25,34,0.88)_32%,rgba(13,25,34,0.35)_62%,rgba(13,25,34,0.08)_100%)]" />
           <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0d1922] to-transparent" />
         </div>
@@ -65,7 +65,7 @@ export default function Footer({ withCta = true }: { withCta?: boolean }) {
               {businessName}
               <span className="text-[#d4b471]">.</span>
             </Link>
-            {/* Anti's "Follow Us": Kokolimo's real profiles (Instagram to add once the agency creates it). */}
+            {/* Anti's "Follow Us": Kokolimo's real profiles (Instagram to add once the account exists). */}
             <p className="mt-8 text-[15px] font-semibold">Follow Us</p>
             <ul className="mt-4 flex gap-3">
               {[

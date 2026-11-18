@@ -1,14 +1,13 @@
-// Banners in the manner of IMG_8794 (user, 21 Oct 2026: "the banners on it I love them as well ... get inspired by it
-// like we did for 8800"), in Kokolimo's colours and with photos in the art direction of the S-Class banner (dusk on
-// the Riviera, navy-teal shadows, a warm amber glow): the photo fills the banner and fades into navy on the left, where
-// the text sits. On phones the photo is a band at the top fading into the navy, the text under it.
-// - CtaBanner: IMG_8794's "Find Your Perfect EV Today" (eyebrow, title, one line, buttons).
-// - StatsBanner: IMG_8794's "Your Trusted EV Partner" (title and button on the left, a translucent panel of facts with
-//   gold-circle icons on the right).
+// Banners in Kokolimo's colours, with photos in the art direction of the S-Class banner (dusk on the Riviera, navy-teal
+// shadows, a warm amber glow): the photo fills the banner and fades into navy on the left, where the text sits. On
+// phones the photo is a band at the top fading into the navy, the text under it.
+// - CtaBanner: eyebrow, title, one line, buttons. Without an alt text, its photo's comes from data/image-alts.ts.
+// - StatsBanner: title and button on the left, a translucent panel of facts with gold-circle icons on the right.
 // Server components: no JavaScript is shipped for them.
 
 import Image from "next/image";
 import type { ElementType, ReactNode } from "react";
+import { altFor } from "../data/image-alts";
 import { Accent } from "./kit";
 import ArrowButton from "./arrow-button";
 
@@ -42,7 +41,7 @@ export function CtaBanner({
   return (
     <div data-nav-tone="dark" className="relative isolate overflow-hidden rounded-[14px] bg-[#0d1922] text-white">
       <div className="absolute inset-x-0 top-0 -z-10 h-[230px] sm:h-[290px] md:inset-0 md:h-auto">
-        <Image src={image} alt={imageAlt} fill sizes="(min-width: 1280px) 1240px, 100vw" className={`object-cover ${imagePosition}`} />
+        <Image src={image} alt={imageAlt || altFor(image)} fill sizes="(min-width: 1280px) 1240px, 100vw" className={`object-cover ${imagePosition}`} />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,25,34,0.05)_0%,rgba(13,25,34,0.35)_55%,#0d1922_100%)] md:bg-[linear-gradient(90deg,#0d1922_0%,rgba(13,25,34,0.9)_28%,rgba(13,25,34,0.4)_55%,rgba(13,25,34,0)_80%)]" />
       </div>
       <div className="relative max-w-[580px] px-6 pb-9 pt-[205px] sm:pt-[265px] md:px-12 md:py-14 lg:py-16">
@@ -96,7 +95,7 @@ export function StatsBanner({
         <Image src={image} alt={imageAlt} fill sizes="(min-width: 1024px) 1860px, 100vw" className={`object-cover object-[50%_40%] ${imageMirror ? "-scale-x-100" : ""}`} />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,25,34,0.05)_0%,rgba(13,25,34,0.4)_55%,#0d1922_100%)] lg:bg-[linear-gradient(90deg,rgba(13,25,34,0.92)_0%,rgba(13,25,34,0.78)_17%,rgba(13,25,34,0.2)_27%,rgba(13,25,34,0)_32%)]" />
       </div>
-      {/* The facts panel is flush with the banner's right, top and bottom edges (user, 21 Oct 2026). */}
+      {/* The facts panel is flush with the banner's right, top and bottom edges. */}
       <div className="grid gap-8 px-6 pt-[225px] sm:pt-[285px] lg:min-h-[480px] lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:gap-10 lg:p-0 lg:pl-12">
         <div className="flex flex-col justify-center lg:py-12">
           {eyebrow && <p className={EYEBROW}>{eyebrow}</p>}

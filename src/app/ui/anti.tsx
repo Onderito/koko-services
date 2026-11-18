@@ -1,12 +1,13 @@
-// Kokolimo's page blocks, cloned from "Anti" (koko/inspirations/IMG_8800.JPG), the reference the user chose:
-// white and light-grey sections, navy bands, white cards with soft shadows and inset photos, gold circle arrows,
-// gold pill buttons (Hyperiux Arrow Fill), a navy split card with gold circle icons, a navy gallery, a navy footer.
+// Kokolimo's page blocks, in the "Anti" design language: white and light-grey sections, navy bands, white cards with
+// soft shadows and inset photos, gold circle arrows, gold pill buttons (Hyperiux Arrow Fill), a navy split card with
+// gold circle icons, a navy gallery, a navy footer. Without an alt text, AntiCtaCard's photo takes data/image-alts.ts's.
 // Server components: no JavaScript is shipped for them. Dark blocks declare data-nav-tone for the header.
 
 import Image from "next/image";
 import Link from "next/link";
 import type { ElementType, ReactNode } from "react";
 import { ArrowRight, Phone } from "lucide-react";
+import { altFor } from "../data/image-alts";
 import { Accent } from "./kit";
 import ArrowButton from "./arrow-button";
 import LinkArrow from "./link-arrow";
@@ -249,7 +250,7 @@ export function AntiCtaCard({
   return (
     <div data-nav-tone="dark" className="relative isolate overflow-hidden rounded-[12px] bg-[#0d1922] text-white">
       <div className="absolute inset-0 -z-10 md:left-auto md:w-[62%]">
-        <Image src={image} alt={imageAlt} fill sizes="(min-width: 768px) 780px, 100vw" className="object-cover object-right" />
+        <Image src={image} alt={imageAlt || altFor(image)} fill sizes="(min-width: 768px) 780px, 100vw" className="object-cover object-right" />
         <div className="absolute inset-0 bg-[rgba(13,25,34,0.72)] md:bg-[linear-gradient(90deg,#0d1922_0%,rgba(13,25,34,0.55)_30%,rgba(13,25,34,0)_65%)]" />
       </div>
       <div className="max-w-[600px] p-8 md:p-12">

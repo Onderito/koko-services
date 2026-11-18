@@ -1,11 +1,11 @@
-// /partners in the Anti language (inspirations/IMG_8800), the same blocks as the approved home page:
+// /partners in the Anti language, the same blocks as the home page:
 // a navy band hero with the header inside it (h1, line and text, gold and outline pills, Anti's hero figures with thin
 // dividers), "Why Partner With Us" as Anti's navy split card (photo and title, gold-circle list), the partner types as
 // white photo cards, the fleet as a white table card, "How It Works" as Anti's numbered process beside a photo panel,
 // partner quotes as Anti testimonials, the commission table on a navy band, FAQs as white cards that open, the
 // application form (partner-form.tsx, the only client part), Anti's dark CTA card, then the site footer.
-// Texts, heading levels, links, form fields and ids unchanged; the small labels above titles are gone (user's request);
-// the photos are the site's own, shown as decoration (empty alt). No animation: server component, no gsap, no Reveal.
+// Texts, heading levels, links, form fields and ids unchanged; no small labels above titles; the photos are the site's
+// own, with their alt text from data/image-alts.ts. No animation: server component, no gsap, no Reveal.
 
 import Image from "next/image";
 import {
@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 
 import Footer from "../layout/footer";
+import { altFor } from "../data/image-alts";
 import { AntiHeading, AntiOutlinePill, AntiSection, AntiTestimonial, SpecChip } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import { Accent } from "../ui/kit";
@@ -322,7 +323,7 @@ export default function PartnersClientPage() {
       <AntiSection tone="white" labelledBy="partners-why-title">
         <div data-nav-tone="dark" className="grid overflow-hidden rounded-[12px] bg-[#0d1424] text-white lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative min-h-[340px] lg:min-h-[480px]">
-            <Image src="/assets/images/services/driver.webp" alt="" fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover object-[50%_55%]" />
+            <Image src="/assets/images/services/driver.webp" alt={altFor("/assets/images/services/driver.webp")} fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover object-[50%_55%]" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,20,36,0.82)_0%,rgba(13,20,36,0.25)_55%,rgba(13,20,36,0.55)_100%)] lg:bg-[linear-gradient(90deg,rgba(13,20,36,0.55)_0%,rgba(13,20,36,0.15)_60%,rgba(13,20,36,1)_100%)]" />
             <div className="relative max-w-[460px] p-8 md:p-10">
               <h2 id="partners-why-title" className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[38px]" style={{ textWrap: "balance" }}>
@@ -368,7 +369,7 @@ export default function PartnersClientPage() {
                   <div className="relative h-[220px] overflow-hidden rounded-[8px] bg-[#eef0f3] md:h-[240px]">
                     <Image
                       src={item.image}
-                      alt=""
+                      alt={altFor(item.image)}
                       fill
                       sizes={last ? "(min-width: 1280px) 600px, 100vw" : wide ? "(min-width: 1280px) 600px, (min-width: 768px) 50vw, 100vw" : "(min-width: 1280px) 400px, (min-width: 768px) 50vw, 100vw"}
                       className="object-cover"
@@ -464,7 +465,7 @@ export default function PartnersClientPage() {
             </ol>
           </div>
           <div className="relative min-h-[320px] overflow-hidden rounded-[12px] bg-[#eef0f3] lg:min-h-0 lg:[clip-path:polygon(12%_0,100%_0,100%_100%,26%_100%,0_46%)]">
-            <Image src="/assets/images/hero-img.webp" alt="" fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover object-[50%_68%]" />
+            <Image src="/assets/images/hero-img.webp" alt={altFor("/assets/images/hero-img.webp")} fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover object-[50%_68%]" />
           </div>
         </div>
       </AntiSection>
@@ -626,7 +627,7 @@ export default function PartnersClientPage() {
       <AntiSection tone="white" labelledBy="partners-cta-title">
         <div data-nav-tone="dark" className="relative isolate overflow-hidden rounded-[12px] bg-[#0d1424] text-white">
           <div className="absolute inset-0 -z-10 md:left-auto md:w-[58%]">
-            <Image src="/assets/images/cars/class-v/class-v-third.webp" alt="" fill sizes="(min-width: 768px) 720px, 100vw" className="object-cover object-[50%_62%]" />
+            <Image src="/assets/images/cars/class-v/class-v-third.webp" alt={altFor("/assets/images/cars/class-v/class-v-third.webp")} fill sizes="(min-width: 768px) 720px, 100vw" className="object-cover object-[50%_62%]" />
             <div className="absolute inset-0 bg-[#0d1424]/80 md:bg-transparent md:bg-[linear-gradient(90deg,#0d1424_0%,rgba(13,20,36,0.55)_38%,rgba(13,20,36,0.08)_100%)]" />
           </div>
           <div className="max-w-[620px] px-6 py-10 md:px-12 md:py-14">
