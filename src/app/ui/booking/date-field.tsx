@@ -46,7 +46,9 @@ export default function DateField({
   onChange: (v: { date: string; returnDate: string }) => void;
 }) {
   const [open, setOpen] = useState(false);
-  const [month, setMonth] = useState(() => parseIso(date) ?? new Date());
+  // The default date arrives after the page has loaded (booking-bar.tsx), so until the visitor moves to another month,
+  // the calendar opens on the month of the chosen date.
+  const [month, setMonth] = useState<Date | undefined>(undefined);
   const box = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const isReturn = showTrip && trip === "return";
@@ -55,6 +57,7 @@ export default function DateField({
 
   const value = isReturn ? (returnDate ? `${short(date)} → ${short(returnDate)}` : `${short(date)} → return?`) : short(date, true);
   const todayDate = parseIso(today) ?? new Date();
+  const shownMonth = month ?? parseIso(date) ?? todayDate;
 
   return (
     <div ref={box} className="relative">
@@ -67,7 +70,8 @@ export default function DateField({
         className="block rounded-control text-left outline-none focus-visible:ring-2 focus-visible:ring-[#e8ba64] focus-visible:ring-offset-4"
       >
         <span className="block text-[13px] font-medium text-[#5b6472]">{isReturn ? "Dates" : "Date"}</span>
-        <span className="mt-1 block whitespace-nowrap text-[16px] font-semibold text-[#0f1115]">{value}</span>
+        {/* Before the date is known, a non-breaking space keeps the line's height so the bar doesn't move. */}
+        <span className="mt-1 block whitespace-nowrap text-[16px] font-semibold text-[#0f1115]">{value || " "}</span>
       </button>
 
       <Popover
@@ -111,7 +115,7 @@ export default function DateField({
           <BookingCalendar
             mode="range"
             today={todayDate}
-            month={month}
+            month={shownMonth}
             onMonthChange={setMonth}
             selected={{ from: parseIso(date), to: returnDate ? parseIso(returnDate) : undefined }}
             onSelect={(r: DateRange | undefined) => {
@@ -125,7 +129,7 @@ export default function DateField({
           <BookingCalendar
             mode="single"
             today={todayDate}
-            month={month}
+            month={shownMonth}
             onMonthChange={setMonth}
             selected={parseIso(date)}
             onSelect={(d: Date | undefined) => {

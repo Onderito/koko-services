@@ -5,7 +5,7 @@
 // 21 Oct 2026, at the user's request: the date and the time open Cloudflare-style pop-ups (booking calendar, quarter
 // hours), and a transfer can be one way or return (two days, two times).
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import PlaceField from "./place-field";
 import DateField, { isoDate, type Trip } from "./date-field";
@@ -25,12 +25,20 @@ const CalendarIcon = () => <svg {...icon}><rect x="4" y="5.5" width="16" height=
 
 export default function BookingBar({ language = "en", aside }: { language?: string; aside?: React.ReactNode }) {
   const router = useRouter();
-  const today = useMemo(() => isoDate(new Date()), []);
-  const tomorrow = useMemo(() => isoDate(new Date(Date.now() + 86_400_000)), []);
+  // Today and the default date (tomorrow) come from the visitor's clock, so they are set once the page has loaded. The
+  // home page is built at deploy time: a date worked out during the first render differed from the page's HTML on every
+  // day after a deploy, React then rebuilt the whole page in the browser (error #418) and the layout's structured data
+  // ended up twice in the page (client's check, 18 Nov 2026).
+  const [today, setToday] = useState("");
   const [mode, setMode] = useState<Mode>("transfer");
   const [from, setFrom] = useState<PlaceDetails | null>(null);
   const [to, setTo] = useState<PlaceDetails | null>(null);
-  const [date, setDate] = useState(tomorrow);
+  const [date, setDate] = useState("");
+  useEffect(() => {
+    const now = new Date();
+    setToday(isoDate(now));
+    setDate(d => d || isoDate(new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)));
+  }, []);
   const [time, setTime] = useState("10:00");
   const [trip, setTrip] = useState<Trip>("oneway");
   const [returnDate, setReturnDate] = useState("");

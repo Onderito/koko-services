@@ -50,7 +50,7 @@ export const routePosts: BlogPost[] = [
         ],
         bullets: [
           "Private chauffeur: door-to-door, meet-and-greet, fixed price, flight tracking",
-          "Airport Express bus 110: budget-friendly but limited luggage and fixed stops",
+          "Airport express bus (ZOU! line 80): fixed stops and limited luggage space",
           "Train: requires a connection via Nice and a walk with bags to Monaco-Monte-Carlo station",
           "Taxi: available but pricing and availability vary, especially at peak times",
           "Helicopter: about 7 minutes airport to Monaco heliport, then a short car transfer",
@@ -87,7 +87,7 @@ export const routePosts: BlogPost[] = [
         id: "what-to-expect",
         title: "What to expect on arrival",
         paragraphs: [
-          "Nice Côte d'Azur is France's third-busiest airport, with two terminals a short shuttle apart. Your chauffeur checks your terminal from the flight number and meets you in the arrivals hall, so there is nothing to arrange once you land.",
+          "Nice Côte d'Azur is France's third-busiest airport, with two terminals a few minutes apart. Your chauffeur checks your terminal from the flight number and meets you in the arrivals hall, so there is nothing to arrange once you land.",
           "From there it is a single, direct ride to your Monaco address — a Monte-Carlo hotel, a private residence, or the quayside at Port Hercule if you are joining a yacht. The driver handles the route, the tunnels and Monaco's one-way system so you can simply enjoy the arrival.",
         ],
       },
@@ -189,7 +189,7 @@ export const routePosts: BlogPost[] = [
         id: "why-private-chauffeur",
         title: "Why book a private chauffeur to Cannes",
         paragraphs: [
-          "The alternatives all involve a compromise. The 210 Express bus is cheap but stops short of most hotels; the train needs a connection through Nice and a walk with luggage; taxis can be scarce when a festival ends and every arrival wants one at once.",
+          "The alternatives all involve a compromise. The ZOU! line 81 express bus stops short of most hotels; the train needs a connection through Nice and a walk with luggage; taxis can be scarce when a festival ends and every arrival wants one at once.",
           "A private chauffeur removes all of that. Your driver meets you inside arrivals, tracks the flight, and delivers you to the Carlton, Martinez, your apartment or a yacht at the Vieux Port with luggage handled from door to door.",
         ],
         bullets: [
@@ -1452,9 +1452,9 @@ export const routePosts: BlogPost[] = [
     slug: "nice-cote-dazur-airport-terminals-guide",
     title: "Nice Airport Terminals & Arrivals Guide",
     description:
-      "A practical guide to Nice Côte d'Azur Airport — Terminals 1 and 2, the shuttle between them, arrivals halls and where your chauffeur meets you.",
+      "A practical guide to Nice Côte d'Azur Airport — Terminals 1 and 2, the arrivals halls and where your chauffeur meets you.",
     excerpt:
-      "Terminals 1 and 2, the shuttle between them, the arrivals halls and where your private chauffeur meets you at Nice Airport.",
+      "Terminals 1 and 2, the arrivals halls and where your private chauffeur meets you at Nice Airport.",
     category: "Airport Transfer",
     heroKicker: "Nice Airport guide",
     readTime: "6 min read",
@@ -1470,18 +1470,18 @@ export const routePosts: BlogPost[] = [
       "Nice Airport chauffeur pickup",
     ],
     intro:
-      "Nice Côte d'Azur is France's third-busiest airport and the main gateway to the French Riviera. It is compact and easy to navigate once you know the layout — two terminals, a free shuttle between them, and clear arrivals halls. This guide explains how the airport works and exactly where your private chauffeur will meet you.",
+      "Nice Côte d'Azur is France's third-busiest airport and the main gateway to the French Riviera. It is compact and easy to navigate once you know the layout — two terminals a few minutes apart, and clear arrivals halls. This guide explains how the airport works and exactly where your private chauffeur will meet you.",
     sections: [
       {
         id: "two-terminals",
         title: "Terminal 1 and Terminal 2",
         paragraphs: [
-          "The airport has two passenger terminals. They sit a short distance apart on the seafront west of the city, connected by a free shuttle bus that runs frequently and takes only a few minutes.",
+          "The airport has two passenger terminals. They sit a few minutes apart on the seafront west of the city, and your chauffeur meets you at the right one.",
           "Airlines are split between the two, so it is worth checking your terminal on your boarding pass or booking. For a chauffeur pickup it does not matter which one you land at — your driver simply meets you at the right arrivals hall.",
         ],
         bullets: [
           "Two terminals, a few minutes apart on the coast",
-          "A free shuttle bus connects Terminal 1 and Terminal 2",
+          "Terminal 1 and Terminal 2 are a few minutes apart",
           "Your airline determines which terminal you use",
           "West of Nice, about 7 km from the city centre",
         ],
@@ -1513,7 +1513,7 @@ export const routePosts: BlogPost[] = [
       {
         question: "How many terminals does Nice Airport have?",
         answer:
-          "Two: Terminal 1 and Terminal 2. They are a few minutes apart and linked by a free shuttle bus.",
+          "Two: Terminal 1 and Terminal 2. They are a few minutes apart, and your chauffeur meets you at the right one.",
       },
       {
         question: "Where does the chauffeur meet me at Nice Airport?",

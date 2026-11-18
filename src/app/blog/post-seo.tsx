@@ -5,6 +5,7 @@
 import type { Metadata } from "next";
 
 import { siteUrl, type BlogPost } from "../data/blog-posts";
+import { articleUpdatedAt } from "../data/page-dates";
 import { cities, vehicles } from "../data/vehicles";
 
 export function postMetadata(post: BlogPost): Metadata {
@@ -104,7 +105,8 @@ export function PostSchemas({ post }: { post: BlogPost }) {
     image: rich ? { "@type": "ImageObject", url: `${siteUrl}${post.imageUrl}`, caption: post.imageAlt } : `${siteUrl}${post.imageUrl}`,
     ...(rich ? { inLanguage: "en", keywords: post.keywords.join(", ") } : {}),
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    // The day the article's text last changed (data/page-dates.ts, 18 Nov 2026), else its publication.
+    dateModified: articleUpdatedAt[post.slug] ?? post.publishedAt,
     author: {
       "@type": "Organization",
       name: "kokolimo",
