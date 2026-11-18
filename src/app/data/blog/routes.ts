@@ -51,7 +51,6 @@ export const routePosts: BlogPost[] = [
         bullets: [
           "Private chauffeur: door-to-door, meet-and-greet, fixed price, flight tracking",
           "Airport express bus (ZOU! line 80): fixed stops and limited luggage space",
-          "Train: requires a connection via Nice and a walk with bags to Monaco-Monte-Carlo station",
           "Taxi: available but pricing and availability vary, especially at peak times",
           "Helicopter: about 7 minutes airport to Monaco heliport, then a short car transfer",
         ],
@@ -60,7 +59,7 @@ export const routePosts: BlogPost[] = [
         id: "why-private-chauffeur",
         title: "Why a private chauffeur is the smoothest choice",
         paragraphs: [
-          "After a flight, the last thing most travellers want is to hunt for a taxi rank or drag suitcases between a train and a bus. A private chauffeur waits inside the terminal, tracks your flight in case it is early or delayed, and drives you straight to your hotel, villa or yacht in Monaco.",
+          "After a flight, the last thing most travellers want is to hunt for a taxi rank or drag their suitcases across town. A private chauffeur waits inside the terminal, tracks your flight in case it is early or delayed, and drives you straight to your hotel, villa or yacht in Monaco.",
           "The price is agreed in advance, so there are no surprises at the end of the ride, and the vehicle is matched to your group and luggage. For business travellers and families alike, it is the difference between arriving frazzled and arriving relaxed.",
         ],
         bullets: [
@@ -187,7 +186,7 @@ export const routePosts: BlogPost[] = [
         id: "why-private-chauffeur",
         title: "Why book a private chauffeur to Cannes",
         paragraphs: [
-          "The alternatives all involve a compromise. The ZOU! line 81 express bus stops short of most hotels; the train needs a connection through Nice and a walk with luggage; taxis can be scarce when a festival ends and every arrival wants one at once.",
+          "The alternatives all involve a compromise. The ZOU! line 81 express bus stops short of most hotels; taxis can be scarce when a festival ends and every arrival wants one at once.",
           "A private chauffeur removes all of that. Your driver meets you inside arrivals, tracks the flight, and delivers you to the Carlton, Martinez, your apartment or a yacht at the Vieux Port with luggage handled from door to door.",
         ],
         bullets: [
