@@ -30,10 +30,11 @@ import {
   type ServiceCardLink,
   type ServicePageConfig,
 } from "../data/service-pages";
-import { AntiCard, AntiHeading, AntiSection, AntiSplit, GoldArrow, SpecChip, type AntiTone } from "../ui/anti";
+import { AntiCard, AntiHeading, AntiOutlinePill, AntiSection, AntiSplit, GoldArrow, SpecChip, type AntiTone } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import FaqList from "../ui/faq-list";
 import { cityForPage, RoutePrices } from "../ui/destination-prices";
+import { servicePrices } from "../ui/service-prices";
 import { Accent } from "../ui/kit";
 
 const SHADOW = "shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]";
@@ -150,7 +151,7 @@ function heroAccent(title: string) {
 
 /* ------------------------------------------------------------------ blocks */
 
-function Hero({ config, actionLabel }: { config: ServicePageConfig; actionLabel: string }) {
+function Hero({ config, actionLabel, actionHref, askHref, priceLine }: { config: ServicePageConfig; actionLabel: string; actionHref: string; askHref?: string; priceLine?: string }) {
   const focus = HERO_FOCUS[config.heroImageSrc] ?? "object-[30%_65%]";
   return (
     <section data-hero-tone="dark" data-nav-tone="dark" className="relative isolate overflow-hidden bg-[#0d1424] text-white">
@@ -167,8 +168,10 @@ function Hero({ config, actionLabel }: { config: ServicePageConfig; actionLabel:
           <Accent text={config.heroTitle} accent={heroAccent(config.heroTitle)} tone="dark" />
         </h1>
         <p className="mt-5 max-w-[540px] text-[17px] leading-relaxed text-white/80 md:text-[18px]">{config.heroDescription}</p>
+        {priceLine && <p className="mt-4 max-w-[540px] text-[15px] font-semibold leading-relaxed text-[#d4b471] md:text-[16px]">{priceLine}</p>}
         <div className="mt-9 flex flex-wrap items-center gap-4">
-          <ArrowButton text={actionLabel} href={config.heroAction?.href ?? "/contact-me"} size="lg" />
+          <ArrowButton text={actionLabel} href={actionHref} size="lg" />
+          {askHref && <AntiOutlinePill href={askHref}>Ask a question</AntiOutlinePill>}
         </div>
       </div>
     </section>
@@ -306,8 +309,15 @@ function Faq({ items }: { items: NonNullable<ServicePageConfig["faq"]> }) {
 type Block = { key: string; glued?: boolean; render: (tone: AntiTone, glued: boolean) => ReactNode };
 
 export default function ServicePageTemplate({ config }: { config: ServicePageConfig }) {
+  // Route pages (Nice Airport to a destination): the main button opens the home's booking bar, and
+  // questions go to the contact page. The transfers hub and the other page families keep their buttons.
+  const isRoute = config.path.startsWith("/our-services/transfers/") && !config.heroAction;
+  const prices = servicePrices(config.path);
+  const primaryActionHref = config.heroAction?.href ?? (isRoute ? "/#book" : "/contact-me");
   const primaryActionLabel = config.heroAction
     ? config.heroAction.label
+    : isRoute
+    ? "Get my quote"
     : config.path.startsWith("/our-services/transfers")
     ? "Book my transfer"
     : config.path.startsWith("/our-services/hourly-chauffeur")
@@ -492,17 +502,18 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
 
   return (
     <>
-      <Hero config={config} actionLabel={primaryActionLabel} />
+      <Hero config={config} actionLabel={primaryActionLabel} actionHref={primaryActionHref} askHref={isRoute ? "/contact-me" : undefined} priceLine={prices?.line} />
       {sections}
       <FooterComponent
         title={config.cta.title}
         description={config.cta.description}
         buttonText={primaryActionLabel}
-        buttonHref={config.cta.buttonHref}
+        buttonHref={isRoute ? "/#book" : config.cta.buttonHref}
         flushTop={tone === "white"}
         image={ctaPhoto}
       />
       <Footer withCta={false} />
+      {prices && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(prices.schema) }} />}
     </>
   );
 }

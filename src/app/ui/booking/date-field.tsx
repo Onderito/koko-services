@@ -1,7 +1,6 @@
 "use client";
 
-// The booking bar's date field (user, 21 Oct 2026: "a better calendar ... Cloudflare style"; "propose a range date as
-// well ... adapt it to One way or not"). A field showing the chosen day(s) opens the booking calendar in a pop-up. For a
+// The booking bar's date field. A field showing the chosen day(s) opens the booking calendar in a pop-up. For a
 // transfer, "One way / Return" sits on top (the pill slides between them, Motion spring): one way picks one day, return
 // picks the outbound and return days as a range. By the hour picks one day. The calendar's code loads on first open.
 

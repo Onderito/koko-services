@@ -1,9 +1,8 @@
 "use client";
 
-// The hero booking bar, modelled on Transfeero: two tabs (Transfer / By the hour), From, To (or duration),
-// date, time, passengers, and "Get my quote", which opens /reservation?t=<signed trip>.
-// 21 Oct 2026, at the user's request: the date and the time open Cloudflare-style pop-ups (booking calendar, quarter
-// hours), and a transfer can be one way or return (two days, two times).
+// The hero booking bar: two tabs (Transfer / By the hour), From, To (or duration), date, time, passengers, and
+// "Get my quote", which opens /reservation?t=<signed trip>. The date and the time open pop-ups (booking calendar,
+// quarter hours), and a transfer can be one way or return (two days, two times).
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -28,7 +27,7 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
   // Today and the default date (tomorrow) come from the visitor's clock, so they are set once the page has loaded. The
   // home page is built at deploy time: a date worked out during the first render differed from the page's HTML on every
   // day after a deploy, React then rebuilt the whole page in the browser (error #418) and the layout's structured data
-  // ended up twice in the page (client's check, 18 Nov 2026).
+  // ended up twice in the page.
   const [today, setToday] = useState("");
   const [mode, setMode] = useState<Mode>("transfer");
   const [from, setFrom] = useState<PlaceDetails | null>(null);

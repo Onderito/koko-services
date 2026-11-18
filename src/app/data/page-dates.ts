@@ -1,10 +1,7 @@
-// The real date of each page's last significant change, for the sitemap's <lastmod> and the articles' dateModified.
-//
-// 18 Nov 2026 (the client's check): every static and service page carried the same fixed date, 18 September, and every
-// article its publish date even after an edit. These dates come from the site's git history, recomputed and checked a
-// second time (koko project: tools/jev-seo/runs/audit/2026-11-18/lastmod.json): every page changed with the relaunch of
-// 2 Nov 2026, the 5 route pages with a price table on 3 Nov, the home and the blog on 13 Nov, plus the corrections below.
-// Google uses <lastmod> only when it is consistently accurate, so keep it true.
+// The real date of each page's last significant change, for the sitemap's <lastmod> and the articles' dateModified,
+// taken from the site's git history: every page changed with the relaunch of 2 Nov 2026, the 5 route pages with a price
+// table on 3 Nov, the home and the blog on 13 Nov, plus the later changes below. Google uses <lastmod> only when it is
+// consistently accurate, so keep it true.
 //
 // RULE: when the content of a page changes, set its date here in the same commit.
 
@@ -13,21 +10,36 @@ export const SITE_RELAUNCH = "2026-11-02";
 
 /** Pages whose last significant change is after the relaunch, by sitemap route ("" is the home). */
 export const pageUpdatedAt: Record<string, string> = {
-  // 3 Nov 2026: a price table on each destination page.
-  "/our-services/transfers/nice-airport-transfer": "2026-11-03",
-  "/our-services/transfers/monaco-airport-transfer": "2026-11-03",
-  "/our-services/transfers/cannes-airport-transfer": "2026-11-03",
-  "/our-services/transfers/saint-tropez-transfer": "2026-11-03",
-  "/our-services/transfers/antibes-transfer": "2026-11-03",
-  // 13 Nov 2026: the home's articles block, the blog home and two categories.
-  "": "2026-11-13",
-  "/blog": "2026-11-13",
-  "/blog/category/destinations": "2026-11-13",
-  "/blog/category/travel-guides": "2026-11-13",
-  // 18 Nov 2026: the client's corrections (the airport bus lines; the terminals).
+  // 18 Nov 2026: 37 articles taken off the blog (data/removed-posts.ts), so the blog home and six categories list fewer.
+  "/blog": "2026-11-18",
+  "/blog/category/airport-transfers": "2026-11-18",
+  "/blog/category/destinations": "2026-11-18",
+  "/blog/category/yacht-transfers": "2026-11-18",
+  "/blog/category/luxury-hotels": "2026-11-18",
+  "/blog/category/travel-guides": "2026-11-18",
+  "/blog/category/chauffeur-services": "2026-11-18",
+  // 18 Nov 2026: the airport bus lines and the terminals.
   "/blog/nice-airport-to-monaco": "2026-11-18",
   "/blog/nice-airport-to-cannes": "2026-11-18",
   "/blog/nice-cote-dazur-airport-terminals-guide": "2026-11-18",
+  // 18 Nov 2026: the home's title, description and FAQ; the route pages' titles, descriptions, links line and booking
+  // button; the service pages' titles, descriptions and starting prices.
+  "": "2026-11-18",
+  ...Object.fromEntries(
+    [
+      "transfers/nice-airport-transfer", "transfers/long-distance-transfer", "transfers/monaco-airport-transfer",
+      "transfers/cannes-airport-transfer", "transfers/saint-tropez-transfer", "transfers/antibes-transfer",
+      "transfers/saint-jean-cap-ferrat-transfer", "transfers/eze-transfer", "transfers/villefranche-transfer",
+      "transfers/menton-transfer",
+      "hourly-chauffeur/nice", "hourly-chauffeur/saint-tropez", "hourly-chauffeur/courchevel", "hourly-chauffeur/megeve",
+      "hourly-chauffeur/chamonix",
+      "private-tours/nice", "private-tours/cannes", "private-tours/monaco", "private-tours/saint-tropez",
+      "private-tours/courchevel", "private-tours/megeve", "private-tours/chamonix",
+      "yacht-transfers", "yacht-transfers/monaco", "yacht-transfers/cannes", "yacht-transfers/antibes",
+      "yacht-transfers/saint-tropez", "yacht-transfers/nice-airport", "yacht-transfers/crew-transportation",
+      "events", "events/monaco-grand-prix", "events/cannes-film-festival", "events/monaco-yacht-show",
+    ].map(page => [`/our-services/${page}`, "2026-11-18"]),
+  ),
 };
 
 /** Articles whose text changed after publication, by slug: their Article markup's dateModified. */

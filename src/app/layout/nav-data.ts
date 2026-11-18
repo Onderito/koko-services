@@ -44,6 +44,7 @@ export const NAV_PANELS: NavPanel[] = [
         title: "Transfers from Nice",
         href: "/our-services/transfers",
         links: [
+          { href: "/our-services/transfers/nice-airport-transfer", label: "Nice Airport" },
           { href: "/our-services/transfers/monaco-airport-transfer", label: "Monaco" },
           { href: "/our-services/transfers/cannes-airport-transfer", label: "Cannes" },
           { href: "/our-services/transfers/antibes-transfer", label: "Antibes" },

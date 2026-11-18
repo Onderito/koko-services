@@ -702,7 +702,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need a Nice Airport Transfer?",
@@ -816,7 +816,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Planning a Longer Private Transfer?",
@@ -867,9 +867,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "monaco-airport-transfer",
     path: "/our-services/transfers/monaco-airport-transfer",
     metadata: {
-      title: "Monaco Airport Transfer | Private Chauffeur | kokolimo",
+      title: "Nice Airport to Monaco Transfer | Private Driver | Kokolimo",
       description:
-        "Private Nice Airport to Monaco transfer with meet-and-greet and a chauffeur to Monte-Carlo, Port Hercule and the hotels, in about 30 minutes.",
+        "Private Nice Airport to Monaco transfer from €150 at a fixed price, with meet-and-greet and a chauffeur to Monte-Carlo, Port Hercule and the hotels.",
       keywords: [
         "Monaco airport transfer",
         "Nice airport to Monaco",
@@ -925,7 +925,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need a Monaco Airport Transfer?",
@@ -966,9 +966,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "cannes-airport-transfer",
     path: "/our-services/transfers/cannes-airport-transfer",
     metadata: {
-      title: "Cannes Airport Transfer | Private Chauffeur | kokolimo",
+      title: "Nice Airport to Cannes Transfer | Private Driver | Kokolimo",
       description:
-        "Private Nice Airport to Cannes transfer with meet-and-greet and a chauffeur to the Croisette, the hotels and the festivals, in about 30 minutes.",
+        "Private Nice Airport to Cannes transfer from €150 at a fixed price, with meet-and-greet and a chauffeur to the Croisette, the hotels and the festivals.",
       keywords: [
         "Cannes airport transfer",
         "Nice airport to Cannes",
@@ -1024,7 +1024,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need a Cannes Airport Transfer?",
@@ -1123,7 +1123,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need a Saint-Tropez Transfer?",
@@ -1164,9 +1164,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "antibes-transfer",
     path: "/our-services/transfers/antibes-transfer",
     metadata: {
-      title: "Antibes Airport Transfer | Chauffeur | kokolimo",
+      title: "Nice Airport to Antibes Transfer | Private Driver | Kokolimo",
       description:
-        "Private Nice Airport to Antibes transfer with meet-and-greet and a chauffeur to Juan-les-Pins, Cap d'Antibes and Port Vauban, in about 25 minutes.",
+        "Private Nice Airport to Antibes transfer from €120 at a fixed price, with meet-and-greet and a chauffeur to Juan-les-Pins, Cap d'Antibes and Port Vauban.",
       keywords: [
         "Antibes airport transfer",
         "Nice airport to Antibes",
@@ -1222,7 +1222,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need an Antibes Transfer?",
@@ -1263,9 +1263,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "saint-jean-cap-ferrat-transfer",
     path: "/our-services/transfers/saint-jean-cap-ferrat-transfer",
     metadata: {
-      title: "Saint-Jean-Cap-Ferrat Transfer | kokolimo",
+      title: "Nice Airport to Saint-Jean-Cap-Ferrat Transfer | Kokolimo",
       description:
-        "Private Nice Airport to Saint-Jean-Cap-Ferrat transfer with meet-and-greet and a chauffeur to the villas, hotels and yachts of the peninsula.",
+        "Private Nice Airport to Saint-Jean-Cap-Ferrat transfer from €110 at a fixed price, with meet-and-greet and a chauffeur to the villas, hotels and yachts.",
       keywords: [
         "Saint-Jean-Cap-Ferrat transfer",
         "Cap-Ferrat chauffeur transfer",
@@ -1321,7 +1321,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need a Cap-Ferrat Transfer?",
@@ -1362,9 +1362,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "eze-transfer",
     path: "/our-services/transfers/eze-transfer",
     metadata: {
-      title: "Èze Transfer | Private Chauffeur | kokolimo",
+      title: "Nice Airport to Èze Transfer | Private Driver | Kokolimo",
       description:
-        "Private Nice Airport to Èze transfer with a chauffeur up the Moyenne Corniche to the perched village, its hotels and clifftop restaurants.",
+        "Private Nice Airport to Èze transfer from about €110, fixed in advance, with a chauffeur up the Moyenne Corniche to the perched village and its hotels.",
       keywords: [
         "Eze transfer",
         "Nice airport to Eze",
@@ -1420,7 +1420,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need an Èze Transfer?",
@@ -1461,9 +1461,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "villefranche-transfer",
     path: "/our-services/transfers/villefranche-transfer",
     metadata: {
-      title: "Villefranche-sur-Mer Transfer | kokolimo",
+      title: "Nice Airport to Villefranche-sur-Mer Transfer | Kokolimo",
       description:
-        "Private Nice Airport to Villefranche-sur-Mer transfer with meet-and-greet and a chauffeur to the old town, the hotels and the cruise tender quay.",
+        "Private Nice Airport to Villefranche-sur-Mer transfer from about €100, fixed in advance, with meet-and-greet and a chauffeur to the old town and the quay.",
       keywords: [
         "Villefranche-sur-Mer transfer",
         "Nice airport to Villefranche",
@@ -1519,7 +1519,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need a Villefranche Transfer?",
@@ -1560,9 +1560,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "menton-transfer",
     path: "/our-services/transfers/menton-transfer",
     metadata: {
-      title: "Menton Transfer | Private Chauffeur | kokolimo",
+      title: "Nice Airport to Menton Transfer | Private Driver | Kokolimo",
       description:
-        "Private Nice Airport to Menton transfer with meet-and-greet and a chauffeur to the Italianate old town, the gardens and the seafront hotels.",
+        "Private Nice Airport to Menton transfer from about €120, fixed in advance, with meet-and-greet and a chauffeur to the old town, the gardens and the hotels.",
       keywords: [
         "Menton transfer",
         "Nice airport to Menton",
@@ -1618,7 +1618,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     localLinksTitle: "Explore Transfer Types",
     localLinksDescription:
-      "Browse the other transfer pages to help visitors land on the route format that matches their travel need.",
+      "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
       title: "Need a Menton Transfer?",
@@ -1662,9 +1662,9 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "nice",
     path: "/our-services/hourly-chauffeur/nice",
     metadata: {
-      title: "Nice Hourly Chauffeur Service | kokolimo",
+      title: "Nice Hourly Chauffeur Service | Private Driver | Kokolimo",
       description:
-        "Book a private hourly chauffeur in Nice for business meetings, luxury hotels, shopping, airport pickups, and flexible travel across the French Riviera.",
+        "Private hourly chauffeur in Nice, starting from €90 an hour or €750 a full day, for business meetings, luxury hotels, shopping and airport pickups.",
       keywords: [
         "hourly chauffeur Nice",
         "private driver Nice",
@@ -2025,9 +2025,9 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "saint-tropez",
     path: "/our-services/hourly-chauffeur/saint-tropez",
     metadata: {
-      title: "Saint-Tropez Hourly Chauffeur Service | kokolimo",
+      title: "Saint-Tropez Hourly Chauffeur Service | Kokolimo",
       description:
-        "Hire a private chauffeur in Saint-Tropez by the hour for villa stays, yacht access, beach clubs, restaurants, and luxury travel.",
+        "Hire a private chauffeur in Saint-Tropez by the hour, starting from €90 an hour or €750 a full day, for villas, yachts, beach clubs and restaurants.",
       keywords: [
         "hourly chauffeur Saint-Tropez",
         "Saint-Tropez private driver by the hour",
@@ -2129,9 +2129,9 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "megeve",
     path: "/our-services/hourly-chauffeur/megeve",
     metadata: {
-      title: "Megève Hourly Chauffeur Service | kokolimo",
+      title: "Megève Chauffeur Service | Private Driver | Kokolimo",
       description:
-       "Private hourly chauffeur service in Megève for ski holidays, luxury hotels, chalet transfers, shopping, dining and flexible alpine travel.",
+       "Private hourly chauffeur service in Megève, starting from €90 an hour or €750 a full day, for ski holidays, luxury hotels, chalets, shopping and dining.",
       keywords: [
         "hourly chauffeur Megève",
         "private driver Megève",
@@ -2231,9 +2231,9 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "courchevel",
     path: "/our-services/hourly-chauffeur/courchevel",
     metadata: {
-      title: "Courchevel Hourly Chauffeur Service | kokolimo",
+      title: "Courchevel Chauffeur Service | Private Driver | Kokolimo",
       description:
-        "Private hourly chauffeur service in Courchevel for luxury hotels, chalets, ski holidays, shopping, dining and flexible alpine travel.",
+        "Private hourly chauffeur service in Courchevel, starting from €90 an hour or €750 a full day, for luxury hotels, chalets, ski holidays, shopping and dining.",
       keywords: [
         "hourly chauffeur Courchevel",
         "private driver Courchevel",
@@ -2338,9 +2338,9 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     slug: "chamonix",
     path: "/our-services/hourly-chauffeur/chamonix",
     metadata: {
-      title: "Chamonix Hourly Chauffeur Service | kokolimo",
+      title: "Chamonix Chauffeur Service | Private Driver | Kokolimo",
       description:
-       "Private hourly chauffeur service in Chamonix for ski holidays, luxury hotels, mountain excursions, shopping, dining and flexible alpine travel.",
+       "Private hourly chauffeur service in Chamonix, starting from €90 an hour or €750 a full day, for ski holidays, luxury hotels and mountain excursions.",
       keywords: [
         "hourly chauffeur Chamonix",
         "private driver Chamonix",
@@ -2442,9 +2442,9 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "nice",
     path: "/our-services/private-tours/nice",
     metadata: {
-      title: "Nice Private Chauffeur Tour | kokolimo",
+      title: "Nice Private Chauffeur Tour | Private Driver | Kokolimo",
       description:
-        "Private chauffeur tour in Nice with elegant city touring, coastal viewpoints, old town stops, and premium transportation throughout the day.",
+        "Private chauffeur tour in Nice, starting from €90 an hour or €750 a full day, with city touring, coastal viewpoints and old town stops.",
       keywords: [
         "chauffeur tour Nice",
         "private tour Nice driver",
@@ -2564,9 +2564,9 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "cannes",
     path: "/our-services/private-tours/cannes",
     metadata: {
-      title: "Cannes Private Chauffeur Tour | kokolimo",
+      title: "Cannes Private Chauffeur Tour | Private Driver | Kokolimo",
       description:
-        "Private chauffeur tour in Cannes with Croisette highlights, shopping areas, seafront touring, and premium day travel.",
+        "Private chauffeur tour in Cannes, starting from €90 an hour or €750 a full day, with the Croisette, shopping streets and seafront touring.",
       keywords: [
         "chauffeur tour Cannes",
         "private tour Cannes driver",
@@ -2678,9 +2678,9 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "monaco",
     path: "/our-services/private-tours/monaco",
     metadata: {
-      title: "Private Monaco Tour With Chauffeur | Kokolimo",
+      title: "Monaco Private Chauffeur Tour | Private Driver | Kokolimo",
       description:
-        "Book a private Monaco tour with a chauffeur. Choose a 4-hour Monaco itinerary or an 8-hour Monaco and Èze tour with flexible hotel, yacht or airport pickup.",
+        "Private Monaco tour with a chauffeur, starting from €90 an hour or €750 a full day: a 4-hour Monaco itinerary or an 8-hour Monaco and Èze tour.",
       keywords: [
         "chauffeur tour Monaco",
         "private tour Monaco driver",
@@ -2865,9 +2865,9 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "saint-tropez",
     path: "/our-services/private-tours/saint-tropez",
     metadata: {
-      title: "Saint-Tropez Private Chauffeur Tour | kokolimo",
+      title: "Saint-Tropez Private Tour | Private Driver | Kokolimo",
       description:
-        "Private chauffeur tour in Saint-Tropez with village access, coastal roads, elegant beach-side stops, and premium touring comfort.",
+        "Private chauffeur tour in Saint-Tropez, starting from €90 an hour or €750 a full day, with village access, coastal roads and beach-side stops.",
       keywords: [
         "chauffeur tour Saint-Tropez",
         "private tour Saint-Tropez driver",
@@ -2979,8 +2979,8 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "megeve",
     path: "/our-services/private-tours/megeve",
     metadata: {
-      title: "Megève Private Tour | French Alps | kokolimo",
-      description: "Private chauffeur tours of Megève in the French Alps — luxury chalets, ski resorts, gourmet dining and scenic Alpine drives, tailor-made each winter.",
+      title: "Megève Private Tour | Private Driver | Kokolimo",
+      description: "Private chauffeur tours of Megève in the French Alps, starting from €90 an hour or €750 a full day: luxury chalets, ski resorts and gourmet dining.",
       keywords: [
         "private tours Megève",
         "Megève chauffeur tour",
@@ -2991,8 +2991,8 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
         "winter chauffeur Megève",
       ],
     },
-    serviceLabel: "Mégeve",
-    heroTitle: "Private Tour in Mégeve",
+    serviceLabel: "Megève",
+    heroTitle: "Private Tour in Megève",
     heroDescription:
       "Explore Megève during the winter season with a private chauffeur and luxury vehicle. Discover luxury chalets, ski resorts, mountain villages, gourmet restaurants, and tailor-made Alpine experiences throughout the French Alps.",      heroImageSrc: "/assets/images/services/megeve.webp",
     heroImageAlt: "Private chauffeur tour in Megève",
@@ -3096,8 +3096,8 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "courchevel",
     path: "/our-services/private-tours/courchevel",
     metadata: {
-      title: "Courchevel Private Tour | French Alps | kokolimo",
-      description: "Private chauffeur tours of Courchevel in the French Alps — five-star resorts, chalets, ski slopes and scenic Alpine drives, tailor-made each winter.",
+      title: "Courchevel Private Tour | Private Driver | Kokolimo",
+      description: "Private chauffeur tours of Courchevel in the French Alps, starting from €90 an hour or €750 a full day: five-star resorts, chalets and ski slopes.",
       keywords: [
         "private tours Courchevel",
         "Courchevel chauffeur tour",
@@ -3214,8 +3214,8 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     slug: "chamonix",
     path: "/our-services/private-tours/chamonix",
     metadata: {
-      title: "Chamonix Private Tour | French Alps | kokolimo",
-      description: "Private chauffeur tours of Chamonix in the French Alps — Mont Blanc viewpoints, Alpine villages, luxury hotels and scenic drives, tailor-made each winter.",
+      title: "Chamonix Private Tour | Private Driver | Kokolimo",
+      description: "Private chauffeur tours of Chamonix in the French Alps, starting from €90 an hour or €750 a full day: Mont Blanc viewpoints and Alpine villages.",
       keywords: [
          "private tours Chamonix",
           "Chamonix chauffeur tour",
@@ -3366,9 +3366,9 @@ export const yachtTransfersPage: ServicePageConfig = {
   slug: "yacht-transfers",
   path: "/our-services/yacht-transfers",
   metadata: {
-    title: "Yacht Transfers French Riviera | Chauffeur | kokolimo",
+    title: "Yacht Transfers French Riviera | Chauffeur | Kokolimo",
     description:
-      "Private chauffeur yacht transfers across the French Riviera — from Nice Airport to the marinas of Monaco, Cannes, Antibes and Saint-Tropez.",
+      "Private chauffeur yacht transfers from Nice Airport to the marinas of Monaco, Cannes, Antibes and Saint-Tropez, starting from €120 one way.",
     keywords: [
       "yacht transfers French Riviera",
       "superyacht chauffeur transfer",
@@ -3462,9 +3462,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     slug: "monaco",
     path: "/our-services/yacht-transfers/monaco",
     metadata: {
-      title: "Monaco Yacht Transfer | Port Hercule | kokolimo",
+      title: "Monaco Yacht Transfer | Port Hercule | Kokolimo",
       description:
-        "Private chauffeur yacht transfer to Port Hercule in Monaco — from Nice Airport to the deep-water superyacht harbour in about 30 minutes.",
+        "Private chauffeur yacht transfer to Port Hercule in Monaco, starting from €150 one way from Nice Airport, to the superyacht harbour in about 30 minutes.",
       keywords: [
         "Monaco yacht transfer",
         "Port Hercule transfer",
@@ -3561,9 +3561,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     slug: "cannes",
     path: "/our-services/yacht-transfers/cannes",
     metadata: {
-      title: "Cannes Yacht Transfer | Vieux Port | kokolimo",
+      title: "Cannes Yacht Transfer | Vieux Port | Kokolimo",
       description:
-        "Private chauffeur yacht transfer to the Vieux Port and Port Canto in Cannes — from Nice Airport to the quay in about 30 minutes.",
+        "Private chauffeur yacht transfer to the Vieux Port and Port Canto in Cannes, starting from €150 one way from Nice Airport, in about 30 minutes.",
       keywords: [
         "Cannes yacht transfer",
         "Vieux Port Cannes transfer",
@@ -3660,9 +3660,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     slug: "saint-tropez",
     path: "/our-services/yacht-transfers/saint-tropez",
     metadata: {
-      title: "Saint-Tropez Yacht Transfer | kokolimo",
+      title: "Saint-Tropez Yacht Transfer | Kokolimo",
       description:
-        "Private chauffeur yacht transfer to the old port of Saint-Tropez — from Nice Airport by road or boat, timed around the summer traffic.",
+        "Private chauffeur yacht transfer to the old port of Saint-Tropez, starting from €400 one way by road from Nice Airport, timed around the summer traffic.",
       keywords: [
         "Saint-Tropez yacht transfer",
         "Saint-Tropez port transfer",
@@ -3759,9 +3759,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     slug: "antibes",
     path: "/our-services/yacht-transfers/antibes",
     metadata: {
-      title: "Port Vauban Yacht Transfer | Antibes | kokolimo",
+      title: "Port Vauban Yacht Transfer | Antibes | Kokolimo",
       description:
-        "Private chauffeur yacht transfer to Port Vauban in Antibes — the largest marina in Europe — from Nice Airport in about 25 minutes.",
+        "Private chauffeur yacht transfer to Port Vauban in Antibes, Europe's largest marina, starting from €120 one way from Nice Airport, in about 25 minutes.",
       keywords: [
         "Antibes yacht transfer",
         "Port Vauban transfer",
@@ -3858,9 +3858,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     slug: "nice-airport",
     path: "/our-services/yacht-transfers/nice-airport",
     metadata: {
-      title: "Nice Airport to Yacht Transfer | kokolimo",
+      title: "Nice Airport to Yacht Transfer | Kokolimo",
       description:
-        "Private chauffeur transfer from Nice Airport, or its private jet terminal, straight to your yacht at any Riviera marina, met on arrival.",
+        "Private chauffeur transfer from Nice Airport, or its private jet terminal, to your yacht at any Riviera marina, starting from €120 one way, met on arrival.",
       keywords: [
         "Nice airport yacht transfer",
         "airport to yacht Riviera",
@@ -3957,9 +3957,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     slug: "crew-transportation",
     path: "/our-services/yacht-transfers/crew-transportation",
     metadata: {
-      title: "Yacht Crew Transportation | Riviera | kokolimo",
+      title: "Yacht Crew Transportation | Riviera | Kokolimo",
       description:
-        "Private chauffeur transport for superyacht crew on the French Riviera — airport runs, crew changes and provisioning, on call day and night.",
+        "Private chauffeur transport for superyacht crew on the Riviera, starting from €90 an hour: airport runs, crew changes and provisioning, day and night.",
       keywords: [
         "yacht crew transportation",
         "superyacht crew transfers",
@@ -4076,9 +4076,9 @@ export const eventsPage: ServicePageConfig = {
   slug: "events",
   path: "/our-services/events",
   metadata: {
-    title: "Luxury Event Transport French Riviera | kokolimo",
+    title: "Luxury Event Transport French Riviera | Chauffeur | Kokolimo",
     description:
-      "Private chauffeur transport for French Riviera events — the Monaco Grand Prix, Cannes Film Festival, Monaco Yacht Show and more, around the crowds.",
+      "Private chauffeur for French Riviera events, starting from €90 an hour or €750 a full day: the Monaco Grand Prix, Cannes Film Festival and Monaco Yacht Show.",
     keywords: [
       "Riviera event transport",
       "Monaco Grand Prix chauffeur",
@@ -4172,9 +4172,9 @@ export const eventPages: Record<string, ServicePageConfig> = {
     slug: "monaco-grand-prix",
     path: "/our-services/events/monaco-grand-prix",
     metadata: {
-      title: "Monaco Grand Prix Transport | Chauffeur | kokolimo",
+      title: "Monaco Grand Prix Chauffeur | Private Driver | Kokolimo",
       description:
-        "Private chauffeur transport for the Monaco Grand Prix each May — from Nice Airport to Monaco, around the circuit closures and race-week crowds.",
+        "Private chauffeur transport for the Monaco Grand Prix each May, starting from €90 an hour or €750 a full day, around the circuit closures.",
       keywords: [
         "Monaco Grand Prix transport",
         "Monaco Grand Prix chauffeur",
@@ -4271,9 +4271,9 @@ export const eventPages: Record<string, ServicePageConfig> = {
     slug: "cannes-film-festival",
     path: "/our-services/events/cannes-film-festival",
     metadata: {
-      title: "Cannes Film Festival Transport | kokolimo",
+      title: "Cannes Film Festival Chauffeur | Private Driver | Kokolimo",
       description:
-        "Private chauffeur transport for the Cannes Film Festival each May — red-carpet arrivals, the Croisette and black-tie evenings, around the closures.",
+        "Private chauffeur transport for the Cannes Film Festival each May, starting from €90 an hour or €750 a full day: red-carpet arrivals and black-tie evenings.",
       keywords: [
         "Cannes Film Festival transport",
         "Cannes Film Festival chauffeur",
@@ -4370,9 +4370,9 @@ export const eventPages: Record<string, ServicePageConfig> = {
     slug: "monaco-yacht-show",
     path: "/our-services/events/monaco-yacht-show",
     metadata: {
-      title: "Monaco Yacht Show Transport | kokolimo",
+      title: "Monaco Yacht Show Chauffeur | Private Driver | Kokolimo",
       description:
-        "Private chauffeur transport for the Monaco Yacht Show each September — from Nice Airport to Port Hercule, around the road closures and crowds.",
+        "Private chauffeur transport for the Monaco Yacht Show each September, starting from €90 an hour or €750 a full day, from Nice Airport to Port Hercule.",
       keywords: [
         "Monaco Yacht Show transport",
         "Monaco Yacht Show chauffeur",

@@ -1,6 +1,8 @@
-// /llms.txt — modelled on the two Riviera operators AI answers cite most (Mira Azur's structure, TranspOnyx's size,
-// about 3.8 KB): brand, one-paragraph summary, a facts paragraph, then short sections of links. Facts and descriptions
-// come from the site's own pages. Each page also has a Markdown twin at the same address + ".md" (src/middleware.ts).
+// /llms.txt: the brand, a one-paragraph summary, a facts paragraph, the fixed prices, then short sections of links. Facts
+// and descriptions come from the site's own pages. Each page also has a Markdown twin at the same address + ".md"
+// (src/middleware.ts).
+
+import { cities, vehicles } from "../data/vehicles";
 
 export const dynamic = "force-static";
 
@@ -56,8 +58,25 @@ Kokolimo (My Riviera Tours & Transfers) is run by MY NICE TOURS, 33 rue de Chât
 - [Chauffeur prices](https://kokolimo.com/blog/french-riviera-chauffeur-prices): Transfer, hourly, full-day.
 `;
 
+// The fixed prices, read from data/vehicles.tsx so they never drift, placed before the links so they are read first.
+const eur = (n: number) => `€${n.toLocaleString("en-GB")}`;
+const short = (name: string) => name.replace("Mercedes ", "");
+const FARES = [
+  "## Fixed prices",
+  "",
+  "One way from Nice Côte d'Azur Airport (NCE), per car, fixed and confirmed before booking:",
+  "",
+  ...cities.map(c => `- ${c.displayName}: ${vehicles.map(v => `${short(v.name)} ${eur(v.prices[c.id].transfer)}`).join(", ")}`),
+  `- By the hour: ${vehicles.map(v => `${short(v.name)} ${eur(v.prices.nice.hourly)}`).join(", ")} per hour`,
+  `- Full day (8 hours): ${vehicles.map(v => `${short(v.name)} ${eur(v.prices.nice.fullDay)}`).join(", ")}`,
+  `- Passengers: ${vehicles.map(v => `${short(v.name)} up to ${v.passengers}`).join(", ")}`,
+  "- Included in every airport transfer: meet and greet in arrivals with a name sign, flight tracking and one hour of waiting.",
+  "- Available 24/7. Free cancellation until five days before; after that, the full price is charged.",
+].join("\n");
+const FULL = BODY.replace("## Core pages", `${FARES}\n\n## Core pages`);
+
 export function GET() {
-  return new Response(BODY, {
+  return new Response(FULL, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",

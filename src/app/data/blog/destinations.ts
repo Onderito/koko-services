@@ -249,7 +249,6 @@ export const destinationPosts: BlogPost[] = [
     relatedSlugs: [
       "best-things-to-do-in-nice",
       "nice-airport-to-monaco",
-      "monaco-business-chauffeur",
     ],
     ctaTitle: "Discover Monaco with a private chauffeur",
     ctaDescription:
@@ -357,7 +356,6 @@ export const destinationPosts: BlogPost[] = [
     relatedSlugs: [
       "best-things-to-do-in-nice",
       "nice-airport-to-cannes",
-      "cannes-taxi-vs-private-driver",
     ],
     ctaTitle: "Explore Cannes with a private chauffeur",
     ctaDescription:
@@ -464,7 +462,6 @@ export const destinationPosts: BlogPost[] = [
     ],
     relatedSlugs: [
       "nice-airport-to-saint-tropez",
-      "saint-tropez-day-trip",
       "best-things-to-do-in-cannes",
     ],
     ctaTitle: "Discover Saint-Tropez with a chauffeur",
@@ -563,295 +560,10 @@ export const destinationPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "nice-airport-to-antibes",
-      "cap-dantibes-scenic-guide",
-      "antibes-cannes-saint-paul-de-vence-private-tour",
     ],
     ctaTitle: "Explore Antibes with a private chauffeur",
     ctaDescription:
       "See Old Antibes, the Picasso Museum and Juan-les-Pins in one easy day with a private driver linking them together.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
-  },
-  {
-    slug: "cap-dantibes-scenic-guide",
-    title: "Cap d'Antibes: A Scenic Guide",
-    description:
-      "A scenic guide to Cap d'Antibes — the coastal path, La Garoupe beach and lighthouse, the gardens and the legendary Eden-Roc, with chauffeur tips.",
-    excerpt:
-      "The coastal path, La Garoupe, the gardens and the legendary Eden-Roc — a scenic guide to the Cap d'Antibes peninsula.",
-    category: "Destinations",
-    heroKicker: "Cap d'Antibes",
-    readTime: "6 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/cap-dantibes-scenic-guide.webp",
-    imageAlt:
-      "A rocky coastal path around Cap d'Antibes with turquoise coves and umbrella pines",
-    keywords: [
-      "Cap d'Antibes guide",
-      "things to do Cap d'Antibes",
-      "Cap d'Antibes coastal path",
-      "La Garoupe beach",
-      "Hotel du Cap-Eden-Roc",
-    ],
-    intro:
-      "Cap d'Antibes is a green peninsula of walled estates and pine woods reaching into the Mediterranean, famous for its legendary hotel and its coastal walks. It is quieter and more exclusive than the towns on either side, and its scenery is some of the finest on the Riviera. Here is a scenic guide to Cap d'Antibes.",
-    sections: [
-      {
-        id: "coastal-path",
-        title: "The Sentier du Littoral coastal path",
-        paragraphs: [
-          "The Sentier de Tirepoil, the coastal path around the tip of the Cap, is one of the great walks of the Riviera: a rugged trail past rocky coves, crashing sea and hidden inlets, with the villas of the wealthy screened behind the pines above.",
-          "It is wilder than you expect so close to the towns, and a chauffeur can drop you at one end and collect you at the other so you walk it one way.",
-        ],
-        bullets: [
-          "Rugged coves and clear water",
-          "A one-way walk with a chauffeur pickup",
-          "Sea views and pine-shaded stretches",
-          "A wild contrast to the nearby resorts",
-        ],
-      },
-      {
-        id: "garoupe",
-        title: "La Garoupe beach, lighthouse and chapel",
-        paragraphs: [
-          "Plage de la Garoupe is the Cap's beautiful sheltered beach, its clear water lapping a crescent of sand once frequented by the Riviera's early glitterati. Above it, the Chemin de la Garoupe climbs to the lighthouse and the little sailors' chapel, with a 360-degree panorama over the coast and the Alps.",
-          "The view from the top is one of the best on this part of the Riviera.",
-        ],
-        bullets: [
-          "The sheltered Plage de la Garoupe",
-          "The Garoupe lighthouse and sailors' chapel",
-          "A 360-degree panorama over the coast",
-          "Historic beach clubs by the sand",
-        ],
-      },
-      {
-        id: "gardens-and-eden-roc",
-        title: "Gardens and the legendary Eden-Roc",
-        paragraphs: [
-          "The Cap has botanical treasures — the Jardin Thuret, a research garden of exotic species, and the grounds of Villa Eilenroc, open on select days. At the tip stands the Hotel du Cap-Eden-Roc, a byword for Riviera glamour since the 1870s.",
-          "Even a drive around the peninsula, past the gates and the sea, is a highlight, and a chauffeur knows the quiet lanes that make it possible.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What is there to do on Cap d'Antibes?",
-        answer:
-          "Walk the Sentier du Littoral coastal path, relax at Plage de la Garoupe, climb to the lighthouse, and visit the Jardin Thuret and Villa Eilenroc gardens.",
-      },
-      {
-        question: "Can you walk around Cap d'Antibes?",
-        answer:
-          "Yes. The Sentier de Tirepoil coastal path circles the tip; a chauffeur can drop you at one end and collect you at the other for a one-way walk.",
-      },
-      {
-        question: "Is Cap d'Antibes worth visiting?",
-        answer:
-          "Very much so — for its coastal scenery, the Garoupe beach and lighthouse, the gardens and the glamour of the Eden-Roc, all quieter than the towns nearby.",
-      },
-      {
-        question: "How do I get around Cap d'Antibes?",
-        answer:
-          "The peninsula's lanes are narrow and parking is scarce, so a chauffeur is the easiest way to reach the beach, the lighthouse and the gardens.",
-      },
-    ],
-    relatedSlugs: [
-      "antibes-juan-les-pins-guide",
-      "nice-airport-to-cap-dantibes",
-      "saint-jean-cap-ferrat-luxury-guide",
-    ],
-    ctaTitle: "Discover Cap d'Antibes with a chauffeur",
-    ctaDescription:
-      "Explore the coastal path, La Garoupe and the gardens of Cap d'Antibes with a private driver on hand throughout.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
-  },
-  {
-    slug: "saint-jean-cap-ferrat-luxury-guide",
-    title: "Saint-Jean-Cap-Ferrat: A Luxury Guide",
-    description:
-      "A luxury guide to Saint-Jean-Cap-Ferrat — the Villa Ephrussi de Rothschild, coastal walks, the port and beaches on the Riviera's most exclusive peninsula.",
-    excerpt:
-      "The Villa Ephrussi de Rothschild, coastal walks and quiet beaches — a luxury guide to Saint-Jean-Cap-Ferrat.",
-    category: "Destinations",
-    heroKicker: "Saint-Jean-Cap-Ferrat",
-    readTime: "6 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/saint-jean-cap-ferrat-luxury-guide.webp",
-    imageAlt:
-      "The pink Villa Ephrussi de Rothschild and its formal French garden on Cap-Ferrat",
-    keywords: [
-      "Saint-Jean-Cap-Ferrat guide",
-      "things to do Cap-Ferrat",
-      "Villa Ephrussi de Rothschild",
-      "Cap-Ferrat coastal walk",
-      "Saint-Jean-Cap-Ferrat beaches",
-    ],
-    intro:
-      "Saint-Jean-Cap-Ferrat is the Riviera's most discreet address — a peninsula of palatial villas and gardens where privacy is the ultimate luxury. Beyond the gates, though, there is plenty for visitors: a fairytale villa, some of the loveliest coastal walks on the coast, and quiet beaches. Here is a luxury guide to Saint-Jean-Cap-Ferrat.",
-    sections: [
-      {
-        id: "villa-ephrussi",
-        title: "The Villa Ephrussi de Rothschild",
-        paragraphs: [
-          "The rose-pink Villa Ephrussi de Rothschild is the Cap's crown jewel: a belle-époque palace built by Béatrice de Rothschild, filled with art and surrounded by nine themed gardens that step down to the sea, from a French formal garden to Spanish, Florentine and Japanese designs.",
-          "The musical fountains and the panorama over the twin bays make it one of the finest villa-and-garden visits in France.",
-        ],
-        bullets: [
-          "Nine themed gardens by the sea",
-          "A belle-époque interior of art and antiques",
-          "Musical fountains and sea panoramas",
-          "One of the Riviera's great garden estates",
-        ],
-      },
-      {
-        id: "coastal-walks",
-        title: "Coastal walks and the port",
-        paragraphs: [
-          "The Cap is laced with coastal paths that hug the shoreline through pine and rock. The walk around the Pointe Saint-Hospice and the Sentier du Littoral offers constant sea views, sheltered coves and glimpses of the great villas from below.",
-          "The pretty port of Saint-Jean, with its cafés and small fishing boats, is the peninsula's gentle heart, and Plage de Passable offers a rare public beach with a view of Villefranche.",
-        ],
-        bullets: [
-          "The Pointe Saint-Hospice coastal walk",
-          "Sheltered coves and sea views",
-          "The port of Saint-Jean and its cafés",
-          "Plage de Passable facing Villefranche",
-        ],
-      },
-      {
-        id: "quiet-luxury",
-        title: "Quiet luxury and how to enjoy it",
-        paragraphs: [
-          "Much of Cap-Ferrat's appeal is simply its calm: no crowds, no noise, just gardens, walks and the sea. The Grand-Hôtel du Cap-Ferrat crowns the peninsula for those who stay, but a day visit is rewarding too.",
-          "A chauffeur is ideal here — the roads are quiet and residential, and a driver links the villa, the walks and the port without the search for parking.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What is there to do in Saint-Jean-Cap-Ferrat?",
-        answer:
-          "Visit the Villa Ephrussi de Rothschild and its gardens, walk the coastal paths around Pointe Saint-Hospice, and relax at the port or Plage de Passable.",
-      },
-      {
-        question: "Is the Villa Ephrussi de Rothschild worth visiting?",
-        answer:
-          "Yes — its nine themed gardens, musical fountains and belle-époque interior make it one of the finest villa-and-garden estates on the Riviera.",
-      },
-      {
-        question: "Are there public beaches on Cap-Ferrat?",
-        answer:
-          "Yes. Plage de Passable is a well-known public beach with a lovely view toward Villefranche, alongside smaller coves along the coastal paths.",
-      },
-      {
-        question: "Why use a chauffeur on Cap-Ferrat?",
-        answer:
-          "The peninsula is quiet and residential with limited parking, so a chauffeur is the easiest way to link the villa, the walks and the port.",
-      },
-    ],
-    relatedSlugs: [
-      "nice-airport-to-saint-jean-cap-ferrat",
-      "eze-village-visitor-guide",
-      "best-things-to-do-in-nice",
-    ],
-    ctaTitle: "Explore Cap-Ferrat with a private chauffeur",
-    ctaDescription:
-      "Enjoy the Villa Ephrussi, the coastal walks and the port of Saint-Jean-Cap-Ferrat with a discreet private driver.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
-  },
-  {
-    slug: "eze-village-visitor-guide",
-    title: "Èze Village: A Visitor's Guide",
-    description:
-      "A visitor's guide to Èze — the perched medieval village, the Exotic Garden and its views, the Nietzsche Path and the perfume factory, with chauffeur tips.",
-    excerpt:
-      "The perched medieval village, the Exotic Garden, the Nietzsche Path and the perfumery — a visitor's guide to Èze.",
-    category: "Destinations",
-    heroKicker: "Èze village",
-    readTime: "6 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/eze-village-visitor-guide.webp",
-    imageAlt:
-      "The perched medieval village of Èze and its exotic garden high above the Mediterranean",
-    keywords: [
-      "Èze village guide",
-      "things to do in Èze",
-      "Èze exotic garden",
-      "Nietzsche Path Èze",
-      "Èze France travel",
-    ],
-    intro:
-      "Èze is the most photographed of the Riviera's perched villages — a medieval eyrie of stone lanes clinging to a peak 400 metres above the sea, halfway between Nice and Monaco. Tiny and car-free at its heart, it packs galleries, gardens and jaw-dropping views into a compact climb. Here is a visitor's guide to Èze village.",
-    sections: [
-      {
-        id: "the-village",
-        title: "The perched medieval village",
-        paragraphs: [
-          "Èze's old village is a vertical maze of vaulted passages, flower-draped stone houses, artisan workshops and galleries, all leading upward. There are no cars — you climb on foot — and every turn frames another view or a hidden courtyard.",
-          "It is small enough to see in a couple of hours but atmospheric enough to linger, especially early or late when the day-trippers thin out.",
-        ],
-        bullets: [
-          "Car-free medieval lanes and passages",
-          "Artisan workshops and art galleries",
-          "Flower-draped stone houses",
-          "Best enjoyed early morning or evening",
-        ],
-      },
-      {
-        id: "exotic-garden",
-        title: "The Jardin Exotique and its views",
-        paragraphs: [
-          "At the very top, on the site of a ruined castle, the Jardin Exotique d'Èze plants cacti and succulents among the old walls — and delivers what many call the finest view on the Riviera, a dizzying panorama over the coast from Cap-Ferrat to Italy.",
-          "On a clear day you can see for miles along the coast and out to sea; it is the reason most visitors make the climb.",
-        ],
-        bullets: [
-          "Cacti and succulents among castle ruins",
-          "A panoramic view along the whole coast",
-          "One of the Riviera's great viewpoints",
-          "Sculpture and quiet corners to rest",
-        ],
-      },
-      {
-        id: "path-and-perfume",
-        title: "The Nietzsche Path and the perfumery",
-        paragraphs: [
-          "From the village, the Nietzsche Path drops steeply to Èze-sur-Mer on the shore, the trail where the philosopher is said to have conceived part of Thus Spoke Zarathustra. It is a strenuous walk down (and back up), rewarded by sea views.",
-          "At the foot of the village, the Fragonard perfume factory offers free tours of how scent is made — an easy, level stop that a chauffeur can pair with the village above.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What is Èze famous for?",
-        answer:
-          "Its perched medieval village, the Jardin Exotique with panoramic sea views, the Nietzsche Path to the shore, and the Fragonard perfumery at its foot.",
-      },
-      {
-        question: "Is Èze village worth visiting?",
-        answer:
-          "Yes. The car-free lanes and the view from the Exotic Garden make it one of the most memorable stops between Nice and Monaco.",
-      },
-      {
-        question: "How long do you need in Èze?",
-        answer:
-          "A couple of hours covers the village and the garden; add more time for the Nietzsche Path or a meal with a view.",
-      },
-      {
-        question: "Can you drive into Èze village?",
-        answer:
-          "No — the old village is pedestrian. A chauffeur drops you at the entrance on the Moyenne Corniche for the short walk up.",
-      },
-    ],
-    relatedSlugs: [
-      "eze-monaco-private-tour-from-nice",
-      "nice-airport-to-eze",
-      "monaco-in-one-day",
-    ],
-    ctaTitle: "Visit Èze with a private chauffeur",
-    ctaDescription:
-      "Reach the perched village and its exotic garden with ease — a private driver for Èze and the corniche between Nice and Monaco.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -939,8 +651,6 @@ export const destinationPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "nice-airport-to-beaulieu-sur-mer",
-      "saint-jean-cap-ferrat-luxury-guide",
       "villefranche-sur-mer-cruise-port-guide",
     ],
     ctaTitle: "Explore Beaulieu-sur-Mer with a chauffeur",
@@ -1035,105 +745,10 @@ export const destinationPosts: BlogPost[] = [
     relatedSlugs: [
       "nice-airport-to-villefranche-sur-mer",
       "beaulieu-sur-mer-guide",
-      "saint-jean-cap-ferrat-luxury-guide",
     ],
     ctaTitle: "Book a Villefranche shore excursion",
     ctaDescription:
       "Make the most of a day in port with a private chauffeur for Villefranche, Monaco, Èze and the coast, timed to your ship.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
-  },
-  {
-    slug: "menton-day-trip-guide",
-    title: "Menton: A Day Trip Guide",
-    description:
-      "A day trip guide to Menton — the pastel old town, the gardens, the Cocteau museum, the market and the Italian border, with chauffeur tips.",
-    excerpt:
-      "The pastel old town, the gardens, the Cocteau museum and the Italian border — a day trip guide to sunny Menton.",
-    category: "Destinations",
-    heroKicker: "Menton day trip",
-    readTime: "6 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/menton-day-trip-guide.webp",
-    imageAlt:
-      "The pastel Italianate old town of Menton climbing to the Basilica Saint-Michel bell tower",
-    keywords: [
-      "Menton day trip",
-      "things to do in Menton",
-      "Menton gardens",
-      "Menton old town",
-      "Menton Cocteau museum",
-    ],
-    intro:
-      "Menton is the last French town before Italy and the sunniest on the Riviera, a place of pastel façades, subtropical gardens and a gentle Italian accent. It makes a wonderful day trip from anywhere on the coast. Here is a day trip guide to Menton.",
-    sections: [
-      {
-        id: "old-town",
-        title: "The pastel old town",
-        paragraphs: [
-          "Menton's old town rises from the seafront in tiers of yellow, ochre and pink, crowned by the baroque Basilica Saint-Michel-Archange and its beautiful parvis. Steep ramps and stairways lead up through the lanes to the old cemetery, with sweeping views over the coast to Italy.",
-          "Down at sea level, the covered Marché des Halles is a feast of Italian and Provençal produce, perfect for a morning stroll.",
-        ],
-        bullets: [
-          "The baroque Basilica Saint-Michel",
-          "Colourful lanes and stairways",
-          "The covered Marché des Halles",
-          "Views along the coast to Italy",
-        ],
-      },
-      {
-        id: "gardens",
-        title: "The gardens of Menton",
-        paragraphs: [
-          "Menton's mild climate makes it a city of gardens. The Serre de la Madone and the Jardin du Val Rahmeh brim with rare and exotic plants, while the Jardin Fontana Rosa and others reflect the town's long love affair with horticulture.",
-          "For garden lovers it is one of the richest destinations in France, and a chauffeur links the scattered gardens easily in a single visit.",
-        ],
-        bullets: [
-          "The Serre de la Madone garden",
-          "The Jardin du Val Rahmeh",
-          "Rare and subtropical species",
-          "Gardens linked easily by chauffeur",
-        ],
-      },
-      {
-        id: "cocteau-and-border",
-        title: "The Cocteau museum and the border",
-        paragraphs: [
-          "By the seafront, the Jean Cocteau museum in the old Bastion holds works the artist created for Menton, which adopted him. And because Italy is minutes away, a Menton day trip pairs naturally with a hop across the border to Ventimiglia and its famous Friday market.",
-          "In February the town celebrates the Fête du Citron, filling the streets with sculptures made of lemons and oranges — a spectacle worth planning around.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What is Menton known for?",
-        answer:
-          "Its pastel Italianate old town, subtropical gardens, the Cocteau museum, and the February Lemon Festival, all in the sunniest corner of the Riviera.",
-      },
-      {
-        question: "Is Menton worth a day trip?",
-        answer:
-          "Yes. The old town, the gardens and the seafront make a lovely, relaxed day, easily combined with a hop across the border into Italy.",
-      },
-      {
-        question: "Can you visit Italy from Menton?",
-        answer:
-          "Easily. Ventimiglia and its famous Friday market are minutes across the border, and a chauffeur can continue on to Sanremo.",
-      },
-      {
-        question: "When is the Menton Lemon Festival?",
-        answer:
-          "The Fête du Citron takes place in February, filling the town with sculptures made from lemons and oranges.",
-      },
-    ],
-    relatedSlugs: [
-      "nice-airport-to-menton",
-      "nice-airport-to-sanremo-italy",
-      "eze-village-visitor-guide",
-    ],
-    ctaTitle: "Discover Menton with a private chauffeur",
-    ctaDescription:
-      "Enjoy the old town, the gardens and the Italian border with a private driver for a relaxed Menton day trip.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -1326,194 +941,6 @@ export const destinationPosts: BlogPost[] = [
     ctaLabel: "See private tours",
   },
   {
-    slug: "french-riviera-hidden-gems",
-    title: "French Riviera Hidden Gems",
-    description:
-      "French Riviera hidden gems — Saint-Paul-de-Vence, Gourdon, Biot and the perched villages beyond the coast, best explored by private chauffeur.",
-    excerpt:
-      "Saint-Paul-de-Vence, Gourdon, Biot and the perched villages — French Riviera hidden gems beyond the busy coast.",
-    category: "Destinations",
-    heroKicker: "Riviera hidden gems",
-    readTime: "7 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/french-riviera-hidden-gems.webp",
-    imageAlt:
-      "The hilltop medieval village of Saint-Paul-de-Vence among cypress trees and green hills",
-    keywords: [
-      "French Riviera hidden gems",
-      "perched villages French Riviera",
-      "Saint-Paul-de-Vence",
-      "Gourdon village",
-      "off the beaten path Riviera",
-    ],
-    intro:
-      "Beyond the famous coast, the hills behind the French Riviera hide a string of perched villages and quiet corners that many visitors never reach. They are where the region feels most timeless — stone lanes, art, and views for miles. Here are some of the French Riviera's hidden gems, and how a chauffeur brings them within easy reach.",
-    sections: [
-      {
-        id: "saint-paul-and-vence",
-        title: "Saint-Paul-de-Vence and Vence",
-        paragraphs: [
-          "Saint-Paul-de-Vence is the most celebrated of the hilltop villages, a ring of ramparts around cobbled lanes packed with galleries — a magnet for artists from Chagall to the Fondation Maeght nearby. Neighbouring Vence adds Matisse's exquisite Rosary Chapel.",
-          "Both are a short drive inland from the coast and pair naturally into an afternoon of art and villages.",
-        ],
-        bullets: [
-          "Ramparts and galleries in Saint-Paul-de-Vence",
-          "The Fondation Maeght art foundation",
-          "Matisse's Rosary Chapel in Vence",
-          "Cobbled lanes and hilltop views",
-        ],
-      },
-      {
-        id: "gourdon-and-hills",
-        title: "Gourdon and the backcountry",
-        paragraphs: [
-          "Perched on a cliff above the Gorges du Loup, Gourdon is one of the most dramatic villages in France, with a view that reaches to the sea. The winding drive up through the gorge is an attraction in itself.",
-          "Further into the hills, villages like Tourrettes-sur-Loup, Coaraze and Sainte-Agnès reward those who venture off the coast with authenticity and calm.",
-        ],
-        bullets: [
-          "Clifftop Gourdon above the Gorges du Loup",
-          "The scenic drive through the gorge",
-          "Tourrettes-sur-Loup and the violet village",
-          "Sainte-Agnès, one of the highest coastal villages",
-        ],
-      },
-      {
-        id: "biot-and-la-turbie",
-        title: "Biot, La Turbie and more",
-        paragraphs: [
-          "Biot is famous for its bubbled glassware and its medieval square, while La Turbie, high above Monaco, holds the Roman Trophy of Augustus and a stunning view over the principality.",
-          "These are the kinds of places a chauffeur makes easy — scattered across the hills, awkward by public transport, but a joy to string together on a quiet day.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What are the best hidden gems on the French Riviera?",
-        answer:
-          "The perched villages inland — Saint-Paul-de-Vence, Vence, Gourdon, Tourrettes-sur-Loup, Biot and La Turbie — offer art, history and views away from the busy coast.",
-      },
-      {
-        question: "Is Saint-Paul-de-Vence worth visiting?",
-        answer:
-          "Yes. Its ramparts, galleries and the nearby Fondation Maeght make it one of the most rewarding village visits on the Riviera.",
-      },
-      {
-        question: "How do you reach the perched villages?",
-        answer:
-          "They are scattered across the hills and awkward by public transport, so a private chauffeur is the easiest way to visit several in a day.",
-      },
-      {
-        question: "What is La Turbie known for?",
-        answer:
-          "The Roman Trophy of Augustus, a monumental ancient landmark high above Monaco, with a spectacular view over the principality.",
-      },
-    ],
-    relatedSlugs: [
-      "antibes-cannes-saint-paul-de-vence-private-tour",
-      "eze-village-visitor-guide",
-      "french-riviera-3-day-itinerary",
-    ],
-    ctaTitle: "Discover the hidden Riviera with a chauffeur",
-    ctaDescription:
-      "Reach the perched villages and quiet corners of the Riviera with a private driver who knows the back roads.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
-  },
-  {
-    slug: "best-beaches-french-riviera",
-    title: "Best Beaches on the French Riviera",
-    description:
-      "The best beaches on the French Riviera — from Paloma and La Garoupe to Pampelonne and Mala — with tips on reaching them by private chauffeur.",
-    excerpt:
-      "From Paloma and La Garoupe to Pampelonne and Mala Beach — the best beaches on the French Riviera.",
-    category: "Destinations",
-    heroKicker: "Riviera beaches",
-    readTime: "7 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/best-beaches-french-riviera.webp",
-    imageAlt:
-      "A secluded turquoise cove beach on the French Riviera with umbrella pines and sun loungers",
-    keywords: [
-      "best beaches French Riviera",
-      "French Riviera beaches",
-      "Paloma Beach",
-      "Pampelonne beach",
-      "Mala Beach Cap d'Ail",
-    ],
-    intro:
-      "The French Riviera's beaches range from glamorous sand to hidden pebble coves, each with its own character. The best often need a little effort to reach — which is where a chauffeur helps, dropping you close and sparing you the parking. Here are some of the best beaches on the French Riviera.",
-    sections: [
-      {
-        id: "eastern-coves",
-        title: "The eastern coves: Paloma, Passable and Mala",
-        paragraphs: [
-          "East of Nice, the coast hides some beautiful coves. Paloma Beach on Cap-Ferrat is a chic pebble bay with a famous beach club; Plage de Passable, nearby, faces Villefranche with calm, shallow water. Further east, Mala Beach at Cap d'Ail is a stunning hidden cove reached by a cliff path.",
-          "These sheltered spots have clear water and a quieter feel than the city beaches.",
-        ],
-        bullets: [
-          "Paloma Beach on Cap-Ferrat",
-          "Plage de Passable facing Villefranche",
-          "Mala Beach, a hidden cove at Cap d'Ail",
-          "Clear water and a calmer atmosphere",
-        ],
-      },
-      {
-        id: "antibes-and-monaco",
-        title: "La Garoupe, Juan-les-Pins and Larvotto",
-        paragraphs: [
-          "West of Nice, Plage de la Garoupe on Cap d'Antibes is a lovely sheltered crescent of sand with historic beach clubs, while neighbouring Juan-les-Pins offers a lively pine-backed beach. In Monaco, the Larvotto beach has been redesigned into a smart urban bay.",
-          "Each combines easy swimming with somewhere good to eat by the water.",
-        ],
-        bullets: [
-          "Plage de la Garoupe on Cap d'Antibes",
-          "The sandy, lively beach at Juan-les-Pins",
-          "Monaco's redesigned Larvotto bay",
-          "Beach clubs and waterfront dining",
-        ],
-      },
-      {
-        id: "pampelonne",
-        title: "Pampelonne, the glamour of Saint-Tropez",
-        paragraphs: [
-          "No beach roundup is complete without Pampelonne, the long golden sweep near Saint-Tropez lined with the legendary beach clubs that made the town famous. Lunch here can last all afternoon.",
-          "It is a longer drive west, and a chauffeur is the easy way to arrive and return, avoiding the notorious beach-road traffic and parking.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What are the best beaches on the French Riviera?",
-        answer:
-          "Standouts include Paloma and Passable on Cap-Ferrat, Mala at Cap d'Ail, La Garoupe on Cap d'Antibes, Juan-les-Pins, Monaco's Larvotto and Pampelonne near Saint-Tropez.",
-      },
-      {
-        question: "Are Riviera beaches sandy or pebbly?",
-        answer:
-          "Both. Nice and the eastern coves are largely pebble, while Juan-les-Pins, Pampelonne and parts of the coast to the west have sand.",
-      },
-      {
-        question: "How do you reach the hidden coves?",
-        answer:
-          "Many are down cliff paths with little parking, so a chauffeur that drops you close and collects you afterwards makes them far easier.",
-      },
-      {
-        question: "What are the Pampelonne beach clubs?",
-        answer:
-          "Legendary beach clubs on the long sandy beach near Saint-Tropez, where sunbeds, lunch and afternoons by the sea are the whole experience.",
-      },
-    ],
-    relatedSlugs: [
-      "best-things-to-do-in-saint-tropez",
-      "cap-dantibes-scenic-guide",
-      "saint-jean-cap-ferrat-luxury-guide",
-    ],
-    ctaTitle: "Reach the best beaches with a chauffeur",
-    ctaDescription:
-      "Skip the parking and the beach-road traffic — a private driver for the Riviera's finest beaches and coves.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
-  },
-  {
     slug: "most-scenic-drives-french-riviera",
     title: "Most Scenic Drives on the French Riviera",
     description:
@@ -1597,7 +1024,6 @@ export const destinationPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "eze-village-visitor-guide",
       "monaco-in-one-day",
       "french-riviera-3-day-itinerary",
     ],
@@ -1692,7 +1118,6 @@ export const destinationPosts: BlogPost[] = [
     ],
     relatedSlugs: [
       "monaco-in-one-day",
-      "eze-village-visitor-guide",
       "most-scenic-drives-french-riviera",
     ],
     ctaTitle: "Arrive in Monaco the easy way",
@@ -1968,115 +1393,11 @@ export const destinationPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "menton-day-trip-guide",
-      "french-riviera-hidden-gems",
       "french-riviera-3-day-itinerary",
     ],
     ctaTitle: "Enjoy the Riviera off-season",
     ctaDescription:
       "Festivals, quiet villages and ski days — explore the winter Riviera door to door with a private chauffeur.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See private tours",
-  },
-  {
-    slug: "best-french-riviera-gardens",
-    title: "Best Gardens on the French Riviera",
-    description:
-      "The best gardens on the French Riviera — the Villa Ephrussi, the Serre de la Madone, the Èze exotic garden and the gardens of Menton.",
-    excerpt:
-      "Exotic villa gardens, subtropical terraces and sea views — the finest gardens to visit on the French Riviera.",
-    category: "Destinations",
-    heroKicker: "Riviera gardens",
-    readTime: "6 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/best-french-riviera-gardens.webp",
-    imageAlt:
-      "A lush Mediterranean garden on the French Riviera with palms, cacti and stone terraces above the sea",
-    keywords: [
-      "French Riviera gardens",
-      "Riviera gardens",
-      "Villa Ephrussi gardens",
-      "Serre de la Madone",
-      "Èze exotic garden",
-    ],
-    intro:
-      "The Riviera's mild microclimate has long drawn plant collectors, and their legacy is a coast studded with extraordinary gardens — French parterres and Japanese groves, cactus terraces clinging to cliffs, and subtropical plants that grow nowhere else in France. Here are the finest gardens to visit along the French Riviera.",
-    sections: [
-      {
-        id: "cap-ferrat-and-beaulieu",
-        title: "The Villa Ephrussi at Cap-Ferrat",
-        paragraphs: [
-          "Perched on the narrowest point of the Saint-Jean-Cap-Ferrat peninsula, the Villa Ephrussi de Rothschild surrounds a rose-pink palace with nine themed gardens — French, Spanish, Florentine, Japanese, exotic and more — laid out on a ridge with the sea on both sides. Musical fountains play across the main parterre.",
-          "Nearby in Beaulieu, the Villa Kérylos adds a reconstructed Greek villa with its own seafront setting, making the two an easy pairing.",
-        ],
-        bullets: [
-          "Nine themed gardens on a sea-flanked ridge",
-          "Musical fountains on the French parterre",
-          "Villa Kérylos nearby in Beaulieu",
-          "Among the most famous gardens in France",
-        ],
-      },
-      {
-        id: "eze-and-monaco",
-        title: "Cliff-top gardens at Èze and Monaco",
-        paragraphs: [
-          "At the top of the medieval village of Èze, the Jardin Exotique crowns the ruins of the old castle with succulents and cacti and one of the most vertiginous sea views on the coast. Monaco's own Jardin Exotique takes the same idea further, tumbling down a cliff face above the principality.",
-          "Both reward the climb — or the chauffeur drop-off — with rare plants and panoramas in equal measure.",
-        ],
-        bullets: [
-          "Èze's exotic garden crowns the hilltop village",
-          "Succulents, cacti and sheer sea views",
-          "Monaco's Jardin Exotique cascades down a cliff",
-          "Spectacular panoramas at both",
-        ],
-      },
-      {
-        id: "menton-gardens",
-        title: "Menton, the garden town",
-        paragraphs: [
-          "Warmest of all the Riviera towns, Menton is a garden capital in its own right. The Serre de la Madone, created by an English plantsman, layers terraces of rare species; the Val Rahmeh botanical garden shelters tropical plants; and the Jardin Maria Serena is billed as one of the mildest gardens in France.",
-          "Together they make Menton a destination for garden lovers on any Riviera itinerary.",
-        ],
-      },
-      {
-        id: "visiting-by-chauffeur",
-        title: "Visiting the gardens by chauffeur",
-        paragraphs: [
-          "The gardens are scattered from Cap-Ferrat to Menton, often up narrow lanes with little parking. A private chauffeur links several in a relaxed day, dropping you at each gate and waiting while you wander.",
-          "It turns a logistically awkward garden tour into one of the most serene days the coast can offer.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What is the most famous garden on the French Riviera?",
-        answer:
-          "The Villa Ephrussi de Rothschild at Saint-Jean-Cap-Ferrat, with its nine themed gardens and musical fountains on a sea-flanked ridge.",
-      },
-      {
-        question: "Which Riviera town is best for gardens?",
-        answer:
-          "Menton. Its exceptionally mild climate supports the Serre de la Madone, Val Rahmeh and other gardens filled with rare and tropical species.",
-      },
-      {
-        question: "Can you visit the Èze exotic garden easily?",
-        answer:
-          "Yes. It crowns the hilltop village of Èze; a chauffeur can drop you near the entrance, saving the climb from the road below.",
-      },
-      {
-        question: "Can a chauffeur combine several gardens in a day?",
-        answer:
-          "Yes. A private driver links the scattered gardens from Cap-Ferrat to Menton into one relaxed day, with no parking to worry about.",
-      },
-    ],
-    relatedSlugs: [
-      "saint-jean-cap-ferrat-luxury-guide",
-      "eze-village-visitor-guide",
-      "menton-day-trip-guide",
-    ],
-    ctaTitle: "Tour the Riviera's finest gardens",
-    ctaDescription:
-      "From the Villa Ephrussi to Menton's terraces — a private chauffeur links the coast's great gardens in one serene day.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },

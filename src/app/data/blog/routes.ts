@@ -128,9 +128,7 @@ export const routePosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "nice-to-monaco-transfer",
       "airport-transfers",
-      "monaco-business-chauffeur",
     ],
     ctaTitle: "Book your Nice Airport to Monaco transfer",
     ctaDescription:
@@ -249,8 +247,6 @@ export const routePosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "nice-to-cannes-transfer",
-      "cannes-taxi-vs-private-driver",
       "nice-airport-to-monaco",
     ],
     ctaTitle: "Book your Nice Airport to Cannes transfer",
@@ -376,7 +372,6 @@ export const routePosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "saint-tropez-day-trip",
       "nice-airport-to-monaco",
       "airport-transfers",
     ],
@@ -385,133 +380,6 @@ export const routePosts: BlogPost[] = [
       "Reserve a private chauffeur for the long run west to Saint-Tropez — comfortable, fixed-price and planned around the summer traffic.",
     ctaHref: "/our-services/transfers/saint-tropez-transfer",
     ctaLabel: "See Saint-Tropez transfer details",
-  },
-  {
-    slug: "nice-airport-to-antibes",
-    title: "Nice Airport to Antibes Transfer Guide",
-    description:
-      "Nice Airport to Antibes and Juan-les-Pins by private chauffeur — the short route, journey time, prices, yachting tips and what to expect on arrival.",
-    excerpt:
-      "The short route, journey time, prices and yachting tips for a private chauffeur transfer from Nice Airport to Antibes and Juan-les-Pins.",
-    category: "Airport Transfer",
-    heroKicker: "Nice Airport → Antibes",
-    readTime: "7 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/nice-airport-to-antibes.webp",
-    imageAlt:
-      "Black luxury chauffeur sedan by the Antibes old town ramparts and Port Vauban marina",
-    keywords: [
-      "Nice Airport to Antibes",
-      "Nice Airport to Antibes transfer",
-      "private driver Nice to Antibes",
-      "Antibes chauffeur from Nice Airport",
-      "Juan-les-Pins transfer",
-      "Port Vauban yacht transfer",
-    ],
-    intro:
-      "Antibes is one of the closest and easiest transfers from Nice Côte d'Azur Airport — about 20 kilometres west, or 20 to 25 minutes by road. It is also a favourite of the yachting world, home to Port Vauban and its superyachts. Whether you are heading for the old town, a villa on Cap d'Antibes or a boat on the quay, here is how the Nice Airport to Antibes transfer works.",
-    sections: [
-      {
-        id: "distance-and-time",
-        title: "How far is Antibes from Nice Airport?",
-        paragraphs: [
-          "Antibes is roughly 20 km west of Nice Airport. In normal traffic the drive is a quick 20 to 25 minutes on the A8 or the coastal road, one of the shortest chauffeur transfers on this part of the Riviera.",
-          "The neighbouring resort of Juan-les-Pins and the exclusive Cap d'Antibes are a few minutes further. A chauffeur takes you door to door to any of them without the parking headaches of the old town.",
-        ],
-        bullets: [
-          "Distance: about 20 km by road, west of the airport",
-          "Journey time: 20–25 minutes in normal traffic",
-          "Covers Antibes, Juan-les-Pins and Cap d'Antibes",
-          "Routes: the A8 motorway or the scenic coastal road",
-        ],
-      },
-      {
-        id: "yachting-and-port-vauban",
-        title: "Arriving for the yachts at Port Vauban",
-        paragraphs: [
-          "Antibes is a capital of the superyacht world. Port Vauban is one of the largest marinas in the Mediterranean, and its Quai des Milliardaires hosts some of the biggest yachts afloat. Crew, guests and owners move through Nice Airport constantly.",
-          "For a yacht arrival, a chauffeur brings you straight to the quay with your luggage, and can coordinate crew transfers, provisioning runs and guest pickups throughout your stay.",
-        ],
-        bullets: [
-          "Direct drop-off at Port Vauban and the Quai des Milliardaires",
-          "Guest, owner and crew transfers to and from the airport",
-          "Discreet service for private arrivals",
-          "Easy to combine with onward transfers along the coast",
-        ],
-      },
-      {
-        id: "why-private-chauffeur",
-        title: "Why book a private chauffeur to Antibes",
-        paragraphs: [
-          "Antibes' old town is a maze of narrow, pedestrianised streets where parking is scarce and taxis are not always waiting. A private chauffeur skips all of that: your driver meets you at the airport and delivers you to the door.",
-          "It is the same calm, fixed-price arrival whether you are staying at the legendary Hotel du Cap-Eden-Roc on the Cap, a villa in the pine woods, or a townhouse inside the ramparts.",
-        ],
-        bullets: [
-          "Meet-and-greet in the arrivals hall with a name sign",
-          "Flight tracking and one hour of waiting from the reserved pickup time",
-          "Door-to-door to hotels, villas or the marina",
-          "Fixed price agreed in advance",
-        ],
-      },
-      {
-        id: "prices",
-        title: "How much is a Nice Airport to Antibes transfer?",
-        paragraphs: [
-          "Because Antibes is close to the airport, it is one of the more affordable Riviera transfers. Guide prices below are indicative one-way rates; final pricing adapts to timing, exact drop-off and luggage.",
-        ],
-        bullets: [
-          "Mercedes E-Class (up to 3 passengers): from €120",
-          "Mercedes V-Class van (up to 7 passengers): from €150",
-          "Mercedes S-Class (up to 3 passengers): from €190",
-          "Mercedes Maybach (up to 3 passengers): from €350",
-        ],
-      },
-      {
-        id: "what-to-expect",
-        title: "What to expect on arrival",
-        paragraphs: [
-          "Your chauffeur checks the terminal from your flight and meets you in arrivals, then it is a short ride west to Antibes. Drop-off can be the old town, a Cap d'Antibes estate, a Juan-les-Pins beachfront hotel or the marina.",
-          "Because the trip is so short, Antibes also pairs well with a wider day of chauffeur hire — a morning transfer followed by lunch in the old town and an afternoon along the coast.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "How long does the transfer from Nice Airport to Antibes take?",
-        answer:
-          "Usually 20 to 25 minutes in normal traffic — one of the shortest chauffeur transfers from Nice Airport on the western Riviera.",
-      },
-      {
-        question: "How much is a private transfer from Nice Airport to Antibes?",
-        answer:
-          "Indicative one-way guide prices start from €120 in a Mercedes E-Class, €150 in a V-Class van, €190 in an S-Class and €350 in a Maybach.",
-      },
-      {
-        question: "Can you drop us at a yacht in Port Vauban?",
-        answer:
-          "Yes. The chauffeur brings you straight to the quay with your luggage and can arrange guest and crew transfers throughout your stay.",
-      },
-      {
-        question: "Do you also cover Juan-les-Pins and Cap d'Antibes?",
-        answer:
-          "Yes. Juan-les-Pins and Cap d'Antibes, including Hotel du Cap-Eden-Roc, are only a few minutes beyond Antibes and covered by the same transfer.",
-      },
-      {
-        question: "Will the driver meet me inside the airport?",
-        answer:
-          "Yes, with a full meet-and-greet: your chauffeur waits in arrivals with a name sign and helps with your luggage to the car.",
-      },
-    ],
-    relatedSlugs: [
-      "antibes-cannes-saint-paul-de-vence-private-tour",
-      "nice-airport-to-cannes",
-      "airport-transfers",
-    ],
-    ctaTitle: "Book your Nice Airport to Antibes transfer",
-    ctaDescription:
-      "Reserve a private chauffeur for a quick, door-to-door arrival in Antibes, Juan-les-Pins or Cap d'Antibes — including yacht transfers to Port Vauban.",
-    ctaHref: "/our-services/transfers/antibes-transfer",
-    ctaLabel: "See Antibes transfer details",
   },
   {
     slug: "nice-airport-to-cap-dantibes",
@@ -610,8 +478,6 @@ export const routePosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "nice-airport-to-antibes",
-      "antibes-cannes-saint-paul-de-vence-private-tour",
       "airport-transfers",
     ],
     ctaTitle: "Book your Nice Airport to Cap d'Antibes transfer",
@@ -942,215 +808,6 @@ export const routePosts: BlogPost[] = [
     ctaLabel: "See Villefranche transfer details",
   },
   {
-    slug: "nice-airport-to-beaulieu-sur-mer",
-    title: "Nice Airport to Beaulieu-sur-Mer",
-    description:
-      "Nice Airport to Beaulieu-sur-Mer by private chauffeur — route, journey time, guide prices and easy arrivals in this belle-époque seaside town.",
-    excerpt:
-      "Route, journey time, guide prices and door-to-door arrivals in belle-époque Beaulieu-sur-Mer, between Villefranche and Cap-Ferrat.",
-    category: "Airport Transfer",
-    heroKicker: "Nice Airport → Beaulieu-sur-Mer",
-    readTime: "6 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/nice-airport-to-beaulieu-sur-mer.webp",
-    imageAlt:
-      "Black luxury chauffeur sedan on the palm-lined seafront of Beaulieu-sur-Mer",
-    keywords: [
-      "Nice Airport to Beaulieu-sur-Mer",
-      "Beaulieu-sur-Mer transfer",
-      "private driver Beaulieu",
-      "Villa Kérylos transfer",
-      "Beaulieu chauffeur from Nice Airport",
-    ],
-    intro:
-      "Beaulieu-sur-Mer is a pocket of belle-époque calm on the eastern Riviera, sheltered between Villefranche-sur-Mer and Saint-Jean-Cap-Ferrat about 18 kilometres from Nice Airport. Its mild microclimate, elegant villas and quiet marina have drawn discerning travellers for over a century. A private chauffeur makes the arrival as gentle as the town itself. Here is what to know about the Nice Airport to Beaulieu-sur-Mer transfer.",
-    sections: [
-      {
-        id: "distance-and-time",
-        title: "How far is Beaulieu-sur-Mer from Nice Airport?",
-        paragraphs: [
-          "Beaulieu-sur-Mer is roughly 18 to 20 km east of Nice Airport, about 20 to 25 minutes by road via the coast or the Basse Corniche through Nice and Villefranche.",
-          "It sits right on the water, wrapped around its marina and the sheltered cove known as the Petite Afrique for its unusually warm microclimate.",
-        ],
-        bullets: [
-          "Distance: about 18–20 km east of the airport",
-          "Journey time: 20–25 minutes along the coast",
-          "Between Villefranche-sur-Mer and Cap-Ferrat",
-          "Sheltered marina and mild microclimate",
-        ],
-      },
-      {
-        id: "belle-epoque",
-        title: "Belle-époque elegance by the sea",
-        paragraphs: [
-          "Beaulieu's landmark is the Villa Kérylos, a faithful recreation of an ancient Greek villa built on the seafront in the early 1900s. Around it stand grand hotels and villas from the Riviera's golden age, and a palm-lined promenade along the bay.",
-          "A chauffeur delivers you directly to your hotel, villa or the marina, so you can settle into the town's unhurried rhythm from the moment you arrive.",
-        ],
-        bullets: [
-          "Direct arrival at seafront hotels and villas",
-          "Easy visits to the Villa Kérylos",
-          "Drop-off at the Port de Plaisance marina",
-          "Quiet, walkable town from the nearest drop-off",
-        ],
-      },
-      {
-        id: "prices",
-        title: "How much is a Nice Airport to Beaulieu transfer?",
-        paragraphs: [
-          "Indicative guide prices from Nice Airport are shown below; the final quote adapts to timing, exact address and luggage.",
-        ],
-        bullets: [
-          "Mercedes E-Class (up to 3 passengers): from €100",
-          "Mercedes V-Class van (up to 7 passengers): from €120",
-          "Mercedes S-Class (up to 3 passengers): from €160",
-          "Mercedes Maybach (up to 3 passengers): from €300",
-        ],
-      },
-      {
-        id: "what-to-expect",
-        title: "What to expect on arrival",
-        paragraphs: [
-          "Your chauffeur meets you in the arrivals hall, tracks the flight and drives east to Beaulieu, luggage handled from door to door. The town's central position makes it a fine base for exploring Cap-Ferrat, Èze and Monaco with a chauffeur.",
-          "Return transfers and standby chauffeur hire are simple to arrange for a longer stay on this stretch of the coast.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "How long is the transfer from Nice Airport to Beaulieu-sur-Mer?",
-        answer:
-          "About 20 to 25 minutes along the coast. Beaulieu is roughly 18 to 20 km east of the airport.",
-      },
-      {
-        question: "How much is a private transfer to Beaulieu-sur-Mer?",
-        answer:
-          "Indicative guide prices start from €100 in a Mercedes E-Class, €120 in a V-Class van, €160 in an S-Class and €300 in a Maybach.",
-      },
-      {
-        question: "Can we combine Beaulieu with Cap-Ferrat and Èze?",
-        answer:
-          "Yes. Beaulieu sits between Cap-Ferrat, Villefranche and Èze, making it an easy base for a chauffeur-driven day along the eastern Riviera.",
-      },
-    ],
-    relatedSlugs: [
-      "nice-airport-to-villefranche-sur-mer",
-      "nice-airport-to-saint-jean-cap-ferrat",
-      "nice-airport-to-monaco",
-    ],
-    ctaTitle: "Book your Nice Airport to Beaulieu transfer",
-    ctaDescription:
-      "Reserve a private chauffeur for an easy, door-to-door arrival in Beaulieu-sur-Mer, with meet-and-greet and flight tracking.",
-    ctaHref: "/our-services/transfers/nice-airport-transfer",
-    ctaLabel: "See Nice Airport transfer details",
-  },
-  {
-    slug: "nice-airport-to-menton",
-    title: "Nice Airport to Menton Transfer Guide",
-    description:
-      "Nice Airport to Menton by private chauffeur — route, journey time, guide prices and the gateway to the gardens, Lemon Festival and the Italian border.",
-    excerpt:
-      "Route, journey time, guide prices and a door-to-door arrival in Menton, the Riviera's sunniest town on the Italian border.",
-    category: "Airport Transfer",
-    heroKicker: "Nice Airport → Menton",
-    readTime: "7 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/nice-airport-to-menton.webp",
-    imageAlt:
-      "Black luxury chauffeur sedan on a coastal road above the pastel old town of Menton",
-    keywords: [
-      "Nice Airport to Menton",
-      "Menton transfer",
-      "private driver Nice to Menton",
-      "Menton Lemon Festival transfer",
-      "Menton chauffeur from Nice Airport",
-    ],
-    intro:
-      "Menton is the last French town before Italy — the sunniest spot on the Riviera, famous for its pastel old town, subtropical gardens and February Lemon Festival. At about 30 kilometres east of Nice Airport, beyond Monaco, it is a longer run that a private chauffeur makes easy and scenic. Here is what to know about the Nice Airport to Menton transfer.",
-    sections: [
-      {
-        id: "distance-and-time",
-        title: "How far is Menton from Nice Airport?",
-        paragraphs: [
-          "Menton lies about 30 km east of Nice Airport, roughly 35 to 45 minutes away depending on traffic. The route runs past Monaco, either on the A8 motorway or along the corniches for the views.",
-          "Because it is beyond Monaco, the drive is longer than the closer eastern villages, and traffic around the principality can affect timing on event days.",
-        ],
-        bullets: [
-          "Distance: about 30 km east, beyond Monaco",
-          "Journey time: 35–45 minutes depending on traffic",
-          "Route: A8 motorway or the scenic corniches",
-          "The last French town before the Italian border",
-        ],
-      },
-      {
-        id: "gardens-and-gateway",
-        title: "Gardens, the Lemon Festival and the Italian border",
-        paragraphs: [
-          "Menton's mild climate feeds a collection of celebrated gardens — the Serre de la Madone and Val Rahmeh among them — and its Italianate old town climbs in pastel tiers to a baroque church. Each February the Fête du Citron fills the streets with citrus sculptures.",
-          "Menton is also the gateway to Italy: with a chauffeur, day trips across the border to Ventimiglia, Sanremo or the Italian Riviera are simple to arrange.",
-        ],
-        bullets: [
-          "Direct arrival at Menton hotels and villas",
-          "Easy visits to the gardens and old town",
-          "Chauffeur service for the February Lemon Festival",
-          "Cross-border day trips to Ventimiglia and Sanremo",
-        ],
-      },
-      {
-        id: "prices",
-        title: "How much is a Nice Airport to Menton transfer?",
-        paragraphs: [
-          "Because Menton is beyond Monaco, transfers cost a little more than the closer eastern villages. Indicative guide prices are shown below; the final quote adapts to timing and route.",
-        ],
-        bullets: [
-          "Mercedes E-Class (up to 3 passengers): from €160",
-          "Mercedes V-Class van (up to 7 passengers): from €190",
-          "Mercedes S-Class (up to 3 passengers): from €230",
-          "Mercedes Maybach (up to 3 passengers): from €470",
-        ],
-      },
-      {
-        id: "what-to-expect",
-        title: "What to expect on arrival",
-        paragraphs: [
-          "Your chauffeur meets you at the airport and drives east past Monaco to Menton, handling the longer route while you relax. Drop-off can be a seafront hotel, a villa in the hills or the old town.",
-          "Menton pairs naturally with Monaco and the Italian border for a full day of chauffeur-driven touring.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "How long is the transfer from Nice Airport to Menton?",
-        answer:
-          "About 35 to 45 minutes depending on traffic. Menton is roughly 30 km east of the airport, beyond Monaco.",
-      },
-      {
-        question: "How much is a private transfer to Menton?",
-        answer:
-          "Indicative guide prices start from €160 in a Mercedes E-Class, €190 in a V-Class van, €230 in an S-Class and €470 in a Maybach.",
-      },
-      {
-        question: "Can you take us across the border into Italy?",
-        answer:
-          "Yes. From Menton a chauffeur can continue to Ventimiglia, Sanremo and the Italian Riviera for a cross-border day trip.",
-      },
-      {
-        question: "Do you cover the Menton Lemon Festival in February?",
-        answer:
-          "Yes. Transfers and chauffeur hire run throughout the Fête du Citron; booking ahead is wise as the town is busy.",
-      },
-    ],
-    relatedSlugs: [
-      "nice-airport-to-monaco",
-      "nice-airport-to-eze",
-      "airport-transfers",
-    ],
-    ctaTitle: "Book your Nice Airport to Menton transfer",
-    ctaDescription:
-      "Reserve a private chauffeur for a scenic arrival in Menton, with meet-and-greet, flight tracking and optional Italian border day trips.",
-    ctaHref: "/our-services/transfers/menton-transfer",
-    ctaLabel: "See Menton transfer details",
-  },
-  {
     slug: "nice-airport-to-mougins",
     title: "Nice Airport to Mougins Transfer Guide",
     description:
@@ -1243,7 +900,6 @@ export const routePosts: BlogPost[] = [
     ],
     relatedSlugs: [
       "nice-airport-to-cannes",
-      "nice-airport-to-antibes",
       "airport-transfers",
     ],
     ctaTitle: "Book your Nice Airport to Mougins transfer",
@@ -1440,7 +1096,6 @@ export const routePosts: BlogPost[] = [
     relatedSlugs: [
       "nice-airport-to-monaco",
       "airport-transfers",
-      "monaco-business-chauffeur",
     ],
     ctaTitle: "Plan your Nice Airport to Monaco transfer",
     ctaDescription:
@@ -1829,7 +1484,6 @@ export const routePosts: BlogPost[] = [
     ],
     relatedSlugs: [
       "nice-airport-to-saint-tropez",
-      "saint-tropez-day-trip",
       "airport-transfers",
     ],
     ctaTitle: "Plan your journey to Saint-Tropez",
@@ -2029,8 +1683,6 @@ export const routePosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "nice-airport-to-antibes",
-      "monaco-business-chauffeur",
       "airport-transfers",
     ],
     ctaTitle: "Book your Sophia Antipolis business transfer",
@@ -2136,7 +1788,6 @@ export const routePosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "nice-airport-to-menton",
       "nice-airport-to-monaco",
       "airport-transfers",
     ],

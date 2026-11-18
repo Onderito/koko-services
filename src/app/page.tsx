@@ -12,19 +12,46 @@ import Blogs from "./landing/blogs";
 import Trust from "./landing/trust";
 import Footer from "./layout/footer";
 import type { Metadata } from "next";
+import { businessGeo, businessName, siteUrl, socialPreviewImage } from "./data/site-config";
+
+// Home title and description: the brand first, the areas served, and the phrase people search ("private driver nice");
+// the same text in the sharing tags, plus the business's map location.
+const homeTitle = "Kokolimo - Luxury Private Driver in Nice, Cannes & Monaco";
+const homeDescription =
+  "Private driver in Nice, Cannes, Antibes, Monaco, Menton and Saint-Tropez: Nice Airport transfers, hourly chauffeur, Alps in winter. Mercedes, fixed prices, 24/7.";
 
 export const metadata: Metadata = {
-  title: "Private Driver in Nice, Cannes and Monaco | kokolimo",
-  description:
-    "Luxury private driver service in Nice, Cannes, Monaco and Saint-Tropez. Book airport transfers, hourly chauffeur hire and premium Riviera travel.",
+  title: homeTitle,
+  description: homeDescription,
   alternates: {
     canonical: "https://kokolimo.com",
   },
+  openGraph: {
+    title: homeTitle,
+    description: homeDescription,
+    url: siteUrl,
+    siteName: businessName,
+    type: "website",
+    images: [{ url: socialPreviewImage, alt: `${businessName} - Luxury private driver on the French Riviera` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homeTitle,
+    description: homeDescription,
+    images: [socialPreviewImage],
+  },
+  // Where the business is, for maps and directories that read these tags (Google reads the LocalBusiness data).
+  other: {
+    "geo.region": "FR-06",
+    "geo.placename": "Nice",
+    "geo.position": `${businessGeo.latitude};${businessGeo.longitude}`,
+    ICBM: `${businessGeo.latitude}, ${businessGeo.longitude}`,
+  },
 };
 
-// The home page follows the Anti reference (inspirations/IMG_8800) block by block, in the order the user set on
-// 21 Oct 2026: services, performance, fleet, CTA banner, reviews, pricing, process, VIP, articles gallery, reviews
-// reminder, then the footer's CTA banner and columns. Each section is a full-width band that sets its header tone.
+// The home page's blocks, in order: services, performance, fleet, CTA banner, reviews, pricing, process, VIP, articles
+// gallery, reviews reminder, then the footer's CTA banner and columns. Each section is a full-width band that sets its
+// header tone.
 export default function Home() {
   return (
     <>

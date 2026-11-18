@@ -17,15 +17,9 @@ export type { ClusterConfig } from "./clusters";
 // Legacy posts predate the cluster files, so they are mapped to hubs by slug.
 const legacyClusterBySlug: Record<string, ClusterId> = {
   "airport-transfers": "routes",
-  "nice-to-monaco-transfer": "routes",
-  "nice-to-cannes-transfer": "routes",
-  "antibes-cannes-saint-paul-de-vence-private-tour": "destinations",
   "eze-monaco-private-tour-from-nice": "destinations",
-  "saint-tropez-day-trip": "destinations",
   "luxury-events": "events",
   "private-driver": "services-explained",
-  "cannes-taxi-vs-private-driver": "services-explained",
-  "monaco-business-chauffeur": "services-explained",
 };
 
 function tagCluster(posts: BlogPost[], cluster: ClusterId): BlogPost[] {

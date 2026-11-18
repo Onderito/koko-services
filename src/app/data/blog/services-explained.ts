@@ -96,7 +96,6 @@ export const servicesExplainedPosts: BlogPost[] = [
     relatedSlugs: [
       "chauffeur-vs-taxi-vs-rental-car-riviera",
       "french-riviera-chauffeur-prices",
-      "how-to-plan-a-french-riviera-trip",
     ],
     ctaTitle: "Experience a private chauffeur",
     ctaDescription:
@@ -312,213 +311,10 @@ export const servicesExplainedPosts: BlogPost[] = [
     relatedSlugs: [
       "french-riviera-chauffeur-prices",
       "monaco-grand-prix-chauffeur",
-      "french-riviera-michelin-dining",
     ],
     ctaTitle: "Hire a chauffeur by the hour",
     ctaDescription:
       "The car and driver at your disposal, waiting between stops — an hourly chauffeur for your day on the Riviera.",
-    ctaHref: "/our-services/hourly-chauffeur",
-    ctaLabel: "See hourly chauffeur",
-  },
-  {
-    slug: "chauffeur-vs-limousine-vs-taxi",
-    title: "Chauffeur, Limousine or Taxi",
-    description:
-      "Chauffeur, limousine or taxi — what the differences really are, and which suits luxury travel on the French Riviera.",
-    excerpt:
-      "What the differences really are between a chauffeur, a limousine and a taxi — and which suits the Riviera.",
-    category: "Chauffeur Services",
-    heroKicker: "Which service",
-    readTime: "5 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/chauffeur-vs-limousine-vs-taxi.webp",
-    imageAlt:
-      "A chauffeur opening the rear door of a luxury Mercedes on a Riviera seafront",
-    keywords: [
-      "chauffeur vs limousine",
-      "chauffeur vs taxi",
-      "limousine service Riviera",
-      "private car service explained",
-      "luxury transfer Riviera",
-    ],
-    intro:
-      "The terms are easily confused, and on the Riviera they matter. A chauffeur service, a limousine and a taxi are three different things. Here is what really separates them, and which suits luxury travel on the French Riviera.",
-    sections: [
-      {
-        id: "chauffeur-service",
-        title: "A chauffeur service",
-        paragraphs: [
-          "A chauffeur service is a professional driver and a premium car, booked in advance at a fixed price and dedicated to you. It adds meet-and-greet, discretion, local knowledge and a tailored, consistent standard — the option for arrivals, events and comfort.",
-          "It is defined by the service around the car, not just the car itself.",
-        ],
-        bullets: [
-          "A professional driver and premium car",
-          "Booked ahead at a fixed price",
-          "Meet-and-greet and discretion",
-          "Tailored and consistent",
-        ],
-      },
-      {
-        id: "limousine",
-        title: "A limousine",
-        paragraphs: [
-          "In Europe, 'limousine service' usually means exactly this — a chauffeur-driven premium saloon such as a Mercedes E-Class or S-Class, not the long stretch cars the word suggests elsewhere. The term describes the chauffeured service and the class of car, rather than a novelty vehicle.",
-          "So a 'limousine transfer' here is a chauffeured Mercedes, not a stretch limo.",
-        ],
-        bullets: [
-          "In Europe, a chauffeured premium saloon",
-          "A Mercedes E-Class or S-Class, typically",
-          "Not an American-style stretch car",
-          "The service and car class, not a novelty",
-        ],
-      },
-      {
-        id: "taxi",
-        title: "A taxi",
-        paragraphs: [
-          "A taxi is a metered, licensed car hailed on the street or taken from a rank, in whatever vehicle is next. There is no advance booking, no choice of car and no meet-and-greet, and the fare runs on a meter — fine for a short, spontaneous hop.",
-          "It is convenient for quick trips, but not a tailored service.",
-        ],
-        bullets: [
-          "Metered and hailed or ranked",
-          "Whatever car is next",
-          "No booking, choice or meet-and-greet",
-          "Best for short, spontaneous trips",
-        ],
-      },
-      {
-        id: "which-to-choose",
-        title: "Which to choose",
-        paragraphs: [
-          "For airport arrivals, events, tours and any journey where comfort and reliability matter, a chauffeur or 'limousine' service is the choice — booked ahead, fixed and tailored. For a quick central hop, a taxi does the job.",
-          "On the Riviera, the two suit different moments of the same trip.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What is the difference between a chauffeur and a taxi?",
-        answer:
-          "A chauffeur is a professional driver and premium car booked ahead at a fixed price with meet-and-greet; a taxi is a metered car hailed on the spot.",
-      },
-      {
-        question: "Is a limousine a stretch car on the Riviera?",
-        answer:
-          "No. In Europe, 'limousine service' means a chauffeur-driven premium saloon like a Mercedes E-Class or S-Class, not a stretch limousine.",
-      },
-      {
-        question: "Which is best for airport arrivals and events?",
-        answer:
-          "A chauffeur or limousine service — booked ahead, fixed-price and tailored, with meet-and-greet — rather than a metered taxi.",
-      },
-      {
-        question: "When is a taxi the better choice?",
-        answer:
-          "For a short, spontaneous hop in town, where a metered taxi is convenient and a booked chauffeur is more than you need.",
-      },
-    ],
-    relatedSlugs: [
-      "chauffeur-vs-taxi-vs-rental-car-riviera",
-      "french-riviera-chauffeur-prices",
-      "what-is-a-private-chauffeur-service",
-    ],
-    ctaTitle: "Choose a chauffeur service",
-    ctaDescription:
-      "Booked ahead, fixed-price and tailored — a chauffeured Mercedes for luxury travel across the French Riviera.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
-  },
-  {
-    slug: "corporate-chauffeur-service",
-    title: "Corporate Chauffeur Service",
-    description:
-      "How a corporate chauffeur service works on the French Riviera — reliable, discreet transport for business travel, meetings and events.",
-    excerpt:
-      "Reliable, discreet transport for business travel, meetings and events — a corporate chauffeur service.",
-    category: "Chauffeur Services",
-    heroKicker: "Corporate travel",
-    readTime: "5 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/corporate-chauffeur-service.webp",
-    imageAlt:
-      "A businessman stepping into a black luxury Mercedes held open by a chauffeur on the Riviera",
-    keywords: [
-      "corporate chauffeur service",
-      "business chauffeur French Riviera",
-      "executive car service Riviera",
-      "corporate transport Cote d'Azur",
-      "business travel chauffeur",
-    ],
-    intro:
-      "For business on the French Riviera, transport has to be reliable, punctual and discreet. A corporate chauffeur service delivers exactly that — a professional car and driver that let executives work and arrive composed. Here is how a corporate chauffeur service works.",
-    sections: [
-      {
-        id: "reliable-and-punctual",
-        title: "Reliable and punctual",
-        paragraphs: [
-          "The value of a corporate service is certainty: the car is there on time, the driver knows the route and the traffic, and meetings are reached without stress. Flights are tracked, schedules are held, and the day runs to plan.",
-          "For business travel, that reliability is the whole point.",
-        ],
-        bullets: [
-          "On time, every time",
-          "Routes and traffic handled",
-          "Flights tracked, schedules held",
-          "Meetings reached composed",
-        ],
-      },
-      {
-        id: "a-mobile-office",
-        title: "A quiet, mobile workspace",
-        paragraphs: [
-          "A chauffeured S-Class or V-Class becomes a quiet space to work, take calls or prepare between meetings, rather than dead time behind the wheel or in a taxi. Discretion is a given, and the standard is consistent across every journey.",
-          "Executives arrive ready, having used the travel time well.",
-        ],
-        bullets: [
-          "Work or take calls en route",
-          "A discreet, quiet cabin",
-          "S-Class or V-Class comfort",
-          "A consistent professional standard",
-        ],
-      },
-      {
-        id: "events-and-accounts",
-        title: "Events and accounts",
-        paragraphs: [
-          "For conferences and business festivals like Cannes Lions, a corporate service coordinates multiple cars, arrivals and meetings across a busy week. Accounts and a single point of contact keep billing and booking simple for companies and their teams.",
-          "It scales from a single executive pickup to a full corporate programme.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What is a corporate chauffeur service?",
-        answer:
-          "A professional car and driver for business travel — reliable, punctual and discreet — that lets executives work en route and arrive composed.",
-      },
-      {
-        question: "Can I work during a corporate transfer?",
-        answer:
-          "Yes. A chauffeured S-Class or V-Class is a quiet space to work or take calls between meetings, rather than dead time driving or in a taxi.",
-      },
-      {
-        question: "Can a chauffeur service handle a business event?",
-        answer:
-          "Yes. For conferences and festivals like Cannes Lions it coordinates multiple cars, arrivals and meetings across the week, with accounts.",
-      },
-      {
-        question: "Do you offer accounts for companies?",
-        answer:
-          "A corporate service typically offers accounts and a single point of contact, keeping booking and billing simple for companies and teams.",
-      },
-    ],
-    relatedSlugs: [
-      "cannes-lions-chauffeur",
-      "hourly-chauffeur-service-explained",
-      "airport-transfer-service-explained",
-    ],
-    ctaTitle: "Corporate chauffeurs on the Riviera",
-    ctaDescription:
-      "Reliable, discreet and on time — a corporate chauffeur service for business travel across the French Riviera.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -795,7 +591,6 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     relatedSlugs: [
       "what-is-a-private-chauffeur-service",
-      "french-riviera-with-kids-family",
       "airport-transfer-service-explained",
     ],
     ctaTitle: "Travel together in a V-Class",
@@ -982,7 +777,6 @@ export const servicesExplainedPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "french-riviera-with-kids-family",
       "v-class-van-transfers-explained",
       "airport-transfer-service-explained",
     ],
@@ -991,100 +785,6 @@ export const servicesExplainedPosts: BlogPost[] = [
       "Correctly fitted child seats and space for everyone — family chauffeur transfers across the French Riviera.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
-  },
-  {
-    slug: "multi-day-chauffeur-hire",
-    title: "Multi-Day Chauffeur Hire",
-    description:
-      "How multi-day chauffeur hire works on the French Riviera — the same driver and car for a tour or a full itinerary over several days.",
-    excerpt:
-      "The same driver and car for a tour or a full itinerary over several days — multi-day chauffeur hire.",
-    category: "Chauffeur Services",
-    heroKicker: "Multi-day hire",
-    readTime: "5 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/multi-day-chauffeur-hire.webp",
-    imageAlt:
-      "A luxury Mercedes with a chauffeur on a scenic French Riviera corniche road above the sea",
-    keywords: [
-      "multi-day chauffeur hire",
-      "chauffeur for several days",
-      "private driver multi-day Riviera",
-      "chauffeur tour French Riviera",
-      "full itinerary chauffeur",
-    ],
-    intro:
-      "For a tour of the coast or a full trip handled door to door, multi-day chauffeur hire gives you the same driver and car across several days. Here is how multi-day chauffeur hire works on the French Riviera.",
-    sections: [
-      {
-        id: "the-same-driver-and-car",
-        title: "The same driver and car",
-        paragraphs: [
-          "Over several days you keep the same chauffeur and vehicle, so the driver comes to know your preferences, your pace and your plans. There is no re-explaining each day and no unfamiliar cars — just a consistent, trusted presence for the whole trip.",
-          "It is the closest thing to having your own car and driver on the coast.",
-        ],
-        bullets: [
-          "The same chauffeur throughout",
-          "The same familiar vehicle",
-          "Your preferences remembered",
-          "A consistent, trusted presence",
-        ],
-      },
-      {
-        id: "a-full-itinerary-handled",
-        title: "A full itinerary, handled",
-        paragraphs: [
-          "A multi-day chauffeur can run a planned itinerary — Nice one day, Monaco and Èze the next, Cannes and Saint-Tropez beyond — or adapt as you go, weaving in the airport, dinners and day trips. The logistics of a whole trip are handled by one driver.",
-          "See our five-day itinerary for how the days can be shaped.",
-        ],
-        bullets: [
-          "A planned route across the days",
-          "Or adapted as you go",
-          "Airport, dinners and day trips woven in",
-          "One driver for the whole trip",
-        ],
-      },
-      {
-        id: "how-its-arranged",
-        title: "How it is arranged",
-        paragraphs: [
-          "Multi-day hire is usually priced by the day or as a package for the itinerary, with the vehicle chosen for the party and the luggage. It suits touring holidays, weddings spread over several days, and business trips with a full programme.",
-          "It is the seamless way to have transport sorted for an entire stay.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "What is multi-day chauffeur hire?",
-        answer:
-          "Keeping the same driver and car across several days for a tour or full itinerary, so one chauffeur handles the whole trip.",
-      },
-      {
-        question: "Do I keep the same chauffeur each day?",
-        answer:
-          "Yes. You keep the same chauffeur and vehicle throughout, so the driver learns your preferences, pace and plans over the days.",
-      },
-      {
-        question: "Can a chauffeur follow a set itinerary?",
-        answer:
-          "Yes. A multi-day chauffeur can run a planned route or adapt as you go, weaving in the airport, dinners and day trips.",
-      },
-      {
-        question: "How is multi-day chauffeur hire priced?",
-        answer:
-          "Usually by the day or as a package for the itinerary, with the vehicle chosen for the party and luggage, ideal for touring or events.",
-      },
-    ],
-    relatedSlugs: [
-      "french-riviera-5-day-itinerary",
-      "how-to-plan-a-french-riviera-trip",
-      "hourly-chauffeur-service-explained",
-    ],
-    ctaTitle: "Your driver for the whole trip",
-    ctaDescription:
-      "The same chauffeur and car across your stay — multi-day chauffeur hire for a tour or full itinerary on the Riviera.",
-    ctaHref: "/our-services/private-tours",
-    ctaLabel: "See chauffeur tours",
   },
   {
     slug: "how-to-book-a-chauffeur",

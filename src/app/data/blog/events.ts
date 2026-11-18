@@ -97,7 +97,6 @@ export const eventPosts: BlogPost[] = [
     relatedSlugs: [
       "monaco-in-one-day",
       "getting-around-monaco",
-      "monaco-port-hercule-yacht-transfer",
     ],
     ctaTitle: "A chauffeur for the Monaco Grand Prix",
     ctaDescription:
@@ -401,7 +400,6 @@ export const eventPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "menton-day-trip-guide",
       "french-riviera-in-winter",
       "best-things-to-do-in-nice",
     ],
@@ -809,9 +807,7 @@ export const eventPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "saint-tropez-yacht-transfer",
       "best-things-to-do-in-saint-tropez",
-      "pampelonne-beach-club-transfers",
     ],
     ctaTitle: "A chauffeur for Les Voiles de Saint-Tropez",
     ctaDescription:

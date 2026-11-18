@@ -274,107 +274,11 @@ export const hotelPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "cap-dantibes-scenic-guide",
       "antibes-juan-les-pins-guide",
-      "nice-airport-to-antibes",
     ],
     ctaTitle: "Transfer to the Hôtel du Cap-Eden-Roc",
     ctaDescription:
       "A discreet arrival through the pines of the Cap — a private chauffeur for the Hôtel du Cap-Eden-Roc.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
-  },
-  {
-    slug: "grand-hotel-cap-ferrat-transfer",
-    title: "Grand-Hôtel du Cap-Ferrat Transfer",
-    description:
-      "Private chauffeur transfers to the Grand-Hôtel du Cap-Ferrat — from Nice Airport to the palace above the sea in about 25 minutes.",
-    excerpt:
-      "A private chauffeur transfer to the Grand-Hôtel du Cap-Ferrat, a palace in gardens above the sea.",
-    category: "Luxury Hotels",
-    heroKicker: "Grand-Hôtel du Cap-Ferrat",
-    readTime: "5 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/grand-hotel-cap-ferrat-transfer.webp",
-    imageAlt:
-      "A grand white palace hotel among gardens and pines above the sea at Saint-Jean-Cap-Ferrat",
-    keywords: [
-      "Grand-Hotel du Cap-Ferrat",
-      "Cap-Ferrat hotel transfer",
-      "Saint-Jean-Cap-Ferrat chauffeur",
-      "Nice airport to Cap-Ferrat hotel",
-      "Four Seasons Cap-Ferrat transfer",
-    ],
-    intro:
-      "On the exclusive peninsula of Saint-Jean-Cap-Ferrat, the Grand-Hôtel du Cap-Ferrat presides over gardens that run down to the sea. A palace since 1908, now a Four Seasons, it is a short, beautiful chauffeured drive from the airport. Here is what to know about transfers to the Grand-Hôtel du Cap-Ferrat.",
-    sections: [
-      {
-        id: "a-palace-on-the-peninsula",
-        title: "A palace on the peninsula",
-        paragraphs: [
-          "Opened in 1908 amid manicured gardens and umbrella pines, the Grand-Hôtel sits at the tip of the Cap-Ferrat peninsula, with a funicular carrying guests down to the Club Dauphin pool at the water's edge. It is one of the most serene and private addresses on the coast.",
-          "The setting — gardens, sea and seclusion — is the essence of Cap-Ferrat.",
-        ],
-        bullets: [
-          "A palace hotel opened in 1908",
-          "Gardens and pines above the sea",
-          "A funicular to the seafront pool",
-          "Now a Four Seasons hotel",
-        ],
-      },
-      {
-        id: "from-nice-airport",
-        title: "From Nice Airport to the gates",
-        paragraphs: [
-          "Cap-Ferrat lies around 25 minutes east of Nice Airport. A private chauffeur meets your flight and brings you onto the peninsula to the hotel gates, from around €110 in an E-Class or €140 in a V-Class — a smooth arrival to a very private place.",
-          "The short run east follows the coast past Villefranche, a beautiful drive in itself.",
-        ],
-        bullets: [
-          "About 25 minutes from Nice Airport",
-          "From around €110 (E-Class) or €140 (V-Class)",
-          "Delivered onto the peninsula to the gates",
-          "A scenic run east past Villefranche",
-        ],
-      },
-      {
-        id: "a-chauffeur-for-cap-ferrat",
-        title: "A chauffeur for Cap-Ferrat",
-        paragraphs: [
-          "A stay on Cap-Ferrat pairs naturally with a private chauffeur — for the gardens of the Villa Ephrussi, dinners in Villefranche and Monaco, and links to a yacht at anchor in the bays. The same discreet driver is on call throughout, in keeping with the peninsula's privacy.",
-          "It is the quiet, seamless service Cap-Ferrat is known for.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "How far is the Grand-Hôtel du Cap-Ferrat from Nice Airport?",
-        answer:
-          "Around 25 minutes east of Nice Airport, along the coast past Villefranche onto the Saint-Jean-Cap-Ferrat peninsula.",
-      },
-      {
-        question: "How much is a transfer to the Grand-Hôtel du Cap-Ferrat?",
-        answer:
-          "From around €110 in an E-Class or €140 in a V-Class from Nice Airport, delivered onto the peninsula to the hotel gates.",
-      },
-      {
-        question: "Is the Grand-Hôtel du Cap-Ferrat a Four Seasons?",
-        answer:
-          "Yes. The 1908 palace hotel is now a Four Seasons, set in gardens above the sea with a funicular to the seafront pool.",
-      },
-      {
-        question: "Can a chauffeur link the hotel with a yacht or villa?",
-        answer:
-          "Yes. A private driver ties the hotel to the gardens, dinners and a yacht at anchor in the bays, discreetly throughout the stay.",
-      },
-    ],
-    relatedSlugs: [
-      "saint-jean-cap-ferrat-luxury-guide",
-      "cap-ferrat-yacht-villa-transfer",
-      "best-french-riviera-gardens",
-    ],
-    ctaTitle: "Transfer to the Grand-Hôtel du Cap-Ferrat",
-    ctaDescription:
-      "A scenic run east to a palace above the sea — a private chauffeur for the Grand-Hôtel du Cap-Ferrat.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -651,7 +555,6 @@ export const hotelPosts: BlogPost[] = [
     ],
     relatedSlugs: [
       "best-things-to-do-in-saint-tropez",
-      "saint-tropez-yacht-transfer",
       "nice-to-saint-tropez-road-vs-boat",
     ],
     ctaTitle: "Transfer to the Byblos Saint-Tropez",
@@ -744,7 +647,6 @@ export const hotelPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "eze-village-visitor-guide",
       "nice-airport-to-eze",
       "most-scenic-drives-french-riviera",
     ],
@@ -932,7 +834,6 @@ export const hotelPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "french-riviera-hidden-gems",
       "most-scenic-drives-french-riviera",
       "best-things-to-do-in-nice",
     ],
@@ -1027,106 +928,10 @@ export const hotelPosts: BlogPost[] = [
     ],
     relatedSlugs: [
       "best-things-to-do-in-saint-tropez",
-      "pampelonne-beach-club-transfers",
-      "saint-tropez-yacht-transfer",
     ],
     ctaTitle: "Transfer to La Réserve Ramatuelle",
     ctaDescription:
       "By road or by boat to a clifftop hotel above the sea — a private chauffeur for La Réserve Ramatuelle.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
-  },
-  {
-    slug: "hotel-belles-rives-transfer",
-    title: "Hôtel Belles Rives Transfer",
-    description:
-      "Private chauffeur transfers to the Hôtel Belles Rives at Juan-les-Pins — from Nice Airport to the Art Deco hotel on the water.",
-    excerpt:
-      "A private chauffeur transfer to the Hôtel Belles Rives, the Art Deco jewel on the water at Juan-les-Pins.",
-    category: "Luxury Hotels",
-    heroKicker: "Hôtel Belles Rives",
-    readTime: "5 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/hotel-belles-rives-transfer.webp",
-    imageAlt:
-      "An Art Deco waterfront hotel with a private jetty at Juan-les-Pins on the Riviera",
-    keywords: [
-      "Hotel Belles Rives",
-      "Belles Rives Juan-les-Pins",
-      "Juan-les-Pins hotel transfer",
-      "Nice airport to Belles Rives",
-      "Fitzgerald hotel Riviera",
-    ],
-    intro:
-      "On the waterfront at Juan-les-Pins, the Hôtel Belles Rives is an Art Deco jewel with a jazz-age soul — once the villa where F. Scott Fitzgerald summered in the 1920s. Its private jetty and glamour make it a distinctive Riviera address. Here is what to know about transfers to the Belles Rives.",
-    sections: [
-      {
-        id: "jazz-age-on-the-water",
-        title: "Jazz-age on the water",
-        paragraphs: [
-          "The Belles Rives began as the villa where F. Scott Fitzgerald stayed in the 1920s, and it keeps that jazz-age glamour as an Art Deco hotel on the water at Juan-les-Pins. A private jetty, waterside restaurant and beach club give it a setting few can match.",
-          "It is a piece of Riviera legend, right on the Mediterranean.",
-        ],
-        bullets: [
-          "An Art Deco hotel on the Juan-les-Pins waterfront",
-          "Once the villa of F. Scott Fitzgerald",
-          "A private jetty and beach club",
-          "Jazz-age glamour on the water",
-        ],
-      },
-      {
-        id: "from-nice-airport",
-        title: "From Nice Airport to the door",
-        paragraphs: [
-          "Juan-les-Pins lies around 25 to 30 minutes from Nice Airport, part of Antibes. A private chauffeur meets your flight and brings you to the hotel on the seafront, from around €130 in an E-Class or €150 in a V-Class.",
-          "The run is short and easy, one of the more convenient luxury arrivals on the central coast.",
-        ],
-        bullets: [
-          "About 25–30 minutes from Nice Airport",
-          "From €130 (E-Class) or €150 (V-Class)",
-          "Delivered to the seafront entrance",
-          "A short, easy run on the central coast",
-        ],
-      },
-      {
-        id: "a-chauffeur-for-juan-and-antibes",
-        title: "A chauffeur for Juan and Antibes",
-        paragraphs: [
-          "From the Belles Rives, a private chauffeur reaches the old town of Antibes, the Cap d'Antibes and the wider coast, and is ideal for evenings at the Jazz à Juan festival next door each July. The same driver is on call throughout the stay.",
-          "It turns a waterfront stay into a base for the central Riviera.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "How far is the Hôtel Belles Rives from Nice Airport?",
-        answer:
-          "Around 25 to 30 minutes by road at Juan-les-Pins, part of Antibes, one of the more convenient luxury arrivals on the coast.",
-      },
-      {
-        question: "How much is a transfer to the Belles Rives?",
-        answer:
-          "From around €130 in an E-Class or €150 in a V-Class from Nice Airport, delivered to the seafront entrance.",
-      },
-      {
-        question: "What is the Hôtel Belles Rives known for?",
-        answer:
-          "An Art Deco hotel on the Juan-les-Pins waterfront, once the villa of F. Scott Fitzgerald, with a private jetty and beach club.",
-      },
-      {
-        question: "Is the Belles Rives near the Jazz à Juan festival?",
-        answer:
-          "Yes. The festival takes place in the pine grove at Juan-les-Pins next door each July, an easy step with a chauffeur on call.",
-      },
-    ],
-    relatedSlugs: [
-      "antibes-juan-les-pins-guide",
-      "jazz-a-juan-festival",
-      "nice-airport-to-antibes",
-    ],
-    ctaTitle: "Transfer to the Hôtel Belles Rives",
-    ctaDescription:
-      "A short run to an Art Deco jewel on the water — a private chauffeur for the Hôtel Belles Rives at Juan-les-Pins.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -1308,107 +1113,12 @@ export const hotelPosts: BlogPost[] = [
       },
     ],
     relatedSlugs: [
-      "eze-village-visitor-guide",
       "nice-airport-to-eze",
       "chevre-dor-eze-transfer",
     ],
     ctaTitle: "Transfer to Cap Estel",
     ctaDescription:
       "A discreet arrival to a private peninsula by the sea — a private chauffeur for Cap Estel at Èze-sur-Mer.",
-    ctaHref: "/our-services/transfers",
-    ctaLabel: "See transfer options",
-  },
-  {
-    slug: "la-reserve-beaulieu-transfer",
-    title: "La Réserve de Beaulieu Transfer",
-    description:
-      "Private chauffeur transfers to La Réserve de Beaulieu — from Nice Airport to the Belle Époque seafront palace in 25 minutes.",
-    excerpt:
-      "A private chauffeur transfer to La Réserve de Beaulieu, a Belle Époque palace on the Beaulieu seafront.",
-    category: "Luxury Hotels",
-    heroKicker: "La Réserve de Beaulieu",
-    readTime: "5 min read",
-    publishedAt: "2026-07-06",
-    imageUrl: "/assets/images/blog/la-reserve-beaulieu-transfer.webp",
-    imageAlt:
-      "A grand pink Italianate palace hotel on the seafront at Beaulieu-sur-Mer with a harbour",
-    keywords: [
-      "La Reserve de Beaulieu",
-      "Beaulieu-sur-Mer hotel transfer",
-      "La Reserve Beaulieu chauffeur",
-      "Nice airport to Beaulieu",
-      "Riviera palace hotel",
-    ],
-    intro:
-      "Rose-pink and Italianate, La Réserve de Beaulieu is a grand Belle Époque palace on the seafront of Beaulieu-sur-Mer, complete with its own small harbour and Michelin dining. It is old-world Riviera at its most romantic — and a short chauffeured drive from the airport. Here is what to know about transfers to La Réserve de Beaulieu.",
-    sections: [
-      {
-        id: "a-riviera-palace-on-the-sea",
-        title: "A Riviera palace on the sea",
-        paragraphs: [
-          "Built in the grand manner and painted a warm rose-pink, La Réserve stands directly on the sea at Beaulieu, with a private harbour, a seawater pool and a celebrated Michelin-starred restaurant. It is a survivor of the belle-époque Riviera, when Beaulieu was a winter haunt of European royalty.",
-          "Few hotels capture the old-world glamour of the coast so completely.",
-        ],
-        bullets: [
-          "A rose-pink Belle Époque seafront palace",
-          "Its own small private harbour",
-          "A seawater pool and Michelin dining",
-          "Old-world Riviera grandeur at Beaulieu",
-        ],
-      },
-      {
-        id: "from-nice-airport",
-        title: "From Nice Airport to the door",
-        paragraphs: [
-          "Beaulieu-sur-Mer lies around 25 minutes east of Nice Airport, along the coast past Villefranche. A private chauffeur meets your flight and brings you to the seafront entrance, from around €100 — one of the quicker luxury arrivals on the eastern coast.",
-          "The short run hugs the shore, a lovely drive in itself.",
-        ],
-        bullets: [
-          "About 25 minutes from Nice Airport",
-          "Along the coast past Villefranche",
-          "Indicative transfers from around €100",
-          "Delivered to the seafront entrance",
-        ],
-      },
-      {
-        id: "a-chauffeur-for-the-east",
-        title: "A chauffeur for the eastern coast",
-        paragraphs: [
-          "From Beaulieu, a private chauffeur reaches the neighbouring peninsula of Cap-Ferrat, the deep bay of Villefranche, and Monaco and Èze just beyond. The same driver is on call for dinners and day trips throughout the stay.",
-          "It turns a seafront palace stay into a base for the whole eastern Riviera.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "How far is La Réserve de Beaulieu from Nice Airport?",
-        answer:
-          "Around 25 minutes east along the coast past Villefranche, one of the quicker luxury hotel arrivals on the eastern coast.",
-      },
-      {
-        question: "How much is a transfer to La Réserve de Beaulieu?",
-        answer:
-          "Indicatively from around €100 from Nice Airport, delivered to the seafront entrance at Beaulieu-sur-Mer.",
-      },
-      {
-        question: "What is La Réserve de Beaulieu known for?",
-        answer:
-          "A rose-pink Belle Époque seafront palace with its own harbour, a seawater pool and Michelin dining, full of old-world Riviera grandeur.",
-      },
-      {
-        question: "Can a chauffeur reach Cap-Ferrat and Monaco from Beaulieu?",
-        answer:
-          "Yes. Cap-Ferrat and Villefranche are next door, with Monaco and Èze just beyond, all linked by a private driver on call.",
-      },
-    ],
-    relatedSlugs: [
-      "beaulieu-sur-mer-guide",
-      "saint-jean-cap-ferrat-luxury-guide",
-      "grand-hotel-cap-ferrat-transfer",
-    ],
-    ctaTitle: "Transfer to La Réserve de Beaulieu",
-    ctaDescription:
-      "A short run east to a seafront palace — a private chauffeur for La Réserve de Beaulieu.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -1498,7 +1208,6 @@ export const hotelPosts: BlogPost[] = [
     relatedSlugs: [
       "best-things-to-do-in-cannes",
       "nice-airport-to-mougins",
-      "french-riviera-hidden-gems",
     ],
     ctaTitle: "Transfer to Le Mas Candille",
     ctaDescription:
@@ -1685,7 +1394,6 @@ export const hotelPosts: BlogPost[] = [
     ],
     relatedSlugs: [
       "best-things-to-do-in-saint-tropez",
-      "saint-tropez-yacht-transfer",
       "byblos-saint-tropez-transfer",
     ],
     ctaTitle: "Transfer to the Château de la Messardière",
