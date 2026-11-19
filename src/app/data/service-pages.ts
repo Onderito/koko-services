@@ -623,9 +623,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "nice-airport-transfer",
     path: "/our-services/transfers/nice-airport-transfer",
     metadata: {
-      title: "Nice Airport Transfer | Private Chauffeur Arrival | kokolimo",
+      title: "Nice Airport Transfer | Private Driver | Kokolimo",
       description:
-        "Premium Nice Airport transfer service with meet-and-greet, luggage assistance, and private chauffeur rides to Monaco, Cannes, Nice, and beyond.",
+        "Private Nice Airport transfer from €90 at a fixed price, with meet-and-greet, luggage help and a chauffeur to Nice, Monaco, Cannes and the whole Riviera.",
       keywords: [
         "Nice airport transfer",
         "private chauffeur Nice Airport",
@@ -758,9 +758,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "long-distance-transfer",
     path: "/our-services/transfers/long-distance-transfer",
     metadata: {
-      title: "Long-Distance Private Transfer | kokolimo",
+      title: "Long-Distance Private Transfer | Kokolimo",
       description:
-        "Long-distance chauffeur transfers from the French Riviera to cities, resorts, villas, and airports with private comfort and premium execution.",
+        "Long-distance private transfers from Nice, Monaco and the Riviera to cities, resorts, villas and airports, at a fixed price confirmed before you book.",
       keywords: [
         "long distance transfer Riviera",
         "private chauffeur long distance",
@@ -1065,9 +1065,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     slug: "saint-tropez-transfer",
     path: "/our-services/transfers/saint-tropez-transfer",
     metadata: {
-      title: "Nice to Saint-Tropez Transfer | Chauffeur | kokolimo",
+      title: "Nice Airport to Saint-Tropez Transfer | Kokolimo",
       description:
-        "Private Nice Airport to Saint-Tropez transfer by road or boat, with a chauffeur to the old port, the villas and the Pampelonne beach clubs.",
+        "Private Nice Airport to Saint-Tropez transfer from €400 at a fixed price, by road or boat, with a chauffeur to the old port, the villas and Pampelonne.",
       keywords: [
         "Nice to Saint-Tropez transfer",
         "Saint-Tropez airport transfer",

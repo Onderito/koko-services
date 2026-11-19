@@ -40,6 +40,10 @@ export const pageUpdatedAt: Record<string, string> = {
       "events", "events/monaco-grand-prix", "events/cannes-film-festival", "events/monaco-yacht-show",
     ].map(page => [`/our-services/${page}`, "2026-11-18"]),
   ),
+  // 19 Nov 2026: the Nice Airport, Saint-Tropez and long-distance transfer pages' titles and descriptions.
+  "/our-services/transfers/nice-airport-transfer": "2026-11-19",
+  "/our-services/transfers/saint-tropez-transfer": "2026-11-19",
+  "/our-services/transfers/long-distance-transfer": "2026-11-19",
 };
 
 /** Articles whose text changed after publication, by slug: their Article markup's dateModified. */
