@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/app/data/page-metadata";
 import CarPageTemplate from "../car-page-template";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mercedes Class-V Driver Service in French Riviera | kokolimo",
   description:
     "Travel in comfort with our spacious Mercedes-Benz Class-V. Ideal for families, business teams or group transfers from Nice to Monaco, Cannes and beyond.",
-  keywords: [
-    "Mercedes Class V driver",
-    "van driver Nice",
-    "group transfer French Riviera",
-    "driver Class V Monaco",
-    "kokolimo Class V",
-    "private van with driver French Riviera",
-  ],
-  alternates: {
-    canonical: "https://kokolimo.com/cars/class-v",
-  },
-};
+  path: "/cars/class-v",
+  image: "/assets/images/cars/class-v/class-v-mercedes.webp",
+  imageAlt: "A black Mercedes V-Class with its sliding door open on the quay of Port Hercule, Monaco, at dusk",
+  allowPortrait: true,
+});
 
 const classVContent = {
   titlePrefix: "Mercedes V-Class ",

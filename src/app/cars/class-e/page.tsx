@@ -1,28 +1,20 @@
-// The E-Class page (user, 29 Oct 2026: "you didn't make a page for e-class in /cars"), on the same template as the
-// S-Class, V-Class and Maybach pages. Facts as stated elsewhere on the site: up to 3 passengers (data/vehicles), flight
-// tracking, meet and greet, fixed fare confirmed before the ride. No luggage figure until the owner confirms it.
-// Photos generated in the style of the other cars' photos (Codex, user's account), to be replaced by photos of the
-// owner's own E-Class when there are some.
+// The E-Class page, on the same template as the S-Class, V-Class and Maybach pages. Its facts are the ones stated
+// elsewhere on the site: up to 3 passengers (data/vehicles), flight tracking, meet and greet, a fixed price confirmed
+// before the ride, and no luggage figure. Its photos are generated in the style of the other cars' photos.
 
 import type { Metadata } from "next";
+import { pageMetadata } from "@/app/data/page-metadata";
 import CarPageTemplate from "../car-page-template";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mercedes Class-E Driver Nice & Monaco | Business VTC | kokolimo",
   description:
     "Book our Mercedes-Benz E-Class with a private driver for business travel and airport transfers across the French Riviera, for up to 3 passengers.",
-  keywords: [
-    "Mercedes E-Class driver",
-    "business VTC French Riviera",
-    "private driver Nice",
-    "driver Class E Monaco",
-    "Nice airport transfer E-Class",
-    "kokolimo Class E",
-  ],
-  alternates: {
-    canonical: "https://kokolimo.com/cars/class-e",
-  },
-};
+  path: "/cars/class-e",
+  image: "/assets/images/cars/class-e/class-e.webp",
+  imageAlt: "A black Mercedes E-Class on a road lined with plane trees above the Riviera hills",
+  allowPortrait: true,
+});
 
 const classEContent = {
   titlePrefix: "Mercedes E-Class ",

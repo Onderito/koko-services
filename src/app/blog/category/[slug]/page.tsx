@@ -1,11 +1,11 @@
-// Blog topic hub in Kokolimo's Anti blocks (inspirations/IMG_8800): a navy band hero with the breadcrumb, the H1 and
-// its text; then the hub's articles as Anti cards under the topic pills (this hub's pill gold), pill pagination, the
-// "View all articles" outline pill and the footer columns. Texts, headings, links, metadata and schema unchanged.
+// Blog topic hub: a navy band hero with the breadcrumb, the H1 and its text; then the hub's articles as cards under the
+// topic pills (this hub's pill gold), pill pagination, the "View all articles" outline pill and the footer columns.
 
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { pageMetadata } from "../../../data/page-metadata";
 import BlogCard from "../../blog-card";
 import { BlogBandHero, CategoryPills } from "../../blog-ui";
 import Pagination from "../../pagination";
@@ -62,22 +62,14 @@ export async function generateMetadata({
 
   const { page } = await searchParams;
   const currentPage = parsePageParam(page);
-  const base = `${siteUrl}/blog/category/${cluster.slug}`;
-  const canonical = currentPage > 1 ? `${base}?page=${currentPage}` : base;
+  const base = `/blog/category/${cluster.slug}`;
   const titleSuffix = currentPage > 1 ? ` — Page ${currentPage}` : "";
 
-  return {
+  return pageMetadata({
     title: `${cluster.title}${titleSuffix} | kokolimo`,
     description: cluster.description,
-    alternates: { canonical },
-    openGraph: {
-      title: cluster.title,
-      description: cluster.description,
-      url: canonical,
-      siteName: "kokolimo",
-      type: "website",
-    },
-  };
+    path: currentPage > 1 ? `${base}?page=${currentPage}` : base,
+  });
 }
 
 export default async function BlogCategoryPage({

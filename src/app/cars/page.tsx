@@ -1,23 +1,23 @@
-// /cars — the fleet page the site was missing (user, 24 Oct 2026: "the page /cars is missing too, displaying the cars").
-// A photo hero with the header inside, the four cars as the home page's vehicle cards (E-Class, V-Class, S-Class,
-// Maybach), the call-to-action banner, then the footer. Facts and prices are the site's own (data/vehicles.tsx).
+// /cars: the fleet page. A photo hero with the header inside, the four cars as the home page's vehicle cards (E-Class,
+// V-Class, S-Class, Maybach), the call-to-action banner, then the footer. Facts and prices come from data/vehicles.tsx.
 
 import type { Metadata } from "next";
 import Image from "next/image";
 import Footer from "../layout/footer";
-import { siteUrl, whatsappUrl } from "../data/site-config";
+import { pageMetadata } from "../data/page-metadata";
+import { whatsappUrl } from "../data/site-config";
 import { AntiHeading, AntiOutlinePill, AntiSection } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import { CtaBanner } from "../ui/banner";
 import { FleetCards } from "../landing/cars";
 import { PhoneLink } from "../landing/cta-closer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Our Fleet | Mercedes E-Class, S-Class, V-Class & Maybach | kokolimo",
   description:
     "Kokolimo's chauffeur-driven fleet on the French Riviera: Mercedes E-Class, S-Class, V-Class for up to 7 passengers, and Mercedes-Maybach, with fixed fares confirmed before the ride.",
-  alternates: { canonical: `${siteUrl}/cars` },
-};
+  path: "/cars",
+});
 
 export default function FleetPage() {
   return (

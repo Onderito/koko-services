@@ -1,24 +1,24 @@
-// /our-services — the services hub the site never had (asked for on 18 Oct and again on 21 Oct 2026: "we need to do
-// the page 'Our Services'"). Anti layout (IMG_8800): photo hero with the header inside, the five services as Anti
-// cards, the main routes from Nice Airport, the dark CTA card, then the footer. Each card opens its own service page.
+// /our-services: the services hub. A photo hero with the header inside, the five services as cards, the main routes
+// from Nice Airport, the dark call-to-action card, then the footer. Each card opens its own service page.
 
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../layout/footer";
-import { siteUrl, whatsappUrl } from "../data/site-config";
+import { pageMetadata } from "../data/page-metadata";
+import { whatsappUrl } from "../data/site-config";
 import { chauffeurToursPage, eventsPage, hourlyChauffeurPage, serviceMenuLinks, transferPages, transfersPage, yachtTransfersPage } from "../data/service-pages";
 import { AntiCard, AntiHeading, AntiOutlinePill, AntiSection, AntiTextLink, GoldArrow } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import { CtaBanner } from "../ui/banner";
 import { PhoneLink } from "../landing/cta-closer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Our Services | Private Chauffeur on the French Riviera | kokolimo",
   description:
     "All Kokolimo chauffeur services on the French Riviera: Nice Airport and private transfers, hourly chauffeur hire, private tours, yacht transfers and event transport.",
-  alternates: { canonical: `${siteUrl}/our-services` },
-};
+  path: "/our-services",
+});
 
 const hubs: Record<string, { image: string; alt: string }> = {
   "/our-services/transfers": { image: transfersPage.heroImageSrc, alt: transfersPage.heroImageAlt },

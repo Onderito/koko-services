@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/app/data/page-metadata";
 import CarPageTemplate from "../car-page-template";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mercedes Class-S Driver Nice & Monaco | Luxury VTC | kokolimo",
   description:
     "Book our Mercedes-Benz S-Class for a premium and elegant ride across the French Riviera. Perfect for business travel and VIP airport transfers.",
-  keywords: [
-    "Mercedes S-Class driver",
-    "luxury VTC French Riviera",
-    "private driver Nice",
-    "driver Class S Monaco",
-    "executive transfer Nice airport",
-    "kokolimo Class S",
-  ],
-  alternates: {
-    canonical: "https://kokolimo.com/cars/class-s",
-  },
-};
+  path: "/cars/class-s",
+  image: "/assets/images/cars/class-s/class-s.webp",
+  imageAlt: "A black Mercedes S-Class on a road lined with plane trees",
+  allowPortrait: true,
+});
 
 const classSContent = {
   titlePrefix: "Mercedes S-Class  ",

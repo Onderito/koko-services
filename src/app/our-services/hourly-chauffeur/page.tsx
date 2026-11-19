@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 
-import { siteUrl } from "@/app/data/site-config";
+import { pageMetadata } from "@/app/data/page-metadata";
 import { hourlyChauffeurPage } from "@/app/data/service-pages";
 import ServicePageTemplate from "../service-page-template";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: hourlyChauffeurPage.metadata.title,
   description: hourlyChauffeurPage.metadata.description,
-  keywords: hourlyChauffeurPage.metadata.keywords,
-  alternates: {
-    canonical: `${siteUrl}${hourlyChauffeurPage.path}`,
-  },
-};
+  path: hourlyChauffeurPage.path,
+  image: hourlyChauffeurPage.heroImageSrc,
+  imageAlt: hourlyChauffeurPage.heroImageAlt,
+});
 
 export default function HourlyChauffeurPage() {
   return <ServicePageTemplate config={hourlyChauffeurPage} />;

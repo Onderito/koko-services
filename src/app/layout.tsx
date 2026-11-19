@@ -7,12 +7,7 @@ import ClientWrapper from "./ui/client-wrapper";
 import ScrollMotion from "./ui/scroll-motion";
 import Analytics from "./ui/analytics";
 import SeoSchema from "./ui/seo-schema";
-import {
-  businessName,
-  businessTitle,
-  siteUrl,
-  socialPreviewImage,
-} from "./data/site-config";
+import { businessName, businessTitle, siteUrl } from "./data/site-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -22,26 +17,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+  // Each page sets its own sharing tags (data/page-metadata.ts); these defaults name no page, so none can point to the home.
   openGraph: {
-    title: businessName,
-    description:
-      "Private chauffeur in Nice, Cannes, Monaco and Saint-Tropez. Airport transfers and luxury travel on the French Riviera.",
-    url: siteUrl,
     siteName: businessName,
     type: "website",
-    images: [
-      {
-        url: socialPreviewImage,
-        alt: `${businessName} - Private driver French Riviera`,
-      },
-    ],
+    locale: "en_GB",
   },
   twitter: {
     card: "summary_large_image",
-    title: businessName,
-    description:
-      "Private chauffeur in Nice, Cannes, Monaco and Saint-Tropez. Airport transfers and luxury Riviera travel.",
-    images: [socialPreviewImage],
   },
   robots: {
     index: true,

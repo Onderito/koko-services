@@ -5,11 +5,12 @@
 
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
+import { pageMetadata } from "../data/page-metadata";
 
 import BlogCard from "./blog-card";
 import { BlogBandHero, CategoryPills } from "./blog-ui";
 import Pagination from "./pagination";
-import { blogPosts, featuredHomePosts, latestFirst, siteUrl } from "../data/blog-posts";
+import { blogPosts, featuredHomePosts, latestFirst } from "../data/blog-posts";
 import Footer from "../layout/footer";
 import { AntiHeading, AntiSection } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
@@ -19,14 +20,6 @@ const PAGE_SIZE = 12;
 
 const blogDescription =
   "Private driver guides for the French Riviera: airport transfers, Monaco business travel, Cannes events and luxury transport in Nice and Saint-Tropez.";
-
-const blogKeywords = [
-  "private driver blog French Riviera",
-  "Nice airport transfer blog",
-  "chauffeur service Monaco blog",
-  "Cannes transfer guide",
-  "Saint-Tropez private driver blog",
-];
 
 function parsePageParam(value?: string) {
   const parsed = Number.parseInt(value ?? "1", 10);
@@ -40,26 +33,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { page } = await searchParams;
   const currentPage = parsePageParam(page);
-  const canonical =
-    currentPage > 1 ? `${siteUrl}/blog?page=${currentPage}` : `${siteUrl}/blog`;
   const titleSuffix = currentPage > 1 ? ` — Page ${currentPage}` : "";
 
-  return {
+  return pageMetadata({
     title: `Blog${titleSuffix} | Private Driver Tips for Nice, Cannes and Monaco`,
     description: blogDescription,
-    keywords: blogKeywords,
-    alternates: {
-      canonical,
-    },
-    openGraph: {
-      title: "kokolimo Blog",
-      description:
-        "Luxury transport advice, airport transfer guides and private driver tips for the French Riviera.",
-      url: canonical,
-      siteName: "kokolimo",
-      type: "website",
-    },
-  };
+    path: currentPage > 1 ? `/blog?page=${currentPage}` : "/blog",
+  });
 }
 
 const featuredPost = featuredHomePosts[0];

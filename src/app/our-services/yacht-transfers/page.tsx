@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 
-import { siteUrl } from "@/app/data/site-config";
+import { pageMetadata } from "@/app/data/page-metadata";
 import { yachtTransfersPage } from "@/app/data/service-pages";
 import ServicePageTemplate from "../service-page-template";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: yachtTransfersPage.metadata.title,
   description: yachtTransfersPage.metadata.description,
-  keywords: yachtTransfersPage.metadata.keywords,
-  alternates: {
-    canonical: `${siteUrl}${yachtTransfersPage.path}`,
-  },
-};
+  path: yachtTransfersPage.path,
+  image: yachtTransfersPage.heroImageSrc,
+  imageAlt: yachtTransfersPage.heroImageAlt,
+});
 
 export default function YachtTransfersPage() {
   return <ServicePageTemplate config={yachtTransfersPage} />;

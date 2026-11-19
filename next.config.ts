@@ -1,6 +1,9 @@
 const nextConfig = {
   // The live preview (next dev) can write to its own folder, so production builds can run beside it.
   distDir: process.env.NEXT_DIST_DIR || ".next",
+  // Every visitor, crawler or browser, gets the title, canonical and sharing tags in the page's <head>, including on
+  // pages built on request (by default Next.js streams them into the body for user agents outside its short bot list).
+  htmlLimitedBots: /.*/,
   async headers() {
     return [
       {

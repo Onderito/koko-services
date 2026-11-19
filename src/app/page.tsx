@@ -12,7 +12,8 @@ import Blogs from "./landing/blogs";
 import Trust from "./landing/trust";
 import Footer from "./layout/footer";
 import type { Metadata } from "next";
-import { businessGeo, businessName, siteUrl, socialPreviewImage } from "./data/site-config";
+import { pageMetadata } from "./data/page-metadata";
+import { businessGeo } from "./data/site-config";
 
 // Home title and description: the brand first, the areas served, and the phrase people search ("private driver nice");
 // the same text in the sharing tags, plus the business's map location.
@@ -21,25 +22,7 @@ const homeDescription =
   "Private driver in Nice, Cannes, Antibes, Monaco, Menton and Saint-Tropez: Nice Airport transfers, hourly chauffeur, Alps in winter. Mercedes, fixed prices, 24/7.";
 
 export const metadata: Metadata = {
-  title: homeTitle,
-  description: homeDescription,
-  alternates: {
-    canonical: "https://kokolimo.com",
-  },
-  openGraph: {
-    title: homeTitle,
-    description: homeDescription,
-    url: siteUrl,
-    siteName: businessName,
-    type: "website",
-    images: [{ url: socialPreviewImage, alt: `${businessName} - Luxury private driver on the French Riviera` }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: homeTitle,
-    description: homeDescription,
-    images: [socialPreviewImage],
-  },
+  ...pageMetadata({ title: homeTitle, description: homeDescription, path: "" }),
   // Where the business is, for maps and directories that read these tags (Google reads the LocalBusiness data).
   other: {
     "geo.region": "FR-06",

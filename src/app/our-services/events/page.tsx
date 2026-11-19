@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 
-import { siteUrl } from "@/app/data/site-config";
+import { pageMetadata } from "@/app/data/page-metadata";
 import { eventsPage } from "@/app/data/service-pages";
 import ServicePageTemplate from "../service-page-template";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: eventsPage.metadata.title,
   description: eventsPage.metadata.description,
-  keywords: eventsPage.metadata.keywords,
-  alternates: {
-    canonical: `${siteUrl}${eventsPage.path}`,
-  },
-};
+  path: eventsPage.path,
+  image: eventsPage.heroImageSrc,
+  imageAlt: eventsPage.heroImageAlt,
+});
 
 export default function EventsPage() {
   return <ServicePageTemplate config={eventsPage} />;

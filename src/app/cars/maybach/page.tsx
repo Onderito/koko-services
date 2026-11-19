@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/app/data/page-metadata";
 import CarPageTemplate from "../car-page-template";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mercedes Maybach Chauffeur | French Riviera | Kokolimo",
   description:
     "Enjoy the ultimate luxury ride with our Mercedes Maybach. Driver service for VIPs, weddings, or executive transfers across the French Riviera.",
-  keywords: [
-    "Mercedes Maybach driver",
-    "Maybach Nice Monaco",
-    "luxury driver French Riviera",
-    "VIP VTC Maybach",
-    "wedding car French Riviera",
-    "kokolimo Maybach",
-  ],
-  alternates: {
-    canonical: "https://kokolimo.com/cars/maybach",
-  },
-};
+  path: "/cars/maybach",
+  image: "/assets/images/cars/maybach/maybach.webp",
+  imageAlt: "A black Mercedes-Maybach on a tree-lined road",
+  allowPortrait: true,
+});
 
 const maybachContent = {
   titlePrefix: "Mercedes Maybach ",

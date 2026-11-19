@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+import { pageMetadata } from "@/app/data/page-metadata";
 import { siteUrl } from "@/app/data/site-config";
 import { chauffeurTourPages } from "@/app/data/service-pages";
 import ServicePageTemplate from "../../service-page-template";
@@ -25,14 +26,13 @@ export async function generateMetadata({
     return {};
   }
 
-  return {
+  return pageMetadata({
     title: config.metadata.title,
     description: config.metadata.description,
-    keywords: config.metadata.keywords,
-    alternates: {
-      canonical: `${siteUrl}/our-services/private-tours/${city}`,
-    },
-  };
+    path: `/our-services/private-tours/${city}`,
+    image: config.heroImageSrc,
+    imageAlt: config.heroImageAlt,
+  });
 }
 
 export default async function PrivateTourCityPage({

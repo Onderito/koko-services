@@ -31,7 +31,9 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
 
   let res: Response;
   try {
-    res = await fetch(new URL(path, req.nextUrl.origin), { headers: { accept: "text/html" }, next: { revalidate: DAY } });
+    // The current deployment's HTML, read fresh: the Markdown is cached by the CDN (s-maxage below), which starts empty
+    // on every deployment, so a copy never outlives its page.
+    res = await fetch(new URL(path, req.nextUrl.origin), { headers: { accept: "text/html" }, cache: "no-store" });
   } catch {
     return notFound();
   }

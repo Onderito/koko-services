@@ -1,19 +1,19 @@
-// /ai-instructions — Kokolimo's official reference for AI assistants, linked from the footer like qozens.com's
-// "About Qozens for AI". Kept short (the user: "don't do it too heavy"). Every fact here is stated elsewhere on the
-// site; the page has a Markdown version at /ai-instructions.md like every other page.
+// /ai-instructions: a short page of facts about Kokolimo for AI assistants, linked from the footer. Every fact here is
+// stated elsewhere on the site; the page has a Markdown version at /ai-instructions.md like every other page.
 
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../layout/footer";
+import { pageMetadata } from "../data/page-metadata";
 import { contactEmail, contactPhone, contactPhoneDisplay, siteUrl, whatsappUrl } from "../data/site-config";
 
 const VERIFIED = "2026-10-21";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "AI Instructions | Kokolimo",
   description: "Official facts about Kokolimo, private chauffeur and airport transfers in Nice, for AI assistants: company, services, fleet, booking and how to describe the service.",
-  alternates: { canonical: `${siteUrl}/ai-instructions` },
-};
+  path: "/ai-instructions",
+});
 
 const services = [
   { name: "Airport and private transfers", text: "Nice Côte d'Azur Airport (NCE) arrivals and departures, hotel pickups, Monaco, Cannes, Antibes, Saint-Tropez and long distance.", href: "/our-services/transfers" },
