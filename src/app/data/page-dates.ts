@@ -44,6 +44,8 @@ export const pageUpdatedAt: Record<string, string> = {
   "/our-services/transfers/nice-airport-transfer": "2026-11-19",
   "/our-services/transfers/saint-tropez-transfer": "2026-11-19",
   "/our-services/transfers/long-distance-transfer": "2026-11-19",
+  // 19 Nov 2026: /ai-instructions rewritten as facts, each with its source page and check date.
+  "/ai-instructions": "2026-11-19",
 };
 
 /** Articles whose text changed after publication, by slug: their Article markup's dateModified. */

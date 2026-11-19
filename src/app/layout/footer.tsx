@@ -163,7 +163,7 @@ export default function Footer({ withCta = true }: { withCta?: boolean }) {
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" className="transition-colors hover:text-white">
               WhatsApp
             </a>
-            {/* For AI assistants, as on qozens.com: the official reference and the llms.txt index. */}
+            {/* For AI assistants: the facts page and the llms.txt index. */}
             <Link href="/ai-instructions" className="transition-colors hover:text-white">
               About Kokolimo for AI
             </Link>

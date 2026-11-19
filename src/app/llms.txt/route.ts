@@ -2,6 +2,7 @@
 // and descriptions come from the site's own pages. Each page also has a Markdown twin at the same address + ".md"
 // (src/middleware.ts).
 
+import { factsCheckedOn } from "../data/site-config";
 import { cities, vehicles } from "../data/vehicles";
 
 export const dynamic = "force-static";
@@ -22,7 +23,7 @@ Kokolimo (My Riviera Tours & Transfers) is run by MY NICE TOURS, 33 rue de Chât
 - [Mercedes V-Class](https://kokolimo.com/cars/class-v): Van for up to 7 passengers.
 - [Mercedes S-Class](https://kokolimo.com/cars/class-s): Executive sedan.
 - [Mercedes-Maybach](https://kokolimo.com/cars/maybach): VIPs, weddings, executives.
-- [AI instructions](https://kokolimo.com/ai-instructions): Official facts for AI assistants.
+- [Kokolimo facts](https://kokolimo.com/ai-instructions): each fact with the page that states it (checked ${factsCheckedOn}).
 
 ## Airport & city transfers
 
