@@ -7,7 +7,7 @@ export default function WhatIsHourlyServices() {
         The Art of the Hourly Services
       </h2>
       <p className="body-text text-center mt-4 ">
-        More than just transportation—hourly service gives you the freedom of a
+        More than just transportation: hourly service gives you the freedom of a
         dedicated driver, ready whenever and wherever you need.
       </p>
 
@@ -16,7 +16,7 @@ export default function WhatIsHourlyServices() {
           <h3 className="heading-3 text-white">Our Commitment</h3>
           <p className="relative z-20 text-center mt-4 body-text text-white ">
             Complete flexibility and absolute discretion. Our bilingual drivers
-            and premium vehicles are available by the hour—so you can attend
+            and premium vehicles are available by the hour. So you can attend
             meetings, shop, or enjoy your day with zero stress.
           </p>
           <Image
@@ -32,7 +32,7 @@ export default function WhatIsHourlyServices() {
           <p className="relative z-20 text-center mt-4 body-text ">
             Whether for half a day or the entire day, your driver stays at your
             disposal. Multiple stops, last-minute changes, and total
-            privacy—designed entirely around your schedule.
+            privacy: designed entirely around your schedule.
           </p>
           <Image
             className="absolute bottom-0 z-10 md:bottom-[-50px] xl:bottom-0"

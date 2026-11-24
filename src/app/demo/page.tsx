@@ -1,4 +1,4 @@
-// /demo — the first preview link, kept: it now shows the same hero as the home page. Never indexed.
+// /demo: the first preview link, kept. It now shows the same hero as the home page. Never indexed.
 
 import type { Metadata } from "next";
 import HomeHero from "../landing/home-hero";

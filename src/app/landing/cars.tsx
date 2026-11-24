@@ -55,7 +55,7 @@ export function FleetCards({ headingAs = "h3" }: { headingAs?: "h2" | "h3" }) {
 export default function Cars() {
   return (
     <AntiSection tone="white" labelledBy="fleet-title">
-      <AntiHeading id="fleet-title" title="Find Your Perfect Ride" intro="Choose from our range of luxury vehicles — curated for style, space, and performance." />
+      <AntiHeading id="fleet-title" title="Find Your Perfect Ride" intro="Choose from our range of luxury vehicles. Curated for style, space, and performance." />
       <FleetCards />
     </AntiSection>
   );

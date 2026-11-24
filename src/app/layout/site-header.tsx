@@ -1,7 +1,7 @@
 "use client";
 
-// Site header embedded in the hero (Transfeero model): transparent at the top of the page, then it takes the colour of
-// what is under it — light text over dark sections, dark text over light ones — with a solid bar once the page scrolls.
+// Site header embedded in the hero: transparent at the top of the page, then it takes the colour of what is under it
+// (light text over dark sections, dark text over light ones), with a solid bar once the page scrolls.
 // A section can state its tone with data-nav-tone="dark" | "light"; otherwise its background colour decides.
 // Menus open with a plain fade. Works with mouse, touch (tap toggles), keyboard (Escape returns focus) and screen readers.
 

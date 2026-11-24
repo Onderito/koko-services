@@ -6,9 +6,9 @@ export const guidePosts: BlogPost[] = [
     slug: "french-riviera-chauffeur-prices",
     title: "French Riviera Chauffeur Prices",
     description:
-      "What a private chauffeur costs on the French Riviera — airport transfer, hourly and full-day prices by vehicle, from Nice to Saint-Tropez.",
+      "What a private chauffeur costs on the French Riviera: airport transfer, hourly and full-day prices by vehicle, from Nice to Saint-Tropez.",
     excerpt:
-      "Airport transfer, hourly and full-day prices by vehicle — what a private chauffeur costs on the French Riviera.",
+      "Airport transfer, hourly and full-day prices by vehicle. What a private chauffeur costs on the French Riviera.",
     category: "Travel Guides",
     heroKicker: "Chauffeur prices",
     readTime: "6 min read",
@@ -48,10 +48,10 @@ export const guidePosts: BlogPost[] = [
           "Because the price is fixed in advance, there are no surprises from traffic or a running meter.",
         ],
         bullets: [
-          "Nice — from €90 (E-Class)",
-          "Antibes — from €120",
-          "Cannes and Monaco — from €150",
-          "Saint-Tropez — from €400",
+          "Nice: from €90 (E-Class)",
+          "Antibes: from €120",
+          "Cannes and Monaco: from €150",
+          "Saint-Tropez: from €400",
         ],
       },
       {
@@ -62,10 +62,10 @@ export const guidePosts: BlogPost[] = [
           "As-directed hire is the natural choice for day trips, weddings, festivals and multi-stop days.",
         ],
         bullets: [
-          "E-Class — from €90/hour, €750/day",
-          "V-Class — from €110/hour, €880/day",
-          "S-Class — from €130/hour, €1,040/day",
-          "Maybach — from €300/hour, €2,400/day",
+          "E-Class: from €90/hour, €750/day",
+          "V-Class: from €110/hour, €880/day",
+          "S-Class: from €130/hour, €1,040/day",
+          "Maybach: from €300/hour, €2,400/day",
         ],
       },
       {
@@ -105,7 +105,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Get a chauffeur quote",
     ctaDescription:
-      "Fixed-price transfers, hourly and full-day hire — a private chauffeur across the French Riviera, quoted in advance.",
+      "Fixed-price transfers, hourly and full-day hire. A private chauffeur across the French Riviera, quoted in advance.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -295,7 +295,7 @@ export const guidePosts: BlogPost[] = [
     slug: "chauffeur-vs-taxi-vs-rental-car-riviera",
     title: "Chauffeur vs Taxi vs Rental Car",
     description:
-      "Chauffeur, taxi or rental car on the French Riviera — the costs, the trade-offs and which to choose for getting around the coast.",
+      "Chauffeur, taxi or rental car on the French Riviera: the costs, the trade-offs and which to choose for getting around the coast.",
     excerpt:
       "The costs and trade-offs of a chauffeur, a taxi or a rental car — and which to choose on the French Riviera.",
     category: "Travel Guides",
@@ -313,7 +313,7 @@ export const guidePosts: BlogPost[] = [
       "private driver vs taxi Nice",
     ],
     intro:
-      "There are three main ways to get around the French Riviera — a private chauffeur, taxis and ride-hailing, or a rental car. Each has its place, and the right choice depends on your trip. Here is how they compare.",
+      "There are three main ways to get around the French Riviera: a private chauffeur, taxis and ride-hailing, or a rental car. Each has its place, and the right choice depends on your trip. Here is how they compare.",
     sections: [
       {
         id: "private-chauffeur",
@@ -333,7 +333,7 @@ export const guidePosts: BlogPost[] = [
         id: "taxis-and-ride-hailing",
         title: "Taxis and ride-hailing",
         paragraphs: [
-          "Taxis and ride-hailing work well for a short, central hop — a restaurant, the station, a quick trip in town. But they can be scarce and expensive at peak times, on event days and late at night, and metered fares carry the uncertainty of traffic.",
+          "Taxis and ride-hailing work well for a short, central hop: a restaurant, the station, a quick trip in town. But they can be scarce and expensive at peak times, on event days and late at night, and metered fares carry the uncertainty of traffic.",
           "They suit the occasional single ride rather than a full day of touring across the coast.",
         ],
         bullets: [
@@ -361,7 +361,7 @@ export const guidePosts: BlogPost[] = [
         id: "which-to-choose",
         title: "Which to choose",
         paragraphs: [
-          "For airport arrivals, day trips, weddings, events and any group, a chauffeur is the easiest and most comfortable option. For a quick central hop, a taxi does the job. For an independent trip built around the countryside and villages, a rental car has its place — often alongside a chauffeur for the airport and the big days.",
+          "For airport arrivals, day trips, weddings, events and any group, a chauffeur is the easiest and most comfortable option. For a quick central hop, a taxi does the job. For an independent trip built around the countryside and villages, a rental car has its place, often alongside a chauffeur for the airport and the big days.",
           "Many visitors mix them: a chauffeur for the arrival and the highlights, and other options in between.",
         ],
       },
@@ -395,7 +395,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Travel the easy way",
     ctaDescription:
-      "Met at the airport, door to door, no parking — a private chauffeur is the simplest way around the French Riviera.",
+      "Met at the airport, door to door, no parking. A private chauffeur is the simplest way around the French Riviera.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -403,9 +403,9 @@ export const guidePosts: BlogPost[] = [
     slug: "french-riviera-honeymoon-guide",
     title: "French Riviera Honeymoon Guide",
     description:
-      "A French Riviera honeymoon guide — the most romantic towns, hotels and experiences, and private transport to make it seamless.",
+      "A French Riviera honeymoon guide: the most romantic towns, hotels and experiences, and private transport to make it seamless.",
     excerpt:
-      "The most romantic towns, hotels and experiences — a guide to a French Riviera honeymoon.",
+      "The most romantic towns, hotels and experiences: a guide to a French Riviera honeymoon.",
     category: "Travel Guides",
     heroKicker: "Honeymoon",
     readTime: "6 min read",
@@ -421,7 +421,7 @@ export const guidePosts: BlogPost[] = [
       "romantic Riviera getaway",
     ],
     intro:
-      "Few places are made for romance like the French Riviera — perched villages, sea-view terraces, grand hotels and golden sunsets over the Mediterranean. It is a honeymoon classic for good reason. Here is a guide to a romantic French Riviera honeymoon.",
+      "Few places are made for romance like the French Riviera: perched villages, sea-view terraces, grand hotels and golden sunsets over the Mediterranean. It is a honeymoon classic for good reason. Here is a guide to a romantic French Riviera honeymoon.",
     sections: [
       {
         id: "the-most-romantic-places",
@@ -441,7 +441,7 @@ export const guidePosts: BlogPost[] = [
         id: "romantic-hotels-and-dining",
         title: "Romantic hotels and dining",
         paragraphs: [
-          "The Riviera's grand hotels are honeymoons in themselves — palaces above the sea at Cap-Ferrat and Beaulieu, clifftop rooms in Èze, and legendary addresses in Monaco and Cannes. Add a Michelin dinner with a sea view and the evenings take care of themselves.",
+          "The Riviera's grand hotels are honeymoons in themselves: palaces above the sea at Cap-Ferrat and Beaulieu, clifftop rooms in Èze, and legendary addresses in Monaco and Cannes. Add a Michelin dinner with a sea view and the evenings take care of themselves.",
           "A stay can be as grand or as intimate as you wish.",
         ],
         bullets: [
@@ -455,7 +455,7 @@ export const guidePosts: BlogPost[] = [
         id: "seamless-by-private-chauffeur",
         title: "Seamless by private chauffeur",
         paragraphs: [
-          "A honeymoon should be effortless, and a private chauffeur makes it so — met at the airport, driven between villages and dinners, and free of parking, maps and timetables. Sunset drives along the corniches and private tours of the coast become part of the romance.",
+          "A honeymoon should be effortless, and a private chauffeur makes it so: met at the airport, driven between villages and dinners, and free of parking, maps and timetables. Sunset drives along the corniches and private tours of the coast become part of the romance.",
           "The couple simply enjoy the days; the driving is handled.",
         ],
         bullets: [
@@ -470,7 +470,7 @@ export const guidePosts: BlogPost[] = [
       {
         question: "Is the French Riviera good for a honeymoon?",
         answer:
-          "Ideally so — perched villages, sea-view terraces, grand hotels and golden sunsets make it one of the great romantic destinations.",
+          "Ideally so. Perched villages, sea-view terraces, grand hotels and golden sunsets make it one of the great romantic destinations.",
       },
       {
         question: "Where are the most romantic places on the Riviera?",
@@ -485,7 +485,7 @@ export const guidePosts: BlogPost[] = [
       {
         question: "How do you get around on a Riviera honeymoon?",
         answer:
-          "A private chauffeur makes it seamless — met at the airport and driven between villages, dinners and sunset viewpoints, with no parking.",
+          "A private chauffeur makes it seamless: met at the airport and driven between villages, dinners and sunset viewpoints, with no parking.",
       },
     ],
     relatedSlugs: [
@@ -493,7 +493,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "A seamless Riviera honeymoon",
     ctaDescription:
-      "Sunset drives, villages and dinners, effortlessly linked — a private chauffeur for a French Riviera honeymoon.",
+      "Sunset drives, villages and dinners, effortlessly linked: a private chauffeur for a French Riviera honeymoon.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -501,9 +501,9 @@ export const guidePosts: BlogPost[] = [
     slug: "nice-cannes-monaco-where-to-stay",
     title: "Nice, Cannes or Monaco: Where to Stay",
     description:
-      "Nice, Cannes or Monaco — how to choose where to stay on the French Riviera, and what each base offers for your trip.",
+      "Nice, Cannes or Monaco: how to choose where to stay on the French Riviera, and what each base offers for your trip.",
     excerpt:
-      "How to choose where to stay on the French Riviera — what Nice, Cannes and Monaco each offer as a base.",
+      "How to choose where to stay on the French Riviera: what Nice, Cannes and Monaco each offer as a base.",
     category: "Travel Guides",
     heroKicker: "Where to stay",
     readTime: "6 min read",
@@ -539,7 +539,7 @@ export const guidePosts: BlogPost[] = [
         id: "cannes",
         title: "Cannes — glamour and the west",
         paragraphs: [
-          "Cannes suits those drawn to glamour, beaches and the western Riviera — the Croisette, its palace hotels, the Lérins Islands and easy trips to Antibes, Grasse and the Esterel. It comes alive around its festivals and is a stylish, beach-focused base.",
+          "Cannes suits those drawn to glamour, beaches and the western Riviera: the Croisette, its palace hotels, the Lérins Islands and easy trips to Antibes, Grasse and the Esterel. It comes alive around its festivals and is a stylish, beach-focused base.",
           "Choose Cannes for the west of the coast and a more glamorous, seaside stay.",
         ],
         bullets: [
@@ -553,7 +553,7 @@ export const guidePosts: BlogPost[] = [
         id: "monaco",
         title: "Monaco — luxury and the east",
         paragraphs: [
-          "Monaco is the choice for luxury and the eastern Riviera — its palace hotels, the Casino, the harbour and easy reach of Èze, the corniches and the Italian border. Compact and glamorous, it is a small but dazzling base, best paired with a chauffeur for the steep, tight streets.",
+          "Monaco is the choice for luxury and the eastern Riviera: its palace hotels, the Casino, the harbour and easy reach of Èze, the corniches and the Italian border. Compact and glamorous, it is a small but dazzling base, best paired with a chauffeur for the steep, tight streets.",
           "Choose Monaco for luxury, events and the eastern coast.",
         ],
         bullets: [
@@ -576,7 +576,7 @@ export const guidePosts: BlogPost[] = [
       {
         question: "Where is the best place to stay on the French Riviera?",
         answer:
-          "Nice is the best all-round base — central, well connected and good value; Cannes suits glamour and the west, Monaco luxury and the east.",
+          "Nice is the best all-round base: central, well connected and good value. Cannes suits glamour and the west, Monaco luxury and the east.",
       },
       {
         question: "Is Nice or Cannes better as a base?",
@@ -608,9 +608,9 @@ export const guidePosts: BlogPost[] = [
     slug: "french-riviera-wedding-transport",
     title: "French Riviera Wedding Transport",
     description:
-      "A guide to wedding transport on the French Riviera — chauffeured cars for the couple, guests and the whole day, seamlessly arranged.",
+      "A guide to wedding transport on the French Riviera: chauffeured cars for the couple, guests and the whole day, seamlessly arranged.",
     excerpt:
-      "Chauffeured cars for the couple, the guests and the whole day — wedding transport on the French Riviera.",
+      "Chauffeured cars for the couple, the guests and the whole day: wedding transport on the French Riviera.",
     category: "Travel Guides",
     heroKicker: "Weddings",
     readTime: "6 min read",
@@ -626,7 +626,7 @@ export const guidePosts: BlogPost[] = [
       "Riviera wedding transfers",
     ],
     intro:
-      "A Riviera wedding is a logistical event as much as a romantic one, and transport sits at its heart — the couple's grand arrival, the guests moving between venues, and a day that must run to time. A chauffeur service ties it all together. Here is a guide to wedding transport on the French Riviera.",
+      "A Riviera wedding is a logistical event as much as a romantic one, and transport sits at its heart: the couple's grand arrival, the guests moving between venues, and a day that must run to time. A chauffeur service ties it all together. Here is a guide to wedding transport on the French Riviera.",
     sections: [
       {
         id: "the-couples-car",
@@ -660,7 +660,7 @@ export const guidePosts: BlogPost[] = [
         id: "the-whole-day-coordinated",
         title: "The whole day, coordinated",
         paragraphs: [
-          "The value of a chauffeur service is the coordination behind it — one point of contact planning the fleet, the routes and the timings around the ceremony, the photographs and the reception. On the day, everything simply arrives when it should.",
+          "The value of a chauffeur service is the coordination behind it: one point of contact planning the fleet, the routes and the timings around the ceremony, the photographs and the reception. On the day, everything simply arrives when it should.",
           "For a wedding on an unfamiliar coast, that reliability is priceless.",
         ],
       },
@@ -694,7 +694,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Chauffeurs for your Riviera wedding",
     ctaDescription:
-      "The couple's car and guest shuttles, coordinated to the minute — private chauffeurs for a French Riviera wedding.",
+      "The couple's car and guest shuttles, coordinated to the minute: private chauffeurs for a French Riviera wedding.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -702,9 +702,9 @@ export const guidePosts: BlogPost[] = [
     slug: "nice-airport-layover-guide",
     title: "Nice Airport Layover Guide",
     description:
-      "What to do on a layover at Nice Airport — quick trips into Nice, the Promenade or Old Town, with a private chauffeur there and back.",
+      "What to do on a layover at Nice Airport: quick trips into Nice, the Promenade or Old Town, with a private chauffeur there and back.",
     excerpt:
-      "Quick trips into Nice, the Promenade or the Old Town — what to do on a layover at Nice Airport.",
+      "Quick trips into Nice, the Promenade or the Old Town: what to do on a layover at Nice Airport.",
     category: "Travel Guides",
     heroKicker: "Airport layover",
     readTime: "5 min read",
@@ -773,7 +773,7 @@ export const guidePosts: BlogPost[] = [
       {
         question: "How do you get into Nice from the airport quickly?",
         answer:
-          "A private chauffeur is simplest — met at arrivals, driven into the city and back with luggage looked after, avoiding taxi queues.",
+          "A private chauffeur is simplest: met at arrivals, driven into the city and back with luggage looked after, avoiding taxi queues.",
       },
       {
         question: "How much time do you need before a flight?",
@@ -788,7 +788,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Make the most of your layover",
     ctaDescription:
-      "Into the city and back with time to spare — a private chauffeur for a Nice Airport layover.",
+      "Into the city and back with time to spare: a private chauffeur for a Nice Airport layover.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -798,7 +798,7 @@ export const guidePosts: BlogPost[] = [
     description:
       "The most beautiful villages of the French Riviera — Èze, Saint-Paul-de-Vence, Gourdon and more, best explored by private chauffeur.",
     excerpt:
-      "Èze, Saint-Paul-de-Vence, Gourdon and more — the most beautiful villages of the French Riviera.",
+      "Èze, Saint-Paul-de-Vence, Gourdon and more: the most beautiful villages of the French Riviera.",
     category: "Travel Guides",
     heroKicker: "Perched villages",
     readTime: "6 min read",
@@ -814,7 +814,7 @@ export const guidePosts: BlogPost[] = [
       "best villages Cote d'Azur",
     ],
     intro:
-      "Behind the glamorous coast, the French Riviera hides a string of perched medieval villages — stone lanes, hilltop views and a slower rhythm that feels a world away from the seafront. Here are the most beautiful villages of the French Riviera and how to explore them.",
+      "Behind the glamorous coast, the French Riviera hides a string of perched medieval villages, with stone lanes, hilltop views and a slower rhythm that feels a world away from the seafront. Here are the most beautiful villages of the French Riviera and how to explore them.",
     sections: [
       {
         id: "eze",
@@ -894,7 +894,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Tour the Riviera's villages",
     ctaDescription:
-      "Èze, Saint-Paul and Gourdon in one relaxed day — a private chauffeur for the perched villages of the Riviera.",
+      "Èze, Saint-Paul and Gourdon in one relaxed day: a private chauffeur for the perched villages of the Riviera.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -902,9 +902,9 @@ export const guidePosts: BlogPost[] = [
     slug: "french-riviera-wine-vineyards",
     title: "French Riviera Wine and Vineyards",
     description:
-      "A guide to the wine and vineyards of the French Riviera — Provence rosé, the Bellet hills above Nice, and vineyard days by chauffeur.",
+      "A guide to the wine and vineyards of the French Riviera: Provence rosé, the Bellet hills above Nice, and vineyard days by chauffeur.",
     excerpt:
-      "Provence rosé and the Bellet hills above Nice — a guide to the wine and vineyards of the French Riviera.",
+      "Provence rosé and the Bellet hills above Nice: a guide to the wine and vineyards of the French Riviera.",
     category: "Travel Guides",
     heroKicker: "Wine and vineyards",
     readTime: "6 min read",
@@ -987,7 +987,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Explore the Riviera's wine country",
     ctaDescription:
-      "Taste freely, leave the driving to us — a private chauffeur for vineyard days on the French Riviera.",
+      "Taste freely, leave the driving to us: a private chauffeur for vineyard days on the French Riviera.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -995,9 +995,9 @@ export const guidePosts: BlogPost[] = [
     slug: "french-riviera-luxury-shopping",
     title: "French Riviera Luxury Shopping",
     description:
-      "A guide to luxury shopping on the French Riviera — the designer boutiques of Monaco, Cannes and Nice, reached by private chauffeur.",
+      "A guide to luxury shopping on the French Riviera: the designer boutiques of Monaco, Cannes and Nice, reached by private chauffeur.",
     excerpt:
-      "The designer boutiques of Monaco, Cannes and Nice — a guide to luxury shopping on the French Riviera.",
+      "The designer boutiques of Monaco, Cannes and Nice: a guide to luxury shopping on the French Riviera.",
     category: "Travel Guides",
     heroKicker: "Luxury shopping",
     readTime: "5 min read",
@@ -1017,9 +1017,9 @@ export const guidePosts: BlogPost[] = [
     sections: [
       {
         id: "monaco",
-        title: "Monaco — the Carré d'Or",
+        title: "Monaco: the Carré d'Or",
         paragraphs: [
-          "Monaco's Carré d'Or, the golden square around the Casino, is one of the densest concentrations of luxury boutiques anywhere — the great fashion and jewellery houses, side by side, in a compact and glamorous quarter.",
+          "Monaco's Carré d'Or, the golden square around the Casino, is one of the densest concentrations of luxury boutiques anywhere: the great fashion and jewellery houses, side by side, in a compact and glamorous quarter.",
           "It is shopping as spectacle, in the heart of the principality.",
         ],
         bullets: [
@@ -1031,7 +1031,7 @@ export const guidePosts: BlogPost[] = [
       },
       {
         id: "cannes",
-        title: "Cannes — the Croisette and rue d'Antibes",
+        title: "Cannes: the Croisette and rue d'Antibes",
         paragraphs: [
           "In Cannes, the designer flagships line the Croisette, while the rue d'Antibes just behind offers a longer run of fashion, from luxury names to more accessible boutiques. It is the Riviera's other great shopping address.",
           "A morning here pairs naturally with the beach clubs and cafés.",
@@ -1081,7 +1081,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Shop the Riviera in comfort",
     ctaDescription:
-      "No parking, purchases carried, boutique to boutique — a private chauffeur for luxury shopping on the Riviera.",
+      "A private chauffeur for luxury shopping on the Riviera: no parking, purchases carried, boutique to boutique.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -1089,9 +1089,9 @@ export const guidePosts: BlogPost[] = [
     slug: "riviera-cruise-port-day-guide",
     title: "Riviera Cruise Port Day Guide",
     description:
-      "How to make the most of a day in port on the French Riviera — a private chauffeur shore excursion from Villefranche, Cannes or Monaco.",
+      "How to make the most of a day in port on the French Riviera: a private chauffeur shore excursion from Villefranche, Cannes or Monaco.",
     excerpt:
-      "A private chauffeur shore excursion from Villefranche, Cannes or Monaco — making the most of a day in port.",
+      "A private chauffeur shore excursion from Villefranche, Cannes or Monaco: making the most of a day in port.",
     category: "Travel Guides",
     heroKicker: "Cruise port day",
     readTime: "6 min read",
@@ -1107,19 +1107,19 @@ export const guidePosts: BlogPost[] = [
       "private tour cruise Riviera",
     ],
     intro:
-      "A day in port on the French Riviera is short, and the sights are spread along the coast — so how you spend it matters. A private chauffeur turns a single day into a tailored tour of the highlights, back at the ship in good time. Here is how to make the most of a Riviera cruise port day.",
+      "A day in port on the French Riviera is short, and the sights are spread along the coast. So how you spend it matters. A private chauffeur turns a single day into a tailored tour of the highlights, back at the ship in good time. Here is how to make the most of a Riviera cruise port day.",
     sections: [
       {
         id: "the-riviera-cruise-ports",
         title: "The Riviera cruise ports",
         paragraphs: [
-          "Most ships call at Villefranche-sur-Mer, anchoring in its deep bay and tendering guests ashore — a perfect gateway to Nice, Monaco and Èze. Others dock or tender at Cannes and Monaco, each within easy reach of the coast's headline sights.",
+          "Most ships call at Villefranche-sur-Mer, anchoring in its deep bay and tendering guests ashore. A perfect gateway to Nice, Monaco and Èze. Others dock or tender at Cannes and Monaco, each within easy reach of the coast's headline sights.",
           "Wherever you land, the best of the Riviera is a short drive away.",
         ],
         bullets: [
-          "Villefranche — tender port, central gateway",
-          "Cannes — the Croisette and the west",
-          "Monaco — the principality and the east",
+          "Villefranche: tender port, central gateway",
+          "Cannes: the Croisette and the west",
+          "Monaco: the principality and the east",
           "The highlights within an easy drive",
         ],
       },
@@ -1160,7 +1160,7 @@ export const guidePosts: BlogPost[] = [
       {
         question: "Is a private chauffeur better than a coach excursion?",
         answer:
-          "Yes — a tailored route at your own pace, no coach queues or waiting, with the day built around your all-aboard time.",
+          "Yes. A tailored route at your own pace, no coach queues or waiting, with the day built around your all-aboard time.",
       },
       {
         question: "Will a chauffeur get me back to the ship in time?",
@@ -1174,7 +1174,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Make the most of your day in port",
     ctaDescription:
-      "A tailored shore excursion, back in good time — a private chauffeur for your Riviera cruise port day.",
+      "A tailored shore excursion, back in good time. A private chauffeur for your Riviera cruise port day.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -1182,9 +1182,9 @@ export const guidePosts: BlogPost[] = [
     slug: "what-to-pack-french-riviera",
     title: "What to Pack for the Riviera",
     description:
-      "What to pack for the French Riviera — from beach days to casino evenings, a season-by-season guide to what to wear.",
+      "What to pack for the French Riviera: from beach days to casino evenings, a season-by-season guide to what to wear.",
     excerpt:
-      "From beach days to casino evenings — a season-by-season guide to what to pack for the French Riviera.",
+      "From beach days to casino evenings: a season-by-season guide to what to pack for the French Riviera.",
     category: "Travel Guides",
     heroKicker: "What to pack",
     readTime: "5 min read",
@@ -1265,7 +1265,7 @@ export const guidePosts: BlogPost[] = [
     ],
     ctaTitle: "Arrive ready for the Riviera",
     ctaDescription:
-      "From the airport to your hotel with the luggage handled — a private chauffeur to start your Riviera trip right.",
+      "From the airport to your hotel with the luggage handled. A private chauffeur to start your Riviera trip right.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },

@@ -33,7 +33,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { page } = await searchParams;
   const currentPage = parsePageParam(page);
-  const titleSuffix = currentPage > 1 ? ` — Page ${currentPage}` : "";
+  const titleSuffix = currentPage > 1 ? ` | Page ${currentPage}` : "";
 
   return pageMetadata({
     title: `Blog${titleSuffix} | Private Driver Tips for Nice, Cannes and Monaco`,

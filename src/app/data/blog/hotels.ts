@@ -24,7 +24,7 @@ export const hotelPosts: BlogPost[] = [
       "Monaco luxury hotel transfer",
     ],
     intro:
-      "The Hôtel de Paris Monte-Carlo is the grande dame of the principality — a Belle Époque palace on the Casino Square since 1864, at the very centre of Monaco's glamour. Arriving in the style it deserves means a private chauffeur to the door. Here is what to know about transfers to the Hôtel de Paris.",
+      "The Hôtel de Paris Monte-Carlo is the grande dame of the principality, a Belle Époque palace on the Casino Square since 1864, at the very centre of Monaco's glamour. Arriving in the style it deserves means a private chauffeur to the door. Here is what to know about transfers to the Hôtel de Paris.",
     sections: [
       {
         id: "the-grande-dame-of-monaco",
@@ -44,7 +44,7 @@ export const hotelPosts: BlogPost[] = [
         id: "from-nice-airport",
         title: "From Nice Airport to the door",
         paragraphs: [
-          "Monaco is around 30 to 40 minutes from Nice Airport by road. A private chauffeur meets your flight and brings you to the hotel entrance on the Casino Square, from around €150 in an E-Class or €180 in a V-Class — without the tunnels and parking that make Monaco arrivals awkward otherwise.",
+          "Monaco is around 30 to 40 minutes from Nice Airport by road. A private chauffeur meets your flight and brings you to the hotel entrance on the Casino Square, from around €150 in an E-Class or €180 in a V-Class, without the tunnels and parking that otherwise make Monaco arrivals awkward.",
           "For those short on time, the chauffeur also pairs with the Nice–Monaco helicopter to the heliport.",
         ],
         bullets: [
@@ -92,7 +92,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Hôtel de Paris",
     ctaDescription:
-      "From Nice Airport to the Casino Square door — a private chauffeur for the Hôtel de Paris Monte-Carlo.",
+      "From Nice Airport to the Casino Square door: a private chauffeur for the Hôtel de Paris Monte-Carlo.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -100,7 +100,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "hotel-negresco-nice-transfer",
     title: "Hôtel Negresco Nice Transfer",
     description:
-      "Private chauffeur transfers to the Hôtel Negresco on the Promenade des Anglais in Nice — met at your flight, minutes from the airport.",
+      "Private chauffeur transfers to the Hôtel Negresco on the Promenade des Anglais in Nice. Met at your flight, minutes from the airport.",
     excerpt:
       "A private chauffeur transfer to the Hôtel Negresco, the Belle Époque landmark of the Promenade des Anglais.",
     category: "Luxury Hotels",
@@ -118,13 +118,13 @@ export const hotelPosts: BlogPost[] = [
       "Promenade des Anglais hotel",
     ],
     intro:
-      "With its rose-pink dome rising over the Promenade des Anglais, the Hôtel Negresco is the very symbol of Nice. A Belle Époque landmark since 1912, it sits just minutes from the airport — an easy, elegant chauffeured arrival. Here is what to know about transfers to the Negresco.",
+      "With its rose-pink dome rising over the Promenade des Anglais, the Hôtel Negresco is the very symbol of Nice. A Belle Époque landmark since 1912, it sits just minutes from the airport. An easy, elegant chauffeured arrival. Here is what to know about transfers to the Negresco.",
     sections: [
       {
         id: "a-nice-landmark",
         title: "A Nice landmark",
         paragraphs: [
-          "Opened in 1912, the Negresco is a monument as much as a hotel — its pink dome, remarkable private art collection and the celebrated Le Chantecler restaurant have made it a fixture of the Promenade des Anglais for over a century.",
+          "Opened in 1912, the Negresco is a monument as much as a hotel: its pink dome, remarkable private art collection and the celebrated Le Chantecler restaurant have made it a fixture of the Promenade des Anglais for over a century.",
           "To stay there is to stay in a piece of Nice itself, facing the Baie des Anges.",
         ],
         bullets: [
@@ -194,7 +194,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "hotel-du-cap-eden-roc-transfer",
     title: "Hôtel du Cap-Eden-Roc Transfer",
     description:
-      "Private chauffeur transfers to the Hôtel du Cap-Eden-Roc on Cap d'Antibes — from Nice Airport to the legendary hotel in the pines.",
+      "Private chauffeur transfers to the Hôtel du Cap-Eden-Roc on Cap d'Antibes: from Nice Airport to the legendary hotel in the pines.",
     excerpt:
       "A private chauffeur transfer to the Hôtel du Cap-Eden-Roc, the legendary retreat on Cap d'Antibes.",
     category: "Luxury Hotels",
@@ -212,7 +212,7 @@ export const hotelPosts: BlogPost[] = [
       "Antibes luxury hotel transfer",
     ],
     intro:
-      "Hidden in pine parkland at the very tip of Cap d'Antibes, the Hôtel du Cap-Eden-Roc has been a byword for discreet luxury since 1870. Its seclusion is part of the appeal — and part of why a private chauffeur is the natural way to arrive. Here is what to know about transfers to the Hôtel du Cap.",
+      "Hidden in pine parkland at the very tip of Cap d'Antibes, the Hôtel du Cap-Eden-Roc has been a byword for discreet luxury since 1870. Its seclusion is part of the appeal and part of why a private chauffeur is the natural way to arrive. Here is what to know about transfers to the Hôtel du Cap.",
     sections: [
       {
         id: "a-legend-on-the-cap",
@@ -232,7 +232,7 @@ export const hotelPosts: BlogPost[] = [
         id: "from-nice-airport",
         title: "From Nice Airport to the gates",
         paragraphs: [
-          "Cap d'Antibes lies around 25 to 30 minutes from Nice Airport. A private chauffeur meets your flight and brings you down the wooded lanes of the Cap to the hotel gates, from around €130 in an E-Class or €150 in a V-Class — a discreet arrival to match the setting.",
+          "Cap d'Antibes lies around 25 to 30 minutes from Nice Airport. A private chauffeur meets your flight and brings you down the wooded lanes of the Cap to the hotel gates, from around €130 in an E-Class or €150 in a V-Class. A discreet arrival to match the setting.",
           "For arrivals during the Cannes festival, when the roads are busy, a driver who knows the diversions is invaluable.",
         ],
         bullets: [
@@ -278,7 +278,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Hôtel du Cap-Eden-Roc",
     ctaDescription:
-      "A discreet arrival through the pines of the Cap — a private chauffeur for the Hôtel du Cap-Eden-Roc.",
+      "A discreet arrival through the pines of the Cap. A private chauffeur for the Hôtel du Cap-Eden-Roc.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -372,7 +372,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Carlton Cannes",
     ctaDescription:
-      "From Nice Airport to the Croisette door — a private chauffeur for the iconic Carlton Cannes.",
+      "From Nice Airport to the Croisette door: a private chauffeur for the iconic Carlton Cannes.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -380,7 +380,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "hotel-martinez-cannes-transfer",
     title: "Hôtel Martinez Cannes Transfer",
     description:
-      "Private chauffeur transfers to the Hôtel Martinez on the Croisette in Cannes — from Nice Airport to the Art Deco palace in 30 minutes.",
+      "Private chauffeur transfers to the Hôtel Martinez on the Croisette in Cannes. From Nice Airport to the Art Deco palace in 30 minutes.",
     excerpt:
       "A private chauffeur transfer to the Hôtel Martinez, the Art Deco palace of the Croisette.",
     category: "Luxury Hotels",
@@ -398,7 +398,7 @@ export const hotelPosts: BlogPost[] = [
       "Cannes palace hotel chauffeur",
     ],
     intro:
-      "The Hôtel Martinez is the grand Art Deco statement of the Croisette — the largest palace hotel in Cannes, opened in 1929, and home to the Michelin-starred La Palme d'Or. Arriving in keeping with it means a private chauffeur to the door. Here is what to know about transfers to the Martinez.",
+      "The Hôtel Martinez is the grand Art Deco statement of the Croisette: the largest palace hotel in Cannes, opened in 1929, and home to the Michelin-starred La Palme d'Or. Arriving in keeping with it means a private chauffeur to the door. Here is what to know about transfers to the Martinez.",
     sections: [
       {
         id: "art-deco-on-the-croisette",
@@ -466,7 +466,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Hôtel Martinez",
     ctaDescription:
-      "From Nice Airport to the Croisette door — a private chauffeur for the Art Deco Hôtel Martinez in Cannes.",
+      "From Nice Airport to the Croisette door: a private chauffeur for the Art Deco Hôtel Martinez in Cannes.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -474,7 +474,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "byblos-saint-tropez-transfer",
     title: "Byblos Saint-Tropez Transfer",
     description:
-      "Private chauffeur transfers to the Byblos Saint-Tropez — from Nice Airport to the legendary village-style hotel by road or boat.",
+      "Private chauffeur transfers to the Byblos Saint-Tropez: from Nice Airport to the legendary village-style hotel by road or boat.",
     excerpt:
       "A private chauffeur transfer to the Byblos, the legendary village-style hotel of Saint-Tropez.",
     category: "Luxury Hotels",
@@ -492,7 +492,7 @@ export const hotelPosts: BlogPost[] = [
       "Saint-Tropez palace hotel",
     ],
     intro:
-      "The Byblos is the beating heart of Saint-Tropez glamour — a hotel built like a miniature Provençal village of colourful houses, opened in 1967, and home to the legendary Les Caves du Roy. Reaching it from Nice takes a little planning. Here is what to know about transfers to the Byblos.",
+      "The Byblos is the beating heart of Saint-Tropez glamour: a hotel built like a miniature Provençal village of colourful houses, opened in 1967, and home to the legendary Les Caves du Roy. Reaching it from Nice takes a little planning. Here is what to know about transfers to the Byblos.",
     sections: [
       {
         id: "the-heart-of-saint-tropez-glamour",
@@ -512,7 +512,7 @@ export const hotelPosts: BlogPost[] = [
         id: "getting-there-road-or-boat",
         title: "Getting there: road or boat",
         paragraphs: [
-          "Saint-Tropez sits at the end of its peninsula, around an hour and a half to two hours from Nice Airport by road — a private-chauffeur run from around €400 in an E-Class or €500 in a V-Class. Alternatively, a chauffeur can drive you to a boat landing at Sainte-Maxime and the crossing brings you into the port.",
+          "Saint-Tropez sits at the end of its peninsula, around an hour and a half to two hours from Nice Airport by road. A private-chauffeur run from around €400 in an E-Class or €500 in a V-Class. Alternatively, a chauffeur can drive you to a boat landing at Sainte-Maxime and the crossing brings you into the port.",
           "In peak summer, timing the run around the gulf traffic is key, and a driver who knows the roads plans around it.",
         ],
         bullets: [
@@ -559,7 +559,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Byblos Saint-Tropez",
     ctaDescription:
-      "By road or by boat, timed around the traffic — a private chauffeur for the Byblos Saint-Tropez.",
+      "By road or by boat, timed around the traffic: a private chauffeur for the Byblos Saint-Tropez.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -585,7 +585,7 @@ export const hotelPosts: BlogPost[] = [
       "Eze village hotel chauffeur",
     ],
     intro:
-      "Woven into the stone lanes of the medieval village of Èze, the Château de la Chèvre d'Or clings to the cliff high above the Mediterranean. Its views and its Michelin dining are among the finest on the coast — and its perched, car-free setting makes a chauffeured arrival the natural choice. Here is what to know about transfers to the Chèvre d'Or.",
+      "Woven into the stone lanes of the medieval village of Èze, the Château de la Chèvre d'Or clings to the cliff high above the Mediterranean. Its views and its Michelin dining are among the finest on the coast, and its perched, car-free setting makes a chauffeured arrival the natural choice. Here is what to know about transfers to the Chèvre d'Or.",
     sections: [
       {
         id: "perched-above-the-sea",
@@ -611,7 +611,7 @@ export const hotelPosts: BlogPost[] = [
         bullets: [
           "About 25–30 minutes from Nice Airport",
           "High on the Moyenne Corniche",
-          "The village is car-free — dropped at the entrance",
+          "The village is car-free. Dropped at the entrance",
           "Indicative transfers from around €110",
         ],
       },
@@ -619,7 +619,7 @@ export const hotelPosts: BlogPost[] = [
         id: "a-chauffeur-for-eze-and-the-coast",
         title: "A chauffeur for Èze and the coast",
         paragraphs: [
-          "From Èze, a private chauffeur opens up the eastern Riviera — Monaco just minutes away, the three corniches to explore, and the coast down to Nice. The same driver is on call for dinners and day trips from the village entrance.",
+          "From Èze, a private chauffeur opens up the eastern Riviera: Monaco just minutes away, the three corniches to explore, and the coast down to Nice. The same driver is on call for dinners and day trips from the village entrance.",
           "It is the easiest way to enjoy a clifftop stay and the coast below it.",
         ],
       },
@@ -652,7 +652,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Château de la Chèvre d'Or",
     ctaDescription:
-      "Up the corniche to a clifftop village hotel — a private chauffeur for the Château de la Chèvre d'Or in Èze.",
+      "Up the corniche to a clifftop village hotel: a private chauffeur for the Château de la Chèvre d'Or in Èze.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -660,7 +660,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "hotel-metropole-monte-carlo-transfer",
     title: "Hôtel Métropole Monte-Carlo Transfer",
     description:
-      "Private chauffeur transfers to the Hôtel Métropole Monte-Carlo — from Nice Airport to the Carré d'Or in about 30 minutes.",
+      "Private chauffeur transfers to the Hôtel Métropole Monte-Carlo: from Nice Airport to the Carré d'Or in about 30 minutes.",
     excerpt:
       "A private chauffeur transfer to the Hôtel Métropole Monte-Carlo, the grande dame of the Carré d'Or.",
     category: "Luxury Hotels",
@@ -684,7 +684,7 @@ export const hotelPosts: BlogPost[] = [
         id: "elegance-in-the-carre-dor",
         title: "Elegance in the Carré d'Or",
         paragraphs: [
-          "The Métropole stands in the Carré d'Or — the golden square — Monaco's most exclusive shopping quarter, a short walk from the Casino and the Hôtel de Paris. Behind its Belle Époque facade lie an acclaimed spa, a garden pool and some of the finest dining in the principality.",
+          "The Métropole stands in the Carré d'Or (the golden square), Monaco's most exclusive shopping quarter, a short walk from the Casino and the Hôtel de Paris. Behind its Belle Époque facade lie an acclaimed spa, a garden pool and some of the finest dining in the principality.",
           "It is elegance a little apart from the Casino Square bustle, yet moments from it.",
         ],
         bullets: [
@@ -746,7 +746,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Hôtel Métropole",
     ctaDescription:
-      "From Nice Airport to the Carré d'Or door — a private chauffeur for the Hôtel Métropole Monte-Carlo.",
+      "From Nice Airport to the Carré d'Or door: a private chauffeur for the Hôtel Métropole Monte-Carlo.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -754,7 +754,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "chateau-saint-martin-vence-transfer",
     title: "Château Saint-Martin Vence Transfer",
     description:
-      "Private chauffeur transfers to the Château Saint-Martin above Vence — from Nice Airport to the hilltop hotel among the olive groves.",
+      "Private chauffeur transfers to the Château Saint-Martin above Vence: from Nice Airport to the hilltop hotel among the olive groves.",
     excerpt:
       "A private chauffeur transfer to the Château Saint-Martin, a hilltop retreat above Vence in the olive groves.",
     category: "Luxury Hotels",
@@ -847,7 +847,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "la-reserve-ramatuelle-transfer",
     title: "La Réserve Ramatuelle Transfer",
     description:
-      "Private chauffeur transfers to La Réserve Ramatuelle near Saint-Tropez — from Nice Airport to the clifftop hotel above the sea.",
+      "Private chauffeur transfers to La Réserve Ramatuelle near Saint-Tropez: from Nice Airport to the clifftop hotel above the sea.",
     excerpt:
       "A private chauffeur transfer to La Réserve Ramatuelle, the contemporary clifftop hotel near Saint-Tropez.",
     category: "Luxury Hotels",
@@ -931,7 +931,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to La Réserve Ramatuelle",
     ctaDescription:
-      "By road or by boat to a clifftop hotel above the sea — a private chauffeur for La Réserve Ramatuelle.",
+      "By road or by boat to a clifftop hotel above the sea: a private chauffeur for La Réserve Ramatuelle.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -939,7 +939,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "hermitage-monte-carlo-transfer",
     title: "Hôtel Hermitage Monte-Carlo Transfer",
     description:
-      "Private chauffeur transfers to the Hôtel Hermitage Monte-Carlo — from Nice Airport to the Belle Époque palace above the harbour.",
+      "Private chauffeur transfers to the Hôtel Hermitage Monte-Carlo: from Nice Airport to the Belle Époque palace above the harbour.",
     excerpt:
       "A private chauffeur transfer to the Hôtel Hermitage Monte-Carlo, a Belle Époque palace above the harbour.",
     category: "Luxury Hotels",
@@ -1025,7 +1025,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Hôtel Hermitage",
     ctaDescription:
-      "From Nice Airport to the palace above the harbour — a private chauffeur for the Hôtel Hermitage Monte-Carlo.",
+      "From Nice Airport to the palace above the harbour: a private chauffeur for the Hôtel Hermitage Monte-Carlo.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -1033,7 +1033,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "cap-estel-eze-transfer",
     title: "Cap Estel Èze-sur-Mer Transfer",
     description:
-      "Private chauffeur transfers to Cap Estel at Èze-sur-Mer — from Nice Airport to the private-peninsula hotel by the sea.",
+      "Private chauffeur transfers to Cap Estel at Èze-sur-Mer: from Nice Airport to the private-peninsula hotel by the sea.",
     excerpt:
       "A private chauffeur transfer to Cap Estel, the intensely private peninsula hotel at Èze-sur-Mer.",
     category: "Luxury Hotels",
@@ -1057,7 +1057,7 @@ export const hotelPosts: BlogPost[] = [
         id: "a-hotel-on-its-own-peninsula",
         title: "A hotel on its own peninsula",
         paragraphs: [
-          "Cap Estel occupies an entire small peninsula on the coast at Èze-sur-Mer, its gardens running down to the sea on three sides. Once a private estate, it has become a byword for exclusivity — a small, intensely private hotel wrapped in green and water, below the perched village of Èze.",
+          "Cap Estel occupies an entire small peninsula on the coast at Èze-sur-Mer, its gardens running down to the sea on three sides. Once a private estate, it has become a byword for exclusivity: a small, intensely private hotel wrapped in green and water, below the perched village of Èze.",
           "It offers a seclusion rare even on the Riviera, yet minutes from Monaco and Nice.",
         ],
         bullets: [
@@ -1071,7 +1071,7 @@ export const hotelPosts: BlogPost[] = [
         id: "from-nice-airport",
         title: "From Nice Airport to the gate",
         paragraphs: [
-          "Èze-sur-Mer lies around 25 to 30 minutes from Nice Airport, along the coast road between Nice and Monaco. A private chauffeur meets your flight and brings you to the gate of the peninsula, from around €110 — a discreet arrival to a discreet place.",
+          "Èze-sur-Mer lies around 25 to 30 minutes from Nice Airport, along the coast road between Nice and Monaco. A private chauffeur meets your flight and brings you to the gate of the peninsula, from around €110. A discreet arrival to a discreet place.",
           "The coastal run past Villefranche and Cap-Ferrat is a beautiful drive in itself.",
         ],
         bullets: [
@@ -1118,7 +1118,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to Cap Estel",
     ctaDescription:
-      "A discreet arrival to a private peninsula by the sea — a private chauffeur for Cap Estel at Èze-sur-Mer.",
+      "A discreet arrival to a private peninsula by the sea. A private chauffeur for Cap Estel at Èze-sur-Mer.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -1126,7 +1126,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "mas-candille-mougins-transfer",
     title: "Le Mas Candille Mougins Transfer",
     description:
-      "Private chauffeur transfers to Le Mas Candille in Mougins — from Nice Airport to the Provençal country-house hotel in the hills.",
+      "Private chauffeur transfers to Le Mas Candille in Mougins: from Nice Airport to the Provençal country-house hotel in the hills.",
     excerpt:
       "A private chauffeur transfer to Le Mas Candille, a Provençal country-house hotel in the hills of Mougins.",
     category: "Luxury Hotels",
@@ -1150,7 +1150,7 @@ export const hotelPosts: BlogPost[] = [
         id: "a-provencal-mas-in-the-hills",
         title: "A Provençal mas in the hills",
         paragraphs: [
-          "Set in gardens on a hillside in Mougins — the perched village famous for its gastronomy and its Picasso connection — Le Mas Candille is an old Provençal farmhouse reborn as a country-house hotel, with a spa, pools and views across the wooded hills toward the sea.",
+          "Set in gardens on a hillside in Mougins, the perched village famous for its gastronomy and its Picasso connection, Le Mas Candille is an old Provençal farmhouse reborn as a country-house hotel, with a spa, pools and views across the wooded hills toward the sea.",
           "It is the calm, rural counterpoint to the glamour of Cannes just below.",
         ],
         bullets: [
@@ -1219,7 +1219,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "monte-carlo-bay-transfer",
     title: "Monte-Carlo Bay Hotel Transfer",
     description:
-      "Private chauffeur transfers to the Monte-Carlo Bay resort in Monaco — from Nice Airport to the lagoon resort in about 30 minutes.",
+      "Private chauffeur transfers to the Monte-Carlo Bay resort in Monaco: from Nice Airport to the lagoon resort in about 30 minutes.",
     excerpt:
       "A private chauffeur transfer to the Monte-Carlo Bay, Monaco's resort with a swimming lagoon.",
     category: "Luxury Hotels",
@@ -1237,13 +1237,13 @@ export const hotelPosts: BlogPost[] = [
       "Monaco lagoon hotel",
     ],
     intro:
-      "The Monte-Carlo Bay is Monaco's resort in the fullest sense — a contemporary Mediterranean hotel set on the Larvotto peninsula around a sandy-bottomed swimming lagoon, a relaxed counterpoint to the principality's grand palaces. Here is what to know about transfers to the Monte-Carlo Bay.",
+      "The Monte-Carlo Bay is Monaco's resort in the fullest sense, a contemporary Mediterranean hotel set on the Larvotto peninsula around a sandy-bottomed swimming lagoon, a relaxed counterpoint to the principality's grand palaces. Here is what to know about transfers to the Monte-Carlo Bay.",
     sections: [
       {
         id: "a-resort-with-a-lagoon",
         title: "A resort with a lagoon",
         paragraphs: [
-          "Opened on the Larvotto peninsula, the Monte-Carlo Bay trades palace formality for a resort mood — gardens, restaurants and, at its heart, a swimming lagoon with a real sandy bottom, rare in the heart of a city-state. Part of the same Monte-Carlo estate as the grand hotels, it is designed for relaxed days by the water.",
+          "Opened on the Larvotto peninsula, the Monte-Carlo Bay trades palace formality for a resort mood: gardens, restaurants and, at its heart, a swimming lagoon with a real sandy bottom, rare in the heart of a city-state. Part of the same Monte-Carlo estate as the grand hotels, it is designed for relaxed days by the water.",
           "It suits families and longer stays as much as the glamour of the Casino Square.",
         ],
         bullets: [
@@ -1305,7 +1305,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Monte-Carlo Bay",
     ctaDescription:
-      "From Nice Airport to the lagoon resort — a private chauffeur for the Monte-Carlo Bay in Monaco.",
+      "From Nice Airport to the lagoon resort: a private chauffeur for the Monte-Carlo Bay in Monaco.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -1313,7 +1313,7 @@ export const hotelPosts: BlogPost[] = [
     slug: "chateau-messardiere-saint-tropez-transfer",
     title: "Château de la Messardière Transfer",
     description:
-      "Private chauffeur transfers to the Château de la Messardière above Saint-Tropez — from Nice Airport to the hilltop palace by road or boat.",
+      "Private chauffeur transfers to the Château de la Messardière above Saint-Tropez: from Nice Airport to the hilltop palace by road or boat.",
     excerpt:
       "A private chauffeur transfer to the Château de la Messardière, a hilltop palace above Saint-Tropez.",
     category: "Luxury Hotels",
@@ -1398,7 +1398,7 @@ export const hotelPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the Château de la Messardière",
     ctaDescription:
-      "By road or by boat to a hilltop palace above the gulf — a private chauffeur for the Château de la Messardière.",
+      "By road or by boat to a hilltop palace above the gulf: a private chauffeur for the Château de la Messardière.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },

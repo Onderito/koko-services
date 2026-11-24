@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: businessTitle,
   description:
-    "Private chauffeur service in Nice, Cannes, Monaco and Saint-Tropez — airport transfers, hourly hire and luxury Riviera travel.",
+    "Private chauffeur service in Nice, Cannes, Monaco and Saint-Tropez: airport transfers, hourly hire and luxury Riviera travel.",
   alternates: {
     canonical: siteUrl,
   },

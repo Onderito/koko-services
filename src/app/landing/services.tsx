@@ -16,7 +16,7 @@ export default function Services() {
             key={card.title}
             href={card.link}
             image={card.image}
-            imageAlt={`${card.title} — luxury chauffeur service on the French Riviera`}
+            imageAlt={`${card.title}: luxury chauffeur service on the French Riviera`}
             imageLinkLabel={`open ${card.title} service details`}
             imageSizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
             badge={<PhotoTag>{card.kicker}</PhotoTag>}

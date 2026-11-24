@@ -1,5 +1,5 @@
-// /reservation?t=<signed trip> — the quote request in three steps (01 Vehicle · 02 Details · 03 Confirm), with
-// Transfeero's layout and route effect (teardown of 20 Oct 2026, docs/design in the koko project). Quotes, not
+// /reservation?t=<signed trip>: the quote request in three steps (01 Vehicle · 02 Details · 03 Confirm), with
+// its own layout and route effect. Quotes, not
 // payments: each car shows "Starting from" (the site's own price guide) and the request goes to the owner's inbox.
 // Never indexed; the trip travels in the link (lib/reservations/trip.ts) and expires after 7 days.
 

@@ -115,7 +115,7 @@ function buildHtmlEmail(data: {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Booking Request — kokolimo</title>
+  <title>New Booking Request | kokolimo</title>
 </head>
 <body style="margin:0;padding:0;background-color:#F5F0E8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F5F0E8;padding:40px 16px;">
@@ -182,7 +182,7 @@ function buildHtmlEmail(data: {
           <!-- CTA -->
           <tr>
             <td style="background:#ffffff;border:1px solid #E8DCCB;border-top:none;border-bottom:none;padding:24px 32px;">
-              <a href="mailto:${data.email}?subject=Re: Your booking request — kokolimo"
+              <a href="mailto:${data.email}?subject=Re: Your booking request | kokolimo"
                  style="display:inline-block;background:linear-gradient(180deg,#F8F3EC 0%,#E8D9C5 100%);border:1px solid #E4D4BF;border-radius:14px;padding:12px 22px;font-size:14px;font-weight:700;color:#6D5830;text-decoration:none;letter-spacing:-0.01em;">
                 Reply to ${data.fullName} →
               </a>
@@ -225,7 +225,7 @@ function buildPlainTextEmail(data: {
   };
   const serviceLabel = serviceLabels[data.service] ?? data.service;
 
-  return `NEW BOOKING REQUEST — kokolimo
+  return `NEW BOOKING REQUEST | kokolimo
 =====================================
 Service: ${serviceLabel}
 
@@ -271,7 +271,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
   }
 
-  // Honeypot — silent discard
+  // Honeypot: silent discard
   if (typeof body.website === "string" && body.website.trim() !== "") {
     return NextResponse.json({ ok: true });
   }
@@ -318,7 +318,7 @@ export async function POST(request: NextRequest) {
   const toEmail = process.env.CONTACT_FORM_TO_EMAIL;
 
   if (!apiKey || !toEmail) {
-    console.error("[contact] Resend not configured — missing RESEND_API_KEY or CONTACT_FORM_TO_EMAIL");
+    console.error("[contact] Resend not configured: missing RESEND_API_KEY or CONTACT_FORM_TO_EMAIL");
     return NextResponse.json(
       { error: "Email service is not configured" },
       { status: 500 },
@@ -338,7 +338,7 @@ export async function POST(request: NextRequest) {
       from: "kokolimo <contact@kokolimo.com>",
       to: toEmail,
       replyTo: `${sanitized.fullName} <${sanitized.email}>`,
-      subject: `New booking request — ${sanitized.fullName} (${sanitized.service})`,
+      subject: `New booking request: ${sanitized.fullName} (${sanitized.service})`,
       text: buildPlainTextEmail(emailData),
       html: buildHtmlEmail(emailData),
     });

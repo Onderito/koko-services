@@ -9,7 +9,7 @@ export const eventPosts: BlogPost[] = [
     description:
       "How to attend the Monaco Grand Prix with a private chauffeur — around the road closures, grandstands and crowds of race week.",
     excerpt:
-      "Attending the Monaco Grand Prix — arriving, road closures and getting around race week with a private chauffeur.",
+      "Attending the Monaco Grand Prix: arriving, road closures and getting around race week with a private chauffeur.",
     category: "Events",
     heroKicker: "Monaco Grand Prix",
     readTime: "7 min read",
@@ -25,13 +25,13 @@ export const eventPosts: BlogPost[] = [
       "Monaco F1 chauffeur",
     ],
     intro:
-      "The Monaco Grand Prix is the jewel of the Formula 1 calendar — the 2027 edition runs from 4 to 6 June on the streets of Monte-Carlo, around Port Hercule and up through Casino Square. For that week the principality is at bursting point and its roads all but close, which makes a private chauffeur the only relaxed way to move. Here is how to attend the Monaco Grand Prix.",
+      "The Monaco Grand Prix is the jewel of the Formula 1 calendar: the 2027 edition runs from 4 to 6 June on the streets of Monte-Carlo, around Port Hercule and up through Casino Square. For that week the principality is at bursting point and its roads all but close, which makes a private chauffeur the only relaxed way to move. Here is how to attend the Monaco Grand Prix.",
     sections: [
       {
         id: "the-jewel-of-formula-one",
         title: "The jewel of Formula 1",
         paragraphs: [
-          "Raced through Monaco's streets since 1929, the Grand Prix is unlike any other round — barriers inches from the harbour, superyachts moored feet from the track, and the whole principality turned into a grandstand. In 2027, the race weekend runs from Friday 4 to Sunday 6 June, with the Grand Prix on Sunday.",
+          "Raced through Monaco's streets since 1929, the Grand Prix is unlike any other round: barriers inches from the harbour, superyachts moored feet from the track, and the whole principality turned into a grandstand. In 2027, the race weekend runs from Friday 4 to Sunday 6 June, with the Grand Prix on Sunday.",
           "It is as much a society occasion as a sporting one, and demand for every seat, terrace and berth is intense.",
         ],
         bullets: [
@@ -45,7 +45,7 @@ export const eventPosts: BlogPost[] = [
         id: "arriving-for-the-grand-prix",
         title: "Arriving for the Grand Prix",
         paragraphs: [
-          "Most spectators arrive through Nice Airport, around 30 to 40 minutes from Monaco by road — considerably longer in race-week traffic. A private chauffeur meets your flight and brings you toward the principality, while those short on time take the helicopter to the Monaco heliport with a car waiting.",
+          "Most spectators arrive through Nice Airport, around 30 to 40 minutes from Monaco by road. Considerably longer in race-week traffic. A private chauffeur meets your flight and brings you toward the principality, while those short on time take the helicopter to the Monaco heliport with a car waiting.",
           "Because the whole coast runs at capacity that week, booking transfers and hotels far ahead is essential.",
         ],
         bullets: [
@@ -100,7 +100,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "A chauffeur for the Monaco Grand Prix",
     ctaDescription:
-      "Move through race week in comfort — a private chauffeur on call for the Monaco Grand Prix, around the closures and crowds.",
+      "Move through race week in comfort: a private chauffeur on call for the Monaco Grand Prix, around the closures and crowds.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -108,7 +108,7 @@ export const eventPosts: BlogPost[] = [
     slug: "cannes-film-festival-chauffeur",
     title: "Cannes Film Festival Chauffeur Guide",
     description:
-      "How to attend the Cannes Film Festival with a private chauffeur — the red carpet, the Croisette, road closures and black-tie evenings in May.",
+      "How to attend the Cannes Film Festival with a private chauffeur: the red carpet, the Croisette, road closures and black-tie evenings in May.",
     excerpt:
       "Attending the Cannes Film Festival — the red carpet, the Croisette and black-tie evenings with a chauffeur.",
     category: "Events",
@@ -126,7 +126,7 @@ export const eventPosts: BlogPost[] = [
       "Cannes Festival car service",
     ],
     intro:
-      "From 11 to 22 May 2027, the 80th Cannes Film Festival turns the Croisette into the centre of the film world — red-carpet premieres at the Palais, parties along the seafront and black-tie evenings that run late. Arriving in style, and moving through the crowds and closures, is where a private chauffeur comes in. Here is how to attend the Cannes Film Festival.",
+      "From 11 to 22 May 2027, the 80th Cannes Film Festival turns the Croisette into the centre of the film world: red-carpet premieres at the Palais, parties along the seafront and black-tie evenings that run late. Arriving in style, and moving through the crowds and closures, is where a private chauffeur comes in. Here is how to attend the Cannes Film Festival.",
     sections: [
       {
         id: "the-centre-of-cinema",
@@ -168,7 +168,7 @@ export const eventPosts: BlogPost[] = [
         id: "beyond-the-screenings",
         title: "Beyond the screenings",
         paragraphs: [
-          "Much of Cannes happens away from the Palais — villa parties in the hills, events aboard the yachts in the bay, and the legendary galas out on Cap d'Antibes. A chauffeur links them all, carrying guests between the town, the port and the Cap through the night.",
+          "Much of Cannes happens away from the Palais: villa parties in the hills, events aboard the yachts in the bay, and the legendary galas out on Cap d'Antibes. A chauffeur links them all, carrying guests between the town, the port and the Cap through the night.",
           "Wherever the invitations lead, the driving is handled.",
         ],
       },
@@ -210,9 +210,9 @@ export const eventPosts: BlogPost[] = [
     slug: "nice-carnival-guide",
     title: "Nice Carnival Visitor Guide",
     description:
-      "A visitor guide to the Nice Carnival — the flower battles, illuminated parades and dates each February, and the easy way to get there and back.",
+      "A visitor guide to the Nice Carnival: the flower battles, illuminated parades and dates each February, and the easy way to get there and back.",
     excerpt:
-      "The Nice Carnival — flower battles, illuminated parades and how to enjoy the February highlight with ease.",
+      "The Nice Carnival: flower battles, illuminated parades and how to enjoy the February highlight with ease.",
     category: "Events",
     heroKicker: "Nice Carnival",
     readTime: "6 min read",
@@ -228,7 +228,7 @@ export const eventPosts: BlogPost[] = [
       "Nice February carnival",
     ],
     intro:
-      "Each February, the Nice Carnival fills the city with colour — giant floats, flower battles and illuminated night parades that make it one of the world's great carnivals. It is the highlight of the Riviera's winter, and easy to enjoy with a little planning. Here is a visitor's guide to the Nice Carnival.",
+      "Each February, the Nice Carnival fills the city with colour. Its giant floats, flower battles and illuminated night parades make it one of the world's great carnivals. It is the highlight of the Riviera's winter, and easy to enjoy with a little planning. Here is a visitor's guide to the Nice Carnival.",
     sections: [
       {
         id: "one-of-the-worlds-great-carnivals",
@@ -248,7 +248,7 @@ export const eventPosts: BlogPost[] = [
         id: "flower-battles-and-parades",
         title: "Flower battles and parades",
         paragraphs: [
-          "The carnival has two signatures. The batailles de fleurs — flower battles — see performers on flower-decked floats throw fresh blooms into the crowd by day, while the corso illuminates the floats for spectacular night parades.",
+          "The carnival has two signatures. The batailles de fleurs (flower battles) see performers on flower-decked floats throw fresh blooms into the crowd by day, while the corso illuminates the floats for spectacular night parades.",
           "Between them they fill the programme, with several parades across the two weeks.",
         ],
         bullets: [
@@ -262,7 +262,7 @@ export const eventPosts: BlogPost[] = [
         id: "planning-your-visit",
         title: "Planning your visit",
         paragraphs: [
-          "Parades run both afternoons and evenings, with ticketed grandstand seating and standing areas. February is mild but cool after dark, so an evening parade rewards warm clothes — and it pairs naturally with the wider pleasures of the Riviera in winter.",
+          "Parades run both afternoons and evenings, with ticketed grandstand seating and standing areas. February is mild but cool after dark, so an evening parade rewards warm clothes. And it pairs naturally with the wider pleasures of the Riviera in winter.",
           "Booking seats ahead is wise for the busiest weekend parades.",
         ],
       },
@@ -284,7 +284,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "What are the flower battles?",
         answer:
-          "The batailles de fleurs — performers on flower-decked floats throwing fresh blooms into the crowd, a signature of the Nice Carnival.",
+          "The batailles de fleurs: performers on flower-decked floats throwing fresh blooms into the crowd, a signature of the Nice Carnival.",
       },
       {
         question: "Do you need tickets for the Nice Carnival?",
@@ -304,7 +304,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "Enjoy the Nice Carnival with ease",
     ctaDescription:
-      "Dropped at the parade and collected after — a private chauffeur for the flower battles and night parades of the Nice Carnival.",
+      "A private chauffeur for the flower battles and night parades of the Nice Carnival: dropped at the parade and collected after.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -312,9 +312,9 @@ export const eventPosts: BlogPost[] = [
     slug: "menton-lemon-festival-guide",
     title: "Menton Lemon Festival Guide",
     description:
-      "A guide to the Menton Lemon Festival — the giant citrus sculptures, garden displays and parades of the Fête du Citron each February and March.",
+      "A guide to the Menton Lemon Festival: the giant citrus sculptures, garden displays and parades of the Fête du Citron each February and March.",
     excerpt:
-      "The Menton Lemon Festival — giant citrus sculptures, garden displays and parades each February and March.",
+      "The Menton Lemon Festival: giant citrus sculptures, garden displays and parades each February and March.",
     category: "Events",
     heroKicker: "Menton Lemon Festival",
     readTime: "6 min read",
@@ -336,7 +336,7 @@ export const eventPosts: BlogPost[] = [
         id: "a-festival-built-from-citrus",
         title: "A festival built from citrus",
         paragraphs: [
-          "In the Jardins Biovès, teams build vast structures — animals, monuments, whole scenes — entirely from bright lemons and oranges, using well over a hundred tons of fruit around a different theme each year. Running since the 1930s, it is unlike any other festival on the coast.",
+          "In the Jardins Biovès, teams build vast structures (animals, monuments, whole scenes) entirely from bright lemons and oranges, using well over a hundred tons of fruit around a different theme each year. Running since the 1930s, it is unlike any other festival on the coast.",
           "The sight of these golden sculptures against Menton's palms and pastel facades is genuinely extraordinary.",
         ],
         bullets: [
@@ -350,7 +350,7 @@ export const eventPosts: BlogPost[] = [
         id: "gardens-parades-and-displays",
         title: "Gardens, parades and displays",
         paragraphs: [
-          "Beyond the garden sculptures, the festival brings the Corso des Fruits d'Or — golden-fruit parades of floats through the town — and evening garden illuminations that light the displays after dark. Together they run across several weeks.",
+          "Beyond the garden sculptures, the festival brings the Corso des Fruits d'Or (golden-fruit parades of floats through the town) and evening garden illuminations that light the displays after dark. Together they run across several weeks.",
           "It is worth timing a visit around a parade or an illuminated evening for the fullest experience.",
         ],
         bullets: [
@@ -386,7 +386,7 @@ export const eventPosts: BlogPost[] = [
       {
         question: "What is the Fête du Citron?",
         answer:
-          "Menton's Lemon Festival — enormous sculptures built from tons of lemons and oranges in the Jardins Biovès, themed anew each year.",
+          "Menton's Lemon Festival: enormous sculptures built from tons of lemons and oranges in the Jardins Biovès, themed anew each year.",
       },
       {
         question: "Is the Menton Lemon Festival worth a day trip?",
@@ -405,7 +405,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "Visit the Menton Lemon Festival",
     ctaDescription:
-      "Dropped in the centre, collected after — a private chauffeur for the sculptures and parades of the Fête du Citron.",
+      "A private chauffeur for the sculptures and parades of the Fête du Citron: dropped in the centre, collected after.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -413,7 +413,7 @@ export const eventPosts: BlogPost[] = [
     slug: "monte-carlo-masters-tennis",
     title: "Rolex Monte-Carlo Masters 2027 Guide",
     description:
-      "A guide to the Rolex Monte-Carlo Masters tennis — the clay-court spectacle each April by the sea, and the easy way to reach the club.",
+      "A guide to the Rolex Monte-Carlo Masters tennis (the clay-court spectacle each April by the sea) and the easy way to reach the club.",
     excerpt:
       "The Monte-Carlo Masters — top clay-court tennis by the sea each April, and the easy way to reach the club.",
     category: "Events",
@@ -431,13 +431,13 @@ export const eventPosts: BlogPost[] = [
       "Monaco tennis chauffeur",
     ],
     intro:
-      "From 3 to 11 April 2027, the Rolex Monte-Carlo Masters brings the best of men's clay-court tennis to one of the sport's most beautiful settings — a club terraced above the sea on the edge of Monaco. It is a glamorous spring fixture, and reaching the cliffside courts is easiest with a chauffeur.",
+      "From 3 to 11 April 2027, the Rolex Monte-Carlo Masters brings the best of men's clay-court tennis to one of the sport's most beautiful settings, a club terraced above the sea on the edge of Monaco. It is a glamorous spring fixture, and reaching the cliffside courts is easiest with a chauffeur.",
     sections: [
       {
         id: "clay-tennis-by-the-sea",
         title: "Clay tennis by the sea",
         paragraphs: [
-          "A Masters 1000 event on the spring clay swing, the tournament is played at the Monte-Carlo Country Club, set on terraces that drop toward the Mediterranean just over the border from Monaco. The world's leading players compete with the deep blue sea as a backdrop — a setting no other tournament can match.",
+          "A Masters 1000 event on the spring clay swing, the tournament is played at the Monte-Carlo Country Club, set on terraces that drop toward the Mediterranean just over the border from Monaco. The world's leading players compete with the deep blue sea as a backdrop, a setting no other tournament can match.",
           "The 2027 tournament runs from qualifying on 3 April to the finals on 11 April, making it as much a Riviera occasion as a sporting one.",
         ],
         bullets: [
@@ -473,7 +473,7 @@ export const eventPosts: BlogPost[] = [
         id: "getting-around",
         title: "Getting around",
         paragraphs: [
-          "With the club, the hotels and dinner in different places, a chauffeur on call ties the day together — courtside by day, a Monaco restaurant by night, all without parking or timetables.",
+          "With the club, the hotels and dinner in different places, a chauffeur on call ties the day together: courtside by day, a Monaco restaurant by night, all without parking or timetables.",
           "It is the relaxed way to enjoy a marquee tennis week on the Riviera.",
         ],
       },
@@ -507,7 +507,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "A chauffeur for the Monte-Carlo Masters",
     ctaDescription:
-      "Dropped at the gate, collected after the last match — a private chauffeur for the Monte-Carlo Masters by the sea.",
+      "A private chauffeur for the Monte-Carlo Masters by the sea: dropped at the gate, collected after the last match.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -515,9 +515,9 @@ export const eventPosts: BlogPost[] = [
     slug: "cannes-lions-chauffeur",
     title: "Cannes Lions Chauffeur Guide",
     description:
-      "How to attend Cannes Lions with a private chauffeur — the festival of creativity each June, around the Croisette crowds and closures.",
+      "How to attend Cannes Lions with a private chauffeur: the festival of creativity each June, around the Croisette crowds and closures.",
     excerpt:
-      "Attending Cannes Lions — the June festival of creativity, its meetings and yacht events, with a private chauffeur.",
+      "Attending Cannes Lions (the June festival of creativity, its meetings and yacht events) with a private chauffeur.",
     category: "Events",
     heroKicker: "Cannes Lions",
     readTime: "6 min read",
@@ -533,14 +533,14 @@ export const eventPosts: BlogPost[] = [
       "Cannes creativity festival",
     ],
     intro:
-      "From 21 to 25 June 2027, Cannes Lions — the International Festival of Creativity — fills the Palais and the Croisette with the advertising, media and technology world. It is a week of back-to-back meetings, brand events and late nights, where moving efficiently between venues matters.",
+      "From 21 to 25 June 2027, Cannes Lions (the International Festival of Creativity) fills the Palais and the Croisette with the advertising, media and technology world. It is a week of back-to-back meetings, brand events and late nights, where moving efficiently between venues matters.",
     sections: [
       {
         id: "the-festival-of-creativity",
         title: "The festival of creativity",
         paragraphs: [
           "Cannes Lions gathers tens of thousands of delegates from the creative and marketing industries around the Palais des Festivals each June, with talks, awards and the brand activations that spill along the Croisette and out onto yachts in the bay.",
-          "It is a business festival with the glamour of Cannes — and a schedule that rarely pauses.",
+          "It is a business festival with the glamour of Cannes and a schedule that rarely pauses.",
         ],
         bullets: [
           "The International Festival of Creativity",
@@ -553,7 +553,7 @@ export const eventPosts: BlogPost[] = [
         id: "a-week-of-meetings",
         title: "A week of meetings",
         paragraphs: [
-          "The value of Cannes Lions is in the meetings, and they are scattered — the Palais, hotel suites, beach venues and yachts, often minutes apart but slow to reach on foot through the crowds. A chauffeur on call keeps a packed diary running, delivering you on time between one appointment and the next.",
+          "The value of Cannes Lions is in the meetings, and they are scattered: the Palais, hotel suites, beach venues and yachts, often minutes apart but slow to reach on foot through the crowds. A chauffeur on call keeps a packed diary running, delivering you on time between one appointment and the next.",
           "For teams working the week, it is the difference between making every meeting and missing half.",
         ],
         bullets: [
@@ -609,7 +609,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "A chauffeur for Cannes Lions",
     ctaDescription:
-      "Make every meeting on time — a private chauffeur on call for Cannes Lions, from the Palais to the yachts.",
+      "Make every meeting on time: a private chauffeur on call for Cannes Lions, from the Palais to the yachts.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -635,7 +635,7 @@ export const eventPosts: BlogPost[] = [
       "jazz festival Riviera",
     ],
     intro:
-      "Each July, the Nice Jazz Festival brings warm evenings of music to the heart of the city — one of the oldest jazz festivals in Europe, with big names and open-air stages under the palms. Here is a short guide to enjoying it.",
+      "Each July, the Nice Jazz Festival brings warm evenings of music to the heart of the city, one of the oldest jazz festivals in Europe, with big names and open-air stages under the palms. Here is a short guide to enjoying it.",
     sections: [
       {
         id: "summer-nights-of-jazz",
@@ -656,7 +656,7 @@ export const eventPosts: BlogPost[] = [
         title: "The setting",
         paragraphs: [
           "The concerts take place in the heart of Nice, around the green Jardins Albert 1er and Place Masséna, with multiple stages so the evening flows from one act to the next. It is a short, easy walk from the Old Town and the Promenade.",
-          "That central setting is part of the charm — dinner nearby, then straight to the music.",
+          "That central setting is part of the charm. Dinner nearby, then straight to the music.",
         ],
         bullets: [
           "Staged around Jardins Albert 1er and Masséna",
@@ -711,7 +711,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "Enjoy the Nice Jazz Festival",
     ctaDescription:
-      "Dropped at the door, collected after the encore — a private chauffeur for warm summer evenings at the Nice Jazz Festival.",
+      "Dropped at the door, collected after the encore: a private chauffeur for warm summer evenings at the Nice Jazz Festival.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -719,9 +719,9 @@ export const eventPosts: BlogPost[] = [
     slug: "les-voiles-de-saint-tropez",
     title: "Les Voiles de Saint-Tropez Guide",
     description:
-      "A guide to Les Voiles de Saint-Tropez — the classic and modern yacht regatta each autumn, and how to enjoy it from ashore or afloat.",
+      "A guide to Les Voiles de Saint-Tropez (the classic and modern yacht regatta each autumn) and how to enjoy it from ashore or afloat.",
     excerpt:
-      "Les Voiles de Saint-Tropez — the classic and modern yacht regatta each autumn, from ashore or afloat.",
+      "Les Voiles de Saint-Tropez: the classic and modern yacht regatta each autumn, from ashore or afloat.",
     category: "Events",
     heroKicker: "Les Voiles de Saint-Tropez",
     readTime: "6 min read",
@@ -771,7 +771,7 @@ export const eventPosts: BlogPost[] = [
         id: "the-town-in-full-swing",
         title: "The town in full swing",
         paragraphs: [
-          "Beyond the racing, Les Voiles brings a fortnight of parties, crew gatherings and packed restaurants — the last great burst of the Saint-Tropez season before winter quiet. Tables and rooms are in high demand.",
+          "Beyond the racing, Les Voiles brings a fortnight of parties, crew gatherings and packed restaurants: the last great burst of the Saint-Tropez season before winter quiet. Tables and rooms are in high demand.",
           "It is Saint-Tropez at its most alive, out of the peak-summer crush.",
         ],
       },
@@ -811,7 +811,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "A chauffeur for Les Voiles de Saint-Tropez",
     ctaDescription:
-      "Reach the regatta and the town at their busiest — a private chauffeur to Saint-Tropez for Les Voiles, around the traffic.",
+      "Reach the regatta and the town at their busiest: a private chauffeur to Saint-Tropez for Les Voiles, around the traffic.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -819,9 +819,9 @@ export const eventPosts: BlogPost[] = [
     slug: "riviera-christmas-new-year",
     title: "Riviera Christmas and New Year Guide",
     description:
-      "How to enjoy Christmas and New Year on the French Riviera — festive markets, illuminations and fireworks, with a private chauffeur through the season.",
+      "How to enjoy Christmas and New Year on the French Riviera: festive markets, illuminations and fireworks, with a private chauffeur through the season.",
     excerpt:
-      "Festive markets, illuminations and New Year fireworks — how to enjoy Christmas and New Year on the French Riviera.",
+      "Festive markets, illuminations and New Year fireworks: how to enjoy Christmas and New Year on the French Riviera.",
     category: "Events",
     heroKicker: "Christmas and New Year",
     readTime: "6 min read",
@@ -913,7 +913,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "Enjoy the festive Riviera",
     ctaDescription:
-      "Markets, dinners and New Year fireworks — a private chauffeur door to door through Christmas and New Year on the coast.",
+      "Markets, dinners and New Year fireworks: a private chauffeur door to door through Christmas and New Year on the coast.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -921,7 +921,7 @@ export const eventPosts: BlogPost[] = [
     slug: "cannes-fireworks-festival",
     title: "Cannes Fireworks Festival Guide",
     description:
-      "A guide to the Cannes Fireworks Festival — the summer pyrotechnic competition over the bay, and the easy way to enjoy the show.",
+      "A guide to the Cannes Fireworks Festival (the summer pyrotechnic competition over the bay) and the easy way to enjoy the show.",
     excerpt:
       "The Cannes Fireworks Festival — the summer pyrotechnic competition over the bay, and the easy way to enjoy it.",
     category: "Events",
@@ -1015,7 +1015,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "Enjoy the Cannes fireworks with ease",
     ctaDescription:
-      "Dropped near the Croisette and collected after the finale — a private chauffeur for the Cannes Fireworks Festival.",
+      "A private chauffeur for the Cannes Fireworks Festival: dropped near the Croisette and collected after the finale.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -1023,9 +1023,9 @@ export const eventPosts: BlogPost[] = [
     slug: "jazz-a-juan-festival",
     title: "Jazz à Juan Festival Guide",
     description:
-      "A guide to Jazz à Juan — the legendary jazz festival in the Juan-les-Pins pine grove each July, and how to enjoy it with ease.",
+      "A guide to Jazz à Juan (the legendary jazz festival in the Juan-les-Pins pine grove each July) and how to enjoy it with ease.",
     excerpt:
-      "Jazz à Juan — the legendary festival in the Juan-les-Pins pine grove each July, and how to enjoy it with ease.",
+      "Jazz à Juan (the legendary festival in the Juan-les-Pins pine grove each July) and how to enjoy it with ease.",
     category: "Events",
     heroKicker: "Jazz à Juan",
     readTime: "6 min read",
@@ -1117,7 +1117,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "Enjoy Jazz à Juan with ease",
     ctaDescription:
-      "Dropped by the Pinède, collected after the encore — a private chauffeur for the legendary Jazz à Juan festival.",
+      "A private chauffeur for the legendary Jazz à Juan festival: dropped by the Pinède, collected after the encore.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -1125,7 +1125,7 @@ export const eventPosts: BlogPost[] = [
     slug: "monaco-e-prix-guide",
     title: "Monaco E-Prix 2027 Chauffeur Guide",
     description:
-      "How to attend the Monaco E-Prix on 1–2 May 2027 — electric racing on the full Monaco circuit, access, road closures and chauffeur transport.",
+      "How to attend the Monaco E-Prix on 1–2 May 2027: electric racing on the full Monaco circuit, access, road closures and chauffeur transport.",
     excerpt:
       "The Monaco E-Prix returns for a two-day electric racing weekend on 1–2 May 2027. Here is how to plan the event and move around Monaco.",
     category: "Events",
@@ -1219,7 +1219,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "A chauffeur for the Monaco E-Prix",
     ctaDescription:
-      "Airport arrival, permitted circuit drop-offs and collection after the racing — coordinated transport for the Monaco E-Prix weekend.",
+      "Airport arrival, permitted circuit drop-offs and collection after the racing. Coordinated transport for the Monaco E-Prix weekend.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -1227,9 +1227,9 @@ export const eventPosts: BlogPost[] = [
     slug: "monaco-historic-grand-prix",
     title: "Monaco Historic Grand Prix Guide",
     description:
-      "A guide to the Monaco Historic Grand Prix — vintage racing cars on the famous circuit, and the easy way to attend by chauffeur.",
+      "A guide to the Monaco Historic Grand Prix (vintage racing cars on the famous circuit) and the easy way to attend by chauffeur.",
     excerpt:
-      "The Monaco Historic Grand Prix — vintage racing cars on the famous circuit, and the easy way to attend.",
+      "The Monaco Historic Grand Prix (vintage racing cars on the famous circuit) and the easy way to attend.",
     category: "Events",
     heroKicker: "Monaco Historic Grand Prix",
     readTime: "6 min read",
@@ -1245,7 +1245,7 @@ export const eventPosts: BlogPost[] = [
       "vintage Monaco Grand Prix",
     ],
     intro:
-      "In the weeks before the modern Formula 1 race, Monaco stages a Grand Prix of a different kind. The Monaco Historic Grand Prix sends vintage and classic racing cars around the same legendary streets — a connoisseur's event, glamorous but calmer than its famous sibling. Here is a guide to the Monaco Historic Grand Prix.",
+      "In the weeks before the modern Formula 1 race, Monaco stages a Grand Prix of a different kind. The Monaco Historic Grand Prix sends vintage and classic racing cars around the same legendary streets. A connoisseur's event, glamorous but calmer than its famous sibling. Here is a guide to the Monaco Historic Grand Prix.",
     sections: [
       {
         id: "vintage-cars-on-the-legendary-circuit",
@@ -1315,7 +1315,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "A chauffeur for the Monaco Historic Grand Prix",
     ctaDescription:
-      "Vintage cars, classic Monaco — a private chauffeur around the circuit closures for the Monaco Historic Grand Prix.",
+      "Vintage cars, classic Monaco: a private chauffeur around the circuit closures for the Monaco Historic Grand Prix.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -1323,9 +1323,9 @@ export const eventPosts: BlogPost[] = [
     slug: "bastille-day-fireworks-riviera",
     title: "Bastille Day on the French Riviera",
     description:
-      "How to enjoy Bastille Day on the French Riviera — the 14 July fireworks over the bays of Nice, Cannes and Monaco, with a private chauffeur.",
+      "How to enjoy Bastille Day on the French Riviera: the 14 July fireworks over the bays of Nice, Cannes and Monaco, with a private chauffeur.",
     excerpt:
-      "The 14 July fireworks over the bays of Nice, Cannes and Monaco — how to enjoy Bastille Day on the Riviera.",
+      "The 14 July fireworks over the bays of Nice, Cannes and Monaco: how to enjoy Bastille Day on the Riviera.",
     category: "Events",
     heroKicker: "Bastille Day",
     readTime: "5 min read",
@@ -1409,7 +1409,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "Enjoy Bastille Day on the coast",
     ctaDescription:
-      "Dropped near your viewpoint, collected after the finale — a private chauffeur for the 14 July fireworks on the Riviera.",
+      "Dropped near your viewpoint, collected after the finale. A private chauffeur for the 14 July fireworks on the Riviera.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -1419,7 +1419,7 @@ export const eventPosts: BlogPost[] = [
     description:
       "A guide to the Fête de la Musique on the French Riviera — the free 21 June street-music festival, and how to enjoy the night.",
     excerpt:
-      "The free 21 June street-music festival — a guide to the Fête de la Musique on the French Riviera.",
+      "The free 21 June street-music festival: a guide to the Fête de la Musique on the French Riviera.",
     category: "Events",
     heroKicker: "Fête de la Musique",
     readTime: "5 min read",
@@ -1519,9 +1519,9 @@ export const eventPosts: BlogPost[] = [
     slug: "monaco-national-day",
     title: "Monaco National Day Guide",
     description:
-      "A guide to Monaco National Day on 19 November — the celebrations, ceremonies and fireworks, and the easy way to attend by chauffeur.",
+      "A guide to Monaco National Day on 19 November: the celebrations, ceremonies and fireworks, and the easy way to attend by chauffeur.",
     excerpt:
-      "Monaco National Day on 19 November — the celebrations, ceremonies and fireworks, and the easy way to attend.",
+      "Monaco National Day on 19 November: the celebrations, ceremonies and fireworks, and the easy way to attend.",
     category: "Events",
     heroKicker: "Monaco National Day",
     readTime: "5 min read",
@@ -1537,13 +1537,13 @@ export const eventPosts: BlogPost[] = [
       "Monaco National Day guide",
     ],
     intro:
-      "Each 19 November, Monaco celebrates its National Day — the Fête du Prince — with the principality's grandest civic ceremonies. Red-and-white flags line the streets, the princely family appears in public, and the coast marks the day with fireworks. Here is a guide to Monaco National Day.",
+      "Each 19 November, Monaco celebrates its National Day, the Fête du Prince, with the principality's grandest civic ceremonies. Red-and-white flags line the streets, the princely family appears in public, and the coast marks the day with fireworks. Here is a guide to Monaco National Day.",
     sections: [
       {
         id: "the-fete-du-prince",
         title: "The Fête du Prince",
         paragraphs: [
-          "Held on 19 November, Monaco National Day honours the Sovereign Prince with a day of official ceremony — a Te Deum mass at the cathedral, a formal parade, and appearances by the princely family before the crowds. Flags and decorations dress the whole principality.",
+          "Held on 19 November, Monaco National Day honours the Sovereign Prince with a day of official ceremony: a Te Deum mass at the cathedral, a formal parade, and appearances by the princely family before the crowds. Flags and decorations dress the whole principality.",
           "It is the most important civic occasion in Monaco's calendar.",
         ],
         bullets: [
@@ -1557,7 +1557,7 @@ export const eventPosts: BlogPost[] = [
         id: "flags-fireworks-and-festivities",
         title: "Flags, fireworks and festivities",
         paragraphs: [
-          "The red-and-white of Monaco lines every street, and the celebrations spill beyond the ceremonies — with a fireworks display over Port Hercule on the eve of the day and public events around it. The principality is at its most festive.",
+          "The red-and-white of Monaco lines every street, and the celebrations spill beyond the ceremonies, with a fireworks display over Port Hercule on the eve of the day and public events around it. The principality is at its most festive.",
           "It is a rare chance to see Monaco dressed for its own grand occasion.",
         ],
         bullets: [
@@ -1571,7 +1571,7 @@ export const eventPosts: BlogPost[] = [
         id: "planning-your-visit",
         title: "Planning your visit",
         paragraphs: [
-          "November is Monaco's quiet season, mild and uncrowded, which makes National Day a distinctive time to visit — the ceremony and colour without the summer crush. The main events centre on the cathedral, the palace and Port Hercule.",
+          "November is Monaco's quiet season, mild and uncrowded, which makes National Day a distinctive time to visit: the ceremony and colour without the summer crush. The main events centre on the cathedral, the palace and Port Hercule.",
           "It pairs well with a calm off-season stay on the eastern coast.",
         ],
       },
@@ -1613,7 +1613,7 @@ export const eventPosts: BlogPost[] = [
     ],
     ctaTitle: "A chauffeur for Monaco National Day",
     ctaDescription:
-      "Dropped close to the ceremonies, no parking or tunnels — a private chauffeur for Monaco National Day on 19 November.",
+      "Dropped close to the ceremonies, no parking or tunnels. A private chauffeur for Monaco National Day on 19 November.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },

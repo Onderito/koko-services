@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
       from: "kokolimo <contact@kokolimo.com>",
       to,
       replyTo: `${name} <${email}>`,
-      subject: `Quote request — ${name} — ${route}`,
+      subject: `Quote request: ${name}, ${route}`,
       html,
     });
     if (error) throw new Error(error.message);

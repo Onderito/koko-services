@@ -14,7 +14,7 @@ const card = [
   },
   {
     title: "Culture & History Lovers",
-    text: "Old towns, perched villages, museums, artisan stops—Èze, Antibes, Saint-Paul-de-Vence and more, at your own pace.",
+    text: "Old towns, perched villages, museums, artisan stops: Èze, Antibes, Saint-Paul-de-Vence and more, at your own pace.",
     icon: "/assets/icons/services/museum.webp",
   },
   {
@@ -84,7 +84,7 @@ export default function ForWhoPrivateTour() {
         Made For <span className="text-[#C5C5C5] ">Every Traveler</span>
       </h2>
       <p className="body-text text-center mt-4 ">
-        Custom private tours on the French Riviera—flexible routes, local
+        Custom private tours on the French Riviera: flexible routes, local
         insights, and zero logistics.
       </p>
 
@@ -137,7 +137,7 @@ export default function ForWhoPrivateTour() {
             Culture & History Lovers
           </h3>
           <p className="body-text text-center mt-4">
-            Old towns, perched villages, museums, artisan stops—Èze, Antibes,
+            Old towns, perched villages, museums, artisan stops: Èze, Antibes,
             Saint-Paul-de-Vence and more, at your own pace.
           </p>
         </div>

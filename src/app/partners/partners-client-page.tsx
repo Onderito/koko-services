@@ -442,7 +442,7 @@ export default function PartnersClientPage() {
         </ul>
       </AntiSection>
 
-      {/* How it works: Anti's "A Simple Process" — gold numbered circles on a thin line, a photo panel on the right. */}
+      {/* How it works: gold numbered circles on a thin line, a photo panel on the right. */}
       <AntiSection tone="white" labelledBy="partners-process-title">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
           <div>

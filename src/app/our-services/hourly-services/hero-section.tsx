@@ -9,7 +9,7 @@ export default function HeroSection() {
           <div className="space-y-5 md:space-y-6 xl:space-y-7">
             <h1 className="heading-1">Hourly Services</h1>
             <p className="body-text">
-              Half-day or full-day hire—your driver on standby for total freedom
+              Half-day or full-day hire: your driver on standby for total freedom
               and privacy
             </p>
             <div className="flex gap-4">

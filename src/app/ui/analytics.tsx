@@ -105,9 +105,9 @@ export default function Analytics() {
       <p className="mt-2 text-sm">Your choice is stored on this browser for 6 months. Change it anytime using Cookie settings. <Link className="underline" href="/legal-privacy#cookies">Privacy and cookies</Link></p>
       {customize && <fieldset className="my-4 space-y-3 rounded-card border border-[#D8C7AD] p-4">
         <legend className="px-2 font-semibold">Choose by purpose</legend>
-        <p className="text-sm">Essential: always active — stores your cookie choice.</p>
-        <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.analytics} onChange={e => setChoices({ ...choices, analytics: e.target.checked })} className="h-5 w-5" />Statistics — Google Analytics 4</label>
-        <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.advertising} onChange={e => setChoices({ ...choices, advertising: e.target.checked })} className="h-5 w-5" />Advertising — Google Ads measurement and personalisation</label>
+        <p className="text-sm">Essential: always active (stores your cookie choice).</p>
+        <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.analytics} onChange={e => setChoices({ ...choices, analytics: e.target.checked })} className="h-5 w-5" />Statistics: Google Analytics 4</label>
+        <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.advertising} onChange={e => setChoices({ ...choices, advertising: e.target.checked })} className="h-5 w-5" />Advertising: Google Ads measurement and personalisation</label>
       </fieldset>}
       {storageError && <p role="alert" className="mt-3 text-sm">Your browser cannot save preferences. Your changes have not been saved. Allow local storage to save your choice.</p>}
       <div className="mt-4 grid gap-2 sm:grid-cols-3">

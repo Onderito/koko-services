@@ -7,7 +7,7 @@ export const legacyPosts: BlogPost[] = [
     description:
       "Private chauffeur tour from Nice: Èze village, Villa Ephrussi de Rothschild, Saint-Jean-Cap-Ferrat, Monaco and Monte-Carlo in half or full day.",
     excerpt:
-      "A chauffeur-led private tour from Nice through Èze, Villa Rothschild, Saint-Jean-Cap-Ferrat, Monaco and Monte-Carlo — half-day and full-day itineraries.",
+      "A chauffeur-led private tour from Nice through Èze, Villa Rothschild, Saint-Jean-Cap-Ferrat, Monaco and Monte-Carlo: half-day and full-day itineraries.",
     category: "Private Tour",
     heroKicker: "French Riviera Tour",
     readTime: "9 min read",
@@ -44,7 +44,7 @@ export const legacyPosts: BlogPost[] = [
       "full day French Riviera tour",
     ],
     intro:
-      "Between Nice and the Italian border, the French Riviera concentrates some of the most iconic destinations in Europe: the perched village of Èze, the pink Villa Ephrussi de Rothschild, the peninsula of Saint-Jean-Cap-Ferrat and the principality of Monaco with its legendary Monte-Carlo district. A private tour from Nice with a dedicated chauffeur is the most comfortable way to combine all of them in a single day — or in a half-day express version when time is limited.",
+      "Between Nice and the Italian border, the French Riviera concentrates some of the most iconic destinations in Europe: the perched village of Èze, the pink Villa Ephrussi de Rothschild, the peninsula of Saint-Jean-Cap-Ferrat and the principality of Monaco with its legendary Monte-Carlo district. A private tour from Nice with a dedicated chauffeur is the most comfortable way to combine all of them in a single day or in a half-day express version when time is limited.",
     sections: [
       {
         id: "why-private-tour",
@@ -79,7 +79,7 @@ export const legacyPosts: BlogPost[] = [
         id: "full-day-itinerary",
         title: "Full-day itinerary from Nice (approx. 8 hours)",
         paragraphs: [
-          "The full-day private tour allows you to visit the interiors — the gardens of Villa Ephrussi de Rothschild, the Oceanographic Museum of Monaco, or the Jardin Exotique d'Èze — and to enjoy a proper lunch on the Riviera. It is the recommended format for first-time visitors and for travelers who want a relaxed pace.",
+          "The full-day private tour allows you to visit the interiors (the gardens of Villa Ephrussi de Rothschild, the Oceanographic Museum of Monaco, or the Jardin Exotique d'Èze) and to enjoy a proper lunch on the Riviera. It is the recommended format for first-time visitors and for travelers who want a relaxed pace.",
           "A typical full-day tour starts at 9:00 AM and finishes around 5:30 PM. The chauffeur adjusts the schedule to your interests: more time for photography, shopping in Monte-Carlo, a seafood lunch in Saint-Jean-Cap-Ferrat, or a visit to the Prince's Palace in Monaco-Ville.",
         ],
         bullets: [
@@ -95,17 +95,17 @@ export const legacyPosts: BlogPost[] = [
       },
       {
         id: "eze-village",
-        title: "Stop 1 — Èze village, the jewel of the Moyenne Corniche",
+        title: "Stop 1: Èze village, the jewel of the Moyenne Corniche",
         paragraphs: [
           "Perched 427 meters above the Mediterranean, Èze village is one of the most photographed medieval villages in France. Its cobbled streets, artisan workshops and the famous Jardin Exotique offer a breathtaking panorama over Cap-Ferrat and, on clear days, all the way to Corsica.",
-          "Your chauffeur drops you at the village entrance — no parking stress — and waits while you explore at your own pace. Expect 45 minutes to 1 hour for a walk, 1h30 if you visit the exotic garden and enjoy a coffee at the Château Eza terrace.",
+          "Your chauffeur drops you at the village entrance and waits while you explore at your own pace, with no parking stress. Expect 45 minutes to 1 hour for a walk, 1h30 if you visit the exotic garden and enjoy a coffee at the Château Eza terrace.",
         ],
       },
       {
         id: "villa-rothschild-cap-ferrat",
-        title: "Stop 2 — Villa Ephrussi de Rothschild and Saint-Jean-Cap-Ferrat",
+        title: "Stop 2: Villa Ephrussi de Rothschild and Saint-Jean-Cap-Ferrat",
         paragraphs: [
-          "Built between 1905 and 1912 by Baroness Béatrice de Rothschild, the Villa Ephrussi de Rothschild is the pink pearl of Saint-Jean-Cap-Ferrat. Its nine themed gardens — French, Spanish, Florentine, Japanese, exotic, stone, Provençal, rose and Sèvres — cover seven hectares overlooking the bay of Villefranche.",
+          "Built between 1905 and 1912 by Baroness Béatrice de Rothschild, the Villa Ephrussi de Rothschild is the pink pearl of Saint-Jean-Cap-Ferrat. Its nine themed gardens (French, Spanish, Florentine, Japanese, exotic, stone, Provençal, rose and Sèvres) cover seven hectares overlooking the bay of Villefranche.",
           "After the villa, a short drive across the Cap-Ferrat peninsula leads to the port of Saint-Jean, lined with yachts and seafood restaurants. It is the perfect spot for lunch during a full-day tour, or for a scenic photo stop on the half-day version.",
         ],
         bullets: [
@@ -116,11 +116,11 @@ export const legacyPosts: BlogPost[] = [
       },
       {
         id: "monaco-monte-carlo",
-        title: "Stop 3 — Monaco and Monte-Carlo",
+        title: "Stop 3: Monaco and Monte-Carlo",
         paragraphs: [
           "The principality of Monaco is the natural climax of this Riviera tour. Monte-Carlo concentrates the iconic landmarks: the Casino de Monte-Carlo and its Place du Casino, the Hôtel de Paris, the Café de Paris and the luxury boutiques of the Carré d'Or.",
           "A few minutes away, the historic district of Monaco-Ville, perched on its rock, offers a very different atmosphere: the Prince's Palace, the Saint-Nicholas Cathedral where Grace Kelly rests, and the world-famous Oceanographic Museum founded by Prince Albert I.",
-          "Your chauffeur drops you at each key point and picks you up again — no need to navigate Monaco's one-way streets or expensive car parks.",
+          "Your chauffeur drops you at each key point and picks you up again. No need to navigate Monaco's one-way streets or expensive car parks.",
         ],
         bullets: [
           "Place du Casino and Casino de Monte-Carlo (exterior or interior visit)",

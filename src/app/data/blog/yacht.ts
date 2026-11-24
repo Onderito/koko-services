@@ -8,7 +8,7 @@ export const yachtPosts: BlogPost[] = [
     description:
       "Private transfer from Nice Airport to your yacht at any Riviera marina — Antibes, Monaco, Cannes or Saint-Tropez — with meet and greet.",
     excerpt:
-      "From the terminal to your gangway — a private chauffeur transfer from Nice Airport to your yacht at any Riviera marina.",
+      "From the terminal to your gangway: a private chauffeur transfer from Nice Airport to your yacht at any Riviera marina.",
     category: "Yacht Transfers",
     heroKicker: "Airport to yacht",
     readTime: "6 min read",
@@ -24,7 +24,7 @@ export const yachtPosts: BlogPost[] = [
       "Nice airport to marina",
     ],
     intro:
-      "Nice Côte d'Azur is the gateway to the world's densest concentration of superyachts. Its marinas — Antibes, Cannes, Monaco and, further west, Saint-Tropez — lie within a short drive of the terminals, and the smoothest way from the aircraft door to your gangway is a private chauffeur who meets you, handles the luggage and knows every quay. Here is how an airport-to-yacht transfer works.",
+      "Nice Côte d'Azur is the gateway to the world's densest concentration of superyachts. Its marinas (Antibes, Cannes, Monaco and, further west, Saint-Tropez) lie within a short drive of the terminals, and the smoothest way from the aircraft door to your gangway is a private chauffeur who meets you, handles the luggage and knows every quay. Here is how an airport-to-yacht transfer works.",
     sections: [
       {
         id: "the-riviera-yachting-gateway",
@@ -44,7 +44,7 @@ export const yachtPosts: BlogPost[] = [
         id: "meet-and-greet-and-luggage",
         title: "Meet, greet and luggage",
         paragraphs: [
-          "A yacht arrival usually means more luggage than a normal trip — cases, provisions, sometimes equipment for the crew. Your chauffeur meets you in the arrivals hall with a name board, takes the bags and brings the car to you, so nothing is dragged across the terminal.",
+          "A yacht arrival usually means more luggage than a normal trip: cases, provisions, sometimes equipment for the crew. Your chauffeur meets you in the arrivals hall with a name board, takes the bags and brings the car to you, so nothing is dragged across the terminal.",
           "A spacious Mercedes V-Class is the natural choice when guests, crew and baggage arrive together, while an E-Class or S-Class suits a couple travelling light.",
         ],
         bullets: [
@@ -62,9 +62,9 @@ export const yachtPosts: BlogPost[] = [
           "Whichever marina your yacht is berthed at, the chauffeur delivers you to the quay itself, coordinating with the crew on timing and access where needed.",
         ],
         bullets: [
-          "Antibes Port Vauban — from €120",
-          "Cannes and Monaco — from €150",
-          "Saint-Tropez — from €400",
+          "Antibes Port Vauban: from €120",
+          "Cannes and Monaco: from €150",
+          "Saint-Tropez: from €400",
           "Delivered to the quay, not a distant car park",
         ],
       },
@@ -73,7 +73,7 @@ export const yachtPosts: BlogPost[] = [
         title: "Why a chauffeur for a yacht arrival",
         paragraphs: [
           "Marinas are busy, parking is tight and the quays are often pedestrian. A private chauffeur removes the friction: no rental desk, no navigation, no hunting for a space with a trolley of luggage. You step off the plane and, before long, step aboard.",
-          "It is also the discreet, reliable option owners and charter guests expect — the same driver available for provisioning runs, crew changes and days ashore throughout the stay.",
+          "It is also the discreet, reliable option owners and charter guests expect: the same driver available for provisioning runs, crew changes and days ashore throughout the stay.",
         ],
       },
     ],
@@ -103,7 +103,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer from the airport to your yacht",
     ctaDescription:
-      "Meet and greet, luggage handled, delivered to the quay — a private chauffeur from Nice Airport to your marina.",
+      "Meet and greet, luggage handled, delivered to the quay. A private chauffeur from Nice Airport to your marina.",
     ctaHref: "/our-services/yacht-transfers/nice-airport",
     ctaLabel: "See Nice Airport yacht transfers",
   },
@@ -111,7 +111,7 @@ export const yachtPosts: BlogPost[] = [
     slug: "cannes-vieux-port-yacht-transfer",
     title: "Cannes Vieux Port Yacht Transfer",
     description:
-      "Private chauffeur transfer to the Vieux Port of Cannes — beneath the Croisette and the Palais des Festivals, home of the Yachting Festival.",
+      "Private chauffeur transfer to the Vieux Port of Cannes, beneath the Croisette and the Palais des Festivals, home of the Yachting Festival.",
     excerpt:
       "A private transfer to the Vieux Port of Cannes, beneath the Croisette and the Palais des Festivals.",
     category: "Yacht Transfers",
@@ -149,7 +149,7 @@ export const yachtPosts: BlogPost[] = [
         id: "from-nice-airport",
         title: "From Nice Airport to the quay",
         paragraphs: [
-          "Cannes lies around 27 kilometres west of Nice Airport — roughly 30 minutes by road on a clear run. A private chauffeur meets you in arrivals and brings you to the quay, from around €150 in an E-Class or €180 in a V-Class, with an S-Class or Maybach for a more formal arrival.",
+          "Cannes lies around 27 kilometres west of Nice Airport, roughly 30 minutes by road on a clear run. A private chauffeur meets you in arrivals and brings you to the quay, from around €150 in an E-Class or €180 in a V-Class, with an S-Class or Maybach for a more formal arrival.",
           "For crew and provisions, the V-Class carries the load; for owners and guests, the S-Class keeps the ride quiet and refined.",
         ],
         bullets: [
@@ -163,7 +163,7 @@ export const yachtPosts: BlogPost[] = [
         id: "festival-season",
         title: "Festival season logistics",
         paragraphs: [
-          "Cannes runs on events — the Film Festival in May, the Yachting Festival in September, and a calendar of congresses in between. During each, the Croisette fills, roads close and normal transport strains, which is exactly when a chauffeur who knows the diversions is worth its weight.",
+          "Cannes runs on events: the Film Festival in May, the Yachting Festival in September, and a calendar of congresses in between. During each, the Croisette fills, roads close and normal transport strains, which is exactly when a chauffeur who knows the diversions is worth its weight.",
           "A driver drops you as close to the quay or the Palais as access allows and collects you afterwards, however busy the town.",
         ],
       },
@@ -205,7 +205,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer to the port of Cannes",
     ctaDescription:
-      "From Nice Airport to the Vieux Port or Port Canto — a private chauffeur for Cannes arrivals and festival season.",
+      "From Nice Airport to the Vieux Port or Port Canto: a private chauffeur for Cannes arrivals and festival season.",
     ctaHref: "/our-services/yacht-transfers/cannes",
     ctaLabel: "See Cannes yacht transfers",
   },
@@ -213,7 +213,7 @@ export const yachtPosts: BlogPost[] = [
     slug: "villefranche-anchorage-yacht-transfer",
     title: "Villefranche Anchorage Yacht Transfer",
     description:
-      "Private chauffeur transfer for yachts anchored in the deep bay of Villefranche-sur-Mer — meeting you at the tender quay, minutes from Nice Airport.",
+      "Private chauffeur transfer for yachts anchored in the deep bay of Villefranche-sur-Mer. Meeting you at the tender quay, minutes from Nice Airport.",
     excerpt:
       "A private transfer for yachts anchored off Villefranche-sur-Mer, meeting guests at the tender quay.",
     category: "Yacht Transfers",
@@ -231,7 +231,7 @@ export const yachtPosts: BlogPost[] = [
       "Nice airport to Villefranche",
     ],
     intro:
-      "Not every yacht takes a berth. The Rade de Villefranche — one of the deepest natural anchorages on the Mediterranean — draws yachts that prefer to lie at anchor, sending guests ashore by tender to the little quay below the old town. A chauffeur meeting that tender is minutes from Nice Airport. Here is how a Villefranche anchorage transfer works.",
+      "Not every yacht takes a berth. The Rade de Villefranche, one of the deepest natural anchorages on the Mediterranean, draws yachts that prefer to lie at anchor, sending guests ashore by tender to the little quay below the old town. A chauffeur meeting that tender is minutes from Nice Airport. Here is how a Villefranche anchorage transfer works.",
     sections: [
       {
         id: "the-deep-bay",
@@ -251,7 +251,7 @@ export const yachtPosts: BlogPost[] = [
         id: "tender-to-quay",
         title: "Meeting the tender ashore",
         paragraphs: [
-          "When guests come ashore by tender to the Villefranche quay, the chauffeur is waiting on the dock — no wandering to find a car, no taxi rank. Timing is arranged directly with the crew, so the car and the tender meet within minutes of each other.",
+          "When guests come ashore by tender to the Villefranche quay, the chauffeur is waiting on the dock: no wandering to find a car, no taxi rank. Timing is arranged directly with the crew, so the car and the tender meet within minutes of each other.",
           "With Nice Airport only around twenty minutes away, it makes a seamless link between the anchorage and a flight, a dinner or a day along the coast.",
         ],
         bullets: [
@@ -306,7 +306,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfer from the Villefranche anchorage",
     ctaDescription:
-      "We meet your tender at the quay — a private chauffeur linking the Villefranche anchorage with the airport and coast.",
+      "We meet your tender at the quay: a private chauffeur linking the Villefranche anchorage with the airport and coast.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -314,9 +314,9 @@ export const yachtPosts: BlogPost[] = [
     slug: "monaco-yacht-show-transfers",
     title: "Monaco Yacht Show Transfers",
     description:
-      "Private chauffeur transfers for the Monaco Yacht Show each September — from Nice Airport to Port Hercule, around the road closures and crowds.",
+      "Private chauffeur transfers for the Monaco Yacht Show each September. From Nice Airport to Port Hercule, around the road closures and crowds.",
     excerpt:
-      "Private chauffeur transfers for the Monaco Yacht Show — from Nice Airport to Port Hercule, around the crowds.",
+      "Private chauffeur transfers for the Monaco Yacht Show: from Nice Airport to Port Hercule, around the crowds.",
     category: "Yacht Transfers",
     heroKicker: "Monaco Yacht Show",
     readTime: "6 min read",
@@ -332,7 +332,7 @@ export const yachtPosts: BlogPost[] = [
       "MYS transfer",
     ],
     intro:
-      "From 23 to 26 September 2026, Port Hercule hosts the Monaco Yacht Show — the world's premier gathering of superyachts, brokers and buyers. For four days the principality runs at full capacity, roads close and every hotel and quay is busy. A private chauffeur is the calm way to arrive and move through it.",
+      "From 23 to 26 September 2026, Port Hercule hosts the Monaco Yacht Show: the world's premier gathering of superyachts, brokers and buyers. For four days the principality runs at full capacity, roads close and every hotel and quay is busy. A private chauffeur is the calm way to arrive and move through it.",
     sections: [
       {
         id: "the-worlds-premier-show",
@@ -359,7 +359,7 @@ export const yachtPosts: BlogPost[] = [
           "About 30–40 minutes from Nice Airport by road",
           "From €150 (E-Class) or €180 (V-Class)",
           "Helicopter option to the Monaco heliport",
-          "Book well ahead — the coast is at capacity",
+          "Book well ahead. The coast is at capacity",
         ],
       },
       {
@@ -374,7 +374,7 @@ export const yachtPosts: BlogPost[] = [
         id: "beyond-the-show",
         title: "Beyond the show",
         paragraphs: [
-          "Many guests extend the trip along the coast — a dinner in Èze, a day in Cannes, or a quieter night away from the crowds. The same chauffeur carries you wherever the week leads, before the transfer back to the airport.",
+          "Many guests extend the trip along the coast: a dinner in Èze, a day in Cannes, or a quieter night away from the crowds. The same chauffeur carries you wherever the week leads, before the transfer back to the airport.",
           "It is the natural way to fold the show into a wider Riviera stay.",
         ],
       },
@@ -407,7 +407,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfers for the Monaco Yacht Show",
     ctaDescription:
-      "Arrive calm through the crowds — a private chauffeur from Nice Airport to Port Hercule for the Monaco Yacht Show.",
+      "Arrive calm through the crowds. A private chauffeur from Nice Airport to Port Hercule for the Monaco Yacht Show.",
     ctaHref: "/our-services/events/monaco-yacht-show",
     ctaLabel: "See Monaco Yacht Show transport",
   },
@@ -415,9 +415,9 @@ export const yachtPosts: BlogPost[] = [
     slug: "superyacht-crew-transfers",
     title: "Superyacht Crew Transfers",
     description:
-      "Private chauffeur transfers for superyacht crew on the French Riviera — airport runs, crew changes and provisioning, on call day and night.",
+      "Private chauffeur transfers for superyacht crew on the French Riviera: airport runs, crew changes and provisioning, on call day and night.",
     excerpt:
-      "Airport runs, crew changes and provisioning — private chauffeur transfers for superyacht crew across the Riviera.",
+      "Airport runs, crew changes and provisioning: private chauffeur transfers for superyacht crew across the Riviera.",
     category: "Yacht Transfers",
     heroKicker: "Superyacht crew",
     readTime: "6 min read",
@@ -433,13 +433,13 @@ export const yachtPosts: BlogPost[] = [
       "Antibes crew transfers",
     ],
     intro:
-      "A superyacht in port generates a steady stream of movement ashore — crew joining and leaving, provisions to collect, guests to ferry to the airport. A dedicated chauffeur partner handles all of it on the yacht's schedule, discreetly and reliably, so the crew can focus on the boat. Here is how crew transfers work on the Riviera.",
+      "A superyacht in port generates a steady stream of movement ashore: crew joining and leaving, provisions to collect, guests to ferry to the airport. A dedicated chauffeur partner handles all of it on the yacht's schedule, discreetly and reliably, so the crew can focus on the boat. Here is how crew transfers work on the Riviera.",
     sections: [
       {
         id: "crew-changes",
         title: "Crew changes at any hour",
         paragraphs: [
-          "Crew join and leave on flights that rarely keep office hours. A chauffeur service tracks those flights and handles airport and station runs at any time — early mornings, late nights, last-minute changes — with a name board waiting in arrivals.",
+          "Crew join and leave on flights that rarely keep office hours. A chauffeur service tracks those flights and handles airport and station runs at any time (early mornings, late nights, last-minute changes) with a name board waiting in arrivals.",
           "For the captain, it is one reliable point of contact instead of a scramble of taxis for every rotation.",
         ],
         bullets: [
@@ -467,7 +467,7 @@ export const yachtPosts: BlogPost[] = [
         id: "guest-movements",
         title: "Guest and VIP movements",
         paragraphs: [
-          "Owners and charter guests come and go throughout a stay — to the airport and heliport, to dinners, to days ashore. The same trusted chauffeur handles these movements with the discretion and presentation expected at the top of the market.",
+          "Owners and charter guests come and go throughout a stay: to the airport and heliport, to dinners, to days ashore. The same trusted chauffeur handles these movements with the discretion and presentation expected at the top of the market.",
           "Consistency matters: familiar drivers, immaculate cars and absolute reliability, every time.",
         ],
       },
@@ -475,7 +475,7 @@ export const yachtPosts: BlogPost[] = [
         id: "why-a-dedicated-service",
         title: "Why a dedicated chauffeur partner",
         paragraphs: [
-          "Running each transfer through one professional partner — with accounts, a single point of contact and coverage across Antibes, Cannes, Monaco and beyond — is far simpler than juggling taxis for a busy boat. It is the standard captains and management companies expect.",
+          "Running each transfer through one professional partner (with accounts, a single point of contact and coverage across Antibes, Cannes, Monaco and beyond) is far simpler than juggling taxis for a busy boat. It is the standard captains and management companies expect.",
           "From a single crew pickup to a full season's support, the service scales to the yacht.",
         ],
       },
@@ -507,7 +507,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "Chauffeur support for your crew",
     ctaDescription:
-      "Crew changes, provisioning and guest runs — a dedicated chauffeur partner for superyachts across the Riviera.",
+      "Crew changes, provisioning and guest runs: a dedicated chauffeur partner for superyachts across the Riviera.",
     ctaHref: "/our-services/yacht-transfers/crew-transportation",
     ctaLabel: "See crew transportation",
   },
@@ -515,9 +515,9 @@ export const yachtPosts: BlogPost[] = [
     slug: "cannes-yachting-festival-transfers",
     title: "Cannes Yachting Festival Transfers",
     description:
-      "Private chauffeur transfers for the Cannes Yachting Festival each September — from Nice Airport to the Vieux Port and Port Canto, around the crowds.",
+      "Private chauffeur transfers for the Cannes Yachting Festival each September. From Nice Airport to the Vieux Port and Port Canto, around the crowds.",
     excerpt:
-      "Private chauffeur transfers for the Cannes Yachting Festival — from Nice Airport to the Vieux Port and Port Canto.",
+      "Private chauffeur transfers for the Cannes Yachting Festival: from Nice Airport to the Vieux Port and Port Canto.",
     category: "Yacht Transfers",
     heroKicker: "Cannes Yachting Festival",
     readTime: "6 min read",
@@ -539,7 +539,7 @@ export const yachtPosts: BlogPost[] = [
         id: "europes-leading-in-water-show",
         title: "Europe's leading in-water show",
         paragraphs: [
-          "The Cannes Yachting Festival puts hundreds of boats in the water across two ports — new launches and brokerage yachts along the Vieux Port and the larger craft at Port Pierre Canto. For a few days each September, it is the centre of the European yachting calendar.",
+          "The Cannes Yachting Festival puts hundreds of boats in the water across two ports: new launches and brokerage yachts along the Vieux Port and the larger craft at Port Pierre Canto. For a few days each September, it is the centre of the European yachting calendar.",
           "Moving between the two ports and the town, on time and in comfort, is much of the logistics of attending.",
         ],
         bullets: [
@@ -554,13 +554,13 @@ export const yachtPosts: BlogPost[] = [
         title: "Arriving from Nice Airport",
         paragraphs: [
           "Cannes is around 30 minutes from Nice Airport by road on a clear run. A private chauffeur meets your flight and brings you to the port, from around €150 in an E-Class or €180 in a V-Class, with larger vehicles for groups and brokers travelling together.",
-          "Because September brings both the Cannes and Monaco shows, the coast runs at capacity — booking transfers well ahead is essential.",
+          "Because September brings both the Cannes and Monaco shows, the coast runs at capacity. Booking transfers well ahead is essential.",
         ],
         bullets: [
           "About 30 minutes from Nice Airport by road",
           "From €150 (E-Class) or €180 (V-Class)",
           "Larger vehicles for groups and brokers",
-          "Book ahead — September is peak on the coast",
+          "Book ahead: September is peak on the coast",
         ],
       },
       {
@@ -609,7 +609,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "Transfers for the Cannes Yachting Festival",
     ctaDescription:
-      "Arrive calm and move between the quays — a private chauffeur from Nice Airport for the Cannes Yachting Festival.",
+      "Arrive calm and move between the quays: a private chauffeur from Nice Airport for the Cannes Yachting Festival.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -617,9 +617,9 @@ export const yachtPosts: BlogPost[] = [
     slug: "private-jet-to-yacht-transfer",
     title: "Private Jet to Yacht Transfers",
     description:
-      "Seamless private chauffeur transfers from the Nice business aviation terminal to your yacht — met on arrival, straight to the quay.",
+      "Seamless private chauffeur transfers from the Nice business aviation terminal to your yacht: met on arrival, straight to the quay.",
     excerpt:
-      "From the private jet terminal at Nice to your yacht — a seamless chauffeur transfer, met on arrival and driven to the quay.",
+      "From the private jet terminal at Nice to your yacht: a seamless chauffeur transfer, met on arrival and driven to the quay.",
     category: "Yacht Transfers",
     heroKicker: "Private jet to yacht",
     readTime: "6 min read",
@@ -635,7 +635,7 @@ export const yachtPosts: BlogPost[] = [
       "VIP airport transfer Nice",
     ],
     intro:
-      "Nice is one of Europe's busiest airports for private aviation, and many who land there are heading straight to a yacht. Its business aviation terminal, set apart from the main halls, makes the handover swift — and a chauffeur waiting there turns jet and yacht into a single, seamless journey. Here is how a private jet to yacht transfer works.",
+      "Nice is one of Europe's busiest airports for private aviation, and many who land there are heading straight to a yacht. Its business aviation terminal, set apart from the main halls, makes the handover swift. And a chauffeur waiting there turns jet and yacht into a single, seamless journey. Here is how a private jet to yacht transfer works.",
     sections: [
       {
         id: "europes-private-jet-gateway",
@@ -655,7 +655,7 @@ export const yachtPosts: BlogPost[] = [
         id: "met-on-arrival",
         title: "Met on arrival",
         paragraphs: [
-          "A chauffeur meets you at the business aviation terminal as you step off the jet, takes the luggage and has the car waiting — no walk through a main terminal, no queues, no wait. The handover from aircraft to car is measured in minutes.",
+          "A chauffeur meets you at the business aviation terminal as you step off the jet, takes the luggage and has the car waiting. No walk through a main terminal, no queues, no wait. The handover from aircraft to car is measured in minutes.",
           "For groups and crew arriving with the guests, a spacious V-Class keeps everyone and everything together.",
         ],
         bullets: [
@@ -669,7 +669,7 @@ export const yachtPosts: BlogPost[] = [
         id: "jet-to-yacht-in-one-move",
         title: "Jet to yacht in one move",
         paragraphs: [
-          "From the terminal, the chauffeur drives directly to the marina — Port Vauban in Antibes, the ports of Cannes, or Monaco's Port Hercule — delivering you to the quay and your waiting tender or gangway. The whole chain from jet to yacht is handled by one driver.",
+          "From the terminal, the chauffeur drives directly to the marina (Port Vauban in Antibes, the ports of Cannes, or Monaco's Port Hercule), delivering you to the quay and your waiting tender or gangway. The whole chain from jet to yacht is handled by one driver.",
           "It is the discreet, unbroken arrival expected at the top of the market.",
         ],
       },
@@ -711,7 +711,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "From your jet to your yacht",
     ctaDescription:
-      "Met at the business aviation terminal, driven straight to the quay — a seamless private jet to yacht transfer.",
+      "Met at the business aviation terminal, driven straight to the quay. A seamless private jet to yacht transfer.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -719,7 +719,7 @@ export const yachtPosts: BlogPost[] = [
     slug: "riviera-marinas-guide",
     title: "Guide to the French Riviera Marinas",
     description:
-      "A guide to the main marinas of the French Riviera — Antibes, Cannes, Monaco, Golfe-Juan and Saint-Tropez — and how to reach each by chauffeur.",
+      "A guide to the main marinas of the French Riviera (Antibes, Cannes, Monaco, Golfe-Juan and Saint-Tropez) and how to reach each by chauffeur.",
     excerpt:
       "The main marinas of the French Riviera, from Antibes to Saint-Tropez — and how to reach each by private chauffeur.",
     category: "Yacht Transfers",
@@ -737,7 +737,7 @@ export const yachtPosts: BlogPost[] = [
       "yacht ports French Riviera",
     ],
     intro:
-      "The French Riviera holds the densest run of yacht harbours anywhere — from the largest marina in Europe to a legendary village quay, all within an hour or two of Nice Airport. Each has its own character, size and pace. This guide runs through the main marinas of the coast and how a private chauffeur links them to the airport and to one another.",
+      "The French Riviera holds the densest run of yacht harbours anywhere: from the largest marina in Europe to a legendary village quay, all within an hour or two of Nice Airport. Each has its own character, size and pace. This guide runs through the main marinas of the coast and how a private chauffeur links them to the airport and to one another.",
     sections: [
       {
         id: "antibes-and-golfe-juan",
@@ -747,9 +747,9 @@ export const yachtPosts: BlogPost[] = [
           "Together they anchor the central coast, both around 25 minutes from Nice Airport.",
         ],
         bullets: [
-          "Port Vauban — the largest marina in Europe",
+          "Port Vauban: the largest marina in Europe",
           "Quai des Milliardaires for the biggest yachts",
-          "Golfe-Juan — a quieter, sheltered alternative",
+          "Golfe-Juan: a quieter, sheltered alternative",
           "Both about 25 minutes from the airport",
         ],
       },
@@ -771,13 +771,13 @@ export const yachtPosts: BlogPost[] = [
         id: "monaco-and-the-east",
         title: "Monaco and the east",
         paragraphs: [
-          "East of Nice, Monaco's Port Hercule is the coast's grand stage — deep water, the Grand Prix circuit and the September Yacht Show. Between Nice and Monaco lie the deep anchorage of Villefranche, where yachts lie at anchor and tender ashore, and the exclusive peninsula of Cap-Ferrat.",
+          "East of Nice, Monaco's Port Hercule is the coast's grand stage: deep water, the Grand Prix circuit and the September Yacht Show. Between Nice and Monaco lie the deep anchorage of Villefranche, where yachts lie at anchor and tender ashore, and the exclusive peninsula of Cap-Ferrat.",
           "Monaco is around 30 to 40 minutes from the airport; Villefranche and Cap-Ferrat are closer still.",
         ],
         bullets: [
-          "Monaco Port Hercule — deep-water and events",
-          "Villefranche — a deep natural anchorage",
-          "Cap-Ferrat — the most exclusive peninsula",
+          "Monaco Port Hercule: deep-water and events",
+          "Villefranche: a deep natural anchorage",
+          "Cap-Ferrat: the most exclusive peninsula",
           "All within easy reach to the east of Nice",
         ],
       },
@@ -785,7 +785,7 @@ export const yachtPosts: BlogPost[] = [
         id: "saint-tropez-and-the-west",
         title: "Saint-Tropez",
         paragraphs: [
-          "Furthest west, the old port of Saint-Tropez is yachting's most famous quay, where superyachts moor stern-to against the cafés. It is also the hardest to reach — around an hour and a half by road at the end of its peninsula, or by boat shuttle across the gulf.",
+          "Furthest west, the old port of Saint-Tropez is yachting's most famous quay, where superyachts moor stern-to against the cafés. It is also the hardest to reach: around an hour and a half by road at the end of its peninsula, or by boat shuttle across the gulf.",
           "It rewards the journey with a setting no other marina can match.",
         ],
       },
@@ -793,13 +793,13 @@ export const yachtPosts: BlogPost[] = [
         id: "reaching-the-marinas",
         title: "Reaching the marinas by chauffeur",
         paragraphs: [
-          "Every marina on the coast is reachable from Nice Airport, and a private chauffeur is the smoothest link — met on arrival, luggage handled, delivered to the quay or tender. Prices follow the distance: from around €120 to Antibes, €150 to Cannes or Monaco, and €400 to Saint-Tropez.",
+          "Every marina on the coast is reachable from Nice Airport, and a private chauffeur is the smoothest link: met on arrival, luggage handled, delivered to the quay or tender. Prices follow the distance: from around €120 to Antibes, €150 to Cannes or Monaco, and €400 to Saint-Tropez.",
           "The same driver ties the marinas to one another and to days ashore, whichever port your yacht calls home.",
         ],
         bullets: [
-          "Antibes and Golfe-Juan — from €120–130",
-          "Cannes and Monaco — from €150",
-          "Saint-Tropez — from €400",
+          "Antibes and Golfe-Juan: from €120–130",
+          "Cannes and Monaco: from €150",
+          "Saint-Tropez: from €400",
           "One chauffeur for airport, quays and days ashore",
         ],
       },
@@ -808,7 +808,7 @@ export const yachtPosts: BlogPost[] = [
       {
         question: "Which is the largest marina on the French Riviera?",
         answer:
-          "Port Vauban in Antibes — the largest marina in Europe, whose Quai des Milliardaires hosts the biggest superyachts on the coast.",
+          "Port Vauban in Antibes is the largest marina in Europe, and its Quai des Milliardaires hosts the biggest superyachts on the coast.",
       },
       {
         question: "Which marina is closest to Nice Airport?",
@@ -831,7 +831,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "Reach any Riviera marina",
     ctaDescription:
-      "From Antibes to Saint-Tropez — a private chauffeur linking every marina on the coast to the airport and beyond.",
+      "From Antibes to Saint-Tropez: a private chauffeur linking every marina on the coast to the airport and beyond.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -839,9 +839,9 @@ export const yachtPosts: BlogPost[] = [
     slug: "helicopter-yacht-transfer",
     title: "Helicopter and Yacht Transfers",
     description:
-      "Combine the Nice–Monaco helicopter with a private chauffeur to reach your yacht — the fastest, most scenic transfer on the French Riviera.",
+      "Combine the Nice–Monaco helicopter with a private chauffeur to reach your yacht. The fastest, most scenic transfer on the French Riviera.",
     excerpt:
-      "The Nice–Monaco helicopter paired with a private chauffeur — the fastest, most scenic way to reach your yacht.",
+      "The Nice–Monaco helicopter paired with a private chauffeur: the fastest, most scenic way to reach your yacht.",
     category: "Yacht Transfers",
     heroKicker: "Helicopter and yacht",
     readTime: "6 min read",
@@ -891,7 +891,7 @@ export const yachtPosts: BlogPost[] = [
         id: "when-it-makes-sense",
         title: "When it makes sense",
         paragraphs: [
-          "The helicopter earns its place when the road would cost real time — Grand Prix week, the Monaco Yacht Show, peak-summer congestion — or when a schedule simply cannot slip. It also carries a certain wow factor for guests arriving to a charter.",
+          "The helicopter earns its place when the road would cost real time (Grand Prix week, the Monaco Yacht Show, peak-summer congestion) or when a schedule simply cannot slip. It also carries a certain wow factor for guests arriving to a charter.",
           "For a yacht based in or near Monaco, it is often the most sensible arrival of all.",
         ],
       },
@@ -899,7 +899,7 @@ export const yachtPosts: BlogPost[] = [
         id: "beyond-monaco",
         title: "Beyond the Monaco route",
         paragraphs: [
-          "Helicopters also reach further afield — to Saint-Tropez, Cannes and private helipads — when the road would take hours. A chauffeur handles the ground legs at each end, whatever the route.",
+          "Helicopters also reach further afield (to Saint-Tropez, Cannes and private helipads) when the road would take hours. A chauffeur handles the ground legs at each end, whatever the route.",
           "Wherever the yacht lies, the air-and-road combination keeps the journey short.",
         ],
       },
@@ -932,7 +932,7 @@ export const yachtPosts: BlogPost[] = [
     ],
     ctaTitle: "The fastest way to your yacht",
     ctaDescription:
-      "Helicopter across the traffic, chauffeur at each end — the quickest, most scenic transfer to your yacht.",
+      "Helicopter across the traffic, chauffeur at each end. The quickest, most scenic transfer to your yacht.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },

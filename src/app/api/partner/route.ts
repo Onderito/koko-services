@@ -72,7 +72,7 @@ function buildHtmlEmail(data: {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Partner Application — kokolimo</title>
+  <title>New Partner Application | kokolimo</title>
 </head>
 <body style="margin:0;padding:0;background-color:#F5F0E8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F5F0E8;padding:40px 16px;">
@@ -133,7 +133,7 @@ function buildHtmlEmail(data: {
           <!-- CTA -->
           <tr>
             <td style="background:#ffffff;border:1px solid #E8DCCB;border-top:none;border-bottom:none;padding:24px 32px;">
-              <a href="mailto:${data.email}?subject=Re: Partner Application — kokolimo"
+              <a href="mailto:${data.email}?subject=Re: Partner Application | kokolimo"
                  style="display:inline-block;background:linear-gradient(180deg,#F8F3EC 0%,#E8D9C5 100%);border:1px solid #E4D4BF;border-radius:14px;padding:12px 22px;font-size:14px;font-weight:700;color:#6D5830;text-decoration:none;">
                 Reply to ${data.fullName} →
               </a>
@@ -219,7 +219,7 @@ export async function POST(request: NextRequest) {
       from: "kokolimo <contact@kokolimo.com>",
       to: toEmail,
       replyTo: `${sanitized.fullName} <${sanitized.email}>`,
-      subject: `New partner application — ${sanitized.fullName} · ${sanitized.companyName}`,
+      subject: `New partner application: ${sanitized.fullName} · ${sanitized.companyName}`,
       html: buildHtmlEmail(sanitized),
     });
 

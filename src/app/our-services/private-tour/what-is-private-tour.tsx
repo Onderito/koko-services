@@ -8,7 +8,7 @@ export default function WhatIsPrivateTour() {
       </h2>
       <p className="body-text text-center mt-4 ">
         Discover the French Riviera at your own pace with a bilingual
-        driver-guide and a luxury vehicle—custom routes, local insights, zero
+        driver-guide and a luxury vehicle: custom routes, local insights, zero
         logistics.
       </p>
 
@@ -16,8 +16,8 @@ export default function WhatIsPrivateTour() {
         <div className="relative overflow-hidden flex flex-col justify-center xl:justify-start items-center bg-[#404040] p-4 py-10 rounded-2xl text-white xl:max-w-3xl xl:h-[410px] ">
           <h3 className="heading-3 text-white ">Our Commitment</h3>
           <p className="relative z-20 text-center mt-4 body-text text-white ">
-            Curated, stress-free touring. We craft a bespoke itinerary—Nice,
-            Monaco, Èze, Cannes, Antibes, Saint-Tropez—arrange photo stops and
+            Curated, stress-free touring. We craft a bespoke itinerary (Nice,
+            Monaco, Èze, Cannes, Antibes, Saint-Tropez), arrange photo stops and
             lunch spots, and keep you on schedule with door-to-door service.
           </p>
           <Image

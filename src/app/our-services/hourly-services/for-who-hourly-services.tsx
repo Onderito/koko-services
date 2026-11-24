@@ -15,12 +15,12 @@ const card = [
   },
   {
     title: "Flexible Day Hire",
-    text: "Your driver, your pace: multiple stops, last-minute changes, luggage handled—freedom and privacy all day long.",
+    text: "Your driver, your pace: multiple stops, last-minute changes, luggage handled. Freedom and privacy all day long.",
     icon: "/assets/icons/services/clock.webp",
   },
   {
     title: "Events & Evenings",
-    text: "Dinners, shopping, beach clubs, or night outs—door-to-door rides with a dedicated driver waiting for you.",
+    text: "Dinners, shopping, beach clubs, or night outs: door-to-door rides with a dedicated driver waiting for you.",
     icon: "/assets/icons/services/star.webp",
   },
 ];
@@ -141,7 +141,7 @@ export default function ForWhoHourlyServices() {
           <h3 className="heading-3 text-[#404040] mt-2">Flexible Day Hire</h3>
           <p className="text-center card-text mt-4">
             Your driver, your pace: multiple stops, last-minute changes, luggage
-            handled—freedom and privacy all day long.
+            handled. Freedom and privacy all day long.
           </p>
         </div>
 
@@ -159,7 +159,7 @@ export default function ForWhoHourlyServices() {
           />
           <h3 className="heading-3 text-[#404040] mt-2">Events & Evenings</h3>
           <p className="text-center card-text mt-4">
-            Dinners, shopping, beach clubs, or night outs—door-to-door rides
+            Dinners, shopping, beach clubs, or night outs: door-to-door rides
             with a dedicated driver waiting for you.
           </p>
         </div>

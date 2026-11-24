@@ -7,7 +7,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-monaco",
     title: "Nice Airport to Monaco Transfer Guide",
     description:
-      "How to get from Nice Airport to Monaco by private chauffeur — route, journey time, prices and what to expect for a smooth Riviera transfer.",
+      "How to get from Nice Airport to Monaco by private chauffeur: route, journey time, prices and what to expect for a smooth Riviera transfer.",
     excerpt:
       "Route, journey time, prices and what to expect when you travel from Nice Airport to Monaco with a private chauffeur.",
     category: "Airport Transfer",
@@ -26,14 +26,14 @@ export const routePosts: BlogPost[] = [
       "Nice to Monaco taxi price",
     ],
     intro:
-      "Monaco sits just 30 kilometres east of Nice Côte d'Azur Airport, yet the way you cover that short distance sets the tone for the whole stay. Between motorway traffic, the winding coastal corniches and Monaco's tight one-way streets, a private chauffeur transfer is the calmest and most reliable way to arrive — door to door, on your schedule, with luggage handled and no queues. This guide covers the route, the journey time, indicative prices and exactly what to expect from a Nice Airport to Monaco transfer.",
+      "Monaco sits just 30 kilometres east of Nice Côte d'Azur Airport, yet the way you cover that short distance sets the tone for the whole stay. Between motorway traffic, the winding coastal corniches and Monaco's tight one-way streets, a private chauffeur transfer is the calmest and most reliable way to arrive: door to door, on your schedule, with luggage handled and no queues. This guide covers the route, the journey time, indicative prices and exactly what to expect from a Nice Airport to Monaco transfer.",
     sections: [
       {
         id: "distance-and-time",
         title: "How far is Nice Airport from Monaco?",
         paragraphs: [
           "Monaco is about 30 km east of Nice Côte d'Azur Airport (NCE) by road. In light traffic the drive takes roughly 30 minutes; during rush hour, summer weekends or event days it can stretch to 45–50 minutes.",
-          "There are two main routes. The A8 motorway (La Provençale) is the fastest and most predictable, leaving at the Monaco / Roquebrune-Cap-Martin exit. The scenic Basse Corniche along the coast is slower but far more beautiful, passing Villefranche-sur-Mer, Beaulieu and Cap-d'Ail — a lovely option if you are not in a hurry.",
+          "There are two main routes. The A8 motorway (La Provençale) is the fastest and most predictable, leaving at the Monaco / Roquebrune-Cap-Martin exit. The scenic Basse Corniche along the coast is slower but far more beautiful, passing Villefranche-sur-Mer, Beaulieu and Cap-d'Ail. A lovely option if you are not in a hurry.",
         ],
         bullets: [
           "Distance: approximately 30 km by road",
@@ -87,7 +87,7 @@ export const routePosts: BlogPost[] = [
         title: "What to expect on arrival",
         paragraphs: [
           "Nice Côte d'Azur is France's third-busiest airport, with two terminals a few minutes apart. Your chauffeur checks your terminal from the flight number and meets you in the arrivals hall, so there is nothing to arrange once you land.",
-          "From there it is a single, direct ride to your Monaco address — a Monte-Carlo hotel, a private residence, or the quayside at Port Hercule if you are joining a yacht. The driver handles the route, the tunnels and Monaco's one-way system so you can simply enjoy the arrival.",
+          "From there it is a single, direct ride to your Monaco address: a Monte-Carlo hotel, a private residence, or the quayside at Port Hercule if you are joining a yacht. The driver handles the route, the tunnels and Monaco's one-way system so you can simply enjoy the arrival.",
         ],
       },
       {
@@ -95,7 +95,7 @@ export const routePosts: BlogPost[] = [
         title: "Travelling during the Monaco Grand Prix",
         paragraphs: [
           "During the Formula 1 Monaco Grand Prix in early June, large parts of the principality close for the circuit and drop-off points move outside the restricted zone. Transfers still run, but they need extra time and careful planning.",
-          "If you are arriving for the Grand Prix — or the Monaco Yacht Show in September — book early and share your exact hotel or grandstand so your chauffeur can plan the closest legal drop-off and the smartest route.",
+          "If you are arriving for the Grand Prix (or the Monaco Yacht Show in September), book early and share your exact hotel or grandstand so your chauffeur can plan the closest legal drop-off and the smartest route.",
         ],
       },
     ],
@@ -113,7 +113,7 @@ export const routePosts: BlogPost[] = [
       {
         question: "Will the driver meet me inside the airport?",
         answer:
-          "Yes. Your chauffeur waits in the arrivals hall with a name sign, helps with your luggage and walks you to the vehicle — a full meet-and-greet service.",
+          "Yes. Your chauffeur waits in the arrivals hall with a name sign, helps with your luggage and walks you to the vehicle. A full meet-and-greet service.",
       },
       {
         question: "What happens if my flight is delayed?",
@@ -139,7 +139,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-cannes",
     title: "Nice Airport to Cannes Transfer Guide",
     description:
-      "How to travel from Nice Airport to Cannes by private chauffeur — route, journey time, prices and festival-season tips for a smooth Croisette arrival.",
+      "How to travel from Nice Airport to Cannes by private chauffeur: route, journey time, prices and festival-season tips for a smooth Croisette arrival.",
     excerpt:
       "Route, journey time, prices and festival-season tips for a private chauffeur transfer from Nice Airport to Cannes.",
     category: "Airport Transfer",
@@ -158,7 +158,7 @@ export const routePosts: BlogPost[] = [
       "Cannes Film Festival transfer",
     ],
     intro:
-      "Cannes lies about 26 kilometres west of Nice Côte d'Azur Airport, an easy drive that turns into one of the busiest routes on the Riviera every May. Whether you are arriving for the Film Festival, a congress at the Palais des Festivals, or a quiet stay on La Croisette, a private chauffeur takes you straight from the terminal to your hotel door — no taxi queue, no parking, no stress. Here is everything you need to know about the Nice Airport to Cannes transfer.",
+      "Cannes lies about 26 kilometres west of Nice Côte d'Azur Airport, an easy drive that turns into one of the busiest routes on the Riviera every May. Whether you are arriving for the Film Festival, a congress at the Palais des Festivals, or a quiet stay on La Croisette, a private chauffeur takes you straight from the terminal to your hotel door. No taxi queue, no parking, no stress. Here is everything you need to know about the Nice Airport to Cannes transfer.",
     sections: [
       {
         id: "distance-and-time",
@@ -258,7 +258,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-saint-tropez",
     title: "Nice Airport to Saint-Tropez Transfer Guide",
     description:
-      "Nice Airport to Saint-Tropez by private chauffeur — the 110 km route, real journey times, summer traffic tips, prices and the helicopter alternative.",
+      "Nice Airport to Saint-Tropez by private chauffeur: the 110 km route, real journey times, summer traffic tips, prices and the helicopter alternative.",
     excerpt:
       "The 110 km route, real journey times, summer-traffic tips, prices and the helicopter option for travelling from Nice Airport to Saint-Tropez.",
     category: "Airport Transfer",
@@ -277,14 +277,14 @@ export const routePosts: BlogPost[] = [
       "Nice Airport Saint-Tropez helicopter",
     ],
     intro:
-      "Saint-Tropez is the most glamorous — and the most demanding — transfer on the French Riviera. At roughly 110 kilometres west of Nice Côte d'Azur Airport, it is far longer than the Monaco or Cannes runs, and in high summer the final approach is famous for its traffic. A private chauffeur, and sometimes a helicopter, is what keeps that journey comfortable. Here is how to plan a Nice Airport to Saint-Tropez transfer.",
+      "Saint-Tropez is the most glamorous (and the most demanding) transfer on the French Riviera. At roughly 110 kilometres west of Nice Côte d'Azur Airport, it is far longer than the Monaco or Cannes runs, and in high summer the final approach is famous for its traffic. A private chauffeur, and sometimes a helicopter, is what keeps that journey comfortable. Here is how to plan a Nice Airport to Saint-Tropez transfer.",
     sections: [
       {
         id: "distance-and-time",
         title: "How far is Saint-Tropez from Nice Airport?",
         paragraphs: [
           "Saint-Tropez lies about 110 km west of Nice Airport. Outside the summer season the drive takes around 1 hour 30 minutes via the A8 motorway and the road down through the Gulf of Saint-Tropez.",
-          "In July and August, and on summer weekends, the last stretch through Sainte-Maxime and Port Grimaud is notoriously slow — the same trip can take two hours or more. Planning around the peak hours makes a real difference.",
+          "In July and August, and on summer weekends, the last stretch through Sainte-Maxime and Port Grimaud is notoriously slow: the same trip can take two hours or more. Planning around the peak hours makes a real difference.",
         ],
         bullets: [
           "Distance: about 110 km by road, far west of the airport",
@@ -311,7 +311,7 @@ export const routePosts: BlogPost[] = [
         id: "why-private-chauffeur",
         title: "Why a private chauffeur is worth it on this route",
         paragraphs: [
-          "On a two-hour transfer, comfort matters. A private chauffeur means a quiet, air-conditioned car, luggage handled, and a driver who manages the route while you rest after the flight — a very different experience from a shared shuttle or a scramble for a taxi.",
+          "On a two-hour transfer, comfort matters. A private chauffeur means a quiet, air-conditioned car, luggage handled, and a driver who manages the route while you rest after the flight: a very different experience from a shared shuttle or a scramble for a taxi.",
           "Because Saint-Tropez transfers are long, the price is agreed in advance, so there are no meter surprises when the traffic is heavy. The vehicle is matched to your group, from a sedan for a couple to a V-Class for a family with luggage.",
         ],
         bullets: [
@@ -376,7 +376,7 @@ export const routePosts: BlogPost[] = [
     ],
     ctaTitle: "Book your Nice Airport to Saint-Tropez transfer",
     ctaDescription:
-      "Reserve a private chauffeur for the long run west to Saint-Tropez — comfortable, fixed-price and planned around the summer traffic.",
+      "Reserve a private chauffeur for the long run west to Saint-Tropez. Comfortable, fixed-price and planned around the summer traffic.",
     ctaHref: "/our-services/transfers/saint-tropez-transfer",
     ctaLabel: "See Saint-Tropez transfer details",
   },
@@ -384,7 +384,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-cap-dantibes",
     title: "Nice Airport to Cap d'Antibes Transfer",
     description:
-      "Nice Airport to Cap d'Antibes by private chauffeur — route, journey time, guide prices and discreet arrivals at Hotel du Cap-Eden-Roc and private villas.",
+      "Nice Airport to Cap d'Antibes by private chauffeur: route, journey time, guide prices and discreet arrivals at Hotel du Cap-Eden-Roc and private villas.",
     excerpt:
       "Route, journey time, guide prices and discreet, door-to-door arrivals on the exclusive Cap d'Antibes peninsula.",
     category: "Airport Transfer",
@@ -402,14 +402,14 @@ export const routePosts: BlogPost[] = [
       "Cap d'Antibes chauffeur from Nice Airport",
     ],
     intro:
-      "Cap d'Antibes is the Riviera at its most discreet: a green peninsula of walled estates, umbrella pines and legendary hotels, just west of Antibes and about 22 kilometres from Nice Côte d'Azur Airport. Guests here value privacy above all, and a private chauffeur delivers exactly that — a calm, door-to-door arrival at your villa or hotel gate with no fuss. Here is how the Nice Airport to Cap d'Antibes transfer works.",
+      "Cap d'Antibes is the Riviera at its most discreet: a green peninsula of walled estates, umbrella pines and legendary hotels, just west of Antibes and about 22 kilometres from Nice Côte d'Azur Airport. Guests here value privacy above all, and a private chauffeur delivers exactly that: a calm, door-to-door arrival at your villa or hotel gate with no fuss. Here is how the Nice Airport to Cap d'Antibes transfer works.",
     sections: [
       {
         id: "distance-and-time",
         title: "How far is Cap d'Antibes from Nice Airport?",
         paragraphs: [
           "Cap d'Antibes is about 22 km west of Nice Airport, a drive of roughly 25 to 30 minutes in normal traffic. It sits just beyond the town of Antibes, on the wooded peninsula between Antibes and Juan-les-Pins.",
-          "A chauffeur takes the A8 or the coastal road, then threads the narrow lanes of the Cap directly to your gate — a route that is easy to miss without local knowledge.",
+          "A chauffeur takes the A8 or the coastal road, then threads the narrow lanes of the Cap directly to your gate: a route that is easy to miss without local knowledge.",
         ],
         bullets: [
           "Distance: about 22 km west of the airport",
@@ -507,7 +507,7 @@ export const routePosts: BlogPost[] = [
       "Cap-Ferrat chauffeur from Nice Airport",
     ],
     intro:
-      "Saint-Jean-Cap-Ferrat is one of the quietest and most exclusive addresses on the French Riviera — a green peninsula of grand villas and gardens between Villefranche and Beaulieu, about 20 kilometres east of Nice Airport. It rewards a calm, private arrival, and a chauffeur transfer is the natural way to reach it. Here is what to know about the Nice Airport to Saint-Jean-Cap-Ferrat transfer.",
+      "Saint-Jean-Cap-Ferrat is one of the quietest and most exclusive addresses on the French Riviera, a green peninsula of grand villas and gardens between Villefranche and Beaulieu, about 20 kilometres east of Nice Airport. It rewards a calm, private arrival, and a chauffeur transfer is the natural way to reach it. Here is what to know about the Nice Airport to Saint-Jean-Cap-Ferrat transfer.",
     sections: [
       {
         id: "distance-and-time",
@@ -528,7 +528,7 @@ export const routePosts: BlogPost[] = [
         title: "Quiet luxury on the peninsula",
         paragraphs: [
           "Cap-Ferrat is defined by understated wealth: the Grand-Hôtel du Cap-Ferrat, A Four Seasons Hotel, the Villa Ephrussi de Rothschild with its famous gardens, and some of the most valuable private property in Europe.",
-          "Guests here prize privacy and calm. A chauffeur suits the mood perfectly — a discreet, comfortable arrival at a hotel or villa gate, with none of the noise of a busy transfer.",
+          "Guests here prize privacy and calm. A chauffeur suits the mood perfectly: a discreet, comfortable arrival at a hotel or villa gate, with none of the noise of a busy transfer.",
         ],
         bullets: [
           "Direct arrival at the Grand-Hôtel du Cap-Ferrat and private villas",
@@ -596,7 +596,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-eze",
     title: "Nice Airport to Èze Transfer Guide",
     description:
-      "Nice Airport to Èze by private chauffeur — the corniche route, journey time, guide prices and arrivals at the perched village and Èze-sur-Mer.",
+      "Nice Airport to Èze by private chauffeur: the corniche route, journey time, guide prices and arrivals at the perched village and Èze-sur-Mer.",
     excerpt:
       "The corniche route, journey time, guide prices and arrivals at the perched medieval village of Èze and Èze-sur-Mer.",
     category: "Airport Transfer",
@@ -614,7 +614,7 @@ export const routePosts: BlogPost[] = [
       "La Chèvre d'Or transfer",
     ],
     intro:
-      "Èze is the Riviera's most famous perched village — a medieval maze of stone lanes clinging to a peak above the sea, halfway between Nice and Monaco. Reaching it means climbing the corniche roads, which is exactly where a chauffeur earns their keep. About 15 kilometres from Nice Airport, Èze rewards a driven arrival with some of the best views on the coast. Here is how the Nice Airport to Èze transfer works.",
+      "Èze is the Riviera's most famous perched village, a medieval maze of stone lanes clinging to a peak above the sea, halfway between Nice and Monaco. Reaching it means climbing the corniche roads, which is exactly where a chauffeur earns their keep. About 15 kilometres from Nice Airport, Èze rewards a driven arrival with some of the best views on the coast. Here is how the Nice Airport to Èze transfer works.",
     sections: [
       {
         id: "distance-and-time",
@@ -634,7 +634,7 @@ export const routePosts: BlogPost[] = [
         id: "the-corniche-drive",
         title: "The corniche drive to Èze",
         paragraphs: [
-          "The three Corniches — Basse, Moyenne and Grande — thread between Nice and Monaco at different heights, each with its own views. The Moyenne Corniche delivers you to the foot of Èze village; the Grande Corniche climbs even higher for panoramic stops.",
+          "The three Corniches (Basse, Moyenne and Grande) thread between Nice and Monaco at different heights, each with its own views. The Moyenne Corniche delivers you to the foot of Èze village; the Grande Corniche climbs even higher for panoramic stops.",
           "A chauffeur who knows these roads can turn a simple transfer into a scenic arrival, pausing at the best viewpoints if you have time before check-in at La Chèvre d'Or or Château Eza.",
         ],
         bullets: [
@@ -703,7 +703,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-villefranche-sur-mer",
     title: "Nice Airport to Villefranche-sur-Mer",
     description:
-      "Nice Airport to Villefranche-sur-Mer by private chauffeur — route, journey time, guide prices and easy transfers for cruise calls and the old town.",
+      "Nice Airport to Villefranche-sur-Mer by private chauffeur: route, journey time, guide prices and easy transfers for cruise calls and the old town.",
     excerpt:
       "Route, journey time, guide prices and easy transfers to Villefranche-sur-Mer for cruise calls, hotels and the colourful old town.",
     category: "Airport Transfer",
@@ -802,7 +802,7 @@ export const routePosts: BlogPost[] = [
     ],
     ctaTitle: "Book your Nice Airport to Villefranche transfer",
     ctaDescription:
-      "Reserve a private chauffeur for an easy arrival in Villefranche-sur-Mer — ideal for cruise calls, hotels and the old town.",
+      "Reserve a private chauffeur for an easy arrival in Villefranche-sur-Mer. Ideal for cruise calls, hotels and the old town.",
     ctaHref: "/our-services/transfers/villefranche-transfer",
     ctaLabel: "See Villefranche transfer details",
   },
@@ -810,7 +810,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-mougins",
     title: "Nice Airport to Mougins Transfer Guide",
     description:
-      "Nice Airport to Mougins by private chauffeur — route, journey time and guide prices for the hilltop village of gastronomy and art above Cannes.",
+      "Nice Airport to Mougins by private chauffeur: route, journey time and guide prices for the hilltop village of gastronomy and art above Cannes.",
     excerpt:
       "Route, journey time and guide prices for a door-to-door transfer to Mougins, the hilltop village of gastronomy and art above Cannes.",
     category: "Airport Transfer",
@@ -848,7 +848,7 @@ export const routePosts: BlogPost[] = [
         id: "gastronomy-and-art",
         title: "A village of gastronomy and art",
         paragraphs: [
-          "Mougins built its reputation on food — Roger Vergé's Moulin de Mougins made it a pilgrimage for gourmets — and it remains dense with fine restaurants, galleries and design boutiques. Picasso spent his final years here, drawn by the light and the calm.",
+          "Mougins built its reputation on food (Roger Vergé's Moulin de Mougins made it a pilgrimage for gourmets), and it remains dense with fine restaurants, galleries and design boutiques. Picasso spent his final years here, drawn by the light and the calm.",
           "For guests staying in Cannes during a busy festival, Mougins is also a quieter place to sleep just minutes from the Croisette, and a chauffeur bridges the two effortlessly.",
         ],
         bullets: [
@@ -911,7 +911,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-grasse",
     title: "Nice Airport to Grasse Transfer Guide",
     description:
-      "Nice Airport to Grasse by private chauffeur — route, journey time and guide prices for the world's perfume capital in the hills above Cannes.",
+      "Nice Airport to Grasse by private chauffeur: route, journey time and guide prices for the world's perfume capital in the hills above Cannes.",
     excerpt:
       "Route, journey time and guide prices for a door-to-door transfer to Grasse, the world's perfume capital in the Provençal hills.",
     category: "Airport Transfer",
@@ -1013,7 +1013,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-monaco-heliport",
     title: "Nice Airport to Monaco: Car vs Helicopter",
     description:
-      "Nice Airport to Monaco by car or helicopter — journey times, indicative costs and when each option makes sense, with chauffeur transfers at both ends.",
+      "Nice Airport to Monaco by car or helicopter: journey times, indicative costs and when each option makes sense, with chauffeur transfers at both ends.",
     excerpt:
       "Car or helicopter from Nice Airport to Monaco? Compare journey times, costs and when each option makes sense.",
     category: "Airport Transfer",
@@ -1037,7 +1037,7 @@ export const routePosts: BlogPost[] = [
         id: "car-vs-helicopter",
         title: "Car or helicopter: the quick comparison",
         paragraphs: [
-          "The private car is door-to-door: your chauffeur meets you in arrivals and drives you straight to your Monaco address in 30 to 45 minutes, with all your luggage and no changes. The helicopter is faster and unforgettable — roughly seven minutes in the air between Nice and the Monaco heliport in Fontvieille — but it needs a short transfer at each end.",
+          "The private car is door-to-door: your chauffeur meets you in arrivals and drives you straight to your Monaco address in 30 to 45 minutes, with all your luggage and no changes. The helicopter is faster and unforgettable (roughly seven minutes in the air between Nice and the Monaco heliport in Fontvieille), but it needs a short transfer at each end.",
           "For most arrivals, the car is the simplest and best-value choice. The helicopter comes into its own when time is tight, when traffic is heavy during the Grand Prix or Yacht Show, or when the flight itself is part of the experience.",
         ],
         bullets: [
@@ -1106,7 +1106,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-cote-dazur-airport-terminals-guide",
     title: "Nice Airport Terminals & Arrivals Guide",
     description:
-      "A practical guide to Nice Côte d'Azur Airport — Terminals 1 and 2, the arrivals halls and where your chauffeur meets you.",
+      "A practical guide to Nice Côte d'Azur Airport: Terminals 1 and 2, the arrivals halls and where your chauffeur meets you.",
     excerpt:
       "Terminals 1 and 2, the arrivals halls and where your private chauffeur meets you at Nice Airport.",
     category: "Airport Transfer",
@@ -1124,14 +1124,14 @@ export const routePosts: BlogPost[] = [
       "Nice Airport chauffeur pickup",
     ],
     intro:
-      "Nice Côte d'Azur is France's third-busiest airport and the main gateway to the French Riviera. It is compact and easy to navigate once you know the layout — two terminals a few minutes apart, and clear arrivals halls. This guide explains how the airport works and exactly where your private chauffeur will meet you.",
+      "Nice Côte d'Azur is France's third-busiest airport and the main gateway to the French Riviera. It is compact and easy to navigate once you know the layout, with two terminals a few minutes apart and clear arrivals halls. This guide explains how the airport works and exactly where your private chauffeur will meet you.",
     sections: [
       {
         id: "two-terminals",
         title: "Terminal 1 and Terminal 2",
         paragraphs: [
           "The airport has two passenger terminals. They sit a few minutes apart on the seafront west of the city, and your chauffeur meets you at the right one.",
-          "Airlines are split between the two, so it is worth checking your terminal on your boarding pass or booking. For a chauffeur pickup it does not matter which one you land at — your driver simply meets you at the right arrivals hall.",
+          "Airlines are split between the two, so it is worth checking your terminal on your boarding pass or booking. For a chauffeur pickup it does not matter which one you land at. Your driver simply meets you at the right arrivals hall.",
         ],
         bullets: [
           "Two terminals, a few minutes apart on the coast",
@@ -1144,7 +1144,7 @@ export const routePosts: BlogPost[] = [
         id: "arrivals",
         title: "Arrivals and finding your driver",
         paragraphs: [
-          "After you collect your bags, you exit into the arrivals hall. With a meet-and-greet transfer, your chauffeur is already there, waiting with a name sign, and walks you to the car — no need to find a rank or a pickup zone yourself.",
+          "After you collect your bags, you exit into the arrivals hall. With a meet-and-greet transfer, your chauffeur is already there, waiting with a name sign, and walks you to the car. No need to find a rank or a pickup zone yourself.",
           "Because the airport is on the coast, the drive to Nice, Cannes, Monaco or the villages begins the moment you step outside, with no long access roads to slow you down.",
         ],
         bullets: [
@@ -1182,7 +1182,7 @@ export const routePosts: BlogPost[] = [
       {
         question: "How far is the airport from Nice city centre?",
         answer:
-          "About 7 km, on the coast west of the city — only a few minutes by car to central Nice.",
+          "About 7 km, on the coast west of the city. Only a few minutes by car to central Nice.",
       },
     ],
     relatedSlugs: [
@@ -1312,13 +1312,13 @@ export const routePosts: BlogPost[] = [
       "late flight Riviera transfer",
     ],
     intro:
-      "Not every flight lands in daylight. When you arrive at Nice Airport late in the evening or in the small hours, public transport thins out and taxis can be scarce — exactly when a pre-booked private chauffeur is worth the most. Here is how late-night transfers work and why they take the stress out of a midnight arrival on the Riviera.",
+      "Not every flight lands in daylight. When you arrive at Nice Airport late in the evening or in the small hours, public transport thins out and taxis can be scarce: exactly when a pre-booked private chauffeur is worth the most. Here is how late-night transfers work and why they take the stress out of a midnight arrival on the Riviera.",
     sections: [
       {
         id: "why-book-ahead",
         title: "Why pre-book for a late arrival",
         paragraphs: [
-          "Late at night the airport is quieter: fewer buses, a shorter taxi queue that can still be a long wait, and less help if plans change. A chauffeur booked in advance removes all of that — your driver is already there, waiting, whatever the hour.",
+          "Late at night the airport is quieter: fewer buses, a shorter taxi queue that can still be a long wait, and less help if plans change. A chauffeur booked in advance removes all of that: your driver is already there, waiting, whatever the hour.",
           "Because the transfer is arranged beforehand at a fixed price, there is no negotiating or searching for a ride when you are tired and want to get to your hotel.",
         ],
         bullets: [
@@ -1346,7 +1346,7 @@ export const routePosts: BlogPost[] = [
         id: "where-we-go",
         title: "Anywhere on the Riviera, any hour",
         paragraphs: [
-          "A late-night chauffeur can take you anywhere along the coast — Nice, Cannes, Monaco, Antibes, Saint-Tropez or the villages — as easily at midnight as at midday. For longer runs like Saint-Tropez, arriving by private car is far more comfortable than any alternative at that hour.",
+          "A late-night chauffeur can take you anywhere along the coast (Nice, Cannes, Monaco, Antibes, Saint-Tropez or the villages) as easily at midnight as at midday. For longer runs like Saint-Tropez, arriving by private car is far more comfortable than any alternative at that hour.",
           "Return transfers for very early departures work the same way, with a driver collecting you in good time for a dawn flight.",
         ],
       },
@@ -1360,12 +1360,12 @@ export const routePosts: BlogPost[] = [
       {
         question: "What happens if my late flight is delayed?",
         answer:
-          "The driver tracks your flight and adjusts, so even a significant delay is fine — someone is still there to meet you in arrivals.",
+          "The driver tracks your flight and adjusts, so even a significant delay is fine. Someone is still there to meet you in arrivals.",
       },
       {
         question: "Is a chauffeur safer than a taxi at night?",
         answer:
-          "A pre-booked chauffeur means a known driver, a fixed price and a car already waiting — reassuring when the airport is quiet and you are tired.",
+          "A pre-booked chauffeur means a known driver, a fixed price and a car already waiting, which is reassuring when the airport is quiet and you are tired.",
       },
       {
         question: "Can you cover early-morning departures too?",
@@ -1388,9 +1388,9 @@ export const routePosts: BlogPost[] = [
     slug: "nice-to-saint-tropez-road-vs-boat",
     title: "Nice to Saint-Tropez: Road or Boat?",
     description:
-      "Reaching Saint-Tropez from Nice by road, boat or helicopter — how the options compare on time, comfort and cost, and when each one wins.",
+      "Reaching Saint-Tropez from Nice by road, boat or helicopter: how the options compare on time, comfort and cost, and when each one wins.",
     excerpt:
-      "By road, by boat or by helicopter to Saint-Tropez — how the options compare on time, comfort and cost, and when each one wins.",
+      "By road, by boat or by helicopter to Saint-Tropez: how the options compare on time, comfort and cost, and when each one wins.",
     category: "Airport Transfer",
     heroKicker: "Nice → Saint-Tropez options",
     readTime: "7 min read",
@@ -1440,7 +1440,7 @@ export const routePosts: BlogPost[] = [
         id: "by-helicopter",
         title: "By helicopter",
         paragraphs: [
-          "A helicopter from Nice to the Saint-Tropez area takes around 35 minutes and skips the traffic entirely — the fastest way to arrive on a peak summer afternoon. Like the boat, it needs a short chauffeur transfer at each end.",
+          "A helicopter from Nice to the Saint-Tropez area takes around 35 minutes and skips the traffic entirely: the fastest way to arrive on a peak summer afternoon. Like the boat, it needs a short chauffeur transfer at each end.",
           "It suits guests who value time and the experience above all, especially during the busiest weeks.",
         ],
         bullets: [
@@ -1463,7 +1463,7 @@ export const routePosts: BlogPost[] = [
       {
         question: "What is the best way to get from Nice to Saint-Tropez?",
         answer:
-          "For most travellers a private chauffeur by road is best — door-to-door and flexible. A boat or helicopter can be quicker in peak summer traffic.",
+          "For most travellers a private chauffeur by road is best. Door-to-door and flexible. A boat or helicopter can be quicker in peak summer traffic.",
       },
       {
         question: "How long does the drive from Nice to Saint-Tropez take?",
@@ -1495,7 +1495,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-isola-2000-ski-transfer",
     title: "Nice Airport to Isola 2000 Ski Transfer",
     description:
-      "Nice Airport to Isola 2000 by private chauffeur — the mountain route, journey time and winter tips for the ski resort closest to the Riviera.",
+      "Nice Airport to Isola 2000 by private chauffeur: the mountain route, journey time and winter tips for the ski resort closest to the Riviera.",
     excerpt:
       "The mountain route, journey time and winter tips for a private transfer from Nice Airport to the Isola 2000 ski resort.",
     category: "Airport Transfer",
@@ -1589,7 +1589,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-sophia-antipolis",
     title: "Nice Airport to Sophia Antipolis",
     description:
-      "Nice Airport to Sophia Antipolis by private chauffeur — route, journey time and guide prices for reliable business transfers to Europe's tech park.",
+      "Nice Airport to Sophia Antipolis by private chauffeur: route, journey time and guide prices for reliable business transfers to Europe's tech park.",
     excerpt:
       "Route, journey time and guide prices for reliable business transfers from Nice Airport to the Sophia Antipolis technology park.",
     category: "Airport Transfer",
@@ -1694,7 +1694,7 @@ export const routePosts: BlogPost[] = [
     slug: "nice-airport-to-sanremo-italy",
     title: "Nice Airport to Sanremo, Italy",
     description:
-      "Nice Airport to Sanremo by private chauffeur — the cross-border route, journey time and guide prices for an easy trip to the Italian Riviera.",
+      "Nice Airport to Sanremo by private chauffeur: the cross-border route, journey time and guide prices for an easy trip to the Italian Riviera.",
     excerpt:
       "The cross-border route, journey time and guide prices for an easy private transfer from Nice Airport to Sanremo on the Italian Riviera.",
     category: "Airport Transfer",
@@ -1712,14 +1712,14 @@ export const routePosts: BlogPost[] = [
       "Italian Riviera transfer",
     ],
     intro:
-      "Just across the border from the French Riviera lies its Italian sister coast, and its most elegant town is Sanremo — the city of flowers, casinos and the famous song festival. It is about 55 kilometres east of Nice Airport, an easy cross-border run that a private chauffeur makes seamless, with no border-crossing hassle. Here is what to know about the Nice Airport to Sanremo transfer.",
+      "Just across the border from the French Riviera lies its Italian sister coast, and its most elegant town is Sanremo, the city of flowers, casinos and the famous song festival. It is about 55 kilometres east of Nice Airport, an easy cross-border run that a private chauffeur makes seamless, with no border-crossing hassle. Here is what to know about the Nice Airport to Sanremo transfer.",
     sections: [
       {
         id: "distance-and-time",
         title: "How far is Sanremo from Nice Airport?",
         paragraphs: [
           "Sanremo is roughly 55 km east of Nice Airport, about one hour by road via the A8 and the Italian A10 motorway, passing Monaco and Menton before the border.",
-          "The crossing itself is simple — there are no routine checks between France and Italy — so with a chauffeur the change of country is barely noticeable beyond the switch of language and scenery.",
+          "The crossing itself is simple (there are no routine checks between France and Italy), so with a chauffeur the change of country is barely noticeable beyond the switch of language and scenery.",
         ],
         bullets: [
           "Distance: about 55 km east, across the Italian border",

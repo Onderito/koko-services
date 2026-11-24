@@ -45,7 +45,7 @@ export const destinationPosts: BlogPost[] = [
     slug: "best-things-to-do-in-nice",
     title: "Best Things to Do in Nice",
     description:
-      "The best things to do in Nice — the Promenade des Anglais, Old Town, Cours Saleya, Castle Hill and the museums, with tips for exploring by chauffeur.",
+      "The best things to do in Nice: the Promenade des Anglais, Old Town, Cours Saleya, Castle Hill and the museums, with tips for exploring by chauffeur.",
     excerpt:
       "From the Promenade des Anglais to Old Nice and Castle Hill, the best things to do in the Riviera's capital.",
     category: "Destinations",
@@ -63,7 +63,7 @@ export const destinationPosts: BlogPost[] = [
       "things to see in Nice France",
     ],
     intro:
-      "Nice is the capital of the French Riviera and the perfect base for exploring the coast. It blends a grand seafront, a sun-baked old town, hilltop views and world-class art into a city that rewards both a flying visit and a long stay. Here are the best things to do in Nice — and how a private chauffeur helps you see more of them in the time you have.",
+      "Nice is the capital of the French Riviera and the perfect base for exploring the coast. It blends a grand seafront, a sun-baked old town, hilltop views and world-class art into a city that rewards both a flying visit and a long stay. Here are the best things to do in Nice and how a private chauffeur helps you see more of them in the time you have.",
     sections: [
       {
         id: "promenade",
@@ -84,7 +84,7 @@ export const destinationPosts: BlogPost[] = [
         title: "Explore Vieux Nice and the Cours Saleya",
         paragraphs: [
           "Old Nice is a warren of narrow lanes, ochre façades and baroque churches, alive with cafés and shops. At its heart, the Cours Saleya hosts a famous flower and produce market by day and restaurant tables by night.",
-          "This is the place to taste local specialities — socca, salade niçoise, pissaladière — and to lose an afternoon wandering. It is pedestrian, so a chauffeur drops you at the edge and meets you afterwards.",
+          "This is the place to taste local specialities (socca, salade niçoise, pissaladière) and to lose an afternoon wandering. It is pedestrian, so a chauffeur drops you at the edge and meets you afterwards.",
         ],
         bullets: [
           "The Cours Saleya flower and produce market",
@@ -97,7 +97,7 @@ export const destinationPosts: BlogPost[] = [
         id: "castle-hill",
         title: "Climb Castle Hill for the view",
         paragraphs: [
-          "The Colline du Château, or Castle Hill, rises between the old town and the port. There is no castle left, but there are gardens, a waterfall and the best panorama in Nice — the whole Baie des Anges on one side and the port on the other.",
+          "The Colline du Château, or Castle Hill, rises between the old town and the port. There is no castle left, but there are gardens, a waterfall and the best panorama in Nice: the whole Baie des Anges on one side and the port on the other.",
           "You can walk up, take the lift, or have a chauffeur drive you to the top of Mont Boron nearby for an even wider view over the city and coast.",
         ],
         bullets: [
@@ -130,7 +130,7 @@ export const destinationPosts: BlogPost[] = [
       {
         question: "Is Nice easy to explore without a car?",
         answer:
-          "The centre is walkable, but the hillside museums and viewpoints — and day trips along the coast — are far easier with a private chauffeur.",
+          "The centre is walkable, but the hillside museums and viewpoints (and day trips along the coast) are far easier with a private chauffeur.",
       },
       {
         question: "What local food should I try in Nice?",
@@ -145,7 +145,7 @@ export const destinationPosts: BlogPost[] = [
     ],
     ctaTitle: "Explore Nice with a private chauffeur",
     ctaDescription:
-      "See more of Nice and the Riviera with a private driver — museums, viewpoints and day trips linked into one easy itinerary.",
+      "See more of Nice and the Riviera with a private driver: museums, viewpoints and day trips linked into one easy itinerary.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -153,9 +153,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "monaco-in-one-day",
     title: "Monaco in One Day: A Perfect Itinerary",
     description:
-      "How to spend one perfect day in Monaco — the Casino, Prince's Palace, Oceanographic Museum, Port Hercule and the F1 streets, made easy with a chauffeur.",
+      "How to spend one perfect day in Monaco: the Casino, Prince's Palace, Oceanographic Museum, Port Hercule and the F1 streets, made easy with a chauffeur.",
     excerpt:
-      "A one-day Monaco itinerary — the Casino, Palace, Oceanographic Museum and Port Hercule, made easy with a chauffeur.",
+      "A one-day Monaco itinerary: the Casino, Palace, Oceanographic Museum and Port Hercule, made easy with a chauffeur.",
     category: "Destinations",
     heroKicker: "Monaco day itinerary",
     readTime: "8 min read",
@@ -191,7 +191,7 @@ export const destinationPosts: BlogPost[] = [
         id: "midday",
         title: "Midday: the Oceanographic Museum and harbour",
         paragraphs: [
-          "On the cliff below the old town, the Oceanographic Museum is one of Monaco's landmarks — an imposing building with aquariums and a rooftop terrace overlooking the sea. It is a highlight for families and first-time visitors alike.",
+          "On the cliff below the old town, the Oceanographic Museum is one of Monaco's landmarks, an imposing building with aquariums and a rooftop terrace overlooking the sea. It is a highlight for families and first-time visitors alike.",
           "Afterwards, drop down to Port Hercule for lunch by the water, surrounded by some of the largest yachts on the Mediterranean.",
         ],
         bullets: [
@@ -205,7 +205,7 @@ export const destinationPosts: BlogPost[] = [
         id: "afternoon",
         title: "Afternoon: Monte-Carlo and the Casino",
         paragraphs: [
-          "Cross to Monte-Carlo for the Place du Casino — the belle-époque Casino de Monte-Carlo, the Hôtel de Paris and the Café de Paris, framed by manicured gardens and, usually, a line-up of exceptional cars.",
+          "Cross to Monte-Carlo for the Place du Casino: the belle-époque Casino de Monte-Carlo, the Hôtel de Paris and the Café de Paris, framed by manicured gardens and, usually, a line-up of exceptional cars.",
           "Even without gambling, the square is worth seeing, and the surrounding streets trace part of the Grand Prix circuit, including the famous hairpin by the Fairmont.",
         ],
         bullets: [
@@ -260,9 +260,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "best-things-to-do-in-cannes",
     title: "Best Things to Do in Cannes",
     description:
-      "The best things to do in Cannes — La Croisette, the Palais des Festivals, Le Suquet old town, the Lérins Islands and shopping, with chauffeur tips.",
+      "The best things to do in Cannes: La Croisette, the Palais des Festivals, Le Suquet old town, the Lérins Islands and shopping, with chauffeur tips.",
     excerpt:
-      "La Croisette, Le Suquet, the Lérins Islands and the red carpet — the best things to do in Cannes.",
+      "La Croisette, Le Suquet, the Lérins Islands and the red carpet: the best things to do in Cannes.",
     category: "Destinations",
     heroKicker: "Cannes city guide",
     readTime: "7 min read",
@@ -327,7 +327,7 @@ export const destinationPosts: BlogPost[] = [
         title: "Getting around Cannes",
         paragraphs: [
           "Cannes is compact but busy, and parking near the Croisette is difficult, especially during festivals and congresses. A chauffeur drops you where you want to be and is a call away when you are ready to move on.",
-          "It also makes Cannes a natural base for the western Riviera — Antibes, Mougins, Grasse and Saint-Tropez are all within easy reach by car.",
+          "It also makes Cannes a natural base for the western Riviera. Antibes, Mougins, Grasse and Saint-Tropez are all within easy reach by car.",
         ],
       },
     ],
@@ -359,7 +359,7 @@ export const destinationPosts: BlogPost[] = [
     ],
     ctaTitle: "Explore Cannes with a private chauffeur",
     ctaDescription:
-      "Enjoy Cannes without the parking and crowds — a private driver for the Croisette, the old town, the islands and beyond.",
+      "Enjoy Cannes without the parking and crowds: a private driver for the Croisette, the old town, the islands and beyond.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -367,9 +367,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "best-things-to-do-in-saint-tropez",
     title: "Best Things to Do in Saint-Tropez",
     description:
-      "The best things to do in Saint-Tropez — the old port, Place des Lices, the Citadelle, Pampelonne beach clubs and the old quarter, with chauffeur tips.",
+      "The best things to do in Saint-Tropez: the old port, Place des Lices, the Citadelle, Pampelonne beach clubs and the old quarter, with chauffeur tips.",
     excerpt:
-      "The old port, Place des Lices, the Citadelle and the Pampelonne beach clubs — the best things to do in Saint-Tropez.",
+      "The old port, Place des Lices, the Citadelle and the Pampelonne beach clubs: the best things to do in Saint-Tropez.",
     category: "Destinations",
     heroKicker: "Saint-Tropez city guide",
     readTime: "7 min read",
@@ -385,13 +385,13 @@ export const destinationPosts: BlogPost[] = [
       "Place des Lices Saint-Tropez",
     ],
     intro:
-      "Saint-Tropez wears two faces: the timeless Provençal fishing village of pastel houses and pétanque squares, and the glamorous playground of superyachts and beach clubs. The best visits enjoy both. Here are the best things to do in Saint-Tropez, and how a chauffeur handles the one thing the village cannot fix — its summer traffic.",
+      "Saint-Tropez wears two faces: the timeless Provençal fishing village of pastel houses and pétanque squares, and the glamorous playground of superyachts and beach clubs. The best visits enjoy both. Here are the best things to do in Saint-Tropez, and how a chauffeur handles the one thing the village cannot fix: its summer traffic.",
     sections: [
       {
         id: "old-port",
         title: "The old port and La Ponche",
         paragraphs: [
-          "The old port is the heart of Saint-Tropez, where fishing boats and superyachts share the quay and café terraces spill onto the cobbles. Just behind it, the old fishermen's quarter of La Ponche is the village at its most authentic — narrow lanes, tiny squares and a small beach.",
+          "The old port is the heart of Saint-Tropez, where fishing boats and superyachts share the quay and café terraces spill onto the cobbles. Just behind it, the old fishermen's quarter of La Ponche is the village at its most authentic: narrow lanes, tiny squares and a small beach.",
           "Early morning and evening are the magic hours here, before and after the day-trippers.",
         ],
         bullets: [
@@ -466,7 +466,7 @@ export const destinationPosts: BlogPost[] = [
     ],
     ctaTitle: "Discover Saint-Tropez with a chauffeur",
     ctaDescription:
-      "Enjoy the village and the beach clubs without the traffic — a private driver for Saint-Tropez, Pampelonne and the hill villages.",
+      "Enjoy the village and the beach clubs without the traffic: a private driver for Saint-Tropez, Pampelonne and the hill villages.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -474,9 +474,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "antibes-juan-les-pins-guide",
     title: "Antibes and Juan-les-Pins Travel Guide",
     description:
-      "A visitor's guide to Antibes and Juan-les-Pins — Old Antibes, the Picasso Museum, Port Vauban, the markets and the beaches, with chauffeur tips.",
+      "A visitor's guide to Antibes and Juan-les-Pins: Old Antibes, the Picasso Museum, Port Vauban, the markets and the beaches, with chauffeur tips.",
     excerpt:
-      "Old Antibes, the Picasso Museum, Port Vauban and the beaches of Juan-les-Pins — a visitor's guide to two Riviera favourites.",
+      "Old Antibes, the Picasso Museum, Port Vauban and the beaches of Juan-les-Pins: a visitor's guide to two Riviera favourites.",
     category: "Destinations",
     heroKicker: "Antibes & Juan-les-Pins",
     readTime: "7 min read",
@@ -513,7 +513,7 @@ export const destinationPosts: BlogPost[] = [
         title: "The Picasso Museum and Port Vauban",
         paragraphs: [
           "Set in the seafront Château Grimaldi, where Picasso worked in 1946, the Picasso Museum holds paintings, ceramics and drawings from that prolific period. Just below, Port Vauban is the largest marina in the Mediterranean, its Quai des Milliardaires lined with some of the world's biggest yachts.",
-          "The contrast — medieval castle, modern art, superyachts — is Antibes in a nutshell.",
+          "The contrast (medieval castle, modern art, superyachts) is Antibes in a nutshell.",
         ],
         bullets: [
           "The Picasso Museum at Château Grimaldi",
@@ -571,9 +571,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "beaulieu-sur-mer-guide",
     title: "Beaulieu-sur-Mer Travel Guide",
     description:
-      "A travel guide to Beaulieu-sur-Mer — the Villa Kérylos, the marina, the belle-époque seafront and the coastal walk to Cap-Ferrat, with chauffeur tips.",
+      "A travel guide to Beaulieu-sur-Mer: the Villa Kérylos, the marina, the belle-époque seafront and the coastal walk to Cap-Ferrat, with chauffeur tips.",
     excerpt:
-      "The Villa Kérylos, the marina and the coastal walk to Cap-Ferrat — a travel guide to belle-époque Beaulieu-sur-Mer.",
+      "The Villa Kérylos, the marina and the coastal walk to Cap-Ferrat: a travel guide to belle-époque Beaulieu-sur-Mer.",
     category: "Destinations",
     heroKicker: "Beaulieu-sur-Mer",
     readTime: "6 min read",
@@ -663,9 +663,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "villefranche-sur-mer-cruise-port-guide",
     title: "Villefranche-sur-Mer Cruise Port Guide",
     description:
-      "A guide to Villefranche-sur-Mer for cruise visitors — the old town, Rue Obscure, the Citadelle and shore excursions by private chauffeur.",
+      "A guide to Villefranche-sur-Mer for cruise visitors: the old town, Rue Obscure, the Citadelle and shore excursions by private chauffeur.",
     excerpt:
-      "The old town, Rue Obscure, the Citadelle and shore excursions — a Villefranche-sur-Mer guide for cruise visitors.",
+      "The old town, Rue Obscure, the Citadelle and shore excursions: a Villefranche-sur-Mer guide for cruise visitors.",
     category: "Destinations",
     heroKicker: "Villefranche cruise port",
     readTime: "7 min read",
@@ -681,14 +681,14 @@ export const destinationPosts: BlogPost[] = [
       "Villefranche shore excursion",
     ],
     intro:
-      "Villefranche-sur-Mer has one of the deepest natural harbours on the Mediterranean, which is why cruise ships love to anchor in its bay and tender their passengers ashore. It is a beautiful port of call — a jewel-box old town — and the perfect launch point for a shore excursion along the coast. Here is a guide to Villefranche for cruise visitors and day-trippers alike.",
+      "Villefranche-sur-Mer has one of the deepest natural harbours on the Mediterranean, which is why cruise ships love to anchor in its bay and tender their passengers ashore. It is a beautiful port of call, a jewel-box old town, and the perfect launch point for a shore excursion along the coast. Here is a guide to Villefranche for cruise visitors and day-trippers alike.",
     sections: [
       {
         id: "the-bay",
         title: "The bay and the tender port",
         paragraphs: [
           "Villefranche's deep, sheltered bay makes it a natural cruise anchorage. Ships moor offshore and tenders bring passengers to the small port beneath the old town, steps from the heart of the village.",
-          "For a shore excursion, timing matters — a chauffeur meets you at the tender quay, plans the day around the last tender back, and removes the risk of missing the ship.",
+          "For a shore excursion, timing matters: a chauffeur meets you at the tender quay, plans the day around the last tender back, and removes the risk of missing the ship.",
         ],
         bullets: [
           "One of the deepest natural harbours on the coast",
@@ -756,9 +756,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "french-riviera-3-day-itinerary",
     title: "French Riviera: A 3-Day Itinerary",
     description:
-      "A perfect 3-day French Riviera itinerary — Nice, Èze and Monaco, then Cannes and Antibes, then the villages, all linked by private chauffeur.",
+      "A perfect 3-day French Riviera itinerary: Nice, Èze and Monaco, then Cannes and Antibes, then the villages, all linked by private chauffeur.",
     excerpt:
-      "Nice, Èze and Monaco, then Cannes and Antibes, then the villages — a perfect 3-day French Riviera itinerary by chauffeur.",
+      "Nice, Èze and Monaco, then Cannes and Antibes, then the villages: a perfect 3-day French Riviera itinerary by chauffeur.",
     category: "Destinations",
     heroKicker: "Riviera itinerary",
     readTime: "8 min read",
@@ -774,7 +774,7 @@ export const destinationPosts: BlogPost[] = [
       "Cote d'Azur itinerary",
     ],
     intro:
-      "Three days is enough to fall for the French Riviera if you plan them well. This itinerary balances the great set pieces — Monaco, Cannes, Nice — with the perched villages and quiet corners that make the coast special. With a private chauffeur handling the driving and the traffic, each day flows from one highlight to the next. Here is a perfect 3-day French Riviera itinerary.",
+      "Three days is enough to fall for the French Riviera if you plan them well. This itinerary balances the great set pieces (Monaco, Cannes, Nice) with the perched villages and quiet corners that make the coast special. With a private chauffeur handling the driving and the traffic, each day flows from one highlight to the next. Here is a perfect 3-day French Riviera itinerary.",
     sections: [
       {
         id: "day-one",
@@ -850,9 +850,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "getting-around-nice",
     title: "How to Get Around Nice",
     description:
-      "How to get around Nice — walking, the tram, bikes, taxis and private chauffeurs — plus the easiest ways to reach the rest of the Riviera.",
+      "How to get around Nice (walking, the tram, bikes, taxis and private chauffeurs), plus the easiest ways to reach the rest of the Riviera.",
     excerpt:
-      "Walking, the tram, bikes, taxis and chauffeurs — how to get around Nice and reach the rest of the Riviera.",
+      "Walking, the tram, bikes, taxis and chauffeurs: how to get around Nice and reach the rest of the Riviera.",
     category: "Destinations",
     heroKicker: "Getting around Nice",
     readTime: "6 min read",
@@ -868,13 +868,13 @@ export const destinationPosts: BlogPost[] = [
       "Nice without a car",
     ],
     intro:
-      "Nice is an easy city to explore, but the right mix of transport depends on how far you want to roam. The centre is walkable, the tram is quick and cheap, and a chauffeur unlocks the hills and the wider coast. Here is how to get around Nice — and beyond.",
+      "Nice is an easy city to explore, but the right mix of transport depends on how far you want to roam. The centre is walkable, the tram is quick and cheap, and a chauffeur unlocks the hills and the wider coast. Here is how to get around Nice and beyond.",
     sections: [
       {
         id: "on-foot-and-tram",
         title: "On foot and by tram",
         paragraphs: [
-          "Central Nice is best on foot: the Old Town, the Promenade des Anglais, the port and Place Masséna are all within walking distance of each other. For longer hops, the modern tram is fast and inexpensive — Line 1 crosses the centre, and Line 2 runs to the airport.",
+          "Central Nice is best on foot: the Old Town, the Promenade des Anglais, the port and Place Masséna are all within walking distance of each other. For longer hops, the modern tram is fast and inexpensive: Line 1 crosses the centre, and Line 2 runs to the airport.",
           "Between them, walking and the tram cover most of what a visitor needs in the city itself.",
         ],
         bullets: [
@@ -946,7 +946,7 @@ export const destinationPosts: BlogPost[] = [
     description:
       "The most scenic drives on the French Riviera — the three Corniches, the Gorges du Loup and the Route des Crêtes — best enjoyed with a chauffeur.",
     excerpt:
-      "The three Corniches, the Gorges du Loup and the Route des Crêtes — the most scenic drives on the French Riviera.",
+      "The three Corniches, the Gorges du Loup and the Route des Crêtes: the most scenic drives on the French Riviera.",
     category: "Destinations",
     heroKicker: "Riviera scenic drives",
     readTime: "6 min read",
@@ -962,7 +962,7 @@ export const destinationPosts: BlogPost[] = [
       "best drives Cote d'Azur",
     ],
     intro:
-      "Some of the French Riviera's greatest sights are seen through the windscreen. Its corniche roads and mountain passes offer views that rival any museum, and being driven — rather than driving — is the only way to truly enjoy them. Here are the most scenic drives on the French Riviera.",
+      "Some of the French Riviera's greatest sights are seen through the windscreen. Its corniche roads and mountain passes offer views that rival any museum, and being driven, rather than driving, is the only way to truly enjoy them. Here are the most scenic drives on the French Riviera.",
     sections: [
       {
         id: "the-corniches",
@@ -1029,7 +1029,7 @@ export const destinationPosts: BlogPost[] = [
     ],
     ctaTitle: "Enjoy the Riviera's scenic drives",
     ctaDescription:
-      "Take in the corniches and mountain roads from the back seat — a private chauffeur for the Riviera's finest drives.",
+      "Take in the corniches and mountain roads from the back seat: a private chauffeur for the Riviera's finest drives.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -1055,13 +1055,13 @@ export const destinationPosts: BlogPost[] = [
       "Monaco chauffeur",
     ],
     intro:
-      "Monaco is tiny — barely two square kilometres — but it is famously steep, stacked in tiers up the hillside above its harbour. That makes getting around a question of managing gradients rather than distance. Here is how to move between the Casino, the Rock and the port, and the easiest way to arrive from Nice and the airport.",
+      "Monaco is tiny (barely two square kilometres), but it is famously steep, stacked in tiers up the hillside above its harbour. That makes getting around a question of managing gradients rather than distance. Here is how to move between the Casino, the Rock and the port, and the easiest way to arrive from Nice and the airport.",
     sections: [
       {
         id: "on-foot-and-lifts",
         title: "On foot and by public lift",
         paragraphs: [
-          "Everything in Monaco is close, but little of it is flat. The principality solves this with a network of free public lifts and escalators that connect the different levels — from the port up to the Casino, from Fontvieille to the Rock, and more. Follow the signs and you can cross the whole state on foot without ever climbing a long staircase.",
+          "Everything in Monaco is close, but little of it is flat. The principality solves this with a network of free public lifts and escalators that connect the different levels: from the port up to the Casino, from Fontvieille to the Rock, and more. Follow the signs and you can cross the whole state on foot without ever climbing a long staircase.",
           "For the Casino square, the Old Town on the Rock and the harbour, walking combined with the public lifts is genuinely the quickest way around.",
         ],
         bullets: [
@@ -1075,7 +1075,7 @@ export const destinationPosts: BlogPost[] = [
         id: "buses-and-taxis",
         title: "Buses, taxis and parking",
         paragraphs: [
-          "Monaco's compact bus network covers the main districts and is inexpensive, while taxis wait at the station and the main hotels but can be scarce on event days. Driving yourself means navigating tunnels and one-way ramps and paying for the public car parks — manageable, but rarely relaxing.",
+          "Monaco's compact bus network covers the main districts and is inexpensive, while taxis wait at the station and the main hotels but can be scarce on event days. Driving yourself means navigating tunnels and one-way ramps and paying for the public car parks: manageable, but rarely relaxing.",
           "For a short hop between neighbourhoods a bus or taxi is fine; for a day that mixes Monaco with the wider coast, they are less flexible.",
         ],
         bullets: [
@@ -1122,7 +1122,7 @@ export const destinationPosts: BlogPost[] = [
     ],
     ctaTitle: "Arrive in Monaco the easy way",
     ctaDescription:
-      "Skip the tunnels and car parks — a private chauffeur brings you to your Monaco door and on around the coast.",
+      "Skip the tunnels and car parks. A private chauffeur brings you to your Monaco door and on around the coast.",
     ctaHref: "/our-services/private-tours/monaco",
     ctaLabel: "See the Monaco private tour",
   },
@@ -1305,9 +1305,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "french-riviera-in-winter",
     title: "The French Riviera in Winter",
     description:
-      "The French Riviera in winter — mild weather, quiet villages, the Menton lemon festival, Nice carnival and ski days in the Alps, all within reach.",
+      "The French Riviera in winter: mild weather, quiet villages, the Menton lemon festival, Nice carnival and ski days in the Alps, all within reach.",
     excerpt:
-      "Mild weather, quiet villages, festivals and ski days — why the French Riviera rewards a winter visit.",
+      "Mild weather, quiet villages, festivals and ski days: why the French Riviera rewards a winter visit.",
     category: "Destinations",
     heroKicker: "The Riviera in winter",
     readTime: "6 min read",
@@ -1323,13 +1323,13 @@ export const destinationPosts: BlogPost[] = [
       "Riviera off season",
     ],
     intro:
-      "The Riviera is a summer icon, but winter has its own quiet appeal. The weather stays mild, the famous villages empty of crowds, and two of the coast's biggest festivals light up February — with the ski slopes of the Alps close enough for a day trip. Here is what a winter visit to the French Riviera looks like.",
+      "The Riviera is a summer icon, but winter has its own quiet appeal. The weather stays mild, the famous villages empty of crowds, and two of the coast's biggest festivals light up February, with the ski slopes of the Alps close enough for a day trip. Here is what a winter visit to the French Riviera looks like.",
     sections: [
       {
         id: "weather-and-mood",
         title: "Mild weather and quiet streets",
         paragraphs: [
-          "Sheltered by the Alps, the coast keeps some of the mildest winters in France — crisp, bright days that are perfect for walking the Promenade or a village lane. The great sights of Nice, Èze, Antibes and Monaco stay open, but without the summer queues and traffic.",
+          "Sheltered by the Alps, the coast keeps some of the mildest winters in France: crisp, bright days that are perfect for walking the Promenade or a village lane. The great sights of Nice, Èze, Antibes and Monaco stay open, but without the summer queues and traffic.",
           "It is the season to enjoy the Riviera at its own pace: a long lunch, a quiet gallery, a village all to yourself.",
         ],
         bullets: [
@@ -1343,12 +1343,12 @@ export const destinationPosts: BlogPost[] = [
         id: "winter-events",
         title: "Winter festivals",
         paragraphs: [
-          "February brings the coast to life. The Nice Carnival fills the city with floats and flower battles, while just along the coast Menton stages its Fête du Citron — the Lemon Festival — with vast sculptures built from citrus fruit. Between them they draw visitors from across Europe.",
+          "February brings the coast to life. The Nice Carnival fills the city with floats and flower battles, while just along the coast Menton stages its Fête du Citron (the Lemon Festival) with vast sculptures built from citrus fruit. Between them they draw visitors from across Europe.",
           "A chauffeur makes hopping between the two, or arriving in the evening for the illuminated parades, effortless.",
         ],
         bullets: [
-          "Nice Carnival — floats and flower battles",
-          "Menton Fête du Citron — giant citrus sculptures",
+          "Nice Carnival: floats and flower battles",
+          "Menton Fête du Citron: giant citrus sculptures",
           "Both take place in February",
           "Evening parades are best reached by car",
         ],
@@ -1365,7 +1365,7 @@ export const destinationPosts: BlogPost[] = [
         id: "getting-around",
         title: "Getting around in winter",
         paragraphs: [
-          "Shorter days and the occasional mountain shower make a private chauffeur especially welcome in winter — door to door, warm and unhurried, whether for a festival evening or a village lunch.",
+          "Shorter days and the occasional mountain shower make a private chauffeur especially welcome in winter: door to door, warm and unhurried, whether for a festival evening or a village lunch.",
           "It is the most comfortable way to string the season's highlights together without watching timetables in the cold.",
         ],
       },
@@ -1379,7 +1379,7 @@ export const destinationPosts: BlogPost[] = [
       {
         question: "What is the weather like on the Riviera in winter?",
         answer:
-          "Sheltered by the Alps, the coast keeps mild, bright winters — cool but often sunny, ideal for walking and sightseeing without summer crowds.",
+          "Sheltered by the Alps, the coast keeps mild, bright winters: cool but often sunny, ideal for walking and sightseeing without summer crowds.",
       },
       {
         question: "Can you ski and visit the coast in the same day?",
@@ -1397,7 +1397,7 @@ export const destinationPosts: BlogPost[] = [
     ],
     ctaTitle: "Enjoy the Riviera off-season",
     ctaDescription:
-      "Festivals, quiet villages and ski days — explore the winter Riviera door to door with a private chauffeur.",
+      "Festivals, quiet villages and ski days: explore the winter Riviera door to door with a private chauffeur.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },
@@ -1405,9 +1405,9 @@ export const destinationPosts: BlogPost[] = [
     slug: "french-riviera-markets",
     title: "Best Markets on the French Riviera",
     description:
-      "The best markets on the French Riviera — the Cours Saleya in Nice, Forville in Cannes, the Provencal markets of Antibes, Menton and beyond.",
+      "The best markets on the French Riviera: the Cours Saleya in Nice, Forville in Cannes, the Provencal markets of Antibes, Menton and beyond.",
     excerpt:
-      "Flowers, produce, antiques and Provençal colour — the best open-air markets to explore on the French Riviera.",
+      "Flowers, produce, antiques and Provençal colour: the best open-air markets to explore on the French Riviera.",
     category: "Destinations",
     heroKicker: "Riviera markets",
     readTime: "6 min read",
@@ -1423,13 +1423,13 @@ export const destinationPosts: BlogPost[] = [
       "Provencal markets Riviera",
     ],
     intro:
-      "Nothing captures the Riviera's everyday pleasure quite like its markets — trestles of flowers and sun-ripened produce, wheels of cheese and Provençal spices, antiques laid out under plane trees. Every town has its own, each with a rhythm and a speciality. Here are the best open-air markets to explore on the French Riviera.",
+      "Nothing captures the Riviera's everyday pleasure quite like its markets: trestles of flowers and sun-ripened produce, wheels of cheese and Provençal spices, antiques laid out under plane trees. Every town has its own, each with a rhythm and a speciality. Here are the best open-air markets to explore on the French Riviera.",
     sections: [
       {
         id: "nice-cours-saleya",
         title: "Nice: the Cours Saleya",
         paragraphs: [
-          "The Cours Saleya in the heart of Nice's Old Town is the coast's most famous market. Most mornings it brims with flowers and Provençal produce — olives, tomatoes, herbs, socca — under striped awnings, and on Mondays it turns over to a celebrated antiques and brocante market.",
+          "The Cours Saleya in the heart of Nice's Old Town is the coast's most famous market. Most mornings it brims with flowers and Provençal produce (olives, tomatoes, herbs, socca) under striped awnings, and on Mondays it turns over to a celebrated antiques and brocante market.",
           "It is the perfect first stop for a taste of Riviera life, an easy walk from the Promenade.",
         ],
         bullets: [
@@ -1443,7 +1443,7 @@ export const destinationPosts: BlogPost[] = [
         id: "cannes-and-antibes",
         title: "Cannes and Antibes",
         paragraphs: [
-          "In Cannes, the Marché Forville behind the Croisette is where the town's chefs shop — a covered hall of Provençal produce, fish and flowers. Along the coast in Antibes, the Marché Provençal on Cours Masséna spreads under a handsome iron roof, famous for its cheeses, cured meats and Provençal colour.",
+          "In Cannes, the Marché Forville behind the Croisette is where the town's chefs shop: a covered hall of Provençal produce, fish and flowers. Along the coast in Antibes, the Marché Provençal on Cours Masséna spreads under a handsome iron roof, famous for its cheeses, cured meats and Provençal colour.",
           "Both are working markets first and photogenic second, which is exactly their charm.",
         ],
         bullets: [
@@ -1465,7 +1465,7 @@ export const destinationPosts: BlogPost[] = [
         id: "market-day-by-chauffeur",
         title: "A market day by chauffeur",
         paragraphs: [
-          "Markets run to their own morning timetable and the best ones are in different towns, so a private chauffeur is the natural way to string several together — with room in the boot for whatever you buy.",
+          "Markets run to their own morning timetable and the best ones are in different towns, so a private chauffeur is the natural way to string several together with room in the boot for whatever you buy.",
           "A driver drops you at the market square, waits while you browse, and carries you on to the next town or a long Provençal lunch.",
         ],
       },
@@ -1499,7 +1499,7 @@ export const destinationPosts: BlogPost[] = [
     ],
     ctaTitle: "Explore the Riviera's markets",
     ctaDescription:
-      "From the Cours Saleya to the villages — a private chauffeur links the coast's best markets into one easy morning.",
+      "A private chauffeur links the coast's best markets into one easy morning, from the Cours Saleya to the villages.",
     ctaHref: "/our-services/private-tours",
     ctaLabel: "See private tours",
   },

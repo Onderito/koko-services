@@ -6,9 +6,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "what-is-a-private-chauffeur-service",
     title: "What Is a Private Chauffeur Service",
     description:
-      "What is a private chauffeur service? How chauffeured travel works on the French Riviera — the car, the driver and what is included.",
+      "What is a private chauffeur service? How chauffeured travel works on the French Riviera: the car, the driver and what is included.",
     excerpt:
-      "The car, the driver and what is included — how a private chauffeur service works on the French Riviera.",
+      "The car, the driver and what is included: how a private chauffeur service works on the French Riviera.",
     category: "Chauffeur Services",
     heroKicker: "Private chauffeur",
     readTime: "5 min read",
@@ -30,7 +30,7 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "a-car-and-a-professional-driver",
         title: "A car and a professional driver",
         paragraphs: [
-          "At its heart, a chauffeur service pairs a comfortable, well-kept vehicle — typically a Mercedes E-Class, V-Class, S-Class or Maybach — with a trained, professional driver dedicated to you for the journey or the day. It is not a shared ride or a hailed taxi, but a car reserved for your use.",
+          "At its heart, a chauffeur service pairs a comfortable, well-kept vehicle (typically a Mercedes E-Class, V-Class, S-Class or Maybach) with a trained, professional driver dedicated to you for the journey or the day. It is not a shared ride or a hailed taxi, but a car reserved for your use.",
           "The chauffeur handles the driving, the route, the parking and the luggage, so you simply travel.",
         ],
         bullets: [
@@ -44,7 +44,7 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "how-it-differs-from-a-taxi",
         title: "How it differs from a taxi",
         paragraphs: [
-          "Unlike a taxi, a chauffeur service is arranged ahead, at a fixed price, in a vehicle of your choosing. It adds a meet-and-greet at airports, local knowledge, discretion and a consistent standard — the same care every time, rather than whatever is next on the rank.",
+          "Unlike a taxi, a chauffeur service is arranged ahead, at a fixed price, in a vehicle of your choosing. It adds a meet-and-greet at airports, local knowledge, discretion and a consistent standard: the same care every time, rather than whatever is next on the rank.",
           "The difference is reliability and comfort, from booking to arrival.",
         ],
         bullets: [
@@ -75,7 +75,7 @@ export const servicesExplainedPosts: BlogPost[] = [
       {
         question: "What is a private chauffeur service?",
         answer:
-          "A car and a professional driver reserved for your use, booked in advance at a fixed price — not a shared ride or a hailed taxi.",
+          "A car and a professional driver reserved for your use, booked in advance at a fixed price. Not a shared ride or a hailed taxi.",
       },
       {
         question: "How is a chauffeur different from a taxi?",
@@ -99,7 +99,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "Experience a private chauffeur",
     ctaDescription:
-      "A car and professional driver at your service, priced up front — a private chauffeur across the French Riviera.",
+      "A car and professional driver at your service, priced up front. A private chauffeur across the French Riviera.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See our services",
   },
@@ -107,9 +107,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "airport-transfer-service-explained",
     title: "Airport Transfer Service Explained",
     description:
-      "How an airport transfer service works on the French Riviera — meet and greet, luggage, a fixed price and a driver from the door.",
+      "How an airport transfer service works on the French Riviera: meet and greet, luggage, a fixed price and a driver from the door.",
     excerpt:
-      "Meet and greet, luggage and a fixed price — how a private airport transfer service works on the Riviera.",
+      "Meet and greet, luggage and a fixed price: how a private airport transfer service works on the Riviera.",
     category: "Chauffeur Services",
     heroKicker: "Airport transfers",
     readTime: "5 min read",
@@ -125,13 +125,13 @@ export const servicesExplainedPosts: BlogPost[] = [
       "airport chauffeur service",
     ],
     intro:
-      "A private airport transfer takes the friction out of arriving — no taxi queue, no working out the route, just a driver waiting to take you and your luggage to the door. Here is how an airport transfer service works on the French Riviera.",
+      "A private airport transfer takes the friction out of arriving: no taxi queue, no working out the route, just a driver waiting to take you and your luggage to the door. Here is how an airport transfer service works on the French Riviera.",
     sections: [
       {
         id: "meet-and-greet",
         title: "Meet and greet",
         paragraphs: [
-          "Your chauffeur waits in the arrivals hall with a name board, having tracked the flight for delays, and takes your luggage to the car. There is no searching for a rank or waiting in a queue — the driver is there for you, whatever time you land.",
+          "Your chauffeur waits in the arrivals hall with a name board, having tracked the flight for delays, and takes your luggage to the car. There is no searching for a rank or waiting in a queue. The driver is there for you, whatever time you land.",
           "It is the calm, personal start that sets the tone for a trip.",
         ],
         bullets: [
@@ -192,7 +192,7 @@ export const servicesExplainedPosts: BlogPost[] = [
       {
         question: "What vehicle will collect me from the airport?",
         answer:
-          "The one you choose at booking — an E-Class for a couple, a V-Class for groups and luggage, or an S-Class or Maybach for a formal arrival.",
+          "The one you choose at booking: an E-Class for a couple, a V-Class for groups and luggage, or an S-Class or Maybach for a formal arrival.",
       },
       {
         question: "Should I book an airport transfer in advance?",
@@ -207,7 +207,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "Book a seamless airport transfer",
     ctaDescription:
-      "Met at your flight, luggage handled, driven to the door at a fixed price — a private airport transfer on the Riviera.",
+      "Met at your flight, luggage handled, driven to the door at a fixed price: a private airport transfer on the Riviera.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -215,9 +215,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "hourly-chauffeur-service-explained",
     title: "Hourly Chauffeur Service Explained",
     description:
-      "How an hourly chauffeur service works — the car and driver at your disposal by the hour for tours, events and multi-stop days.",
+      "How an hourly chauffeur service works: the car and driver at your disposal by the hour for tours, events and multi-stop days.",
     excerpt:
-      "The car and driver at your disposal by the hour — how an hourly, as-directed chauffeur service works.",
+      "The car and driver at your disposal by the hour: how an hourly, as-directed chauffeur service works.",
     category: "Chauffeur Services",
     heroKicker: "Hourly chauffeur",
     readTime: "5 min read",
@@ -233,7 +233,7 @@ export const servicesExplainedPosts: BlogPost[] = [
       "hourly car hire Riviera",
     ],
     intro:
-      "Sometimes a single transfer is not enough — you want the car to stay with you through a day of stops. That is what hourly, or as-directed, chauffeur hire provides. Here is how an hourly chauffeur service works on the French Riviera.",
+      "Sometimes a single transfer is not enough. You want the car to stay with you through a day of stops. That is what hourly, or as-directed, chauffeur hire provides. Here is how an hourly chauffeur service works on the French Riviera.",
     sections: [
       {
         id: "car-and-driver-at-your-disposal",
@@ -271,9 +271,9 @@ export const servicesExplainedPosts: BlogPost[] = [
           "The price covers the car, the driver and the waiting, agreed in advance.",
         ],
         bullets: [
-          "E-Class — from around €90/hour",
-          "V-Class — from around €110/hour",
-          "S-Class — from around €130/hour",
+          "E-Class: from around €90/hour",
+          "V-Class: from around €110/hour",
+          "S-Class: from around €130/hour",
           "Full-day rates for longer use",
         ],
       },
@@ -281,7 +281,7 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "the-freedom-it-gives",
         title: "The freedom it gives",
         paragraphs: [
-          "The real value is flexibility: linger over lunch, add a stop, change the plan, and the car is simply there. There is no watching a meter and no arranging the next leg — the day flexes around you.",
+          "The real value is flexibility: linger over lunch, add a stop, change the plan, and the car is simply there. There is no watching a meter and no arranging the next leg. The day flexes around you.",
           "It is the most relaxed way to spend a day out on the coast.",
         ],
       },
@@ -314,7 +314,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "Hire a chauffeur by the hour",
     ctaDescription:
-      "The car and driver at your disposal, waiting between stops — an hourly chauffeur for your day on the Riviera.",
+      "An hourly chauffeur for your day on the Riviera: the car and driver at your disposal, waiting between stops.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -322,9 +322,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "wedding-chauffeur-service",
     title: "Wedding Chauffeur Service",
     description:
-      "How a wedding chauffeur service works on the French Riviera — the bridal car, guest transport and one coordinated fleet for the day.",
+      "How a wedding chauffeur service works on the French Riviera: the bridal car, guest transport and one coordinated fleet for the day.",
     excerpt:
-      "The bridal car, guest transport and one coordinated fleet — how a wedding chauffeur service works.",
+      "The bridal car, guest transport and one coordinated fleet: how a wedding chauffeur service works.",
     category: "Chauffeur Services",
     heroKicker: "Weddings",
     readTime: "5 min read",
@@ -340,13 +340,13 @@ export const servicesExplainedPosts: BlogPost[] = [
       "wedding transport service",
     ],
     intro:
-      "A wedding chauffeur service does more than provide a beautiful car — it choreographs the transport of the whole day, from the bridal arrival to the last guest home. Here is how a wedding chauffeur service works on the French Riviera.",
+      "A wedding chauffeur service does more than provide a beautiful car: it choreographs the transport of the whole day, from the bridal arrival to the last guest home. Here is how a wedding chauffeur service works on the French Riviera.",
     sections: [
       {
         id: "the-bridal-car",
         title: "The bridal car",
         paragraphs: [
-          "At the centre is the couple's car — an immaculate S-Class or Maybach, dressed for the occasion, with a dedicated chauffeur for the arrival, the photographs and the departure. It is the elegant thread through the day's most important moments.",
+          "At the centre is the couple's car, an immaculate S-Class or Maybach, dressed for the occasion, with a dedicated chauffeur for the arrival, the photographs and the departure. It is the elegant thread through the day's most important moments.",
           "Unhurried, immaculate and always ready when needed.",
         ],
         bullets: [
@@ -408,7 +408,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "A chauffeur service for your wedding",
     ctaDescription:
-      "The bridal car and guest shuttles, coordinated as one fleet — a wedding chauffeur service on the French Riviera.",
+      "The bridal car and guest shuttles, coordinated as one fleet. A wedding chauffeur service on the French Riviera.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -416,9 +416,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "group-event-transport",
     title: "Group and Event Transport",
     description:
-      "How group and event transport works on the French Riviera — minibuses and cars for weddings, corporate events and celebrations.",
+      "How group and event transport works on the French Riviera: minibuses and cars for weddings, corporate events and celebrations.",
     excerpt:
-      "Minibuses and cars for weddings, corporate events and celebrations — group and event transport on the Riviera.",
+      "Minibuses and cars for weddings, corporate events and celebrations: group and event transport on the Riviera.",
     category: "Chauffeur Services",
     heroKicker: "Groups and events",
     readTime: "5 min read",
@@ -434,7 +434,7 @@ export const servicesExplainedPosts: BlogPost[] = [
       "event shuttle French Riviera",
     ],
     intro:
-      "Moving a group is a different challenge from moving a couple — it takes the right vehicles, coordinated timings and a plan. A group and event transport service handles all of it. Here is how group and event transport works on the French Riviera.",
+      "Moving a group is a different challenge from moving a couple. It takes the right vehicles, coordinated timings and a plan. A group and event transport service handles all of it. Here is how group and event transport works on the French Riviera.",
     sections: [
       {
         id: "the-right-vehicles",
@@ -454,7 +454,7 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "coordinated-timings",
         title: "Coordinated timings",
         paragraphs: [
-          "The heart of group transport is coordination — getting everyone from hotels to a venue and back on schedule, across multiple vehicles and pickups. A single plan and point of contact keeps the movement smooth, whatever the size of the party.",
+          "The heart of group transport is coordination: getting everyone from hotels to a venue and back on schedule, across multiple vehicles and pickups. A single plan and point of contact keeps the movement smooth, whatever the size of the party.",
           "It is logistics handled, so guests simply arrive.",
         ],
         bullets: [
@@ -502,7 +502,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "Transport for groups and events",
     ctaDescription:
-      "The right vehicles, coordinated to the minute — group and event transport across the French Riviera.",
+      "The right vehicles, coordinated to the minute: group and event transport across the French Riviera.",
     ctaHref: "/our-services/hourly-chauffeur",
     ctaLabel: "See hourly chauffeur",
   },
@@ -510,9 +510,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "v-class-van-transfers-explained",
     title: "V-Class Van Transfers Explained",
     description:
-      "The Mercedes V-Class explained — the spacious luxury van for groups, families and luggage on French Riviera transfers.",
+      "The Mercedes V-Class explained: the spacious luxury van for groups, families and luggage on French Riviera transfers.",
     excerpt:
-      "The spacious luxury van for groups, families and luggage — the Mercedes V-Class on Riviera transfers.",
+      "The spacious luxury van for groups, families and luggage: the Mercedes V-Class on Riviera transfers.",
     category: "Chauffeur Services",
     heroKicker: "The V-Class",
     readTime: "5 min read",
@@ -548,7 +548,7 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "comfort-not-just-capacity",
         title: "Comfort, not just capacity",
         paragraphs: [
-          "The V-Class is a luxury van, not a minibus — leather seats, climate control, space to stretch out and a quiet cabin. Passengers face each other in comfort, making it as pleasant for a long transfer to Saint-Tropez as a short hop from the airport.",
+          "The V-Class is a luxury van, not a minibus. Leather seats, climate control, space to stretch out and a quiet cabin. Passengers face each other in comfort, making it as pleasant for a long transfer to Saint-Tropez as a short hop from the airport.",
           "It combines the room of a van with the comfort of a limousine.",
         ],
         bullets: [
@@ -576,7 +576,7 @@ export const servicesExplainedPosts: BlogPost[] = [
       {
         question: "Is the V-Class a minibus?",
         answer:
-          "No, it is a luxury van — leather seats, climate control and a quiet, spacious cabin, with the room of a van and the comfort of a limousine.",
+          "No, it is a luxury van: leather seats, climate control and a quiet, spacious cabin, with the room of a van and the comfort of a limousine.",
       },
       {
         question: "When should I choose a V-Class transfer?",
@@ -595,7 +595,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "Travel together in a V-Class",
     ctaDescription:
-      "Space for the group and all the luggage, in comfort — a Mercedes V-Class for your French Riviera transfer.",
+      "Space for the group and all the luggage, in comfort: a Mercedes V-Class for your French Riviera transfer.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -603,9 +603,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "what-to-expect-from-a-chauffeur",
     title: "What to Expect from a Chauffeur",
     description:
-      "What to expect from a professional chauffeur — punctuality, discretion, immaculate cars and a standard of service that defines the French Riviera.",
+      "What to expect from a professional chauffeur: punctuality, discretion, immaculate cars and a standard of service that defines the French Riviera.",
     excerpt:
-      "Punctuality, discretion and immaculate cars — what to expect from a professional Riviera chauffeur.",
+      "Punctuality, discretion and immaculate cars: what to expect from a professional Riviera chauffeur.",
     category: "Chauffeur Services",
     heroKicker: "The standard",
     readTime: "5 min read",
@@ -627,7 +627,7 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "punctuality-and-preparation",
         title: "Punctuality and preparation",
         paragraphs: [
-          "A good chauffeur is early, not on time — waiting when you arrive, flight tracked, route planned around the traffic and the day's events. Nothing is rushed and nothing is left to chance, so you never wait and never worry about the timing.",
+          "A good chauffeur is early, not on time: waiting when you arrive, flight tracked, route planned around the traffic and the day's events. Nothing is rushed and nothing is left to chance, so you never wait and never worry about the timing.",
           "Reliability is the first mark of the profession.",
         ],
         bullets: [
@@ -641,7 +641,7 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "discretion-and-presentation",
         title: "Discretion and presentation",
         paragraphs: [
-          "Expect an immaculate, recent vehicle and a smartly dressed, courteous driver who is discreet by instinct — attentive when wanted, unobtrusive otherwise. Confidentiality is a given, whether the passenger is a family, an executive or a public figure.",
+          "Expect an immaculate, recent vehicle and a smartly dressed, courteous driver who is discreet by instinct. Attentive when wanted, unobtrusive otherwise. Confidentiality is a given, whether the passenger is a family, an executive or a public figure.",
           "Presentation and discretion go hand in hand at this level.",
         ],
         bullets: [
@@ -655,7 +655,7 @@ export const servicesExplainedPosts: BlogPost[] = [
         id: "local-knowledge-and-care",
         title: "Local knowledge and care",
         paragraphs: [
-          "A Riviera chauffeur knows the roads, the shortcuts, the parking and the best viewpoints, and looks after the details — the door, the luggage, water in the car, a child seat arranged in advance. It is service built on countless small courtesies.",
+          "A Riviera chauffeur knows the roads, the shortcuts, the parking and the best viewpoints, and looks after the details: the door, the luggage, water in the car, a child seat arranged in advance. It is service built on countless small courtesies.",
           "Those details are what turn a journey into an experience.",
         ],
       },
@@ -689,7 +689,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "Experience the standard",
     ctaDescription:
-      "Punctual, discreet and immaculate — the standard of a professional chauffeur across the French Riviera.",
+      "Punctual, discreet and immaculate: the standard of a professional chauffeur across the French Riviera.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See our services",
   },
@@ -697,9 +697,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "child-seats-family-transfers",
     title: "Child Seats and Family Transfers",
     description:
-      "Child seats and family chauffeur transfers on the French Riviera — safe, spacious travel for children, arranged on request.",
+      "Child seats and family chauffeur transfers on the French Riviera: safe, spacious travel for children, arranged on request.",
     excerpt:
-      "Safe, spacious travel for children, with seats arranged on request — family chauffeur transfers on the Riviera.",
+      "Safe, spacious travel for children, with seats arranged on request. Family chauffeur transfers on the Riviera.",
     category: "Chauffeur Services",
     heroKicker: "Family transfers",
     readTime: "5 min read",
@@ -773,7 +773,7 @@ export const servicesExplainedPosts: BlogPost[] = [
       {
         question: "Can a chauffeur help with family days out?",
         answer:
-          "Yes. A driver makes days to the beaches, aquariums and villages effortless — no parking or buggies on public transport, logistics handled.",
+          "Yes. A driver makes days to the beaches, aquariums and villages effortless: no parking or buggies on public transport, logistics handled.",
       },
     ],
     relatedSlugs: [
@@ -782,7 +782,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "Family transfers, made safe and easy",
     ctaDescription:
-      "Correctly fitted child seats and space for everyone — family chauffeur transfers across the French Riviera.",
+      "Correctly fitted child seats and space for everyone. Family chauffeur transfers across the French Riviera.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },
@@ -790,9 +790,9 @@ export const servicesExplainedPosts: BlogPost[] = [
     slug: "how-to-book-a-chauffeur",
     title: "How to Book a Chauffeur",
     description:
-      "How to book a chauffeur on the French Riviera — what to tell them, how far ahead, and what a good booking includes.",
+      "How to book a chauffeur on the French Riviera: what to tell them, how far ahead, and what a good booking includes.",
     excerpt:
-      "What to tell them, how far ahead, and what a good booking includes — how to book a Riviera chauffeur.",
+      "What to tell them, how far ahead, and what a good booking includes: how to book a Riviera chauffeur.",
     category: "Chauffeur Services",
     heroKicker: "How to book",
     readTime: "5 min read",
@@ -876,7 +876,7 @@ export const servicesExplainedPosts: BlogPost[] = [
     ],
     ctaTitle: "Book your Riviera chauffeur",
     ctaDescription:
-      "A fixed price, the vehicle confirmed, meet-and-greet arranged — book a private chauffeur across the French Riviera.",
+      "A fixed price, the vehicle confirmed, meet-and-greet arranged. Book a private chauffeur across the French Riviera.",
     ctaHref: "/our-services/transfers",
     ctaLabel: "See transfer options",
   },

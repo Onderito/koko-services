@@ -881,12 +881,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Monaco Airport Transfer",
     heroTitle: "Nice Airport to Monaco Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Monaco — around 30 to 40 minutes, delivered to your hotel, the harbour or the Casino without tunnels or parking.",
+      "A meet-and-greet chauffeur transfer from Nice Airport to Monaco: around 30 to 40 minutes, delivered to your hotel, the harbour or the Casino without tunnels or parking.",
     heroImageSrc: "/assets/images/services/monaco-airport-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Monaco with a black Mercedes on the harbour",
     introTitle: "Straight to the Principality",
     introDescription:
-      "Arriving into Monaco should be effortless — no tunnels to navigate, no parking to find, just a driver from the terminal to your door.",
+      "Arriving into Monaco should be effortless: no tunnels to navigate, no parking to find, just a driver from the terminal to your door.",
     panels: [
       {
         title: "Met at Your Flight",
@@ -980,7 +980,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Cannes Airport Transfer",
     heroTitle: "Nice Airport to Cannes Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Cannes — around 30 minutes, delivered to the Croisette, your hotel or the Palais des Festivals.",
+      "A meet-and-greet chauffeur transfer from Nice Airport to Cannes: around 30 minutes, delivered to the Croisette, your hotel or the Palais des Festivals.",
     heroImageSrc: "/assets/images/services/cannes-airport-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Cannes with a black Mercedes on the Croisette",
     introTitle: "Arrive on the Croisette",
@@ -1079,12 +1079,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Tropez Transfer",
     heroTitle: "Nice Airport to Saint-Tropez Transfer",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to Saint-Tropez — around an hour and a half to two hours by road, or a drive to the boat across the gulf, timed around the traffic.",
+      "A private chauffeur transfer from Nice Airport to Saint-Tropez: around an hour and a half to two hours by road, or a drive to the boat across the gulf, timed around the traffic.",
     heroImageSrc: "/assets/images/services/saint-tropez-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Saint-Tropez with a black Mercedes on the quay",
     introTitle: "The Longest, Most Rewarding Run",
     introDescription:
-      "Saint-Tropez sits at the end of its peninsula, so the transfer is a journey in itself — best handled by a chauffeur who plans around the summer traffic.",
+      "Saint-Tropez sits at the end of its peninsula, so the transfer is a journey in itself. Best handled by a chauffeur who plans around the summer traffic.",
     panels: [
       {
         title: "By Road or by Boat",
@@ -1178,12 +1178,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Antibes Transfer",
     heroTitle: "Nice Airport to Antibes Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Antibes — around 25 minutes, delivered to your hotel, Juan-les-Pins, Cap d'Antibes or Port Vauban.",
+      "A meet-and-greet chauffeur transfer from Nice Airport to Antibes: around 25 minutes, delivered to your hotel, Juan-les-Pins, Cap d'Antibes or Port Vauban.",
     heroImageSrc: "/assets/images/services/antibes-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Antibes with a black Mercedes by the ramparts",
     introTitle: "Minutes Along the Coast",
     introDescription:
-      "One of the closest major towns to the airport, Antibes is an easy, quick transfer — met at the flight and delivered to the door.",
+      "One of the closest major towns to the airport, Antibes is an easy, quick transfer. Met at the flight and delivered to the door.",
     panels: [
       {
         title: "Met at Your Flight",
@@ -1277,7 +1277,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Jean-Cap-Ferrat Transfer",
     heroTitle: "Nice Airport to Cap-Ferrat Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Saint-Jean-Cap-Ferrat — around 25 minutes east, delivered discreetly to the villas, hotels and yachts of the peninsula.",
+      "A meet-and-greet chauffeur transfer from Nice Airport to Saint-Jean-Cap-Ferrat: around 25 minutes east, delivered discreetly to the villas, hotels and yachts of the peninsula.",
     heroImageSrc: "/assets/images/services/saint-jean-cap-ferrat-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Cap-Ferrat with a black Mercedes among the villas",
     introTitle: "The Discreet Peninsula",
@@ -1376,7 +1376,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Èze Transfer",
     heroTitle: "Nice Airport to Èze Transfer",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to Èze — around 25 to 30 minutes up the Moyenne Corniche to the car-free village entrance, its hotels and restaurants.",
+      "A private chauffeur transfer from Nice Airport to Èze: around 25 to 30 minutes up the Moyenne Corniche to the car-free village entrance, its hotels and restaurants.",
     heroImageSrc: "/assets/images/services/eze-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Èze with a black Mercedes on the corniche",
     introTitle: "Up to the Perched Village",
@@ -1475,7 +1475,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Villefranche-sur-Mer Transfer",
     heroTitle: "Nice Airport to Villefranche Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Villefranche-sur-Mer — around 20 minutes, delivered to the old town, your hotel or the cruise tender quay.",
+      "A meet-and-greet chauffeur transfer from Nice Airport to Villefranche-sur-Mer: around 20 minutes, delivered to the old town, your hotel or the cruise tender quay.",
     heroImageSrc: "/assets/images/services/villefranche-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Villefranche with a black Mercedes above the bay",
     introTitle: "Minutes to the Deep Bay",
@@ -1574,7 +1574,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Menton Transfer",
     heroTitle: "Nice Airport to Menton Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Menton — around 40 minutes east past Monaco, delivered to the old town, the gardens or the seafront.",
+      "A meet-and-greet chauffeur transfer from Nice Airport to Menton: around 40 minutes east past Monaco, delivered to the old town, the gardens or the seafront.",
     heroImageSrc: "/assets/images/services/menton-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Menton with a black Mercedes on the seafront",
     introTitle: "To the Edge of Italy",
@@ -3437,7 +3437,7 @@ export const yachtTransfersPage: ServicePageConfig = {
     {
       question: "Which marinas do you cover on the French Riviera?",
       answer:
-        "All of them — Port Vauban in Antibes, the ports of Cannes, Monaco's Port Hercule and the old port of Saint-Tropez, among others.",
+        "All of them: Port Vauban in Antibes, the ports of Cannes, Monaco's Port Hercule and the old port of Saint-Tropez, among others.",
     },
     {
       question: "Can you meet a private jet for a yacht transfer?",
@@ -3476,7 +3476,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Monaco Yacht Transfer",
     heroTitle: "Monaco Yacht Transfer to Port Hercule",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to your yacht in Port Hercule — around 30 to 40 minutes, delivered to the quay without Monaco's tunnels or parking.",
+      "A private chauffeur transfer from Nice Airport to your yacht in Port Hercule: around 30 to 40 minutes, delivered to the quay without Monaco's tunnels or parking.",
     heroImageSrc: "/assets/images/services/yacht-monaco.webp",
     heroImageAlt: "Yacht transfer to Port Hercule Monaco with a black Mercedes on the harbour",
     introTitle: "To Monaco's Superyacht Harbour",
@@ -3674,12 +3674,12 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Tropez Yacht Transfer",
     heroTitle: "Saint-Tropez Yacht Transfer",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to your yacht in the old port of Saint-Tropez — by road or by boat across the gulf, timed around the traffic.",
+      "A private chauffeur transfer from Nice Airport to your yacht in the old port of Saint-Tropez. By road or by boat across the gulf, timed around the traffic.",
     heroImageSrc: "/assets/images/services/yacht-saint-tropez.webp",
     heroImageAlt: "Yacht transfer to the old port of Saint-Tropez with a black Mercedes on the quay",
     introTitle: "To the Most Famous Quay",
     introDescription:
-      "The old port of Saint-Tropez is yachting's most famous quay, and also the hardest to reach — best handled by a chauffeur who knows the peninsula.",
+      "The old port of Saint-Tropez is yachting's most famous quay, and also the hardest to reach. Best handled by a chauffeur who knows the peninsula.",
     panels: [
       {
         title: "By Road or by Boat",
@@ -3778,7 +3778,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     heroImageAlt: "Yacht transfer to Port Vauban Antibes with a black Mercedes and superyachts",
     introTitle: "To Europe's Largest Marina",
     introDescription:
-      "Port Vauban is the beating heart of Riviera yachting and one of the closest marinas to the airport — a short, easy transfer.",
+      "Port Vauban is the beating heart of Riviera yachting and one of the closest marinas to the airport. A short, easy transfer.",
     panels: [
       {
         title: "Delivered to the Quay",
@@ -3787,7 +3787,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Crew & Provisioning",
-        text: "Port Vauban generates constant movement ashore — crew changes, provisioning and guest runs, all handled on the yacht's schedule.",
+        text: "Port Vauban generates constant movement ashore: crew changes, provisioning and guest runs, all handled on the yacht's schedule.",
         theme: "light",
       },
     ],
@@ -3840,7 +3840,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       {
         question: "What is the Quai des Milliardaires?",
         answer:
-          "The Billionaires' Quay at Port Vauban — a section reserved for the largest superyachts, thanks to its deep water and prime position.",
+          "The Billionaires' Quay at Port Vauban: a section reserved for the largest superyachts, thanks to its deep water and prime position.",
       },
       {
         question: "Do you handle crew changes at Port Vauban?",
@@ -3971,7 +3971,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Crew Transportation",
     heroTitle: "Yacht Crew Transportation",
     heroDescription:
-      "Private chauffeur transport for superyacht crew across the Riviera — airport and station runs, crew changes and provisioning, on call day and night.",
+      "Private chauffeur transport for superyacht crew across the Riviera: airport and station runs, crew changes and provisioning, on call day and night.",
     heroImageSrc: "/assets/images/services/yacht-crew.webp",
     heroImageAlt: "Yacht crew transportation with a black Mercedes V-Class van on a marina quay",
     introTitle: "Ground Support for the Yacht",
@@ -3980,7 +3980,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Crew Changes, Any Hour",
-        text: "We track flights and run airport and station pickups at any time, with a name board waiting — one reliable contact for every rotation.",
+        text: "We track flights and run airport and station pickups at any time, with a name board waiting. One reliable contact for every rotation.",
         theme: "dark",
       },
       {
@@ -4186,7 +4186,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Monaco Grand Prix Transport",
     heroTitle: "Monaco Grand Prix Transport",
     heroDescription:
-      "Private chauffeur transport for the Monaco Grand Prix each May — arrivals from Nice Airport and on-call transfers around the circuit closures and race-week crowds.",
+      "Private chauffeur transport for the Monaco Grand Prix each May. Arrivals from Nice Airport and on-call transfers around the circuit closures and race-week crowds.",
     heroImageSrc: "/assets/images/services/event-monaco-grand-prix.webp",
     heroImageAlt: "Monaco Grand Prix transport with a racing car on the harbour circuit",
     introTitle: "Race Week, Handled",
@@ -4285,7 +4285,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Cannes Film Festival Transport",
     heroTitle: "Cannes Film Festival Transport",
     heroDescription:
-      "Private chauffeur transport for the Cannes Film Festival each May — red-carpet arrivals at the Palais, black-tie evenings and on-call transfers around the crowds.",
+      "Private chauffeur transport for the Cannes Film Festival each May: red-carpet arrivals at the Palais, black-tie evenings and on-call transfers around the crowds.",
     heroImageSrc: "/assets/images/services/event-cannes-film-festival.webp",
     heroImageAlt: "Cannes Film Festival transport with a black Mercedes at the red carpet",
     introTitle: "Arrive in Style",
@@ -4384,7 +4384,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Monaco Yacht Show Transport",
     heroTitle: "Monaco Yacht Show Transport",
     heroDescription:
-      "Private chauffeur transport for the Monaco Yacht Show each September — arrivals from Nice Airport to Port Hercule and on-call transfers around the crowds.",
+      "Private chauffeur transport for the Monaco Yacht Show each September: arrivals from Nice Airport to Port Hercule and on-call transfers around the crowds.",
     heroImageSrc: "/assets/images/services/event-monaco-yacht-show.webp",
     heroImageAlt: "Monaco Yacht Show transport with superyachts in Port Hercule and a black Mercedes",
     introTitle: "The Superyacht Week",
