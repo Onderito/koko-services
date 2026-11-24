@@ -46,6 +46,14 @@ export const pageUpdatedAt: Record<string, string> = {
   "/our-services/transfers/long-distance-transfer": "2026-11-19",
   // 19 Nov 2026: /ai-instructions rewritten as facts, each with its source page and check date.
   "/ai-instructions": "2026-11-19",
+  // 25 Nov 2026: seven route pages rewritten (how the transfer works, prices from the price list, a new FAQ).
+  ...Object.fromEntries(
+    [
+      "transfers/nice-airport-transfer", "transfers/monaco-airport-transfer", "transfers/cannes-airport-transfer",
+      "transfers/saint-tropez-transfer", "transfers/eze-transfer", "transfers/saint-jean-cap-ferrat-transfer",
+      "transfers/long-distance-transfer",
+    ].map(page => [`/our-services/${page}`, "2026-11-25"]),
+  ),
 };
 
 /** Articles whose text changed after publication, by slug: their Article markup's dateModified. */

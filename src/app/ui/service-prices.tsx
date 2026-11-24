@@ -4,12 +4,13 @@
 // the same rates in every area served, the Alps included; a yacht transfer costs the one-way transfer from Nice
 // Airport to the marina's town. Pages not listed here (the route pages, which have RoutePrices) show no line.
 
-import { vehicles } from "../data/vehicles";
+import { routeStartingPrices, vehicles } from "../data/vehicles";
 import { siteUrl } from "../data/site-config";
 
 type Page =
   | { kind: "hourly"; service: string; area: string }
-  | { kind: "transfer"; service: string; area: string; to: string[] };
+  | { kind: "transfer"; service: string; area: string; to: string[] }
+  | { kind: "route"; service: string; area: string; route: string };
 
 const TOWN: Record<string, string> = { antibes: "Antibes", cannes: "Cannes", monaco: "Monaco", "st-tropez": "Saint-Tropez" };
 const MARINAS = ["antibes", "cannes", "monaco", "st-tropez"];
@@ -39,6 +40,8 @@ const PAGES: Record<string, Page> = {
   "/our-services/yacht-transfers/cannes": { kind: "transfer", service: "Yacht transfer to the Vieux Port", area: "Cannes", to: ["cannes"] },
   "/our-services/yacht-transfers/antibes": { kind: "transfer", service: "Yacht transfer to Port Vauban", area: "Antibes", to: ["antibes"] },
   "/our-services/yacht-transfers/saint-tropez": { kind: "transfer", service: "Yacht transfer to the old port", area: "Saint-Tropez", to: ["st-tropez"] },
+  "/our-services/transfers/eze-transfer": { kind: "route", service: "Nice Airport to Èze transfer", area: "Èze", route: "eze" },
+  "/our-services/transfers/saint-jean-cap-ferrat-transfer": { kind: "route", service: "Nice Airport to Saint-Jean-Cap-Ferrat transfer", area: "Saint-Jean-Cap-Ferrat", route: "cap-ferrat" },
 };
 
 // The hourly and full-day rates are the same in every area, so they are read from one area of the price list.
@@ -90,11 +93,29 @@ function transferPrices(service: string, to: string[]) {
   return { line, offers };
 }
 
+/** A route outside the price table: the starting prices its page states (data/vehicles.tsx, routeStartingPrices). */
+function routeFromPrices(service: string, route: string) {
+  const prices = routeStartingPrices[route].prices;
+  const name = (id?: string) => vehicles.find(v => v.id === id)?.name;
+  const [first, ...rest] = prices;
+  const others = rest.map(p => `${short(name(p.vehicleId) ?? "")} ${eur(p.transfer)}`).join(", ");
+  const line = `Starting from ${eur(first.transfer)} one way from Nice Airport${first.vehicleId ? ` in a ${name(first.vehicleId)}` : ""}${others ? ` (${others})` : ""}.`;
+  const offers = prices.map(p => ({
+    "@type": "Offer",
+    name: `${service}${p.vehicleId ? `, ${name(p.vehicleId)}` : ""}, one way`,
+    price: p.transfer,
+    priceCurrency: "EUR",
+    priceSpecification: from(p.transfer),
+  }));
+  return { line, offers };
+}
+
 /** The page's starting-price line and its Service markup, or null for a page without one. */
 export function servicePrices(path: string): { line: string; schema: Record<string, unknown> } | null {
   const page = PAGES[path];
   if (!page) return null;
-  const { line, offers } = page.kind === "hourly" ? hourlyPrices(page.service) : transferPrices(page.service, page.to);
+  const { line, offers } =
+    page.kind === "hourly" ? hourlyPrices(page.service) : page.kind === "route" ? routeFromPrices(page.service, page.route) : transferPrices(page.service, page.to);
   const where = page.area === "French Riviera" ? " on the French Riviera" : page.service.includes(page.area) ? "" : ` in ${page.area}`;
   return {
     line,

@@ -44,6 +44,29 @@ const maybachPrices: Record<string, VehiclePrice> = {
   "st-tropez": { transfer: 850, hourly: 300, fullDay: 2400 },
 };
 
+// Starting prices of routes outside the table above, as their pages state them: one way from Nice Airport. A price
+// without a vehicle is the route's lowest starting price.
+export const routeStartingPrices: Record<string, { area: string; prices: { vehicleId?: string; transfer: number }[] }> = {
+  eze: { area: "Èze", prices: [{ transfer: 110 }] },
+  "cap-ferrat": {
+    area: "Saint-Jean-Cap-Ferrat",
+    prices: [
+      { vehicleId: "mercedes-e", transfer: 110 },
+      { vehicleId: "mercedes-v", transfer: 140 },
+    ],
+  },
+  sanremo: {
+    area: "Sanremo",
+    prices: [
+      { vehicleId: "mercedes-e", transfer: 220 },
+      { vehicleId: "mercedes-v", transfer: 260 },
+      { vehicleId: "mercedes-s", transfer: 300 },
+      { vehicleId: "mercedes-maybach", transfer: 550 },
+    ],
+  },
+  "isola-2000": { area: "Isola 2000", prices: [{ transfer: 350 }] },
+};
+
 export const vehicles: Vehicle[] = [
   {
     id: "mercedes-e",

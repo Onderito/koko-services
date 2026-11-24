@@ -1,3 +1,5 @@
+import { routeStartingPrices, vehicles } from "./vehicles";
+
 export type ServiceCardLink = {
   href: string;
   label: string;
@@ -618,6 +620,21 @@ export const chauffeurToursPage: ServicePageConfig = {
   ]
 };
 
+// Prices quoted in the page texts are read from the price list (data/vehicles.tsx), so a text and the price tables never
+// disagree.
+const eur = (amount: number) => `€${amount.toLocaleString("en-GB")}`;
+const vehicle = (id: string) => vehicles.find(v => v.id === id)!;
+const E_CLASS = vehicle("mercedes-e");
+const V_CLASS = vehicle("mercedes-v");
+const S_CLASS = vehicle("mercedes-s");
+const MAYBACH = vehicle("mercedes-maybach");
+/** One-way starting prices to a town of the price list, every car: "€150 in a Mercedes E-Class, €180 in a V-Class, …". */
+const routePrices = (town: string) =>
+  `${eur(E_CLASS.prices[town].transfer)} in a Mercedes E-Class, ${eur(V_CLASS.prices[town].transfer)} in a V-Class, ${eur(S_CLASS.prices[town].transfer)} in an S-Class and ${eur(MAYBACH.prices[town].transfer)} in a Maybach`;
+/** The starting price of a route outside the price list, for one car or the cheapest stated. */
+const startingPrice = (route: string, vehicleId?: string) =>
+  routeStartingPrices[route].prices.find(p => !vehicleId || p.vehicleId === vehicleId)!.transfer;
+
 export const transferPages: Record<string, ServicePageConfig> = {
   "nice-airport-transfer": {
     slug: "nice-airport-transfer",
@@ -637,27 +654,36 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Nice Airport Transfer",
     heroTitle: "Nice Airport Transfer With a Private Chauffeur",
     heroDescription:
-      "Meet-and-greet airport transfers from Nice Airport to hotels, villas, ports, and major Riviera destinations with calm, precise execution.",
+      `Your private driver meets you in the arrivals hall at Nice Côte d'Azur Airport and drives you in a Mercedes to Nice, Monaco, Cannes or anywhere on the Riviera, at a fixed price from ${eur(E_CLASS.prices.nice.transfer)}.`,
     heroImageSrc: "/assets/images/services/airport-arrivals.webp",
     heroImageAlt: "Nice Airport private chauffeur transfer",
-    introTitle: "Arrival, Handled Properly",
+    introTitle: "From the Arrivals Hall to Your Door",
     introDescription:
-      "Airport transport should remove friction, not add it, especially after a flight or before a departure window.",
+      "Your chauffeur is in the arrivals hall when you land, takes your luggage and drives you straight to your hotel, villa or port, at a price agreed before the trip.",
     panels: [
       {
-        title: "Pickup Coordination",
-        text: "We follow the flight, align the pickup timing, assist with luggage, and deliver a polished arrival from terminal to vehicle.",
+        title: "We Follow Your Flight",
+        text: "Your driver tracks the flight, adjusts to an early or late landing and waits in the arrivals hall of Terminal 1 or 2 with a name sign.",
         theme: "dark",
       },
       {
-        title: "Riviera Coverage",
-        text: "Nice Airport transfers often continue to Monaco, Cannes, Antibes, Saint-Tropez, private villas, or yacht departure points.",
+        title: "Anywhere on the Riviera",
+        text: "From the airport we drive to Nice, Monaco, Cannes, Antibes, Saint-Tropez, private villas, marinas and yachts, and back to the airport for your flight home.",
         theme: "light",
       },
     ],
+    story: {
+      title: "How a Nice Airport transfer works",
+      paragraphs: [
+        `When your flight is booked, send us the flight number, the number of passengers and bags, and the address you are going to. We confirm the car and the **fixed price** before you travel: from ${eur(E_CLASS.prices.nice.transfer)} to Nice, ${eur(E_CLASS.prices.antibes.transfer)} to Antibes, ${eur(E_CLASS.prices.cannes.transfer)} to Cannes or Monaco and ${eur(E_CLASS.prices["st-tropez"].transfer)} to Saint-Tropez in a Mercedes E-Class.`,
+        "On the day, we track your flight. Your chauffeur waits in the arrivals hall with your name on a sign, helps with the luggage and walks you to the car. **One hour of waiting** is included from the pickup time in your booking, so a long queue at passport control or the baggage belt is covered.",
+        `The E-Class, the S-Class and the Maybach take up to ${E_CLASS.passengers} passengers; the V-Class takes up to ${V_CLASS.passengers} with their luggage, which suits families and groups. We drive day and night, every day of the year, so early-morning and late-night flights are no problem.`,
+        "For your departure, we collect you at your address and drop you at your terminal. Cancellation is free until five days before the pickup date and time; after that, the full price is charged.",
+      ],
+    },
     practicalTitle: "Nice Airport Pickup, Pricing and Booking Conditions",
     practicalDescription:
-      "Your confirmation sets out the terminal, vehicle and fixed fare. Every arrival includes one hour of waiting from the pickup time stated in the reservation.",
+      "Your confirmation sets out the terminal, the car and the fixed price. Every arrival includes one hour of waiting from the pickup time stated in the reservation.",
     practicalDetails: [
       {
         title: "Terminal 1 pickup",
@@ -668,34 +694,34 @@ export const transferPages: Record<string, ServicePageConfig> = {
         text: "For Terminal 2 arrivals, the meeting point is inside the arrivals hall. The terminal and flight number are checked again before pickup.",
       },
       {
-        title: "Indicative fixed fares",
-        text: "Nice from €90 in an E-Class; Cannes or Monaco from €150. V-Class, S-Class and Maybach options are available, with the final fixed fare confirmed before booking.",
+        title: "Starting prices",
+        text: `Nice from ${eur(E_CLASS.prices.nice.transfer)} in an E-Class; Cannes or Monaco from ${eur(E_CLASS.prices.cannes.transfer)}; Saint-Tropez from ${eur(E_CLASS.prices["st-tropez"].transfer)}. V-Class, S-Class and Maybach are also available, and the final fixed price is confirmed before booking.`,
       },
       {
         title: "Waiting and cancellation",
-        text: "One hour of waiting is included from the reserved pickup time. Cancellation is free until five days before that date and time; less than five days before departure, the full fare is charged.",
+        text: "One hour of waiting is included from the reserved pickup time. Cancellation is free until five days before that date and time; less than five days before departure, the full price is charged.",
       },
     ],
     audienceTitle: "Ideal For",
     audienceAccent: "Smooth Arrivals",
     audienceDescription:
-      "For airport journeys where accurate flight monitoring, luggage assistance and a calm door-to-door arrival matter.",
+      "For travellers landing at Nice who want to be met, helped with their bags and driven straight to the door.",
     audienceCards: [
       {
         title: "International Arrivals",
-        text: "A professional arrival experience for guests landing in Nice after commercial or private flights.",
+        text: "Commercial and private flights: your driver meets you in the arrivals hall or at the business aviation terminal.",
         icon: "/assets/icons/services/plane.webp",
         iconAlt: "Airport arrival icon",
       },
       {
         title: "Hotel & Villa Stays",
-        text: "Direct transfers to accommodation with luggage handled and no unnecessary waiting.",
+        text: "Straight to your hotel or villa, with the luggage carried to the door.",
         icon: "/assets/icons/services/hand.webp",
         iconAlt: "Hotel arrival icon",
       },
       {
         title: "VIP & Business Travel",
-        text: "A discreet, efficient airport transfer when presentation and timing matter from the first minute.",
+        text: "A punctual driver for business arrivals, meetings and events, waiting in arrivals when your flight lands.",
         icon: "/assets/icons/services/star.webp",
         iconAlt: "VIP airport icon",
       },
@@ -705,53 +731,51 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Need a Nice Airport Transfer?",
+      title: "Book Your Nice Airport Transfer",
       description:
-        "Send us your arrival or departure details and we will organize the right vehicle and chauffeur for the route.",
+        "Send us your flight, the number of passengers and the address, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Airport Transfer",
       buttonHref: "/contact-me",
     },
     faq: [
       {
-        question: "Do you provide private transfers from Nice Airport?",
-        answer:
-          "Yes. We provide private airport transfers from Nice Côte d’Azur Airport to Monaco, Cannes, Saint-Tropez, Antibes, and destinations throughout the French Riviera.",
+        question: "How much is a private transfer from Nice Airport?",
+        answer: `A Kokolimo transfer from Nice Airport starts at ${eur(E_CLASS.prices.nice.transfer)} to Nice, ${eur(E_CLASS.prices.antibes.transfer)} to Antibes, ${eur(E_CLASS.prices.cannes.transfer)} to Cannes or Monaco and ${eur(E_CLASS.prices["st-tropez"].transfer)} to Saint-Tropez in a Mercedes E-Class. The price is fixed and confirmed before you book, with one hour of waiting included.`,
       },
       {
-        question: "Where will my chauffeur meet me at Nice Airport?",
+        question: "Where will my driver meet me at Nice Airport?",
         answer:
-          "Your chauffeur will meet you in the arrivals area with a personalized name sign and assist you with your luggage before escorting you to the vehicle.",
+          "In the arrivals hall of your terminal, Terminal 1 or Terminal 2, holding a sign with your name. Your driver helps with the luggage and walks you to the car.",
       },
       {
-        question: "Do you monitor flight delays?",
+        question: "What happens if my flight is late?",
         answer:
-          "Yes. We monitor flight arrivals in real time. One hour of waiting is included from the pickup time stated in your reservation, so please contact us as soon as possible if a major delay affects that time.",
+          "We track your flight and adjust the pickup to the real landing time. One hour of waiting is included from the pickup time in your booking; tell us as soon as possible about a major delay.",
+      },
+      {
+        question: "Which cars do you use for airport transfers?",
+        answer: `Mercedes cars only: the E-Class and the S-Class for up to ${E_CLASS.passengers} passengers, the V-Class for up to ${V_CLASS.passengers} with their luggage, and the Maybach for up to ${MAYBACH.passengers}.`,
+      },
+      {
+        question: "Do you pick up early-morning and late-night flights?",
+        answer:
+          "Yes. Kokolimo drives 24/7, so your driver is in the arrivals hall whatever time your flight lands.",
+      },
+      {
+        question: "Which destinations do you serve from Nice Airport?",
+        answer:
+          "Nice, Cannes, Antibes, Monaco, Menton, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat and Saint-Tropez, and Courchevel, Megève and Chamonix in winter.",
+      },
+      {
+        question: "Can you drive me back to Nice Airport for my flight?",
+        answer:
+          "Yes. We collect you at your hotel, villa or port and drop you at your terminal. Many clients book their arrival and their departure together.",
       },
       {
         question: "What is the cancellation policy for an airport transfer?",
         answer:
-          "Cancellation is free of charge until five days before the booked date and pickup time. If the transfer is cancelled less than five days before departure, the full fare is charged.",
+          "Cancellation is free until five days before the booked date and pickup time. If you cancel less than five days before, the full price is charged.",
       },
-      {
-        question: "Can I book a transfer from Nice Airport to Monaco?",
-        answer:
-          "Absolutely. Transfers between Nice Airport and Monaco are among our most requested services, offering a comfortable and reliable alternative to taxis and public transport.",
-      },
-      {
-        question: "Which vehicles are available for airport transfers?",
-        answer:
-          "We offer luxury vehicles including the Mercedes S-Class, Mercedes V-Class, and Mercedes Maybach, depending on your group size and travel preferences.",
-      },
-      {
-        question: "Can I book a return transfer to Nice Airport?",
-        answer:
-          "Yes. Many clients reserve both arrival and departure transfers to ensure a seamless travel experience throughout their stay on the French Riviera.",
-      },
-      {
-      question: "Which destinations do you serve from Nice Airport?",
-      answer:
-        "We regularly provide transfers to Monaco, Cannes, Antibes, Saint-Tropez, Èze, Cap d’Ail, Villefranche-sur-Mer, and other destinations across the French Riviera.",
-      }
     ]
   },
   "long-distance-transfer": {
@@ -770,46 +794,55 @@ export const transferPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Long-Distance Transfer",
-    heroTitle: "Long-Distance Transfers in Private Comfort",
+    heroTitle: "Long-Distance Private Transfers From the Riviera",
     heroDescription:
-      "Private chauffeur transfers for routes beyond the core Riviera corridor, with premium comfort, privacy, and controlled pacing over longer distances.",
+      "A private driver for longer journeys from Nice, Monaco and the Riviera: to the ski resorts of the Alps, to Italy and Switzerland, and to other cities and airports, at a price fixed before you travel.",
     heroImageSrc: "/assets/images/services/long-distance.webp",
     heroImageAlt: "Long-distance private chauffeur transfer",
-    introTitle: "Distance Without Friction",
+    introTitle: "One Driver, Door to Door",
     introDescription:
-      "Longer routes demand more than a standard transfer: comfort, discretion, luggage space, and a calm pace become part of the service quality.",
+      "On a long journey, the same driver takes you from your door to your destination, stops when you need to and has room for your luggage.",
     panels: [
       {
         title: "Beyond the Coast",
-        text: "We arrange long-distance rides to resorts, airports, cities, villas, and event destinations when a private vehicle makes the route smoother and more controlled.",
+        text: "We drive to Courchevel, Megève and Chamonix in winter, across the border to Italy and Switzerland, and to other cities, resorts and airports.",
         theme: "dark",
       },
       {
-        title: "Premium Travel Rhythm",
-        text: "A long-distance chauffeur transfer gives clients privacy, flexible stops, and a far more composed travel experience than fragmented alternatives.",
+        title: "Stops on Your Terms",
+        text: "Stops for meals, meetings or sightseeing are planned with you before the trip, and the price is fixed before you book.",
         theme: "light",
       },
     ],
+    story: {
+      title: "How a long-distance transfer works",
+      paragraphs: [
+        "A long-distance transfer covers journeys of an hour or more from the French Riviera: to the ski resorts of the Alps, across the border to Italy or Switzerland, or to another city or airport. The same chauffeur takes you from door to door in a Mercedes.",
+        `Some typical trips from Nice Airport: Sanremo, across the Italian border, takes **about an hour**, from ${eur(startingPrice("sanremo", "mercedes-e"))} in an E-Class. Isola 2000, the ski resort closest to the coast, is 1 hour 45 minutes to 2 hours up the Tinée valley, from around ${eur(startingPrice("isola-2000"))}. Milan is about four hours away, and Courchevel, Megève and Chamonix about five to six hours, depending on the route, the traffic and the snow.`,
+        `For the longer routes, the price depends on the distance and the car, and it is **fixed before you book**, with no meter. The V-Class takes up to ${V_CLASS.passengers} passengers with their luggage and ski equipment, and our cars are equipped for winter mountain roads; the E-Class and the S-Class take up to ${E_CLASS.passengers}.`,
+        "Tell us where you start and where you are going, the date, the number of passengers and bags, and any stops you want on the way. We confirm the route, the car and the price before the trip.",
+      ],
+    },
     audienceTitle: "Suited To",
     audienceAccent: "Extended Routes",
     audienceDescription:
-      "This service is ideal when the route is part of the day, not just a short transfer between nearby points.",
+      "For journeys of several hours, with one driver, one car and no changes on the way.",
     audienceCards: [
       {
         title: "Intercity Travel",
-        text: "Comfortable private rides between the Riviera and major nearby cities or seasonal destinations.",
+        text: "Between the Riviera and other cities in France, Italy and Switzerland.",
         icon: "/assets/icons/services/van.webp",
         iconAlt: "Intercity icon",
       },
       {
         title: "Leisure Stays",
-        text: "Smooth travel for villa check-ins, resort transfers, and itinerary moves with luggage and timing in mind.",
+        text: "To ski resorts, villas and hotels further away, with all the luggage in the car.",
         icon: "/assets/icons/services/multiple-suit-case.webp",
         iconAlt: "Leisure route icon",
       },
       {
         title: "Executive Transfers",
-        text: "A discreet, productive environment for clients who prefer private road travel over broken transport chains.",
+        text: "For business travellers who would rather spend the journey in one quiet car than change transport on the way.",
         icon: "/assets/icons/services/suit-case.webp",
         iconAlt: "Executive route icon",
       },
@@ -819,47 +852,43 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Planning a Longer Private Transfer?",
+      title: "Plan Your Long-Distance Transfer",
       description:
-        "Share the route and passenger details and we will recommend the right vehicle and chauffeur format for the journey.",
+        "Send us the route, the date and the number of passengers, and we confirm the car and the fixed price before you travel.",
       buttonText: "Book Long-Distance Transfer",
       buttonHref: "/contact-me",
     },
     faq: [
       {
-        question: "What is considered a long-distance transfer?",
+        question: "What counts as a long-distance transfer?",
         answer:
-          "A long-distance transfer typically covers journeys between cities, regions, airports, ski resorts, and destinations that require several hours of travel.",
+          "Any journey of several hours from the Riviera: to the Alps, to Italy or Switzerland, or to another city, resort or airport.",
       },
       {
-        question: "Can I book a transfer between the French Riviera and the Alps?",
-        answer:
-          "Yes. We regularly provide long-distance transfers between destinations such as Nice, Monaco, Cannes, Saint-Tropez, Courchevel, Megève, and Chamonix.",
+        question: "Do you drive from Nice to Courchevel and the other ski resorts?",
+        answer: `Yes. Courchevel, Megève and Chamonix are about five to six hours from Nice Airport by road, depending on the route, the traffic and the snow; Isola 2000, the closest resort, is 1 hour 45 minutes to 2 hours. Our cars are equipped for winter mountain roads, and the V-Class carries up to ${V_CLASS.passengers} passengers with their skis and luggage.`,
       },
       {
-        question: "Do you provide international long-distance transfers?",
-        answer:
-          "Yes. Depending on your itinerary, we can arrange private transfers between France, Monaco, Switzerland, and other nearby European destinations.",
+        question: "Can you drive across the border to Italy or Switzerland?",
+        answer: `Yes. Sanremo is about an hour from Nice Airport, from ${eur(startingPrice("sanremo", "mercedes-e"))} in a Mercedes E-Class, and Milan about four hours. We also drive to Switzerland and other nearby countries, at a price fixed before you book.`,
       },
       {
-        question: "Can I request stops during a long-distance journey?",
+        question: "Can we stop on the way?",
         answer:
-          "Absolutely. Stops can be arranged in advance for meals, meetings, sightseeing, or personal convenience throughout the journey.",
+          "Yes. Stops for meals, meetings or sightseeing are planned with you before the trip.",
       },
       {
-        question: "Which vehicle is best for a long-distance transfer?",
-        answer:
-          "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class offers additional space and comfort for families, groups, and extra luggage.",
+        question: "Which car is best for a long-distance transfer?",
+        answer: `The V-Class, for up to ${V_CLASS.passengers} passengers with plenty of luggage; the S-Class or the Maybach for up to ${S_CLASS.passengers} passengers who want the most comfort.`,
       },
       {
-        question: "Are long-distance transfer prices fixed in advance?",
-        answer:
-          "Yes. Your quote is agreed upon before the journey, providing complete transparency with no unexpected charges.",
+        question: "How much is a long-distance transfer?",
+        answer: `It depends on the distance and the car, and we fix the price before you book, with no meter. As a guide, Sanremo starts from ${eur(startingPrice("sanremo", "mercedes-e"))} in an E-Class and Isola 2000 from around ${eur(startingPrice("isola-2000"))}.`,
       },
       {
-        question: "Can I book a return long-distance transfer?",
+        question: "Can I book the return journey too?",
         answer:
-          "Yes. Many clients book both outbound and return journeys to ensure seamless transportation throughout their trip.",
+          "Yes. Many clients book the outbound and return journeys together.",
       },
     ]
   },
@@ -881,16 +910,16 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Monaco Airport Transfer",
     heroTitle: "Nice Airport to Monaco Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Monaco: around 30 to 40 minutes, delivered to your hotel, the harbour or the Casino without tunnels or parking.",
+      `Your private driver meets you at Nice Airport and drives you to Monaco in about 30 to 40 minutes, to your hotel, Port Hercule or the Casino Square, at a fixed price from ${eur(E_CLASS.prices.monaco.transfer)}.`,
     heroImageSrc: "/assets/images/services/monaco-airport-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Monaco with a black Mercedes on the harbour",
     introTitle: "Straight to the Principality",
     introDescription:
-      "Arriving into Monaco should be effortless: no tunnels to navigate, no parking to find, just a driver from the terminal to your door.",
+      "Monaco's tunnels, one-way streets and scarce parking make a first arrival hard. Your chauffeur knows them and takes you from the terminal to your door.",
     panels: [
       {
         title: "Met at Your Flight",
-        text: "We track the flight, meet you in the arrivals hall with a name board, handle the luggage and bring you to the car — then straight to Monaco.",
+        text: "We track your flight, wait in the arrivals hall with a name sign, carry the luggage and drive you straight to Monaco.",
         theme: "dark",
       },
       {
@@ -899,10 +928,18 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    story: {
+      title: "How the Nice Airport to Monaco transfer works",
+      paragraphs: [
+        "Monaco has no airport of its own: its airport is Nice Côte d'Azur, **about 30 to 40 minutes** away by the motorway or the coast road depending on traffic. Your driver meets you in arrivals, at Terminal 1 or 2, and drops you at the door of your hotel or residence in Monte-Carlo, on the quay at Port Hercule or on the Casino Square.",
+        `A one-way transfer starts at ${routePrices("monaco")}. We fix the price when you book, follow your flight and include one hour of waiting from your pickup time. The V-Class seats up to ${V_CLASS.passengers} passengers with their luggage.`,
+        "During the Grand Prix in May and the Yacht Show in September, roads close and the principality fills up. We plan the route and the drop-off point around the closures. If you take the helicopter from Nice Airport instead, your driver meets you at the Monaco heliport in Fontvieille. For your departure, we collect you in Monaco and drive you back to your terminal.",
+      ],
+    },
     audienceTitle: "Ideal For",
     audienceAccent: "Monaco Arrivals",
     audienceDescription:
-      "Built for arrivals into Monaco where a smooth, discreet transfer from the airport sets the tone for the stay.",
+      "Built for arrivals into Monaco: hotels, residences, business meetings, events and yachts.",
     audienceCards: [
       {
         title: "Events & Grand Prix",
@@ -928,27 +965,31 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Need a Monaco Airport Transfer?",
+      title: "Book Your Nice Airport to Monaco Transfer",
       description:
-        "Send us your arrival or departure details and we will organize the right vehicle and chauffeur from Nice Airport to Monaco.",
+        "Send us your flight and your Monaco address, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Monaco Transfer",
       buttonHref: "/contact-me",
     },
     faq: [
       {
-        question: "How long is the transfer from Nice Airport to Monaco?",
-        answer:
-          "Around 30 to 40 minutes by road depending on traffic, along the coast or the motorway to the principality.",
+        question: "How much is a transfer from Nice Airport to Monaco?",
+        answer: `From ${routePrices("monaco")}, one way. The price is fixed and confirmed before you book, with no meter.`,
       },
       {
-        question: "How much is a Nice Airport to Monaco transfer?",
+        question: "How long is the drive from Nice Airport to Monaco?",
         answer:
-          "From around €150 in a Mercedes E-Class or €180 in a V-Class, quoted as a fixed price in advance with no meter.",
+          "About 30 to 40 minutes by road, by the motorway or the coast road depending on traffic. It takes longer during the Grand Prix and other big events.",
       },
       {
-        question: "Where will my chauffeur meet me?",
+        question: "Does Monaco have an airport?",
         answer:
-          "In the arrivals hall at Nice Airport with a name board, assisting with your luggage before escorting you to the vehicle.",
+          "No. The nearest airport is Nice Côte d'Azur, about 30 to 40 minutes away by road. A helicopter also flies from Nice Airport to the Monaco heliport in about seven minutes; we drive you from the terminal to the helipad and from the heliport to your address.",
+      },
+      {
+        question: "Where will my driver meet me at Nice Airport?",
+        answer:
+          "In the arrivals hall of your terminal, Terminal 1 or 2, with your name on a sign. Your driver takes your luggage and walks you to the car.",
       },
       {
         question: "Can you take me to a yacht in Port Hercule?",
@@ -956,9 +997,19 @@ export const transferPages: Record<string, ServicePageConfig> = {
           "Yes. We deliver guests directly to the quay in Port Hercule, coordinating with the crew on access and timing where needed.",
       },
       {
-        question: "Do you offer a return transfer to Nice Airport?",
+        question: "Can I book a late-night transfer from Nice Airport to Monte-Carlo?",
         answer:
-          "Yes. Many clients book both the arrival and the departure to ensure a seamless experience throughout their stay in Monaco.",
+          "Yes. Kokolimo drives 24/7, so we meet early-morning and late-night flights and drive you to Monte-Carlo.",
+      },
+      {
+        question: "Do you drive from Monaco back to Nice Airport?",
+        answer:
+          "Yes. We collect you at your hotel or residence in Monaco and drop you at your terminal. Many clients book their arrival and departure together.",
+      },
+      {
+        question: "What is the cancellation policy?",
+        answer:
+          "Cancellation is free until five days before the booked date and pickup time; after that, the full price is charged.",
       },
     ],
   },
@@ -980,12 +1031,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Cannes Airport Transfer",
     heroTitle: "Nice Airport to Cannes Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Cannes: around 30 minutes, delivered to the Croisette, your hotel or the Palais des Festivals.",
+      `Your private driver meets you at Nice Airport and drives you to Cannes in about 30 minutes, to the Croisette, your hotel or the Palais des Festivals, at a fixed price from ${eur(E_CLASS.prices.cannes.transfer)}.`,
     heroImageSrc: "/assets/images/services/cannes-airport-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Cannes with a black Mercedes on the Croisette",
     introTitle: "Arrive on the Croisette",
     introDescription:
-      "Cannes rewards a calm arrival — met at the flight and delivered to the seafront without the taxi queue or the festival-week scramble.",
+      "Cannes is about 30 minutes west of the airport. Your chauffeur meets you at your flight and takes you to the seafront, without the taxi queue or the festival crowds.",
     panels: [
       {
         title: "Met at Your Flight",
@@ -998,10 +1049,18 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    story: {
+      title: "How the Nice Airport to Cannes transfer works",
+      paragraphs: [
+        "Nice Côte d'Azur is the main airport for Cannes, **about 30 minutes** away on a clear run. Your driver meets you in the arrivals hall, takes your luggage and drives you to your hotel on the Croisette, the Palais des Festivals, the Vieux Port or any address in town.",
+        `The trip from the airport starts at ${routePrices("cannes")}, and the price is agreed before you book. If your flight lands late, your driver waits: an hour is included from the pickup time in your booking.`,
+        "Cannes runs on events: the Film Festival in May, Cannes Lions in June and the Yachting Festival in September. Roads around the Croisette close and traffic builds, so we plan the drop-off around the closures. For your departure, we collect you in Cannes and drive you back to Nice Airport.",
+      ],
+    },
     audienceTitle: "Ideal For",
     audienceAccent: "Cannes Arrivals",
     audienceDescription:
-      "Built for arrivals into Cannes where the Croisette, the palace hotels and the festivals call for a polished transfer.",
+      "Built for arrivals into Cannes: the Croisette hotels, the festivals and the yachts in the Vieux Port.",
     audienceCards: [
       {
         title: "Festivals & Events",
@@ -1027,37 +1086,46 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Need a Cannes Airport Transfer?",
+      title: "Book Your Nice Airport to Cannes Transfer",
       description:
-        "Send us your arrival or departure details and we will organize the right vehicle and chauffeur from Nice Airport to Cannes.",
+        "Send us your flight and your Cannes address, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Cannes Transfer",
       buttonHref: "/contact-me",
     },
     faq: [
       {
-        question: "How long is the transfer from Nice Airport to Cannes?",
+        question: "How much is a transfer from Nice Airport to Cannes?",
+        answer: `From ${routePrices("cannes")}, one way. The price is fixed and confirmed before you book, with no meter.`,
+      },
+      {
+        question: "How long is the drive from Nice Airport to Cannes?",
         answer:
           "Around 30 minutes by road on a clear run, a little longer during the Film Festival and other major events.",
       },
       {
-        question: "How much is a Nice Airport to Cannes transfer?",
+        question: "Is a private driver worth it during the Cannes festivals?",
         answer:
-          "From around €150 in a Mercedes E-Class or €180 in a V-Class, quoted as a fixed price in advance with no meter.",
+          "Yes. With road closures and crowds around the Croisette, a driver who knows the diversions gets you to your hotel or the Palais on time.",
       },
       {
-        question: "Is a chauffeur worth it during the Cannes festivals?",
-        answer:
-          "Very. With road closures and crowds around the Croisette, a driver who knows the diversions keeps arrivals smooth and on time.",
-      },
-      {
-        question: "Can you deliver me to a Croisette hotel?",
+        question: "Can you drive me to a hotel on the Croisette?",
         answer:
           "Yes. We take you directly to the Carlton, the Martinez and the other Croisette hotels, with your luggage handled.",
       },
       {
-        question: "Do you offer a return transfer to Nice Airport?",
+        question: "Can I book a late-night transfer from Nice Airport to Cannes?",
         answer:
-          "Yes. Many clients book both the arrival and the departure to ensure a seamless experience throughout their stay in Cannes.",
+          "Yes. Kokolimo drives 24/7, including early-morning and late-night flights.",
+      },
+      {
+        question: "Do you drive from Cannes back to Nice Airport?",
+        answer:
+          "Yes. We collect you at your hotel or address in Cannes and drop you at your terminal.",
+      },
+      {
+        question: "Can I cancel a Cannes transfer?",
+        answer:
+          "Yes, free of charge until five days before the booked date and pickup time. If you cancel later than that, the full price is charged.",
       },
     ],
   },
@@ -1079,12 +1147,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Tropez Transfer",
     heroTitle: "Nice Airport to Saint-Tropez Transfer",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to Saint-Tropez: around an hour and a half to two hours by road, or a drive to the boat across the gulf, timed around the traffic.",
+      `Your private driver meets you at Nice Airport and drives you to Saint-Tropez in about an hour and a half to two hours, or to a boat at Sainte-Maxime, at a fixed price from ${eur(E_CLASS.prices["st-tropez"].transfer)}.`,
     heroImageSrc: "/assets/images/services/saint-tropez-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Saint-Tropez with a black Mercedes on the quay",
-    introTitle: "The Longest, Most Rewarding Run",
+    introTitle: "The Longest Run on the Coast",
     introDescription:
-      "Saint-Tropez sits at the end of its peninsula, so the transfer is a journey in itself. Best handled by a chauffeur who plans around the summer traffic.",
+      "Saint-Tropez sits at the end of its peninsula, about 110 kilometres from Nice Airport, and a single road serves it. Your chauffeur plans your arrival around the summer traffic.",
     panels: [
       {
         title: "By Road or by Boat",
@@ -1097,10 +1165,18 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    story: {
+      title: "How the Nice Airport to Saint-Tropez transfer works",
+      paragraphs: [
+        "Nice Côte d'Azur is the main airport for Saint-Tropez, **about 110 kilometres** away: roughly an hour and a half to two hours by road, and longer in July and August. Your driver meets you in arrivals, takes your luggage and drives you to your hotel, your villa, the old port or the beach clubs of Pampelonne.",
+        `For this longer trip, prices start at ${routePrices("st-tropez")}, one way, fixed before you book. The V-Class takes up to ${V_CLASS.passengers} passengers with their luggage, which suits families and groups heading to a villa.`,
+        "In peak season, traffic on the gulf road can stand still. We can drive you to a boat landing at Sainte-Maxime instead, with a crossing arranged into the port. For your departure, we collect you in Saint-Tropez and drive you back to Nice Airport.",
+      ],
+    },
     audienceTitle: "Ideal For",
     audienceAccent: "Saint-Tropez Stays",
     audienceDescription:
-      "Built for the longer run to Saint-Tropez, where comfort, timing and local knowledge make the journey part of the stay.",
+      "Built for the longer run to Saint-Tropez: villas, hotels, beach clubs and yachts.",
     audienceCards: [
       {
         title: "Villas & Hotels",
@@ -1126,22 +1202,26 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Need a Saint-Tropez Transfer?",
+      title: "Book Your Nice Airport to Saint-Tropez Transfer",
       description:
-        "Send us your arrival or departure details and we will organize the right vehicle, route and chauffeur from Nice Airport to Saint-Tropez.",
+        "Send us your flight and your Saint-Tropez address, and we confirm the route, the car and the fixed price before you travel.",
       buttonText: "Request Saint-Tropez Transfer",
       buttonHref: "/contact-me",
     },
     faq: [
+      {
+        question: "How much is a transfer from Nice Airport to Saint-Tropez?",
+        answer: `From ${routePrices("st-tropez")}, one way, for a trip of about 110 kilometres. The price is fixed before you book.`,
+      },
       {
         question: "How long is the transfer from Nice Airport to Saint-Tropez?",
         answer:
           "By road, roughly an hour and a half to two hours over about 110 kilometres, longer in peak-season traffic around the gulf.",
       },
       {
-        question: "How much is a Nice Airport to Saint-Tropez transfer?",
+        question: "Which airport do I fly into for Saint-Tropez?",
         answer:
-          "From around €400 in a Mercedes E-Class or €500 in a V-Class, quoted as a fixed price in advance, reflecting the longer distance.",
+          "Nice Côte d'Azur, the main international airport of the Riviera, is about 110 kilometres from Saint-Tropez, and your driver meets you in arrivals there. If you land at another airport, send us your flight and we quote the transfer before you book.",
       },
       {
         question: "Can I reach Saint-Tropez by boat?",
@@ -1154,9 +1234,13 @@ export const transferPages: Record<string, ServicePageConfig> = {
           "A single road serves the peninsula, so July and August traffic can gridlock; a chauffeur plans around it or switches to the boat.",
       },
       {
-        question: "Do you offer a return transfer to Nice Airport?",
+        question: "Can a group book a car from Nice Airport to Saint-Tropez?",
+        answer: `Yes. The Mercedes V-Class takes up to ${V_CLASS.passengers} passengers with their luggage, from ${eur(V_CLASS.prices["st-tropez"].transfer)} one way from Nice Airport.`,
+      },
+      {
+        question: "Do you drive from Saint-Tropez back to Nice Airport?",
         answer:
-          "Yes. Many clients book both the arrival and the departure to ensure a seamless experience throughout their stay in Saint-Tropez.",
+          "Yes. We collect you at your villa or hotel in Saint-Tropez and drive you back to your terminal at Nice Airport.",
       },
     ],
   },
@@ -1277,12 +1361,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Jean-Cap-Ferrat Transfer",
     heroTitle: "Nice Airport to Cap-Ferrat Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Saint-Jean-Cap-Ferrat: around 25 minutes east, delivered discreetly to the villas, hotels and yachts of the peninsula.",
+      "Your private driver meets you at Nice Airport and drives you to Saint-Jean-Cap-Ferrat in about 25 minutes, to the villas, the hotels and the yachts of the peninsula.",
     heroImageSrc: "/assets/images/services/saint-jean-cap-ferrat-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Cap-Ferrat with a black Mercedes among the villas",
     introTitle: "The Discreet Peninsula",
     introDescription:
-      "Cap-Ferrat is the Riviera's most private address, and a chauffeur transfer keeps the arrival as quiet and seamless as the place itself.",
+      "Saint-Jean-Cap-Ferrat is a quiet, residential peninsula east of Nice, with gated villas, a few hotels and yachts at anchor in its bays. Your chauffeur takes you to the gate.",
     panels: [
       {
         title: "Met at Your Flight",
@@ -1295,10 +1379,18 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    story: {
+      title: "How the Nice Airport to Cap-Ferrat transfer works",
+      paragraphs: [
+        "Saint-Jean-Cap-Ferrat is **about 25 minutes** east of Nice Côte d'Azur Airport, along the coast past Villefranche. Your chauffeur meets you in arrivals, takes your luggage and drives you to your villa, your hotel or the port.",
+        `A transfer costs from ${eur(startingPrice("cap-ferrat", "mercedes-e"))} in a Mercedes E-Class or ${eur(startingPrice("cap-ferrat", "mercedes-v"))} in a V-Class for up to ${V_CLASS.passengers} passengers, and the price is set when you book. Your driver follows your flight and waits up to an hour from the pickup time at no extra cost.`,
+        `Once on the peninsula, the roads are quiet and residential, winding between hedged estates down to the port and the beaches. For a yacht at anchor, we meet its tender at the quay and agree the timing with the crew. During your stay, a chauffeur can also stay with you by the hour, from ${eur(E_CLASS.prices.nice.hourly)} an hour in an E-Class.`,
+      ],
+    },
     audienceTitle: "Ideal For",
     audienceAccent: "Cap-Ferrat Stays",
     audienceDescription:
-      "Built for arrivals onto the exclusive peninsula, where discretion and a seamless door-to-door transfer are expected.",
+      "Built for arrivals on the peninsula: private villas, hotels and yachts.",
     audienceCards: [
       {
         title: "Villas & Estates",
@@ -1324,9 +1416,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Need a Cap-Ferrat Transfer?",
+      title: "Book Your Nice Airport to Cap-Ferrat Transfer",
       description:
-        "Send us your arrival or departure details and we will organize a discreet chauffeur from Nice Airport to Saint-Jean-Cap-Ferrat.",
+        "Send us your flight and your address on the peninsula, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Cap-Ferrat Transfer",
       buttonHref: "/contact-me",
     },
@@ -1338,8 +1430,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         question: "How much is a Nice Airport to Cap-Ferrat transfer?",
-        answer:
-          "Indicatively from around €110 in a Mercedes E-Class or €140 in a V-Class, quoted as a fixed price in advance.",
+        answer: `From ${eur(startingPrice("cap-ferrat", "mercedes-e"))} in a Mercedes E-Class or ${eur(startingPrice("cap-ferrat", "mercedes-v"))} in a V-Class, fixed before you book.`,
       },
       {
         question: "Can you deliver to a private villa on Cap-Ferrat?",
@@ -1352,9 +1443,13 @@ export const transferPages: Record<string, ServicePageConfig> = {
           "Yes. We can meet a yacht at anchor or its tender at the quay, coordinating with the crew on timing and access.",
       },
       {
-        question: "Do you offer a return transfer to Nice Airport?",
+        question: "Can I hire a private driver on Cap-Ferrat by the hour?",
+        answer: `Yes. From ${eur(E_CLASS.prices.nice.hourly)} an hour in a Mercedes E-Class, or ${eur(E_CLASS.prices.nice.fullDay)} for a full day, your chauffeur takes you to dinner, the beaches, Monaco or Nice and waits while you are there.`,
+      },
+      {
+        question: "Can you take me from Cap-Ferrat back to Nice Airport?",
         answer:
-          "Yes. Many clients book both the arrival and the departure for a seamless experience throughout their stay on Cap-Ferrat.",
+          "Yes. We collect you at your villa, hotel or the port and drive you to your terminal.",
       },
     ],
   },
@@ -1376,12 +1471,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Èze Transfer",
     heroTitle: "Nice Airport to Èze Transfer",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to Èze: around 25 to 30 minutes up the Moyenne Corniche to the car-free village entrance, its hotels and restaurants.",
+      "Your private driver meets you at Nice Airport and drives you up the Moyenne Corniche to Èze in about 25 to 30 minutes, to the entrance of the car-free village, its hotels and restaurants.",
     heroImageSrc: "/assets/images/services/eze-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Èze with a black Mercedes on the corniche",
     introTitle: "Up to the Perched Village",
     introDescription:
-      "Èze sits high on the corniche between Nice and Monaco, its village car-free — so a chauffeur to the entrance is the natural way to arrive.",
+      "Èze sits high on the corniche between Nice and Monaco, and its medieval village is car-free. Your chauffeur drops you at the village entrance, where the hotels take your luggage into the lanes.",
     panels: [
       {
         title: "Along the Corniche",
@@ -1394,6 +1489,14 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    story: {
+      title: "How the Nice Airport to Èze transfer works",
+      paragraphs: [
+        "Èze is **about 25 to 30 minutes** from Nice Côte d'Azur Airport, up the Moyenne Corniche towards Monaco. Your chauffeur meets you in arrivals, takes your luggage and drives you to the entrance of the village.",
+        `The medieval village is car-free, so every car stops at its entrance, and the hotels, such as the Château de la Chèvre d'Or, take your luggage into the lanes. A transfer from the airport costs from about ${eur(startingPrice("eze"))}, fixed before you book, with one hour of waiting included from your pickup time.`,
+        `Monaco is a few minutes away, so the same driver can take you on to Monte-Carlo, along the corniches or to dinner on the coast. For an evening or a whole day, our hourly chauffeur service starts at ${eur(E_CLASS.prices.nice.hourly)} an hour in a Mercedes E-Class.`,
+      ],
+    },
     audienceTitle: "Ideal For",
     audienceAccent: "Èze Stays",
     audienceDescription:
@@ -1407,13 +1510,13 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Fine Dining",
-        text: "A chauffeur for the Michelin tables of Èze, so you can enjoy the wine and the view without driving the corniche.",
+        text: "A chauffeur for the Michelin tables of Èze: enjoy the wine and the view, and leave the corniche to your driver.",
         icon: "/assets/icons/services/hand.webp",
         iconAlt: "Èze dining icon",
       },
       {
         title: "Corniche & Monaco",
-        text: "Èze pairs with Monaco minutes away and the three corniches, easily linked by a private driver.",
+        text: "Keep your chauffeur by the hour to link Èze with Monaco, minutes away, and the three corniches.",
         icon: "/assets/icons/services/van.webp",
         iconAlt: "Èze corniche icon",
       },
@@ -1423,9 +1526,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Need an Èze Transfer?",
+      title: "Book Your Nice Airport to Èze Transfer",
       description:
-        "Send us your arrival or departure details and we will organize a chauffeur from Nice Airport up to the village of Èze.",
+        "Send us your flight and your hotel in Èze, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Èze Transfer",
       buttonHref: "/contact-me",
     },
@@ -1437,8 +1540,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         question: "How much is a Nice Airport to Èze transfer?",
-        answer:
-          "Indicatively from around €110 from Nice Airport, quoted as a fixed price in advance with no meter.",
+        answer: `From about ${eur(startingPrice("eze"))} from Nice Airport, fixed before you book, with no meter.`,
       },
       {
         question: "Can a car reach the village of Èze?",
@@ -1451,9 +1553,13 @@ export const transferPages: Record<string, ServicePageConfig> = {
           "Yes. Monaco is minutes away, and a private driver links Èze with the corniches and the coast for dinners and day trips.",
       },
       {
-        question: "Do you offer a return transfer to Nice Airport?",
+        question: "Can I book a private driver in Èze by the hour?",
+        answer: `Yes. Your driver stays with you from ${eur(E_CLASS.prices.nice.hourly)} an hour in a Mercedes E-Class, or ${eur(E_CLASS.prices.nice.fullDay)} for a full day: dinner in the village, a drive along the corniches or a night in Monaco.`,
+      },
+      {
+        question: "Can you take me from Èze back to Nice Airport?",
         answer:
-          "Yes. Many clients book both the arrival and the departure for a seamless experience throughout their stay in Èze.",
+          "Yes. We collect you at the village entrance or your hotel and drive you back to your terminal.",
       },
     ],
   },
