@@ -931,7 +931,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     story: {
       title: "How the Nice Airport to Monaco transfer works",
       paragraphs: [
-        "Monaco has no airport of its own: its airport is Nice Côte d'Azur, **about 30 to 40 minutes** away by the motorway or the coast road depending on traffic. Your driver meets you in arrivals, at Terminal 1 or 2, and drops you at the door of your hotel or residence in Monte-Carlo, on the quay at Port Hercule or on the Casino Square.",
+        "Monaco has no airport of its own, so a Monaco airport transfer starts at Nice Côte d'Azur, **about 30 to 40 minutes** away by the motorway or the coast road depending on traffic. Your driver meets you in arrivals, at Terminal 1 or 2, and drops you at the door of your hotel or residence in Monte-Carlo, on the quay at Port Hercule or on the Casino Square.",
         `A one-way transfer starts at ${routePrices("monaco")}. We fix the price when you book, follow your flight and include one hour of waiting from your pickup time. The V-Class seats up to ${V_CLASS.passengers} passengers with their luggage.`,
         "During the Grand Prix in May and the Yacht Show in September, roads close and the principality fills up. We plan the route and the drop-off point around the closures. If you take the helicopter from Nice Airport instead, your driver meets you at the Monaco heliport in Fontvieille. For your departure, we collect you in Monaco and drive you back to your terminal.",
       ],
@@ -1036,7 +1036,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     heroImageAlt: "Private chauffeur transfer to Cannes with a black Mercedes on the Croisette",
     introTitle: "Arrive on the Croisette",
     introDescription:
-      "Cannes is about 30 minutes west of the airport. Your chauffeur meets you at your flight and takes you to the seafront, without the taxi queue or the festival crowds.",
+      "A Cannes airport transfer starts at Nice Côte d'Azur, about 30 minutes east of the town. Your chauffeur meets you at your flight and takes you to the seafront, without the taxi queue or the festival crowds.",
     panels: [
       {
         title: "Met at Your Flight",
@@ -1366,7 +1366,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     heroImageAlt: "Private chauffeur transfer to Cap-Ferrat with a black Mercedes among the villas",
     introTitle: "The Discreet Peninsula",
     introDescription:
-      "Saint-Jean-Cap-Ferrat is a quiet, residential peninsula east of Nice, with gated villas, a few hotels and yachts at anchor in its bays. Your chauffeur takes you to the gate.",
+      "Saint-Jean-Cap-Ferrat is a quiet, residential peninsula east of Nice, with gated villas, a few hotels and yachts at anchor in its bays. Your chauffeur takes you to the gate, and can stay with you by the hour during your stay.",
     panels: [
       {
         title: "Met at Your Flight",
@@ -1390,7 +1390,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     audienceTitle: "Ideal For",
     audienceAccent: "Cap-Ferrat Stays",
     audienceDescription:
-      "Built for arrivals on the peninsula: private villas, hotels and yachts.",
+      "A chauffeur for arrivals on the Cap-Ferrat peninsula: private villas, hotels and yachts.",
     audienceCards: [
       {
         title: "Villas & Estates",
@@ -1476,7 +1476,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     heroImageAlt: "Private chauffeur transfer to Èze with a black Mercedes on the corniche",
     introTitle: "Up to the Perched Village",
     introDescription:
-      "Èze sits high on the corniche between Nice and Monaco, and its medieval village is car-free. Your chauffeur drops you at the village entrance, where the hotels take your luggage into the lanes.",
+      "Èze sits high on the corniche between Nice and Monaco, and its medieval village is car-free. Your chauffeur drops you at the village entrance, where the hotels take your luggage into the lanes. By the hour, the same chauffeur can stay with you for dinner or a drive along the corniches.",
     panels: [
       {
         title: "Along the Corniche",
@@ -1555,6 +1555,10 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Can I book a private driver in Èze by the hour?",
         answer: `Yes. Your driver stays with you from ${eur(E_CLASS.prices.nice.hourly)} an hour in a Mercedes E-Class, or ${eur(E_CLASS.prices.nice.fullDay)} for a full day: dinner in the village, a drive along the corniches or a night in Monaco.`,
+      },
+      {
+        question: "What does your chauffeur service in Èze include?",
+        answer: `The transfer from Nice Airport to the village entrance, from about ${eur(startingPrice("eze"))} at a price fixed before you book, and a chauffeur by the hour from ${eur(E_CLASS.prices.nice.hourly)}, for dinner in the village, the corniches or an evening in Monaco.`,
       },
       {
         question: "Can you take me from Èze back to Nice Airport?",
