@@ -43,7 +43,7 @@ const OVERVIEW = {
     caption: "Prix de départ d'un transfert privé aller simple depuis l'aéroport Nice Côte d'Azur, par destination et par véhicule",
     destination: "Destination",
     car: (name: string) => short(name.replace(/ ([A-Z])-Class$/, " Classe $1")),
-    price: (n: number) => `${n.toLocaleString("fr-FR")} €`,
+    price: (n: number) => `${n.toLocaleString("fr-FR")} €`,
   },
 };
 

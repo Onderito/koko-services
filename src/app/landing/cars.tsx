@@ -40,11 +40,13 @@ const WORDS = {
     homeTitle: "Our Mercedes fleet, from the E-Class to the Maybach",
     intro: "Choose from our range of luxury vehicles. Curated for style, space, and performance.",
   },
+  // Labels short enough for the card's 51 px column (longer ones end in "…"); a no-break space before €, since the
+  // rolling figure drops ordinary spaces.
   fr: {
-    guests: "Passagers",
-    perHour: "De l'heure",
-    starting: "À partir de",
-    price: (n: number) => `${n.toLocaleString("fr-FR")} €`,
+    guests: "Places",
+    perHour: "L'heure",
+    starting: "Dès",
+    price: (n: number) => `${n.toLocaleString("fr-FR")} €`,
     details: "Voir les détails",
     detailsLabel: (car: string) => `Voir les détails de la ${car}`,
     title: "Notre flotte Mercedes, de la Classe E à la Maybach",

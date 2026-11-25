@@ -46,7 +46,7 @@ function frenchReasons(google: Rating, tripadvisor: Rating, year: number, month:
       title: `Noté ${note(google.rating)} sur Google`,
       text: (
         <>
-          <RatingLink rating={google} locale="fr" />, et <RatingLink rating={tripadvisor} locale="fr" />.
+          <RatingLink rating={google} locale="fr" /> et <RatingLink rating={tripadvisor} locale="fr" />.
         </>
       ),
     },
