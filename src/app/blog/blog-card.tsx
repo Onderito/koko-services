@@ -11,16 +11,18 @@ type BlogCardProps = {
   post: BlogPost;
   priority?: boolean;
   sizes?: string;
+  /** The title's heading level: h3 under a section heading, h2 when the card comes right after the page's h1. */
+  headingAs?: "h2" | "h3";
 };
 
-export default function BlogCard({ post, priority = false, sizes = "(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw" }: BlogCardProps) {
+export default function BlogCard({ post, priority = false, sizes = "(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw", headingAs: Heading = "h3" }: BlogCardProps) {
   const clusterConfig = post.cluster ? clusterById[post.cluster] : undefined;
   const chip = "rounded-full bg-[#f6ecd6] px-2.5 py-0.5 text-[12px] font-semibold text-[#7a5a17]";
 
   return (
     <article className="group flex h-full flex-col rounded-[10px] bg-white p-2.5 shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)] transition-shadow duration-200 hover:shadow-[0_2px_4px_rgba(16,24,40,0.06),0_18px_44px_rgba(16,24,40,0.12)]">
       <Link href={`/blog/${post.slug}`} className="relative block aspect-[16/10] overflow-hidden rounded-[8px] bg-[#eef0f3]">
-        <Image src={post.imageUrl} alt={post.imageAlt} fill priority={priority} sizes={sizes} className="object-cover" />
+        <Image src={post.imageUrl} alt={post.imageAlt} fill priority={priority} fetchPriority={priority ? "high" : undefined} sizes={sizes} className="object-cover" />
       </Link>
 
       <div className="flex flex-1 flex-col px-2.5 pb-2 pt-4">
@@ -36,11 +38,11 @@ export default function BlogCard({ post, priority = false, sizes = "(min-width: 
           <span>{formatBlogDate(post.publishedAt)}</span>
         </div>
 
-        <h3 className="mt-3 text-[19px] font-semibold leading-snug tracking-[-0.01em] text-[#101828]">
+        <Heading className="mt-3 text-[19px] font-semibold leading-snug tracking-[-0.01em] text-[#101828]">
           <Link href={`/blog/${post.slug}`} className="transition-colors hover:text-[#9a7a3e]">
             {post.title}
           </Link>
-        </h3>
+        </Heading>
         <p className="mt-2 text-[14px] leading-relaxed text-[#667085]">{post.excerpt}</p>
 
         <div className="mt-auto pt-5">

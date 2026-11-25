@@ -105,6 +105,7 @@ export default async function BlogIndexPage({
               post={featuredPost}
               priority
               sizes="(min-width: 1024px) 58vw, 100vw"
+              headingAs="h2"
             />
 
             {/* Request card: Anti's navy block with gold circles and the gold pill button. */}

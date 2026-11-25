@@ -53,20 +53,21 @@ export default function ModelCard({
           )}
         </Tag>
         <p className="mt-1 text-[13px] text-[#667085]">{line}</p>
-        <dl className="mt-5 grid grid-cols-3 gap-2 border-t border-[#f2f4f7] pt-4">
+        {/* A list of three facts: each item holds the icon, then the label and the value. */}
+        <ul className="mt-5 grid grid-cols-3 gap-2 border-t border-[#f2f4f7] pt-4">
           {specs.map(s => (
-            <div key={s.label} className="flex min-w-0 items-start gap-2">
+            <li key={s.label} className="flex min-w-0 items-start gap-2">
               <span aria-hidden="true" className="mt-px shrink-0 text-[#98a2b3]">
                 {s.icon}
               </span>
               {/* The label comes first for screen readers ("Guests 7"); the value shows above it. */}
               <div className="flex min-w-0 flex-col-reverse">
-                <dt className="mt-1.5 truncate text-[12px] leading-none text-[#98a2b3]">{s.label}</dt>
-                <dd className="text-[15px] font-semibold leading-none text-[#101828]">{s.value}</dd>
+                <span className="mt-1.5 truncate text-[12px] leading-none text-[#98a2b3]">{s.label}</span>
+                <span className="text-[15px] font-semibold leading-none text-[#101828]">{s.value}</span>
               </div>
-            </div>
+            </li>
           ))}
-        </dl>
+        </ul>
         <div className="relative z-10 mt-auto pt-5">
           <ArrowButton text={button.text} href={button.href} tone="outline" size="sm" full aria-label={button.ariaLabel} />
         </div>

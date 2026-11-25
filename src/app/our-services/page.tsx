@@ -36,7 +36,7 @@ export default function OurServicesPage() {
     <>
       <section data-hero-tone="dark" data-nav-tone="dark" className="relative isolate bg-[#0d1922] text-white">
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <Image src="/assets/images/hero/drone-corniche.jpg" alt="Drone view of a black chauffeur van on a coastal road above the Mediterranean" fill priority sizes="100vw" className="object-cover object-[60%_45%]" />
+          <Image src="/assets/images/hero/drone-corniche.jpg" alt="Drone view of a black chauffeur van on a coastal road above the Mediterranean" fill priority fetchPriority="high" sizes="100vw" className="object-cover object-[60%_45%]" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,25,34,0.9)_0%,rgba(13,25,34,0.55)_45%,rgba(13,25,34,0.15)_100%)]" />
         </div>
         <div className="mx-auto flex min-h-[560px] max-w-[1240px] flex-col justify-end px-4 pb-14 pt-[calc(var(--header-h)+3.5rem)] md:px-6 lg:pt-[calc(var(--header-h)+4.5rem)]">

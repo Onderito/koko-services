@@ -175,6 +175,7 @@ function PostHero({ post }: { post: BlogPost }) {
                   alt={img.alt}
                   fill
                   priority={index === 0}
+                  fetchPriority={index === 0 ? "high" : undefined}
                   className="object-cover"
                   sizes="(min-width: 1024px) 300px, 50vw"
                 />
@@ -194,6 +195,7 @@ function PostHero({ post }: { post: BlogPost }) {
           alt={post.imageAlt}
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover"
         />

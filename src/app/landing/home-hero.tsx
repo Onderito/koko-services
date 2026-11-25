@@ -27,6 +27,7 @@ export default function HomeHero() {
           alt="Black 2026 Mercedes V-Class chauffeur van on a coastal road above the Mediterranean at sunset, Monaco lit up in the distance"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-[80%_50%] lg:object-[50%_50%]"
         />

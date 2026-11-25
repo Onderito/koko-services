@@ -50,7 +50,7 @@ export function DatePick({ id, value, onChange, onDone, className }: FieldProps)
   return (
     <div ref={p.box} className="relative">
       <button ref={p.trigger} type="button" id={id} aria-haspopup="dialog" aria-expanded={p.open} onClick={() => p.setOpen(o => !o)} className={`${className} flex items-center justify-between gap-3 text-left`}>
-        <span className={value ? "" : "text-[#667085]/70"}>{value ? long(value) : "Choose a date"}</span>
+        <span className={value ? "" : "text-[#667085]"}>{value ? long(value) : "Choose a date"}</span>
         <CalendarDays size={18} strokeWidth={1.8} aria-hidden="true" className="shrink-0 text-[#667085]" />
       </button>
       <Popover open={p.open} onClose={p.dismiss} anchor={p.box} label="Choose your pick-up date" className="w-[312px] p-4">
@@ -76,7 +76,7 @@ export function TimePick({ id, value, onChange, onDone, className }: FieldProps)
   return (
     <div ref={p.box} className="relative">
       <button ref={p.trigger} type="button" id={id} aria-haspopup="dialog" aria-expanded={p.open} onClick={() => p.setOpen(o => !o)} className={`${className} flex items-center justify-between gap-3 text-left tabular-nums`}>
-        <span className={value ? "" : "text-[#667085]/70"}>{value || "Choose a time"}</span>
+        <span className={value ? "" : "text-[#667085]"}>{value || "Choose a time"}</span>
         <Clock3 size={18} strokeWidth={1.8} aria-hidden="true" className="shrink-0 text-[#667085]" />
       </button>
       <Popover open={p.open} onClose={p.dismiss} anchor={p.box} label="Choose your pick-up time" className="w-[150px] p-3">

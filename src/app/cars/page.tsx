@@ -29,6 +29,7 @@ export default function FleetPage() {
             alt="A black Mercedes S-Class on the Promenade des Anglais in Nice at dusk"
             fill
             priority
+            fetchPriority="high"
             sizes="100vw"
             className="object-cover object-[70%_50%]"
           />

@@ -170,6 +170,7 @@ export default function CarPageTemplate({
             alt={heroImageAlt}
             fill
             priority
+            fetchPriority="high"
             sizes="(min-width: 1024px) 58vw, 100vw"
             className={`object-cover ${HERO_FOCUS[heroImageSrc] ?? "object-[50%_65%]"}`}
           />

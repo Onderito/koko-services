@@ -194,7 +194,7 @@ function Hero({ config, actionLabel, actionHref, askHref, askLabel, priceLine }:
       {/* Phones: a photo band under the text. Desktop: the photo fills the right of the hero. Either way the photo itself
           fades into the navy (a mask, so no seam), and a light shade keeps the header and the text readable. */}
       <div className="absolute inset-x-0 bottom-0 -z-10 h-[300px] [mask-image:linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.6)_30%,#000_60%)] sm:h-[340px] lg:inset-y-0 lg:left-auto lg:right-0 lg:h-auto lg:w-[58%] lg:[mask-image:linear-gradient(90deg,transparent_0%,rgba(0,0,0,0.3)_22%,rgba(0,0,0,0.8)_44%,#000_62%)] xl:w-[64%]">
-        <Image src={config.heroImageSrc} alt={config.heroImageAlt} fill priority sizes="(min-width: 1280px) 64vw, (min-width: 1024px) 58vw, 100vw" className={`object-cover ${focus}`} />
+        <Image src={config.heroImageSrc} alt={config.heroImageAlt} fill priority fetchPriority="high" sizes="(min-width: 1280px) 64vw, (min-width: 1024px) 58vw, 100vw" className={`object-cover ${focus}`} />
         <div className="absolute inset-x-0 top-0 hidden h-40 bg-gradient-to-b from-[#0d1424]/70 to-transparent lg:block" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0d1424]/50 to-transparent" />
       </div>

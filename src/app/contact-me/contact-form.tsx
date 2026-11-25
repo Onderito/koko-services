@@ -24,7 +24,7 @@ type Status = "idle" | "loading" | "success" | "error";
 
 const labelCls = "text-[14px] font-semibold text-[#101828]";
 const fieldBase =
-  "mt-2 w-full rounded-[8px] border bg-white px-3.5 text-[15px] text-[#101828] placeholder:text-[#667085]/70 transition-colors duration-150 focus:border-[#e2b04a] focus:outline-none focus:ring-2 focus:ring-[#e2b04a]/25";
+  "mt-2 w-full rounded-[8px] border bg-white px-3.5 text-[15px] text-[#101828] placeholder:text-[#667085] transition-colors duration-150 focus:border-[#e2b04a] focus:outline-none focus:ring-2 focus:ring-[#e2b04a]/25";
 
 export default function ContactForm() {
   const [countryCode, setCountryCode] = useState("+33");
@@ -222,10 +222,11 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 gap-x-5 gap-y-6 lg:grid-cols-12">
           {/* Service */}
           <fieldset className="lg:col-span-4">
-            <legend className={labelCls}>Select Your Service</legend>
+            <legend id="service-legend" className={labelCls}>Select Your Service</legend>
             <div className="relative">
               <select
                 id="service"
+                aria-labelledby="service-legend"
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
@@ -580,7 +581,7 @@ function PhoneField({
         onChange={onPhoneChange}
         onBlur={onBlur}
         placeholder="6 12 34 56 78"
-        className="w-full min-w-0 rounded-r-[7px] bg-transparent px-3.5 text-[15px] text-[#101828] outline-none placeholder:text-[#667085]/70"
+        className="w-full min-w-0 rounded-r-[7px] bg-transparent px-3.5 text-[15px] text-[#101828] outline-none placeholder:text-[#667085]"
       />
     </div>
   );
