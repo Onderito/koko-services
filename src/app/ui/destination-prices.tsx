@@ -104,6 +104,16 @@ const FRENCH_CITY: Record<string, string> = {
 const frenchCar = (name: string) => name.replace(/ ([A-Z])-Class$/, " Classe $1");
 const frenchEur = (n: number) => `${n.toLocaleString("fr-FR")} €`;
 
+// The places each destination of the price guide covers, as the structured data names them; the table and the chips
+// keep the guide's own names ("Nice City", "Monaco/Cap d'Ail").
+const DESTINATION_PLACES: Record<string, string | string[]> = {
+  nice: "Nice",
+  antibes: ["Antibes", "Juan-les-Pins"],
+  cannes: "Cannes",
+  monaco: ["Monaco", "Cap-d'Ail"],
+  "st-tropez": "Saint-Tropez",
+};
+
 /** The destination's name in the page's language. */
 export const cityName = (city: { id: string; displayName: string }, locale?: "fr") =>
   locale === "fr" ? (FRENCH_CITY[city.id] ?? city.displayName) : city.displayName;
@@ -157,7 +167,7 @@ export function RoutePrices({ cityId, path, locale }: { cityId: string; path: st
     serviceType: t.serviceType,
     url: `${siteUrl}${path}`,
     provider: { "@id": `${siteUrl}#localbusiness` },
-    areaServed: cityName(city, locale),
+    areaServed: DESTINATION_PLACES[city.id] ?? cityName(city, locale),
     offers: vehicles.map(v => ({
       "@type": "Offer",
       name: t.offer(route, t.car(v.name)),

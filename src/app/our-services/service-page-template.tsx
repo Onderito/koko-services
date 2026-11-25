@@ -37,7 +37,7 @@ import { AntiCard, AntiHeading, AntiOutlinePill, AntiSection, AntiSplit, GoldArr
 import ArrowButton from "../ui/arrow-button";
 import FaqList from "../ui/faq-list";
 import { cityForPage, cityName, RoutePrices } from "../ui/destination-prices";
-import { servicePrices } from "../ui/service-prices";
+import { placeService, servicePrices } from "../ui/service-prices";
 import BookingReasons from "../ui/booking-reasons";
 import { altFor } from "../data/image-alts";
 import { Accent } from "../ui/kit";
@@ -373,6 +373,8 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
   // questions go to the contact page. The transfers hub and the other page families keep their buttons.
   const isRoute = familyPath.startsWith("/our-services/transfers/") && !config.heroAction;
   const prices = servicePrices(familyPath, config.locale === "fr" ? { url: config.path } : undefined);
+  // The page's Service block: with its offers when it shows a price line, else only its service and place.
+  const serviceSchema = prices?.schema ?? placeService(familyPath, config.locale === "fr" ? { url: config.path } : undefined);
   // A French page sends to the French home's booking bar and the French contact page once they exist.
   const home = config.locale === "fr" ? frLink("/") : "/";
   const bookHref = home === "/" ? "/#book" : `${home}#book`;
@@ -605,7 +607,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
     <>
       {content}
       <Footer withCta={false} locale={config.locale} />
-      {prices && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(prices.schema) }} />}
+      {serviceSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />}
     </>
   );
 }

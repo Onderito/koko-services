@@ -53,8 +53,8 @@ export const PAGE_PLACE: Record<string, Place> = {
   "/our-services/events/monaco-yacht-show": MONACO,
 };
 
-/** English pages whose head is left exactly as it is; their French twins still get the tags. */
-export const ENGLISH_HEAD_UNCHANGED = new Set(["/our-services/hourly-chauffeur/monaco"]);
+/** English pages left exactly as they are (head tags and structured data); their French twins still get both. */
+export const ENGLISH_LEFT_AS_IS = new Set(["/our-services/hourly-chauffeur/monaco"]);
 
 /** The geo meta tags of a place, with the place's name in the page's language. */
 export function geoTags(place: Place, language: "en" | "fr") {

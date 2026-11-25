@@ -22,6 +22,7 @@ export function postMetadata(post: BlogPost): Metadata {
       url: `${siteUrl}/blog/${post.slug}`,
       siteName: "kokolimo",
       type: "article",
+      locale: "en_GB",
       publishedTime: post.publishedAt,
       images: [
         {

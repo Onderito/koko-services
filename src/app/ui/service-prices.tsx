@@ -3,11 +3,13 @@
 // structured data, so the markup matches what the page shows. Prices: data/vehicles.tsx. Hourly hire is charged at
 // the same rates in every area served, the Alps included; a yacht transfer costs the one-way transfer from Nice
 // Airport to the marina's town. Pages not listed here (the route pages, which have RoutePrices) show no line. A French
-// page passes its own address: the same prices, with the line and the offer names in French.
+// page passes its own address: the same prices, with the line and the offer names in French. The pages of PLACE_ONLY
+// show no line either, and name their service and place in a Service block without offers (placeService).
 
 import { routeStartingPrices, vehicles } from "../data/vehicles";
 import { siteUrl } from "../data/site-config";
 import { carFr } from "../data/i18n/fr-helpers";
+import { ENGLISH_LEFT_AS_IS } from "../data/places";
 
 type Page =
   | { kind: "hourly"; service: string; area: string }
@@ -243,5 +245,36 @@ export function servicePrices(path: string, french?: { url: string }): { line: s
       areaServed: page.area,
       offers,
     },
+  };
+}
+
+// Pages with no starting-price line (no confirmed price for the route, or prices the page presents its own way): their
+// service and place, in English and in French.
+const PLACE_ONLY: Record<string, { service: string; serviceFr: string; area: string }> = {
+  "/our-services/hourly-chauffeur/cannes": { service: "Hourly chauffeur", serviceFr: "Chauffeur privé à l'heure", area: "Cannes" },
+  "/our-services/hourly-chauffeur/monaco": { service: "Hourly chauffeur", serviceFr: "Chauffeur privé à l'heure", area: "Monaco" },
+  "/our-services/transfers/menton-transfer": { service: "Nice Airport to Menton transfer", serviceFr: "Transfert de l'aéroport de Nice à Menton", area: "Menton" },
+  "/our-services/transfers/villefranche-transfer": {
+    service: "Nice Airport to Villefranche-sur-Mer transfer",
+    serviceFr: "Transfert de l'aéroport de Nice à Villefranche-sur-Mer",
+    area: "Villefranche-sur-Mer",
+  },
+};
+
+/** The Service block, without offers, of a page in PLACE_ONLY (null otherwise, and for the English pages of
+ *  ENGLISH_LEFT_AS_IS). A French page passes its English original's path and, in `french`, its own address. */
+export function placeService(path: string, french?: { url: string }): Record<string, unknown> | null {
+  const page = PLACE_ONLY[path];
+  if (!page || (!french && ENGLISH_LEFT_AS_IS.has(path))) return null;
+  const service = french ? page.serviceFr : page.service;
+  const where = service.includes(page.area) ? "" : french ? ` à ${page.area}` : ` in ${page.area}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `${service}${where}`,
+    serviceType: service,
+    url: `${siteUrl}${french ? french.url : path}`,
+    provider: { "@id": `${siteUrl}#localbusiness` },
+    areaServed: page.area,
   };
 }

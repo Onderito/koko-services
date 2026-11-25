@@ -4,7 +4,7 @@ import { altFor } from "./image-alts";
 import { IMAGE_SIZE } from "./image-sizes";
 import { businessName, siteUrl } from "./site-config";
 import { englishTwin, frenchTwin } from "./i18n/addresses";
-import { ENGLISH_HEAD_UNCHANGED, PAGE_PLACE, geoTags } from "./places";
+import { ENGLISH_LEFT_AS_IS, PAGE_PLACE, geoTags } from "./places";
 
 // The picture a page shares when it has no landscape picture of its own; its alt text, in the page's language, is in
 // data/image-alts.ts.
@@ -64,7 +64,7 @@ export function pageMetadata({
   // A city page's place (data/places.ts); a French page takes its English twin's.
   const englishPath = language === "fr" ? found : bare;
   const place =
-    englishPath && !(language === "en" && ENGLISH_HEAD_UNCHANGED.has(englishPath)) ? PAGE_PLACE[englishPath] : undefined;
+    englishPath && !(language === "en" && ENGLISH_LEFT_AS_IS.has(englishPath)) ? PAGE_PLACE[englishPath] : undefined;
 
   return {
     title,
