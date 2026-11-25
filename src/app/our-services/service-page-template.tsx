@@ -174,7 +174,6 @@ const WORDS = {
     pricesTitle: (city: string) => `Nice Airport to ${city}: prices`,
     pricesIntro: "Starting prices by vehicle for a private transfer, by the hour or for a full day.",
     allServices: undefined,
-    otherLanguage: undefined,
   },
   fr: {
     quote: "Obtenir mon devis",
@@ -183,15 +182,12 @@ const WORDS = {
     pricesTitle: (city: string) => `De l'aéroport de Nice à ${city} : les prix`,
     pricesIntro: "Prix de départ par véhicule pour un transfert privé, à l'heure ou à la journée.",
     allServices: "Découvrir tous nos services",
-    otherLanguage: { label: "Read this page in English", lang: "en" },
   },
 };
 
 /* ------------------------------------------------------------------ blocks */
 
-type LanguageLink = { href: string; label: string; lang: string };
-
-function Hero({ config, actionLabel, actionHref, askHref, askLabel, priceLine, languageLink }: { config: ServicePageConfig; actionLabel: string; actionHref: string; askHref?: string; askLabel: string; priceLine?: string; languageLink?: LanguageLink }) {
+function Hero({ config, actionLabel, actionHref, askHref, askLabel, priceLine }: { config: ServicePageConfig; actionLabel: string; actionHref: string; askHref?: string; askLabel: string; priceLine?: string }) {
   const focus = HERO_FOCUS[config.heroImageSrc] ?? "object-[30%_65%]";
   return (
     <section data-hero-tone="dark" data-nav-tone="dark" className="relative isolate overflow-hidden bg-[#0d1424] text-white">
@@ -213,13 +209,6 @@ function Hero({ config, actionLabel, actionHref, askHref, askLabel, priceLine, l
           <ArrowButton text={actionLabel} href={actionHref} size="lg" />
           {askHref && <AntiOutlinePill href={askHref}>{askLabel}</AntiOutlinePill>}
         </div>
-        {languageLink && (
-          <p className="mt-7 text-[14px] text-white/70">
-            <Link href={languageLink.href} hrefLang={languageLink.lang} lang={languageLink.lang} className="underline decoration-[#d4b471] underline-offset-4 transition-colors hover:text-white">
-              {languageLink.label}
-            </Link>
-          </p>
-        )}
       </div>
     </section>
   );
@@ -391,9 +380,6 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
         : familyPath.startsWith("/our-services/events")
           ? "/assets/images/banners/svc-events.jpg"
           : "/assets/images/banners/svc-tours.jpg";
-
-  // A translated page links to its English original from the hero.
-  const languageLink = config.enPath && words.otherLanguage ? { href: config.enPath, ...words.otherLanguage } : undefined;
 
   const availableLocalLinks = config.localLinks?.filter(link => link.href !== config.path);
   const showLocalLinks = !!(availableLocalLinks && availableLocalLinks.length > 0 && config.localLinksTitle && config.localLinksDescription);
@@ -576,7 +562,6 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
         askHref={isRoute ? "/contact-me" : undefined}
         askLabel={words.ask}
         priceLine={prices?.line}
-        languageLink={languageLink}
       />
       {sections}
       <FooterComponent

@@ -1,6 +1,7 @@
 // /ai-instructions: Kokolimo's facts, linked from the footer. Each fact names the page of this site that states it and
-// the day it was checked (factsCheckedOn). The prices are read from data/vehicles.tsx. The page has a Markdown version at
-// /ai-instructions.md like every other page.
+// the day it was checked (factsCheckedOn). The prices are read from data/vehicles.tsx and the ratings from
+// lib/reviews/ratings.ts, the home page's source. The page has a Markdown version at /ai-instructions.md like every
+// other page.
 
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -8,6 +9,7 @@ import Footer from "../layout/footer";
 import { pageMetadata } from "../data/page-metadata";
 import { contactEmail, contactPhone, contactPhoneDisplay, factsCheckedOn, siteUrl, whatsappUrl } from "../data/site-config";
 import { cities, vehicles } from "../data/vehicles";
+import { getRatings } from "@/lib/reviews/ratings";
 
 export const metadata: Metadata = pageMetadata({
   title: "Kokolimo Facts | Private Driver in Nice and the French Riviera",
@@ -59,7 +61,6 @@ const facts: { topic: string; fact: string; source: { label: string; href: strin
   },
   { topic: "Price confirmation", fact: "Prices are starting prices; the fixed price is confirmed before the ride.", source: { label: "Home (FAQ)", href: "/" } },
   { topic: "Languages", fact: "Chauffeurs speak English, French, Turkish and Russian.", source: { label: "Home", href: "/" } },
-  { topic: "Ratings shown", fact: "Google 5.0/5; Tripadvisor 4.8/5 (165 reviews), as shown on the home page.", source: { label: "Home", href: "/" } },
 ];
 
 const mainPages = [
@@ -76,7 +77,13 @@ const h2 = "mt-12 text-[22px] font-bold tracking-[-0.01em] text-[#101828]";
 const cell = "border-b border-[#eaecf0] py-3 pr-4 align-top";
 const link = "underline decoration-[#d4b471] underline-offset-4 hover:text-[#9a7a3e]";
 
-export default function AiInstructionsPage() {
+export default async function AiInstructionsPage() {
+  // The ratings fact, with the figures the home page shows.
+  const ratings = (await getRatings())
+    .map(r => `${r.source === "google" ? "Google" : "Tripadvisor"} ${r.rating.toFixed(1)}/5${r.count ? ` (${r.count.toLocaleString("en-GB")} reviews)` : ""}`)
+    .join("; ");
+  const allFacts = [...facts, { topic: "Ratings shown", fact: `${ratings}, as shown on the home page.`, source: { label: "Home", href: "/" } }];
+
   return (
     <>
       <section data-hero-tone="dark" data-nav-tone="dark" className="bg-[#0d1922] text-white">
@@ -135,7 +142,7 @@ export default function AiInstructionsPage() {
               </tr>
             </thead>
             <tbody>
-              {facts.map(f => (
+              {allFacts.map(f => (
                 <tr key={f.topic}>
                   <th className={`${cell} font-semibold text-[#101828]`}>{f.topic}</th>
                   <td className={cell}>{f.fact}</td>

@@ -9,16 +9,18 @@ export type Rating = { source: RatingSource; rating: number; count: number | nul
 
 const REFRESH_SECONDS = 6 * 60 * 60;
 
-// Place ID derived from the profile's review link (g.page/r/CXSXgZXVNYkwEAE = CID 0x308935d595819774).
+// Place ID derived from the profile's review link (g.page/r/CXSXgZXVNYkwEAE = CID 0x308935d595819774). The rating links
+// open the profile on Google Maps, where its reviews are read.
 const GOOGLE_PLACE_ID = "ChIJZzW8hBHQzRIRdJeBldU1iTA";
-const GOOGLE_URL = "https://g.page/r/CXSXgZXVNYkwEAE/review";
+const GOOGLE_URL = "https://maps.google.com/?cid=3497385777082505076";
 const TRIPADVISOR_LOCATION_ID = "7971865";
 const TRIPADVISOR_URL =
   "https://www.tripadvisor.com/Attraction_Review-g187234-d7971865-Reviews-MY_Riviera_Tours_Transfers-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_.html";
 
-// Figures already published on the site (home reviews section) or on the profile, used only when live data is missing.
+// The figures shown when live data is missing (no key is set): read by hand on the profiles and updated when they
+// change. Google: 5.0 from 31 reviews, read on the profile on 25 Nov 2026.
 const FALLBACK: Record<RatingSource, Omit<Rating, "source" | "url" | "live">> = {
-  google: { rating: 5.0, count: null },
+  google: { rating: 5.0, count: 31 },
   tripadvisor: { rating: 4.8, count: 165 },
 };
 
