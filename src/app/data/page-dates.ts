@@ -54,6 +54,10 @@ export const pageUpdatedAt: Record<string, string> = {
       "transfers/long-distance-transfer",
     ].map(page => [`/our-services/${page}`, "2026-11-25"]),
   ),
+  // 25 Nov 2026: the French versions of the Nice Airport, Nice Airport to Monaco and Nice Airport to Cannes pages.
+  "/fr/transfert-aeroport-nice": "2026-11-25",
+  "/fr/transfert-aeroport-nice-monaco": "2026-11-25",
+  "/fr/transfert-aeroport-nice-cannes": "2026-11-25",
 };
 
 /** Articles whose text changed after publication, by slug: their Article markup's dateModified. */

@@ -95,6 +95,10 @@ export type ServicePageConfig = {
   story?: { title: string; paragraphs: string[] };
   /** Shows the "Why travellers book Kokolimo" cards (ratings, company, languages, terms); absent elsewhere. */
   bookingReasons?: boolean;
+  /** The page's language when it is not English: "fr" on the French pages (data/service-pages-fr.ts). */
+  locale?: "fr";
+  /** A translated page's English original: its page family, price table and photos are read from that path. */
+  enPath?: string;
 };
 
 export const serviceMenuLinks: ServiceCardLink[] = [

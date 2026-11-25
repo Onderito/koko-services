@@ -6,7 +6,8 @@
 // data/service-pages.ts unchanged. The small labels above titles ("Keep Exploring", "Questions"…) are gone at the user's
 // request (20 Oct 2026). 21 Oct 2026, at the user's request: the FAQ uses the home page's animated FAQ (Hyperiux, answers
 // kept in the HTML, questions still h3), and the closing banner is the home page's banner with a dusk photo for the
-// page family and "Discover All of Our Services".
+// page family and "Discover All of Our Services". The French pages (data/service-pages-fr.ts) use the same template:
+// their own words come from WORDS, and their family (buttons, price table, photos) from their English original.
 
 import Image from "next/image";
 import Link from "next/link";
@@ -30,10 +31,11 @@ import {
   type ServiceCardLink,
   type ServicePageConfig,
 } from "../data/service-pages";
+import { frenchServicePages } from "../data/service-pages-fr";
 import { AntiCard, AntiHeading, AntiOutlinePill, AntiSection, AntiSplit, GoldArrow, SpecChip, type AntiTone } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import FaqList from "../ui/faq-list";
-import { cityForPage, RoutePrices } from "../ui/destination-prices";
+import { cityForPage, cityName, RoutePrices } from "../ui/destination-prices";
 import { servicePrices } from "../ui/service-prices";
 import BookingReasons from "../ui/booking-reasons";
 import { altFor } from "../data/image-alts";
@@ -54,6 +56,7 @@ const allServicePages: ServicePageConfig[] = [
   ...Object.values(chauffeurTourPages),
   ...Object.values(yachtTransferPages),
   ...Object.values(eventPages),
+  ...Object.values(frenchServicePages),
 ];
 const servicePageByPath = new Map(allServicePages.map(page => [page.path, page]));
 
@@ -152,16 +155,43 @@ function audienceIcon(src: string) {
 
 /* ------------------------------------------------------------------ texts */
 
-/** The H1's gold words: what follows its last "on the / in / for / with / to", else its first word. Text unchanged. */
-function heroAccent(title: string) {
-  const tail = title.match(/^.+(?:,\s+| on the | in | for | with an? | with | to the | to )(.+)$/i)?.[1];
+/** The H1's gold words: what follows its last "on the / in / for / with / to" (in French "avec / pour / à / vers"),
+ *  else its first word. Text unchanged. */
+function heroAccent(title: string, locale?: "fr") {
+  const tail = (locale === "fr"
+    ? title.match(/^.+(?:,\s+| avec un | avec | pour | à | vers )(.+)$/i)
+    : title.match(/^.+(?:,\s+| on the | in | for | with an? | with | to the | to )(.+)$/i))?.[1];
   if (tail && tail.split(/\s+/).length <= 3) return tail;
   return title.split(/\s+/)[0];
 }
 
+// The template's own words in each language; English pages keep the words they always had.
+const WORDS = {
+  en: {
+    quote: "Get my quote",
+    ask: "Ask a question",
+    faq: ["Frequently Asked", "Questions"],
+    pricesTitle: (city: string) => `Nice Airport to ${city}: prices`,
+    pricesIntro: "Starting prices by vehicle for a private transfer, by the hour or for a full day.",
+    allServices: undefined,
+    otherLanguage: undefined,
+  },
+  fr: {
+    quote: "Obtenir mon devis",
+    ask: "Poser une question",
+    faq: ["Questions", "fréquentes"],
+    pricesTitle: (city: string) => `De l'aéroport de Nice à ${city} : les prix`,
+    pricesIntro: "Prix de départ par véhicule pour un transfert privé, à l'heure ou à la journée.",
+    allServices: "Découvrir tous nos services",
+    otherLanguage: { label: "Read this page in English", lang: "en" },
+  },
+};
+
 /* ------------------------------------------------------------------ blocks */
 
-function Hero({ config, actionLabel, actionHref, askHref, priceLine }: { config: ServicePageConfig; actionLabel: string; actionHref: string; askHref?: string; priceLine?: string }) {
+type LanguageLink = { href: string; label: string; lang: string };
+
+function Hero({ config, actionLabel, actionHref, askHref, askLabel, priceLine, languageLink }: { config: ServicePageConfig; actionLabel: string; actionHref: string; askHref?: string; askLabel: string; priceLine?: string; languageLink?: LanguageLink }) {
   const focus = HERO_FOCUS[config.heroImageSrc] ?? "object-[30%_65%]";
   return (
     <section data-hero-tone="dark" data-nav-tone="dark" className="relative isolate overflow-hidden bg-[#0d1424] text-white">
@@ -175,14 +205,21 @@ function Hero({ config, actionLabel, actionHref, askHref, priceLine }: { config:
 
       <div className="mx-auto flex max-w-[1240px] flex-col justify-center px-4 pb-[268px] pt-[calc(var(--header-h)+3.5rem)] sm:pb-[300px] md:px-6 lg:min-h-[600px] lg:pb-20 lg:pt-[calc(var(--header-h)+4.5rem)]">
         <h1 className="max-w-[640px] text-[38px] font-bold leading-[1.06] tracking-[-0.025em] sm:text-[48px] lg:text-[56px]" style={{ textWrap: "balance" }}>
-          <Accent text={config.heroTitle} accent={heroAccent(config.heroTitle)} tone="dark" />
+          <Accent text={config.heroTitle} accent={heroAccent(config.heroTitle, config.locale)} tone="dark" />
         </h1>
         <p className="mt-5 max-w-[540px] text-[17px] leading-relaxed text-white/80 md:text-[18px]">{config.heroDescription}</p>
         {priceLine && <p className="mt-4 max-w-[540px] text-[15px] font-semibold leading-relaxed text-[#d4b471] md:text-[16px]">{priceLine}</p>}
         <div className="mt-9 flex flex-wrap items-center gap-4">
           <ArrowButton text={actionLabel} href={actionHref} size="lg" />
-          {askHref && <AntiOutlinePill href={askHref}>Ask a question</AntiOutlinePill>}
+          {askHref && <AntiOutlinePill href={askHref}>{askLabel}</AntiOutlinePill>}
         </div>
+        {languageLink && (
+          <p className="mt-7 text-[14px] text-white/70">
+            <Link href={languageLink.href} hrefLang={languageLink.lang} lang={languageLink.lang} className="underline decoration-[#d4b471] underline-offset-4 transition-colors hover:text-white">
+              {languageLink.label}
+            </Link>
+          </p>
+        )}
       </div>
     </section>
   );
@@ -301,12 +338,12 @@ function LinkCards({ links }: { links: ServiceCardLink[] }) {
 
 /** FAQ as on the home page: the title on the left (sticky on wide screens), Hyperiux's animated FAQ on the right; the
  *  questions stay h3 and the answers stay in the HTML. */
-function Faq({ items }: { items: NonNullable<ServicePageConfig["faq"]> }) {
+function Faq({ items, heading }: { items: NonNullable<ServicePageConfig["faq"]>; heading: string[] }) {
   return (
     <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
       <div className="lg:sticky lg:top-28 lg:self-start">
         <h2 id="service-faq-title" className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[40px]" style={{ textWrap: "balance" }}>
-          Frequently Asked <span className="text-[#d4b471]">Questions</span>
+          {heading[0]} <span className="text-[#d4b471]">{heading[1]}</span>
         </h2>
       </div>
       <FaqList items={items.map(item => ({ question: item.question, answer: <p>{item.answer}</p> }))} />
@@ -319,37 +356,44 @@ function Faq({ items }: { items: NonNullable<ServicePageConfig["faq"]> }) {
 type Block = { key: string; glued?: boolean; render: (tone: AntiTone, glued: boolean) => ReactNode };
 
 export default function ServicePageTemplate({ config }: { config: ServicePageConfig }) {
+  // A translated page (the French pages) belongs to the family of its English original: same buttons, price table and
+  // photos, in its own words.
+  const familyPath = config.enPath ?? config.path;
+  const words = WORDS[config.locale ?? "en"];
   // Route pages (Nice Airport to a destination): the main button opens the home's booking bar, and
   // questions go to the contact page. The transfers hub and the other page families keep their buttons.
-  const isRoute = config.path.startsWith("/our-services/transfers/") && !config.heroAction;
+  const isRoute = familyPath.startsWith("/our-services/transfers/") && !config.heroAction;
   const prices = servicePrices(config.path);
   const primaryActionHref = config.heroAction?.href ?? (isRoute ? "/#book" : "/contact-me");
   const primaryActionLabel = config.heroAction
     ? config.heroAction.label
     : isRoute
-    ? "Get my quote"
-    : config.path.startsWith("/our-services/transfers")
+    ? words.quote
+    : familyPath.startsWith("/our-services/transfers")
     ? "Book my transfer"
-    : config.path.startsWith("/our-services/hourly-chauffeur")
+    : familyPath.startsWith("/our-services/hourly-chauffeur")
       ? "Book by the hour"
-      : config.path.startsWith("/our-services/yacht-transfers")
+      : familyPath.startsWith("/our-services/yacht-transfers")
         ? "Request a transfer"
-        : config.path.startsWith("/our-services/events")
+        : familyPath.startsWith("/our-services/events")
           ? "Plan my event"
           : "Plan my tour";
 
   // The closing banner's photo, by page family (dusk art direction of the banners, 21 Oct 2026).
   const ctaPhoto = config.ctaPhoto
     ? config.ctaPhoto
-    : config.path.startsWith("/our-services/transfers")
+    : familyPath.startsWith("/our-services/transfers")
     ? "/assets/images/banners/svc-transfers.jpg"
-    : config.path.startsWith("/our-services/hourly-chauffeur")
+    : familyPath.startsWith("/our-services/hourly-chauffeur")
       ? "/assets/images/banners/svc-hourly.jpg"
-      : config.path.startsWith("/our-services/yacht-transfers")
+      : familyPath.startsWith("/our-services/yacht-transfers")
         ? "/assets/images/banners/svc-yacht.jpg"
-        : config.path.startsWith("/our-services/events")
+        : familyPath.startsWith("/our-services/events")
           ? "/assets/images/banners/svc-events.jpg"
           : "/assets/images/banners/svc-tours.jpg";
+
+  // A translated page links to its English original from the hero.
+  const languageLink = config.enPath && words.otherLanguage ? { href: config.enPath, ...words.otherLanguage } : undefined;
 
   const availableLocalLinks = config.localLinks?.filter(link => link.href !== config.path);
   const showLocalLinks = !!(availableLocalLinks && availableLocalLinks.length > 0 && config.localLinksTitle && config.localLinksDescription);
@@ -394,7 +438,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
   }
 
   // A destination of the home's price guide (3 Nov 2026): its prices as a table, right after the introduction.
-  const priceCity = cityForPage(config.path);
+  const priceCity = cityForPage(familyPath);
   if (priceCity) {
     blocks.push({
       key: "prices",
@@ -402,11 +446,11 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
         <AntiSection tone={tone} labelledBy="service-prices-title">
           <AntiHeading
             id="service-prices-title"
-            title={`Nice Airport to ${priceCity.displayName}: prices`}
-            intro="Starting prices by vehicle for a private transfer, by the hour or for a full day."
+            title={words.pricesTitle(cityName(priceCity, config.locale))}
+            intro={words.pricesIntro}
           />
           <div className="mt-8">
-            <RoutePrices cityId={priceCity.id} path={config.path} />
+            <RoutePrices cityId={priceCity.id} path={config.path} locale={config.locale} />
           </div>
         </AntiSection>
       ),
@@ -420,7 +464,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
       key: "reasons",
       render: tone => (
         <AntiSection tone={tone} labelledBy="service-reasons-title">
-          <BookingReasons />
+          <BookingReasons locale={config.locale} />
         </AntiSection>
       ),
     });
@@ -459,8 +503,8 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
     render: (tone, glued) => (
       <AntiSection tone={tone} labelledBy="service-audience-title" innerClassName={glued ? "!pt-0" : ""}>
         <AntiSplit
-          image={splitPhoto(config.path, used)}
-          imageAlt={altFor(splitPhoto(config.path, used))}
+          image={splitPhoto(familyPath, used)}
+          imageAlt={altFor(splitPhoto(familyPath, used))}
           title={`${config.audienceTitle} ${config.audienceAccent}`}
           titleId="service-audience-title"
           intro={config.audienceDescription}
@@ -507,7 +551,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
       key: "faq",
       render: tone => (
         <AntiSection tone={tone} labelledBy="service-faq-title">
-          <Faq items={faq} />
+          <Faq items={faq} heading={words.faq} />
         </AntiSection>
       ),
     });
@@ -523,9 +567,17 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
     sections.push(<Fragment key={block.key}>{block.render(tone, glued)}</Fragment>);
   }
 
-  return (
+  const content = (
     <>
-      <Hero config={config} actionLabel={primaryActionLabel} actionHref={primaryActionHref} askHref={isRoute ? "/contact-me" : undefined} priceLine={prices?.line} />
+      <Hero
+        config={config}
+        actionLabel={primaryActionLabel}
+        actionHref={primaryActionHref}
+        askHref={isRoute ? "/contact-me" : undefined}
+        askLabel={words.ask}
+        priceLine={prices?.line}
+        languageLink={languageLink}
+      />
       {sections}
       <FooterComponent
         title={config.cta.title}
@@ -534,7 +586,15 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
         buttonHref={isRoute ? "/#book" : config.cta.buttonHref}
         flushTop={tone === "white"}
         image={ctaPhoto}
+        secondaryText={words.allServices}
       />
+    </>
+  );
+
+  return (
+    <>
+      {/* The site's header and footer stay in English; a translated page marks its own content with its language. */}
+      {config.locale ? <div lang={config.locale}>{content}</div> : content}
       <Footer withCta={false} />
       {prices && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(prices.schema) }} />}
     </>

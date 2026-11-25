@@ -19,6 +19,8 @@ type CTAProps = {
   /** The banner photo (dusk art direction); the S-Class on the corniche by default. */
   image?: string;
   imageAlt?: string;
+  /** The second button's label, "Discover All of Our Services" by default (the French pages pass theirs). */
+  secondaryText?: string;
 };
 
 function lastWords(title: string) {
@@ -36,6 +38,7 @@ export default function FooterComponent({
   flushTop = false,
   image = "/assets/images/banners/cta-s-class-rear.jpg",
   imageAlt = "",
+  secondaryText = "Discover All of Our Services",
 }: CTAProps) {
   const gold = accent === false ? undefined : (accent ?? lastWords(title));
 
@@ -47,7 +50,7 @@ export default function FooterComponent({
           accent={gold}
           text={description}
           button={{ text: buttonText, href: buttonHref }}
-          secondary={<AntiOutlinePill href="/our-services">Discover All of Our Services</AntiOutlinePill>}
+          secondary={<AntiOutlinePill href="/our-services">{secondaryText}</AntiOutlinePill>}
           image={image}
           imageAlt={imageAlt}
           imagePosition="object-[68%_58%]"

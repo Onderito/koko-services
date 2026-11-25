@@ -18,6 +18,7 @@ import {
   yachtTransferPages,
   yachtTransfersPage,
 } from "./data/service-pages";
+import { frenchServicePages } from "./data/service-pages-fr";
 import { SITE_RELAUNCH, laterDate, pageUpdatedAt } from "./data/page-dates";
 
 const staticRoutes = [
@@ -43,6 +44,7 @@ const staticRoutes = [
   ...Object.values(chauffeurTourPages).map((page) => page.path),
   ...Object.values(yachtTransferPages).map((page) => page.path),
   ...Object.values(eventPages).map((page) => page.path),
+  ...Object.values(frenchServicePages).map((page) => page.path),
 ];
 
 // Real dates per page (18 Nov 2026), instead of one fixed date for every page: see data/page-dates.ts.

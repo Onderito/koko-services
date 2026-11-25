@@ -36,6 +36,12 @@ Kokolimo (My Riviera Tours & Transfers) is run by MY NICE TOURS, 33 rue de Chât
 - Riviera villages: [Èze](https://kokolimo.com/our-services/transfers/eze-transfer), [Villefranche](https://kokolimo.com/our-services/transfers/villefranche-transfer), [Saint-Jean-Cap-Ferrat](https://kokolimo.com/our-services/transfers/saint-jean-cap-ferrat-transfer), [Menton](https://kokolimo.com/our-services/transfers/menton-transfer).
 - [Long-distance transfers](https://kokolimo.com/our-services/transfers/long-distance-transfer): Beyond the Riviera.
 
+## En français
+
+- [Transfert aéroport de Nice](https://kokolimo.com/fr/transfert-aeroport-nice): chauffeur privé, accueil dans le hall des arrivées.
+- [Transfert aéroport Nice Monaco](https://kokolimo.com/fr/transfert-aeroport-nice-monaco): 30 à 40 minutes environ.
+- [Transfert aéroport Nice Cannes](https://kokolimo.com/fr/transfert-aeroport-nice-cannes): une trentaine de minutes.
+
 ## Hourly chauffeur
 
 - [Hourly chauffeur](https://kokolimo.com/our-services/hourly-chauffeur): Nice, Cannes, Monaco, Saint-Tropez.

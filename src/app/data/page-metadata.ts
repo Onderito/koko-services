@@ -17,10 +17,17 @@ type PageMetadataInput = {
   imageAlt?: string;
   /** For pages whose own picture must be shared even in portrait, such as a car's page. */
   allowPortrait?: boolean;
+  /** The page's language when it is not English. */
+  locale?: "fr";
+  /** The same page in each language, as paths by hreflang code ("en", "fr", "x-default"), for the hreflang links. */
+  languages?: Record<string, string>;
 };
 
+const OG_LOCALE: Record<string, string> = { en: "en_GB", fr: "fr_FR" };
+
 // One page's title, description, canonical and sharing tags. og:url is the page's canonical, og:title and
-// og:description repeat the page's own title and description, and the picture carries its alt text and size.
+// og:description repeat the page's own title and description, and the picture carries its alt text and size. A page
+// with versions in other languages also lists them (hreflang links and og:locale:alternate).
 export function pageMetadata({
   title,
   description,
@@ -28,6 +35,8 @@ export function pageMetadata({
   image,
   imageAlt,
   allowPortrait = false,
+  locale,
+  languages,
 }: PageMetadataInput): Metadata {
   const url = `${siteUrl}${path}`;
   const size = image ? IMAGE_SIZE[image] : undefined;
@@ -36,18 +45,25 @@ export function pageMetadata({
   const alt = ownPicture && imageAlt ? imageAlt : SHARE_IMAGE_ALT;
   const [width, height] = IMAGE_SIZE[src] ?? [];
   const picture = { url: `${siteUrl}${src}`, alt, ...(width && height ? { width, height } : {}) };
+  const language = locale ?? "en";
+  const otherLocales = languages
+    ? Object.keys(languages).filter(code => code !== "x-default" && code !== language).map(code => OG_LOCALE[code])
+    : [];
 
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: languages
+      ? { canonical: url, languages: Object.fromEntries(Object.entries(languages).map(([code, href]) => [code, `${siteUrl}${href}`])) }
+      : { canonical: url },
     openGraph: {
       type: "website",
       url,
       title,
       description,
       siteName: businessName,
-      locale: "en_GB",
+      locale: OG_LOCALE[language],
+      ...(otherLocales.length ? { alternateLocale: otherLocales } : {}),
       images: [picture],
     },
     twitter: {

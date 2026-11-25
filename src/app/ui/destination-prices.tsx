@@ -70,38 +70,90 @@ export function AllDestinationPrices() {
   );
 }
 
+/** French names of the price guide's destinations and cars, for the French pages. */
+const FRENCH_CITY: Record<string, string> = {
+  nice: "Nice ville",
+  antibes: "Antibes/Juan-les-Pins",
+  cannes: "Cannes",
+  monaco: "Monaco/Cap-d'Ail",
+  "st-tropez": "Saint-Tropez",
+};
+const frenchCar = (name: string) => name.replace(/ ([A-Z])-Class$/, " Classe $1");
+const frenchEur = (n: number) => `${n.toLocaleString("fr-FR")} €`;
+
+/** The destination's name in the page's language. */
+export const cityName = (city: { id: string; displayName: string }, locale?: "fr") =>
+  locale === "fr" ? (FRENCH_CITY[city.id] ?? city.displayName) : city.displayName;
+
+// The table's words in each language; English pages keep the words they always had.
+const TABLE = {
+  en: {
+    route: (city: string) => `Nice Airport to ${city}`,
+    service: (route: string) => `${route} private transfer`,
+    serviceType: "Airport transfer",
+    offer: (route: string, car: string) => `${route}, ${car}, one way`,
+    offerNote: (passengers: number) => `Starting price for up to ${passengers} passengers; the fixed fare is confirmed before the ride.`,
+    caption: (route: string) => `${route}: starting prices by vehicle`,
+    vehicle: "Vehicle",
+    transfer: "Transfer, one way",
+    hourly: "Per hour",
+    fullDay: "Full day",
+    upTo: (passengers: number) => `Up to ${passengers} passengers`,
+    note: "Starting prices from our guide. Your fixed fare is confirmed before the ride; it can adapt to timing, luggage and the exact address.",
+    car: (name: string) => name,
+    price: (n: number) => `${n}€`,
+  },
+  fr: {
+    route: (city: string) => `De l'aéroport de Nice à ${city}`,
+    service: (route: string) => `Transfert privé ${route.replace(/^De/, "de")}`,
+    serviceType: "Transfert aéroport",
+    offer: (route: string, car: string) => `${route}, ${car}, aller simple`,
+    offerNote: (passengers: number) => `Prix de départ jusqu'à ${passengers} passagers ; le prix fixe est confirmé avant le trajet.`,
+    caption: (route: string) => `${route} : prix de départ par véhicule`,
+    vehicle: "Véhicule",
+    transfer: "Transfert, aller simple",
+    hourly: "À l'heure",
+    fullDay: "Journée",
+    upTo: (passengers: number) => `Jusqu'à ${passengers} passagers`,
+    note: "Prix de départ de notre grille. Votre prix fixe est confirmé avant le trajet ; il peut varier selon l'horaire, les bagages et l'adresse exacte.",
+    car: frenchCar,
+    price: frenchEur,
+  },
+};
+
 /** A destination page: its one-way transfer, hourly and full-day starting prices by car, and the same as Offers. */
-export function RoutePrices({ cityId, path }: { cityId: string; path: string }) {
+export function RoutePrices({ cityId, path, locale }: { cityId: string; path: string; locale?: "fr" }) {
   const city = cities.find(c => c.id === cityId);
   if (!city) return null;
-  const route = `Nice Airport to ${city.displayName}`;
+  const t = TABLE[locale ?? "en"];
+  const route = t.route(cityName(city, locale));
   const offers = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `${route} private transfer`,
-    serviceType: "Airport transfer",
+    name: t.service(route),
+    serviceType: t.serviceType,
     url: `${siteUrl}${path}`,
     provider: { "@id": `${siteUrl}#localbusiness` },
-    areaServed: city.displayName,
+    areaServed: cityName(city, locale),
     offers: vehicles.map(v => ({
       "@type": "Offer",
-      name: `${route}, ${v.name}, one way`,
+      name: t.offer(route, t.car(v.name)),
       price: v.prices[cityId].transfer,
       priceCurrency: "EUR",
-      description: `Starting price for up to ${v.passengers} passengers; the fixed fare is confirmed before the ride.`,
+      description: t.offerNote(v.passengers),
     })),
   };
   return (
     <div className="overflow-hidden rounded-[14px] bg-white ring-1 ring-[#eaecf0]">
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-[15px] max-sm:block sm:min-w-[520px]">
-          <caption className="sr-only">{route}: starting prices by vehicle</caption>
+          <caption className="sr-only">{t.caption(route)}</caption>
           <thead>
             <tr className="border-b border-[#eaecf0] bg-[#f8f9fb] text-[13px] text-[#667085] max-sm:hidden">
-              <th scope="col" className="px-5 py-3 text-left font-semibold">Vehicle</th>
-              <th scope="col" className="px-4 py-3 text-right font-semibold">Transfer, one way</th>
-              <th scope="col" className="px-4 py-3 text-right font-semibold">Per hour</th>
-              <th scope="col" className="px-4 py-3 text-right font-semibold">Full day</th>
+              <th scope="col" className="px-5 py-3 text-left font-semibold">{t.vehicle}</th>
+              <th scope="col" className="px-4 py-3 text-right font-semibold">{t.transfer}</th>
+              <th scope="col" className="px-4 py-3 text-right font-semibold">{t.hourly}</th>
+              <th scope="col" className="px-4 py-3 text-right font-semibold">{t.fullDay}</th>
             </tr>
           </thead>
           <tbody className="max-sm:block">
@@ -110,17 +162,17 @@ export function RoutePrices({ cityId, path }: { cityId: string; path: string }) 
               return (
                 <tr key={v.id} className={row}>
                   <th scope="row" className="px-5 py-3.5 text-left font-semibold text-[#101828] max-sm:px-0 max-sm:pb-1 max-sm:pt-0">
-                    {v.name}
-                    <span className="block text-[12px] font-normal text-[#667085]">Up to {v.passengers} passengers</span>
+                    {t.car(v.name)}
+                    <span className="block text-[12px] font-normal text-[#667085]">{t.upTo(v.passengers)}</span>
                   </th>
-                  <td data-label="Transfer, one way" className={`${cell} text-[17px] font-bold text-[#101828]`}>
-                    <RollingNumber value={`${p.transfer}€`} />
+                  <td data-label={t.transfer} className={`${cell} text-[17px] font-bold text-[#101828]`}>
+                    <RollingNumber value={t.price(p.transfer)} />
                   </td>
-                  <td data-label="Per hour" className={`${cell} text-[#344054]`}>
-                    <RollingNumber value={`${p.hourly}€`} />
+                  <td data-label={t.hourly} className={`${cell} text-[#344054]`}>
+                    <RollingNumber value={t.price(p.hourly)} />
                   </td>
-                  <td data-label="Full day" className={`${cell} text-[#344054]`}>
-                    <RollingNumber value={`${p.fullDay}€`} />
+                  <td data-label={t.fullDay} className={`${cell} text-[#344054]`}>
+                    <RollingNumber value={t.price(p.fullDay)} />
                   </td>
                 </tr>
               );
@@ -129,7 +181,7 @@ export function RoutePrices({ cityId, path }: { cityId: string; path: string }) 
         </table>
       </div>
       <p className="border-t border-[#f2f4f7] px-5 py-3 text-[13px] text-[#667085]">
-        Starting prices from our guide. Your fixed fare is confirmed before the ride; it can adapt to timing, luggage and the exact address.
+        {t.note}
       </p>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offers) }} />
     </div>
