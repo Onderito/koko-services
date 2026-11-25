@@ -8,6 +8,9 @@
 /** The relaunch of the site (2 Nov 2026): the last change of every page not listed below. */
 export const SITE_RELAUNCH = "2026-11-02";
 
+/** The day the French pages went live: the date of every /fr page not listed below. */
+export const FRENCH_SITE_RELEASE = "2026-11-25";
+
 /** Pages whose last significant change is after the relaunch, by sitemap route ("" is the home). */
 export const pageUpdatedAt: Record<string, string> = {
   // 18 Nov 2026: 37 articles taken off the blog (data/removed-posts.ts), so the blog home and six categories list fewer.

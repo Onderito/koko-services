@@ -6,6 +6,8 @@
 // cleanly on narrow screens. The links open the Tripadvisor reviews page: direct links to each review need their
 // addresses (Tripadvisor refuses automated reads), to add when the owner or the Tripadvisor API provides them.
 // The looping marquee is gone. Texts unchanged.
+// The French home (/fr) passes locale="fr": the reviews were written in English, so each French card shows a translation
+// marked as such, with the link to the original.
 
 import { ArrowUpRight } from "lucide-react";
 import { AntiHeading, AntiOutlinePill, AntiSection } from "../ui/anti";
@@ -40,57 +42,109 @@ const reviews = [
   },
 ];
 
+// The same reviews translated for the French home, in the same order.
+export const REVIEWS_FR = [
+  {
+    quote: "Des domaines viticoles bio superbes, si près de Nice. Après un court trajet, nous avons visité deux lieux uniques et terminé par des dégustations. Parfait.",
+    author: "Lisa W",
+    context: "Juil. 2025 · avis traduit de l'anglais",
+  },
+  {
+    quote: "kokolimo a pris soin de nous, avec un accueil chaleureux. De belles vues, des explications passionnantes sur Nice, du bon vin et des spécialités de Cannes.",
+    author: "Client Tripadvisor",
+    context: "Juil. 2024 · avis traduit de l'anglais",
+  },
+  {
+    quote: "Parfait, avec des explications claires sur le travail des différents vignobles de Nice. Marie est une super guide, savante et drôle.",
+    author: "Henrik",
+    context: "Avis traduit de l'anglais",
+  },
+  {
+    quote: "Notre famille de quatre a réservé avec Marie le jour de notre arrivée à Nice. C'était la meilleure façon de prendre nos marques tout en faisant quelque chose d'amusant et d'intéressant.",
+    author: "Cyndi K",
+    context: "Juin 2024 · avis traduit de l'anglais",
+  },
+];
+
 export const tripadvisorListingUrl =
   "https://www.tripadvisor.com/Attraction_Review-g187234-d7971865-Reviews-MY_Riviera_Tours_Transfers-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_.html";
 // Where the quotes were published: the listing's reviews (#REVIEWS opens them).
 const reviewSourceUrl = `${tripadvisorListingUrl}#REVIEWS`;
 const googleReviewUrl = "https://g.page/r/CXSXgZXVNYkwEAE/review";
 
-export default function Reviews() {
+const TEXT = {
+  en: {
+    reviews,
+    title: "Trusted on Tripadvisor for Riviera tours and transfers",
+    intro: "Read recent feedback from travelers who booked tours and transfers in Nice and across the French Riviera.",
+    rating: "4.8",
+    count: "165 public reviews",
+    summary: "Independent traveler reviews covering private tours, airport transfers and chauffeur journeys across the Riviera.",
+    view: "View on Tripadvisor",
+    leave: "Leave a Google review",
+    leaveLabel: "Leave Kokolimo a review on Google",
+    score: "4.8/5",
+    read: (author: string) => `Read ${author}'s review on Tripadvisor`,
+    open: "“",
+    close: "”",
+  },
+  fr: {
+    reviews: REVIEWS_FR,
+    title: "Recommandé sur Tripadvisor pour nos excursions et nos transferts sur la Côte d'Azur",
+    intro: "Les avis récents de voyageurs qui ont réservé une excursion ou un transfert à Nice et sur la Côte d'Azur.",
+    rating: "4,8",
+    count: "165 avis publics",
+    summary: "Des avis de voyageurs indépendants sur nos excursions privées, nos transferts aéroport et nos trajets avec chauffeur sur la Côte d'Azur.",
+    view: "Voir sur Tripadvisor",
+    leave: "Laisser un avis Google",
+    leaveLabel: "Laisser un avis sur Kokolimo dans Google",
+    score: "4,8/5",
+    read: (author: string) => `Lire l'avis de ${author} sur Tripadvisor`,
+    open: "« ",
+    close: " »",
+  },
+};
+
+export default function Reviews({ locale }: { locale?: "fr" }) {
+  const t = TEXT[locale ?? "en"];
   return (
     <AntiSection tone="grey" labelledBy="reviews-title">
-      <AntiHeading
-        id="reviews-title"
-        title="Trusted on Tripadvisor for Riviera tours and transfers"
-        intro="Read recent feedback from travelers who booked tours and transfers in Nice and across the French Riviera."
-      />
+      <AntiHeading id="reviews-title" title={t.title} intro={t.intro} />
 
       <div className="mt-8 flex flex-col gap-6 rounded-[10px] bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)] lg:flex-row lg:items-center lg:justify-between md:p-7">
         <div className="min-w-0">
           <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#9a7a3e]">Tripadvisor</p>
           <div className="mt-2 flex flex-wrap items-center gap-3">
-            <RollingNumber value="4.8" className="text-[40px] font-bold leading-none tracking-[-0.03em] text-[#101828]" />
+            <RollingNumber value={t.rating} className="text-[40px] font-bold leading-none tracking-[-0.03em] text-[#101828]" />
             <span className="flex items-center gap-1.5" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, i) => (
                 <span key={i} className="h-4 w-4 rounded-full bg-[#34e0a1] ring-1 ring-[#1fae7a]/40" />
               ))}
             </span>
-            <span className="text-[17px] text-[#101828]">165 public reviews</span>
+            <span className="text-[17px] text-[#101828]">{t.count}</span>
           </div>
-          <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-[#667085] md:text-[15px]">
-            Independent traveler reviews covering private tours, airport transfers and chauffeur journeys across the Riviera.
-          </p>
+          <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-[#667085] md:text-[15px]">{t.summary}</p>
         </div>
         <div className="flex shrink-0 flex-wrap items-center gap-3">
-          <ArrowButton text="View on Tripadvisor" href={tripadvisorListingUrl} tone="dark" target="_blank" rel="noopener noreferrer" />
-          <AntiOutlinePill href={googleReviewUrl} dark={false} external ariaLabel="Leave Kokolimo a review on Google">
-            Leave a Google review
+          <ArrowButton text={t.view} href={tripadvisorListingUrl} tone="dark" target="_blank" rel="noopener noreferrer" />
+          <AntiOutlinePill href={googleReviewUrl} dark={false} external ariaLabel={t.leaveLabel}>
+            {t.leave}
           </AntiOutlinePill>
         </div>
       </div>
 
       <ul className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {reviews.map(r => (
+        {t.reviews.map(r => (
           <li key={`${r.author}-${r.context}`}>
             <article className="flex h-full flex-col rounded-[10px] bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.05),0_10px_30px_rgba(16,24,40,0.07)]">
               <p className="flex items-center gap-2">
                 <Stars className="[&_svg]:h-4 [&_svg]:w-4" />
-                <span className="text-[14px] font-semibold text-[#101828]">4.8/5</span>
+                <span className="text-[14px] font-semibold text-[#101828]">{t.score}</span>
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-[#344054]">
-                <span aria-hidden="true">&ldquo;</span>
+                <span aria-hidden="true">{t.open}</span>
                 {r.quote}
-                <span aria-hidden="true">&rdquo;</span>
+                <span aria-hidden="true">{t.close}</span>
               </p>
               <div className="mt-auto flex items-end justify-between gap-3 pt-6">
                 <div>
@@ -101,7 +155,7 @@ export default function Reviews() {
                   href={reviewSourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Read ${r.author}'s review on Tripadvisor`}
+                  aria-label={t.read(r.author)}
                   className="group inline-flex shrink-0 items-center gap-1 text-[13px] font-semibold text-[#9a7a3e] transition-colors hover:text-[#101828]"
                 >
                   Tripadvisor

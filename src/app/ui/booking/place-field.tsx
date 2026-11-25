@@ -17,6 +17,34 @@ const newSession = () =>
 /** Lower case without accents: "Èze" matches "eze". */
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
+// The field's and the list's own words in each language (`language` "fr" on the French pages). Google's attribution
+// stays as Google writes it.
+const WORDS = {
+  en: {
+    suggestions: (label: string) => `${label} suggestions`,
+    searching: "Searching…",
+    none: "No place found. Try a hotel, an airport or a street.",
+    unavailable: "Suggestions are unavailable. Type the full address.",
+    osm: "Places © OpenStreetMap contributors",
+    ownSearching: "Riviera places · searching every address…",
+    ownType: "Riviera places · type 3 letters to search every address",
+    failed: "This place could not be loaded. Choose another suggestion.",
+    clear: (label: string) => `Clear ${label}`,
+  },
+  fr: {
+    suggestions: (label: string) => `Suggestions (${label})`,
+    searching: "Recherche…",
+    none: "Aucun lieu trouvé. Essayez un hôtel, un aéroport ou une rue.",
+    unavailable: "Les suggestions ne sont pas disponibles. Saisissez l'adresse complète.",
+    osm: "Lieux © les contributeurs d'OpenStreetMap",
+    ownSearching: "Lieux de la Côte d'Azur · recherche dans toutes les adresses…",
+    ownType: "Lieux de la Côte d'Azur · tapez 3 lettres pour chercher toutes les adresses",
+    failed: "Ce lieu n'a pas pu être chargé. Choisissez une autre suggestion.",
+    clear: (label: string) => `Effacer le champ ${label}`,
+  },
+};
+const wordsFor = (language: string) => WORDS[language === "fr" ? "fr" : "en"];
+
 function KindIcon({ kind }: { kind: PlaceKind }) {
   const common = { width: 18, height: 18, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true };
   switch (kind) {
@@ -104,7 +132,7 @@ function useSuggestions(language: string, extra = 0) {
           show(d);
         })
         .catch(e => {
-          if ((e as Error).name !== "AbortError") setError("Suggestions are unavailable. Type the full address.");
+          if ((e as Error).name !== "AbortError") setError(wordsFor(language).unavailable);
         })
         .finally(() => setLoading(false));
     },
@@ -159,7 +187,7 @@ function useSuggestions(language: string, extra = 0) {
     }
   };
 
-  return { open, setOpen, items, provider, active, setActive, loading, error, setError, session, box, fit, load, search, onKey };
+  return { open, setOpen, items, provider, active, setActive, loading, error, setError, session, box, fit, load, search, onKey, w: wordsFor(language) };
 }
 
 type ExtraRow = { label: string; hint: string; onChoose: () => void };
@@ -177,12 +205,12 @@ function SuggestionList({ s, listId, label, onChoose, extra }: { s: ReturnType<t
       <ul
         id={listId}
         role="listbox"
-        aria-label={`${label} suggestions`}
+        aria-label={s.w.suggestions(label)}
         data-lenis-prevent=""
         style={{ maxHeight: s.fit.maxH }}
         className="overflow-y-auto overscroll-contain py-2"
       >
-        {s.items.length === 0 && <li className="px-4 py-3 text-[14px] text-[#5b6472]">{s.loading ? "Searching…" : "No place found. Try a hotel, an airport or a street."}</li>}
+        {s.items.length === 0 && <li className="px-4 py-3 text-[14px] text-[#5b6472]">{s.loading ? s.w.searching : s.w.none}</li>}
         {s.items.map((p, i) => (
           <li
             key={p.id}
@@ -236,10 +264,10 @@ function SuggestionList({ s, listId, label, onChoose, extra }: { s: ReturnType<t
         {s.provider === "google"
           ? "Powered by Google"
           : s.provider === "osm"
-            ? "Places © OpenStreetMap contributors"
+            ? s.w.osm
             : s.loading
-              ? "Riviera places · searching every address…"
-              : "Riviera places · type 3 letters to search every address"}
+              ? s.w.ownSearching
+              : s.w.ownType}
       </p>
     </div>
   );
@@ -275,7 +303,7 @@ export default function PlaceField({ name, label, placeholder, value, onChange, 
       if (!r.ok || !d.place) throw new Error("no place");
       onChange({ ...d.place, name: p.title });
     } catch {
-      s.setError("This place could not be loaded. Choose another suggestion.");
+      s.setError(s.w.failed);
       onChange(null);
     } finally {
       s.session.current = newSession(); // a session ends with the chosen place
@@ -320,7 +348,7 @@ export default function PlaceField({ name, label, placeholder, value, onChange, 
             {text && (
               <button
                 type="button"
-                aria-label={`Clear ${label}`}
+                aria-label={s.w.clear(label)}
                 onClick={() => {
                   setText("");
                   onChange(null);
@@ -423,7 +451,7 @@ export function PlaceTextField({
         {value ? (
           <button
             type="button"
-            aria-label={`Clear ${label}`}
+            aria-label={s.w.clear(label)}
             onMouseDown={e => e.preventDefault()}
             onClick={() => {
               chosen.current = "";

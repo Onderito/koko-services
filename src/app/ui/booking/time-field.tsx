@@ -9,8 +9,15 @@ import Popover from "./popover";
 
 const SLOTS = Array.from({ length: 96 }, (_, i) => `${String(Math.floor(i / 4)).padStart(2, "0")}:${String((i % 4) * 15).padStart(2, "0")}`);
 
-/** A scrolling list of quarter hours (also used by the contact form's time field). */
-export function TimeColumn({ title, value, onPick, autoFocus }: { title?: string; value: string; onPick: (t: string) => void; autoFocus?: boolean }) {
+// The field's words in each language (`language` "fr" on the French pages).
+const WORDS = {
+  en: { time: "Time", times: "Times", chooseTime: "Choose your pick-up time", chooseTimes: "Choose your pick-up times", outbound: "Outbound", returnLeg: "Return", done: "Done" },
+  fr: { time: "Heure", times: "Heures", chooseTime: "Choisissez l'heure de prise en charge", chooseTimes: "Choisissez les heures de prise en charge", outbound: "Aller", returnLeg: "Retour", done: "Valider" },
+};
+
+/** A scrolling list of quarter hours (also used by the contact form's time field). `label` names a list without a
+ *  title (default "Time"). */
+export function TimeColumn({ title, label, value, onPick, autoFocus }: { title?: string; label?: string; value: string; onPick: (t: string) => void; autoFocus?: boolean }) {
   const list = useRef<HTMLUListElement>(null);
 
   // Open on the current choice, centred; with no choice yet, on 9:00.
@@ -34,7 +41,7 @@ export function TimeColumn({ title, value, onPick, autoFocus }: { title?: string
   return (
     <div className="min-w-0 flex-1">
       {title && <p className="px-2 pb-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#98a2b3]">{title}</p>}
-      <ul ref={list} role="listbox" aria-label={title ?? "Time"} onKeyDown={onKey} data-lenis-prevent="" className="relative max-h-[264px] overflow-y-auto overscroll-contain pr-1">
+      <ul ref={list} role="listbox" aria-label={title ?? label ?? "Time"} onKeyDown={onKey} data-lenis-prevent="" className="relative max-h-[264px] overflow-y-auto overscroll-contain pr-1">
         {SLOTS.map(t => {
           const on = t === value;
           return (
@@ -64,12 +71,15 @@ export default function TimeField({
   time,
   returnTime,
   onChange,
+  language = "en",
 }: {
   isReturn: boolean;
   time: string;
   returnTime: string;
   onChange: (v: { time: string; returnTime: string }) => void;
+  language?: string;
 }) {
+  const w = WORDS[language === "fr" ? "fr" : "en"];
   const [open, setOpen] = useState(false);
   const box = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
@@ -85,7 +95,7 @@ export default function TimeField({
         onClick={() => setOpen(o => !o)}
         className="block rounded-control text-left outline-none focus-visible:ring-2 focus-visible:ring-[#e8ba64] focus-visible:ring-offset-4"
       >
-        <span className="block text-[13px] font-medium text-[#5b6472]">{isReturn ? "Times" : "Time"}</span>
+        <span className="block text-[13px] font-medium text-[#5b6472]">{isReturn ? w.times : w.time}</span>
         <span className="mt-1 block whitespace-nowrap text-[16px] font-semibold tabular-nums text-[#0f1115]">{isReturn ? `${time} · ${returnTime}` : time}</span>
       </button>
 
@@ -96,15 +106,15 @@ export default function TimeField({
           trigger.current?.focus();
         }}
         anchor={box}
-        label={isReturn ? "Choose your pick-up times" : "Choose your pick-up time"}
+        label={isReturn ? w.chooseTimes : w.chooseTime}
         className={`p-3 ${isReturn ? "w-[300px]" : "w-[150px]"}`}
       >
         {isReturn ? (
           <>
             <div className="flex gap-2">
-              <TimeColumn title="Outbound" value={time} onPick={t => onChange({ time: t, returnTime })} autoFocus />
+              <TimeColumn title={w.outbound} value={time} onPick={t => onChange({ time: t, returnTime })} autoFocus />
               <span aria-hidden="true" className="w-px bg-[#f2f4f7]" />
-              <TimeColumn title="Return" value={returnTime} onPick={t => onChange({ time, returnTime: t })} />
+              <TimeColumn title={w.returnLeg} value={returnTime} onPick={t => onChange({ time, returnTime: t })} />
             </div>
             <button
               type="button"
@@ -114,11 +124,12 @@ export default function TimeField({
               }}
               className="mt-3 h-10 w-full rounded-full bg-[#0d1922] text-[14px] font-semibold text-white transition-colors hover:bg-[#1a2a36]"
             >
-              Done
+              {w.done}
             </button>
           </>
         ) : (
           <TimeColumn
+            label={w.time}
             value={time}
             autoFocus
             onPick={t => {

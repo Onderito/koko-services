@@ -16,15 +16,41 @@ import BookFocus from "../ui/booking/book-focus";
 import LinkArrow from "../ui/link-arrow";
 import ReviewBadges from "../ui/review-badges";
 import { archivo } from "../fonts";
+import { frLink } from "../data/i18n/addresses";
 
-export default function HomeHero() {
+// The hero's words in each language; the French home (/fr) passes locale="fr". English is the home's own text.
+const TEXT = {
+  en: {
+    alt: "Black 2026 Mercedes V-Class chauffeur van on a coastal road above the Mediterranean at sunset, Monaco lit up in the distance",
+    title: "Luxury Private Driver in ",
+    accent: "Nice, Cannes and Monaco",
+    description:
+      "Private chauffeur service for airport transfers, business travel, and tailored journeys across Nice, Cannes, Monaco, and Saint-Tropez, with seasonal winter coverage in Megève, Courchevel, and Chamonix.",
+    reserve: "Reserve my driver",
+    reserveHref: "/contact-me",
+    promises: "Fixed fare before booking · Flight tracking and meet & greet · One hour of waiting included",
+  },
+  fr: {
+    alt: "Van Mercedes Classe V noir de 2026 avec chauffeur sur une route côtière au-dessus de la Méditerranée au coucher du soleil, Monaco illuminé au loin",
+    title: "Chauffeur privé de luxe à ",
+    accent: "Nice, Cannes et Monaco",
+    description:
+      "Transferts depuis l'aéroport de Nice, déplacements d'affaires et trajets sur mesure à Nice, Cannes, Monaco et Saint-Tropez, et l'hiver à Megève, Courchevel et Chamonix.",
+    reserve: "Réserver mon chauffeur",
+    reserveHref: frLink("/contact-me"),
+    promises: "Prix fixe avant la réservation · Suivi du vol et accueil avec pancarte · Une heure d'attente incluse",
+  },
+};
+
+export default function HomeHero({ locale }: { locale?: "fr" }) {
+  const t = TEXT[locale ?? "en"];
   return (
     <section data-hero-tone="dark" data-nav-tone="dark" className={`relative isolate bg-[#0d1922] text-white ${archivo.className}`}>
       {/* Only the photo layer clips, so the address suggestions can open below the hero. */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <Image
           src="/assets/images/hero/home-hero-v-class.jpg"
-          alt="Black 2026 Mercedes V-Class chauffeur van on a coastal road above the Mediterranean at sunset, Monaco lit up in the distance"
+          alt={t.alt}
           fill
           priority
           fetchPriority="high"
@@ -38,25 +64,26 @@ export default function HomeHero() {
 
       <div className="mx-auto flex max-w-[1240px] flex-col justify-end px-4 pb-10 pt-[calc(var(--header-h)+3rem)] md:px-6 md:pb-12 lg:min-h-[760px] lg:pt-[calc(var(--header-h)+3.5rem)]">
         <h1 className="max-w-[760px] text-[40px] font-bold leading-[1.04] tracking-[-0.025em] sm:text-[54px] lg:text-[64px]" style={{ textWrap: "balance" }}>
-          Luxury Chauffeur Service on the <span className="text-[#d4b471]">French Riviera</span>
+          {t.title}<span className="text-[#d4b471]">{t.accent}</span>
         </h1>
         <p className="mt-5 max-w-[640px] text-[17px] leading-relaxed text-white/80 md:text-[18px]">
-          Private chauffeur service for airport transfers, business travel, and tailored journeys across Nice, Cannes, Monaco, and Saint-Tropez, with seasonal winter coverage in Megève, Courchevel, and Chamonix.
+          {t.description}
         </p>
 
         <div id="book" className="relative z-20 mt-9 scroll-mt-28">
           <BookingBar
+            language={locale ?? "en"}
             aside={
-              <LinkArrow href="/contact-me" tone="dark">
-                Reserve my driver
+              <LinkArrow href={t.reserveHref} tone="dark">
+                {t.reserve}
               </LinkArrow>
             }
           />
         </div>
 
         <div className="mt-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 text-[14px] text-white/80">
-          <p>Fixed fare before booking · Flight tracking and meet &amp; greet · One hour of waiting included</p>
-          <ReviewBadges tone="dark" />
+          <p>{t.promises}</p>
+          <ReviewBadges tone="dark" locale={locale} />
         </div>
       </div>
     </section>

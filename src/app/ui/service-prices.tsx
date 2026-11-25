@@ -2,10 +2,12 @@
 // transfer to a marina: one line under the hero description, and the same prices as Offers in the page's own
 // structured data, so the markup matches what the page shows. Prices: data/vehicles.tsx. Hourly hire is charged at
 // the same rates in every area served, the Alps included; a yacht transfer costs the one-way transfer from Nice
-// Airport to the marina's town. Pages not listed here (the route pages, which have RoutePrices) show no line.
+// Airport to the marina's town. Pages not listed here (the route pages, which have RoutePrices) show no line. A French
+// page passes its own address: the same prices, with the line and the offer names in French.
 
 import { routeStartingPrices, vehicles } from "../data/vehicles";
 import { siteUrl } from "../data/site-config";
+import { carFr } from "../data/i18n/fr-helpers";
 
 type Page =
   | { kind: "hourly"; service: string; area: string }
@@ -110,10 +112,122 @@ function routeFromPrices(service: string, route: string) {
   return { line, offers };
 }
 
-/** The page's starting-price line and its Service markup, or null for a page without one. */
-export function servicePrices(path: string): { line: string; schema: Record<string, unknown> } | null {
+// The French words: each page's service, the areas, the cars and the euro amounts written the French way.
+const SERVICE_FR: Record<string, string> = {
+  "/our-services/hourly-chauffeur/nice": "Chauffeur privé à l'heure",
+  "/our-services/hourly-chauffeur/saint-tropez": "Chauffeur privé à l'heure",
+  "/our-services/hourly-chauffeur/courchevel": "Chauffeur privé à l'heure",
+  "/our-services/hourly-chauffeur/megeve": "Chauffeur privé à l'heure",
+  "/our-services/hourly-chauffeur/chamonix": "Chauffeur privé à l'heure",
+  "/our-services/private-tours/nice": "Excursion privée avec chauffeur",
+  "/our-services/private-tours/cannes": "Excursion privée avec chauffeur",
+  "/our-services/private-tours/monaco": "Excursion privée avec chauffeur",
+  "/our-services/private-tours/saint-tropez": "Excursion privée avec chauffeur",
+  "/our-services/private-tours/courchevel": "Excursion privée avec chauffeur",
+  "/our-services/private-tours/megeve": "Excursion privée avec chauffeur",
+  "/our-services/private-tours/chamonix": "Excursion privée avec chauffeur",
+  "/our-services/events": "Chauffeur pour les événements",
+  "/our-services/events/monaco-grand-prix": "Chauffeur pour le Grand Prix de Monaco",
+  "/our-services/events/cannes-film-festival": "Chauffeur pour le Festival de Cannes",
+  "/our-services/events/monaco-yacht-show": "Chauffeur pour le Monaco Yacht Show",
+  "/our-services/yacht-transfers/crew-transportation": "Transport d'équipage de yacht",
+  "/our-services/yacht-transfers": "Transfert yacht",
+  "/our-services/yacht-transfers/nice-airport": "Transfert de l'aéroport de Nice au yacht",
+  "/our-services/yacht-transfers/monaco": "Transfert yacht vers le port Hercule",
+  "/our-services/yacht-transfers/cannes": "Transfert yacht vers le Vieux-Port",
+  "/our-services/yacht-transfers/antibes": "Transfert yacht vers Port Vauban",
+  "/our-services/yacht-transfers/saint-tropez": "Transfert yacht vers le vieux port",
+  "/our-services/transfers/eze-transfer": "Transfert de l'aéroport de Nice à Èze",
+  "/our-services/transfers/saint-jean-cap-ferrat-transfer": "Transfert de l'aéroport de Nice à Saint-Jean-Cap-Ferrat",
+};
+const areaFr = (area: string) => (area === "French Riviera" ? "Côte d'Azur" : area);
+const eurFr = (n: number) => `${n.toLocaleString("fr-FR")} €`;
+const shortFr = (name: string) => short(carFr(name));
+const listFr = (items: string[]) => (items.length > 1 ? `${items.slice(0, -1).join(", ")} et ${items[items.length - 1]}` : items[0]);
+
+function hourlyPricesFr(service: string) {
+  const r = (v: (typeof vehicles)[number]) => v.prices[RATES_AREA];
+  const line = `À partir de ${eurFr(r(E_CLASS).hourly)} de l'heure en ${carFr(E_CLASS.name)} (${OTHERS.map(v => `${shortFr(v.name)} ${eurFr(r(v).hourly)}`).join(", ")}), ou ${eurFr(r(E_CLASS).fullDay)} la journée.`;
+  const offers = [
+    ...vehicles.map(v => ({
+      "@type": "Offer",
+      name: `${service}, ${carFr(v.name)}, à l'heure`,
+      price: r(v).hourly,
+      priceCurrency: "EUR",
+      priceSpecification: { "@type": "UnitPriceSpecification", minPrice: r(v).hourly, price: r(v).hourly, priceCurrency: "EUR", unitCode: "HUR", unitText: "heure" },
+    })),
+    { "@type": "Offer", name: `${service}, ${carFr(E_CLASS.name)}, journée (8 heures)`, price: r(E_CLASS).fullDay, priceCurrency: "EUR", priceSpecification: from(r(E_CLASS).fullDay) },
+  ];
+  return { line, offers };
+}
+
+function transferPricesFr(service: string, to: string[]) {
+  if (to.length === 1) {
+    const id = to[0];
+    const line = `À partir de ${eurFr(E_CLASS.prices[id].transfer)} l'aller simple depuis l'aéroport de Nice en ${carFr(E_CLASS.name)} (${OTHERS.map(v => `${shortFr(v.name)} ${eurFr(v.prices[id].transfer)}`).join(", ")}).`;
+    const offers = vehicles.map(v => ({
+      "@type": "Offer",
+      name: `${service}, ${carFr(v.name)}, aller simple depuis l'aéroport de Nice`,
+      price: v.prices[id].transfer,
+      priceCurrency: "EUR",
+      priceSpecification: from(v.prices[id].transfer),
+    }));
+    return { line, offers };
+  }
+  const lowest = Math.min(...to.map(id => E_CLASS.prices[id].transfer));
+  const line = `À partir de ${eurFr(lowest)} l'aller simple depuis l'aéroport de Nice en ${carFr(E_CLASS.name)} : ${listFr(to.map(id => `${TOWN[id]} ${eurFr(E_CLASS.prices[id].transfer)}`))}.`;
+  const offers = to.map(id => ({
+    "@type": "Offer",
+    name: `Aéroport de Nice à ${TOWN[id]}, ${carFr(E_CLASS.name)}, aller simple`,
+    price: E_CLASS.prices[id].transfer,
+    priceCurrency: "EUR",
+    priceSpecification: from(E_CLASS.prices[id].transfer),
+  }));
+  return { line, offers };
+}
+
+function routeFromPricesFr(service: string, route: string) {
+  const prices = routeStartingPrices[route].prices;
+  const name = (id?: string) => vehicles.find(v => v.id === id)?.name;
+  const [first, ...rest] = prices;
+  const others = rest.map(p => `${shortFr(name(p.vehicleId) ?? "")} ${eurFr(p.transfer)}`).join(", ");
+  const firstCar = name(first.vehicleId);
+  const line = `À partir de ${eurFr(first.transfer)} l'aller simple depuis l'aéroport de Nice${firstCar ? ` en ${carFr(firstCar)}` : ""}${others ? ` (${others})` : ""}.`;
+  const offers = prices.map(p => ({
+    "@type": "Offer",
+    name: `${service}${p.vehicleId ? `, ${carFr(name(p.vehicleId) ?? "")}` : ""}, aller simple`,
+    price: p.transfer,
+    priceCurrency: "EUR",
+    priceSpecification: from(p.transfer),
+  }));
+  return { line, offers };
+}
+
+/** The page's starting-price line and its Service markup, or null for a page without one. A French page passes its
+ *  English original's path and, in `french`, its own address. */
+export function servicePrices(path: string, french?: { url: string }): { line: string; schema: Record<string, unknown> } | null {
   const page = PAGES[path];
   if (!page) return null;
+  if (french) {
+    const service = SERVICE_FR[path];
+    const area = areaFr(page.area);
+    const { line, offers } =
+      page.kind === "hourly" ? hourlyPricesFr(service) : page.kind === "route" ? routeFromPricesFr(service, page.route) : transferPricesFr(service, page.to);
+    const where = page.area === "French Riviera" ? " sur la Côte d'Azur" : service.includes(area) ? "" : ` à ${area}`;
+    return {
+      line,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: `${service}${where}`,
+        serviceType: service,
+        url: `${siteUrl}${french.url}`,
+        provider: { "@id": `${siteUrl}#localbusiness` },
+        areaServed: area,
+        offers,
+      },
+    };
+  }
   const { line, offers } =
     page.kind === "hourly" ? hourlyPrices(page.service) : page.kind === "route" ? routeFromPrices(page.service, page.route) : transferPrices(page.service, page.to);
   const where = page.area === "French Riviera" ? " on the French Riviera" : page.service.includes(page.area) ? "" : ` in ${page.area}`;

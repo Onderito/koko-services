@@ -32,6 +32,7 @@ import {
   type ServicePageConfig,
 } from "../data/service-pages";
 import { frenchServicePages } from "../data/service-pages-fr";
+import { frLink } from "../data/i18n/addresses";
 import { AntiCard, AntiHeading, AntiOutlinePill, AntiSection, AntiSplit, GoldArrow, SpecChip, type AntiTone } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import FaqList from "../ui/faq-list";
@@ -68,9 +69,19 @@ function photoFor(href: string): string | undefined {
   return slug ? getBlogPost(slug)?.imageUrl : undefined;
 }
 
-/** The same photo's alt text: the linked service page's hero alt, or the blog post's cover alt. */
-function photoAltFor(href: string): string {
+// The French pages' hero photos with their French alt texts, for a French card whose linked page is English.
+const frenchHeroAlt = new Map(Object.values(frenchServicePages).map(page => [page.heroImageSrc, page.heroImageAlt]));
+
+/** The same photo's alt text: the linked service page's hero alt, or the blog post's cover alt. On a French page, a
+ *  photo whose linked page is English (a blog post, a page without a live French version) takes its French alt text:
+ *  a French page's hero alt or data/image-alts.ts, else none, the photo's link being named by the card's title. */
+function photoAltFor(href: string, locale?: "fr"): string {
   const page = servicePageByPath.get(href);
+  if (locale === "fr") {
+    if (page?.locale === "fr") return page.heroImageAlt;
+    const photo = photoFor(href);
+    return photo ? (frenchHeroAlt.get(photo) ?? altFor(photo, "fr")) : "";
+  }
   if (page) return page.heroImageAlt;
   const slug = href.match(/^\/blog\/([^/?#]+)$/)?.[1];
   return (slug ? getBlogPost(slug)?.imageAlt : undefined) ?? "";
@@ -174,6 +185,8 @@ const WORDS = {
     pricesTitle: (city: string) => `Nice Airport to ${city}: prices`,
     pricesIntro: "Starting prices by vehicle for a private transfer, by the hour or for a full day.",
     allServices: undefined,
+    // The main button of each page family that has no button of its own.
+    family: { transfers: "Book my transfer", hourly: "Book by the hour", yacht: "Request a transfer", events: "Plan my event", tours: "Plan my tour" },
   },
   fr: {
     quote: "Obtenir mon devis",
@@ -182,6 +195,13 @@ const WORDS = {
     pricesTitle: (city: string) => `De l'aéroport de Nice à ${city} : les prix`,
     pricesIntro: "Prix de départ par véhicule pour un transfert privé, à l'heure ou à la journée.",
     allServices: "Découvrir tous nos services",
+    family: {
+      transfers: "Réserver mon transfert",
+      hourly: "Réserver à l'heure",
+      yacht: "Demander un transfert",
+      events: "Organiser mon événement",
+      tours: "Organiser mon excursion",
+    },
   },
 };
 
@@ -284,7 +304,7 @@ function cardLayout(count: number) {
 }
 
 /** Other pages as Anti's vehicle cards: the page's photo inset, its name (the link) and description, a gold arrow. */
-function LinkCards({ links }: { links: ServiceCardLink[] }) {
+function LinkCards({ links, locale }: { links: ServiceCardLink[]; locale?: "fr" }) {
   const layout = cardLayout(links.length);
   const title = `font-semibold leading-snug tracking-[-0.01em] text-[#101828] ${layout.small ? "text-[16px]" : "text-[18px]"}`;
   // The name's link covers the whole card, so the card opens on any click.
@@ -310,7 +330,7 @@ function LinkCards({ links }: { links: ServiceCardLink[] }) {
         return (
           <li key={link.href}>
             {photo ? (
-              <AntiCard href={link.href} image={photo} imageAlt={photoAltFor(link.href)} imageLinkLabel={link.label} imageAspect={layout.aspect} imageSizes={layout.sizes} className="relative">
+              <AntiCard href={link.href} image={photo} imageAlt={photoAltFor(link.href, locale)} imageLinkLabel={link.label} imageAspect={layout.aspect} imageSizes={layout.sizes} className="relative">
                 {body(link)}
               </AntiCard>
             ) : (
@@ -352,21 +372,25 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
   // Route pages (Nice Airport to a destination): the main button opens the home's booking bar, and
   // questions go to the contact page. The transfers hub and the other page families keep their buttons.
   const isRoute = familyPath.startsWith("/our-services/transfers/") && !config.heroAction;
-  const prices = servicePrices(config.path);
-  const primaryActionHref = config.heroAction?.href ?? (isRoute ? "/#book" : "/contact-me");
+  const prices = servicePrices(familyPath, config.locale === "fr" ? { url: config.path } : undefined);
+  // A French page sends to the French home's booking bar and the French contact page once they exist.
+  const home = config.locale === "fr" ? frLink("/") : "/";
+  const bookHref = home === "/" ? "/#book" : `${home}#book`;
+  const contactHref = config.locale === "fr" ? frLink("/contact-me") : "/contact-me";
+  const primaryActionHref = config.heroAction?.href ?? (isRoute ? bookHref : contactHref);
   const primaryActionLabel = config.heroAction
     ? config.heroAction.label
     : isRoute
     ? words.quote
     : familyPath.startsWith("/our-services/transfers")
-    ? "Book my transfer"
+    ? words.family.transfers
     : familyPath.startsWith("/our-services/hourly-chauffeur")
-      ? "Book by the hour"
+      ? words.family.hourly
       : familyPath.startsWith("/our-services/yacht-transfers")
-        ? "Request a transfer"
+        ? words.family.yacht
         : familyPath.startsWith("/our-services/events")
-          ? "Plan my event"
-          : "Plan my tour";
+          ? words.family.events
+          : words.family.tours;
 
   // The closing banner's photo, by page family (dusk art direction of the banners, 21 Oct 2026).
   const ctaPhoto = config.ctaPhoto
@@ -490,7 +514,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
       <AntiSection tone={tone} labelledBy="service-audience-title" innerClassName={glued ? "!pt-0" : ""}>
         <AntiSplit
           image={splitPhoto(familyPath, used)}
-          imageAlt={altFor(splitPhoto(familyPath, used))}
+          imageAlt={altFor(splitPhoto(familyPath, used), config.locale)}
           title={`${config.audienceTitle} ${config.audienceAccent}`}
           titleId="service-audience-title"
           intro={config.audienceDescription}
@@ -506,7 +530,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
       render: tone => (
         <AntiSection tone={tone} labelledBy="service-links-title">
           <AntiHeading id="service-links-title" title={config.localLinksTitle!} intro={config.localLinksDescription} />
-          <LinkCards links={availableLocalLinks!} />
+          <LinkCards links={availableLocalLinks!} locale={config.locale} />
         </AntiSection>
       ),
     });
@@ -525,7 +549,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
               "Use these practical guides to compare routes, timings, and ways to experience Monaco before confirming your tour."
             }
           />
-          <LinkCards links={config.relatedGuides!} />
+          <LinkCards links={config.relatedGuides!} locale={config.locale} />
         </AntiSection>
       ),
     });
@@ -559,7 +583,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
         config={config}
         actionLabel={primaryActionLabel}
         actionHref={primaryActionHref}
-        askHref={isRoute ? "/contact-me" : undefined}
+        askHref={isRoute ? contactHref : undefined}
         askLabel={words.ask}
         priceLine={prices?.line}
       />
@@ -568,9 +592,10 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
         title={config.cta.title}
         description={config.cta.description}
         buttonText={primaryActionLabel}
-        buttonHref={isRoute ? "/#book" : config.cta.buttonHref}
+        buttonHref={isRoute ? bookHref : config.cta.buttonHref}
         flushTop={tone === "white"}
         image={ctaPhoto}
+        imageAlt={altFor(ctaPhoto, config.locale)}
         secondaryText={words.allServices}
       />
     </>
@@ -578,9 +603,8 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
 
   return (
     <>
-      {/* The site's header and footer stay in English; a translated page marks its own content with its language. */}
-      {config.locale ? <div lang={config.locale}>{content}</div> : content}
-      <Footer withCta={false} />
+      {content}
+      <Footer withCta={false} locale={config.locale} />
       {prices && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(prices.schema) }} />}
     </>
   );

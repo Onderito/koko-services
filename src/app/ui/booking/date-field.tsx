@@ -23,8 +23,42 @@ export const parseIso = (s: string) => {
   const [y, m, d] = s.split("-").map(Number);
   return y && m && d ? new Date(y, m - 1, d) : undefined;
 };
-const short = (s: string, weekday = false) =>
-  parseIso(s)?.toLocaleDateString("en-GB", weekday ? { weekday: "short", day: "numeric", month: "short" } : { day: "numeric", month: "short" }) ?? "";
+// The field's words in each language (`language` "fr" on the French pages), with the date format of each.
+const WORDS = {
+  en: {
+    dateFormat: "en-GB",
+    date: "Date",
+    dates: "Dates",
+    chooseDate: "Choose your date",
+    chooseDates: "Choose your outbound and return dates",
+    trip: "Trip",
+    oneWay: "One way",
+    roundTrip: "Return",
+    returnAsk: "return?",
+    hint: "Choose your outbound day, then your return day.",
+    outbound: "Outbound",
+    returnLeg: "Return",
+    pickup: "Pick-up",
+  },
+  fr: {
+    dateFormat: "fr-FR",
+    date: "Date",
+    dates: "Dates",
+    chooseDate: "Choisissez votre date",
+    chooseDates: "Choisissez vos dates d'aller et de retour",
+    trip: "Trajet",
+    oneWay: "Aller simple",
+    roundTrip: "Aller-retour",
+    returnAsk: "retour ?",
+    hint: "Choisissez le jour de l'aller, puis celui du retour.",
+    outbound: "Aller",
+    returnLeg: "Retour",
+    pickup: "Prise en charge",
+  },
+};
+
+const short = (s: string, weekday = false, format = "en-GB") =>
+  parseIso(s)?.toLocaleDateString(format, weekday ? { weekday: "short", day: "numeric", month: "short" } : { day: "numeric", month: "short" }) ?? "";
 
 export default function DateField({
   showTrip,
@@ -34,6 +68,7 @@ export default function DateField({
   returnDate,
   today,
   onChange,
+  language = "en",
 }: {
   /** Transfers offer one way / return; by the hour is one day. */
   showTrip: boolean;
@@ -43,7 +78,10 @@ export default function DateField({
   returnDate: string;
   today: string;
   onChange: (v: { date: string; returnDate: string }) => void;
+  language?: string;
 }) {
+  const w = WORDS[language === "fr" ? "fr" : "en"];
+  const day = (s: string, weekday = false) => short(s, weekday, w.dateFormat);
   const [open, setOpen] = useState(false);
   // The default date arrives after the page has loaded (booking-bar.tsx), so until the visitor moves to another month,
   // the calendar opens on the month of the chosen date.
@@ -54,7 +92,7 @@ export default function DateField({
   const tripPill = useSlidingPill<HTMLDivElement>(trip, "z-0 rounded-[8px] bg-[#0d1922] shadow-[0_4px_12px_rgba(13,25,34,0.18)]");
   const close = useCallback(() => setOpen(false), []);
 
-  const value = isReturn ? (returnDate ? `${short(date)} → ${short(returnDate)}` : `${short(date)} → return?`) : short(date, true);
+  const value = isReturn ? (returnDate ? `${day(date)} → ${day(returnDate)}` : `${day(date)} → ${w.returnAsk}`) : day(date, true);
   const todayDate = parseIso(today) ?? new Date();
   const shownMonth = month ?? parseIso(date) ?? todayDate;
 
@@ -68,7 +106,7 @@ export default function DateField({
         onClick={() => setOpen(o => !o)}
         className="block rounded-control text-left outline-none focus-visible:ring-2 focus-visible:ring-[#e8ba64] focus-visible:ring-offset-4"
       >
-        <span className="block text-[13px] font-medium text-[#5b6472]">{isReturn ? "Dates" : "Date"}</span>
+        <span className="block text-[13px] font-medium text-[#5b6472]">{isReturn ? w.dates : w.date}</span>
         {/* Before the date is known, a non-breaking space keeps the line's height so the bar doesn't move. */}
         <span className="mt-1 block whitespace-nowrap text-[16px] font-semibold text-[#0f1115]">{value || " "}</span>
       </button>
@@ -80,11 +118,11 @@ export default function DateField({
           trigger.current?.focus();
         }}
         anchor={box}
-        label={isReturn ? "Choose your outbound and return dates" : "Choose your date"}
+        label={isReturn ? w.chooseDates : w.chooseDate}
         className="w-[312px] p-4"
       >
         {showTrip && (
-          <div ref={tripPill.listRef} role="radiogroup" aria-label="Trip" className="relative isolate mb-3 grid grid-cols-2 gap-1 rounded-[10px] bg-[#f2f4f7] p-1">
+          <div ref={tripPill.listRef} role="radiogroup" aria-label={w.trip} className="relative isolate mb-3 grid grid-cols-2 gap-1 rounded-[10px] bg-[#f2f4f7] p-1">
             {tripPill.pill}
             {(["oneway", "return"] as const).map(t => {
               const on = trip === t;
@@ -103,7 +141,7 @@ export default function DateField({
                     on ? `text-white ${tripPill.ready ? "" : "bg-[#0d1922]"}` : "text-[#475467] hover:text-[#101828]"
                   }`}
                 >
-                  {t === "oneway" ? "One way" : "Return"}
+                  {t === "oneway" ? w.oneWay : w.roundTrip}
                 </button>
               );
             })}
@@ -113,6 +151,7 @@ export default function DateField({
         {isReturn ? (
           <BookingCalendar
             mode="range"
+            language={language}
             today={todayDate}
             month={shownMonth}
             onMonthChange={setMonth}
@@ -127,6 +166,7 @@ export default function DateField({
         ) : (
           <BookingCalendar
             mode="single"
+            language={language}
             today={todayDate}
             month={shownMonth}
             onMonthChange={setMonth}
@@ -142,9 +182,9 @@ export default function DateField({
         <p className="mt-2 border-t border-[#f2f4f7] pt-3 text-[13px] text-[#667085]" aria-live="polite">
           {isReturn
             ? returnDate
-              ? `Outbound ${short(date, true)} · Return ${short(returnDate, true)}`
-              : "Choose your outbound day, then your return day."
-            : `Pick-up ${short(date, true)}`}
+              ? `${w.outbound} ${day(date, true)} · ${w.returnLeg} ${day(returnDate, true)}`
+              : w.hint
+            : `${w.pickup} ${day(date, true)}`}
         </p>
       </Popover>
     </div>

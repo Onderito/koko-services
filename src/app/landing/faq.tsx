@@ -1,9 +1,11 @@
 // Home FAQ. An animated list opens each answer (ui/faq-list.tsx); the answers stay in the HTML, and the same text is
 // the page's FAQPage data. Each answer opens with the fact and names Kokolimo; the fares are read from data/vehicles.tsx
-// so they never drift.
+// so they never drift. The French home (/fr) passes locale="fr": the same questions and facts in French, prices
+// written "90 €", French spacing before ":", ";" and "?".
 
 import { contactPhone, contactPhoneDisplay, whatsappUrl } from "../data/site-config";
 import { vehicles } from "../data/vehicles";
+import { frenchSpacing } from "../data/i18n/fr-helpers";
 import { AntiOutlinePill } from "../ui/anti";
 import ArrowButton from "../ui/arrow-button";
 import FaqList, { type FaqItem } from "../ui/faq-list";
@@ -11,6 +13,7 @@ import FaqList, { type FaqItem } from "../ui/faq-list";
 const car = (id: string) => vehicles.find(v => v.id === id)!;
 const E = car("mercedes-e"), V = car("mercedes-v"), S = car("mercedes-s"), M = car("mercedes-maybach");
 const eur = (n: number) => `€${n}`;
+const eurFr = (n: number) => `${n.toLocaleString("fr-FR")} €`;
 
 const faqs: { question: string; answer: string }[] = [
   {
@@ -55,27 +58,85 @@ const faqs: { question: string; answer: string }[] = [
   },
 ];
 
-const items: FaqItem[] = faqs.map(f => ({ question: f.question, answer: <p>{f.answer}</p> }));
+// The same questions in French, with the same facts and prices.
+const faqsFr: { question: string; answer: string }[] = frenchSpacing([
+  {
+    question: "Combien coûte un chauffeur privé depuis l'aéroport de Nice ?",
+    answer: `Les prix fixes de Kokolimo depuis l'aéroport Nice Côte d'Azur commencent à ${eurFr(E.prices.nice.transfer)} pour Nice, ${eurFr(E.prices.antibes.transfer)} pour Antibes, ${eurFr(E.prices.cannes.transfer)} pour Cannes, ${eurFr(E.prices.monaco.transfer)} pour Monaco et ${eurFr(E.prices["st-tropez"].transfer)} pour Saint-Tropez, en Mercedes Classe E. Le prix est confirmé avant la réservation, avec une heure d'attente incluse.`,
+  },
+  {
+    question: "Assurez-vous les transferts depuis l'aéroport de Nice ?",
+    answer: "Oui. Kokolimo vous conduit de l'aéroport Nice Côte d'Azur à Nice, Cannes, Antibes, Monaco, Menton, Saint-Tropez et partout sur la Côte d'Azur, 24 h/24 et 7 j/7, en Mercedes et à prix fixe.",
+  },
+  {
+    question: "Où mon chauffeur m'attend-il à l'aéroport de Nice ?",
+    answer: "Votre chauffeur Kokolimo vous attend dans le hall des arrivées de votre terminal, Terminal 1 ou Terminal 2, avec une pancarte à votre nom, s'occupe de vos bagages et vous accompagne jusqu'à la voiture.",
+  },
+  {
+    question: "Combien de temps d'attente est inclus à l'arrivée ?",
+    answer: "Une heure d'attente est incluse dans chaque prise en charge Kokolimo à l'aéroport, à compter de l'heure de prise en charge indiquée dans votre réservation.",
+  },
+  {
+    question: "Vos prix de transfert sont-ils fixes ?",
+    answer: "Oui. Chaque prix Kokolimo est fixe et confirmé avant la réservation, sans compteur ni frais cachés. Il dépend seulement du trajet, de la voiture et des options que vous demandez.",
+  },
+  {
+    question: "Suivez-vous les retards de vol ?",
+    answer: "Oui. Kokolimo suit votre vol en temps réel : une arrivée en avance ou en retard ne change rien pour vous. Une heure d'attente est incluse à compter de l'heure de prise en charge de votre réservation ; prévenez-nous au plus tôt en cas de gros retard.",
+  },
+  {
+    question: "Kokolimo est-il disponible 24 h/24 ?",
+    answer: "Oui. Kokolimo roule jour et nuit, sept jours sur sept, y compris pour les vols tôt le matin et les arrivées tardives à l'aéroport de Nice.",
+  },
+  {
+    question: "Quelles voitures proposez-vous pour les transferts ?",
+    answer: `Kokolimo roule uniquement en Mercedes : la Classe E et la Classe S jusqu'à ${E.passengers} passagers, le van Classe V jusqu'à ${V.passengers}, et la Maybach jusqu'à ${M.passengers}. Nous vous conseillons la voiture adaptée à votre groupe et à vos bagages.`,
+  },
+  {
+    question: "Comment fonctionne un chauffeur à l'heure ?",
+    answer: `Votre chauffeur Kokolimo et sa voiture restent avec vous pendant toute la réservation, pour des rendez-vous, des achats ou plusieurs arrêts, à partir de ${eurFr(E.prices.nice.hourly)} de l'heure en Classe E, ${eurFr(V.prices.nice.hourly)} en Classe V, ${eurFr(S.prices.nice.hourly)} en Classe S et ${eurFr(M.prices.nice.hourly)} en Maybach.`,
+  },
+  {
+    question: "Quelles sont vos conditions d'annulation ?",
+    answer: "L'annulation est gratuite jusqu'à cinq jours avant la date et l'heure de prise en charge réservées. Pour une annulation à moins de cinq jours du départ, le prix total est dû.",
+  },
+]);
 
-const faqPage = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+const TEXT = {
+  en: {
+    faqs,
+    title: "Frequently Asked ",
+    accent: "Questions",
+    intro: "Everything about airport pickups, waiting time, fixed prices and our vehicles. Something else? Ask us directly.",
+    whatsapp: "WhatsApp us",
+  },
+  fr: {
+    faqs: faqsFr,
+    title: "Questions ",
+    accent: "fréquentes",
+    intro: "Tout sur l'accueil à l'aéroport, l'attente, les prix fixes et nos voitures. Une autre question ? Posez-la-nous directement.",
+    whatsapp: "Écrivez-nous sur WhatsApp",
+  },
 };
 
-export default function Faq() {
+export default function Faq({ locale }: { locale?: "fr" }) {
+  const t = TEXT[locale ?? "en"];
+  const items: FaqItem[] = t.faqs.map(f => ({ question: f.question, answer: <p>{f.answer}</p> }));
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: t.faqs.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+  };
   return (
     <section aria-labelledby="faq-title" data-nav-tone="light" className="bg-[#f5f6f8] text-[#101828]">
       <div className="mx-auto grid max-w-[1240px] gap-10 px-4 py-16 md:px-6 md:py-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <h2 id="faq-title" className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[40px]" style={{ textWrap: "balance" }}>
-            Frequently Asked <span className="text-[#d4b471]">Questions</span>
+            {t.title}<span className="text-[#d4b471]">{t.accent}</span>
           </h2>
-          <p className="mt-3 max-w-[420px] text-[16px] leading-relaxed text-[#667085] md:text-[17px]">
-            Everything about airport pickups, waiting time, fixed prices and our vehicles. Something else? Ask us directly.
-          </p>
+          <p className="mt-3 max-w-[420px] text-[16px] leading-relaxed text-[#667085] md:text-[17px]">{t.intro}</p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <ArrowButton text="WhatsApp us" href={whatsappUrl} target="_blank" rel="noopener noreferrer" tone="dark" />
+            <ArrowButton text={t.whatsapp} href={whatsappUrl} target="_blank" rel="noopener noreferrer" tone="dark" />
             <AntiOutlinePill href={`tel:${contactPhone}`} dark={false} external={false}>
               {contactPhoneDisplay}
             </AntiOutlinePill>

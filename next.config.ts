@@ -4,6 +4,11 @@ const nextConfig = {
   // Every visitor, crawler or browser, gets the title, canonical and sharing tags in the page's <head>, including on
   // pages built on request (by default Next.js streams them into the body for user agents outside its short bot list).
   htmlLimitedBots: /.*/,
+  // The site has one root layout per language (app/(en), app/(fr)); an unknown address gets the 404 page of
+  // app/global-not-found.tsx, which carries the English layout.
+  experimental: {
+    globalNotFound: true,
+  },
   async headers() {
     return [
       {

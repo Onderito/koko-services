@@ -4,20 +4,56 @@
 // (light text over dark sections, dark text over light ones), with a solid bar once the page scrolls.
 // A section can state its tone with data-nav-tone="dark" | "light"; otherwise its background colour decides.
 // Menus open with a plain fade. Works with mouse, touch (tap toggles), keyboard (Escape returns focus) and screen readers.
+// On French pages (/fr) the menus, labels and links are French; the language menu sits before "Get a quote" and in the
+// phone sheet.
 
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import s from "./site-header.module.css";
-import { NAV_LINKS, NAV_PANELS, type NavPanel } from "./nav-data";
+import { NAV_LINKS, NAV_LINKS_FR, NAV_PANELS, NAV_PANELS_FR, type NavPanel } from "./nav-data";
+import LanguageMenu, { isFrenchPath } from "./language-menu";
 import { contactPhone, contactPhoneDisplay, whatsappUrl } from "../data/site-config";
+import { frLink } from "../data/i18n/addresses";
 import ArrowButton from "../ui/arrow-button";
 
 type Key = NavPanel["key"];
 type Tone = "dark" | "light";
 const ORDER: Key[] = NAV_PANELS.map(p => p.key);
 const CLOSE_DELAY = 160;
+
+// The header's own words in each language; English pages keep the words they always had. French pages link to the
+// French home and services page once they exist.
+const frenchHome = frLink("/");
+const TEXT = {
+  en: {
+    home: "Kokolimo, home",
+    homeHref: "/",
+    main: "Main",
+    mainMobile: "Main (mobile)",
+    panel: (label: string) => `${label} menu`,
+    menu: "Menu",
+    allServices: { text: "Discover All of Our Services", href: "/our-services" },
+    quote: { text: "Get a quote", href: "/#book" },
+    open: "Open menu",
+    close: "Close menu",
+    whatsappUs: "WhatsApp us",
+  },
+  fr: {
+    home: "Kokolimo, accueil",
+    homeHref: frenchHome,
+    main: "Navigation principale",
+    mainMobile: "Navigation principale (mobile)",
+    panel: (label: string) => `Menu ${label}`,
+    menu: "Menu",
+    allServices: { text: "Découvrir tous nos services", href: frLink("/our-services") },
+    quote: { text: "Obtenir un devis", href: frenchHome === "/" ? "/#book" : `${frenchHome}#book` },
+    open: "Ouvrir le menu",
+    close: "Fermer le menu",
+    whatsappUs: "Écrire sur WhatsApp",
+  },
+};
 const SLIDE_MS = 260; // Hyperiux Directional Menu: content slide duration
 
 // Reads any CSS colour (rgb, oklch, color(), …) through a 1×1 canvas: relative luminance and opacity.
@@ -88,7 +124,7 @@ function PhoneIcon() {
   );
 }
 
-function PanelContent({ panel, onNavigate }: { panel: NavPanel; onNavigate: () => void }) {
+function PanelContent({ panel, onNavigate, allServices }: { panel: NavPanel; onNavigate: () => void; allServices: { text: string; href: string } }) {
   return (
     <div className="px-8 pb-8 pt-6">
       <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[var(--p-gold)]">{panel.eyebrow}</p>
@@ -107,7 +143,7 @@ function PanelContent({ panel, onNavigate }: { panel: NavPanel; onNavigate: () =
             ))}
             {/* The CTA asked for on 21 Oct 2026, the same as the home page's "Discover All of Our Services" button. */}
             <li className="pt-3 sm:col-span-2">
-              <ArrowButton text="Discover All of Our Services" href="/our-services" size="sm" onClick={onNavigate} />
+              <ArrowButton text={allServices.text} href={allServices.href} size="sm" onClick={onNavigate} />
             </li>
           </ul>
           {panel.cards.map(c => (
@@ -164,6 +200,10 @@ function PanelContent({ panel, onNavigate }: { panel: NavPanel; onNavigate: () =
 
 export default function SiteHeader({ fontClassName = "" }: { fontClassName?: string }) {
   const pathname = usePathname();
+  const french = isFrenchPath(pathname);
+  const t = TEXT[french ? "fr" : "en"];
+  const panels = french ? NAV_PANELS_FR : NAV_PANELS;
+  const links = french ? NAV_LINKS_FR : NAV_LINKS;
   const [active, setActive] = useState<Key | null>(null);
   const [shown, setShown] = useState<Key | null>(null); // last opened panel, kept while the panel closes
   const [leaving, setLeaving] = useState<{ key: Key; dir: 1 | -1 } | null>(null);
@@ -309,8 +349,8 @@ export default function SiteHeader({ fontClassName = "" }: { fontClassName?: str
     };
   }, [sheetOpen]);
 
-  const panel = NAV_PANELS.find(p => p.key === shown) ?? null;
-  const leavingPanel = leaving ? NAV_PANELS.find(p => p.key === leaving.key) ?? null : null;
+  const panel = panels.find(p => p.key === shown) ?? null;
+  const leavingPanel = leaving ? panels.find(p => p.key === leaving.key) ?? null : null;
   const solid = scrolled || active !== null || sheetOpen;
   const inSection = (key: Key) => (key === "services" ? pathname.startsWith("/our-services") : key === "fleet" ? pathname.startsWith("/cars") : false);
 
@@ -328,13 +368,13 @@ export default function SiteHeader({ fontClassName = "" }: { fontClassName?: str
     >
       <div ref={barRef} className={s.bar}>
         <div className="mx-auto flex h-16 max-w-[1240px] items-center gap-4 px-4 md:px-6 lg:h-[76px]">
-          <Link href="/" className="shrink-0 text-[22px] font-bold tracking-[-0.02em]" aria-label="Kokolimo, home">
+          <Link href={t.homeHref} className="shrink-0 text-[22px] font-bold tracking-[-0.02em]" aria-label={t.home}>
             Kokolimo<span className="text-[#d4b471]">.</span>
           </Link>
 
-          <nav aria-label="Main" className="ml-6 hidden lg:block">
+          <nav aria-label={t.main} className="ml-6 hidden lg:block">
             <ul className="flex items-center gap-1">
-              {NAV_PANELS.map(p => (
+              {panels.map(p => (
                 <li key={p.key}>
                   <button
                     ref={el => {
@@ -357,7 +397,7 @@ export default function SiteHeader({ fontClassName = "" }: { fontClassName?: str
                   </button>
                 </li>
               ))}
-              {NAV_LINKS.map(l => {
+              {links.map(l => {
                 const here = pathname.startsWith(l.href);
                 return (
                   <li key={l.href}>
@@ -386,10 +426,13 @@ export default function SiteHeader({ fontClassName = "" }: { fontClassName?: str
                 WhatsApp
               </span>
             </a>
-            <ArrowButton text="Get a quote" href="/#book" size="sm" />
+            {/* From tablet width; on phones the menu sheet carries the language choice, so the bar keeps the quote
+                button and the menu button on screen. */}
+            <LanguageMenu className="hidden sm:block" />
+            <ArrowButton text={t.quote.text} href={t.quote.href} size="sm" />
             <button
               type="button"
-              aria-label={sheetOpen ? "Close menu" : "Open menu"}
+              aria-label={sheetOpen ? t.close : t.open}
               aria-expanded={sheetOpen}
               aria-controls="site-header-sheet"
               onClick={() => setSheetOpen(o => !o)}
@@ -411,7 +454,7 @@ export default function SiteHeader({ fontClassName = "" }: { fontClassName?: str
           ref={panelRef}
           id="site-header-panel"
           role="region"
-          aria-label={panel ? `${panel.label} menu` : "Menu"}
+          aria-label={panel ? t.panel(panel.label) : t.menu}
           inert={!active}
           className={`${s.panelShell} ${s.panel} mx-auto max-w-[1240px] overflow-hidden rounded-card`}
           style={{ height: active ? height : 0, opacity: active ? 1 : 0 }}
@@ -419,12 +462,12 @@ export default function SiteHeader({ fontClassName = "" }: { fontClassName?: str
           <div className="relative">
             {leavingPanel && leaving && (
               <div className={`${s.layer} ${leaving.dir === 1 ? s.exitToLeft : s.exitToRight}`} aria-hidden="true">
-                <PanelContent panel={leavingPanel} onNavigate={() => close()} />
+                <PanelContent panel={leavingPanel} onNavigate={() => close()} allServices={t.allServices} />
               </div>
             )}
             {panel && (
               <div ref={contentRef} key={`${panel.key}-${openSeq}`} className={enterDir === 1 ? s.enterFromRight : enterDir === -1 ? s.enterFromLeft : s.enterFade}>
-                <PanelContent panel={panel} onNavigate={() => close()} />
+                <PanelContent panel={panel} onNavigate={() => close()} allServices={t.allServices} />
               </div>
             )}
           </div>
@@ -438,13 +481,13 @@ export default function SiteHeader({ fontClassName = "" }: { fontClassName?: str
         className={`${s.sheet} ${sheetOpen ? s.sheetOpen : ""} fixed inset-x-0 bottom-0 top-16 overflow-y-auto bg-[#0f1115] px-4 pb-10 pt-2 text-white lg:hidden`}
       >
         <nav
-          aria-label="Main (mobile)"
+          aria-label={t.mainMobile}
           className="mx-auto max-w-[640px]"
           onClick={e => {
             if ((e.target as HTMLElement).closest("a")) setSheetOpen(false);
           }}
         >
-          {NAV_PANELS.map(p => (
+          {panels.map(p => (
             <details key={p.key} className="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-[19px] font-semibold">
                 {p.label}
@@ -479,19 +522,20 @@ export default function SiteHeader({ fontClassName = "" }: { fontClassName?: str
               </ul>
             </details>
           ))}
-          {NAV_LINKS.map(l => (
+          {links.map(l => (
             <Link key={l.href} href={l.href} className="block border-b border-white/10 py-4 text-[19px] font-semibold">{l.label}</Link>
           ))}
           <div className="mt-8 grid gap-3">
-            <ArrowButton text="Get a quote" href="/#book" full onClick={() => setSheetOpen(false)} />
+            <ArrowButton text={t.quote.text} href={t.quote.href} full onClick={() => setSheetOpen(false)} />
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center gap-2 rounded-control border border-white/25 text-[16px] font-semibold text-[#25d366]">
               <WhatsAppIcon />
-              WhatsApp us
+              {t.whatsappUs}
             </a>
             <a href={`tel:${contactPhone}`} className="inline-flex h-12 items-center justify-center gap-2 text-[16px] font-semibold text-white/85">
               <PhoneIcon />
               {contactPhoneDisplay}
             </a>
+            <LanguageMenu variant="list" className="mt-2" />
           </div>
         </nav>
       </div>

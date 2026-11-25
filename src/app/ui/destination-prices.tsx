@@ -8,6 +8,7 @@
 import Link from "next/link";
 import { cities, vehicles } from "../data/vehicles";
 import { siteUrl } from "../data/site-config";
+import { frLink } from "../data/i18n/addresses";
 import RollingNumber from "./rolling-number";
 
 /** Each destination of the price guide and its transfer page (the pages already exist and are indexed). */
@@ -26,23 +27,45 @@ const short = (name: string) => name.replace("Mercedes ", "");
 const cell = "px-4 py-3.5 text-right tabular-nums max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:px-0 max-sm:py-1 max-sm:before:text-[13px] max-sm:before:font-normal max-sm:before:text-[#667085] max-sm:before:content-[attr(data-label)]";
 const row = "border-b border-[#f2f4f7] last:border-0 max-sm:grid max-sm:gap-x-6 max-sm:px-5 max-sm:py-3";
 
-/** Home: every destination's one-way transfer price from Nice Airport, by car. */
-export function AllDestinationPrices() {
+// The overview table's words in each language; English pages keep the words they always had.
+const OVERVIEW = {
+  en: {
+    title: "All destinations at a glance",
+    subtitle: "From Nice Airport, one way, starting prices",
+    caption: "Starting prices of a one-way private transfer from Nice Côte d'Azur Airport, by destination and vehicle",
+    destination: "Destination",
+    car: (name: string) => short(name),
+    price: (n: number) => `${n}€`,
+  },
+  fr: {
+    title: "Toutes les destinations en un coup d'œil",
+    subtitle: "Depuis l'aéroport de Nice, aller simple, prix de départ",
+    caption: "Prix de départ d'un transfert privé aller simple depuis l'aéroport Nice Côte d'Azur, par destination et par véhicule",
+    destination: "Destination",
+    car: (name: string) => short(name.replace(/ ([A-Z])-Class$/, " Classe $1")),
+    price: (n: number) => `${n.toLocaleString("fr-FR")} €`,
+  },
+};
+
+/** Home: every destination's one-way transfer price from Nice Airport, by car (the French home: French names, the
+ *  French route pages). */
+export function AllDestinationPrices({ locale }: { locale?: "fr" }) {
+  const t = OVERVIEW[locale ?? "en"];
   return (
     <div className="mt-10 overflow-hidden rounded-[14px] ring-1 ring-[#eaecf0]">
       <div className="flex flex-wrap items-end justify-between gap-2 bg-[#f8f9fb] px-5 py-4">
-        <h3 className="text-[18px] font-bold text-[#101828]">All destinations at a glance</h3>
-        <p className="text-[13px] text-[#667085]">From Nice Airport, one way, starting prices</p>
+        <h3 className="text-[18px] font-bold text-[#101828]">{t.title}</h3>
+        <p className="text-[13px] text-[#667085]">{t.subtitle}</p>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-[15px] max-sm:block sm:min-w-[560px]">
-          <caption className="sr-only">Starting prices of a one-way private transfer from Nice Côte d&apos;Azur Airport, by destination and vehicle</caption>
+          <caption className="sr-only">{t.caption}</caption>
           <thead>
             <tr className="border-b border-[#eaecf0] text-[13px] text-[#667085] max-sm:hidden">
-              <th scope="col" className="px-5 py-3 text-left font-semibold">Destination</th>
+              <th scope="col" className="px-5 py-3 text-left font-semibold">{t.destination}</th>
               {vehicles.map(v => (
                 <th key={v.id} scope="col" className="px-4 py-3 text-right font-semibold">
-                  {short(v.name)}
+                  {t.car(v.name)}
                 </th>
               ))}
             </tr>
@@ -51,14 +74,14 @@ export function AllDestinationPrices() {
             {cities.map(city => (
               <tr key={city.id} className={`${row} max-sm:grid-cols-2`}>
                 <th scope="row" className="px-5 py-3.5 text-left font-semibold text-[#101828] max-sm:col-span-2 max-sm:px-0 max-sm:pb-1 max-sm:pt-0">
-                  <Link href={CITY_PAGE[city.id]} className="group inline-flex items-center gap-1.5 transition-colors hover:text-[#a97c25]">
-                    {city.displayName}
+                  <Link href={locale === "fr" ? frLink(CITY_PAGE[city.id]) : CITY_PAGE[city.id]} className="group inline-flex items-center gap-1.5 transition-colors hover:text-[#a97c25]">
+                    {cityName(city, locale)}
                     <span aria-hidden="true" className="text-[#d4b471] transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                   </Link>
                 </th>
                 {vehicles.map(v => (
-                  <td key={v.id} data-label={short(v.name)} className={`${cell} font-semibold text-[#101828]`}>
-                    <RollingNumber value={`${v.prices[city.id].transfer}€`} />
+                  <td key={v.id} data-label={t.car(v.name)} className={`${cell} font-semibold text-[#101828]`}>
+                    <RollingNumber value={t.price(v.prices[city.id].transfer)} />
                   </td>
                 ))}
               </tr>

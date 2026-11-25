@@ -1,0 +1,69 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+import { pageMetadata } from "@/app/data/page-metadata";
+import { siteUrl } from "@/app/data/site-config";
+import { eventPages } from "@/app/data/service-pages";
+import ServicePageTemplate from "@/app/our-services/service-page-template";
+
+import BreadcrumbJsonLd from "@/app/ui/schema/breadcrumb-json-ld";
+
+type EventPageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export function generateStaticParams() {
+  return Object.keys(eventPages).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: EventPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const config = eventPages[slug];
+
+  if (!config) {
+    return {};
+  }
+
+  return pageMetadata({
+    title: config.metadata.title,
+    description: config.metadata.description,
+    path: config.path,
+    image: config.heroImageSrc,
+    imageAlt: config.heroImageAlt,
+  });
+}
+
+export default async function EventPage({ params }: EventPageProps) {
+  const { slug } = await params;
+  const config = eventPages[slug];
+
+  if (!config) {
+    notFound();
+  }
+
+  const breadcrumbs = [
+    {
+      name: "Home",
+      url: siteUrl,
+    },
+    {
+      name: "Event Transport",
+      url: `${siteUrl}/our-services/events`,
+    },
+    {
+      name: config.heroTitle,
+      url: `${siteUrl}${config.path}`,
+    },
+  ];
+
+  return (
+    <>
+      <BreadcrumbJsonLd items={breadcrumbs} />
+      <ServicePageTemplate config={config} />
+    </>
+  );
+}

@@ -1,10 +1,17 @@
-// The French versions of three route pages (Nice Airport, Nice Airport to Monaco, Nice Airport to Cannes), served at
-// /fr/<slug> (app/fr/[slug]/page.tsx) with the service page template. Each page names its English original (enPath):
-// the two link to each other with hreflang tags, and the French page uses its original's photos and price table.
-// Prices are read from the price list (data/vehicles.tsx), written the French way ("150 €").
+// The French service pages, served at /fr/<slug> (app/(fr)/fr/[slug]/page.tsx) with the service page template: the
+// three airport routes below (Nice Airport, Nice Airport to Monaco, Nice Airport to Cannes) and the hubs, transfers,
+// hourly, tour, yacht and event pages of data/fr/. Each page names its English original (enPath): the two link to each
+// other with hreflang tags, and the French page uses its original's photos and price table. Prices are read from the
+// price list (data/vehicles.tsx), written the French way ("150 €").
 
 import { vehicles } from "./vehicles";
 import { transferPages, type ServiceCardLink, type ServicePageConfig } from "./service-pages";
+import { hubPagesFr } from "./fr/hubs";
+import { transferPagesFr } from "./fr/transfers";
+import { hourlyPagesFr } from "./fr/hourly";
+import { tourPagesFr } from "./fr/tours";
+import { yachtPagesFr } from "./fr/yacht";
+import { eventPagesFr } from "./fr/events";
 
 const eur = (amount: number) => `${amount.toLocaleString("fr-FR")} €`;
 const vehicle = (id: string) => vehicles.find(v => v.id === id)!;
@@ -50,7 +57,7 @@ const localLinks = {
   localLinks: frenchLinks,
 };
 
-export const frenchServicePages = frenchSpacing<Record<string, ServicePageConfig>>({
+const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
   "transfert-aeroport-nice": {
     slug: "transfert-aeroport-nice",
     path: "/fr/transfert-aeroport-nice",
@@ -423,6 +430,17 @@ export const frenchServicePages = frenchSpacing<Record<string, ServicePageConfig
     ],
   },
 });
+
+/** Every French service page, by slug. */
+export const frenchServicePages: Record<string, ServicePageConfig> = {
+  ...routePagesFr,
+  ...hubPagesFr,
+  ...transferPagesFr,
+  ...hourlyPagesFr,
+  ...tourPagesFr,
+  ...yachtPagesFr,
+  ...eventPagesFr,
+};
 
 const frenchPathByEnglishPath = new Map(Object.values(frenchServicePages).map(page => [page.enPath!, page.path]));
 

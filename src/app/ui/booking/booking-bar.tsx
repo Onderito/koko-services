@@ -22,7 +22,60 @@ const ClockIcon = () => <svg {...icon}><circle cx="12" cy="12" r="8.5" /><path d
 const PinIcon = () => <svg {...icon}><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z" /><circle cx="12" cy="10" r="2.2" /></svg>;
 const CalendarIcon = () => <svg {...icon}><rect x="4" y="5.5" width="16" height="14.5" rx="1.5" /><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" /></svg>;
 
+// The bar's words in each language (`language` "fr" on the French home). The quote itself opens on /reservation.
+const WORDS = {
+  en: {
+    noFrom: "Choose where we pick you up.",
+    noPickup: "Choose the pick-up address.",
+    noTo: "Choose your destination.",
+    samePlace: "Pick-up and destination are the same place.",
+    noDate: "Choose a date from today.",
+    noReturn: "Choose your return day.",
+    failed: "We could not prepare your quote. Please try again, or contact us on WhatsApp.",
+    form: "Get a quote",
+    rideType: "Type of ride",
+    transfer: "Transfer",
+    hourly: "By the hour",
+    from: "From",
+    pickup: "Pick-up",
+    to: "To",
+    placeholder: "Address, airport, hotel…",
+    duration: "Duration",
+    hours: (h: number) => `${h} hours`,
+    passengers: "Passengers",
+    fewer: "One passenger less",
+    more: "One passenger more",
+    preparing: "Preparing…",
+    quote: "Get my quote",
+  },
+  fr: {
+    noFrom: "Indiquez où nous venons vous chercher.",
+    noPickup: "Indiquez l'adresse de prise en charge.",
+    noTo: "Indiquez votre destination.",
+    samePlace: "Le départ et l'arrivée sont le même lieu.",
+    noDate: "Choisissez une date à partir d'aujourd'hui.",
+    noReturn: "Choisissez le jour du retour.",
+    failed: "Nous n'avons pas pu préparer votre devis. Réessayez, ou écrivez-nous sur WhatsApp.",
+    form: "Obtenir un devis",
+    rideType: "Type de trajet",
+    transfer: "Transfert",
+    hourly: "À l'heure",
+    from: "Départ",
+    pickup: "Prise en charge",
+    to: "Arrivée",
+    placeholder: "Adresse, aéroport, hôtel…",
+    duration: "Durée",
+    hours: (h: number) => `${h} heures`,
+    passengers: "Passagers",
+    fewer: "Un passager de moins",
+    more: "Un passager de plus",
+    preparing: "Préparation…",
+    quote: "Obtenir mon devis",
+  },
+};
+
 export default function BookingBar({ language = "en", aside }: { language?: string; aside?: React.ReactNode }) {
+  const w = WORDS[language === "fr" ? "fr" : "en"];
   const router = useRouter();
   // Today and the default date (tomorrow) come from the visitor's clock, so they are set once the page has loaded. The
   // home page is built at deploy time: a date worked out during the first render differed from the page's HTML on every
@@ -57,12 +110,12 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    if (!from) return setError(mode === "transfer" ? "Choose where we pick you up." : "Choose the pick-up address.");
-    if (mode === "transfer" && !to) return setError("Choose your destination.");
-    if (mode === "transfer" && to && from.id === to.id) return setError("Pick-up and destination are the same place.");
-    if (!date || date < today) return setError("Choose a date from today.");
+    if (!from) return setError(mode === "transfer" ? w.noFrom : w.noPickup);
+    if (mode === "transfer" && !to) return setError(w.noTo);
+    if (mode === "transfer" && to && from.id === to.id) return setError(w.samePlace);
+    if (!date || date < today) return setError(w.noDate);
     const isReturn = mode === "transfer" && trip === "return";
-    if (isReturn && !returnDate) return setError("Choose your return day.");
+    if (isReturn && !returnDate) return setError(w.noReturn);
     setSending(true);
     try {
       const res = await fetch("/api/reservations", {
@@ -85,7 +138,7 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
       if (!res.ok || !data.token) throw new Error(data.error || "error");
       router.push(`/reservation?t=${encodeURIComponent(data.token)}`);
     } catch {
-      setError("We could not prepare your quote. Please try again, or contact us on WhatsApp.");
+      setError(w.failed);
       setSending(false);
     }
   };
@@ -110,11 +163,11 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
   };
 
   return (
-    <form ref={formRef} onSubmit={submit} aria-label="Get a quote" className="w-full">
+    <form ref={formRef} onSubmit={submit} aria-label={w.form} className="w-full">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
-        <div ref={tabs.listRef} role="tablist" aria-label="Type of ride" className="relative isolate inline-flex gap-1 rounded-card bg-white p-1.5 shadow-sm">
-          {tab("transfer", "Transfer", <CarIcon />)}
-          {tab("hourly", "By the hour", <ClockIcon />)}
+        <div ref={tabs.listRef} role="tablist" aria-label={w.rideType} className="relative isolate inline-flex gap-1 rounded-card bg-white p-1.5 shadow-sm">
+          {tab("transfer", w.transfer, <CarIcon />)}
+          {tab("hourly", w.hourly, <ClockIcon />)}
           {tabs.pill}
         </div>
         {aside && <div className="text-[15px]">{aside}</div>}
@@ -122,19 +175,19 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
 
       <div className="flex flex-col gap-4 rounded-card bg-white p-4 text-[#0f1115] shadow-[0_20px_60px_rgba(0,0,0,0.25)] lg:flex-row lg:items-center lg:gap-0 lg:p-3 lg:pl-5">
         <div className="min-w-0 lg:flex-1 lg:pr-5">
-          <PlaceField name="from" label={mode === "transfer" ? "From" : "Pick-up"} placeholder="Address, airport, hotel…" icon={<PinIcon />} value={from} onChange={setFrom} required language={language} />
+          <PlaceField name="from" label={mode === "transfer" ? w.from : w.pickup} placeholder={w.placeholder} icon={<PinIcon />} value={from} onChange={setFrom} required language={language} />
         </div>
         {mode === "transfer" ? (
           <div className="min-w-0 border-black/10 lg:flex-1 lg:border-l lg:px-5">
-            <PlaceField name="to" label="To" placeholder="Address, airport, hotel…" icon={<PinIcon />} value={to} onChange={setTo} required language={language} />
+            <PlaceField name="to" label={w.to} placeholder={w.placeholder} icon={<PinIcon />} value={to} onChange={setTo} required language={language} />
           </div>
         ) : (
           <div className="flex items-center gap-3 border-black/10 lg:border-l lg:px-5">
             <span className="shrink-0 text-[#8a92a0]"><ClockIcon /></span>
             <div>
-              <label htmlFor="booking-hours" className="block text-[13px] font-medium text-[#5b6472]">Duration</label>
+              <label htmlFor="booking-hours" className="block text-[13px] font-medium text-[#5b6472]">{w.duration}</label>
               <select id="booking-hours" value={hours} onChange={e => setHours(Number(e.target.value))} className="mt-1 bg-transparent text-[16px] font-semibold text-[#0f1115] focus:outline-none">
-                {[4, 5, 6, 7, 8, 9, 10, 12].map(h => <option key={h} value={h}>{h} hours</option>)}
+                {[4, 5, 6, 7, 8, 9, 10, 12].map(h => <option key={h} value={h}>{w.hours(h)}</option>)}
               </select>
             </div>
           </div>
@@ -143,6 +196,7 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
           <span className="shrink-0 text-[#8a92a0]"><CalendarIcon /></span>
           <div className="flex gap-5">
             <DateField
+              language={language}
               showTrip={mode === "transfer"}
               trip={trip}
               onTrip={setTrip}
@@ -155,6 +209,7 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
               }}
             />
             <TimeField
+              language={language}
               isReturn={mode === "transfer" && trip === "return"}
               time={time}
               returnTime={returnTime}
@@ -166,20 +221,20 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
           </div>
         </div>
         <div className="border-black/10 lg:border-l lg:px-5">
-          <span id="booking-pax-label" className="block text-[13px] font-medium text-[#5b6472]">Passengers</span>
+          <span id="booking-pax-label" className="block text-[13px] font-medium text-[#5b6472]">{w.passengers}</span>
           <div className="mt-1 flex items-center gap-3" role="group" aria-labelledby="booking-pax-label">
-            <button type="button" aria-label="One passenger less" onClick={() => setPassengers(p => Math.max(1, p - 1))} className="grid h-8 w-8 place-items-center rounded-control ring-1 ring-black/15 transition-colors hover:bg-black/5">−</button>
+            <button type="button" aria-label={w.fewer} onClick={() => setPassengers(p => Math.max(1, p - 1))} className="grid h-8 w-8 place-items-center rounded-control ring-1 ring-black/15 transition-colors hover:bg-black/5">−</button>
             <output aria-live="polite" className="w-5 text-center text-[16px] font-semibold text-[#0f1115]">
               <RollingCount value={passengers} />
             </output>
-            <button type="button" aria-label="One passenger more" onClick={() => setPassengers(p => Math.min(16, p + 1))} className="grid h-8 w-8 place-items-center rounded-control ring-1 ring-black/15 transition-colors hover:bg-black/5">+</button>
+            <button type="button" aria-label={w.more} onClick={() => setPassengers(p => Math.min(16, p + 1))} className="grid h-8 w-8 place-items-center rounded-control ring-1 ring-black/15 transition-colors hover:bg-black/5">+</button>
           </div>
         </div>
         {/* Hyperiux Arrow Fill button (a link element), acting as the form's button; the hidden native submit keeps
             Enter-to-submit inside the fields. */}
         <div className="mt-1 lg:mt-0 lg:ml-auto">
           <ArrowButton
-            text={sending ? "Preparing…" : "Get my quote"}
+            text={sending ? w.preparing : w.quote}
             href="#book"
             size="lg"
             full="mobile"
@@ -197,7 +252,7 @@ export default function BookingBar({ language = "en", aside }: { language?: stri
             }}
           />
           <button type="submit" tabIndex={-1} aria-hidden="true" className="sr-only">
-            Get my quote
+            {w.quote}
           </button>
         </div>
       </div>

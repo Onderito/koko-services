@@ -2,33 +2,65 @@
 // four numbered steps in gold circles joined by a line, a handwritten "It's that simple!", and a photo panel with an
 // angled edge carrying a real client quote. The photo is a placeholder until the user sends a photo of Koko.
 // The step texts restate facts published elsewhere on the site (fixed fare, flight tracking, name sign, one hour of
-// waiting, driver in suit, water and chargers on board).
+// waiting, driver in suit, water and chargers on board). The French home (/fr) passes locale="fr": the same steps in
+// French, and the client's quote translated and marked as such.
 
 import Image from "next/image";
 import { BadgeEuro, Car, MapPinned, PlaneLanding } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import { Stars } from "../ui/kit";
-import { tripadvisorListingUrl } from "./reviews";
+import { REVIEWS_FR, tripadvisorListingUrl } from "./reviews";
 import { script } from "../fonts";
 
-const steps = [
-  { icon: MapPinned, title: "Tell Us Your Trip", text: "Pickup, destination, date, time and passengers in the booking bar, or on WhatsApp." },
-  { icon: BadgeEuro, title: "Receive Your Fixed Fare", text: "Your chauffeur confirms the fixed fare before the ride. No payment online." },
-  { icon: PlaneLanding, title: "Meet Your Chauffeur", text: "Flight tracked, name sign at arrivals and one hour of waiting included." },
-  { icon: Car, title: "Enjoy The Ride", text: "A Mercedes, a professional driver in suit, water and phone chargers on board." },
-];
+const TEXT = {
+  en: {
+    steps: [
+      { icon: MapPinned, title: "Tell Us Your Trip", text: "Pickup, destination, date, time and passengers in the booking bar, or on WhatsApp." },
+      { icon: BadgeEuro, title: "Receive Your Fixed Fare", text: "Your chauffeur confirms the fixed fare before the ride. No payment online." },
+      { icon: PlaneLanding, title: "Meet Your Chauffeur", text: "Flight tracked, name sign at arrivals and one hour of waiting included." },
+      { icon: Car, title: "Enjoy The Ride", text: "A Mercedes, a professional driver in suit, water and phone chargers on board." },
+    ],
+    title: "How booking your private driver ",
+    accent: "works",
+    intro: "Booking a chauffeur should be easy, not complicated. Here's how it works.",
+    simple: "It's that simple!",
+    photoAlt: "Passenger in the back seat of a chauffeur-driven car at night",
+    quote:
+      "My family group of four scheduled with Marie on the day we arrived in Nice. It was the perfect way to acclimate while doing something fun and interesting.",
+    open: "“",
+    translated: "",
+    read: "Read Cyndi K's review on Tripadvisor",
+  },
+  fr: {
+    steps: [
+      { icon: MapPinned, title: "Indiquez votre trajet", text: "Départ, destination, date, heure et nombre de passagers dans la barre de réservation, ou sur WhatsApp." },
+      { icon: BadgeEuro, title: "Recevez votre prix fixe", text: "Votre chauffeur confirme le prix fixe avant le trajet. Aucun paiement en ligne." },
+      { icon: PlaneLanding, title: "Retrouvez votre chauffeur", text: "Vol suivi, pancarte à votre nom aux arrivées et une heure d'attente incluse." },
+      { icon: Car, title: "Profitez du trajet", text: "Une Mercedes, un chauffeur professionnel en costume, de l'eau et des chargeurs de téléphone à bord." },
+    ],
+    title: "Comment se passe la réservation de votre ",
+    accent: "chauffeur",
+    intro: "Réserver un chauffeur doit rester simple. Voici comment cela se passe.",
+    simple: "C'est aussi simple que ça !",
+    photoAlt: "Passager à l'arrière d'une voiture avec chauffeur, de nuit",
+    quote: REVIEWS_FR[3].quote,
+    open: "«",
+    translated: "avis traduit de l'anglais",
+    read: "Lire l'avis de Cyndi K sur Tripadvisor",
+  },
+};
 
-export default function Steps() {
+export default function Steps({ locale }: { locale?: "fr" }) {
+  const t = TEXT[locale ?? "en"];
+  const steps = t.steps;
   return (
     <section aria-labelledby="steps-title" data-nav-tone="light" className="overflow-hidden bg-white text-[#101828]">
       <div className="mx-auto grid max-w-[1240px] gap-12 px-4 py-16 md:px-6 md:py-24 lg:grid-cols-[1fr_1fr] lg:items-stretch">
         <div>
           <h2 id="steps-title" className="max-w-[520px] text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[40px]" style={{ textWrap: "balance" }}>
-            A Simple Process To Get You On The <span className="text-[#d4b471]">Road</span>
+            {t.title}<span className="text-[#d4b471]">{t.accent}</span>
           </h2>
-          <p className="mt-3 max-w-[480px] text-[16px] leading-relaxed text-[#667085] md:text-[17px]">
-            Booking a chauffeur should be easy, not complicated. Here&apos;s how it works.
-          </p>
+          <p className="mt-3 max-w-[480px] text-[16px] leading-relaxed text-[#667085] md:text-[17px]">{t.intro}</p>
 
           <ol className="mt-10 space-y-8">
             {steps.map((s, i) => {
@@ -49,27 +81,25 @@ export default function Steps() {
             })}
           </ol>
 
-          <p className={`${script.className} mt-10 -rotate-3 text-[40px] leading-none text-[#c9a560]`}>It&apos;s that simple!</p>
+          <p className={`${script.className} mt-10 -rotate-3 text-[40px] leading-none text-[#c9a560]`}>{t.simple}</p>
         </div>
 
         <div className="relative min-h-[460px] overflow-hidden rounded-[12px] [clip-path:polygon(14%_0,100%_0,100%_100%,14%_100%,0_50%)] max-lg:[clip-path:none]">
-          <Image src="/assets/images/hero/home-hero-passenger-man.jpg" alt="Passenger in the back seat of a chauffeur-driven car at night" fill sizes="(min-width: 1024px) 620px, 100vw" className="object-cover object-[70%_50%]" />
+          <Image src="/assets/images/hero/home-hero-passenger-man.jpg" alt={t.photoAlt} fill sizes="(min-width: 1024px) 620px, 100vw" className="object-cover object-[70%_50%]" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,25,34,0)_25%,rgba(13,25,34,0.85)_75%)]" />
           <figure className="absolute inset-x-0 bottom-0 p-8 pl-[18%] text-white md:p-10 md:pl-[20%]">
-            <span aria-hidden="true" className="block font-serif text-[64px] leading-none text-[#d4b471]">&ldquo;</span>
-            <blockquote className="-mt-4 text-[17px] leading-relaxed md:text-[19px]">
-              My family group of four scheduled with Marie on the day we arrived in Nice. It was the perfect way to acclimate while doing something fun and
-              interesting.
-            </blockquote>
+            <span aria-hidden="true" className="block font-serif text-[64px] leading-none text-[#d4b471]">{t.open}</span>
+            <blockquote className="-mt-4 text-[17px] leading-relaxed md:text-[19px]">{t.quote}</blockquote>
             <figcaption className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
               <span className="text-[15px] font-semibold">Cyndi K</span>
               <Stars className="[&_svg]:h-4 [&_svg]:w-4" />
+              {t.translated && <span className="text-[13px] text-white/70">{t.translated}</span>}
               {/* The quote's source, so visitors can check it (user, 21 Oct 2026). */}
               <a
                 href={`${tripadvisorListingUrl}#REVIEWS`}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Read Cyndi K's review on Tripadvisor"
+                aria-label={t.read}
                 className="group inline-flex items-center gap-1 text-[13px] font-semibold text-[#d4b471] transition-colors hover:text-white"
               >
                 Tripadvisor

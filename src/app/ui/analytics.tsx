@@ -3,6 +3,50 @@
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { frLink } from "../data/i18n/addresses";
+
+// The words of the cookie button and banner in each language; a French page passes locale="fr". The French strings
+// carry a no-break space before ":".
+const TEXT = {
+  en: {
+    settings: "Cookie settings",
+    preferences: "Cookie preferences",
+    title: "Your cookie choices",
+    intro: "With your permission, MY NICE TOURS (Kokolimo) uses Google Analytics 4 to measure visits and Google Ads to measure advertising and personalise ads. Optional Google tags stay blocked until you agree. Refusing does not prevent you from browsing or requesting a quote.",
+    stored: "Your choice is stored on this browser for 6 months. Change it anytime using Cookie settings.",
+    privacy: "Privacy and cookies",
+    privacyHref: "/legal-privacy#cookies",
+    purpose: "Choose by purpose",
+    essential: "Essential: always active (stores your cookie choice).",
+    statistics: "Statistics: Google Analytics 4",
+    advertising: "Advertising: Google Ads measurement and personalisation",
+    storageError: "Your browser cannot save preferences. Your changes have not been saved. Allow local storage to save your choice.",
+    rejectAll: "Reject all",
+    saveChoices: "Save my choices",
+    customise: "Customise",
+    acceptAll: "Accept all",
+    close: "Close without changing",
+  },
+  fr: {
+    settings: "Paramètres des cookies",
+    preferences: "Préférences de cookies",
+    title: "Vos choix de cookies",
+    intro: "Avec votre accord, MY NICE TOURS (Kokolimo) utilise Google Analytics 4 pour mesurer la fréquentation du site et Google Ads pour mesurer ses publicités et les personnaliser. Les balises Google facultatives restent bloquées tant que vous n'avez pas donné votre accord. Refuser ne vous empêche ni de naviguer ni de demander un devis.",
+    stored: "Votre choix est conservé dans ce navigateur pendant 6 mois. Vous pouvez le modifier à tout moment avec le bouton Paramètres des cookies.",
+    privacy: "Confidentialité et cookies",
+    privacyHref: `${frLink("/legal-privacy")}#cookies`,
+    purpose: "Choisir par finalité",
+    essential: "Essentiels : toujours actifs (ils conservent votre choix de cookies).",
+    statistics: "Statistiques : Google Analytics 4",
+    advertising: "Publicité : mesure et personnalisation Google Ads",
+    storageError: "Votre navigateur ne peut pas enregistrer vos préférences, vos changements n'ont donc pas été enregistrés. Autorisez le stockage local pour enregistrer votre choix.",
+    rejectAll: "Tout refuser",
+    saveChoices: "Enregistrer mes choix",
+    customise: "Personnaliser",
+    acceptAll: "Tout accepter",
+    close: "Fermer sans modifier",
+  },
+};
 
 const KEY = "kokolimo-consent-v1";
 const MAX_AGE = 180 * 24 * 60 * 60 * 1000;
@@ -28,7 +72,8 @@ function clearGoogleCookies() {
   }
 }
 
-export default function Analytics() {
+export default function Analytics({ locale }: { locale?: "fr" }) {
+  const t = TEXT[locale ?? "en"];
   const [consent, setConsent] = useState<Consent | null>(null);
   const [open, setOpen] = useState(false);
   const [customize, setCustomize] = useState(false);
@@ -98,24 +143,24 @@ export default function Analytics() {
       script.src = ${JSON.stringify(gtmId ? `https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(gtmId)}` : `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(tagId || "")}`)};
       document.head.appendChild(script);
     `}</Script>}
-    <button type="button" onClick={() => { setChoices(consent || denied); setOpen(true); setCustomize(true); }} aria-label="Cookie settings" title="Cookie settings" className="fixed bottom-3 left-3 z-[90] grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-[#0d1922] shadow-md transition-colors hover:bg-[#f6ecd6]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 3 3 0 0 1-3.5-3A3 3 0 0 1 14 5.5 3 3 0 0 1 12 3z" /><circle cx="8.5" cy="11" r=".8" fill="currentColor" /><circle cx="12" cy="15.5" r=".8" fill="currentColor" /><circle cx="15.5" cy="13" r=".8" fill="currentColor" /></svg><span className="sr-only">Cookie settings</span></button>
-    {open && <section aria-label="Cookie preferences" className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-h-[85dvh] max-w-3xl overflow-y-auto overscroll-contain rounded-card border border-[#D8C7AD] bg-[#FFFCF7] p-5 text-[#29231B] shadow-[0_8px_50px_rgba(0,0,0,0.25)] sm:p-6">
-      <h2 className="text-xl font-bold">Your cookie choices</h2>
-      <p className="mt-2 text-sm leading-relaxed">With your permission, MY NICE TOURS (Kokolimo) uses Google Analytics 4 to measure visits and Google Ads to measure advertising and personalise ads. Optional Google tags stay blocked until you agree. Refusing does not prevent you from browsing or requesting a quote.</p>
-      <p className="mt-2 text-sm">Your choice is stored on this browser for 6 months. Change it anytime using Cookie settings. <Link className="underline" href="/legal-privacy#cookies">Privacy and cookies</Link></p>
+    <button type="button" onClick={() => { setChoices(consent || denied); setOpen(true); setCustomize(true); }} aria-label={t.settings} title={t.settings} className="fixed bottom-3 left-3 z-[90] grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-[#0d1922] shadow-md transition-colors hover:bg-[#f6ecd6]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 3 3 0 0 1-3.5-3A3 3 0 0 1 14 5.5 3 3 0 0 1 12 3z" /><circle cx="8.5" cy="11" r=".8" fill="currentColor" /><circle cx="12" cy="15.5" r=".8" fill="currentColor" /><circle cx="15.5" cy="13" r=".8" fill="currentColor" /></svg><span className="sr-only">{t.settings}</span></button>
+    {open && <section aria-label={t.preferences} className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-h-[85dvh] max-w-3xl overflow-y-auto overscroll-contain rounded-card border border-[#D8C7AD] bg-[#FFFCF7] p-5 text-[#29231B] shadow-[0_8px_50px_rgba(0,0,0,0.25)] sm:p-6">
+      <h2 className="text-xl font-bold">{t.title}</h2>
+      <p className="mt-2 text-sm leading-relaxed">{t.intro}</p>
+      <p className="mt-2 text-sm">{t.stored} <Link className="underline" href={t.privacyHref}>{t.privacy}</Link></p>
       {customize && <fieldset className="my-4 space-y-3 rounded-card border border-[#D8C7AD] p-4">
-        <legend className="px-2 font-semibold">Choose by purpose</legend>
-        <p className="text-sm">Essential: always active (stores your cookie choice).</p>
-        <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.analytics} onChange={e => setChoices({ ...choices, analytics: e.target.checked })} className="h-5 w-5" />Statistics: Google Analytics 4</label>
-        <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.advertising} onChange={e => setChoices({ ...choices, advertising: e.target.checked })} className="h-5 w-5" />Advertising: Google Ads measurement and personalisation</label>
+        <legend className="px-2 font-semibold">{t.purpose}</legend>
+        <p className="text-sm">{t.essential}</p>
+        <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.analytics} onChange={e => setChoices({ ...choices, analytics: e.target.checked })} className="h-5 w-5" />{t.statistics}</label>
+        <label className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={choices.advertising} onChange={e => setChoices({ ...choices, advertising: e.target.checked })} className="h-5 w-5" />{t.advertising}</label>
       </fieldset>}
-      {storageError && <p role="alert" className="mt-3 text-sm">Your browser cannot save preferences. Your changes have not been saved. Allow local storage to save your choice.</p>}
+      {storageError && <p role="alert" className="mt-3 text-sm">{t.storageError}</p>}
       <div className="mt-4 grid gap-2 sm:grid-cols-3">
-        <button type="button" className={button} onClick={() => save(denied)}>Reject all</button>
-        <button type="button" className={button} onClick={() => customize ? save(choices) : setCustomize(true)}>{customize ? "Save my choices" : "Customise"}</button>
-        <button type="button" className={button} onClick={() => save({ analytics: true, advertising: true })}>Accept all</button>
+        <button type="button" className={button} onClick={() => save(denied)}>{t.rejectAll}</button>
+        <button type="button" className={button} onClick={() => customize ? save(choices) : setCustomize(true)}>{customize ? t.saveChoices : t.customise}</button>
+        <button type="button" className={button} onClick={() => save({ analytics: true, advertising: true })}>{t.acceptAll}</button>
       </div>
-      {consent && <button type="button" className="mt-2 min-h-11 px-2 text-sm underline" onClick={() => setOpen(false)}>Close without changing</button>}
+      {consent && <button type="button" className="mt-2 min-h-11 px-2 text-sm underline" onClick={() => setOpen(false)}>{t.close}</button>}
     </section>}
   </>;
 }

@@ -32,27 +32,53 @@ function TripadvisorMark() {
 
 const tile = "flex h-full flex-col items-center justify-center gap-2 rounded-[10px] border border-[#eaecf0] bg-white px-6 py-7 text-center transition-shadow duration-200 hover:shadow-[0_12px_32px_rgba(16,24,40,0.08)]";
 
-export default async function Trust() {
+// The row's words in each language; the French home (/fr) passes locale="fr" (decimal comma, "avis").
+const TEXT = {
+  en: {
+    title: "Chosen by Travelers on the ",
+    accent: "French Riviera",
+    intro: "Our clients rate every ride. Read their reviews on Google and Tripadvisor.",
+    score: (rating: number) => rating.toFixed(1),
+    label: (score: string, name: string, count?: number | null) => `Rated ${score} out of 5 on ${name}${count ? ` from ${count} reviews` : ""}`,
+    count: (count?: number | null) => (count ? ` · ${count.toLocaleString("en-GB")} reviews` : " reviews"),
+    transfers: "1,200+",
+    transfersLabel: "transfers completed",
+  },
+  fr: {
+    title: "Choisi par les voyageurs sur la ",
+    accent: "Côte d'Azur",
+    intro: "Nos clients notent chaque trajet. Lisez leurs avis sur Google et Tripadvisor.",
+    score: (rating: number) => rating.toFixed(1).replace(".", ","),
+    label: (score: string, name: string, count?: number | null) => `Noté ${score} sur 5 sur ${name}${count ? `, ${count} avis` : ""}`,
+    count: (count?: number | null) => (count ? ` · ${count.toLocaleString("fr-FR")} avis` : " avis"),
+    transfers: "1 200+",
+    transfersLabel: "transferts effectués",
+  },
+};
+
+export default async function Trust({ locale }: { locale?: "fr" }) {
+  const t = TEXT[locale ?? "en"];
   const ratings = await getRatings();
   return (
     <section aria-labelledby="trust-title" data-nav-tone="light" className="bg-[#f5f6f8] text-[#101828]">
       <div className="mx-auto max-w-[1240px] px-4 py-16 text-center md:px-6 md:py-20">
         <h2 id="trust-title" className="text-[28px] font-bold leading-[1.15] tracking-[-0.02em] md:text-[36px]">
-          Chosen by Travelers on the <span className="text-[#d4b471]">French Riviera</span>
+          {t.title}<span className="text-[#d4b471]">{t.accent}</span>
         </h2>
-        <p className="mx-auto mt-3 max-w-[560px] text-[16px] text-[#667085]">Our clients rate every ride. Read their reviews on Google and Tripadvisor.</p>
+        <p className="mx-auto mt-3 max-w-[560px] text-[16px] text-[#667085]">{t.intro}</p>
         <ul className="mx-auto mt-10 grid max-w-[920px] gap-4 sm:grid-cols-3">
           {ratings.map(r => {
             const name = r.source === "google" ? "Google" : "Tripadvisor";
+            const score = t.score(r.rating);
             return (
               <li key={r.source}>
-                <a href={r.url} target="_blank" rel="noopener noreferrer" className={tile} aria-label={`Rated ${r.rating.toFixed(1)} out of 5 on ${name}${r.count ? ` from ${r.count} reviews` : ""}`}>
+                <a href={r.url} target="_blank" rel="noopener noreferrer" className={tile} aria-label={t.label(score, name, r.count)}>
                   {r.source === "google" ? <GoogleMark /> : <TripadvisorMark />}
-                  <RollingNumber value={r.rating.toFixed(1)} className="text-[34px] font-bold leading-none tracking-[-0.02em]" />
+                  <RollingNumber value={score} className="text-[34px] font-bold leading-none tracking-[-0.02em]" />
                   <Stars className="[&_svg]:h-4 [&_svg]:w-4" />
                   <span className="text-[14px] text-[#667085]">
                     {name}
-                    {r.count ? ` · ${r.count.toLocaleString("en-GB")} reviews` : " reviews"}
+                    {t.count(r.count)}
                   </span>
                 </a>
               </li>
@@ -60,8 +86,8 @@ export default async function Trust() {
           })}
           <li>
             <div className={tile}>
-              <RollingNumber value="1,200+" className="text-[34px] font-bold leading-none tracking-[-0.02em] text-[#101828]" />
-              <span className="text-[14px] text-[#667085]">transfers completed</span>
+              <RollingNumber value={t.transfers} className="text-[34px] font-bold leading-none tracking-[-0.02em] text-[#101828]" />
+              <span className="text-[14px] text-[#667085]">{t.transfersLabel}</span>
             </div>
           </li>
         </ul>

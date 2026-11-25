@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 
+import { altFor } from "./image-alts";
 import { IMAGE_SIZE } from "./image-sizes";
 import { businessName, siteUrl } from "./site-config";
+import { englishTwin, frenchTwin } from "./i18n/addresses";
 
-// The picture a page shares when it has no landscape picture of its own.
+// The picture a page shares when it has no landscape picture of its own; its alt text, in the page's language, is in
+// data/image-alts.ts.
 const SHARE_IMAGE = "/assets/images/cars/class-v/class-v-third.webp";
-const SHARE_IMAGE_ALT = "A black Mercedes V-Class in front of the Casino de Monte-Carlo at night";
 
 type PageMetadataInput = {
   title: string;
@@ -19,7 +21,8 @@ type PageMetadataInput = {
   allowPortrait?: boolean;
   /** The page's language when it is not English. */
   locale?: "fr";
-  /** The same page in each language, as paths by hreflang code ("en", "fr", "x-default"), for the hreflang links. */
+  /** The same page in each language, as paths by hreflang code ("en", "fr", "x-default"), for the hreflang links.
+   *  Without it, a page whose twin is live in data/i18n/addresses.ts gets en, fr and x-default (the English page). */
   languages?: Record<string, string>;
 };
 
@@ -42,19 +45,26 @@ export function pageMetadata({
   const size = image ? IMAGE_SIZE[image] : undefined;
   const ownPicture = Boolean(image && imageAlt && size && (allowPortrait || size[0] >= size[1]));
   const src = ownPicture && image ? image : SHARE_IMAGE;
-  const alt = ownPicture && imageAlt ? imageAlt : SHARE_IMAGE_ALT;
+  const alt = ownPicture && imageAlt ? imageAlt : altFor(SHARE_IMAGE, locale);
   const [width, height] = IMAGE_SIZE[src] ?? [];
   const picture = { url: `${siteUrl}${src}`, alt, ...(width && height ? { width, height } : {}) };
   const language = locale ?? "en";
-  const otherLocales = languages
-    ? Object.keys(languages).filter(code => code !== "x-default" && code !== language).map(code => OG_LOCALE[code])
+  const bare = path.split("?")[0] || "/";
+  const found = path.includes("?") ? undefined : language === "fr" ? englishTwin(bare) : frenchTwin(bare);
+  // The English home's address is the bare domain (its path is ""), as in its canonical.
+  const twin = found === "/" ? "" : found;
+  const versions =
+    languages ??
+    (twin !== undefined ? (language === "fr" ? { en: twin, fr: path, "x-default": twin } : { en: path, fr: twin, "x-default": path }) : undefined);
+  const otherLocales = versions
+    ? Object.keys(versions).filter(code => code !== "x-default" && code !== language).map(code => OG_LOCALE[code])
     : [];
 
   return {
     title,
     description,
-    alternates: languages
-      ? { canonical: url, languages: Object.fromEntries(Object.entries(languages).map(([code, href]) => [code, `${siteUrl}${href}`])) }
+    alternates: versions
+      ? { canonical: url, languages: Object.fromEntries(Object.entries(versions).map(([code, href]) => [code, `${siteUrl}${href}`])) }
       : { canonical: url },
     openGraph: {
       type: "website",

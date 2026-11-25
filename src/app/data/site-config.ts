@@ -9,6 +9,8 @@ export const whatsappUrl = "https://wa.me/33771698142";
 export const legalPostalCode = "06000";
 export const serviceAreaText =
   "Nice, Cannes, Monaco, Saint-Tropez, the French Riviera, and selected French Alpine destinations during the winter season.";
+export const serviceAreaTextFr =
+  "Nice, Cannes, Monaco, Saint-Tropez, la Côte d'Azur et, l'hiver, une sélection de stations des Alpes françaises.";
 export const socialPreviewImage = `${siteUrl}/assets/hero-section-image.webp`;
 /** The day the facts on /ai-instructions were last checked against the pages that state them. */
 export const factsCheckedOn = "2026-11-19";

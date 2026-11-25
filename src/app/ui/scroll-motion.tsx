@@ -65,12 +65,15 @@ export default function ScrollMotion() {
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-      const link = (e.target as Element | null)?.closest?.('a[href="/#book"], a[href="#book"]');
+      const link = (e.target as Element | null)?.closest?.('a[href="/#book"], a[href="#book"], a[href="/fr#book"]');
       if (!link || link.closest("#book")) return;
       e.preventDefault();
-      if (window.location.pathname === "/" && focusBook()) return;
+      // The French home (/fr) has its own booking bar; "#book" alone stays with the current home.
+      const href = link.getAttribute("href");
+      const home = href === "/fr#book" || (href === "#book" && window.location.pathname === "/fr") ? "/fr" : "/";
+      if (window.location.pathname === home && focusBook()) return;
       focusBookOnArrival();
-      router.push("/");
+      router.push(home);
     };
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);

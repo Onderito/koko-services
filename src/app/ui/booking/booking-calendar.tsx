@@ -7,7 +7,7 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker, type DateRange, type DayButtonProps, type DayProps } from "react-day-picker";
-import { enGB } from "react-day-picker/locale";
+import { enGB, fr } from "react-day-picker/locale";
 import s from "./booking-calendar.module.css";
 
 function DayButton({ day: _day, modifiers, className = "", ...props }: DayButtonProps) {
@@ -76,13 +76,14 @@ const components = {
     orientation === "left" ? <ChevronLeft size={18} strokeWidth={2} aria-hidden="true" /> : <ChevronRight size={18} strokeWidth={2} aria-hidden="true" />,
 };
 
-type Common = { today: Date; month: Date; onMonthChange: (m: Date) => void };
+/** `language` "fr" shows the months and weekdays in French. */
+type Common = { today: Date; month: Date; onMonthChange: (m: Date) => void; language?: string };
 
 export default function BookingCalendar(
   props: Common & ({ mode: "single"; selected?: Date; onSelect: (d: Date | undefined) => void } | { mode: "range"; selected?: DateRange; onSelect: (r: DateRange | undefined) => void }),
 ) {
   const shared = {
-    locale: enGB,
+    locale: props.language === "fr" ? fr : enGB,
     weekStartsOn: 1 as const,
     showOutsideDays: true,
     fixedWeeks: true,

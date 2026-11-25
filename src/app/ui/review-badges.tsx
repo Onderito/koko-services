@@ -55,15 +55,30 @@ function Marks({ value, kind }: { value: number; kind: "star" | "bubble" }) {
   );
 }
 
-function Badge({ r, tone }: { r: Rating; tone: "dark" | "light" }) {
+// The badge's words in each language (`locale` "fr" on the French pages: decimal comma, "avis").
+const WORDS = {
+  en: {
+    score: (rating: number) => rating.toFixed(1),
+    label: (score: string, name: string, count?: number | null) => `Rated ${score} out of 5 on ${name}${count ? ` from ${count} reviews` : ""}`,
+    count: (count: number) => ` · ${count.toLocaleString("en-GB")} reviews`,
+  },
+  fr: {
+    score: (rating: number) => rating.toFixed(1).replace(".", ","),
+    label: (score: string, name: string, count?: number | null) => `Noté ${score} sur 5 sur ${name}${count ? `, ${count} avis` : ""}`,
+    count: (count: number) => ` · ${count.toLocaleString("fr-FR")} avis`,
+  },
+};
+
+function Badge({ r, tone, locale }: { r: Rating; tone: "dark" | "light"; locale?: "fr" }) {
+  const w = WORDS[locale ?? "en"];
   const name = r.source === "google" ? "Google" : "Tripadvisor";
-  const score = r.rating.toFixed(1);
+  const score = w.score(r.rating);
   return (
     <a
       href={r.url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Rated ${score} out of 5 on ${name}${r.count ? ` from ${r.count} reviews` : ""}`}
+      aria-label={w.label(score, name, r.count)}
       className={`inline-flex h-6 items-center gap-2 text-[14px] leading-none transition-colors ${tone === "dark" ? "text-white/80 hover:text-white" : "text-[#5b6472] hover:text-[#0f1115]"}`}
     >
       {r.source === "google" ? <GoogleLogo /> : <TripadvisorLogo />}
@@ -71,19 +86,19 @@ function Badge({ r, tone }: { r: Rating; tone: "dark" | "light" }) {
       <Marks value={r.rating} kind={r.source === "google" ? "star" : "bubble"} />
       <span>
         <span className={`font-semibold ${tone === "dark" ? "text-white" : "text-[#0f1115]"}`}>{score}</span>/5
-        {r.count ? ` · ${r.count.toLocaleString("en-GB")} reviews` : ""}
+        {r.count ? w.count(r.count) : ""}
       </span>
     </a>
   );
 }
 
-export default async function ReviewBadges({ tone = "dark", className = "" }: { tone?: "dark" | "light"; className?: string }) {
+export default async function ReviewBadges({ tone = "dark", className = "", locale }: { tone?: "dark" | "light"; className?: string; locale?: "fr" }) {
   const ratings = await getRatings();
   return (
     <ul className={`flex flex-wrap items-center gap-x-6 gap-y-2 ${className}`}>
       {ratings.map(r => (
         <li key={r.source}>
-          <Badge r={r} tone={tone} />
+          <Badge r={r} tone={tone} locale={locale} />
         </li>
       ))}
     </ul>
