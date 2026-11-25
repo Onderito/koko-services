@@ -35,6 +35,7 @@ import ArrowButton from "../ui/arrow-button";
 import FaqList from "../ui/faq-list";
 import { cityForPage, RoutePrices } from "../ui/destination-prices";
 import { servicePrices } from "../ui/service-prices";
+import BookingReasons from "../ui/booking-reasons";
 import { altFor } from "../data/image-alts";
 import { Accent } from "../ui/kit";
 
@@ -407,6 +408,19 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
           <div className="mt-8">
             <RoutePrices cityId={priceCity.id} path={config.path} />
           </div>
+        </AntiSection>
+      ),
+    });
+  }
+
+  // Four checkable reasons to book (ratings, company, languages, terms), on the pages that ask for them only, after the
+  // prices: every other page renders as before.
+  if (config.bookingReasons) {
+    blocks.push({
+      key: "reasons",
+      render: tone => (
+        <AntiSection tone={tone} labelledBy="service-reasons-title">
+          <BookingReasons />
         </AntiSection>
       ),
     });

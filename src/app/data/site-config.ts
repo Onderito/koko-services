@@ -15,3 +15,10 @@ export const factsCheckedOn = "2026-11-19";
 // The Google Business Profile's map pin (listing read on 3 Oct 2026, CID 0x308935d595819774): used by the
 // LocalBusiness data and the home page's geo tags, so the site and the listing give Maps the same location.
 export const businessGeo = { latitude: 43.7000332, longitude: 7.2521727 };
+// The company that runs Kokolimo, as on the legal page; the register date is its entry in the French company register.
+export const companyLegalName = "MY NICE TOURS";
+export const companyAddress = "33 rue de Châteauneuf, 06000 Nice";
+export const companyRcs = "RCS Nice 838 777 787";
+export const companyRegisteredOn = "2018-03-22";
+/** The languages the chauffeurs speak, as on the home page. */
+export const chauffeurLanguages = ["English", "French", "Turkish", "Russian"];

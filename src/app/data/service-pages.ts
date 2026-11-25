@@ -93,6 +93,8 @@ export type ServicePageConfig = {
   relatedGuidesDescription?: string;
   /** A short readable text after the introduction (a few paragraphs); absent on the service pages. */
   story?: { title: string; paragraphs: string[] };
+  /** Shows the "Why travellers book Kokolimo" cards (ratings, company, languages, terms); absent elsewhere. */
+  bookingReasons?: boolean;
 };
 
 export const serviceMenuLinks: ServiceCardLink[] = [
@@ -672,6 +674,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    bookingReasons: true,
     story: {
       title: "How a Nice Airport transfer works",
       paragraphs: [
@@ -814,6 +817,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    bookingReasons: true,
     story: {
       title: "How a long-distance transfer works",
       paragraphs: [
@@ -928,6 +932,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    bookingReasons: true,
     story: {
       title: "How the Nice Airport to Monaco transfer works",
       paragraphs: [
@@ -1049,6 +1054,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    bookingReasons: true,
     story: {
       title: "How the Nice Airport to Cannes transfer works",
       paragraphs: [
@@ -1165,6 +1171,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    bookingReasons: true,
     story: {
       title: "How the Nice Airport to Saint-Tropez transfer works",
       paragraphs: [
@@ -1379,6 +1386,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    bookingReasons: true,
     story: {
       title: "How the Nice Airport to Cap-Ferrat transfer works",
       paragraphs: [
@@ -1489,6 +1497,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
         theme: "light",
       },
     ],
+    bookingReasons: true,
     story: {
       title: "How the Nice Airport to Èze transfer works",
       paragraphs: [
