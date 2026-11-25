@@ -6,7 +6,7 @@ import { siteUrl } from "@/app/data/site-config";
 import { yachtTransferPages } from "@/app/data/service-pages";
 import ServicePageTemplate from "../../service-page-template";
 
-import BreadcrumbSchema from "@/app/ui/schema/breadcrumb-schema";
+import BreadcrumbJsonLd from "@/app/ui/schema/breadcrumb-json-ld";
 
 type YachtTransferPageProps = {
   params: Promise<{
@@ -64,7 +64,7 @@ export default async function YachtTransferPage({
 
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbs} />
+      <BreadcrumbJsonLd items={breadcrumbs} />
       <ServicePageTemplate config={config} />
     </>
   );

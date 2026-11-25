@@ -2,8 +2,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { pageMetadata } from "@/app/data/page-metadata";
+import { siteUrl } from "@/app/data/site-config";
 import { transferPages } from "@/app/data/service-pages";
 import ServicePageTemplate from "../../service-page-template";
+import BreadcrumbJsonLd from "@/app/ui/schema/breadcrumb-json-ld";
 
 type TransferDetailPageProps = {
   params: Promise<{
@@ -44,5 +46,16 @@ export default async function TransferDetailPage({
     notFound();
   }
 
-  return <ServicePageTemplate config={config} />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: siteUrl },
+          { name: "Transfers", url: `${siteUrl}/our-services/transfers` },
+          { name: config.serviceLabel, url: `${siteUrl}${config.path}` },
+        ]}
+      />
+      <ServicePageTemplate config={config} />
+    </>
+  );
 }

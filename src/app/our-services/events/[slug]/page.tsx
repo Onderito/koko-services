@@ -6,7 +6,7 @@ import { siteUrl } from "@/app/data/site-config";
 import { eventPages } from "@/app/data/service-pages";
 import ServicePageTemplate from "../../service-page-template";
 
-import BreadcrumbSchema from "@/app/ui/schema/breadcrumb-schema";
+import BreadcrumbJsonLd from "@/app/ui/schema/breadcrumb-json-ld";
 
 type EventPageProps = {
   params: Promise<{
@@ -62,7 +62,7 @@ export default async function EventPage({ params }: EventPageProps) {
 
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbs} />
+      <BreadcrumbJsonLd items={breadcrumbs} />
       <ServicePageTemplate config={config} />
     </>
   );
