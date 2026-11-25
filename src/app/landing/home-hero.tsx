@@ -18,11 +18,13 @@ import ReviewBadges from "../ui/review-badges";
 import { archivo } from "../fonts";
 import { frLink } from "../data/i18n/addresses";
 
-// The hero's words in each language; the French home (/fr) passes locale="fr". English is the home's own text.
+// The hero's words in each language; the French home (/fr) passes locale="fr". English is the home's own text. The H1
+// names the service, the region, then the three towns in gold; no-break spaces keep "French Riviera" and "Côte d'Azur :"
+// on one line.
 const TEXT = {
   en: {
     alt: "Black 2026 Mercedes V-Class chauffeur van on a coastal road above the Mediterranean at sunset, Monaco lit up in the distance",
-    title: "Luxury Private Driver in ",
+    title: "Luxury Private Driver on the French Riviera: ",
     accent: "Nice, Cannes and Monaco",
     description:
       "Private chauffeur service for airport transfers, business travel, and tailored journeys across Nice, Cannes, Monaco, and Saint-Tropez, with seasonal winter coverage in Megève, Courchevel, and Chamonix.",
@@ -32,7 +34,7 @@ const TEXT = {
   },
   fr: {
     alt: "Van Mercedes Classe V noir de 2026 avec chauffeur sur une route côtière au-dessus de la Méditerranée au coucher du soleil, Monaco illuminé au loin",
-    title: "Chauffeur privé de luxe à ",
+    title: "Chauffeur privé de luxe sur la Côte d'Azur : ",
     accent: "Nice, Cannes et Monaco",
     description:
       "Transferts depuis l'aéroport de Nice, déplacements d'affaires et trajets sur mesure à Nice, Cannes, Monaco et Saint-Tropez, et l'hiver à Megève, Courchevel et Chamonix.",
@@ -64,7 +66,7 @@ export default function HomeHero({ locale }: { locale?: "fr" }) {
 
       <div className="mx-auto flex max-w-[1240px] flex-col justify-end px-4 pb-10 pt-[calc(var(--header-h)+3rem)] md:px-6 md:pb-12 lg:min-h-[760px] lg:pt-[calc(var(--header-h)+3.5rem)]">
         <h1 className="max-w-[760px] text-[40px] font-bold leading-[1.04] tracking-[-0.025em] sm:text-[54px] lg:text-[64px]" style={{ textWrap: "balance" }}>
-          {t.title}<span className="text-[#d4b471]">{t.accent}</span>
+          {t.title}<span className="text-[#d4b471] lg:block">{t.accent}</span>
         </h1>
         <p className="mt-5 max-w-[640px] text-[17px] leading-relaxed text-white/80 md:text-[18px]">
           {t.description}
