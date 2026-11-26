@@ -35,7 +35,7 @@ const tile = "flex h-full flex-col items-center justify-center gap-2 rounded-[10
 // The row's words in each language; the French home (/fr) passes locale="fr" (decimal comma, "avis").
 const TEXT = {
   en: {
-    title: "Chosen by Travelers on the ",
+    title: "How Travelers Rate Us on the ",
     accent: "French Riviera",
     intro: "Our clients rate every ride. Read their reviews on Google and Tripadvisor.",
     score: (rating: number) => rating.toFixed(1),

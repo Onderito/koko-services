@@ -30,14 +30,17 @@ const CARD_PHOTO: Record<string, string> = {
 
 const carFr = (name: string) => name.replace(/ ([A-Z])-Class$/, " Classe $1");
 
+// The French banner title of a destination worded its own way: the words before the place, then the place.
+const BANNER_FR: Record<string, [string, string]> = { nice: ["De l'aéroport de Nice à votre adresse dans ", "Nice"] };
+
 const TEXT = {
   en: {
     title: "Private driver prices from Nice Airport",
     intro: "Compare indicative transfer, hourly and eight-hour chauffeur rates by vehicle before requesting your confirmed quote.",
     bannerAlt: "A black Mercedes S-Class on the Promenade des Anglais in Nice at dusk",
     eyebrow: "Indicative Rates",
-    route: "Nice Airport to ",
-    text: "These guide prices help clients understand the order of magnitude before requesting a tailored quote. Final pricing can adapt to timing, exact route, luggage, and service conditions.",
+    banner: (city: (typeof cities)[number]): [string, string] => ["Nice Airport to ", city.displayName],
+    text: "These guide prices help clients understand the order of magnitude before requesting a tailored quote. The final price can vary with the timing, the exact route, your luggage and the service conditions.",
     group: "Destination",
     chip: (city: (typeof cities)[number]) => city.name,
     heading: (city: (typeof cities)[number]) => city.displayName,
@@ -55,11 +58,11 @@ const TEXT = {
     note: "Guide prices are shown for clarity. For events, late-night timing, custom itineraries, or multi-stop journeys, we prepare a tailored quote adapted to the exact service level required.",
   },
   fr: {
-    title: "Prix d'un chauffeur privé depuis l'aéroport de Nice",
+    title: "Le prix de votre chauffeur privé depuis l'aéroport de Nice",
     intro: "Comparez nos prix indicatifs par véhicule, en transfert, à l'heure et à la journée de huit heures, avant de demander votre devis confirmé.",
     bannerAlt: "Une Mercedes Classe S noire sur la promenade des Anglais à Nice, au crépuscule",
     eyebrow: "Tarifs indicatifs",
-    route: "De l'aéroport de Nice à ",
+    banner: (city: (typeof cities)[number]): [string, string] => BANNER_FR[city.id] ?? ["De l'aéroport de Nice à ", cityName(city, "fr")],
     text: "Ces prix indicatifs donnent un ordre de grandeur avant votre devis personnalisé. Le prix final peut varier selon l'horaire, l'itinéraire exact, les bagages et les conditions du service.",
     group: "Destination",
     chip: (city: (typeof cities)[number]) => cityName(city, "fr"),
@@ -85,6 +88,7 @@ export default function Pricing({ locale }: { locale?: "fr" }) {
   const t = TEXT[locale ?? "en"];
   const [activeCity, setActiveCity] = useState(cities[0]);
   const chips = useSlidingPill<HTMLDivElement>(activeCity.id, "z-0 rounded-full bg-[#e8ba64] shadow-[0_6px_18px_rgba(232,186,100,0.25)]");
+  const [bannerRoute, bannerPlace] = t.banner(activeCity);
 
   return (
     <section aria-labelledby="pricing-title" data-nav-tone="light" className="bg-white text-[#101828]">
@@ -105,7 +109,7 @@ export default function Pricing({ locale }: { locale?: "fr" }) {
           <div className="relative max-w-[760px] px-6 pb-8 pt-[196px] sm:pt-[256px] md:px-12 md:py-12">
             <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#d4b471]">{t.eyebrow}</p>
             <h3 className="mt-3 text-[28px] font-bold leading-[1.1] tracking-[-0.02em] md:text-[40px]">
-              {t.route}<span className="block whitespace-nowrap text-[#d4b471]">{t.heading(activeCity)}</span>
+              {bannerRoute}<span className="block whitespace-nowrap text-[#d4b471]">{bannerPlace}</span>
             </h3>
             <p className="mt-4 max-w-[540px] text-[15px] leading-relaxed text-white/75 md:text-[16px]">{t.text}</p>
             <div ref={chips.listRef} className="relative isolate mt-7 flex flex-wrap gap-2" role="group" aria-label={t.group}>

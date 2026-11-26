@@ -27,20 +27,20 @@ const TEXT = {
     title: "Luxury Private Driver on the French Riviera: ",
     accent: "Nice, Cannes and Monaco",
     description:
-      "Private chauffeur service for airport transfers, business travel, and tailored journeys across Nice, Cannes, Monaco, and Saint-Tropez, with seasonal winter coverage in Megève, Courchevel, and Chamonix.",
+      "We provide a private chauffeur service for airport transfers, business travel, and tailored journeys across Nice, Cannes, Monaco, and Saint-Tropez. In winter, we also cover Megève, Courchevel, and Chamonix.",
     reserve: "Reserve my driver",
     reserveHref: "/contact-me",
-    promises: "Fixed fare before booking · Flight tracking and meet & greet · One hour of waiting included",
+    promises: "Fixed price before you book · Flight tracking and meet & greet · One hour of waiting included",
   },
   fr: {
     alt: "Van Mercedes Classe V noir de 2026 avec chauffeur sur une route côtière au-dessus de la Méditerranée au coucher du soleil, Monaco illuminé au loin",
     title: "Chauffeur privé de luxe sur la Côte d'Azur : ",
     accent: "Nice, Cannes et Monaco",
     description:
-      "Transferts depuis l'aéroport de Nice, déplacements d'affaires et trajets sur mesure à Nice, Cannes, Monaco et Saint-Tropez, et l'hiver à Megève, Courchevel et Chamonix.",
+      "Nous assurons vos transferts depuis l'aéroport de Nice, vos déplacements d'affaires et vos trajets sur mesure à Nice, Cannes, Monaco et Saint-Tropez. L'hiver, nous couvrons aussi Megève, Courchevel et Chamonix.",
     reserve: "Réserver mon chauffeur",
     reserveHref: frLink("/contact-me"),
-    promises: "Prix fixe avant la réservation · Suivi du vol et accueil avec pancarte · Une heure d'attente incluse",
+    promises: "Prix fixe annoncé avant la réservation · Suivi de votre vol et accueil avec pancarte · Une heure d'attente incluse",
   },
 };
 

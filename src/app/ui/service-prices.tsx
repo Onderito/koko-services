@@ -166,7 +166,7 @@ function hourlyPricesFr(service: string) {
 function transferPricesFr(service: string, to: string[]) {
   if (to.length === 1) {
     const id = to[0];
-    const line = `À partir de ${eurFr(E_CLASS.prices[id].transfer)} l'aller simple depuis l'aéroport de Nice en ${carFr(E_CLASS.name)} (${OTHERS.map(v => `${shortFr(v.name)} ${eurFr(v.prices[id].transfer)}`).join(", ")}).`;
+    const line = `L'aller simple depuis l'aéroport de Nice coûte à partir de ${eurFr(E_CLASS.prices[id].transfer)} en ${carFr(E_CLASS.name)}, ${listFr(OTHERS.map(v => `${eurFr(v.prices[id].transfer)} en ${shortFr(v.name)}`))}.`;
     const offers = vehicles.map(v => ({
       "@type": "Offer",
       name: `${service}, ${carFr(v.name)}, aller simple depuis l'aéroport de Nice`,
@@ -176,8 +176,7 @@ function transferPricesFr(service: string, to: string[]) {
     }));
     return { line, offers };
   }
-  const lowest = Math.min(...to.map(id => E_CLASS.prices[id].transfer));
-  const line = `À partir de ${eurFr(lowest)} l'aller simple depuis l'aéroport de Nice en ${carFr(E_CLASS.name)} : ${listFr(to.map(id => `${TOWN[id]} ${eurFr(E_CLASS.prices[id].transfer)}`))}.`;
+  const line = `En ${carFr(E_CLASS.name)}, l'aller simple depuis l'aéroport de Nice coûte à partir de ${listFr(to.map(id => `${eurFr(E_CLASS.prices[id].transfer)} pour ${TOWN[id]}`))}.`;
   const offers = to.map(id => ({
     "@type": "Offer",
     name: `Aéroport de Nice à ${TOWN[id]}, ${carFr(E_CLASS.name)}, aller simple`,
@@ -192,9 +191,11 @@ function routeFromPricesFr(service: string, route: string) {
   const prices = routeStartingPrices[route].prices;
   const name = (id?: string) => vehicles.find(v => v.id === id)?.name;
   const [first, ...rest] = prices;
-  const others = rest.map(p => `${shortFr(name(p.vehicleId) ?? "")} ${eurFr(p.transfer)}`).join(", ");
   const firstCar = name(first.vehicleId);
-  const line = `À partir de ${eurFr(first.transfer)} l'aller simple depuis l'aéroport de Nice${firstCar ? ` en ${carFr(firstCar)}` : ""}${others ? ` (${others})` : ""}.`;
+  // Prices that name their car: each amount with its car. A route priced without a car: its one starting price.
+  const line = firstCar
+    ? `L'aller simple depuis l'aéroport de Nice coûte à partir de ${listFr([`${eurFr(first.transfer)} en ${carFr(firstCar)}`, ...rest.map(p => `de ${eurFr(p.transfer)} en ${shortFr(name(p.vehicleId) ?? "")}`)])}.`
+    : `À partir de ${eurFr(first.transfer)} l'aller simple depuis l'aéroport de Nice.`;
   const offers = prices.map(p => ({
     "@type": "Offer",
     name: `${service}${p.vehicleId ? `, ${carFr(name(p.vehicleId) ?? "")}` : ""}, aller simple`,

@@ -43,7 +43,7 @@ const yachtTransferLinksFr: ServiceCardLink[] = [
 
 /** The links section shared by the six pages. */
 const yachtLocalLinksFr = {
-  localLinksTitle: "Transferts yacht, port par port",
+  localLinksTitle: "Nos transferts yacht, port par port",
   localLinksDescription:
     "Choisissez le port où votre yacht est amarré pour un transfert adapté au port et au trajet.",
   localLinks: yachtTransferLinksFr,
@@ -67,7 +67,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       ],
     },
     serviceLabel: "Transfert yacht Monaco",
-    heroTitle: "Transfert yacht à Monaco jusqu'à Port Hercule",
+    heroTitle: "Transfert yacht à Monaco, jusqu'à Port Hercule",
     heroDescription:
       "Un transfert avec chauffeur privé de l'aéroport Nice Côte d'Azur jusqu'à votre yacht à Port Hercule : 30 à 40 minutes environ, et une dépose sur le quai sans vous soucier des tunnels ni du stationnement de Monaco.",
     heroImageSrc: yachtTransferPages.monaco.heroImageSrc,
@@ -123,11 +123,11 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Port Hercule ?",
         answer:
-          "Environ 30 à 40 minutes par la route entre l'aéroport de Nice et Port Hercule. Vous pouvez aussi prendre un court vol en hélicoptère jusqu'à l'héliport de Monaco, où un chauffeur vous attend pour la fin du trajet.",
+          "Comptez environ 30 à 40 minutes par la route entre l'aéroport de Nice et Port Hercule. Vous pouvez aussi prendre un court vol en hélicoptère jusqu'à l'héliport de Monaco, où un chauffeur vous attend pour la fin du trajet.",
       },
       {
         question: "Combien coûte un transfert yacht à Monaco ?",
-        answer: `Depuis l'aéroport de Nice, la dépose à Port Hercule coûte à partir de ${eur(E_CLASS.prices.monaco.transfer)} en Mercedes Classe E et de ${eur(V_CLASS.prices.monaco.transfer)} en van Classe V, à prix fixe annoncé avant la réservation.`,
+        answer: `Depuis l'aéroport de Nice, la dépose à Port Hercule coûte à partir de ${eur(E_CLASS.prices.monaco.transfer)} en Mercedes Classe E et de ${eur(V_CLASS.prices.monaco.transfer)} en van Classe V. C'est un prix fixe, annoncé avant la réservation.`,
       },
       {
         question: "Pouvez-vous me déposer sur le quai de Port Hercule ?",
@@ -135,7 +135,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
           "Oui. Nous vous conduisons directement jusqu'au quai et à votre yacht à Port Hercule, en nous coordonnant avec l'équipage pour l'accès et l'horaire si besoin.",
       },
       {
-        question: "Assurez-vous les arrivées pendant le Monaco Yacht Show ?",
+        question: "Proposez-vous des transferts pendant le Monaco Yacht Show ?",
         answer:
           "Oui. Pendant le Monaco Yacht Show, avec les fermetures de routes et la foule, un chauffeur qui connaît les déviations vous fait arriver sans encombre et à l'heure.",
       },
@@ -164,7 +164,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       ],
     },
     serviceLabel: "Transfert yacht Cannes",
-    heroTitle: "Transfert yacht à Cannes jusqu'au Vieux-Port",
+    heroTitle: "Transfert yacht à Cannes, jusqu'au Vieux-Port",
     heroDescription:
       "Un transfert avec chauffeur privé de l'aéroport Nice Côte d'Azur jusqu'à votre yacht à Cannes, au Vieux-Port ou à Port Pierre Canto : 30 minutes environ, avec une dépose sur le quai.",
     heroImageSrc: yachtTransferPages.cannes.heroImageSrc,
@@ -224,15 +224,15 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         question: "Combien coûte un transfert yacht à Cannes ?",
-        answer: `Jusqu'au Vieux-Port ou au Port Pierre Canto, comptez à partir de ${eur(E_CLASS.prices.cannes.transfer)} en Mercedes Classe E, ou ${eur(V_CLASS.prices.cannes.transfer)} en van Classe V si vous arrivez à plusieurs avec des bagages. Le prix est fixe et confirmé avant la réservation.`,
+        answer: `Pour le Vieux-Port ou Port Pierre Canto, comptez à partir de ${eur(E_CLASS.prices.cannes.transfer)} en Mercedes Classe E. Si vous arrivez à plusieurs avec des bagages, le trajet en van Classe V coûte à partir de ${eur(V_CLASS.prices.cannes.transfer)}. Le prix est fixe et confirmé avant la réservation.`,
       },
       {
         question: "Où s'amarrent les grands yachts à Cannes ?",
         answer:
-          "Souvent à Port Pierre Canto, juste à l'est du Vieux-Port. Ce port accueille des yachts plus grands tout en gardant un accès facile à la Croisette.",
+          "Les grands yachts s'amarrent souvent à Port Pierre Canto, juste à l'est du Vieux-Port. Ce port accueille des yachts plus grands tout en gardant un accès facile à la Croisette.",
       },
       {
-        question: "Assurez-vous les transferts pendant le Cannes Yachting Festival ?",
+        question: "Proposez-vous des transferts pendant le Cannes Yachting Festival ?",
         answer:
           "Oui. Pendant le Cannes Yachting Festival, un chauffeur qui connaît les fermetures de routes vous fait arriver aux ports sans encombre et à l'heure.",
       },
@@ -262,7 +262,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Transfert yacht Saint-Tropez",
     heroTitle: "Transfert yacht à Saint-Tropez",
-    heroDescription: `Votre chauffeur privé vous accueille à l'aéroport Nice Côte d'Azur et vous conduit jusqu'à votre yacht, sur le quai du port de Saint-Tropez, à prix fixe dès ${eur(E_CLASS.prices["st-tropez"].transfer)} en Mercedes Classe E. Par la route ou en bateau à travers le golfe, en fonction de la circulation.`,
+    heroDescription: `Votre chauffeur privé vous accueille à l'aéroport Nice Côte d'Azur et vous conduit jusqu'à votre yacht, sur le quai du port de Saint-Tropez. Le transfert est à prix fixe, dès ${eur(E_CLASS.prices["st-tropez"].transfer)} en Mercedes Classe E. Par la route ou en bateau à travers le golfe, en fonction de la circulation.`,
     heroImageSrc: yachtTransferPages["saint-tropez"].heroImageSrc,
     heroImageAlt: "Transfert yacht au vieux port de Saint-Tropez, avec une Mercedes noire sur le quai",
     introTitle: "Vers le quai le plus célèbre",
@@ -329,7 +329,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         question: "Pouvez-vous me conduire aux beach clubs de Pampelonne ?",
-        answer: `Oui. Votre chauffeur privé vous attend sur le quai du port de Saint-Tropez, vous dépose à l'entrée des beach clubs de Pampelonne et revient vous chercher quand vous le souhaitez. Il peut aussi rester à votre disposition, dès ${eur(E_CLASS.prices["st-tropez"].hourly)} de l'heure ou ${eur(E_CLASS.prices["st-tropez"].fullDay)} la journée en Mercedes Classe E.`,
+        answer: `Oui. Votre chauffeur privé vous attend sur le quai du port de Saint-Tropez, vous dépose à l'entrée des beach clubs de Pampelonne et revient vous chercher quand vous le souhaitez. Il peut aussi rester à votre disposition : comptez à partir de ${eur(E_CLASS.prices["st-tropez"].hourly)} de l'heure ou ${eur(E_CLASS.prices["st-tropez"].fullDay)} la journée en Mercedes Classe E.`,
       },
       {
         question: "Vous occupez-vous de l'équipage et de l'avitaillement à Saint-Tropez ?",
@@ -358,7 +358,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     serviceLabel: "Transfert yacht Port Vauban",
     heroTitle: "Transfert yacht à Port Vauban, Antibes",
     heroDescription:
-      "Un transfert avec chauffeur privé de l'aéroport Nice Côte d'Azur jusqu'à votre yacht à Port Vauban, à Antibes, le plus grand port de plaisance d'Europe : 25 minutes environ jusqu'au quai.",
+      "Votre chauffeur privé assure votre transfert en 25 minutes environ de l'aéroport Nice Côte d'Azur jusqu'à votre yacht, sur le quai de Port Vauban, à Antibes. C'est le plus grand port de plaisance d'Europe.",
     heroImageSrc: yachtTransferPages.antibes.heroImageSrc,
     heroImageAlt: "Transfert yacht à Port Vauban, Antibes, avec une Mercedes noire et des superyachts",
     introTitle: "Vers le plus grand port de plaisance d'Europe",
@@ -367,7 +367,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "Dépose sur le quai",
-        text: "Nous vous accueillons à l'arrivée de votre vol et vous conduisons au plus court jusqu'à Port Vauban, sur le quai et jusqu'à votre yacht, y compris au Quai des Milliardaires.",
+        text: "Nous vous accueillons à l'arrivée de votre vol et prenons le chemin le plus court jusqu'à Port Vauban. Nous vous déposons sur le quai, jusqu'à votre yacht, y compris au Quai des Milliardaires.",
         theme: "dark",
       },
       {
@@ -412,11 +412,11 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Port Vauban ?",
         answer:
-          "Environ 25 minutes par la route : Port Vauban, à Antibes, est l'un des grands ports de plaisance les plus proches de l'aéroport de Nice.",
+          "Comptez environ 25 minutes par la route. Port Vauban, à Antibes, est l'un des grands ports de plaisance les plus proches de l'aéroport de Nice.",
       },
       {
         question: "Combien coûte un transfert yacht à Antibes ?",
-        answer: `Pour Port Vauban, le prix part de ${eur(E_CLASS.prices.antibes.transfer)} en Mercedes Classe E et de ${eur(V_CLASS.prices.antibes.transfer)} en van Classe V depuis l'aéroport de Nice. Il est fixe et vous est donné avant la réservation.`,
+        answer: `Depuis l'aéroport de Nice, le transfert jusqu'à Port Vauban coûte à partir de ${eur(E_CLASS.prices.antibes.transfer)} en Mercedes Classe E et de ${eur(V_CLASS.prices.antibes.transfer)} en van Classe V. Le prix est fixe et vous est communiqué avant la réservation.`,
       },
       {
         question: "Qu'est-ce que le Quai des Milliardaires ?",
@@ -455,7 +455,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     serviceLabel: "Aéroport de Nice au yacht",
     heroTitle: "Transfert de l'aéroport de Nice à votre yacht",
     heroDescription:
-      "Un transfert avec chauffeur privé de l'aéroport Nice Côte d'Azur, vols commerciaux ou aviation d'affaires, directement jusqu'à votre yacht dans n'importe quel port de la côte, avec accueil à votre arrivée.",
+      "Votre chauffeur privé assure votre transfert de l'aéroport Nice Côte d'Azur directement jusqu'à votre yacht, dans n'importe quel port de la côte. Il vous accueille à votre arrivée, que vous voyagiez sur un vol commercial ou en aviation d'affaires.",
     heroImageSrc: yachtTransferPages["nice-airport"].heroImageSrc,
     heroImageAlt: "Transfert d'un jet privé à un yacht à Nice, avec une Mercedes noire et son chauffeur",
     introTitle: "La porte d'entrée du yachting sur la Côte d'Azur",
@@ -464,7 +464,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "Accueil à l'arrivée",
-        text: "Nous vous accueillons à votre vol, aux arrivées des vols commerciaux ou au terminal de l'aviation d'affaires, prenons en charge les bagages et vous accompagnons jusqu'à la voiture.",
+        text: "Nous vous accueillons aux arrivées des vols commerciaux ou au terminal de l'aviation d'affaires. Nous prenons vos bagages et vous accompagnons jusqu'à la voiture.",
         theme: "dark",
       },
       {
@@ -551,10 +551,10 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Transport d'équipage",
     heroTitle: "Transport d'équipage de yacht",
-    heroDescription: `Un transport avec chauffeur privé pour les équipages de superyachts sur toute la Côte d'Azur, d'Antibes (Port Vauban) à Cannes et Monaco : trajets aéroport et gare, relèves d'équipage et avitaillement, jour et nuit, dès ${eur(E_CLASS.prices.nice.hourly)} de l'heure.`,
+    heroDescription: `Nous proposons un transport avec chauffeur privé aux équipages de superyachts sur toute la Côte d'Azur, du Port Vauban d'Antibes jusqu'à Cannes et Monaco. Il couvre les trajets vers l'aéroport et la gare, les relèves d'équipage et l'avitaillement, jour et nuit, dès ${eur(E_CLASS.prices.nice.hourly)} de l'heure.`,
     heroImageSrc: yachtTransferPages["crew-transportation"].heroImageSrc,
     heroImageAlt: "Transport d'équipage de yacht avec un van Mercedes Classe V noir sur le quai d'un port",
-    introTitle: "Un soutien à terre pour le yacht",
+    introTitle: "Un soutien à terre pour votre yacht",
     introDescription:
       "Un superyacht au port génère un va-et-vient constant à terre ; un chauffeur partenaire dédié s'occupe de tout, selon le planning du yacht.",
     panels: [
@@ -603,7 +603,7 @@ export const yachtPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     faq: [
       {
-        question: "Assurez-vous les relèves d'équipage de nuit ?",
+        question: "Vous occupez-vous des relèves d'équipage de nuit ?",
         answer:
           "Oui. Nous suivons les vols et assurons les prises en charge à l'aéroport et à la gare à toute heure, y compris tôt le matin, tard le soir et pour les changements de dernière minute.",
       },

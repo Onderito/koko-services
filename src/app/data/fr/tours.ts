@@ -13,11 +13,11 @@ const HOURLY = eur(E_CLASS.prices.nice.hourly);
 const FULL_DAY = eur(E_CLASS.prices.nice.fullDay);
 
 /** The sentence that ends each hero: the Classe E starting prices. */
-const PRICE_LINE = `Dès ${HOURLY} de l'heure ou ${FULL_DAY} la journée en Mercedes Classe E.`;
+const PRICE_LINE = `L'excursion en Mercedes Classe E coûte à partir de ${HOURLY} de l'heure, ou ${FULL_DAY} la journée.`;
 
 /** The answer on vehicles: each car's seats and hourly starting price; `vClass` says what the van suits. */
 const vehiclesAnswer = (vClass: string) =>
-  `La Mercedes Classe E accueille jusqu'à ${E_CLASS.passengers} passagers, dès ${HOURLY} de l'heure. La Classe S, dès ${eur(S_CLASS.prices.nice.hourly)} de l'heure, convient aux voyages d'affaires et aux clients VIP ; le van Classe V, dès ${eur(V_CLASS.prices.nice.hourly)} de l'heure, accueille jusqu'à ${V_CLASS.passengers} passagers ${vClass}. La Maybach est proposée dès ${eur(MAYBACH.prices.nice.hourly)} de l'heure.`;
+  `La Mercedes Classe E accueille jusqu'à ${E_CLASS.passengers} passagers et coûte à partir de ${HOURLY} de l'heure. La Classe S, dès ${eur(S_CLASS.prices.nice.hourly)} de l'heure, convient aux voyages d'affaires et aux clients VIP ; le van Classe V, dès ${eur(V_CLASS.prices.nice.hourly)} de l'heure, accueille jusqu'à ${V_CLASS.passengers} passagers ${vClass}. La Maybach est proposée dès ${eur(MAYBACH.prices.nice.hourly)} de l'heure.`;
 const VEHICLES_RIVIERA = vehiclesAnswer("et convient aux familles et aux petits groupes");
 const VEHICLES_ALPS = vehiclesAnswer("avec leurs skis et leurs bagages");
 
@@ -80,7 +80,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     serviceLabel: "Excursion à Nice",
     heroTitle: "Excursion privée à Nice",
     heroDescription:
-      `Une excursion privée à Nice avec votre chauffeur : la ville, le bord de mer et ses points de vue, ou une journée au départ de Nice vers Monaco, Èze ou Saint-Paul-de-Vence. ${PRICE_LINE}`,
+      `Lors d'une excursion privée à Nice, votre chauffeur vous fait découvrir la ville, son bord de mer et ses points de vue, ou vous emmène pour la journée à Monaco, à Èze ou à Saint-Paul-de-Vence. ${PRICE_LINE}`,
     heroImageSrc: chauffeurTourPages.nice.heroImageSrc,
     heroImageAlt: "Excursion privée avec chauffeur à Nice",
     introTitle: "Découvrir Nice à votre rythme",
@@ -89,7 +89,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "La ville et la côte",
-        text: "Nous réunissons en une seule journée de visite l'ambiance du Vieux-Nice, les points de vue du bord de mer, la prise en charge à votre hôtel et les routes panoramiques des environs.",
+        text: "Votre chauffeur vient vous chercher à l'hôtel. En une journée, vous découvrez l'ambiance du Vieux-Nice, les points de vue du bord de mer et les routes panoramiques des environs.",
         theme: "dark",
       },
       {
@@ -214,12 +214,12 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "L'esprit de la Croisette",
-        text: "Nous organisons la journée autour des plus beaux quartiers de Cannes, entre le bord de mer, le shopping et l'heure du déjeuner ou du retour à l'hôtel.",
+        text: "Nous organisons la journée dans les plus beaux quartiers de Cannes, entre le bord de mer et les boutiques, en tenant compte de l'heure du déjeuner et du retour à l'hôtel.",
         theme: "dark",
       },
       {
         title: "Des arrêts choisis",
-        text: "Avec un chauffeur, vous profitez de Cannes sans contraintes entre les moments à pied, la prise en charge à l'hôtel et les arrivées sur les plus beaux sites.",
+        text: "Votre chauffeur vient vous chercher à l'hôtel et vous dépose sur les plus beaux sites de Cannes. Entre deux promenades à pied, vous profitez de la ville sans contrainte.",
         theme: "light",
       },
     ],
@@ -320,7 +320,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     serviceLabel: "Excursion à Monaco",
     heroTitle: "Excursion privée avec chauffeur à Monaco",
     heroDescription:
-      `Monte-Carlo, Monaco-Ville, Port Hercule et les points de vue sur la côte, à votre rythme, avec un chauffeur rien que pour vous et une prise en charge de porte à porte à Monaco, à Nice, à Cannes ou à l'aéroport de Nice. ${PRICE_LINE}`,
+      `Avec un chauffeur rien que pour vous, vous découvrez à votre rythme Monte-Carlo, Monaco-Ville, Port Hercule et les points de vue sur la côte. Il vous prend en charge de porte à porte à Monaco, à Nice, à Cannes ou à l'aéroport de Nice. ${PRICE_LINE}`,
     heroImageSrc: chauffeurTourPages.monaco.heroImageSrc,
     heroImageAlt: "Excursion privée avec chauffeur à Monaco",
     introTitle: "Un itinéraire à Monaco selon votre emploi du temps",
@@ -329,7 +329,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "Des visites de porte à porte",
-        text: "Départ de votre hôtel, de votre yacht, de votre villa ou de l'aéroport de Nice. Votre chauffeur s'occupe des sens uniques et des points de dépose ; vous passez votre temps sur les lieux que vous êtes venu voir.",
+        text: "L'excursion part de votre hôtel, de votre yacht, de votre villa ou de l'aéroport de Nice. Votre chauffeur s'occupe des sens uniques et des points de dépose ; vous passez votre temps sur les lieux que vous êtes venu voir.",
         theme: "dark",
       },
       {
@@ -346,7 +346,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
         duration: "Environ 4 heures",
         title: "L'essentiel de Monaco en excursion privée",
         description:
-          "Une découverte ciblée de la Principauté pour une première visite, une escale de croisière ou une matinée ou un après-midi libre.",
+          "Ce circuit convient à une première visite de la Principauté, à une escale de croisière ou à une matinée ou un après-midi libre.",
         stops: [
           "Prise en charge à Monaco, Cap-d'Ail, Beausoleil ou à votre yacht à Port Hercule",
           "Monaco-Ville, la place du Palais princier et la cathédrale Saint-Nicolas",
@@ -375,19 +375,19 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     practicalDetails: [
       {
         title: "Lieux de prise en charge",
-        text: "Hôtels, villas, Port Hercule, Fontvieille, adresses à Nice, à Cannes et dans l'est de la Côte d'Azur, ou l'aéroport de Nice, à 30 à 40 minutes environ de Monaco.",
+        text: "Nous venons vous chercher à l'hôtel, à la villa, à Port Hercule, à Fontvieille, à Nice, à Cannes ou dans l'est de la Côte d'Azur. Depuis l'aéroport de Nice, comptez 30 à 40 minutes environ jusqu'à Monaco.",
       },
       {
         title: "Véhicules",
-        text: `Mercedes Classe E (dès ${HOURLY} de l'heure) ou Classe S (dès ${eur(S_CLASS.prices.nice.hourly)} de l'heure) jusqu'à ${E_CLASS.passengers} passagers, ou van Classe V (dès ${eur(V_CLASS.prices.nice.hourly)} de l'heure) jusqu'à ${V_CLASS.passengers} passagers, pour les familles et les groupes qui ont besoin de plus de places ou d'espace pour les bagages.`,
+        text: `La Mercedes Classe E (dès ${HOURLY} de l'heure) et la Classe S (dès ${eur(S_CLASS.prices.nice.hourly)} de l'heure) accueillent jusqu'à ${E_CLASS.passengers} passagers. La Classe V (dès ${eur(V_CLASS.prices.nice.hourly)} de l'heure) transporte jusqu'à ${V_CLASS.passengers} passagers. Elle convient aux familles et aux groupes qui ont besoin de plus de places ou d'espace pour les bagages.`,
       },
       {
         title: "Inclus",
-        text: "Véhicule privé, chauffeur professionnel, prise en charge de porte à porte, attente entre les arrêts et bouteilles d'eau à bord.",
+        text: "Le prix comprend le véhicule privé, un chauffeur professionnel, la prise en charge de porte à porte, l'attente entre les arrêts et des bouteilles d'eau à bord.",
       },
       {
         title: "Non inclus",
-        text: "Billets des musées et des jardins, repas, guides conférenciers et frais d'accès particuliers, sauf s'ils sont ajoutés au devis.",
+        text: "Le prix ne comprend pas les billets des musées et des jardins, les repas, les guides conférenciers ni les frais d'accès particuliers, sauf s'ils figurent sur le devis.",
       },
     ],
     audienceTitle: "Idéal pour",
@@ -452,7 +452,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quelles sont les excursions privées les plus demandées à Monaco ?",
         answer:
-          "Les excursions privées à Monaco passent souvent par Monte-Carlo, la place du Casino, Port Hercule, Monaco-Ville, les abords du Palais princier, les quartiers des boutiques de luxe et les points de vue panoramiques sur la Méditerranée.",
+          "Nos excursions privées à Monaco passent souvent par Monte-Carlo, la place du Casino, Port Hercule, Monaco-Ville et les abords du Palais princier. Elles font aussi halte dans les quartiers des boutiques de luxe et aux points de vue panoramiques sur la Méditerranée.",
       },
       {
         question: "Puis-je personnaliser mon excursion privée à Monaco ?",
@@ -467,7 +467,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quels sites voit-on souvent lors d'une excursion privée à Monaco ?",
         answer:
-          "Les clients visitent souvent Monte-Carlo, la place du Casino, Port Hercule, les abords du Palais princier, Monaco-Ville, les quartiers des boutiques de luxe et les points de vue panoramiques sur la Méditerranée.",
+          "Nos clients voient souvent Monaco-Ville et les abords du Palais princier, Port Hercule, Monte-Carlo et la place du Casino. Les quartiers des boutiques de luxe et les points de vue panoramiques sur la Méditerranée font aussi partie de la visite.",
       },
       {
         question: "Peut-on associer Monaco à d'autres destinations de la Côte d'Azur dans la même journée ?",
@@ -480,7 +480,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
           "Oui. Les excursions privées à Monaco sont très demandées par les invités des yachts, les croisiéristes, les familles et les clients VIP qui veulent découvrir la Côte d'Azur confortablement et à leur façon.",
       },
       {
-        question: "L'excursion peut-elle inclure de la gastronomie, du shopping de luxe ou le bord de mer ?",
+        question: "L'excursion peut-elle passer par un restaurant gastronomique, les boutiques de luxe ou le bord de mer ?",
         answer:
           "Oui. L'itinéraire peut inclure des restaurants étoilés au guide Michelin, les boutiques de luxe de Monte-Carlo, des restaurants au bord de l'eau, des plages privées, des routes côtières panoramiques et d'autres expériences choisies.",
       },
@@ -578,12 +578,12 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "L'excursion peut-elle partir de mon hôtel, de ma villa ou de mon yacht à Saint-Tropez ?",
         answer:
-          "Oui. Nous venons vous chercher dans les hôtels de luxe, les villas privées et les plages privées, au port de Saint-Tropez ou à toute autre adresse à Saint-Tropez et aux alentours.",
+          "Oui. Nous venons vous chercher à votre hôtel, à votre villa, sur une plage privée, au port de Saint-Tropez ou à toute autre adresse à Saint-Tropez et aux alentours.",
       },
       {
         question: "Quels sites voit-on souvent lors d'une excursion privée à Saint-Tropez ?",
         answer:
-          "Les clients visitent souvent le port de Saint-Tropez, la Citadelle de Saint-Tropez, la place des Lices, la plage de Pampelonne, Ramatuelle, Gassin et les points de vue panoramiques sur la Méditerranée.",
+          "La visite passe souvent par le port et la Citadelle de Saint-Tropez, ainsi que par la place des Lices. Nos clients vont aussi à la plage de Pampelonne, à Ramatuelle, à Gassin et aux points de vue panoramiques sur la Méditerranée.",
       },
       {
         question: "Puis-je associer Saint-Tropez à d'autres destinations dans la même journée ?",
@@ -637,7 +637,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "Autour du village",
-        text: "Le centre médiéval et ses rues piétonnes, les calèches de l'hiver, Combloux et sa vue sur le mont Blanc à une dizaine de minutes, Saint-Gervais-les-Bains à une vingtaine.",
+        text: "Le centre médiéval a ses rues piétonnes et, l'hiver, ses calèches. Combloux et sa vue sur le mont Blanc sont à une dizaine de minutes, et Saint-Gervais-les-Bains à une vingtaine.",
         theme: "dark",
       },
       {
@@ -685,12 +685,12 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Que voir autour de Megève pendant une excursion d'hiver ?",
         answer:
-          "Le centre médiéval du village et ses calèches, Combloux et sa vue sur le mont Blanc, Saint-Gervais-les-Bains et le balcon de Cordon sont à moins d'une demi-heure. Plus loin, Chamonix et Annecy se visitent dans la journée.",
+          "Au village, vous découvrez le centre médiéval et ses calèches. Combloux et sa vue sur le mont Blanc, Saint-Gervais-les-Bains et le balcon de Cordon sont à moins d'une demi-heure. Plus loin, Chamonix et Annecy se visitent dans la journée.",
       },
       {
         question: "Peut-on voir Megève, Chamonix et Annecy dans la même journée ?",
         answer:
-          `Oui, en partant tôt. Comptez environ 45 minutes de Megève à Chamonix, puis un peu plus d'une heure jusqu'à Annecy et à peu près autant pour revenir. Votre chauffeur reste avec vous toute la journée, dès ${FULL_DAY} en Mercedes Classe E.`,
+          `Oui, en partant tôt. Comptez environ 45 minutes de Megève à Chamonix, puis un peu plus d'une heure jusqu'à Annecy et à peu près autant pour revenir. Votre chauffeur reste avec vous toute la journée. L'excursion coûte à partir de ${FULL_DAY} en Mercedes Classe E.`,
       },
       {
         question: "Le chauffeur vient-il nous chercher au chalet ?",
@@ -754,7 +754,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Au-delà des 3 Vallées",
-        text: "Méribel et Val Thorens par la vallée, ou Annecy et Megève, à environ deux heures de route, pour une journée plus longue.",
+        text: "Vous rejoignez Méribel et Val Thorens par la vallée. Pour une journée plus longue, Annecy et Megève sont à environ deux heures de route.",
         theme: "light",
       },
     ],
@@ -797,7 +797,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quelles excursions d'hiver faire au départ de Courchevel ?",
         answer:
-          "Les plus demandées vont à Méribel, à Val Thorens et dans la vallée de la Tarentaise, ou plus loin à Annecy et à Megève. La station se rejoint par la vallée, depuis Moûtiers, à environ 25 kilomètres de Courchevel 1850.",
+          "Les plus demandées vont à Méribel, à Val Thorens et dans la vallée de la Tarentaise, ou plus loin à Annecy et à Megève. Pour quitter la station, la route descend jusqu'à Moûtiers, dans la vallée, à environ 25 kilomètres de Courchevel 1850.",
       },
       {
         question: "Combien de temps faut-il pour rejoindre Méribel ou Val Thorens en voiture ?",
@@ -812,7 +812,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Peut-on aller jusqu'à Annecy ou Megève dans la journée ?",
         answer:
-          `Oui, mais ce sont de longues journées : Annecy et Megève sont à environ deux heures de route de Courchevel. Votre chauffeur reste à votre disposition jusqu'au retour, dès ${FULL_DAY} la journée en Mercedes Classe E.`,
+          `Oui, mais ce sont de longues journées : Annecy et Megève sont à environ deux heures de route de Courchevel. Votre chauffeur reste à votre disposition jusqu'au retour. Comptez à partir de ${FULL_DAY} la journée en Mercedes Classe E.`,
       },
       {
         question: "Quel jour éviter pour une excursion depuis Courchevel ?",
@@ -827,7 +827,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Pouvez-vous nous prendre en charge au Cheval Blanc ou aux Airelles ?",
         answer:
-          "Oui. Les clients se rendent souvent au Cheval Blanc Courchevel, aux Airelles Courchevel ou aux Six Senses Residences Courchevel, et nous venons aussi dans les chalets privés de 1850.",
+          "Oui. Nos clients vont souvent au Cheval Blanc Courchevel, aux Airelles Courchevel ou aux Six Senses Residences Courchevel. Nous venons aussi les chercher dans les chalets privés de Courchevel 1850.",
       },
       {
         question: "Quelle voiture choisir pour une excursion au départ de Courchevel ?",
@@ -866,12 +866,12 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "Du téléphérique au glacier",
-        text: "L'Aiguille du Midi, le train du Montenvers vers la Mer de Glace et le centre de Chamonix, avec une dépose au pied de chaque départ.",
+        text: "Votre chauffeur vous dépose au pied de l'Aiguille du Midi, au départ du train du Montenvers vers la Mer de Glace et dans le centre de Chamonix.",
         theme: "dark",
       },
       {
         title: "Au-delà de la vallée",
-        text: "Megève à environ 45 minutes, Annecy à un peu plus d'une heure, et Courmayeur, en Italie, à une demi-heure par le tunnel du Mont-Blanc.",
+        text: "Megève est à environ 45 minutes et Annecy à un peu plus d'une heure. Par le tunnel du Mont-Blanc, Courmayeur, en Italie, est à une demi-heure.",
         theme: "light",
       },
     ],
@@ -914,7 +914,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Que voir pendant une excursion d'hiver à Chamonix ?",
         answer:
-          "L'Aiguille du Midi, dont le téléphérique part du centre-ville et monte à 3 842 mètres, le train du Montenvers vers la Mer de Glace et le centre de Chamonix. Votre chauffeur vous dépose au départ de chaque site et vous attend.",
+          "Le téléphérique de l'Aiguille du Midi part du centre-ville et monte à 3 842 mètres. Vous pouvez aussi prendre le train du Montenvers vers la Mer de Glace et visiter le centre de Chamonix. Votre chauffeur vous dépose au départ de chaque site et vous attend.",
       },
       {
         question: "Où commence une excursion privée au départ de Chamonix ?",
@@ -934,7 +934,7 @@ export const tourPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Peut-on aller à Megève ou à Annecy dans la même journée ?",
         answer:
-          `Oui. Megève est à environ 45 minutes de Chamonix et Annecy à un peu plus d'une heure. Votre chauffeur reste avec vous jusqu'au retour, dès ${FULL_DAY} la journée en Mercedes Classe E.`,
+          `Oui. Megève est à environ 45 minutes de Chamonix et Annecy à un peu plus d'une heure. Votre chauffeur reste avec vous jusqu'au retour. La journée en Mercedes Classe E coûte à partir de ${FULL_DAY}.`,
       },
       {
         question: "Que se passe-t-il si le téléphérique ne fonctionne pas ce jour-là ?",

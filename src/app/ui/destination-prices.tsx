@@ -31,7 +31,7 @@ const row = "border-b border-[#f2f4f7] last:border-0 max-sm:grid max-sm:gap-x-6 
 const OVERVIEW = {
   en: {
     title: "All destinations at a glance",
-    subtitle: "From Nice Airport, one way, starting prices",
+    subtitle: "These are one-way starting prices from Nice Airport.",
     caption: "Starting prices of a one-way private transfer from Nice Côte d'Azur Airport, by destination and vehicle",
     destination: "Destination",
     car: (name: string) => short(name),
@@ -39,7 +39,7 @@ const OVERVIEW = {
   },
   fr: {
     title: "Toutes les destinations en un coup d'œil",
-    subtitle: "Depuis l'aéroport de Nice, aller simple, prix de départ",
+    subtitle: "Ce tableau indique nos prix de départ pour un aller simple depuis l'aéroport de Nice.",
     caption: "Prix de départ d'un transfert privé aller simple depuis l'aéroport Nice Côte d'Azur, par destination et par véhicule",
     destination: "Destination",
     car: (name: string) => short(name.replace(/ ([A-Z])-Class$/, " Classe $1")),
@@ -132,7 +132,7 @@ const TABLE = {
     hourly: "Per hour",
     fullDay: "Full day",
     upTo: (passengers: number) => `Up to ${passengers} passengers`,
-    note: "Starting prices from our guide. Your fixed fare is confirmed before the ride; it can adapt to timing, luggage and the exact address.",
+    note: "These are starting prices from our price guide. Your fixed price depends on the timing, your luggage and the exact address. We confirm it before the ride.",
     car: (name: string) => name,
     price: (n: number) => `${n}€`,
   },
@@ -148,7 +148,7 @@ const TABLE = {
     hourly: "À l'heure",
     fullDay: "Journée",
     upTo: (passengers: number) => `Jusqu'à ${passengers} passagers`,
-    note: "Prix de départ de notre grille. Votre prix fixe est confirmé avant le trajet ; il peut varier selon l'horaire, les bagages et l'adresse exacte.",
+    note: "Ce tableau indique nos prix de départ. Votre prix fixe est confirmé avant le trajet ; il peut varier selon l'horaire, les bagages et l'adresse exacte.",
     car: frenchCar,
     price: frenchEur,
   },

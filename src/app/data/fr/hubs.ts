@@ -224,7 +224,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Transferts aéroport",
     heroTitle: "Transferts aéroport privés sur la Côte d'Azur",
-    heroDescription: `Des transferts privés avec chauffeur sur toute la Côte d'Azur, pour vos arrivées à l'aéroport de Nice, vos prises en charge à l'hôtel, vos événements et vos longs trajets, en Mercedes et à prix fixe : dès ${fromAirport("nice")} pour Nice, ${fromAirport("cannes")} pour Cannes ou Monaco.`,
+    heroDescription: `Nous assurons vos transferts privés avec chauffeur sur toute la Côte d'Azur, depuis l'aéroport de Nice ou votre hôtel, pour un événement comme pour un long trajet. Vous voyagez en Mercedes, à prix fixe, dès ${fromAirport("nice")} pour Nice et ${fromAirport("cannes")} pour Cannes ou Monaco.`,
     heroImageSrc: transfersPage.heroImageSrc,
     heroImageAlt: "Arrivée d'un transfert avec chauffeur privé sur la Côte d'Azur",
     introTitle: "L'art du transfert",
@@ -238,7 +238,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Votre arrivée",
-        text: `De l'aéroport de Nice jusqu'à votre hôtel, votre villa ou le port, à prix fixe en Mercedes Classe E : Nice dès ${fromAirport("nice")}, Antibes dès ${fromAirport("antibes")}, Cannes ou Monaco dès ${fromAirport("cannes")}, Saint-Tropez dès ${fromAirport("st-tropez")}. Les trajets plus lointains ont aussi un prix fixé avant la réservation.`,
+        text: `Nous vous conduisons de l'aéroport de Nice jusqu'à votre hôtel, votre villa ou le port. En Mercedes Classe E, le prix fixe commence à ${fromAirport("nice")} pour Nice, ${fromAirport("antibes")} pour Antibes, ${fromAirport("cannes")} pour Cannes ou Monaco et ${fromAirport("st-tropez")} pour Saint-Tropez. Les trajets plus lointains ont aussi un prix fixé avant la réservation.`,
         theme: "light",
       },
     ],
@@ -290,7 +290,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Puis-je réserver un transfert à l'avance ?",
         answer:
-          "Oui, et nous vous le conseillons : réserver à l'avance garantit la disponibilité du véhicule, surtout en haute saison et pendant les grands événements. Envoyez-nous votre vol, le nombre de passagers et l'adresse par le site ou par téléphone : nous confirmons la voiture et le prix avant votre voyage.",
+          "Oui, et nous vous le conseillons : réserver à l'avance garantit la disponibilité du véhicule, surtout en haute saison et pendant les grands événements. Envoyez-nous votre numéro de vol, le nombre de passagers et l\'adresse, par le site ou par téléphone. Nous vous confirmons la voiture et le prix avant votre voyage.",
       },
       {
         question: "Quel temps d'attente est inclus à l'arrivée ?",
@@ -304,11 +304,11 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         question: "Vos prix de transfert sont-ils fixes ?",
-        answer: `Oui. Le prix du transfert est convenu avant le trajet, sans frais cachés ; il dépend du trajet, du véhicule choisi et des services demandés. Depuis l'aéroport de Nice, un transfert privé coûte à partir de ${fromAirport("nice")} pour Nice, ${fromAirport("antibes")} pour Antibes, ${fromAirport("cannes")} pour Cannes ou Monaco et ${fromAirport("st-tropez")} pour Saint-Tropez en Mercedes Classe E.`,
+        answer: `Oui. Le prix du transfert est convenu avant le trajet, sans frais cachés ; il dépend du trajet, du véhicule choisi et des services demandés. Depuis l'aéroport de Nice, un transfert privé en Mercedes Classe E coûte à partir de ${fromAirport("nice")} pour Nice, ${fromAirport("antibes")} pour Antibes, ${fromAirport("cannes")} pour Cannes ou Monaco et ${fromAirport("st-tropez")} pour Saint-Tropez.`,
       },
       {
         question: "Quels véhicules proposez-vous pour les transferts ?",
-        answer: `Nous proposons des berlines de luxe et des vans haut de gamme, tous des Mercedes : la Classe E, la Classe S et la Maybach jusqu'à ${E_CLASS.passengers} passagers, et le van Classe V jusqu'à ${V_CLASS.passengers} passagers avec leurs bagages. Les plus demandés sont la Classe S et la Classe V, et nous vous conseillons le meilleur choix selon votre trajet et vos passagers.`,
+        answer: `Tous nos véhicules sont des Mercedes, berlines de luxe ou monospaces haut de gamme. La Classe E, la Classe S et la Maybach accueillent jusqu'à ${E_CLASS.passengers} passagers, et la Classe V jusqu'à ${V_CLASS.passengers} passagers avec leurs bagages. Les plus demandés sont la Classe S et la Classe V, et nous vous conseillons le meilleur choix selon votre trajet et vos passagers.`,
       },
       {
         question: "Proposez-vous des transferts longue distance ?",
@@ -335,11 +335,11 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       ],
     },
     serviceLabel: "Chauffeur privé à l'heure",
-    heroTitle: "Chauffeur privé à l'heure pour des journées à la carte sur la Côte d'Azur",
+    heroTitle: "Chauffeur privé à l'heure sur la Côte d'Azur",
     heroDescription: `Un chauffeur privé et une Mercedes à votre disposition, à l'heure ou à la journée, pour vos rendez-vous d'affaires, votre shopping, vos déjeuners et vos programmes à plusieurs étapes sur la Côte d'Azur : dès ${hourly(E_CLASS)} de l'heure ou ${fullDay(E_CLASS)} la journée en Classe E.`,
     heroImageSrc: hourlyChauffeurPage.heroImageSrc,
     heroImageAlt: "Chauffeur privé à l'heure à Monaco et sur la Côte d'Azur",
-    introTitle: "L'art du chauffeur privé à l'heure",
+    introTitle: "Le principe du chauffeur privé à l'heure",
     introDescription:
       "La mise à disposition d'un chauffeur vous donne un cadre sans rigidité : une voiture et une journée organisée selon vos horaires, dès quatre heures de réservation, avec 20 kilomètres inclus par heure.",
     panels: [
@@ -350,7 +350,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Votre expérience",
-        text: `Votre chauffeur reste disponible entre deux arrêts : la journée s'enchaîne, en privé et sans perte de temps, au lieu d'être morcelée en réservations séparées. À la journée, huit heures et 160 kilomètres sont inclus, dès ${fullDay(E_CLASS)} en Classe E.`,
+        text: `Votre chauffeur reste disponible entre deux arrêts : la journée s'enchaîne, en privé et sans perte de temps, au lieu d'être morcelée en réservations séparées. En Classe E, une journée de huit heures, 160 kilomètres inclus, coûte à partir de ${fullDay(E_CLASS)}.`,
         theme: "light",
       },
     ],
@@ -395,7 +395,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
           "Chaque heure réservée comprend 20 kilomètres. Par exemple, une réservation de quatre heures comprend 80 kilomètres et une réservation de huit heures 160 kilomètres. Toute distance supplémentaire est confirmée dans votre devis avant la réservation.",
       },
       {
-        question: "Quelles sont les conditions d'annulation d'un chauffeur à l'heure ?",
+        question: "Quelles sont les conditions d'annulation pour un chauffeur à l'heure ?",
         answer:
           "L'annulation est gratuite jusqu'à cinq jours avant la date et l'heure de prise en charge réservées. En cas d'annulation moins de cinq jours avant le départ, le prix total est dû.",
       },
@@ -406,16 +406,16 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         question: "Quelles destinations couvre le service de chauffeur à l'heure ?",
-        answer: `Notre service de chauffeur privé à l'heure couvre toute la Côte d'Azur, dont Nice, Cannes, Monaco, Saint-Tropez, Antibes et leurs environs, et en hiver Megève, Courchevel et Chamonix, au même prix horaire. L'itinéraire reste entièrement libre pendant la réservation, et votre chauffeur peut aussi vous accueillir à l'aéroport de Nice. Pour un simple trajet de l'aéroport à votre adresse, un transfert privé commence à ${fromAirport("nice")} pour Nice en Classe E.`,
+        answer: `Notre service de chauffeur privé à l'heure couvre toute la Côte d'Azur, dont Nice, Cannes, Monaco, Saint-Tropez, Antibes et leurs environs, et en hiver Megève, Courchevel et Chamonix, au même prix horaire. L'itinéraire reste entièrement libre pendant la réservation, et votre chauffeur peut aussi vous accueillir à l'aéroport de Nice. Pour un simple trajet de l'aéroport à votre adresse, un transfert privé en Classe E coûte à partir de ${fromAirport("nice")} pour Nice.`,
       },
       {
         question: "Quels véhicules peut-on réserver à l'heure ?",
-        answer: `Quatre Mercedes, selon le nombre de passagers : la Classe E dès ${hourly(E_CLASS)} de l'heure, la Classe S dès ${hourly(S_CLASS)} et la Maybach dès ${hourly(MAYBACH)}, jusqu'à ${E_CLASS.passengers} passagers, et le van Classe V dès ${hourly(V_CLASS)} de l'heure, jusqu'à ${V_CLASS.passengers} passagers. À la journée (huit heures), comptez à partir de ${fullDay(E_CLASS)} en Classe E, ${fullDay(V_CLASS)} en Classe V, ${fullDay(S_CLASS)} en Classe S et ${fullDay(MAYBACH)} en Maybach.`,
+        answer: `Vous avez le choix entre quatre Mercedes, selon le nombre de passagers. Pour ${E_CLASS.passengers} passagers au maximum, la Classe E coûte à partir de ${hourly(E_CLASS)} de l'heure, la Classe S dès ${hourly(S_CLASS)} et la Maybach dès ${hourly(MAYBACH)}. La Classe V, dès ${hourly(V_CLASS)} de l'heure, accueille jusqu'à ${V_CLASS.passengers} passagers. Pour une journée de huit heures, comptez à partir de ${fullDay(E_CLASS)} en Classe E, ${fullDay(V_CLASS)} en Classe V, ${fullDay(S_CLASS)} en Classe S et ${fullDay(MAYBACH)} en Maybach.`,
       },
       {
         question: "Un chauffeur à l'heure convient-il aux voyages d'affaires et aux événements ?",
         answer:
-          "Oui, tout à fait. Le chauffeur à l'heure est idéal pour les rendez-vous d'affaires, les roadshows, les congrès, les journées shopping, les locations de yacht, les mariages et les grands événements de la Côte d'Azur, quand la souplesse et la ponctualité sont essentielles.",
+          "Oui, tout à fait. Le chauffeur à l'heure est idéal pour les rendez-vous d'affaires, les tournées de présentation et les congrès. Il convient aussi aux journées d'achats, aux locations de yacht, aux mariages et aux grands événements de la Côte d'Azur, quand la souplesse et la ponctualité sont essentielles.",
       },
     ],
     localLinksTitle: "Choisissez votre destination",
@@ -462,7 +462,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Votre expérience",
-        text: "Monaco, Èze, Nice, Saint-Paul-de-Vence, Antibes, Cannes ou Saint-Tropez : des vieilles villes et des routes côtières aux beach clubs, aux villages et aux points de vue, la journée reste souple sans perdre son fil.",
+        text: "Votre chauffeur vous emmène à Monaco, Èze, Nice, Saint-Paul-de-Vence, Antibes, Cannes ou Saint-Tropez, des vieilles villes et des routes côtières aux plages privées, aux villages et aux points de vue. La journée reste souple tout en gardant un fil conducteur.",
         theme: "light",
       },
     ],
@@ -504,7 +504,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Qu'est-ce qu'une excursion privée avec Kokolimo ?",
         answer:
-          `Une excursion privée avec Kokolimo est une visite de la Côte d'Azur entièrement personnalisée, avec un chauffeur dédié et un véhicule de luxe. Vous découvrez la région à votre rythme, en toute liberté pour les arrêts, les horaires et l'itinéraire. Elle se réserve à l'heure, dès ${hourly(E_CLASS)} en Mercedes Classe E, ou à la journée, dès ${fullDay(E_CLASS)}, à un prix confirmé avant la réservation.`,
+          `Une excursion privée avec Kokolimo est une visite de la Côte d'Azur entièrement personnalisée, avec un chauffeur dédié et un véhicule de luxe. Vous découvrez la région à votre rythme, en toute liberté pour les arrêts, les horaires et l'itinéraire. En Mercedes Classe E, comptez à partir de ${hourly(E_CLASS)} de l'heure ou ${fullDay(E_CLASS)} la journée. Le prix est confirmé avant la réservation.`,
       },
       {
         question: "Puis-je personnaliser l'itinéraire de mon excursion privée ?",
@@ -519,7 +519,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quelle différence entre une excursion privée et un chauffeur privé à l'heure ?",
         answer:
-          "L'excursion privée est pensée pour la découverte et les visites, tandis que le chauffeur à l'heure sert à vous déplacer librement pour vos rendez-vous, votre shopping et votre emploi du temps. Dans les deux cas, un véhicule privé et un chauffeur restent à votre disposition pendant toute la réservation.",
+          "L'excursion privée est pensée pour la découverte et les visites. Avec un chauffeur à l'heure, vous vous déplacez librement selon votre emploi du temps, pour vos rendez-vous ou vos achats. Dans les deux cas, un véhicule privé et un chauffeur restent à votre disposition pendant toute la réservation.",
       },
       {
         question: "Le chauffeur reste-t-il disponible pendant toute l'excursion ?",
@@ -575,13 +575,13 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       "La Côte d'Azur réunit la plus forte concentration de ports de plaisance pour superyachts au monde, et un chauffeur reste le lien le plus simple entre l'aéroport et le quai.",
     panels: [
       {
-        title: "Accueil au vol, dépose sur le quai",
+        title: "Accueil à l'aéroport et dépose sur le quai",
         text: "Nous suivons votre vol, vous accueillons aux arrivées avec une pancarte à votre nom, prenons en charge les bagages et les provisions, et vous déposons directement sur le quai du port ou à l'annexe qui vous attend. Une heure d'attente est incluse.",
         theme: "dark",
       },
       {
         title: "Tous les ports desservis",
-        text: `Depuis l'aéroport de Nice, en Mercedes Classe E : Port Vauban à Antibes en 25 minutes environ, dès ${fromAirport("antibes")} ; les ports de Cannes en une trentaine de minutes, dès ${fromAirport("cannes")} ; Port Hercule à Monaco en 30 à 40 minutes, dès ${fromAirport("monaco")} ; le vieux port de Saint-Tropez en une heure et demie à deux heures, dès ${fromAirport("st-tropez")}.`,
+        text: `Depuis l'aéroport de Nice, comptez 25 minutes environ pour Port Vauban à Antibes, une trentaine de minutes pour les ports de Cannes, 30 à 40 minutes pour Port Hercule à Monaco et une heure et demie à deux heures pour le vieux port de Saint-Tropez. En Mercedes Classe E, le prix commence à ${fromAirport("antibes")} pour Antibes, ${fromAirport("cannes")} pour Cannes ou Monaco et ${fromAirport("st-tropez")} pour Saint-Tropez.`,
         theme: "light",
       },
     ],
@@ -624,7 +624,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quels ports desservez-vous sur la Côte d'Azur ?",
         answer:
-          `Tous les ports de plaisance de la Côte d'Azur : Port Vauban à Antibes, les ports de Cannes, Port Hercule à Monaco et le vieux port de Saint-Tropez, entre autres. Depuis l'aéroport de Nice, le transfert coûte à partir de ${fromAirport("antibes")} pour Antibes, ${fromAirport("cannes")} pour Cannes ou Monaco et ${fromAirport("st-tropez")} pour Saint-Tropez en Mercedes Classe E, à prix fixe annoncé à l'avance.`,
+          `Nous desservons tous les ports de plaisance de la Côte d'Azur, dont Port Vauban à Antibes, les ports de Cannes, Port Hercule à Monaco et le vieux port de Saint-Tropez. Depuis l'aéroport de Nice, le transfert coûte à partir de ${fromAirport("antibes")} pour Antibes, ${fromAirport("cannes")} pour Cannes ou Monaco et ${fromAirport("st-tropez")} pour Saint-Tropez en Mercedes Classe E, à prix fixe annoncé à l'avance.`,
       },
       {
         question: "Pouvez-vous accueillir un jet privé pour un transfert vers un yacht ?",
@@ -639,7 +639,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quel véhicule choisir pour rejoindre un yacht ?",
         answer:
-          `Une Mercedes Classe V, jusqu'à ${V_CLASS.passengers} passagers, convient aux invités, à l'équipage et aux bagages volumineux réunis ; une Classe E ou une Classe S, jusqu'à ${E_CLASS.passengers} passagers, est idéale pour un couple qui voyage léger.`,
+          `La Mercedes Classe V accueille jusqu'à ${V_CLASS.passengers} passagers et convient quand les invités, l'équipage et les bagages volumineux voyagent ensemble. Une Classe E ou une Classe S, jusqu'à ${E_CLASS.passengers} passagers, est idéale pour un couple qui voyage léger.`,
       },
     ],
   },
@@ -662,7 +662,7 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Transport événementiel de luxe",
     heroTitle: "Chauffeur privé pour les événements de la Côte d'Azur",
-    heroDescription: `Un chauffeur privé pour les grands événements de la Côte d'Azur (le Grand Prix, les festivals de Cannes et le Monaco Yacht Show), pour arriver serein malgré la foule et les fermetures de routes, dès ${hourly(E_CLASS)} de l'heure ou ${fullDay(E_CLASS)} la journée en Mercedes Classe E.`,
+    heroDescription: `Pour les grands événements de la Côte d'Azur, comme le Grand Prix, les festivals de Cannes ou le Monaco Yacht Show, votre chauffeur privé vous permet d'arriver serein malgré la foule et les fermetures de routes. En Mercedes Classe E, comptez à partir de ${hourly(E_CLASS)} de l'heure ou ${fullDay(E_CLASS)} la journée.`,
     heroImageSrc: eventsPage.heroImageSrc,
     heroImageAlt: "Chauffeur événementiel de luxe, une Mercedes noire arrivant à un événement sur la Côte d'Azur",
     introTitle: "Arriver malgré la foule",
@@ -729,12 +729,12 @@ export const hubPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Faut-il réserver son transport à l'avance pour un événement ?",
         answer:
-          "Oui. Pendant les semaines d'événements, la côte affiche complet : il est indispensable de réserver chauffeurs et hélicoptères bien à l'avance pour en obtenir. Envoyez-nous l'événement, vos dates et le nombre de personnes, par le site ou par téléphone : nous confirmons la voiture et le prix avant la réservation.",
+          "Oui. Pendant les semaines d'événements, la côte affiche complet. Il est indispensable de réserver chauffeurs et hélicoptères bien à l'avance. Indiquez-nous l\'événement, vos dates et le nombre de personnes, par le site ou par téléphone. Nous vous confirmons la voiture et le prix avant la réservation.",
       },
       {
         question: "Un chauffeur peut-il rester disponible pendant l'événement ?",
         answer:
-          `Oui. Nous restons disponibles entre les sessions, les dîners et les soirées, nous vous déposons près de chaque entrée et venons vous chercher ensuite. Le chauffeur se réserve à l'heure, dès ${hourly(E_CLASS)} en Mercedes Classe E ou ${hourly(V_CLASS)} en van Classe V jusqu'à ${V_CLASS.passengers} passagers, ou à la journée, dès ${fullDay(E_CLASS)}.`,
+          `Oui. Nous restons disponibles entre les sessions, les dîners et les soirées, nous vous déposons près de chaque entrée et venons vous chercher ensuite. Le chauffeur se réserve à l'heure, dès ${hourly(E_CLASS)} en Mercedes Classe E, ou à la journée, dès ${fullDay(E_CLASS)}. La Classe V, qui accueille jusqu'à ${V_CLASS.passengers} passagers, coûte à partir de ${hourly(V_CLASS)} de l'heure.`,
       },
     ],
   },

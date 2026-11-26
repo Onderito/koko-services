@@ -176,13 +176,20 @@ function heroAccent(title: string, locale?: "fr") {
   return title.split(/\s+/)[0];
 }
 
-// The template's own words in each language; English pages keep the words they always had.
+// Destinations whose price-table title names their places rather than the price guide's name.
+const PRICE_PLACES: Record<"en" | "fr", Record<string, string>> = {
+  en: { nice: "the city of Nice", antibes: "Antibes and Juan-les-Pins", monaco: "Monaco and Cap d'Ail" },
+  fr: { antibes: "Antibes et à Juan-les-Pins", monaco: "Monaco et à Cap-d'Ail" },
+};
+type PriceCity = NonNullable<ReturnType<typeof cityForPage>>;
+
+// The template's own words in each language.
 const WORDS = {
   en: {
     quote: "Get my quote",
     ask: "Ask a question",
     faq: ["Frequently Asked", "Questions"],
-    pricesTitle: (city: string) => `Nice Airport to ${city}: prices`,
+    pricesTitle: (city: PriceCity) => `Prices from Nice Airport to ${PRICE_PLACES.en[city.id] ?? cityName(city)}`,
     pricesIntro: "Starting prices by vehicle for a private transfer, by the hour or for a full day.",
     allServices: undefined,
     // The main button of each page family that has no button of its own.
@@ -192,7 +199,8 @@ const WORDS = {
     quote: "Obtenir mon devis",
     ask: "Poser une question",
     faq: ["Questions", "fréquentes"],
-    pricesTitle: (city: string) => `De l'aéroport de Nice à ${city} : les prix`,
+    pricesTitle: (city: PriceCity) =>
+      city.id === "nice" ? "Nos prix entre l'aéroport et la ville de Nice" : `Nos prix de l'aéroport de Nice à ${PRICE_PLACES.fr[city.id] ?? cityName(city, "fr")}`,
     pricesIntro: "Prix de départ par véhicule pour un transfert privé, à l'heure ou à la journée.",
     allServices: "Découvrir tous nos services",
     family: {
@@ -458,7 +466,7 @@ export default function ServicePageTemplate({ config }: { config: ServicePageCon
         <AntiSection tone={tone} labelledBy="service-prices-title">
           <AntiHeading
             id="service-prices-title"
-            title={words.pricesTitle(cityName(priceCity, config.locale))}
+            title={words.pricesTitle(priceCity)}
             intro={words.pricesIntro}
           />
           <div className="mt-8">

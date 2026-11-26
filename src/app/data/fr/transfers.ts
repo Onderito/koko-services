@@ -95,7 +95,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
     panels: [
       {
         title: "Par la route ou en bateau",
-        text: "Nous assurons le transfert complet par la route, ou nous vous conduisons jusqu'à un embarcadère à Sainte-Maxime, avec une traversée organisée jusqu'au port.",
+        text: "Nous assurons tout le transfert par la route, ou nous vous déposons à un embarcadère de Sainte-Maxime, d'où une traversée organisée vous mène au port.",
         theme: "dark",
       },
       {
@@ -110,7 +110,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       paragraphs: [
         "Nice Côte d'Azur est l'aéroport principal de Saint-Tropez, à **environ 110 kilomètres** : comptez une heure et demie à deux heures par la route, et davantage en juillet et en août. Votre chauffeur vous accueille aux arrivées, prend vos bagages et vous conduit à votre hôtel, à votre villa, au Vieux-Port ou aux clubs de plage de Pampelonne.",
         `Pour ce trajet plus long, les prix commencent à ${routePrices("st-tropez")}, en aller simple, et sont fixés avant la réservation. Le van Classe V accueille jusqu'à ${V_CLASS.passengers} passagers avec leurs bagages, ce qui convient aux familles et aux groupes qui rejoignent une villa.`,
-        "En haute saison, la circulation sur la route du golfe peut être à l'arrêt. Nous pouvons alors vous conduire jusqu'à un embarcadère à Sainte-Maxime, avec une traversée organisée jusqu'au port. Pour votre départ, nous venons vous chercher à Saint-Tropez et vous ramenons à l'aéroport de Nice.",
+        "En haute saison, la circulation sur la route du golfe peut être à l'arrêt. Nous pouvons alors vous déposer à un embarcadère de Sainte-Maxime, d\'où une traversée organisée vous mène au port. Pour votre départ, nous venons vous chercher à Saint-Tropez et vous ramenons à l'aéroport de Nice.",
       ],
     },
     audienceTitle: "Idéal pour",
@@ -148,7 +148,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
     faq: [
       {
         question: "Combien coûte un transfert de l'aéroport de Nice à Saint-Tropez ?",
-        answer: `À partir de ${routePrices("st-tropez")}, en aller simple, pour un trajet d'environ 110 kilomètres. Le prix est fixé avant la réservation.`,
+        answer: `Pour ce trajet d'environ 110 kilomètres, l'aller simple coûte à partir de ${routePrices("st-tropez")}. Le prix est fixé avant la réservation.`,
       },
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Saint-Tropez ?",
@@ -163,12 +163,12 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       {
         question: "Peut-on rejoindre Saint-Tropez en bateau ?",
         answer:
-          "Oui. Nous pouvons vous conduire jusqu'à un embarcadère à Sainte-Maxime, avec une traversée organisée jusqu'au port, ce qui évite les bouchons estivaux du golfe.",
+          "Oui. Nous pouvons vous déposer à un embarcadère de Sainte-Maxime, d'où une traversée organisée vous mène au port en évitant les bouchons de l'été autour du golfe.",
       },
       {
         question: "Pourquoi Saint-Tropez est-il plus difficile d'accès en été ?",
         answer:
-          "Une seule route dessert la presqu'île : en juillet et en août, la circulation peut s'y bloquer complètement. Un chauffeur organise le trajet en conséquence, ou passe par le bateau.",
+          "Une seule route dessert la presqu'île : en juillet et en août, la circulation peut s'y bloquer complètement. Votre chauffeur organise le trajet en conséquence, ou vous fait prendre le bateau.",
       },
       {
         question: "Un groupe peut-il réserver une voiture de l'aéroport de Nice à Saint-Tropez ?",
@@ -201,10 +201,10 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
     serviceLabel: "Transfert Antibes",
     heroTitle: "Transfert de l'aéroport de Nice à Antibes",
     heroDescription:
-      "Un transfert avec chauffeur privé et accueil à l'arrivée, de l'aéroport de Nice à Antibes : environ 25 minutes, jusqu'à votre hôtel, Juan-les-Pins, le Cap d'Antibes ou Port Vauban.",
+      "Votre chauffeur privé vous accueille à l'aéroport de Nice et assure votre transfert jusqu'à Antibes en 25 minutes environ. Il vous dépose à votre hôtel, à Juan-les-Pins, au Cap d'Antibes ou à Port Vauban.",
     heroImageSrc: transferPages["antibes-transfer"].heroImageSrc,
     heroImageAlt: "Transfert avec chauffeur privé vers Antibes, une Mercedes noire près des remparts",
-    introTitle: "À quelques minutes par la côte",
+    introTitle: "À quelques minutes de l'aéroport, par la côte",
     introDescription:
       "Antibes, l'une des grandes villes les plus proches de l'aéroport, se rejoint en un transfert court et simple. Accueil à votre vol et dépose à votre porte.",
     panels: [
@@ -215,7 +215,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       },
       {
         title: "Antibes et le Cap",
-        text: "Transferts vers la vieille ville, les plages de Juan-les-Pins, les villas du Cap d'Antibes et les yachts de Port Vauban.",
+        text: "Nous assurons vos transferts vers la vieille ville, les plages de Juan-les-Pins, les villas du Cap d'Antibes et les yachts de Port Vauban.",
         theme: "light",
       },
     ],
@@ -255,11 +255,11 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Antibes ?",
         answer:
-          "Environ 25 minutes par la route quand elle est dégagée : Antibes est l'une des grandes villes les plus proches de l'aéroport de Nice.",
+          "Le trajet dure environ 25 minutes quand la route est dégagée. Antibes est l'une des grandes villes les plus proches de l'aéroport de Nice.",
       },
       {
         question: "Combien coûte un transfert de l'aéroport de Nice à Antibes ?",
-        answer: `À partir de ${eur(E_CLASS.prices.antibes.transfer)} environ en Mercedes Classe E ou ${eur(V_CLASS.prices.antibes.transfer)} en Classe V, avec un prix fixe annoncé à l'avance, sans compteur.`,
+        answer: `Comptez à partir de ${eur(E_CLASS.prices.antibes.transfer)} environ en Mercedes Classe E, ou ${eur(V_CLASS.prices.antibes.transfer)} en Classe V. C'est un prix fixe, annoncé à l'avance, sans compteur.`,
       },
       {
         question: "Pouvez-vous me conduire au Cap d'Antibes ou à Juan-les-Pins ?",
@@ -274,7 +274,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       {
         question: "Proposez-vous le transfert retour vers l'aéroport de Nice ?",
         answer:
-          "Oui. Beaucoup de clients réservent l'arrivée et le départ en même temps, pour un séjour à Antibes sans souci du début à la fin.",
+          "Oui. Beaucoup de clients réservent l'arrivée et le départ en même temps, pour être tranquilles du début à la fin de leur séjour à Antibes.",
       },
     ],
   },
@@ -312,7 +312,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       },
       {
         title: "Villas, hôtels et yachts",
-        text: "Des arrivées discrètes au Grand-Hôtel du Cap-Ferrat, dans les villas privées et jusqu'aux yachts au mouillage dans les baies.",
+        text: "Nous vous conduisons discrètement au Grand-Hôtel du Cap-Ferrat, dans les villas privées et jusqu'aux yachts au mouillage dans les baies.",
         theme: "light",
       },
     ],
@@ -322,7 +322,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       paragraphs: [
         "Saint-Jean-Cap-Ferrat se trouve à **25 minutes environ** à l'est de l'aéroport Nice Côte d'Azur, par la côte en passant par Villefranche. Votre chauffeur vous accueille aux arrivées, prend vos bagages et vous conduit à votre villa, à votre hôtel ou au port.",
         `Un transfert coûte à partir de ${eur(startingPrice("cap-ferrat", "mercedes-e"))} en Mercedes Classe E ou ${eur(startingPrice("cap-ferrat", "mercedes-v"))} en Classe V, qui accueille jusqu'à ${V_CLASS.passengers} passagers, et le prix est fixé à la réservation. Votre chauffeur suit votre vol et attend jusqu'à une heure après l'heure de prise en charge, sans supplément.`,
-        `Sur la presqu'île, les routes sont calmes et résidentielles, et serpentent entre les propriétés bordées de haies jusqu'au port et aux plages. Pour un yacht au mouillage, nous retrouvons son annexe au quai et convenons de l'horaire avec l'équipage. Pendant votre séjour, un chauffeur peut aussi rester à votre disposition à l'heure, à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Classe E.`,
+        `Sur la presqu'île, les routes sont calmes et résidentielles, et serpentent entre les propriétés bordées de haies jusqu'au port et aux plages. Pour un yacht au mouillage, nous retrouvons son annexe au quai et convenons de l'horaire avec l'équipage. Pendant votre séjour, vous pouvez aussi réserver un chauffeur à l'heure, à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Classe E.`,
       ],
     },
     audienceTitle: "Idéal pour",
@@ -431,8 +431,8 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       title: "Comment se passe le transfert de l'aéroport de Nice à Èze",
       paragraphs: [
         "Èze se trouve à **25 à 30 minutes environ** de l'aéroport Nice Côte d'Azur, par la Moyenne Corniche en direction de Monaco. Votre chauffeur vous accueille aux arrivées, prend vos bagages et vous conduit jusqu'à l'entrée du village.",
-        `Le village médiéval est fermé aux voitures : toutes s'arrêtent à son entrée, et les hôtels, comme le Château de la Chèvre d'Or, prennent en charge vos bagages dans les ruelles. Un transfert depuis l'aéroport coûte à partir de ${eur(startingPrice("eze"))} environ, à prix fixe avant la réservation, avec une heure d'attente incluse à partir de l'heure de prise en charge.`,
-        `Monaco est à quelques minutes : le même chauffeur peut vous conduire ensuite à Monte-Carlo, le long des corniches ou dîner sur la côte. Pour une soirée ou une journée entière, notre service de chauffeur privé à l'heure commence à ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E.`,
+        `Le village médiéval est fermé aux voitures : toutes s'arrêtent à son entrée, et les hôtels, comme le Château de la Chèvre d'Or, prennent en charge vos bagages dans les ruelles. Un transfert depuis l'aéroport coûte à partir de ${eur(startingPrice("eze"))} environ, à prix fixe annoncé avant la réservation. Une heure d'attente est incluse à partir de l'heure de prise en charge.`,
+        `Monaco est à quelques minutes d'Èze. Le même chauffeur peut ensuite vous emmener à Monte-Carlo, le long des corniches ou dîner sur la côte. Pour une soirée ou une journée entière, vous pouvez réserver un chauffeur privé à l'heure, à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E.`,
       ],
     },
     audienceTitle: "Idéal pour",
@@ -471,11 +471,11 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Èze ?",
         answer:
-          "Environ 25 à 30 minutes par la Moyenne Corniche, entre Nice et Monaco, jusqu'à l'entrée du village.",
+          "Le trajet dure 25 à 30 minutes environ par la Moyenne Corniche, entre Nice et Monaco, jusqu'à l'entrée du village.",
       },
       {
         question: "Combien coûte un transfert de l'aéroport de Nice à Èze ?",
-        answer: `À partir de ${eur(startingPrice("eze"))} environ depuis l'aéroport de Nice, à prix fixe avant la réservation, sans compteur.`,
+        answer: `Le transfert depuis l'aéroport de Nice coûte à partir de ${eur(startingPrice("eze"))} environ. C'est un prix fixe, annoncé avant la réservation, sans compteur.`,
       },
       {
         question: "Peut-on accéder au village d'Èze en voiture ?",
@@ -489,11 +489,11 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       },
       {
         question: "Puis-je réserver un chauffeur privé à l'heure à Èze ?",
-        answer: `Oui. Votre chauffeur reste avec vous à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E, ou ${eur(E_CLASS.prices.nice.fullDay)} la journée complète : un dîner au village, une balade le long des corniches ou une soirée à Monaco.`,
+        answer: `Oui. Votre chauffeur reste avec vous pour un dîner au village, une balade le long des corniches ou une soirée à Monaco. Comptez à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E, ou ${eur(E_CLASS.prices.nice.fullDay)} la journée complète.`,
       },
       {
         question: "Que comprend votre service de chauffeur à Èze ?",
-        answer: `Le transfert de l'aéroport de Nice jusqu'à l'entrée du village, à partir de ${eur(startingPrice("eze"))} environ à un prix fixé avant la réservation, et un chauffeur à l'heure dès ${eur(E_CLASS.prices.nice.hourly)}, pour un dîner au village, les corniches ou une soirée à Monaco.`,
+        answer: `Il comprend le transfert de l'aéroport de Nice jusqu'à l'entrée du village, à partir de ${eur(startingPrice("eze"))} environ, à un prix fixé avant la réservation. Un chauffeur à l'heure, dès ${eur(E_CLASS.prices.nice.hourly)}, peut aussi vous emmener dîner au village, sur les corniches ou à Monaco pour la soirée.`,
       },
       {
         question: "Pouvez-vous me ramener d'Èze à l'aéroport de Nice ?",
@@ -523,7 +523,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
     serviceLabel: "Transfert Villefranche-sur-Mer",
     heroTitle: "Transfert de l'aéroport de Nice à Villefranche",
     heroDescription:
-      "Un transfert avec chauffeur privé et accueil à l'arrivée, de l'aéroport de Nice à Villefranche-sur-Mer : environ 20 minutes, jusqu'à la vieille ville, votre hôtel ou le quai des navettes de croisière, à prix fixe confirmé avant la réservation.",
+      "Votre chauffeur privé vous accueille à l'aéroport de Nice et assure votre transfert jusqu'à Villefranche-sur-Mer en 20 minutes environ. Il vous dépose dans la vieille ville, à votre hôtel ou au quai des navettes de croisière, à prix fixe confirmé avant la réservation.",
     heroImageSrc: transferPages["villefranche-transfer"].heroImageSrc,
     heroImageAlt: "Transfert avec chauffeur privé vers Villefranche, une Mercedes noire au-dessus de la rade",
     introTitle: "À quelques minutes de la rade",
@@ -532,12 +532,12 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
     panels: [
       {
         title: "Accueil à votre vol",
-        text: "Nous suivons le vol, vous accueillons aux arrivées avec une pancarte à votre nom, prenons les bagages et vous conduisons vers l'est, par le court trajet jusqu'à Villefranche. Une heure d'attente est incluse à partir de l'heure de prise en charge.",
+        text: "Nous suivons votre vol et vous accueillons aux arrivées avec une pancarte à votre nom. Nous prenons vos bagages et partons vers l'est pour le court trajet jusqu'à Villefranche. Une heure d'attente est incluse à partir de l'heure de prise en charge.",
         theme: "dark",
       },
       {
         title: "Vieille ville et port de croisière",
-        text: "Arrivées dans la vieille ville aux façades pastel et dans les hôtels, et transferts depuis et vers le quai des navettes de croisière, dans la rade.",
+        text: "Nous vous déposons dans la vieille ville aux façades pastel ou à votre hôtel et assurons vos transferts vers et depuis le quai des navettes de croisière, dans la rade.",
         theme: "light",
       },
     ],
@@ -577,15 +577,15 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Villefranche ?",
         answer:
-          "Environ 20 minutes vers l'est par la côte : Villefranche-sur-Mer est l'une des villes les plus proches de l'aéroport.",
+          "Le trajet dure environ 20 minutes vers l'est par la côte. Villefranche-sur-Mer est l'une des villes les plus proches de l'aéroport.",
       },
       {
         question: "Combien coûte un transfert de l'aéroport de Nice à Villefranche ?",
         answer: `Le prix depuis l'aéroport de Nice est fixe et confirmé avant la réservation, sans compteur, avec une heure d'attente incluse. Il dépend de la voiture : la Classe E, la Classe S et la Maybach accueillent jusqu'à ${E_CLASS.passengers} passagers, le van Classe V jusqu'à ${V_CLASS.passengers} avec leurs bagages. Envoyez-nous votre vol et votre adresse à Villefranche-sur-Mer pour recevoir votre devis.`,
       },
       {
-        question: "Assurez-vous les transferts depuis le port de croisière de Villefranche-sur-Mer ?",
-        answer: `Oui. Votre chauffeur vous attend au port de croisière, au quai des navettes, et vous conduit à l'aéroport de Nice, à votre hôtel ou en excursion sur mesure à Nice, Monaco et Èze, dès ${eur(E_CLASS.prices.nice.hourly)} de l'heure ou ${eur(E_CLASS.prices.nice.fullDay)} la journée en Mercedes Classe E, avec un retour bien à l'heure pour le navire. Envoyez-nous la date de l'escale et vos horaires : nous confirmons la voiture et le prix fixe avant la réservation.`,
+        question: "Proposez-vous des transferts depuis le port de croisière de Villefranche-sur-Mer ?",
+        answer: `Oui. Votre chauffeur vous attend au quai des navettes du port de croisière. Il vous conduit à l'aéroport de Nice, à votre hôtel ou en excursion sur mesure à Nice, Monaco et Èze. Pour une excursion, comptez à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure ou ${eur(E_CLASS.prices.nice.fullDay)} la journée en Mercedes Classe E, avec un retour à temps pour remonter à bord. Envoyez-nous la date de l'escale et vos horaires : nous confirmons la voiture et le prix fixe avant la réservation.`,
       },
       {
         question: "Pouvez-vous rejoindre un yacht dans la rade de Villefranche ?",
@@ -594,16 +594,16 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       },
       {
         question: "Puis-je réserver un chauffeur privé à l'heure à Villefranche-sur-Mer ?",
-        answer: `Oui. Votre chauffeur reste avec vous à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E, ou ${eur(E_CLASS.prices.nice.fullDay)} la journée complète, pour une réservation de quatre heures minimum : un dîner dans la vieille ville, une journée à Nice, à Monaco ou à Èze.`,
+        answer: `Oui. Votre chauffeur reste avec vous pour un dîner dans la vieille ville ou une journée à Nice, à Monaco ou à Èze. Comptez à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E, ou ${eur(E_CLASS.prices.nice.fullDay)} la journée complète. La réservation est de quatre heures minimum.`,
       },
       {
         question: "Que comprend votre service de chauffeur privé à Villefranche-sur-Mer ?",
-        answer: `Le transfert de l'aéroport de Nice en 20 minutes environ, avec accueil aux arrivées, suivi du vol et une heure d'attente incluse, à prix fixe confirmé avant la réservation ; les transferts depuis et vers le port de croisière ; et un chauffeur à l'heure dès ${eur(E_CLASS.prices.nice.hourly)} pour la vieille ville, Nice, Monaco ou Èze.`,
+        answer: `Il comprend le transfert de l'aéroport de Nice en 20 minutes environ, à prix fixe confirmé avant la réservation, avec accueil aux arrivées, suivi du vol et une heure d'attente incluse. Il comprend aussi les trajets vers et depuis le port de croisière, et un chauffeur à l'heure dès ${eur(E_CLASS.prices.nice.hourly)} pour la vieille ville, Nice, Monaco ou Èze.`,
       },
       {
         question: "Proposez-vous le transfert retour vers l'aéroport de Nice ?",
         answer:
-          "Oui. Nous venons vous chercher à votre hôtel, dans la vieille ville ou au quai et vous déposons à votre terminal, 24 h/24, 7 j/7. Beaucoup de clients réservent l'arrivée et le départ en même temps ; l'annulation est gratuite jusqu'à cinq jours avant la prise en charge.",
+          "Oui. Nous venons vous chercher à votre hôtel, dans la vieille ville ou au quai et vous déposons à votre terminal, 24 h/24, 7 j/7. Beaucoup de clients réservent l'arrivée et le départ en même temps. L'annulation est gratuite jusqu'à cinq jours avant la prise en charge.",
       },
     ],
   },
@@ -628,7 +628,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
     serviceLabel: "Transfert Menton",
     heroTitle: "Transfert de l'aéroport de Nice à Menton",
     heroDescription:
-      "Un transfert avec chauffeur privé et accueil à l'arrivée, de l'aéroport de Nice à Menton : environ 40 minutes vers l'est en passant par Monaco, jusqu'à la vieille ville, aux jardins ou au front de mer, à prix fixe confirmé avant la réservation.",
+      "Votre chauffeur privé vous accueille à l'aéroport de Nice et assure votre transfert jusqu'à Menton en 40 minutes environ, vers l'est en passant par Monaco. Il vous dépose dans la vieille ville, aux jardins ou sur le front de mer, à prix fixe confirmé avant la réservation.",
     heroImageSrc: transferPages["menton-transfer"].heroImageSrc,
     heroImageAlt: "Transfert avec chauffeur privé vers Menton, une Mercedes noire sur le front de mer",
     introTitle: "Aux portes de l'Italie",
@@ -642,7 +642,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       },
       {
         title: "Vieille ville et jardins",
-        text: "Arrivées dans la vieille ville à l'italienne, aux célèbres jardins et dans les hôtels du front de mer de la ville la plus chaude de la côte.",
+        text: "Menton est la ville la plus chaude de la côte. Nous vous conduisons dans sa vieille ville à l'italienne, jusqu'à ses célèbres jardins ou dans les hôtels de son front de mer.",
         theme: "light",
       },
     ],
@@ -682,7 +682,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Menton ?",
         answer:
-          "Environ 40 minutes vers l'est le long de la côte, en passant par Monaco, jusqu'à Menton, à l'extrémité est de la Côte d'Azur.",
+          "Le trajet dure environ 40 minutes vers l'est le long de la côte, en passant par Monaco. Menton se trouve à l'extrémité est de la Côte d'Azur.",
       },
       {
         question: "Combien coûte un transfert de l'aéroport de Nice à Menton ?",
@@ -695,20 +695,20 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       },
       {
         question: "Peut-on passer en Italie depuis Menton ?",
-        answer: `Oui. Menton est à la frontière italienne, et nous pouvons organiser la suite de votre trajet jusqu'à Vintimille et la Riviera dei Fiori toute proche. Depuis l'aéroport de Nice, Sanremo est à une heure environ, à partir de ${eur(startingPrice("sanremo", "mercedes-e"))} en Mercedes Classe E.`,
+        answer: `Oui. Menton est à la frontière italienne, et nous pouvons organiser la suite de votre trajet jusqu'à Vintimille et la Riviera dei Fiori toute proche. Sanremo est à une heure environ de l'aéroport de Nice, et le trajet coûte à partir de ${eur(startingPrice("sanremo", "mercedes-e"))} en Mercedes Classe E.`,
       },
       {
         question: "Puis-je réserver un chauffeur privé à l'heure à Menton ?",
-        answer: `Oui. Votre chauffeur reste avec vous à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E, ou ${eur(E_CLASS.prices.nice.fullDay)} la journée complète, pour une réservation de quatre heures minimum : la Fête du Citron, une soirée à Monaco ou une journée jusqu'à Vintimille et la Riviera dei Fiori.`,
+        answer: `Oui. Votre chauffeur reste avec vous pour la Fête du Citron, une soirée à Monaco ou une journée jusqu'à Vintimille et la Riviera dei Fiori. Comptez à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E, ou ${eur(E_CLASS.prices.nice.fullDay)} la journée complète. La réservation est de quatre heures minimum.`,
       },
       {
         question: "Que comprend votre service de chauffeur privé à Menton ?",
-        answer: `Le transfert de l'aéroport de Nice en 40 minutes environ en passant par Monaco, avec accueil aux arrivées, suivi du vol et une heure d'attente incluse, à prix fixe confirmé avant la réservation, et un chauffeur à l'heure dès ${eur(E_CLASS.prices.nice.hourly)} pour Menton, Monaco ou la Riviera italienne.`,
+        answer: `Il comprend le transfert de l'aéroport de Nice en 40 minutes environ en passant par Monaco, à prix fixe confirmé avant la réservation, avec accueil aux arrivées, suivi du vol et une heure d'attente incluse. Il comprend aussi un chauffeur à l'heure dès ${eur(E_CLASS.prices.nice.hourly)} pour Menton, Monaco ou la Riviera italienne.`,
       },
       {
         question: "Proposez-vous le transfert retour vers l'aéroport de Nice ?",
         answer:
-          "Oui. Nous venons vous chercher à votre hôtel ou à votre adresse à Menton et vous déposons à votre terminal, 24 h/24, 7 j/7. Beaucoup de clients réservent l'arrivée et le départ en même temps ; l'annulation est gratuite jusqu'à cinq jours avant la prise en charge.",
+          "Oui. Nous venons vous chercher à votre hôtel ou à votre adresse à Menton et vous déposons à votre terminal, 24 h/24, 7 j/7. Beaucoup de clients réservent l'arrivée et le départ en même temps. L'annulation est gratuite jusqu'à cinq jours avant la prise en charge.",
       },
     ],
   },
@@ -733,7 +733,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
     serviceLabel: "Transfert longue distance",
     heroTitle: "Transferts privés longue distance depuis la Côte d'Azur",
     heroDescription:
-      "Un chauffeur privé pour les longs trajets depuis Nice, Monaco et la Côte d'Azur : vers Courchevel, Megève et Chamonix en hiver, vers Milan et le reste de l'Italie, vers la Suisse, et vers d'autres villes et aéroports, à un prix fixé avant le voyage.",
+      "Pour vos longs trajets depuis Nice, Monaco et la Côte d'Azur, votre chauffeur privé vous conduit à Courchevel, Megève et Chamonix en hiver, à Milan et dans le reste de l'Italie, en Suisse ou vers d'autres villes et aéroports. Le prix est fixé avant le voyage.",
     heroImageSrc: transferPages["long-distance-transfer"].heroImageSrc,
     heroImageAlt: "Transfert longue distance avec chauffeur privé",
     introTitle: "Un seul chauffeur, de porte à porte",
@@ -742,7 +742,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
     panels: [
       {
         title: "Au-delà de la côte",
-        text: "Nous vous conduisons à Courchevel, Megève et Chamonix en hiver, de l'autre côté de la frontière en Italie et en Suisse, et vers d'autres villes, stations et aéroports.",
+        text: "En hiver, nous vous conduisons à Courchevel, Megève et Chamonix. Nous passons aussi la frontière vers l'Italie et la Suisse, et desservons d'autres villes, stations et aéroports.",
         theme: "dark",
       },
       {
@@ -756,7 +756,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       title: "Comment se passe un transfert longue distance",
       paragraphs: [
         "Un transfert longue distance couvre les trajets d'une heure ou plus depuis la Côte d'Azur : vers les stations de ski des Alpes, de l'autre côté de la frontière en Italie ou en Suisse, ou vers une autre ville ou un autre aéroport. Le même chauffeur vous conduit de porte à porte en Mercedes.",
-        `Quelques trajets courants depuis l'aéroport de Nice : Sanremo, de l'autre côté de la frontière italienne, à **une heure environ**, à partir de ${eur(startingPrice("sanremo", "mercedes-e"))} en Classe E. Isola 2000, la station de ski la plus proche de la côte, est à 1 h 45 à 2 heures par la vallée de la Tinée, à partir de ${eur(startingPrice("isola-2000"))} environ. Milan est à environ quatre heures, et Courchevel, Megève et Chamonix à cinq à six heures environ, selon l'itinéraire, la circulation et la neige.`,
+        `Voici quelques trajets courants depuis l'aéroport de Nice. Sanremo, de l'autre côté de la frontière italienne, est à **une heure environ**, à partir de ${eur(startingPrice("sanremo", "mercedes-e"))} en Classe E. Isola 2000, la station de ski la plus proche de la côte, est à 1 h 45 à 2 heures par la vallée de la Tinée, à partir de ${eur(startingPrice("isola-2000"))} environ. Milan est à environ quatre heures, et Courchevel, Megève et Chamonix à cinq à six heures environ, selon l'itinéraire, la circulation et la neige.`,
         `Pour les trajets plus longs, le prix dépend de la distance et de la voiture, et il est **fixé avant la réservation**, sans compteur. Le van Classe V accueille jusqu'à ${V_CLASS.passengers} passagers avec leurs bagages et leur équipement de ski, et nos voitures sont équipées pour les routes de montagne en hiver ; la Classe E et la Classe S accueillent jusqu'à ${E_CLASS.passengers} passagers.`,
         "Indiquez-nous votre point de départ et votre destination, la date, le nombre de passagers et de bagages, et les arrêts souhaités en route. Nous confirmons l'itinéraire, la voiture et le prix avant le trajet.",
       ],
@@ -797,7 +797,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       {
         question: "Qu'appelle-t-on un transfert longue distance ?",
         answer:
-          "Tout trajet de plusieurs heures depuis la Côte d'Azur : vers les Alpes, l'Italie ou la Suisse, ou vers une autre ville, une station ou un aéroport.",
+          "Il s'agit de tout trajet de plusieurs heures depuis la Côte d'Azur, vers les Alpes, l'Italie ou la Suisse, ou vers une autre ville, une station ou un aéroport.",
       },
       {
         question: "Faites-vous le trajet de Nice à Courchevel et aux autres stations de ski ?",
@@ -805,7 +805,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       },
       {
         question: "Pouvez-vous passer la frontière vers l'Italie ou la Suisse ?",
-        answer: `Oui. Sanremo est à une heure environ de l'aéroport de Nice, à partir de ${eur(startingPrice("sanremo", "mercedes-e"))} en Mercedes Classe E, et Milan à environ quatre heures. Nous allons aussi en Suisse et dans d'autres pays proches, à un prix fixé avant la réservation.`,
+        answer: `Oui. Sanremo est à une heure environ de l'aéroport de Nice, et le trajet coûte à partir de ${eur(startingPrice("sanremo", "mercedes-e"))} en Mercedes Classe E. Milan est à environ quatre heures. Nous allons aussi en Suisse et dans d'autres pays proches, à un prix fixé avant la réservation.`,
       },
       {
         question: "Pouvons-nous nous arrêter en route ?",
@@ -814,7 +814,7 @@ export const transferPagesFr = frenchSpacing<Record<string, ServicePageConfig>>(
       },
       {
         question: "Quelle voiture choisir pour un transfert longue distance ?",
-        answer: `Le van Classe V, jusqu'à ${V_CLASS.passengers} passagers avec beaucoup de bagages ; la Classe S ou la Maybach, jusqu'à ${S_CLASS.passengers} passagers, pour le plus grand confort.`,
+        answer: `Le van Classe V accueille jusqu'à ${V_CLASS.passengers} passagers avec beaucoup de bagages. La Classe S et la Maybach accueillent jusqu'à ${S_CLASS.passengers} passagers dans le plus grand confort.`,
       },
       {
         question: "Combien coûte un transfert longue distance ?",

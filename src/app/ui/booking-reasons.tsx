@@ -56,11 +56,11 @@ function frenchReasons(google: Rating, tripadvisor: Rating, year: number, month:
     },
     {
       title: `${NOMBRES[chauffeurLanguages.length - 1] ?? chauffeurLanguages.length} langues`,
-      text: `Des chauffeurs qui parlent ${liste(chauffeurLanguages.map(language => LANGUES[language] ?? language))}.`,
+      text: `Nos chauffeurs parlent ${liste(chauffeurLanguages.map(language => LANGUES[language] ?? language))}.`,
     },
     {
       title: "Des conditions fixées à l'avance",
-      text: "Un prix fixe confirmé avant la réservation, et l'annulation gratuite jusqu'à cinq jours avant la prise en charge.",
+      text: "Votre prix fixe est confirmé avant la réservation. L'annulation est gratuite jusqu'à cinq jours avant la prise en charge.",
     },
   ];
 }
@@ -78,21 +78,21 @@ export default async function BookingReasons({ locale }: { locale?: "fr" } = {})
       title: `Rated ${google.rating.toFixed(1)} on Google`,
       text: (
         <>
-          <RatingLink rating={google} />, and <RatingLink rating={tripadvisor} />.
+          We are rated <RatingLink rating={google} /> and <RatingLink rating={tripadvisor} />.
         </>
       ),
     },
     {
-      title: `A Nice company since ${year}`,
-      text: `${companyLegalName}, ${companyAddress}, on the Nice trade register since ${MONTHS[month - 1]} ${year} (${companyRcs}).`,
+      title: `Based in Nice since ${year}`,
+      text: `${companyLegalName}, ${companyAddress}, has been on the Nice trade register since ${MONTHS[month - 1]} ${year} (${companyRcs}).`,
     },
     {
       title: `${COUNT_WORDS[chauffeurLanguages.length - 1] ?? chauffeurLanguages.length} languages`,
-      text: `Chauffeurs who speak ${list(chauffeurLanguages)}.`,
+      text: `Our chauffeurs speak ${list(chauffeurLanguages)}.`,
     },
     {
       title: "Terms fixed in advance",
-      text: "A fixed price confirmed before you book, and free cancellation up to five days before the pickup.",
+      text: "Your fixed price is confirmed before you book. Cancellation is free up to five days before the pickup.",
     },
   ];
   return <ReasonCards title="Why travellers book Kokolimo" reasons={reasons} />;

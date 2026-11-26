@@ -105,27 +105,27 @@ export const serviceMenuLinks: ServiceCardLink[] = [
   {
     href: "/our-services/transfers",
     label: "Airport Transfers",
-    description: "Airport and long-distance chauffeur rides",
+    description: "We chauffeur you to and from the airport and on long-distance journeys.",
   },
   {
     href: "/our-services/hourly-chauffeur",
     label: "Hourly Chauffeur Service",
-    description: "Flexible chauffeur service in key Riviera destinations and prestigious Alpine winter resorts",
+    description: "Book a chauffeur by the hour in key Riviera destinations and prestigious Alpine winter resorts.",
   },
   {
     href: "/our-services/private-tours",
     label: "Private Tours",
-    description: "Private destination tours across the Riviera and the French Alps during the winter season.",
+    description: "We run private tours across the Riviera, and in the French Alps during the winter season.",
   },
   {
     href: "/our-services/yacht-transfers",
     label: "Yacht Transfers",
-    description: "Chauffeur transfers to the yacht marinas of Monaco, Cannes, Antibes and Saint-Tropez.",
+    description: "We run chauffeur transfers to the yacht marinas of Monaco, Cannes, Antibes and Saint-Tropez.",
   },
   {
     href: "/our-services/events",
     label: "Event Transport",
-    description: "Chauffeur transport for the Grand Prix, the Cannes festivals and the Monaco Yacht Show.",
+    description: "We provide chauffeur transport for the Grand Prix, the Cannes festivals and the Monaco Yacht Show.",
   },
 ];
 
@@ -134,7 +134,7 @@ export const homeServiceCards = [
     title: "Airport Transfers",
     kicker: "Airport & long-distance",
     description:
-      "Point-to-point chauffeur service for airport arrivals, hotel pickups, events, and long-distance Riviera journeys with precise timing and premium comfort.",
+      "Our point-to-point chauffeur service covers airport arrivals, hotel pickups, events, and long-distance Riviera journeys, with precise timing and premium comfort.",
     image: "/assets/images/services/transfer.webp",
     link: "/our-services/transfers",
   },
@@ -142,7 +142,7 @@ export const homeServiceCards = [
     title: "Hourly Chauffeur Service",
     kicker: "Flexible by destination",
     description:
-      "A dedicated chauffeur on standby for meetings, shopping, lunches, beach clubs, and multi-stop days in Nice, Cannes, Monaco, Saint-Tropez and selected Alpine destinations during the winter season.",
+      "Your dedicated chauffeur stays on standby for meetings, shopping, lunches, beach clubs, and multi-stop days in Nice, Cannes, Monaco and Saint-Tropez. In winter, we also cover selected Alpine destinations.",
     image: "/assets/images/services/hourly.webp",
     link: "/our-services/hourly-chauffeur",
   },
@@ -304,7 +304,7 @@ export const transfersPage: ServicePageConfig = {
   },
   serviceLabel: "Airport Transfers",
   heroTitle: "Private Airport Transfers on the French Riviera",
-  heroDescription: "Luxury chauffeur transfers for airport arrivals, hotel pickups, events, and longer journeys with precise coordination and discreet service.",
+  heroDescription: "Our luxury chauffeur transfers cover airport arrivals, hotel pickups, events, and longer journeys, with precise coordination and discreet service.",
   heroImageSrc: "/assets/images/services/across-the-french-riviera.webp",
   heroImageAlt: "Private chauffeur transfer arrival on the French Riviera",
   introTitle: "The Art of the Transfer",
@@ -415,10 +415,10 @@ export const hourlyChauffeurPage: ServicePageConfig = {
   serviceLabel: "Hourly Chauffeur Service",
   heroTitle: "Hourly Chauffeur Service for Flexible Riviera Days",
   heroDescription:
-    "A dedicated chauffeur on standby for business travel, shopping, lunches, meetings, and multi-stop days across the French Riviera.",
+    "Your dedicated chauffeur stays on standby for business travel, shopping, lunches, meetings, and multi-stop days across the French Riviera.",
   heroImageSrc: "/assets/images/services/riviera-days.webp",
   heroImageAlt: "Hourly chauffeur service in Monaco and the French Riviera",
-  introTitle: "The Art of Hourly Chauffeur Service",
+  introTitle: "How Our Hourly Chauffeur Service Works",
   introDescription:
     "Hourly service gives you structure without rigidity: one chauffeur, one vehicle, and a day built around your timing.",
   panels: [
@@ -479,7 +479,7 @@ export const hourlyChauffeurPage: ServicePageConfig = {
       "Cancellation is free of charge until five days before the booked date and pickup time. If the service is cancelled less than five days before departure, the full fare is charged.",
   },
   {
-    question: "Can the chauffeur wait between meetings, restaurants, or appointments?",
+    question: "Can my chauffeur wait while I'm at meetings, restaurants, or appointments?",
     answer:
       "Yes. Your chauffeur remains on standby throughout the booking period, ensuring seamless transportation between meetings, hotels, restaurants, shopping destinations, and events across the French Riviera.",
   },
@@ -527,7 +527,7 @@ export const chauffeurToursPage: ServicePageConfig = {
     ],
   },
   serviceLabel: "Private Tours",
-  heroTitle: "Private Tours for Refined Riviera Discovery",
+  heroTitle: "Private Tours on the French Riviera",
   heroDescription: "Private chauffeur-led touring for travelers who want scenic drives, elegant stops, and a flexible itinerary without handling the logistics themselves.",
   heroImageSrc: "/assets/images/services/driver.webp",
   heroImageAlt: "Private chauffeur tour on the French Riviera",
@@ -586,7 +586,7 @@ export const chauffeurToursPage: ServicePageConfig = {
     {
       question: "Can I customize my private tour itinerary?",
       answer:
-        "Yes. Every private tour is fully customizable. You can choose your destinations, schedule, and stops, whether it includes coastal villages, luxury hotels, viewpoints, shopping areas, or restaurants along the French Riviera."
+        "Yes. Every private tour is fully customizable. You can choose the destinations, the schedule and the stops, from coastal villages and luxury hotels to viewpoints, shopping areas and restaurants along the French Riviera."
     },
     {
       question: "Which destinations can be included in a private tour?",
@@ -674,7 +674,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Anywhere on the Riviera",
-        text: "From the airport we drive to Nice, Monaco, Cannes, Antibes, Saint-Tropez, private villas, marinas and yachts, and back to the airport for your flight home.",
+        text: "From the airport, we drive to Nice, Monaco, Cannes, Antibes and Saint-Tropez, and to private villas, marinas and yachts. We also take you back to the airport for your flight home.",
         theme: "light",
       },
     ],
@@ -683,9 +683,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
       title: "How a Nice Airport transfer works",
       paragraphs: [
         `When your flight is booked, send us the flight number, the number of passengers and bags, and the address you are going to. We confirm the car and the **fixed price** before you travel: from ${eur(E_CLASS.prices.nice.transfer)} to Nice, ${eur(E_CLASS.prices.antibes.transfer)} to Antibes, ${eur(E_CLASS.prices.cannes.transfer)} to Cannes or Monaco and ${eur(E_CLASS.prices["st-tropez"].transfer)} to Saint-Tropez in a Mercedes E-Class.`,
-        "On the day, we track your flight. Your chauffeur waits in the arrivals hall with your name on a sign, helps with the luggage and walks you to the car. **One hour of waiting** is included from the pickup time in your booking, so a long queue at passport control or the baggage belt is covered.",
-        `The E-Class, the S-Class and the Maybach take up to ${E_CLASS.passengers} passengers; the V-Class takes up to ${V_CLASS.passengers} with their luggage, which suits families and groups. We drive day and night, every day of the year, so early-morning and late-night flights are no problem.`,
-        "For your departure, we collect you at your address and drop you at your terminal. Cancellation is free until five days before the pickup date and time; after that, the full price is charged.",
+        "On the day you travel, we track your flight. Your chauffeur waits in the arrivals hall with your name on a sign, helps with the luggage and walks you to the car. Your booking includes **one hour of waiting** from the pickup time, which covers a long queue at passport control or the baggage belt.",
+        `The E-Class, the S-Class and the Maybach take up to ${E_CLASS.passengers} passengers. For families and groups, the V-Class takes up to ${V_CLASS.passengers} with their luggage. We drive day and night, every day of the year, so early-morning and late-night flights are no problem.`,
+        "When you leave, we pick you up at your address and drop you off at your terminal. Cancellation is free until five days before the pickup date and time; after that, the full price is charged.",
       ],
     },
     practicalTitle: "Nice Airport Pickup, Pricing and Booking Conditions",
@@ -702,11 +702,11 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Starting prices",
-        text: `Nice from ${eur(E_CLASS.prices.nice.transfer)} in an E-Class; Cannes or Monaco from ${eur(E_CLASS.prices.cannes.transfer)}; Saint-Tropez from ${eur(E_CLASS.prices["st-tropez"].transfer)}. V-Class, S-Class and Maybach are also available, and the final fixed price is confirmed before booking.`,
+        text: `In an E-Class, a transfer to Nice starts from ${eur(E_CLASS.prices.nice.transfer)}, to Cannes or Monaco from ${eur(E_CLASS.prices.cannes.transfer)} and to Saint-Tropez from ${eur(E_CLASS.prices["st-tropez"].transfer)}. V-Class, S-Class and Maybach are also available, and the final fixed price is confirmed before booking.`,
       },
       {
         title: "Waiting and cancellation",
-        text: "One hour of waiting is included from the reserved pickup time. Cancellation is free until five days before that date and time; less than five days before departure, the full price is charged.",
+        text: "We include one hour of waiting from the pickup time you booked. You can cancel free of charge until five days before your pickup date and time. After that, the full price is charged.",
       },
     ],
     audienceTitle: "Ideal For",
@@ -752,16 +752,16 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Where will my driver meet me at Nice Airport?",
         answer:
-          "In the arrivals hall of your terminal, Terminal 1 or Terminal 2, holding a sign with your name. Your driver helps with the luggage and walks you to the car.",
+          "Your chauffeur waits in the arrivals hall of Terminal 1 or Terminal 2, holding a sign with your name. Your driver helps with the luggage and walks you to the car.",
       },
       {
         question: "What happens if my flight is late?",
         answer:
-          "We track your flight and adjust the pickup to the real landing time. One hour of waiting is included from the pickup time in your booking; tell us as soon as possible about a major delay.",
+          "We track your flight and adjust the pickup to the real landing time. One hour of waiting is included from your booked pickup time. If you expect a major delay, let us know as soon as possible.",
       },
       {
         question: "Which cars do you use for airport transfers?",
-        answer: `Mercedes cars only: the E-Class and the S-Class for up to ${E_CLASS.passengers} passengers, the V-Class for up to ${V_CLASS.passengers} with their luggage, and the Maybach for up to ${MAYBACH.passengers}.`,
+        answer: `We drive Mercedes cars only. The E-Class, the S-Class and the Maybach take up to ${E_CLASS.passengers} passengers, and the V-Class takes up to ${V_CLASS.passengers} with their luggage.`,
       },
       {
         question: "Do you pick up early-morning and late-night flights?",
@@ -771,7 +771,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Which destinations do you serve from Nice Airport?",
         answer:
-          "Nice, Cannes, Antibes, Monaco, Menton, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat and Saint-Tropez, and Courchevel, Megève and Chamonix in winter.",
+          "We drive to Nice, Cannes, Antibes, Monaco, Menton, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat and Saint-Tropez. In winter, we also drive to Courchevel, Megève and Chamonix.",
       },
       {
         question: "Can you drive me back to Nice Airport for my flight?",
@@ -803,7 +803,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Long-Distance Transfer",
     heroTitle: "Long-Distance Private Transfers From the Riviera",
     heroDescription:
-      "A private driver for longer journeys from Nice, Monaco and the Riviera: to the ski resorts of the Alps, to Italy and Switzerland, and to other cities and airports, at a price fixed before you travel.",
+      "Your private driver takes you on longer journeys from Nice, Monaco and the Riviera to the ski resorts of the Alps, to Italy and Switzerland, and to other cities and airports. The price is fixed before you travel.",
     heroImageSrc: "/assets/images/services/long-distance.webp",
     heroImageAlt: "Long-distance private chauffeur transfer",
     introTitle: "One Driver, Door to Door",
@@ -812,7 +812,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Beyond the Coast",
-        text: "We drive to Courchevel, Megève and Chamonix in winter, across the border to Italy and Switzerland, and to other cities, resorts and airports.",
+        text: "In winter we drive to Courchevel, Megève and Chamonix. We also cross the border into Italy and Switzerland, and drive to other cities, resorts and airports.",
         theme: "dark",
       },
       {
@@ -826,9 +826,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
       title: "How a long-distance transfer works",
       paragraphs: [
         "A long-distance transfer covers journeys of an hour or more from the French Riviera: to the ski resorts of the Alps, across the border to Italy or Switzerland, or to another city or airport. The same chauffeur takes you from door to door in a Mercedes.",
-        `Some typical trips from Nice Airport: Sanremo, across the Italian border, takes **about an hour**, from ${eur(startingPrice("sanremo", "mercedes-e"))} in an E-Class. Isola 2000, the ski resort closest to the coast, is 1 hour 45 minutes to 2 hours up the Tinée valley, from around ${eur(startingPrice("isola-2000"))}. Milan is about four hours away, and Courchevel, Megève and Chamonix about five to six hours, depending on the route, the traffic and the snow.`,
-        `For the longer routes, the price depends on the distance and the car, and it is **fixed before you book**, with no meter. The V-Class takes up to ${V_CLASS.passengers} passengers with their luggage and ski equipment, and our cars are equipped for winter mountain roads; the E-Class and the S-Class take up to ${E_CLASS.passengers}.`,
-        "Tell us where you start and where you are going, the date, the number of passengers and bags, and any stops you want on the way. We confirm the route, the car and the price before the trip.",
+        `Here are some typical trips from Nice Airport. Sanremo, across the Italian border, takes **about an hour** and costs from ${eur(startingPrice("sanremo", "mercedes-e"))} in an E-Class. Isola 2000, the ski resort closest to the coast, is 1 hour 45 minutes to 2 hours up the Tinée valley, and the trip costs from around ${eur(startingPrice("isola-2000"))}. Milan is about four hours away, and Courchevel, Megève and Chamonix about five to six hours, depending on the route, the traffic and the snow.`,
+        `On longer routes, the price depends on the distance and the car. We **fix it before you book**, and there is no meter. The V-Class takes up to ${V_CLASS.passengers} passengers with their luggage and ski equipment, and the E-Class and the S-Class take up to ${E_CLASS.passengers}. Our cars are equipped for winter mountain roads.`,
+        "Tell us where you start and where you are going, the date, the number of passengers and bags, and any stops you want on the way. We then confirm the route, the car and the price before you travel.",
       ],
     },
     audienceTitle: "Suited To",
@@ -870,7 +870,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "What counts as a long-distance transfer?",
         answer:
-          "Any journey of several hours from the Riviera: to the Alps, to Italy or Switzerland, or to another city, resort or airport.",
+          "Any journey of several hours from the Riviera counts. It can take you to the Alps, Italy or Switzerland, or to another city, resort or airport.",
       },
       {
         question: "Do you drive from Nice to Courchevel and the other ski resorts?",
@@ -878,7 +878,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         question: "Can you drive across the border to Italy or Switzerland?",
-        answer: `Yes. Sanremo is about an hour from Nice Airport, from ${eur(startingPrice("sanremo", "mercedes-e"))} in a Mercedes E-Class, and Milan about four hours. We also drive to Switzerland and other nearby countries, at a price fixed before you book.`,
+        answer: `Yes. Sanremo is about an hour from Nice Airport, and the transfer costs from ${eur(startingPrice("sanremo", "mercedes-e"))} in a Mercedes E-Class. Milan is about four hours away. We also drive to Switzerland and other nearby countries, at a price fixed before you book.`,
       },
       {
         question: "Can we stop on the way?",
@@ -887,11 +887,11 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         question: "Which car is best for a long-distance transfer?",
-        answer: `The V-Class, for up to ${V_CLASS.passengers} passengers with plenty of luggage; the S-Class or the Maybach for up to ${S_CLASS.passengers} passengers who want the most comfort.`,
+        answer: `The V-Class suits up to ${V_CLASS.passengers} passengers with plenty of luggage. For up to ${S_CLASS.passengers} passengers who want the most comfort, choose the S-Class or the Maybach.`,
       },
       {
         question: "How much is a long-distance transfer?",
-        answer: `It depends on the distance and the car, and we fix the price before you book, with no meter. As a guide, Sanremo starts from ${eur(startingPrice("sanremo", "mercedes-e"))} in an E-Class and Isola 2000 from around ${eur(startingPrice("isola-2000"))}.`,
+        answer: `It depends on the distance and the car, and we fix the price before you book, with no meter. As a guide, a transfer to Sanremo starts from ${eur(startingPrice("sanremo", "mercedes-e"))} in an E-Class, and one to Isola 2000 from around ${eur(startingPrice("isola-2000"))}.`,
       },
       {
         question: "Can I book the return journey too?",
@@ -918,7 +918,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Monaco Airport Transfer",
     heroTitle: "Nice Airport to Monaco Transfer",
     heroDescription:
-      `Your private driver meets you at Nice Airport and drives you to Monaco in about 30 to 40 minutes, to your hotel, Port Hercule or the Casino Square, at a fixed price from ${eur(E_CLASS.prices.monaco.transfer)}.`,
+      `Your private driver meets you at Nice Airport and drives you to your hotel, Port Hercule or the Casino Square in Monaco. The journey takes about 30 to 40 minutes, and the fixed price starts from ${eur(E_CLASS.prices.monaco.transfer)}.`,
     heroImageSrc: "/assets/images/services/monaco-airport-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Monaco with a black Mercedes on the harbour",
     introTitle: "Straight to the Principality",
@@ -938,11 +938,11 @@ export const transferPages: Record<string, ServicePageConfig> = {
     ],
     bookingReasons: true,
     story: {
-      title: "How the Nice Airport to Monaco transfer works",
+      title: "How your transfer from Nice Airport to Monaco works",
       paragraphs: [
-        "Monaco has no airport of its own, so a Monaco airport transfer starts at Nice Côte d'Azur, **about 30 to 40 minutes** away by the motorway or the coast road depending on traffic. Your driver meets you in arrivals, at Terminal 1 or 2, and drops you at the door of your hotel or residence in Monte-Carlo, on the quay at Port Hercule or on the Casino Square.",
+        "Monaco has no airport of its own, so a Monaco airport transfer starts at Nice Côte d'Azur, **about 30 to 40 minutes** away by the motorway or the coast road depending on traffic. Your driver meets you in arrivals at Terminal 1 or 2 and drops you at the door of your hotel or residence in Monte-Carlo, on the quay at Port Hercule or on the Casino Square.",
         `A one-way transfer starts at ${routePrices("monaco")}. We fix the price when you book, follow your flight and include one hour of waiting from your pickup time. The V-Class seats up to ${V_CLASS.passengers} passengers with their luggage.`,
-        "During the Grand Prix in May and the Yacht Show in September, roads close and the principality fills up. We plan the route and the drop-off point around the closures. If you take the helicopter from Nice Airport instead, your driver meets you at the Monaco heliport in Fontvieille. For your departure, we collect you in Monaco and drive you back to your terminal.",
+        "During the Grand Prix in May and the Yacht Show in September, roads close and the principality fills up. We plan the route and the drop-off point around the closures. If you take the helicopter from Nice Airport instead, your driver meets you at the Monaco heliport in Fontvieille. When it is time to leave, we pick you up in Monaco and take you back to your terminal.",
       ],
     },
     audienceTitle: "Ideal For",
@@ -974,7 +974,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Book Your Nice Airport to Monaco Transfer",
+      title: "Book Your Transfer From Nice Airport to Monaco",
       description:
         "Send us your flight and your Monaco address, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Monaco Transfer",
@@ -983,7 +983,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     faq: [
       {
         question: "How much is a transfer from Nice Airport to Monaco?",
-        answer: `From ${routePrices("monaco")}, one way. The price is fixed and confirmed before you book, with no meter.`,
+        answer: `A one-way transfer starts from ${routePrices("monaco")}. The price is fixed and confirmed before you book, with no meter.`,
       },
       {
         question: "How long is the drive from Nice Airport to Monaco?",
@@ -998,7 +998,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Where will my driver meet me at Nice Airport?",
         answer:
-          "In the arrivals hall of your terminal, Terminal 1 or 2, with your name on a sign. Your driver takes your luggage and walks you to the car.",
+          "We wait for you in the arrivals hall of Terminal 1 or 2, with your name on a sign. Your driver takes your luggage and walks you to the car.",
       },
       {
         question: "Can you take me to a yacht in Port Hercule?",
@@ -1008,7 +1008,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Can I book a late-night transfer from Nice Airport to Monte-Carlo?",
         answer:
-          "Yes. Kokolimo drives 24/7, so we meet early-morning and late-night flights and drive you to Monte-Carlo.",
+          "Yes. Kokolimo drives 24/7, so your driver meets early-morning and late-night flights and takes you to Monte-Carlo.",
       },
       {
         question: "Do you drive from Monaco back to Nice Airport?",
@@ -1049,12 +1049,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Met at Your Flight",
-        text: "We track the flight, meet you in arrivals with a name board, take the luggage and bring you to the car for the run west to Cannes.",
+        text: "We track your flight and meet you in arrivals with a name board. Then we carry your luggage to the car for the drive west to Cannes.",
         theme: "dark",
       },
       {
         title: "Festival-Ready",
-        text: "During the Film Festival, the Yachting Festival and Cannes Lions, a chauffeur who knows the closures keeps arrivals smooth.",
+        text: "During the Film Festival, the Yachting Festival and Cannes Lions, your chauffeur knows the road closures and plans your arrival around them.",
         theme: "light",
       },
     ],
@@ -1062,9 +1062,9 @@ export const transferPages: Record<string, ServicePageConfig> = {
     story: {
       title: "How the Nice Airport to Cannes transfer works",
       paragraphs: [
-        "Nice Côte d'Azur is the main airport for Cannes, **about 30 minutes** away on a clear run. Your driver meets you in the arrivals hall, takes your luggage and drives you to your hotel on the Croisette, the Palais des Festivals, the Vieux Port or any address in town.",
-        `The trip from the airport starts at ${routePrices("cannes")}, and the price is agreed before you book. If your flight lands late, your driver waits: an hour is included from the pickup time in your booking.`,
-        "Cannes runs on events: the Film Festival in May, Cannes Lions in June and the Yachting Festival in September. Roads around the Croisette close and traffic builds, so we plan the drop-off around the closures. For your departure, we collect you in Cannes and drive you back to Nice Airport.",
+        "Nice Côte d'Azur is the main airport for Cannes, and the drive takes **about 30 minutes** when the roads are clear. Your driver meets you in the arrivals hall, takes your luggage and drives you to any address in Cannes, such as your hotel on the Croisette, the Palais des Festivals or the Vieux Port.",
+        `The trip from the airport starts at ${routePrices("cannes")}, and the price is agreed before you book. If your flight is late, your driver waits for you. Your booking includes an hour of waiting from the pickup time.`,
+        "Cannes runs on events: the Film Festival in May, Cannes Lions in June and the Yachting Festival in September. Roads around the Croisette close and traffic builds, so we plan the drop-off around the closures. When you leave Cannes, we pick you up and drive you back to Nice Airport.",
       ],
     },
     audienceTitle: "Ideal For",
@@ -1096,7 +1096,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Book Your Nice Airport to Cannes Transfer",
+      title: "Book Your Transfer From Nice Airport to Cannes",
       description:
         "Send us your flight and your Cannes address, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Cannes Transfer",
@@ -1105,7 +1105,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     faq: [
       {
         question: "How much is a transfer from Nice Airport to Cannes?",
-        answer: `From ${routePrices("cannes")}, one way. The price is fixed and confirmed before you book, with no meter.`,
+        answer: `A one-way transfer starts from ${routePrices("cannes")}. The price is fixed and confirmed before you book, with no meter.`,
       },
       {
         question: "How long is the drive from Nice Airport to Cannes?",
@@ -1120,7 +1120,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Can you drive me to a hotel on the Croisette?",
         answer:
-          "Yes. We take you directly to the Carlton, the Martinez and the other Croisette hotels, with your luggage handled.",
+          "Yes. We take you straight to the Carlton, the Martinez or any other hotel on the Croisette, and we handle your luggage.",
       },
       {
         question: "Can I book a late-night transfer from Nice Airport to Cannes?",
@@ -1157,7 +1157,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Tropez Transfer",
     heroTitle: "Nice Airport to Saint-Tropez Transfer",
     heroDescription:
-      `Your private driver meets you at Nice Airport and drives you to Saint-Tropez in about an hour and a half to two hours, or to a boat at Sainte-Maxime, at a fixed price from ${eur(E_CLASS.prices["st-tropez"].transfer)}.`,
+      `Your private driver meets you at Nice Airport and drives you to Saint-Tropez in about an hour and a half to two hours, or to a boat at Sainte-Maxime. The fixed price starts from ${eur(E_CLASS.prices["st-tropez"].transfer)}.`,
     heroImageSrc: "/assets/images/services/saint-tropez-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Saint-Tropez with a black Mercedes on the quay",
     introTitle: "The Longest Run on the Coast",
@@ -1166,7 +1166,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "By Road or by Boat",
-        text: "We run the full road transfer, or drive you to a boat landing at Sainte-Maxime with the crossing arranged to bring you into the port.",
+        text: "Your transfer can go all the way by road, or to a boat landing at Sainte-Maxime, where we arrange the crossing into the port.",
         theme: "dark",
       },
       {
@@ -1181,7 +1181,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       paragraphs: [
         "Nice Côte d'Azur is the main airport for Saint-Tropez, **about 110 kilometres** away: roughly an hour and a half to two hours by road, and longer in July and August. Your driver meets you in arrivals, takes your luggage and drives you to your hotel, your villa, the old port or the beach clubs of Pampelonne.",
         `For this longer trip, prices start at ${routePrices("st-tropez")}, one way, fixed before you book. The V-Class takes up to ${V_CLASS.passengers} passengers with their luggage, which suits families and groups heading to a villa.`,
-        "In peak season, traffic on the gulf road can stand still. We can drive you to a boat landing at Sainte-Maxime instead, with a crossing arranged into the port. For your departure, we collect you in Saint-Tropez and drive you back to Nice Airport.",
+        "In peak season, traffic on the gulf road can stand still. Instead, we can take you to a boat landing at Sainte-Maxime and arrange the crossing into the port. At the end of your stay, we pick you up in Saint-Tropez and drive you back to Nice Airport.",
       ],
     },
     audienceTitle: "Ideal For",
@@ -1213,7 +1213,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Book Your Nice Airport to Saint-Tropez Transfer",
+      title: "Book Your Transfer From Nice Airport to Saint-Tropez",
       description:
         "Send us your flight and your Saint-Tropez address, and we confirm the route, the car and the fixed price before you travel.",
       buttonText: "Request Saint-Tropez Transfer",
@@ -1222,7 +1222,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     faq: [
       {
         question: "How much is a transfer from Nice Airport to Saint-Tropez?",
-        answer: `From ${routePrices("st-tropez")}, one way, for a trip of about 110 kilometres. The price is fixed before you book.`,
+        answer: `For this trip of about 110 kilometres, a one-way transfer starts from ${routePrices("st-tropez")}. The price is fixed before you book.`,
       },
       {
         question: "How long is the transfer from Nice Airport to Saint-Tropez?",
@@ -1232,12 +1232,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Which airport do I fly into for Saint-Tropez?",
         answer:
-          "Nice Côte d'Azur, the main international airport of the Riviera, is about 110 kilometres from Saint-Tropez, and your driver meets you in arrivals there. If you land at another airport, send us your flight and we quote the transfer before you book.",
+          "Nice Côte d'Azur, the main international airport of the Riviera, is about 110 kilometres from Saint-Tropez, and your driver meets you in arrivals there. If you land at another airport, send us your flight details and we will quote the transfer before you book.",
       },
       {
         question: "Can I reach Saint-Tropez by boat?",
         answer:
-          "Yes. We can drive you to a boat landing at Sainte-Maxime with a crossing arranged into the port, which avoids the summer gulf traffic.",
+          "Yes. We can drive you to a boat landing at Sainte-Maxime and arrange a crossing into the port. The crossing avoids the summer traffic around the gulf.",
       },
       {
         question: "Why is Saint-Tropez harder to reach in summer?",
@@ -1246,7 +1246,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         question: "Can a group book a car from Nice Airport to Saint-Tropez?",
-        answer: `Yes. The Mercedes V-Class takes up to ${V_CLASS.passengers} passengers with their luggage, from ${eur(V_CLASS.prices["st-tropez"].transfer)} one way from Nice Airport.`,
+        answer: `Yes. The Mercedes V-Class takes up to ${V_CLASS.passengers} passengers with their luggage. In a V-Class, a one-way transfer from Nice Airport starts from ${eur(V_CLASS.prices["st-tropez"].transfer)}.`,
       },
       {
         question: "Do you drive from Saint-Tropez back to Nice Airport?",
@@ -1273,7 +1273,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Antibes Transfer",
     heroTitle: "Nice Airport to Antibes Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Antibes: around 25 minutes, delivered to your hotel, Juan-les-Pins, Cap d'Antibes or Port Vauban.",
+      "Our meet-and-greet chauffeur transfer takes you from Nice Airport to Antibes in around 25 minutes. We drop you at your hotel, in Juan-les-Pins, on Cap d'Antibes or at Port Vauban.",
     heroImageSrc: "/assets/images/services/antibes-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Antibes with a black Mercedes by the ramparts",
     introTitle: "Minutes Along the Coast",
@@ -1282,12 +1282,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Met at Your Flight",
-        text: "We track the flight, meet you in arrivals with a name board, take the luggage and bring you to the car for the short run to Antibes.",
+        text: "Your driver tracks the flight, waits in arrivals with a name board and carries your luggage to the car. Antibes is then a short drive away.",
         theme: "dark",
       },
       {
         title: "Antibes & the Cap",
-        text: "Transfers to the old town, the beaches of Juan-les-Pins, the villas of Cap d'Antibes and the yachts of Port Vauban.",
+        text: "Our transfers take you to the old town, the beaches of Juan-les-Pins, the villas of Cap d'Antibes and the yachts of Port Vauban.",
         theme: "light",
       },
     ],
@@ -1330,17 +1330,17 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "How long is the transfer from Nice Airport to Antibes?",
         answer:
-          "Around 25 minutes by road on a clear run, making Antibes one of the closest major towns to Nice Airport.",
+          "The drive takes around 25 minutes when the roads are clear, so Antibes is one of the closest major towns to Nice Airport.",
       },
       {
         question: "How much is a Nice Airport to Antibes transfer?",
         answer:
-          "From around €120 in a Mercedes E-Class or €150 in a V-Class, quoted as a fixed price in advance with no meter.",
+          "A transfer starts from around €120 in a Mercedes E-Class or €150 in a V-Class. We quote a fixed price in advance, with no meter.",
       },
       {
         question: "Can you take me to Cap d'Antibes or Juan-les-Pins?",
         answer:
-          "Yes. We deliver directly to the hotels and villas of Cap d'Antibes and the seafront of Juan-les-Pins, with luggage handled.",
+          "Yes. We drive you straight to the hotels and villas of Cap d'Antibes and the seafront of Juan-les-Pins, and we carry your luggage.",
       },
       {
         question: "Can you take me to a yacht at Port Vauban?",
@@ -1372,7 +1372,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Jean-Cap-Ferrat Transfer",
     heroTitle: "Nice Airport to Cap-Ferrat Transfer",
     heroDescription:
-      "Your private driver meets you at Nice Airport and drives you to Saint-Jean-Cap-Ferrat in about 25 minutes, to the villas, the hotels and the yachts of the peninsula.",
+      "Your private driver meets you at Nice Airport and drives you to your villa, hotel or yacht at Saint-Jean-Cap-Ferrat, about 25 minutes away.",
     heroImageSrc: "/assets/images/services/saint-jean-cap-ferrat-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Cap-Ferrat with a black Mercedes among the villas",
     introTitle: "The Discreet Peninsula",
@@ -1381,12 +1381,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Met at Your Flight",
-        text: "We track the flight, meet you in arrivals with a name board, take the luggage and bring you along the coast to the peninsula.",
+        text: "We follow your flight and meet you in arrivals with a name board. Once your luggage is in the car, we drive along the coast to the peninsula.",
         theme: "dark",
       },
       {
         title: "Villas, Hotels & Yachts",
-        text: "Discreet arrivals to the Grand-Hôtel du Cap-Ferrat, the private villas and the yachts at anchor in the bays.",
+        text: "We bring you discreetly to the Grand-Hôtel du Cap-Ferrat, to private villas or to yachts at anchor in the bays.",
         theme: "light",
       },
     ],
@@ -1396,7 +1396,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       paragraphs: [
         "Saint-Jean-Cap-Ferrat is **about 25 minutes** east of Nice Côte d'Azur Airport, along the coast past Villefranche. Your chauffeur meets you in arrivals, takes your luggage and drives you to your villa, your hotel or the port.",
         `A transfer costs from ${eur(startingPrice("cap-ferrat", "mercedes-e"))} in a Mercedes E-Class or ${eur(startingPrice("cap-ferrat", "mercedes-v"))} in a V-Class for up to ${V_CLASS.passengers} passengers, and the price is set when you book. Your driver follows your flight and waits up to an hour from the pickup time at no extra cost.`,
-        `Once on the peninsula, the roads are quiet and residential, winding between hedged estates down to the port and the beaches. For a yacht at anchor, we meet its tender at the quay and agree the timing with the crew. During your stay, a chauffeur can also stay with you by the hour, from ${eur(E_CLASS.prices.nice.hourly)} an hour in an E-Class.`,
+        `Once on the peninsula, the roads are quiet and residential, winding between hedged estates down to the port and the beaches. When your yacht is at anchor, we meet its tender at the quay and agree the timing with the crew. During your stay, you can also keep a chauffeur by the hour, from ${eur(E_CLASS.prices.nice.hourly)} an hour in an E-Class.`,
       ],
     },
     audienceTitle: "Ideal For",
@@ -1428,7 +1428,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Book Your Nice Airport to Cap-Ferrat Transfer",
+      title: "Book Your Transfer From Nice Airport to Cap-Ferrat",
       description:
         "Send us your flight and your address on the peninsula, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Cap-Ferrat Transfer",
@@ -1438,7 +1438,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "How long is the transfer from Nice Airport to Cap-Ferrat?",
         answer:
-          "Around 25 minutes east along the coast past Villefranche onto the Saint-Jean-Cap-Ferrat peninsula.",
+          "It takes around 25 minutes, heading east along the coast past Villefranche onto the Saint-Jean-Cap-Ferrat peninsula.",
       },
       {
         question: "How much is a Nice Airport to Cap-Ferrat transfer?",
@@ -1447,7 +1447,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "Can you deliver to a private villa on Cap-Ferrat?",
         answer:
-          "Yes. We take you discreetly to the villas, gated estates and hotels of the peninsula, with your luggage handled.",
+          "Yes. We take you discreetly to the villas, gated estates and hotels of the peninsula, and we look after your luggage.",
       },
       {
         question: "Can you meet a yacht at Cap-Ferrat?",
@@ -1492,21 +1492,21 @@ export const transferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Along the Corniche",
-        text: "We meet you at the flight and climb the Moyenne Corniche, one of the coast's great drives, to the entrance of the medieval village.",
+        text: "We meet you off your flight and drive up the Moyenne Corniche, one of the coast's great drives, to the entrance of the medieval village.",
         theme: "dark",
       },
       {
         title: "A Car-Free Village",
-        text: "Èze itself is pedestrian, so we drop you at the village entrance, where the hotels handle luggage into the lanes.",
+        text: "Èze is a pedestrian village, so we drop you at the entrance, and the hotels carry your luggage through the lanes.",
         theme: "light",
       },
     ],
     bookingReasons: true,
     story: {
-      title: "How the Nice Airport to Èze transfer works",
+      title: "How your transfer from Nice Airport to Èze works",
       paragraphs: [
         "Èze is **about 25 to 30 minutes** from Nice Côte d'Azur Airport, up the Moyenne Corniche towards Monaco. Your chauffeur meets you in arrivals, takes your luggage and drives you to the entrance of the village.",
-        `The medieval village is car-free, so every car stops at its entrance, and the hotels, such as the Château de la Chèvre d'Or, take your luggage into the lanes. A transfer from the airport costs from about ${eur(startingPrice("eze"))}, fixed before you book, with one hour of waiting included from your pickup time.`,
+        `No cars can enter the medieval village, so every car stops at its entrance. From there, hotels such as the Château de la Chèvre d'Or take your luggage through the lanes. A transfer from the airport costs from about ${eur(startingPrice("eze"))}, fixed before you book, with one hour of waiting included from your pickup time.`,
         `Monaco is a few minutes away, so the same driver can take you on to Monte-Carlo, along the corniches or to dinner on the coast. For an evening or a whole day, our hourly chauffeur service starts at ${eur(E_CLASS.prices.nice.hourly)} an hour in a Mercedes E-Class.`,
       ],
     },
@@ -1539,7 +1539,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       "Other routes from Nice Airport, each at a fixed price confirmed before you book.",
     localLinks: transferLinks,
     cta: {
-      title: "Book Your Nice Airport to Èze Transfer",
+      title: "Book Your Transfer From Nice Airport to Èze",
       description:
         "Send us your flight and your hotel in Èze, and we confirm the car and the fixed price before you travel.",
       buttonText: "Request Èze Transfer",
@@ -1549,29 +1549,29 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "How long is the transfer from Nice Airport to Èze?",
         answer:
-          "Around 25 to 30 minutes up the Moyenne Corniche between Nice and Monaco to the entrance of the village.",
+          "It takes around 25 to 30 minutes to drive up the Moyenne Corniche, between Nice and Monaco, to the entrance of the village.",
       },
       {
         question: "How much is a Nice Airport to Èze transfer?",
-        answer: `From about ${eur(startingPrice("eze"))} from Nice Airport, fixed before you book, with no meter.`,
+        answer: `A transfer from Nice Airport starts from about ${eur(startingPrice("eze"))}, with a price fixed before you book and no meter.`,
       },
       {
         question: "Can a car reach the village of Èze?",
         answer:
-          "The medieval village is car-free, so a chauffeur drops you at the village entrance, where the hotels handle luggage into the lanes.",
+          "The medieval village is car-free, so your chauffeur drops you at the entrance and the hotels take your luggage into the lanes.",
       },
       {
         question: "Can you link Èze with Monaco?",
         answer:
-          "Yes. Monaco is minutes away, and a private driver links Èze with the corniches and the coast for dinners and day trips.",
+          "Yes. Monaco is minutes away, and your private driver can take you from Èze along the corniches and the coast for dinners and day trips.",
       },
       {
         question: "Can I book a private driver in Èze by the hour?",
-        answer: `Yes. Your driver stays with you from ${eur(E_CLASS.prices.nice.hourly)} an hour in a Mercedes E-Class, or ${eur(E_CLASS.prices.nice.fullDay)} for a full day: dinner in the village, a drive along the corniches or a night in Monaco.`,
+        answer: `Yes. Your driver stays with you from ${eur(E_CLASS.prices.nice.hourly)} an hour in a Mercedes E-Class, or ${eur(E_CLASS.prices.nice.fullDay)} for a full day. You can have dinner in the village, drive along the corniches or have a night out in Monaco.`,
       },
       {
         question: "What does your chauffeur service in Èze include?",
-        answer: `The transfer from Nice Airport to the village entrance, from about ${eur(startingPrice("eze"))} at a price fixed before you book, and a chauffeur by the hour from ${eur(E_CLASS.prices.nice.hourly)}, for dinner in the village, the corniches or an evening in Monaco.`,
+        answer: `It includes the transfer from Nice Airport to the village entrance, from about ${eur(startingPrice("eze"))} at a price fixed before you book. It also includes a chauffeur by the hour from ${eur(E_CLASS.prices.nice.hourly)}, for dinner in the village, a drive along the corniches or an evening in Monaco.`,
       },
       {
         question: "Can you take me from Èze back to Nice Airport?",
@@ -1598,21 +1598,21 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Villefranche-sur-Mer Transfer",
     heroTitle: "Nice Airport to Villefranche Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Villefranche-sur-Mer: around 20 minutes, delivered to the old town, your hotel or the cruise tender quay.",
+      "A meet-and-greet chauffeur transfer from Nice Airport to Villefranche-sur-Mer takes around 20 minutes, and we drop you in the old town, at your hotel or at the cruise tender quay.",
     heroImageSrc: "/assets/images/services/villefranche-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Villefranche with a black Mercedes above the bay",
-    introTitle: "Minutes to the Deep Bay",
+    introTitle: "A Short Drive to the Deep Bay",
     introDescription:
       "One of the closest towns to the airport, Villefranche and its deep sheltered bay are a short, scenic transfer along the coast.",
     panels: [
       {
         title: "Met at Your Flight",
-        text: "We track the flight, meet you in arrivals with a name board, take the luggage and bring you the short way east to Villefranche.",
+        text: "We track your flight and wait in arrivals with a name board. Once your luggage is in the car, it is a short drive east to Villefranche.",
         theme: "dark",
       },
       {
         title: "Old Town & Cruise Port",
-        text: "Arrivals to the pastel old town and the hotels, and transfers to and from the cruise tender quay in the bay.",
+        text: "We drive you to the pastel old town and the hotels, and we offer transfers to and from the cruise tender quay in the bay.",
         theme: "light",
       },
     ],
@@ -1655,12 +1655,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "How long is the transfer from Nice Airport to Villefranche?",
         answer:
-          "Around 20 minutes east along the coast, making Villefranche-sur-Mer one of the closest towns to the airport.",
+          "Villefranche-sur-Mer is one of the closest towns to the airport, around 20 minutes east along the coast.",
       },
       {
-        question: "How much is a Nice Airport to Villefranche transfer?",
+        question: "How much is a transfer from Nice Airport to Villefranche?",
         answer:
-          "Indicatively from around €100 from Nice Airport, quoted as a fixed price in advance with no meter.",
+          "A transfer from Nice Airport costs from around €100 as a guide. We quote it as a fixed price in advance, with no meter.",
       },
       {
         question: "Do you provide transfers for cruise passengers?",
@@ -1697,7 +1697,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Menton Transfer",
     heroTitle: "Nice Airport to Menton Transfer",
     heroDescription:
-      "A meet-and-greet chauffeur transfer from Nice Airport to Menton: around 40 minutes east past Monaco, delivered to the old town, the gardens or the seafront.",
+      "Your chauffeur meets you at Nice Airport for your transfer to Menton, around 40 minutes east past Monaco. We take you to the old town, the gardens or the seafront.",
     heroImageSrc: "/assets/images/services/menton-transfer.webp",
     heroImageAlt: "Private chauffeur transfer to Menton with a black Mercedes on the seafront",
     introTitle: "To the Edge of Italy",
@@ -1711,7 +1711,7 @@ export const transferPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Old Town & Gardens",
-        text: "Arrivals to the Italianate old town, the famous gardens and the seafront hotels of the warmest town on the coast.",
+        text: "Menton is the warmest town on the coast, and we drive you to its Italianate old town, its famous gardens and its seafront hotels.",
         theme: "light",
       },
     ],
@@ -1754,12 +1754,12 @@ export const transferPages: Record<string, ServicePageConfig> = {
       {
         question: "How long is the transfer from Nice Airport to Menton?",
         answer:
-          "Around 40 minutes east along the coast past Monaco to Menton, at the far eastern end of the French Riviera.",
+          "It takes around 40 minutes to drive east along the coast past Monaco to Menton, at the far eastern end of the French Riviera.",
       },
       {
         question: "How much is a Nice Airport to Menton transfer?",
         answer:
-          "Indicatively from around €120 from Nice Airport, quoted as a fixed price in advance with no meter.",
+          "As a guide, transfers from Nice Airport start at around €120. We quote you a fixed price in advance, and there is no meter.",
       },
       {
         question: "Can you provide a transfer for the Lemon Festival?",
@@ -1803,10 +1803,10 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Nice",
     heroTitle: "Hourly Chauffeur Service in Nice",
     heroDescription:
-      "A private chauffeur on standby for seafront hotels, shopping, appointments, meetings, and flexible movement across Nice.",
+      "Your private chauffeur stays on standby to take you between seafront hotels, shops, appointments and meetings across Nice.",
     heroImageSrc: "/assets/images/services/nice-transfer.jpeg",
     heroImageAlt: "Hourly chauffeur service in Nice",
-    introTitle: "Hourly Service for Nice Days",
+    introTitle: "An Hourly Chauffeur for Your Day in Nice",
     introDescription:
       "Nice often mixes hotels, old town access, lunch reservations, shopping, and nearby movement in one fluid day.",
     panels: [
@@ -1817,7 +1817,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Guest Comfort",
-        text: "Clients avoid repeated bookings and keep one premium vehicle available between errands, meetings, and leisure moments.",
+        text: "You book once, and the same premium car stays available between errands, meetings and leisure time.",
         theme: "light",
       },
     ],
@@ -1870,7 +1870,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       {
         question: "What are the most popular destinations in Nice for hourly chauffeur bookings?",
         answer:
-          "Clients frequently use our hourly chauffeur service for the Promenade des Anglais, Vieux-Nice, Port Lympia, luxury hotels, Avenue Jean Médecin, Nice Côte d’Azur Airport, and business appointments throughout the city. Many bookings also include day trips to Monaco, Cannes, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat and Saint-Paul-de-Vence.",
+          "Typical stops with an hourly chauffeur are the Promenade des Anglais, Vieux-Nice, Port Lympia, Avenue Jean Médecin, luxury hotels and Nice Côte d’Azur Airport. Business appointments across the city are common too. Many bookings also include day trips to Monaco, Cannes, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat and Saint-Paul-de-Vence.",
       },
       {
         question: "Can the chauffeur wait while I attend meetings or appointments?",
@@ -2162,7 +2162,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Tropez",
     heroTitle: "Hourly Chauffeur Service in Saint-Tropez",
     heroDescription:
-      "A dedicated chauffeur for villas, beach clubs, lunches, shopping, and seasonal schedules that need flexibility throughout the day.",
+      "One chauffeur stays with you between villas, beach clubs, lunch and shopping, and adapts as summer plans change.",
     heroImageSrc: "/assets/images/services/saint-tropez.webp",
     heroImageAlt: "Hourly chauffeur service in Saint-Tropez",
     introTitle: "Saint-Tropez Rewards Flexibility",
@@ -2176,7 +2176,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Premium Pace",
-        text: "Clients avoid waiting for cars between stops and keep a premium, discreet transport base available from start to finish.",
+        text: "There is no waiting for a car between stops. Your discreet, premium vehicle stays available from start to finish.",
         theme: "light",
       },
     ],
@@ -2239,12 +2239,12 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     {
       question: "What are the most popular destinations for hourly chauffeur bookings in Saint-Tropez?",
       answer:
-        "Clients frequently visit Pampelonne Beach, Club 55, Nikki Beach, the Port of Saint-Tropez, luxury villas, five-star hotels, beach restaurants, and nearby destinations throughout the French Riviera.",
+        "Clients often head to Pampelonne Beach, Club 55, Nikki Beach and the Port of Saint-Tropez, or to villas, five-star hotels, beach restaurants and nearby destinations on the French Riviera.",
     },
     {
       question: "Which vehicle is recommended for an hourly chauffeur service in Saint-Tropez?",
       answer:
-        "The Mercedes S-Class is ideal for executive and VIP travel, while the Mercedes V-Class is perfect for families, groups, beach club transfers, and guests travelling with additional luggage or shopping purchases.",
+        "The Mercedes S-Class suits executive and VIP travel. The Mercedes V-Class is the better fit for families, groups, beach club transfers and guests with extra luggage or shopping bags.",
     },
   ]
   },
@@ -2266,7 +2266,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Megève",
     heroTitle: "Hourly Chauffeur Service in Megève",
     heroDescription:
-      "A private chauffeur on standby for luxury hotels, chalet stays, shopping, restaurants, ski holidays, and flexible travel throughout Megève and the French Alps.",
+      "In Megève, a private chauffeur is on hand for hotel and chalet stays, shopping, restaurants, ski holidays and trips around the French Alps.",
     heroImageSrc: "/assets/images/services/megeve.webp", 
     heroImageAlt: "Luxury hourly chauffeur service in Megève",
     introTitle: "Hourly Chauffeur Service for Luxury Stays in Megève",
@@ -2368,20 +2368,20 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Courchevel",
     heroTitle: "Hourly Chauffeur Service in Courchevel",
     heroDescription:
-      "A private chauffeur on standby for luxury hotels, private chalets, ski holidays, shopping, dining, and flexible travel throughout Courchevel and the French Alps.",
+      "From chalet or hotel to the slopes, shops and restaurants, a private chauffeur waits on standby in Courchevel and across the French Alps.",
     heroImageSrc: "/assets/images/services/courchevel.webp",
     heroImageAlt: "Luxury hourly chauffeur service in Courchevel",
     introTitle: "Premium Chauffeur Service for Courchevel Stays",
     introDescription:
       "Courchevel is one of the world's most prestigious ski destinations, known for its luxury hotels, private chalets, fine dining, and exclusive alpine experiences. An hourly chauffeur service gives you complete flexibility while enjoying comfort, discretion, and seamless transportation throughout your stay.",    panels: [
       {
-        title: "Luxury Mobility Throughout the Day",
-        text: "Whether travelling between your chalet, ski facilities, restaurants, boutiques, or nearby resorts, your chauffeur remains available whenever your schedule changes.",
+        title: "Your Chauffeur Throughout the Day",
+        text: "Plans change during the day, and your chauffeur stays available between your chalet, the slopes, restaurants, boutiques and nearby resorts.",
         theme: "dark",
       },
       {
         title: "A Seamless Guest Experience",
-        text: "Avoid parking challenges, winter driving, and multiple transport arrangements. Your chauffeur and vehicle remain at your disposal throughout the booking.",
+        text: "Forget parking, winter driving and juggling several transfers. Your chauffeur and vehicle remain at your disposal throughout the booking.",
         theme: "light",
       },
     ],
@@ -2423,7 +2423,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       {
         question: "Why choose an hourly chauffeur service in Courchevel?",
         answer:
-          "An hourly chauffeur service offers complete flexibility throughout your stay. Whether travelling between chalets, luxury hotels, restaurants, boutiques, or ski facilities, your chauffeur remains available whenever you need transportation.",
+          "An hourly chauffeur service offers complete flexibility throughout your stay. Your chauffeur stays on call for every trip between chalets, luxury hotels, restaurants, boutiques and the ski lifts.",
       },
       {
         question: "Can I keep the same chauffeur for an entire day in Courchevel?",
@@ -2475,7 +2475,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Chamonix",
     heroTitle: "Hourly Chauffeur Service in Chamonix",
     heroDescription:
-       "A private chauffeur on standby for luxury hotels, ski holidays, mountain experiences, restaurants, shopping, and flexible travel throughout Chamonix and the Alps.",
+       "Keep a private chauffeur on call in Chamonix for hotels, ski holidays, mountain outings, restaurants and shopping, and for trips across the Alps.",
     heroImageSrc: "/assets/images/services/chamonix.webp",
     heroImageAlt: "Luxury hourly chauffeur service in Chamonix",
     introTitle: "Flexible Chauffeur Service for Chamonix Stays",
@@ -2529,7 +2529,7 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
       {
         question: "Why choose an hourly chauffeur service in Chamonix?",
         answer:
-          "An hourly chauffeur service gives you complete flexibility throughout your stay. Whether you're travelling between hotels, ski areas, restaurants, shopping locations, or mountain attractions, your chauffeur remains available whenever you need transportation.",
+          "An hourly chauffeur service gives you complete flexibility throughout your stay. Your chauffeur stays available whenever you need a car between hotels, ski areas, restaurants, shops and mountain attractions.",
       },
       {
         question: "Can I book a chauffeur for a full day in Chamonix?",
@@ -2547,9 +2547,9 @@ export const hourlyChauffeurPages: Record<string, ServicePageConfig> = {
           "Yes. Your chauffeur remains available throughout the booking period, ensuring smooth transportation between destinations without the need to arrange separate transfers.",
       },
       {
-        question: "What are the most popular destinations during hourly bookings in Chamonix?",
+        question: "Where do clients usually go with an hourly chauffeur in Chamonix?",
         answer:
-          "Clients frequently travel between luxury hotels, the town centre, ski areas, restaurants, mountain attractions, and nearby Alpine destinations throughout the Chamonix Valley.",
+          "Trips often link luxury hotels, the town centre and ski areas with restaurants, mountain attractions and nearby spots in the Chamonix Valley.",
       },
       {
         question: "Which vehicle is recommended for an hourly chauffeur service in Chamonix?",
@@ -2579,16 +2579,16 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Nice Tour",
     heroTitle: "Private Tour in Nice",
     heroDescription:
-      "A private chauffeur-led tour of Nice with elegant city movement, scenic coastline, and refined pacing throughout the day.",
+      "Your private chauffeur takes you on a relaxed tour of Nice and its coastline through the day.",
     heroImageSrc: "/assets/images/services/nice-transfer.jpeg",
     heroImageAlt: "Private chauffeur tour in Nice",
-    introTitle: "Discover Nice With Better Rhythm",
+    introTitle: "Nice at Your Own Pace",
     introDescription:
       "Nice works best when the day blends old town charm, seafront movement, and selected stops without the guest managing transport details.",
     panels: [
       {
         title: "City + Coast",
-        text: "We can combine old town atmosphere, seafront viewpoints, hotel pickups, and nearby scenic movements into one coherent touring day.",
+        text: "We can combine the old town, seafront viewpoints and nearby scenic drives in one day, with hotel pickup.",
         theme: "dark",
       },
       {
@@ -2626,7 +2626,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       "Compare private chauffeur tours in other Riviera destinations.",
     localLinks: tourCityLinks,
     cta: {
-      title: "Plan Your Nice Chauffeur Tour",
+      title: "Plan Your Chauffeur Tour of Nice",
       description:
         "We can shape the day around hotel pickup, sightseeing preferences, lunch timing, and desired pacing.",
       buttonText: "Book Nice Tour",
@@ -2701,7 +2701,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Cannes Tour",
     heroTitle: "Private Tour in Cannes",
     heroDescription:
-      "A private chauffeur-guided day in Cannes with seafront movement, elegant stops, shopping access, and a polished Riviera touring experience.",
+      "Spend a day on the Riviera touring Cannes with a private chauffeur, from the seafront to the shops and the stops in between.",
     heroImageSrc: "/assets/images/services/cannes-transfer.webp",
     heroImageAlt: "Private chauffeur tour in Cannes",
     introTitle: "Cannes as a Curated Day",
@@ -2710,12 +2710,12 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Croisette Energy",
-        text: "We shape the day around Cannes' most elegant areas, balancing seaside movement, shopping, and lunch or hotel timing.",
+        text: "We plan your day in Cannes around the seafront, the shops and your lunch or hotel times.",
         theme: "dark",
       },
       {
         title: "Elegant Stops",
-        text: "A chauffeur tour lets the guest enjoy Cannes with less friction between walking moments, hotel pickups, and scenic arrivals.",
+        text: "On a chauffeur tour, you move easily between walks, hotel pickups and scenic stops in Cannes.",
         theme: "light",
       },
     ],
@@ -2829,7 +2829,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Flexible Stops and Timing",
-        text: "Stay longer in Monaco-Ville, add lunch near Port Hercule, shop around the Carré d'Or or include Èze. The route adjusts to your interests and reservation times.",
+        text: "You can linger in Monaco-Ville, lunch near Port Hercule, shop in the Carré d'Or or add Èze. The route adjusts to your interests and reservation times.",
         theme: "light",
       },
     ],
@@ -2841,7 +2841,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
         duration: "Approximately 4 hours",
         title: "Monaco Highlights Private Tour",
         description:
-          "A focused introduction to the principality for first-time visitors, cruise guests or travelers with a free morning or afternoon.",
+          "This tour introduces the principality to first-time visitors, cruise guests and anyone with a free morning or afternoon.",
         stops: [
           "Pickup in Monaco, Cap-d'Ail, Beausoleil or at your yacht in Port Hercule",
           "Monaco-Ville, the Prince's Palace square and Saint Nicholas Cathedral",
@@ -2854,7 +2854,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
         duration: "Approximately 8 hours",
         title: "Monaco and Èze Full-Day Tour",
         description:
-          "A complete Riviera day combining Monaco's landmarks with the medieval village of Èze and the panoramic Middle Corniche.",
+          "This full Riviera day combines Monaco's landmarks with the medieval village of Èze and the panoramic Middle Corniche.",
         stops: [
           "Pickup from Nice, Cannes, Monaco, a private residence or Nice Airport",
           "Èze village, with time for the old streets and optional Exotic Garden",
@@ -2874,7 +2874,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Vehicles",
-        text: "Mercedes S-Class for up to three guests or Mercedes V-Class for families and groups requiring more passenger or luggage space.",
+        text: "The Mercedes S-Class seats up to three guests. The V-Class gives families and groups more room for passengers or luggage.",
       },
       {
         title: "Included",
@@ -2882,7 +2882,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Not included",
-        text: "Museum and garden tickets, meals, licensed walking guides and special access fees unless these are added to the quotation.",
+        text: "Museum and garden tickets, meals, licensed walking guides and special access fees, unless added to your quote.",
       },
     ],
     audienceTitle: "Ideal For",
@@ -2913,7 +2913,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     localLinksDescription:
       "Compare private chauffeur tours in other Riviera destinations.",
     localLinks: tourCityLinks,
-    relatedGuidesTitle: "Plan the Monaco Part of Your Riviera Stay",
+    relatedGuidesTitle: "Fitting Monaco Into Your Riviera Stay",
     relatedGuides: [
       {
         href: "/blog/eze-monaco-private-tour-from-nice",
@@ -2960,7 +2960,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       {
         question: "Which landmarks are commonly included in a Monaco private tour?",
         answer:
-          "Guests often visit Monte-Carlo, Casino Square, Port Hercule, the Prince's Palace area, Monaco-Ville, luxury shopping districts, and panoramic viewpoints overlooking the Mediterranean."
+          "Tours usually take in Monte-Carlo, Casino Square, Port Hercule, Monaco-Ville and the Prince's Palace area, plus luxury shopping districts and Mediterranean viewpoints."
       },
       {
         question: "Can Monaco be combined with other Riviera destinations in one day?",
@@ -3016,7 +3016,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       },
       {
         title: "Lifestyle Touring",
-        text: "Village movement, lunch timing, beach-side stops, and return comfort all fit naturally inside a premium chauffeur tour.",
+        text: "A chauffeur tour leaves time for the village, lunch, the beach and a comfortable ride back.",
         theme: "light",
       },
     ],
@@ -3119,7 +3119,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     heroDescription:
       "Explore Megève during the winter season with a private chauffeur and luxury vehicle. Discover luxury chalets, ski resorts, mountain villages, gourmet restaurants, and tailor-made Alpine experiences throughout the French Alps.",      heroImageSrc: "/assets/images/services/megeve.webp",
     heroImageAlt: "Private chauffeur tour in Megève",
-    introTitle: "Discover Megève During the Winter Season",
+    introTitle: "Megève in Winter",
     introDescription:
       "From luxury chalets and prestigious ski resorts to panoramic mountain scenery and authentic Alpine villages, a private tour in Megève offers comfort, flexibility, and a personalized way to experience the French Alps during winter.",      panels: [
       {
@@ -3134,7 +3134,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       },
     ],
     audienceTitle: "Great For",
-    audienceAccent: "Winter in Megève",
+    audienceAccent: "Winter Stays in Megève",
     audienceDescription:
       "Ideal for guests enjoying a winter stay in Megève who wish to discover nearby Alpine destinations, luxury resorts, and mountain scenery with complete comfort and flexibility.",    audienceCards: [
       {
@@ -3161,7 +3161,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       "Explore other private chauffeur tour destinations across the French Alps and the French Riviera.",   
        localLinks: tourCityLinks,
     cta: {
-      title: "Plan Your Megève Winter private Tour",
+      title: "Plan Your Private Tour of Megève in Winter",
       description:
         "Tell us where you are staying, your preferred destinations, and your travel dates, and we will create a personalized Alpine winter experience.",
       buttonText: "Book Megève Tour",
@@ -3171,7 +3171,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       {
         question: "What are the most popular winter tours from Megève?",
         answer:
-          "Popular winter tours from Megève include Chamonix, Annecy, Courchevel, scenic Alpine drives, luxury ski resorts, and charming mountain villages throughout the French Alps.",
+          "On winter tours from Megève, guests often visit Chamonix, Annecy and Courchevel, or take scenic drives to ski resorts and mountain villages in the French Alps.",
       },
       {
         question: "Can I customize my private tour from Megève?",
@@ -3206,7 +3206,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       {
         question: "Which luxury hotels are commonly included during a private tour in Megève?",
         answer:
-          "Guests frequently visit renowned properties such as Four Seasons Hotel Megève, Les Fermes de Marie, luxury chalets, gourmet restaurants, and exclusive winter destinations throughout the region.",
+          "Many tours stop at the Four Seasons Hotel Megève and Les Fermes de Marie, along with luxury chalets, gourmet restaurants and winter destinations across the region.",
       },
       {
         question: "Which vehicle is recommended for a private tour in Megève?",
@@ -3237,12 +3237,12 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       "Explore Courchevel during the winter season with a private chauffeur and luxury vehicle. Discover prestigious ski resorts, luxury chalets, gourmet restaurants, Alpine villages, and tailor-made experiences throughout the French Alps.",
     heroImageSrc: "/assets/images/services/courchevel.webp",
     heroImageAlt: "Private chauffeur tour in Courchevel",
-    introTitle: "Discover Courchevel During the Winter Season",
+    introTitle: "Touring Courchevel in Winter",
     introDescription:
     "From luxury chalets and world-renowned hotels to exceptional ski resorts and breathtaking Alpine scenery, a private tour in Courchevel offers comfort, flexibility, and a personalized way to experience the French Alps during winter.",   panels: [
       {
         title: "Winter Alpine Discovery",
-        text: "Explore Courchevel, Les 3 Vallées, luxury ski resorts, Alpine villages, and spectacular winter landscapes with a private chauffeur.",
+        text: "A private chauffeur takes you through Courchevel and Les 3 Vallées, with their resorts, villages and winter landscapes.",
         theme: "dark",
       },
       {
@@ -3252,7 +3252,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       },
     ],
     audienceTitle: "Great For",
-    audienceAccent: "Winter in Courchevel",
+    audienceAccent: "a Winter Stay in Courchevel",
     audienceDescription:
     "Ideal for guests enjoying a winter stay in Courchevel who wish to discover luxury resorts, Alpine scenery, and nearby mountain destinations with complete comfort and flexibility.",  audienceCards: [ 
       {
@@ -3289,7 +3289,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       {
         question: "What are the most popular winter tours from Courchevel?",
         answer:
-          "Popular winter tours from Courchevel include Méribel, Megève, Annecy, Chamonix, scenic Alpine drives, luxury ski resorts, and charming mountain villages throughout the French Alps.",
+          "Winter tours from Courchevel often go to Méribel, Megève, Annecy and Chamonix. Others explore scenic roads, ski resorts and villages of the French Alps.",
       },
       {
         question: "Can I customize my private tour from Courchevel?",
@@ -3324,7 +3324,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       {
         question: "Which luxury hotels are commonly included during a private tour in Courchevel?",
         answer:
-          "Guests frequently visit renowned properties such as Cheval Blanc Courchevel, Airelles Courchevel, Six Senses Residences Courchevel, luxury chalets, gourmet restaurants, and exclusive winter destinations throughout the resort.",
+          "Cheval Blanc Courchevel, Airelles Courchevel and Six Senses Residences Courchevel are frequent stops. Guests also visit luxury chalets, gourmet restaurants and other winter spots in the resort.",
       },
       {
         question: "Which vehicle is recommended for a private tour in Courchevel?",
@@ -3352,14 +3352,14 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Chamonix",
     heroTitle: "Private Tour in Chamonix",
     heroDescription:
-      "Explore Chamonix during the winter season with a private chauffeur and luxury vehicle. Discover Mont Blanc viewpoints, Alpine villages, ski resorts, gourmet restaurants, and tailor-made experiences throughout the French Alps.",    heroImageSrc: "/assets/images/services/chamonix.webp",
+      "Explore Chamonix during the winter season with a private chauffeur and luxury vehicle. Stops can include Mont Blanc viewpoints, Alpine villages, ski resorts and gourmet restaurants across the French Alps.",    heroImageSrc: "/assets/images/services/chamonix.webp",
     heroImageAlt: "Private chauffeur tour in Chamonix",
-    introTitle: "Discover Chamonix During the Winter Season",
+    introTitle: "Seeing Chamonix in Winter",
     introDescription:
       "From iconic mountain landscapes and world-famous viewpoints to luxury hotels and charming Alpine villages, a private tour in Chamonix offers comfort, flexibility, and a personalized way to experience the French Alps during winter.",      
       panels: [{
         title: "Winter Alpine Discovery",
-        text: "Explore Chamonix, Mont Blanc viewpoints, Alpine villages, scenic mountain roads, and some of the most spectacular winter landscapes in the French Alps.",
+        text: "Around Chamonix, scenic mountain roads lead to Mont Blanc viewpoints, Alpine villages and the winter landscapes of the French Alps.",
         theme: "dark",
       },
       {
@@ -3436,7 +3436,7 @@ export const chauffeurTourPages: Record<string, ServicePageConfig> = {
       {
         question: "Which landmarks are commonly included during a private tour in Chamonix?",
         answer:
-          "Guests frequently visit the Aiguille du Midi, Mer de Glace, Mont Blanc viewpoints, the historic centre of Chamonix, and scenic Alpine roads offering spectacular mountain scenery.",
+          "Guests often visit the Aiguille du Midi, the Mer de Glace, Mont Blanc viewpoints and the historic centre of Chamonix, along scenic Alpine roads.",
       },
       {
         question: "Can the tour include sightseeing, shopping, and fine dining experiences?",
@@ -3503,7 +3503,7 @@ export const yachtTransfersPage: ServicePageConfig = {
   serviceLabel: "Yacht Transfers",
   heroTitle: "Yacht Transfers on the French Riviera",
   heroDescription:
-    "Private chauffeur transfers between Nice Airport and the marinas of the coast — Antibes, Cannes, Monaco and Saint-Tropez — met at your flight and delivered to the quay.",
+    "We run private chauffeur transfers between Nice Airport and the marinas of Antibes, Cannes, Monaco and Saint-Tropez. We meet your flight and take you to the quay.",
   heroImageSrc: "/assets/images/services/yacht-transfers.webp",
   heroImageAlt: "Private chauffeur yacht transfer with a black Mercedes beside a superyacht",
   introTitle: "From the Terminal to the Gangway",
@@ -3511,13 +3511,13 @@ export const yachtTransfersPage: ServicePageConfig = {
     "The Riviera holds the densest run of superyacht marinas anywhere, and a chauffeur is the smoothest link between the airport and the quay.",
   panels: [
     {
-      title: "Met and Delivered to the Quay",
+      title: "Met on Arrival, Driven to the Quay",
       text: "We meet you at the flight, handle the luggage and provisions, and deliver you straight to the marina quay or your waiting tender.",
       theme: "dark",
     },
     {
       title: "Every Marina Covered",
-      text: "Port Vauban in Antibes, the ports of Cannes, Monaco's Port Hercule and the old port of Saint-Tropez are all within easy reach of the airport.",
+      text: "From the airport, you can easily reach Port Vauban in Antibes, the ports of Cannes, Port Hercule in Monaco and the old port of Saint-Tropez.",
       theme: "light",
     },
   ],
@@ -3560,7 +3560,7 @@ export const yachtTransfersPage: ServicePageConfig = {
     {
       question: "Which marinas do you cover on the French Riviera?",
       answer:
-        "All of them: Port Vauban in Antibes, the ports of Cannes, Monaco's Port Hercule and the old port of Saint-Tropez, among others.",
+        "We cover all of them, including Port Vauban in Antibes, the ports of Cannes, Port Hercule in Monaco and the old port of Saint-Tropez.",
     },
     {
       question: "Can you meet a private jet for a yacht transfer?",
@@ -3597,9 +3597,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Monaco Yacht Transfer",
-    heroTitle: "Monaco Yacht Transfer to Port Hercule",
+    heroTitle: "Yacht Transfer to Port Hercule in Monaco",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to your yacht in Port Hercule: around 30 to 40 minutes, delivered to the quay without Monaco's tunnels or parking.",
+      "A private chauffeur transfer takes you from Nice Airport to your yacht's quay at Port Hercule in around 30 to 40 minutes, so you never deal with Monaco's tunnels or parking.",
     heroImageSrc: "/assets/images/services/yacht-monaco.webp",
     heroImageAlt: "Yacht transfer to Port Hercule Monaco with a black Mercedes on the harbour",
     introTitle: "To Monaco's Superyacht Harbour",
@@ -3646,7 +3646,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       "Choose the marina your yacht is berthed at for a transfer tailored to the port and the route.",
     localLinks: yachtTransferLinks,
     cta: {
-      title: "Need a Monaco Yacht Transfer?",
+      title: "Need a Yacht Transfer in Monaco?",
       description:
         "Send us your arrival details and the yacht's berth and we will organize a chauffeur from Nice Airport to Port Hercule.",
       buttonText: "Request Monaco Yacht Transfer",
@@ -3661,10 +3661,10 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       {
         question: "How much is a Monaco yacht transfer?",
         answer:
-          "From around €150 in a Mercedes E-Class or €180 in a V-Class from Nice Airport, quoted as a fixed price in advance.",
+          "Prices from Nice Airport start at around €150 in a Mercedes E-Class or €180 in a V-Class. We quote a fixed price in advance.",
       },
       {
-        question: "Can you deliver me to the quay in Port Hercule?",
+        question: "Can you drop me at the quay in Port Hercule?",
         answer:
           "Yes. We take you directly to the quay and your yacht, coordinating with the crew on access and timing where needed.",
       },
@@ -3696,9 +3696,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Cannes Yacht Transfer",
-    heroTitle: "Cannes Yacht Transfer to the Vieux Port",
+    heroTitle: "Yacht Transfer to the Vieux Port in Cannes",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to your yacht in Cannes — the Vieux Port or Port Pierre Canto — around 30 minutes, delivered to the quay.",
+      "A private chauffeur transfer takes you from Nice Airport to the quay and your yacht in Cannes, at the Vieux Port or Port Pierre Canto, in around 30 minutes.",
     heroImageSrc: "/assets/images/services/yacht-cannes.webp",
     heroImageAlt: "Yacht transfer to the Vieux Port of Cannes with a black Mercedes on the quay",
     introTitle: "To the Heart of Cannes",
@@ -3707,12 +3707,12 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Delivered to the Quay",
-        text: "We meet your flight and bring you to the Vieux Port or Port Pierre Canto, delivered to the quay and your yacht.",
+        text: "We meet your flight and drive you to the Vieux Port or Port Pierre Canto, all the way to the quay and your yacht.",
         theme: "dark",
       },
       {
         title: "Festival Ready",
-        text: "During the Cannes Yachting Festival and the Film Festival, a chauffeur who knows the closures keeps arrivals smooth.",
+        text: "During the Cannes Yachting Festival and the Film Festival, a chauffeur who knows the road closures keeps your arrival smooth.",
         theme: "light",
       },
     ],
@@ -3745,7 +3745,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       "Choose the marina your yacht is berthed at for a transfer tailored to the port and the route.",
     localLinks: yachtTransferLinks,
     cta: {
-      title: "Need a Cannes Yacht Transfer?",
+      title: "Need a Yacht Transfer in Cannes?",
       description:
         "Send us your arrival details and the yacht's berth and we will organize a chauffeur from Nice Airport to Cannes.",
       buttonText: "Request Cannes Yacht Transfer",
@@ -3755,27 +3755,27 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       {
         question: "How long is the transfer from Nice Airport to Cannes?",
         answer:
-          "Around 30 minutes by road on a clear run to the Vieux Port or Port Pierre Canto, a little longer during the festivals.",
+          "The drive to the Vieux Port or Port Pierre Canto takes around 30 minutes in clear traffic, and a little longer during the festivals.",
       },
       {
         question: "How much is a Cannes yacht transfer?",
         answer:
-          "From around €150 in a Mercedes E-Class or €180 in a V-Class from Nice Airport, quoted as a fixed price in advance.",
+          "Prices from Nice Airport start at around €150 in a Mercedes E-Class or €180 in a V-Class. We quote a fixed price in advance.",
       },
       {
         question: "Where do larger yachts berth in Cannes?",
         answer:
-          "Often at Port Pierre Canto, just east of the Vieux Port, which takes larger yachts while keeping easy access to the Croisette.",
+          "Larger yachts often berth at Port Pierre Canto, just east of the Vieux Port, with easy access to the Croisette.",
       },
       {
         question: "Can you handle Yachting Festival transfers?",
         answer:
-          "Yes. During the Cannes Yachting Festival a driver who knows the closures keeps arrivals to the ports smooth and on time.",
+          "Yes. During the Cannes Yachting Festival, a driver who knows the road closures gets you to the ports smoothly and on time.",
       },
       {
         question: "Do you handle crew and provisioning in Cannes?",
         answer:
-          "Yes. We manage crew changes and provisioning runs for yachts in the Vieux Port and Port Canto, on the yacht's schedule.",
+          "Yes. We manage crew changes and provisioning runs for yachts in the Vieux Port and Port Canto, to suit each yacht's schedule.",
       },
     ],
   },
@@ -3797,16 +3797,16 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Saint-Tropez Yacht Transfer",
     heroTitle: "Saint-Tropez Yacht Transfer",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to your yacht in the old port of Saint-Tropez. By road or by boat across the gulf, timed around the traffic.",
+      "A private chauffeur transfer from Nice Airport to your yacht in the old port of Saint-Tropez. We take you by road or by boat across the gulf, timing the trip around the traffic.",
     heroImageSrc: "/assets/images/services/yacht-saint-tropez.webp",
     heroImageAlt: "Yacht transfer to the old port of Saint-Tropez with a black Mercedes on the quay",
-    introTitle: "To the Most Famous Quay",
+    introTitle: "To Yachting's Most Famous Quay",
     introDescription:
       "The old port of Saint-Tropez is yachting's most famous quay, and also the hardest to reach. Best handled by a chauffeur who knows the peninsula.",
     panels: [
       {
         title: "By Road or by Boat",
-        text: "We run the full road transfer, or drive you to a boat landing at Sainte-Maxime with the crossing arranged to meet the yacht.",
+        text: "We do the whole transfer by road, or drive you to a boat landing at Sainte-Maxime, where a crossing is arranged to meet the yacht.",
         theme: "dark",
       },
       {
@@ -3844,7 +3844,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       "Choose the marina your yacht is berthed at for a transfer tailored to the port and the route.",
     localLinks: yachtTransferLinks,
     cta: {
-      title: "Need a Saint-Tropez Yacht Transfer?",
+      title: "Need a Yacht Transfer in Saint-Tropez?",
       description:
         "Send us your arrival details and the yacht's berth and we will organize a chauffeur from Nice Airport to Saint-Tropez.",
       buttonText: "Request Saint-Tropez Yacht Transfer",
@@ -3859,22 +3859,22 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       {
         question: "How much is a Saint-Tropez yacht transfer?",
         answer:
-          "From around €400 in a Mercedes E-Class or €500 in a V-Class from Nice Airport, quoted as a fixed price in advance.",
+          "Prices from Nice Airport start at around €400 in a Mercedes E-Class or €500 in a V-Class. We quote a fixed price in advance.",
       },
       {
         question: "Can I reach the yacht by boat?",
         answer:
-          "Yes. We can drive you to a boat landing at Sainte-Maxime with a crossing arranged into the port, avoiding the summer gulf traffic.",
+          "Yes. We can drive you to a boat landing at Sainte-Maxime, where a crossing into the port is arranged, so you avoid the summer gulf traffic.",
       },
       {
-        question: "Can you run to the Pampelonne beach clubs?",
+        question: "Can you drive me to the Pampelonne beach clubs?",
         answer:
           "Yes. We handle runs from the port to the Pampelonne beach clubs, dropping you at the door and collecting you when ready.",
       },
       {
         question: "Do you handle crew and provisioning in Saint-Tropez?",
         answer:
-          "Yes. We manage crew changes and provisioning runs for yachts in the old port, on the yacht's schedule.",
+          "Yes. We manage crew changes and provisioning runs for yachts in the old port, to suit each yacht's schedule.",
       },
     ],
   },
@@ -3894,9 +3894,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Port Vauban Yacht Transfer",
-    heroTitle: "Port Vauban Yacht Transfer, Antibes",
+    heroTitle: "Yacht Transfer to Port Vauban in Antibes",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport to your yacht at Port Vauban in Antibes — the largest marina in Europe — around 25 minutes to the quay.",
+      "A private chauffeur transfer takes you from Nice Airport to the quay and your yacht at Port Vauban in Antibes, Europe's largest marina, in around 25 minutes.",
     heroImageSrc: "/assets/images/services/yacht-antibes.webp",
     heroImageAlt: "Yacht transfer to Port Vauban Antibes with a black Mercedes and superyachts",
     introTitle: "To Europe's Largest Marina",
@@ -3905,7 +3905,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Delivered to the Quay",
-        text: "We meet your flight and bring you the short way to Port Vauban, delivered to the quay and your yacht, even the Quai des Milliardaires.",
+        text: "We meet your flight and take the short route to Port Vauban, all the way to the quay and your yacht, even on the Quai des Milliardaires.",
         theme: "dark",
       },
       {
@@ -3943,7 +3943,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       "Choose the marina your yacht is berthed at for a transfer tailored to the port and the route.",
     localLinks: yachtTransferLinks,
     cta: {
-      title: "Need a Port Vauban Yacht Transfer?",
+      title: "Need a Yacht Transfer at Port Vauban?",
       description:
         "Send us your arrival details and the yacht's berth and we will organize a chauffeur from Nice Airport to Port Vauban.",
       buttonText: "Request Antibes Yacht Transfer",
@@ -3953,12 +3953,12 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       {
         question: "How long is the transfer from Nice Airport to Port Vauban?",
         answer:
-          "Around 25 minutes by road, making Port Vauban in Antibes one of the closest major marinas to Nice Airport.",
+          "The drive takes around 25 minutes, making Port Vauban in Antibes one of the closest major marinas to Nice Airport.",
       },
       {
         question: "How much is an Antibes yacht transfer?",
         answer:
-          "From around €120 in a Mercedes E-Class or €150 in a V-Class from Nice Airport, quoted as a fixed price in advance.",
+          "Prices from Nice Airport start at around €120 in a Mercedes E-Class or €150 in a V-Class. We quote a fixed price in advance.",
       },
       {
         question: "What is the Quai des Milliardaires?",
@@ -3968,7 +3968,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       {
         question: "Do you handle crew changes at Port Vauban?",
         answer:
-          "Yes. We manage crew changes, provisioning runs and guest movements for yachts at Port Vauban, on the yacht's schedule.",
+          "Yes. We manage crew changes, provisioning runs and guest movements for yachts at Port Vauban, to suit each yacht's schedule.",
       },
       {
         question: "Which vehicle is best for a yacht arrival?",
@@ -3993,9 +3993,9 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       ],
     },
     serviceLabel: "Nice Airport to Yacht",
-    heroTitle: "Nice Airport to Your Yacht",
+    heroTitle: "From Nice Airport to Your Yacht",
     heroDescription:
-      "A private chauffeur transfer from Nice Airport — commercial terminal or business aviation — straight to your yacht at any Riviera marina, met on arrival.",
+      "A private chauffeur meets you at Nice Airport, at the commercial or business aviation terminal, for a transfer straight to your yacht at any Riviera marina.",
     heroImageSrc: "/assets/images/services/yacht-nice-airport.webp",
     heroImageAlt: "Private jet to yacht transfer at Nice with a black Mercedes and chauffeur",
     introTitle: "The Riviera's Yachting Gateway",
@@ -4004,17 +4004,17 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Met on Arrival",
-        text: "We meet you at the flight — commercial arrivals or the business aviation terminal — handle the luggage and bring you to the car.",
+        text: "We meet you off your flight, in commercial arrivals or at the business aviation terminal. We handle the luggage and bring you to the car.",
         theme: "dark",
       },
       {
         title: "Straight to the Marina",
-        text: "From the terminal we drive directly to Antibes, Cannes, Monaco or Saint-Tropez, delivered to the quay and your yacht.",
+        text: "From the terminal, we drive you directly to Antibes, Cannes, Monaco or Saint-Tropez, all the way to the quay and your yacht.",
         theme: "light",
       },
     ],
     audienceTitle: "Ideal For",
-    audienceAccent: "Airport to Yacht",
+    audienceAccent: "Airport-to-Yacht Transfers",
     audienceDescription:
       "Built for owners, guests and crew flying into Nice to join a yacht, by commercial flight or private jet.",
     audienceCards: [
@@ -4042,7 +4042,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       "Choose the marina your yacht is berthed at for a transfer tailored to the port and the route.",
     localLinks: yachtTransferLinks,
     cta: {
-      title: "Need an Airport to Yacht Transfer?",
+      title: "Need a Yacht Transfer From the Airport?",
       description:
         "Send us your flight details, marina and party size and we will organize a chauffeur from Nice Airport to your yacht.",
       buttonText: "Request Airport to Yacht",
@@ -4067,7 +4067,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       {
         question: "How much is an airport to yacht transfer?",
         answer:
-          "From around €120 to Antibes, €150 to Cannes or Monaco, and €400 to Saint-Tropez, with larger vehicles priced a little higher.",
+          "Prices start at around €120 to Antibes, €150 to Cannes or Monaco and €400 to Saint-Tropez. Larger vehicles cost a little more.",
       },
       {
         question: "What vehicle is best for a yacht arrival?",
@@ -4094,16 +4094,16 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Crew Transportation",
     heroTitle: "Yacht Crew Transportation",
     heroDescription:
-      "Private chauffeur transport for superyacht crew across the Riviera: airport and station runs, crew changes and provisioning, on call day and night.",
+      "Our private chauffeurs drive superyacht crew across the Riviera for airport and station runs, crew changes and provisioning. We are on call day and night.",
     heroImageSrc: "/assets/images/services/yacht-crew.webp",
     heroImageAlt: "Yacht crew transportation with a black Mercedes V-Class van on a marina quay",
-    introTitle: "Ground Support for the Yacht",
+    introTitle: "Ground Support for Your Yacht",
     introDescription:
       "A superyacht in port generates constant movement ashore, and a dedicated chauffeur partner handles all of it on the yacht's schedule.",
     panels: [
       {
         title: "Crew Changes, Any Hour",
-        text: "We track flights and run airport and station pickups at any time, with a name board waiting. One reliable contact for every rotation.",
+        text: "We track flights and handle airport and station pickups at any hour. A driver waits with a name board. One reliable contact for every rotation.",
         theme: "dark",
       },
       {
@@ -4156,7 +4156,7 @@ export const yachtTransferPages: Record<string, ServicePageConfig> = {
       {
         question: "Which vehicle is used for provisioning runs?",
         answer:
-          "A spacious Mercedes V-Class, which carries bulky provisions and equipment discreetly between the town, suppliers and the quay.",
+          "We use a spacious Mercedes V-Class. It carries bulky provisions and equipment discreetly between the town, the suppliers and the quay.",
       },
       {
         question: "Can one service cover the whole Riviera?",
@@ -4213,7 +4213,7 @@ export const eventsPage: ServicePageConfig = {
   serviceLabel: "Luxury Event Transport",
   heroTitle: "Luxury Event Transport on the Riviera",
   heroDescription:
-    "Private chauffeur transport for the French Riviera's great events — the Grand Prix, the Cannes festivals and the Monaco Yacht Show — arriving calm through the crowds and closures.",
+    "Our private chauffeurs drive you to the French Riviera's great events: the Grand Prix, the Cannes festivals and the Monaco Yacht Show. You arrive calm, despite the crowds and closures.",
   heroImageSrc: "/assets/images/services/events.webp",
   heroImageAlt: "Luxury event chauffeur with a black Mercedes arriving at a Riviera event",
   introTitle: "Arrive Through the Crowds",
@@ -4227,7 +4227,7 @@ export const eventsPage: ServicePageConfig = {
     },
     {
       title: "Around the Closures",
-      text: "During the Grand Prix, the festivals and the Yacht Show, a driver who knows the road closures keeps a packed schedule flowing.",
+      text: "During the Grand Prix, the festivals and the Yacht Show, a driver who knows the road closures keeps your packed schedule on track.",
       theme: "light",
     },
   ],
@@ -4270,7 +4270,7 @@ export const eventsPage: ServicePageConfig = {
     {
       question: "Which Riviera events do you cover?",
       answer:
-        "The Monaco Grand Prix, the Cannes Film Festival and Cannes Lions, the Monaco Yacht Show, the Cannes Yachting Festival and more.",
+        "We cover the Monaco Grand Prix, the Cannes Film Festival and Cannes Lions, the Monaco Yacht Show and the Cannes Yachting Festival, among others.",
     },
     {
       question: "Why use a chauffeur for a Riviera event?",
@@ -4309,7 +4309,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Monaco Grand Prix Transport",
     heroTitle: "Monaco Grand Prix Transport",
     heroDescription:
-      "Private chauffeur transport for the Monaco Grand Prix each May. Arrivals from Nice Airport and on-call transfers around the circuit closures and race-week crowds.",
+      "We provide private chauffeur transport for the Monaco Grand Prix each May. We handle arrivals from Nice Airport and on-call transfers around the circuit closures and race-week crowds.",
     heroImageSrc: "/assets/images/services/event-monaco-grand-prix.webp",
     heroImageAlt: "Monaco Grand Prix transport with a racing car on the harbour circuit",
     introTitle: "Race Week, Handled",
@@ -4318,7 +4318,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Arriving for the Grand Prix",
-        text: "We meet your flight at Nice, around 30 to 40 minutes away, and bring you toward Monaco — or pair with the helicopter to the heliport.",
+        text: "We meet your flight at Nice, around 30 to 40 minutes away, and drive you toward Monaco, or meet your helicopter at the heliport.",
         theme: "dark",
       },
       {
@@ -4366,12 +4366,12 @@ export const eventPages: Record<string, ServicePageConfig> = {
       {
         question: "When is the Monaco Grand Prix?",
         answer:
-          "Each year in late May, with practice on Thursday, qualifying on Saturday and the race on Sunday, on the streets of Monte-Carlo.",
+          "It runs each year in late May on the streets of Monte-Carlo, with practice on Thursday, qualifying on Saturday and the race on Sunday.",
       },
       {
         question: "How do I get to the Monaco Grand Prix?",
         answer:
-          "By private chauffeur from Nice Airport, around 30 to 40 minutes by road, or by helicopter to the Monaco heliport with a car waiting.",
+          "Go by private chauffeur from Nice Airport, around 30 to 40 minutes by road, or by helicopter to the Monaco heliport, where a car waits.",
       },
       {
         question: "Can you move me around during race week?",
@@ -4408,7 +4408,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Cannes Film Festival Transport",
     heroTitle: "Cannes Film Festival Transport",
     heroDescription:
-      "Private chauffeur transport for the Cannes Film Festival each May: red-carpet arrivals at the Palais, black-tie evenings and on-call transfers around the crowds.",
+      "We provide private chauffeur transport for the Cannes Film Festival each May: red-carpet arrivals at the Palais, black-tie evenings and on-call transfers around the crowds.",
     heroImageSrc: "/assets/images/services/event-cannes-film-festival.webp",
     heroImageAlt: "Cannes Film Festival transport with a black Mercedes at the red carpet",
     introTitle: "Arrive in Style",
@@ -4417,7 +4417,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "To the Red Carpet",
-        text: "We deliver you to the Palais entrances and the hotel doors in black-tie style, timed to the evening, and wait for the finish.",
+        text: "We drop you at the Palais entrances and the hotel doors in black-tie style, on the evening's schedule, and wait until the end.",
         theme: "dark",
       },
       {
@@ -4465,7 +4465,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
       {
         question: "When is the Cannes Film Festival?",
         answer:
-          "Over two weeks each May, centred on the Palais des Festivals and its red-carpeted Montée des Marches along the Croisette.",
+          "It runs over two weeks each May, centred on the Palais des Festivals and its red-carpeted Montée des Marches along the Croisette.",
       },
       {
         question: "How do I arrive at the Cannes red carpet?",
@@ -4478,14 +4478,14 @@ export const eventPages: Record<string, ServicePageConfig> = {
           "Very. With heavy road closures and crowds, a driver keeps you moving between screenings, meetings and parties, day and night.",
       },
       {
-        question: "Can you transfer me from Nice Airport for the festival?",
+        question: "Can you arrange a transfer from Nice Airport for the festival?",
         answer:
           "Yes. Cannes is around 30 minutes from Nice Airport, and we meet your flight and handle the week from there.",
       },
       {
         question: "Can you handle villa and yacht events?",
         answer:
-          "Yes. We carry guests to the villa parties in the hills and the yacht events in the bay, through the night.",
+          "Yes. We drive guests to villa parties in the hills and yacht events in the bay, all through the night.",
       },
     ],
   },
@@ -4507,7 +4507,7 @@ export const eventPages: Record<string, ServicePageConfig> = {
     serviceLabel: "Monaco Yacht Show Transport",
     heroTitle: "Monaco Yacht Show Transport",
     heroDescription:
-      "Private chauffeur transport for the Monaco Yacht Show each September: arrivals from Nice Airport to Port Hercule and on-call transfers around the crowds.",
+      "We provide private chauffeur transport for the Monaco Yacht Show each September: arrivals from Nice Airport to Port Hercule, and on-call transfers around the crowds.",
     heroImageSrc: "/assets/images/services/event-monaco-yacht-show.webp",
     heroImageAlt: "Monaco Yacht Show transport with superyachts in Port Hercule and a black Mercedes",
     introTitle: "The Superyacht Week",
@@ -4516,12 +4516,12 @@ export const eventPages: Record<string, ServicePageConfig> = {
     panels: [
       {
         title: "Arriving for the Show",
-        text: "We meet your flight at Nice, around 30 to 40 minutes away, and bring you toward Port Hercule — or pair with the helicopter to the heliport.",
+        text: "We meet your flight at Nice, around 30 to 40 minutes away, and drive you toward Port Hercule, or meet your helicopter at the heliport.",
         theme: "dark",
       },
       {
         title: "Through the Crowds",
-        text: "Show week runs Monaco at capacity, with closures and dense crowds; a chauffeur who knows the diversions keeps arrivals smooth.",
+        text: "Monaco is at capacity during show week, with road closures and dense crowds. A chauffeur who knows the diversions keeps your arrivals smooth.",
         theme: "light",
       },
     ],
@@ -4564,17 +4564,17 @@ export const eventPages: Record<string, ServicePageConfig> = {
       {
         question: "When is the Monaco Yacht Show?",
         answer:
-          "Each September, when Port Hercule fills with the world's largest superyachts and Monaco becomes the centre of the yachting calendar.",
+          "It takes place each September, when Port Hercule fills with the world's largest superyachts and Monaco becomes the centre of the yachting calendar.",
       },
       {
         question: "How do I get to the Monaco Yacht Show?",
         answer:
-          "By private chauffeur from Nice Airport, around 30 to 40 minutes, or by helicopter to the Monaco heliport with a car waiting.",
+          "Go by private chauffeur from Nice Airport in around 30 to 40 minutes, or by helicopter to the Monaco heliport, where a car waits.",
       },
       {
         question: "Should I book transport early for the show?",
         answer:
-          "Yes. Show week runs the coast at full capacity, so booking chauffeurs and helicopters well ahead is essential.",
+          "Yes. The coast is at full capacity during show week, so it is essential to book chauffeurs and helicopters well ahead.",
       },
       {
         question: "Can a chauffeur move me around during show week?",

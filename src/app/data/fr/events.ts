@@ -60,7 +60,7 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Transport Grand Prix de Monaco",
     heroTitle: "Chauffeur privé pour le Grand Prix de Monaco",
-    heroDescription: `Transport avec chauffeur privé pour le Grand Prix de Monaco, chaque année en mai. Accueil à l'aéroport Nice Côte d'Azur et transferts à la demande, en contournant les fermetures du circuit et la foule de la semaine de course. En Mercedes Classe E : transfert de l'aéroport à Monaco dès ${eur(E_CLASS.prices.monaco.transfer)}, chauffeur à disposition dès ${eur(E_CLASS.prices.nice.hourly)} de l'heure ou ${eur(E_CLASS.prices.nice.fullDay)} la journée.`,
+    heroDescription: `Un chauffeur privé assure votre transport pendant le Grand Prix de Monaco, chaque année en mai. Il vous accueille à l'aéroport Nice Côte d'Azur, puis s'occupe de vos transferts à la demande en contournant les fermetures du circuit et la foule de la semaine de course. En Mercedes Classe E, le transfert de l'aéroport à Monaco coûte à partir de ${eur(E_CLASS.prices.monaco.transfer)}, et un chauffeur à disposition à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure ou ${eur(E_CLASS.prices.nice.fullDay)} la journée.`,
     heroImageSrc: eventPages["monaco-grand-prix"].heroImageSrc,
     heroImageAlt: "Transport pour le Grand Prix de Monaco, une voiture de course sur le circuit du port",
     introTitle: "La semaine du Grand Prix, organisée pour vous",
@@ -68,7 +68,7 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       "Pendant la semaine de course, la Principauté est pleine à craquer et ses routes sont presque toutes fermées : un chauffeur est la seule façon de se déplacer tranquillement.",
     panels: [
       {
-        title: "Votre arrivée pour le Grand Prix",
+        title: "Votre arrivée au Grand Prix",
         text: "Nous vous attendons à l'arrivée de votre vol à Nice, à 30 à 40 minutes environ de Monaco, puis vous conduisons vers la Principauté ; vous pouvez aussi combiner le trajet avec l'hélicoptère jusqu'à l'héliport.",
         theme: "dark",
       },
@@ -121,7 +121,7 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         question: "Comment se rendre au Grand Prix de Monaco ?",
-        answer: `En chauffeur privé depuis l'aéroport de Nice, en 30 à 40 minutes environ par la route. Votre chauffeur suit votre vol et vous attend dans le hall des arrivées avec une pancarte à votre nom, une heure d'attente incluse ; le transfert jusqu'à Monaco coûte à partir de ${eur(E_CLASS.prices.monaco.transfer)} en Mercedes Classe E ou ${eur(V_CLASS.prices.monaco.transfer)} en Classe V, à prix fixe confirmé avant la réservation. Vous pouvez aussi prendre l'hélicoptère jusqu'à l'héliport de Monaco, où une voiture vous attend.`,
+        answer: `Un chauffeur privé vous y conduit depuis l'aéroport de Nice en 30 à 40 minutes environ par la route. Votre chauffeur suit votre vol et vous attend dans le hall des arrivées avec une pancarte à votre nom, une heure d'attente incluse ; le transfert jusqu'à Monaco coûte à partir de ${eur(E_CLASS.prices.monaco.transfer)} en Mercedes Classe E ou ${eur(V_CLASS.prices.monaco.transfer)} en Classe V, à prix fixe confirmé avant la réservation. Vous pouvez aussi prendre l'hélicoptère jusqu'à l'héliport de Monaco, où une voiture vous attend.`,
       },
       {
         question: "Pouvez-vous assurer mes déplacements pendant la semaine du Grand Prix ?",
@@ -159,7 +159,7 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Transport Festival de Cannes",
     heroTitle: "Chauffeur privé pour le Festival de Cannes",
-    heroDescription: `Transport avec chauffeur privé pour le Festival de Cannes, chaque année en mai : accueil à l'aéroport Nice Côte d'Azur, arrivées sur le tapis rouge du Palais, soirées de gala et transferts à la demande en contournant la foule. En Mercedes Classe E : transfert de l'aéroport à Cannes dès ${eur(E_CLASS.prices.cannes.transfer)}, chauffeur à disposition dès ${eur(E_CLASS.prices.nice.hourly)} de l'heure ou ${eur(E_CLASS.prices.nice.fullDay)} la journée.`,
+    heroDescription: `Pendant le Festival de Cannes, chaque année en mai, un chauffeur privé vous accueille à l'aéroport Nice Côte d'Azur. Il vous conduit jusqu'au tapis rouge du Palais et aux soirées de gala, et assure vos transferts à la demande en contournant la foule. En Mercedes Classe E, le transfert de l'aéroport à Cannes coûte à partir de ${eur(E_CLASS.prices.cannes.transfer)}, et un chauffeur à disposition à partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure ou ${eur(E_CLASS.prices.nice.fullDay)} la journée.`,
     heroImageSrc: eventPages["cannes-film-festival"].heroImageSrc,
     heroImageAlt: "Transport pour le Festival de Cannes, une Mercedes noire devant le tapis rouge",
     introTitle: "Arrivez avec élégance",
@@ -168,7 +168,7 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "Jusqu'au tapis rouge",
-        text: "Nous vous déposons aux entrées du Palais et aux portes des hôtels avec l'élégance d'une soirée de gala, à l'heure prévue, puis nous vous attendons jusqu'à la fin.",
+        text: "Nous vous déposons à l'heure prévue aux entrées du Palais et aux portes des hôtels, avec l'élégance d'une soirée de gala. Nous vous attendons ensuite jusqu'à la fin.",
         theme: "dark",
       },
       {
@@ -226,16 +226,16 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Un chauffeur est-il utile pendant le Festival ?",
         answer:
-          "Oui, très. Avec les nombreuses fermetures de routes et la foule, un chauffeur vous permet de circuler entre projections, rendez-vous et soirées, de jour comme de nuit.",
+          "Oui, très. Malgré les nombreuses fermetures de routes et la foule, un chauffeur vous permet de circuler entre projections, rendez-vous et soirées, de jour comme de nuit.",
       },
       {
         question: "Pouvez-vous venir me chercher à l'aéroport de Nice pour le Festival ?",
         answer: `Oui. Cannes est à une trentaine de minutes de l'aéroport de Nice : votre chauffeur suit votre vol et vous attend dans le hall des arrivées avec une pancarte à votre nom, une heure d'attente incluse. Le transfert jusqu'à Cannes coûte à partir de ${eur(E_CLASS.prices.cannes.transfer)} en Mercedes Classe E ou ${eur(V_CLASS.prices.cannes.transfer)} en Classe V, à prix fixe confirmé avant la réservation. Nous organisons ensuite vos déplacements de la semaine.`,
       },
       {
-        question: "Pouvez-vous me conduire aux soirées en villa et sur les yachts ?",
+        question: "Pouvez-vous me conduire à une soirée en villa ou sur un yacht ?",
         answer:
-          "Oui. Nous conduisons les invités aux soirées dans les villas des collines et aux événements sur les yachts de la baie, toute la nuit.",
+          "Oui. Nous vous conduisons toute la nuit aux soirées dans les villas des collines et aux événements sur les yachts de la baie.",
       },
     ],
   },
@@ -259,7 +259,7 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     serviceLabel: "Transport Monaco Yacht Show",
     heroTitle: "Chauffeur privé pour le Monaco Yacht Show",
     heroDescription:
-      "Transport avec chauffeur privé pour le Monaco Yacht Show, chaque année en septembre : arrivées de l'aéroport Nice Côte d'Azur à Port Hercule et transferts à la demande en contournant la foule.",
+      "Pendant le Monaco Yacht Show, chaque année en septembre, un chauffeur privé vous conduit de l'aéroport Nice Côte d'Azur à Port Hercule. Il assure aussi vos transferts à la demande en contournant la foule.",
     heroImageSrc: eventPages["monaco-yacht-show"].heroImageSrc,
     heroImageAlt: "Transport pour le Monaco Yacht Show, des superyachts à Port Hercule et une Mercedes noire",
     introTitle: "La semaine des superyachts",
@@ -267,8 +267,8 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       "Chaque année en septembre, le Monaco Yacht Show remplit Port Hercule des plus grands superyachts du monde, et la Principauté d'acheteurs et de courtiers.",
     panels: [
       {
-        title: "Votre arrivée pour le salon",
-        text: "Nous vous attendons à l'arrivée de votre vol à Nice, à 30 à 40 minutes environ de Monaco, puis vous conduisons vers Port Hercule ; vous pouvez aussi combiner le trajet avec l'hélicoptère jusqu'à l'héliport.",
+        title: "Votre arrivée au salon",
+        text: "Nous vous attendons à l'arrivée de votre vol à Nice, puis nous vous conduisons à Port Hercule, à Monaco, en 30 à 40 minutes environ. Vous pouvez aussi combiner le trajet avec l'hélicoptère jusqu'à l'héliport.",
         theme: "dark",
       },
       {
@@ -321,7 +321,7 @@ export const eventPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Comment se rendre au Monaco Yacht Show ?",
         answer:
-          "En chauffeur privé depuis l'aéroport de Nice, en 30 à 40 minutes environ, ou en hélicoptère jusqu'à l'héliport de Monaco, où une voiture vous attend.",
+          "Un chauffeur privé vous y conduit depuis l'aéroport de Nice en 30 à 40 minutes environ. Si vous venez en hélicoptère, une voiture vous attend à l'héliport de Monaco.",
       },
       {
         question: "Faut-il réserver tôt son transport pour le salon ?",

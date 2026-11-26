@@ -18,7 +18,7 @@ const eurFr = (n: number) => `${n.toLocaleString("fr-FR")} €`;
 const faqs: { question: string; answer: string }[] = [
   {
     question: "How much is a private driver from Nice Airport?",
-    answer: `Kokolimo's fixed prices from Nice Côte d'Azur Airport start at ${eur(E.prices.nice.transfer)} to Nice, ${eur(E.prices.antibes.transfer)} to Antibes, ${eur(E.prices.cannes.transfer)} to Cannes, ${eur(E.prices.monaco.transfer)} to Monaco and ${eur(E.prices["st-tropez"].transfer)} to Saint-Tropez in a Mercedes E-Class. The price is confirmed before you book, with one hour of waiting included.`,
+    answer: `Kokolimo's fixed prices from Nice Côte d'Azur Airport start at ${eur(E.prices.nice.transfer)} to Nice, ${eur(E.prices.antibes.transfer)} to Antibes, ${eur(E.prices.cannes.transfer)} to Cannes, ${eur(E.prices.monaco.transfer)} to Monaco and ${eur(E.prices["st-tropez"].transfer)} to Saint-Tropez in a Mercedes E-Class. We confirm the price before you book, and one hour of waiting is included.`,
   },
   {
     question: "Do you provide airport transfers from Nice Airport?",
@@ -38,11 +38,11 @@ const faqs: { question: string; answer: string }[] = [
   },
   {
     question: "Do you monitor flight delays?",
-    answer: "Yes. Kokolimo tracks your flight in real time, so an early or late landing changes nothing for you. One hour of waiting is included from the pickup time in your reservation; tell us as soon as possible about a major delay.",
+    answer: "Yes. Kokolimo tracks your flight in real time, so an early or late landing changes nothing for you. One hour of waiting is included from the pickup time in your reservation. If there is a major delay, please tell us as soon as possible.",
   },
   {
     question: "Is Kokolimo available 24/7?",
-    answer: "Yes. Kokolimo drives day and night, seven days a week, including early-morning flights and late arrivals at Nice Airport.",
+    answer: "Yes. Kokolimo drives day and night, seven days a week. That includes early-morning flights and late arrivals at Nice Airport.",
   },
   {
     question: "Which vehicles are available for transfers?",
@@ -50,7 +50,7 @@ const faqs: { question: string; answer: string }[] = [
   },
   {
     question: "How does an hourly chauffeur service work?",
-    answer: `Your Kokolimo chauffeur and car stay with you for the whole booking, for meetings, shopping or several stops, from ${eur(E.prices.nice.hourly)} per hour in an E-Class, ${eur(V.prices.nice.hourly)} in a V-Class, ${eur(S.prices.nice.hourly)} in an S-Class and ${eur(M.prices.nice.hourly)} in a Maybach.`,
+    answer: `Your Kokolimo chauffeur and car stay with you for the whole booking, for meetings, shopping or several stops. Prices start at ${eur(E.prices.nice.hourly)} per hour in an E-Class, ${eur(V.prices.nice.hourly)} in a V-Class, ${eur(S.prices.nice.hourly)} in an S-Class and ${eur(M.prices.nice.hourly)} in a Maybach.`,
   },
   {
     question: "What is your cancellation policy?",
@@ -94,7 +94,7 @@ const faqsFr: { question: string; answer: string }[] = frenchSpacing([
   },
   {
     question: "Comment fonctionne un chauffeur à l'heure ?",
-    answer: `Votre chauffeur Kokolimo et sa voiture restent avec vous pendant toute la réservation, pour des rendez-vous, des achats ou plusieurs arrêts, à partir de ${eurFr(E.prices.nice.hourly)} de l'heure en Classe E, ${eurFr(V.prices.nice.hourly)} en Classe V, ${eurFr(S.prices.nice.hourly)} en Classe S et ${eurFr(M.prices.nice.hourly)} en Maybach.`,
+    answer: `Votre chauffeur Kokolimo et sa voiture restent avec vous pendant toute la réservation, pour vos rendez-vous, vos achats ou plusieurs arrêts. Comptez à partir de ${eurFr(E.prices.nice.hourly)} de l'heure en Classe E, ${eurFr(V.prices.nice.hourly)} en Classe V, ${eurFr(S.prices.nice.hourly)} en Classe S et ${eurFr(M.prices.nice.hourly)} en Maybach.`,
   },
   {
     question: "Quelles sont vos conditions d'annulation ?",
@@ -107,14 +107,14 @@ const TEXT = {
     faqs,
     title: "Frequently Asked ",
     accent: "Questions",
-    intro: "Everything about airport pickups, waiting time, fixed prices and our vehicles. Something else? Ask us directly.",
+    intro: "Find answers about airport pickups, waiting time, fixed prices and our vehicles. Something else? Ask us directly.",
     whatsapp: "WhatsApp us",
   },
   fr: {
     faqs: faqsFr,
     title: "Questions ",
     accent: "fréquentes",
-    intro: "Tout sur l'accueil à l'aéroport, l'attente, les prix fixes et nos voitures. Une autre question ? Posez-la-nous directement.",
+    intro: "Voici nos réponses sur l'accueil à l'aéroport, l'attente, les prix fixes et nos voitures. Une autre question ? Posez-la-nous directement.",
     whatsapp: "Écrivez-nous sur WhatsApp",
   },
 };

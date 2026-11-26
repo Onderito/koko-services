@@ -68,7 +68,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Nice",
     heroTitle: "Chauffeur privé à l'heure à Nice",
-    heroDescription: `Un chauffeur privé à votre disposition pour les hôtels du bord de mer, le shopping, vos rendez-vous et vos réunions, et pour vous déplacer librement dans Nice. À partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E (Classe V ${eur(V_CLASS.prices.nice.hourly)}, Classe S ${eur(S_CLASS.prices.nice.hourly)}, Maybach ${eur(MAYBACH.prices.nice.hourly)}), ou ${eur(E_CLASS.prices.nice.fullDay)} pour une journée de huit heures.`,
+    heroDescription: `Avec un chauffeur privé à votre disposition, vous vous déplacez librement dans Nice, entre les hôtels du bord de mer, les boutiques, vos rendez-vous et vos réunions. À partir de ${eur(E_CLASS.prices.nice.hourly)} de l'heure en Mercedes Classe E (Classe V ${eur(V_CLASS.prices.nice.hourly)}, Classe S ${eur(S_CLASS.prices.nice.hourly)}, Maybach ${eur(MAYBACH.prices.nice.hourly)}), ou ${eur(E_CLASS.prices.nice.fullDay)} pour une journée de huit heures.`,
     heroImageSrc: hourlyChauffeurPages.nice.heroImageSrc,
     heroImageAlt: "Service de chauffeur privé à l'heure à Nice",
     introTitle: "Un chauffeur à l'heure pour vos journées à Nice",
@@ -122,7 +122,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     faq: [
       {
         question: "Comment fonctionne un chauffeur privé à l'heure à Nice ?",
-        answer: `Vous réservez le chauffeur et la voiture à l'heure, quatre heures au minimum, ou à la journée, soit huit heures pour ${eur(E_CLASS.prices.nice.fullDay)} en Mercedes Classe E. Chaque heure réservée comprend 20 kilomètres (160 kilomètres sur la journée). Hôtels, rendez-vous d'affaires, restaurants, quartiers commerçants ou plusieurs destinations dans Nice : votre chauffeur reste disponible et s'adapte à votre programme. Envoyez-nous la date, l'heure et l'adresse de prise en charge, et nous confirmons la voiture et le prix par écrit avant la réservation.`,
+        answer: `Vous réservez la voiture et son chauffeur à l'heure, pour quatre heures au minimum. Une journée de huit heures coûte ${eur(E_CLASS.prices.nice.fullDay)} en Mercedes Classe E. Chaque heure réservée comprend 20 kilomètres (160 kilomètres sur la journée). Votre chauffeur reste disponible et s\'adapte à votre programme. Il vous conduit à l\'hôtel, à vos rendez-vous d\'affaires, au restaurant ou dans les quartiers commerçants, d\'une adresse à l\'autre dans Nice. Envoyez-nous la date, l'heure et l'adresse de prise en charge, et nous confirmons la voiture et le prix par écrit avant la réservation.`,
       },
       {
         question: "Puis-je réserver un chauffeur à l'heure dès l'aéroport de Nice ?",
@@ -132,12 +132,12 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quels sont les lieux les plus demandés à Nice avec un chauffeur à l'heure ?",
         answer:
-          "Nos clients réservent souvent un chauffeur à l'heure pour la Promenade des Anglais, le Vieux-Nice, le port Lympia, les hôtels de luxe, l'avenue Jean-Médecin, l'aéroport Nice Côte d'Azur et leurs rendez-vous d'affaires en ville. Beaucoup de réservations comprennent aussi une excursion d'une journée à Monaco, Cannes, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat ou Saint-Paul-de-Vence.",
+          "Nos clients réservent souvent un chauffeur à l'heure pour aller sur la Promenade des Anglais, dans le Vieux-Nice, au port Lympia et sur l'avenue Jean-Médecin. Leur chauffeur les conduit également à l'aéroport Nice Côte d'Azur, dans les hôtels de luxe et à leurs rendez-vous d'affaires en ville. Beaucoup de réservations comprennent aussi une excursion d'une journée à Monaco, Cannes, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat ou Saint-Paul-de-Vence.",
       },
       {
         question: "Le chauffeur peut-il m'attendre pendant mes réunions ou mes rendez-vous ?",
         answer:
-          "Oui, bien sûr. Votre chauffeur vous attend entre deux arrêts dans Nice : vous allez à vos réunions, à vos déjeuners, à vos rendez-vous shopping ou à un événement sans organiser d'autre transport.",
+          "Oui, bien sûr. Votre chauffeur vous attend entre deux arrêts dans Nice. Vous allez à vos réunions, à un déjeuner, dans les boutiques ou à un événement sans prévoir d'autre transport.",
       },
       {
         question: "Quelle voiture choisir pour un chauffeur privé à l'heure à Nice ?",
@@ -172,7 +172,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     serviceLabel: "Cannes",
     heroTitle: "Chauffeur privé à l'heure à Cannes",
     heroDescription:
-      "Un chauffeur dédié pour vos séjours sur la Croisette, vos congrès, le shopping, les dîners et les journées à plusieurs arrêts dans Cannes.",
+      "Votre chauffeur privé reste à votre disposition pour un séjour sur la Croisette, un congrès, des achats, un dîner ou une journée à plusieurs arrêts dans Cannes.",
     heroImageSrc: hourlyChauffeurPages.cannes.heroImageSrc,
     heroImageAlt: "Service de chauffeur privé à l'heure à Cannes",
     introTitle: "À Cannes, mieux vaut un chauffeur à disposition",
@@ -186,11 +186,11 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Loisirs et hôtellerie",
-        text: "Pour les clients des hôtels, le shopping, les déjeuners à la plage et les sorties du soir, une voiture dédiée vous évite toute contrainte de transport d'un arrêt à l'autre.",
+        text: "Votre voiture avec chauffeur vous conduit de l'hôtel aux boutiques, au déjeuner à la plage et aux sorties du soir, sans autre transport à prévoir.",
         theme: "light",
       },
     ],
-    practicalTitle: "Prix d'un chauffeur privé à l'heure à Cannes",
+    practicalTitle: "Combien coûte un chauffeur privé à l'heure à Cannes ?",
     practicalDescription:
       "Choisissez la voiture adaptée à votre groupe et à votre programme. Les prix indicatifs, à l'heure et pour huit heures, sont confirmés par écrit avec les conditions de réservation de votre date.",
     practicalDetails: [
@@ -200,7 +200,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Mercedes Classe V",
-        text: `À partir de ${eur(V_CLASS.prices.cannes.hourly)} de l'heure ou ${eur(V_CLASS.prices.cannes.fullDay)} pour huit heures, pour les groupes et les clients qui ont besoin de plus de place pour leurs bagages.`,
+        text: `Pour un groupe ou des clients chargés de bagages, comptez à partir de ${eur(V_CLASS.prices.cannes.hourly)} de l'heure ou ${eur(V_CLASS.prices.cannes.fullDay)} pour huit heures.`,
       },
       {
         title: "Classe S et Maybach",
@@ -239,7 +239,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     localLinksDescription: "Comparez notre service de chauffeur à l'heure dans les autres destinations de la Côte d'Azur.",
     localLinks: hourlyCityLinksFr,
     cta: {
-      title: "Réservez votre chauffeur à l'heure à Cannes",
+      title: "Réservez votre chauffeur privé à l'heure à Cannes",
       description:
         "Dites-nous si la journée est consacrée aux affaires, aux loisirs ou à un événement : nous organisons la mise à disposition qui lui convient.",
       buttonText: "Réserver un chauffeur à Cannes",
@@ -249,7 +249,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Pourquoi réserver un chauffeur privé à l'heure à Cannes ?",
         answer:
-          "Un chauffeur privé à l'heure vous laisse libre toute la journée à Cannes. Réunions, boutiques de luxe, restaurants de la Croisette ou trajets entre plusieurs adresses : votre chauffeur reste disponible dès que vous avez besoin de vous déplacer.",
+          "Avec un chauffeur privé à l'heure, vous restez libre toute la journée à Cannes. Réunions, boutiques de luxe, restaurants de la Croisette ou trajets entre plusieurs adresses : votre chauffeur reste disponible dès que vous avez besoin de vous déplacer.",
       },
       {
         question: "Puis-je réserver un chauffeur pendant le Festival de Cannes ?",
@@ -259,7 +259,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Le service convient-il aux Cannes Lions et aux événements professionnels ?",
         answer:
-          "Oui, tout à fait. Beaucoup de clients font appel à notre chauffeur à l'heure pour des conférences, des réunions d'entreprise, des événements de networking et les déplacements de leurs dirigeants pendant les Cannes Lions et les autres événements professionnels internationaux organisés à Cannes.",
+          "Oui, tout à fait. Pendant les Cannes Lions et les autres événements professionnels internationaux de Cannes, beaucoup de clients réservent un chauffeur à l'heure. Il les conduit aux conférences, aux réunions d'entreprise et aux rencontres professionnelles, et assure les déplacements de leurs dirigeants.",
       },
       {
         question: "Le chauffeur peut-il m'attendre pendant mes réunions ou mes événements ?",
@@ -279,7 +279,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Pour quelles occasions réserve-t-on le plus souvent un chauffeur à l'heure à Cannes ?",
         answer:
-          "Nos clients réservent souvent un chauffeur à l'heure pour leurs trajets vers les hôtels de luxe, leurs réunions, le shopping sur la Croisette, les visites de villas privées, les événements professionnels, les grandes tables, l'accès aux yachts et à Port Canto, et leurs déplacements dans Cannes et sur la Côte d'Azur.",
+          "Nos clients réservent souvent un chauffeur à l'heure pour leurs réunions, les événements professionnels, les hôtels de luxe et les grandes tables. Il les emmène aussi faire les boutiques de la Croisette, visiter des villas privées ou rejoindre les yachts et Port Canto, dans Cannes comme sur la Côte d'Azur.",
       },
     ],
   },
@@ -303,7 +303,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Monaco",
     heroTitle: "Chauffeur privé à l'heure à Monaco",
-    heroDescription: `Un chauffeur privé haut de gamme à votre disposition pour les hôtels, les rendez-vous d'affaires, l'accès aux yachts, les réceptions et des déplacements maîtrisés dans tout Monaco. Monaco n'a pas d'aéroport : votre chauffeur peut aussi vous accueillir à l'aéroport Nice Côte d'Azur et vous conduire à Monaco en 30 à 40 minutes environ, à prix fixe dès ${eur(E_CLASS.prices.monaco.transfer)} en Mercedes Classe E.`,
+    heroDescription: `Dans tout Monaco, votre chauffeur privé vous attend et vous conduit à l'hôtel, à vos rendez-vous d'affaires, jusqu'aux yachts ou à une réception. Monaco n'a pas d'aéroport : votre chauffeur peut aussi vous accueillir à l'aéroport Nice Côte d'Azur et vous conduire à Monaco en 30 à 40 minutes environ, à prix fixe dès ${eur(E_CLASS.prices.monaco.transfer)} en Mercedes Classe E.`,
     heroImageSrc: hourlyChauffeurPages.monaco.heroImageSrc,
     heroImageAlt: "Service de chauffeur privé à l'heure à Monaco",
     introTitle: "À Monaco, la mise à disposition s'impose",
@@ -321,17 +321,17 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
         theme: "light",
       },
     ],
-    practicalTitle: "Prix d'un chauffeur privé à l'heure à Monaco",
+    practicalTitle: "Combien coûte un chauffeur privé à l'heure à Monaco ?",
     practicalDescription:
       "Les prix indicatifs comprennent une voiture et un chauffeur dédiés, à votre disposition, avec un minimum de quatre heures et 20 kilomètres inclus par heure réservée.",
     practicalDetails: [
       {
         title: "Mercedes Classe E",
-        text: `À partir de ${eur(E_CLASS.prices.monaco.hourly)} de l'heure ou ${eur(E_CLASS.prices.monaco.fullDay)} pour huit heures, pour les réunions, les hôtels, les restaurants et les rendez-vous.`,
+        text: `Pour vos réunions, l'hôtel, le restaurant ou vos rendez-vous, comptez à partir de ${eur(E_CLASS.prices.monaco.hourly)} de l'heure ou ${eur(E_CLASS.prices.monaco.fullDay)} pour huit heures.`,
       },
       {
         title: "Mercedes Classe V",
-        text: `À partir de ${eur(V_CLASS.prices.monaco.hourly)} de l'heure ou ${eur(V_CLASS.prices.monaco.fullDay)} pour huit heures, pour les groupes, les invités d'un yacht et les bagages supplémentaires.`,
+        text: `Pour un groupe, les invités d'un yacht ou des bagages en plus, comptez à partir de ${eur(V_CLASS.prices.monaco.hourly)} de l'heure ou ${eur(V_CLASS.prices.monaco.fullDay)} pour huit heures.`,
       },
       {
         title: "Classe S et Maybach",
@@ -342,8 +342,8 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
         text: "Réservation minimale : quatre heures, avec 20 kilomètres inclus par heure réservée (80 kilomètres pour quatre heures). Tout supplément lié à la distance, aux péages, aux fermetures de route ou à l'accès à un événement est confirmé à l'avance.",
       },
     ],
-    audienceTitle: "Pensé pour",
-    audienceAccent: "les exigences de Monaco",
+    audienceTitle: "Un service adapté aux",
+    audienceAccent: "exigences de Monaco",
     audienceDescription:
       "Pour les rendez-vous d'affaires, les séjours à l'hôtel, les visites de yachts et les programmes d'événements qui demandent un transport discret, toujours disponible.",
     audienceCards: [
@@ -380,17 +380,17 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Pourquoi choisir un chauffeur privé à l'heure à Monaco ?",
         answer:
-          "Avec un chauffeur à l'heure, vous gardez toute votre liberté à Monaco. Rendez-vous d'affaires, shopping de luxe, tables réservées, visites de yachts ou rendez-vous multiples : votre chauffeur reste disponible et s'adapte à votre programme.",
+          "Avec un chauffeur à l'heure, vous gardez toute votre liberté à Monaco. Votre chauffeur reste disponible et suit votre programme, même chargé. Il vous conduit à vos rendez-vous d\'affaires, dans les boutiques de luxe, à votre table réservée ou jusqu\'à un yacht.",
       },
       {
         question: "Puis-je réserver un chauffeur à l'heure pendant le Grand Prix de Monaco ?",
         answer:
-          "Oui. Pendant le Grand Prix de Monaco, un chauffeur à l'heure est l'une des façons les plus pratiques de se déplacer : des trajets souples entre les hôtels, les espaces de réception, les yachts, les restaurants et les lieux de l'événement, dans toute la Principauté.",
+          "Oui. Pendant le Grand Prix de Monaco, un chauffeur à l'heure est l'une des façons les plus pratiques de se déplacer. Il vous conduit à votre rythme entre les hôtels, les espaces de réception, les yachts, les restaurants et les lieux de l'événement, dans toute la Principauté.",
       },
       {
         question: "Le service est-il disponible pendant le Monaco Yacht Show ?",
         answer:
-          "Oui, tout à fait. Pendant le Monaco Yacht Show, beaucoup de clients réservent notre chauffeur à l'heure pour leur arrivée à l'aéroport, leurs visites de yachts, leurs rendez-vous d'affaires, leurs trajets vers l'hôtel et leurs soirées, à Monaco et sur la Côte d'Azur.",
+          "Oui, tout à fait. Pendant le Monaco Yacht Show, beaucoup de clients réservent un chauffeur à l'heure. Il les accueille à l'aéroport et les conduit aux visites de yachts, à leurs rendez-vous d'affaires, à l'hôtel et à leurs soirées, à Monaco et sur la Côte d'Azur.",
       },
       {
         question: "Le chauffeur peut-il m'attendre pendant mes réunions, mes événements ou mon shopping ?",
@@ -400,7 +400,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quels sont les lieux les plus demandés avec un chauffeur à l'heure à Monaco ?",
         answer:
-          "Nos clients circulent souvent entre Monte-Carlo, le Casino de Monte-Carlo, l'Hôtel de Paris, Port Hercule, le Yacht Club de Monaco, les résidences de luxe et les lieux d'affaires, ainsi que vers les destinations voisines comme Nice, Cannes, Èze, Saint-Jean-Cap-Ferrat et Saint-Tropez.",
+          "Nos clients circulent souvent entre Monte-Carlo, le Casino de Monte-Carlo, l'Hôtel de Paris, Port Hercule et le Yacht Club de Monaco, ainsi que vers les résidences de luxe et les lieux d'affaires. Ils partent aussi vers les destinations voisines, comme Nice, Cannes, Èze, Saint-Jean-Cap-Ferrat ou encore Saint-Tropez.",
       },
       {
         question: "Quelle voiture choisir pour un chauffeur à l'heure à Monaco ?",
@@ -428,7 +428,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Saint-Tropez",
     heroTitle: "Chauffeur privé à l'heure à Saint-Tropez",
-    heroDescription: `Un chauffeur dédié à l'heure ou à la journée pour les villas, les beach clubs, les déjeuners, le shopping et les programmes de la saison qui demandent de la souplesse. À partir de ${eur(E_CLASS.prices["st-tropez"].hourly)} de l'heure en Mercedes Classe E (Classe V ${eur(V_CLASS.prices["st-tropez"].hourly)}, Classe S ${eur(S_CLASS.prices["st-tropez"].hourly)}, Maybach ${eur(MAYBACH.prices["st-tropez"].hourly)}), ou ${eur(E_CLASS.prices["st-tropez"].fullDay)} pour une journée de huit heures.`,
+    heroDescription: `Réservez votre chauffeur privé à l'heure ou à la journée. Il vous conduit de la villa aux plages privées, au déjeuner ou dans les boutiques, et s'adapte à votre programme en pleine saison. À partir de ${eur(E_CLASS.prices["st-tropez"].hourly)} de l'heure en Mercedes Classe E (Classe V ${eur(V_CLASS.prices["st-tropez"].hourly)}, Classe S ${eur(S_CLASS.prices["st-tropez"].hourly)}, Maybach ${eur(MAYBACH.prices["st-tropez"].hourly)}), ou ${eur(E_CLASS.prices["st-tropez"].fullDay)} pour une journée de huit heures.`,
     heroImageSrc: hourlyChauffeurPages["saint-tropez"].heroImageSrc,
     heroImageAlt: "Service de chauffeur privé à l'heure à Saint-Tropez",
     introTitle: "À Saint-Tropez, la souplesse avant tout",
@@ -437,7 +437,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "La logistique de l'été",
-        text: `Beach clubs, villas, déjeuners et sorties du soir : la journée évolue au fil des heures. Avec un chauffeur à la journée (huit heures, ${eur(E_CLASS.prices["st-tropez"].fullDay)} en Mercedes Classe E, 160 kilomètres inclus), la même voiture vous accompagne de la villa à la plage de Pampelonne, puis au port et au dîner.`,
+        text: `La journée évolue au fil des heures, entre la villa, les plages privées, le déjeuner et les sorties du soir. Avec un chauffeur à la journée (huit heures, ${eur(E_CLASS.prices["st-tropez"].fullDay)} en Mercedes Classe E, 160 kilomètres inclus), la même voiture vous accompagne de la villa à la plage de Pampelonne, puis au port et au dîner.`,
         theme: "dark",
       },
       {
@@ -484,32 +484,32 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Pourquoi choisir un chauffeur privé à l'heure à Saint-Tropez ?",
         answer:
-          "À Saint-Tropez, un chauffeur à l'heure vous donne une totale liberté de mouvement. Beach clubs, événements privés, déjeuner au bord de la mer, shopping, trajets entre villas et hôtels : votre chauffeur est là dès que vous avez besoin de lui.",
+          "À Saint-Tropez, un chauffeur à l'heure vous donne une totale liberté de mouvement. Dès que vous en avez besoin, votre chauffeur vous conduit aux plages privées, à un événement privé, à un déjeuner au bord de la mer, dans les boutiques ou d\'une villa à un hôtel.",
       },
       {
         question: "Puis-je réserver un chauffeur pour les beach clubs et les restaurants de Saint-Tropez ?",
         answer:
-          "Oui. Beaucoup de clients réservent notre chauffeur à l'heure pour leurs trajets entre les beach clubs, les restaurants, les hôtels de luxe, les ports et les résidences privées. Le chauffeur reste à disposition pendant toute la réservation : vous circulez librement, sans organiser de transferts séparés.",
+          "Oui. Beaucoup de clients réservent un chauffeur à l'heure pour se déplacer entre les plages privées, les restaurants, les hôtels de luxe, les ports et les résidences privées. Le chauffeur reste à disposition pendant toute la réservation : vous circulez librement, sans organiser de transferts séparés.",
       },
       {
         question: "Le service convient-il aux locations de yacht et aux transferts vers le port ?",
         answer:
-          "Oui, tout à fait. À Saint-Tropez, notre chauffeur à l'heure est souvent réservé pour les départs en yacht, les transferts vers le port, les arrivées au port et le transport d'invités VIP. Il peut rester disponible toute la journée pour suivre les changements d'horaire et les demandes de dernière minute.",
+          "Oui, tout à fait. À Saint-Tropez, nos clients réservent souvent un chauffeur à l'heure pour les départs en yacht, les transferts vers le port, les arrivées au port et le transport d'invités VIP. Il peut rester disponible toute la journée pour suivre les changements d'horaire et les demandes de dernière minute.",
       },
       {
         question: "Le chauffeur peut-il m'attendre pendant un déjeuner, du shopping ou un événement privé ?",
         answer:
-          "Oui. Votre chauffeur reste disponible pendant toute la réservation et assure vos trajets entre les restaurants, les boutiques, les beach clubs, les hôtels, les villas et les lieux d'événements, à Saint-Tropez et dans les environs.",
+          "Oui. Votre chauffeur reste disponible pendant toute la réservation. Il vous conduit au restaurant, dans les boutiques, aux plages privées, à l'hôtel, à la villa ou à un événement, à Saint-Tropez comme dans les environs.",
       },
       {
         question: "Quelles sont les destinations les plus demandées avec un chauffeur à l'heure à Saint-Tropez ?",
         answer:
-          "Nos clients se rendent souvent sur la plage de Pampelonne, au Club 55, au Nikki Beach, au port de Saint-Tropez, dans les villas de luxe, les hôtels cinq étoiles et les restaurants de plage, ainsi que vers les destinations voisines de la Côte d'Azur.",
+          "Nos clients se rendent souvent sur la plage de Pampelonne, au Club 55, au Nikki Beach et au port de Saint-Tropez. Ils vont aussi dans les villas de luxe, les hôtels cinq étoiles et les restaurants de plage, ainsi que vers les destinations voisines de la Côte d'Azur.",
       },
       {
         question: "Quelle voiture choisir pour un chauffeur à l'heure à Saint-Tropez ?",
         answer:
-          "La Mercedes Classe S convient aux déplacements d'affaires et VIP. Pour une famille, un groupe, les trajets vers les beach clubs ou des voyageurs chargés de bagages ou d'achats, le van Mercedes Classe V est parfait.",
+          "La Mercedes Classe S convient aux déplacements d'affaires et VIP. La Mercedes Classe V est parfaite pour une famille, un groupe ou les trajets vers les plages privées, et pour les voyageurs chargés de bagages ou d\'achats.",
       },
     ],
   },
@@ -533,7 +533,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     serviceLabel: "Megève",
     heroTitle: "Chauffeur privé à l'heure à Megève",
     heroDescription:
-      "Un chauffeur privé disponible à l'heure pour les hôtels de luxe, les séjours en chalet, le shopping, les restaurants, les vacances au ski et vos trajets dans Megève et les Alpes françaises.",
+      "Pendant vos vacances au ski, réservez un chauffeur privé à l'heure pour vos trajets dans Megève et les Alpes françaises, de votre hôtel de luxe ou de votre chalet aux boutiques et aux restaurants.",
     heroImageSrc: hourlyChauffeurPages.megeve.heroImageSrc,
     heroImageAlt: "Chauffeur privé de luxe à l'heure à Megève",
     introTitle: "Un chauffeur à l'heure pour vos séjours de luxe à Megève",
@@ -542,7 +542,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "Des trajets alpins en toute souplesse",
-        text: "Entre votre chalet, le centre du village, le domaine skiable, les restaurants ou les destinations voisines, votre chauffeur reste disponible toute la journée.",
+        text: "Votre chauffeur reste disponible toute la journée, pour aller du chalet au centre du village, sur le domaine skiable, au restaurant ou vers les destinations voisines.",
         theme: "dark",
       },
       {
@@ -590,7 +590,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Pourquoi choisir un chauffeur privé à l'heure à Megève ?",
         answer:
-          "Pendant votre séjour à Megève, un chauffeur à l'heure vous laisse une liberté complète. Chalet, hôtel de luxe, restaurants, boutiques ou domaine skiable : votre chauffeur reste disponible chaque fois que vous devez vous déplacer.",
+          "Pendant votre séjour à Megève, un chauffeur à l'heure vous laisse une liberté complète. Votre chauffeur vous conduit chaque fois que vous en avez besoin, de votre chalet ou de votre hôtel de luxe aux restaurants, aux boutiques et au domaine skiable.",
       },
       {
         question: "Puis-je réserver un chauffeur pour une journée entière à Megève ?",
@@ -600,7 +600,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Le service convient-il aux vacances au ski ?",
         answer:
-          "Oui, tout à fait. À Megève, notre chauffeur à l'heure est idéal pour les vacances au ski : des trajets confortables entre les chalets, les hôtels, les pistes, les restaurants et les lieux d'après-ski.",
+          "Oui, tout à fait. À Megève, un chauffeur privé à l'heure est idéal pour les vacances au ski. Il vous conduit confortablement entre les chalets, les hôtels, les pistes, les restaurants et les adresses d'après-ski.",
       },
       {
         question: "Le chauffeur peut-il m'attendre pendant mon shopping, un dîner ou un rendez-vous ?",
@@ -610,7 +610,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quels lieux visite-t-on le plus souvent avec un chauffeur à l'heure à Megève ?",
         answer:
-          "Nos clients se déplacent souvent entre les hôtels de luxe, les chalets privés, le Mont d'Arbois, le centre du village, les restaurants, les boutiques et les destinations alpines voisines de Megève.",
+          "Nos clients se déplacent souvent de leur hôtel de luxe ou de leur chalet privé vers le Mont d'Arbois, le centre du village, les restaurants, les boutiques et les destinations alpines voisines de Megève.",
       },
       {
         question: "Quelle voiture choisir pour un chauffeur à l'heure à Megève ?",
@@ -638,7 +638,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Courchevel",
     heroTitle: "Chauffeur privé à l'heure à Courchevel",
-    heroDescription: `Votre chauffeur privé reste à disposition pour les hôtels de luxe, les chalets privés, les vacances au ski, le shopping et les restaurants, à Courchevel 1850, à Courchevel 1650 et dans les Alpes françaises. À partir de ${eur(E_CLASS.prices[ALPINE_RATES].hourly)} de l'heure en Mercedes Classe E (Classe V ${eur(V_CLASS.prices[ALPINE_RATES].hourly)}, Classe S ${eur(S_CLASS.prices[ALPINE_RATES].hourly)}, Maybach ${eur(MAYBACH.prices[ALPINE_RATES].hourly)}), ou ${eur(E_CLASS.prices[ALPINE_RATES].fullDay)} pour une journée de huit heures.`,
+    heroDescription: `À Courchevel 1850, à Courchevel 1650 et dans les Alpes françaises, votre chauffeur privé reste à disposition pendant vos vacances au ski. Il vous conduit de l'hôtel de luxe ou du chalet privé aux boutiques et aux restaurants. À partir de ${eur(E_CLASS.prices[ALPINE_RATES].hourly)} de l'heure en Mercedes Classe E (Classe V ${eur(V_CLASS.prices[ALPINE_RATES].hourly)}, Classe S ${eur(S_CLASS.prices[ALPINE_RATES].hourly)}, Maybach ${eur(MAYBACH.prices[ALPINE_RATES].hourly)}), ou ${eur(E_CLASS.prices[ALPINE_RATES].fullDay)} pour une journée de huit heures.`,
     heroImageSrc: hourlyChauffeurPages.courchevel.heroImageSrc,
     heroImageAlt: "Chauffeur privé de luxe à l'heure à Courchevel",
     introTitle: "Un service de chauffeur haut de gamme pour vos séjours à Courchevel",
@@ -646,7 +646,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       "Courchevel, l'une des stations de ski les plus prestigieuses au monde, est réputée pour ses hôtels de luxe, ses chalets privés, ses grandes tables et ses expériences alpines exclusives. Un chauffeur à l'heure vous laisse une liberté totale, avec confort, discrétion et des trajets fluides pendant tout votre séjour.",
     panels: [
       {
-        title: "Des trajets haut de gamme toute la journée",
+        title: "Un chauffeur à disposition toute la journée",
         text: "Chalet, domaine skiable, restaurants, boutiques ou stations voisines : votre chauffeur reste disponible chaque fois que votre programme change.",
         theme: "dark",
       },
@@ -725,7 +725,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quelle voiture choisir pour un chauffeur à l'heure à Courchevel ?",
         answer:
-          "La Mercedes Classe S est idéale pour un déplacement d'affaires ou VIP, et le van Mercedes Classe V parfait pour les familles, les groupes et les voyageurs avec leurs skis ou des bagages supplémentaires.",
+          "La Mercedes Classe S est idéale pour un déplacement d'affaires ou VIP. La Mercedes Classe V est parfaite pour les familles, les groupes et les voyageurs qui emportent leurs skis ou des bagages en plus.",
       },
     ],
   },
@@ -748,7 +748,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     serviceLabel: "Chamonix",
     heroTitle: "Chauffeur privé à l'heure à Chamonix",
-    heroDescription: `Un chauffeur privé qui vous attend pour les hôtels de luxe, les vacances au ski, les sorties en montagne, les restaurants, le shopping et tous vos trajets à Chamonix et dans les Alpes. À partir de ${eur(E_CLASS.prices[ALPINE_RATES].hourly)} de l'heure en Mercedes Classe E (Classe V ${eur(V_CLASS.prices[ALPINE_RATES].hourly)}, Classe S ${eur(S_CLASS.prices[ALPINE_RATES].hourly)}, Maybach ${eur(MAYBACH.prices[ALPINE_RATES].hourly)}), ou ${eur(E_CLASS.prices[ALPINE_RATES].fullDay)} pour une journée de huit heures.`,
+    heroDescription: `À Chamonix et dans les Alpes, votre chauffeur privé vous attend pour tous vos trajets, au ski comme en montagne, de l'hôtel de luxe aux restaurants et aux boutiques. À partir de ${eur(E_CLASS.prices[ALPINE_RATES].hourly)} de l'heure en Mercedes Classe E (Classe V ${eur(V_CLASS.prices[ALPINE_RATES].hourly)}, Classe S ${eur(S_CLASS.prices[ALPINE_RATES].hourly)}, Maybach ${eur(MAYBACH.prices[ALPINE_RATES].hourly)}), ou ${eur(E_CLASS.prices[ALPINE_RATES].fullDay)} pour une journée de huit heures.`,
     heroImageSrc: hourlyChauffeurPages.chamonix.heroImageSrc,
     heroImageAlt: "Chauffeur privé de luxe à l'heure à Chamonix",
     introTitle: "Un chauffeur à la carte pour vos séjours à Chamonix",
@@ -757,7 +757,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     panels: [
       {
         title: "Chamonix en toute liberté",
-        text: "Des hôtels de luxe aux domaines skiables, des restaurants aux sites de montagne, votre chauffeur reste disponible chaque fois que vos plans changent dans la journée.",
+        text: "Votre chauffeur reste disponible quand vos plans changent dans la journée. Il vous conduit de votre hôtel de luxe aux domaines skiables, aux restaurants ou aux sites de montagne.",
         theme: "dark",
       },
       {
@@ -803,9 +803,9 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     },
     faq: [
       {
-        question: "Pourquoi choisir un chauffeur privé à l'heure à Chamonix ?",
+        question: "Pourquoi réserver un chauffeur privé à l'heure à Chamonix ?",
         answer:
-          "Réserver un chauffeur à l'heure à Chamonix, c'est garder une liberté totale pendant tout le séjour. Hôtels, domaines skiables, restaurants, boutiques ou sites de montagne : votre chauffeur reste disponible dès que vous voulez vous déplacer.",
+          "Réserver un chauffeur à l'heure à Chamonix, c'est garder une liberté totale pendant tout le séjour. Votre chauffeur vous emmène dès que vous le souhaitez à l\'hôtel, sur les domaines skiables, au restaurant, dans les boutiques ou vers les sites de montagne.",
       },
       {
         question: "Puis-je réserver un chauffeur pour une journée entière à Chamonix ?",
@@ -815,7 +815,7 @@ export const hourlyPagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Le service convient-il aux vacances au ski ?",
         answer:
-          "Oui, tout à fait. Pendant des vacances au ski à Chamonix, notre chauffeur à l'heure assure des trajets confortables entre les hôtels, les chalets, les remontées mécaniques, les restaurants et les lieux d'après-ski.",
+          "Oui, tout à fait. Pendant vos vacances au ski à Chamonix, un chauffeur privé à l'heure vous conduit confortablement de l'hôtel ou du chalet aux remontées mécaniques, aux restaurants et aux adresses d'après-ski.",
       },
       {
         question: "Le chauffeur peut-il m'attendre pendant un repas, du shopping ou une activité ?",

@@ -29,7 +29,7 @@ const TEXT = {
         title: "Transferts aéroport",
         kicker: "Aéroport et longue distance",
         description:
-          "Arrivées à l'aéroport Nice Côte d'Azur, prises en charge à l'hôtel, événements et longs trajets sur la Côte d'Azur, à l'heure convenue et à prix fixe.",
+          "Nous vous prenons en charge à l'aéroport Nice Côte d'Azur ou à votre hôtel, pour un transfert, un événement ou un long trajet sur la Côte d'Azur, à l'heure convenue et à prix fixe.",
         image: homeServiceCards[0].image,
         link: frLink(homeServiceCards[0].link),
       },
@@ -37,7 +37,7 @@ const TEXT = {
         title: "Chauffeur privé à l'heure",
         kicker: "Selon la destination",
         description:
-          "Un chauffeur à votre disposition pour vos rendez-vous, vos achats, vos déjeuners, les beach clubs et les journées à plusieurs arrêts, à Nice, Cannes, Monaco, Saint-Tropez et, l'hiver, dans les Alpes.",
+          "Votre chauffeur reste à votre disposition pour vos rendez-vous, vos achats, vos déjeuners, les plages privées ou une journée à plusieurs arrêts. Le service couvre Nice, Cannes, Monaco, Saint-Tropez et, l'hiver, les Alpes.",
         image: homeServiceCards[1].image,
         link: frLink(homeServiceCards[1].link),
       },
@@ -45,7 +45,7 @@ const TEXT = {
         title: "Excursions privées",
         kicker: "Côte d'Azur et Alpes",
         description:
-          "Des excursions avec chauffeur sur la Côte d'Azur et, l'hiver, au départ des stations des Alpes, sur un itinéraire que vous choisissez et que vous pouvez changer en route.",
+          "Nous proposons des excursions avec chauffeur sur la Côte d'Azur et, l'hiver, au départ des stations des Alpes. Vous choisissez l'itinéraire et pouvez le changer en route.",
         image: homeServiceCards[2].image,
         link: frLink(homeServiceCards[2].link),
       },

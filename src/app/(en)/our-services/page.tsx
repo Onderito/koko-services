@@ -44,7 +44,7 @@ export default function OurServicesPage() {
             Our <span className="text-[#d4b471]">Services</span>
           </h1>
           <p className="mt-5 max-w-[600px] text-[17px] leading-relaxed text-white/80 md:text-[18px]">
-            Private chauffeur services across the French Riviera: Nice Airport and private transfers, hourly chauffeur hire, private tours, yacht transfers and
+            We offer private chauffeur services across the French Riviera: Nice Airport and private transfers, hourly chauffeur hire, private tours, yacht transfers and
             event transport.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">

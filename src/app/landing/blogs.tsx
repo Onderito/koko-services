@@ -35,7 +35,7 @@ export default function Blogs() {
       <AntiHeading
         id="blogs-title"
         dark
-        title="Driver Insights & Luxury Travel Tips"
+        title="Luxury Travel Tips From Our Drivers"
         intro="Explore articles on premium transportation, airport transfers, and travel experiences along the French Riviera."
         action={<AntiOutlinePill href="/blog">View all articles</AntiOutlinePill>}
       />

@@ -89,7 +89,7 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Partout sur la Côte d'Azur",
-        text: "Depuis l'aéroport, nous allons à Nice, Monaco, Cannes, Antibes, Saint-Tropez, dans les villas privées, les ports et jusqu'aux yachts, et nous vous ramenons à l'aéroport pour votre vol retour.",
+        text: "Depuis l'aéroport, nous vous conduisons à Nice, Monaco, Cannes, Antibes ou Saint-Tropez, jusqu'à votre villa, au port ou à votre yacht. Nous vous ramenons aussi à l'aéroport pour votre vol retour.",
         theme: "light",
       },
     ],
@@ -97,13 +97,13 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     story: {
       title: "Comment se passe un transfert depuis l'aéroport de Nice",
       paragraphs: [
-        `Dès que votre vol est réservé, envoyez-nous le numéro de vol, le nombre de passagers et de bagages, et l'adresse où vous allez. Nous confirmons la voiture et le **prix fixe** avant votre voyage : à partir de ${eur(E_CLASS.prices.nice.transfer)} pour Nice, ${eur(E_CLASS.prices.antibes.transfer)} pour Antibes, ${eur(E_CLASS.prices.cannes.transfer)} pour Cannes ou Monaco et ${eur(E_CLASS.prices["st-tropez"].transfer)} pour Saint-Tropez en Mercedes Classe E.`,
+        `Dès que votre vol est réservé, envoyez-nous le numéro de vol, le nombre de passagers et de bagages, et l'adresse où vous allez. Nous confirmons la voiture et le **prix fixe** avant votre voyage. En Mercedes Classe E, comptez à partir de ${eur(E_CLASS.prices.nice.transfer)} pour Nice, ${eur(E_CLASS.prices.antibes.transfer)} pour Antibes, ${eur(E_CLASS.prices.cannes.transfer)} pour Cannes ou Monaco et ${eur(E_CLASS.prices["st-tropez"].transfer)} pour Saint-Tropez.`,
         "Le jour de votre arrivée, nous suivons votre vol. Votre chauffeur vous attend dans le hall des arrivées avec une pancarte à votre nom, vous aide avec les bagages et vous accompagne jusqu'à la voiture. **Une heure d'attente** est incluse à partir de l'heure de prise en charge prévue : une longue file au contrôle des passeports ou au tapis à bagages ne pose donc aucun problème.",
         `La Classe E, la Classe S et la Maybach accueillent jusqu'à ${E_CLASS.passengers} passagers ; le van Classe V en prend jusqu'à ${V_CLASS.passengers} avec leurs bagages, ce qui convient aux familles et aux groupes. Nous roulons jour et nuit, tous les jours de l'année : un vol tôt le matin ou tard le soir ne pose aucun problème.`,
-        "Pour votre départ, nous venons vous chercher à votre adresse et vous déposons à votre terminal. L'annulation est gratuite jusqu'à cinq jours avant la date et l'heure de prise en charge ; au-delà, le prix total est dû.",
+        "Pour votre départ, nous venons vous chercher à votre adresse et vous déposons devant votre terminal. L'annulation est gratuite jusqu'à cinq jours avant la date et l'heure de prise en charge ; au-delà, le prix total est dû.",
       ],
     },
-    practicalTitle: "Prise en charge à l'aéroport de Nice, prix et conditions",
+    practicalTitle: "Prix et conditions de votre prise en charge à l'aéroport de Nice",
     practicalDescription:
       "Votre confirmation précise le terminal, la voiture et le prix fixe. Chaque arrivée comprend une heure d'attente à partir de l'heure de prise en charge indiquée dans la réservation.",
     practicalDetails: [
@@ -117,11 +117,11 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Prix de départ",
-        text: `Nice dès ${eur(E_CLASS.prices.nice.transfer)} en Classe E ; Cannes ou Monaco dès ${eur(E_CLASS.prices.cannes.transfer)} ; Saint-Tropez dès ${eur(E_CLASS.prices["st-tropez"].transfer)}. Classe V, Classe S et Maybach sont aussi disponibles, et le prix fixe final est confirmé avant la réservation.`,
+        text: `Nice dès ${eur(E_CLASS.prices.nice.transfer)} en Classe E ; Cannes ou Monaco dès ${eur(E_CLASS.prices.cannes.transfer)} ; Saint-Tropez dès ${eur(E_CLASS.prices["st-tropez"].transfer)}. La Classe V, la Classe S et la Maybach sont aussi disponibles. Le prix fixe définitif est confirmé avant la réservation.`,
       },
       {
         title: "Attente et annulation",
-        text: "Une heure d'attente est incluse à partir de l'heure de prise en charge réservée. L'annulation est gratuite jusqu'à cinq jours avant cette date et cette heure ; à moins de cinq jours du départ, le prix total est dû.",
+        text: "Une heure d'attente est incluse à partir de l'heure de prise en charge réservée. L\'annulation est gratuite jusqu\'à cinq jours avant la date et l\'heure de prise en charge. À moins de cinq jours du départ, le prix total est dû.",
       },
     ],
     audienceTitle: "Idéal pour",
@@ -159,12 +159,12 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     faq: [
       {
         question: "Combien coûte un transfert privé depuis l'aéroport de Nice ?",
-        answer: `Un transfert Kokolimo depuis l'aéroport de Nice coûte à partir de ${eur(E_CLASS.prices.nice.transfer)} pour Nice, ${eur(E_CLASS.prices.antibes.transfer)} pour Antibes, ${eur(E_CLASS.prices.cannes.transfer)} pour Cannes ou Monaco et ${eur(E_CLASS.prices["st-tropez"].transfer)} pour Saint-Tropez en Mercedes Classe E. Le prix est fixe et confirmé avant la réservation, avec une heure d'attente incluse.`,
+        answer: `Chez Kokolimo, un transfert depuis l'aéroport de Nice en Mercedes Classe E coûte à partir de ${eur(E_CLASS.prices.nice.transfer)} pour Nice, ${eur(E_CLASS.prices.antibes.transfer)} pour Antibes, ${eur(E_CLASS.prices.cannes.transfer)} pour Cannes ou Monaco et ${eur(E_CLASS.prices["st-tropez"].transfer)} pour Saint-Tropez. Le prix est fixe et confirmé avant la réservation, avec une heure d'attente incluse.`,
       },
       {
         question: "Où mon chauffeur m'attend-il à l'aéroport de Nice ?",
         answer:
-          "Dans le hall des arrivées de votre terminal, Terminal 1 ou Terminal 2, avec une pancarte à votre nom. Votre chauffeur vous aide avec les bagages et vous accompagne jusqu'à la voiture.",
+          "Nous vous attendons dans le hall des arrivées du Terminal 1 ou du Terminal 2, avec une pancarte à votre nom. Votre chauffeur vous aide avec les bagages et vous accompagne jusqu'à la voiture.",
       },
       {
         question: "Que se passe-t-il si mon vol a du retard ?",
@@ -173,7 +173,7 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         question: "Quelles voitures utilisez-vous pour les transferts aéroport ?",
-        answer: `Uniquement des Mercedes : la Classe E et la Classe S jusqu'à ${E_CLASS.passengers} passagers, le van Classe V jusqu'à ${V_CLASS.passengers} passagers avec leurs bagages, et la Maybach jusqu'à ${MAYBACH.passengers} passagers.`,
+        answer: `Nous n'utilisons que des Mercedes. La Classe E, la Classe S et la Maybach accueillent jusqu'à ${E_CLASS.passengers} passagers, et le van Classe V jusqu'à ${V_CLASS.passengers} passagers avec leurs bagages.`,
       },
       {
         question: "Assurez-vous les vols tôt le matin ou tard le soir ?",
@@ -183,12 +183,12 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Quelles destinations desservez-vous depuis l'aéroport de Nice ?",
         answer:
-          "Nice, Cannes, Antibes, Monaco, Menton, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat et Saint-Tropez, ainsi que Courchevel, Megève et Chamonix en hiver.",
+          "Nous desservons Nice, Cannes, Antibes, Monaco, Menton, Èze, Villefranche-sur-Mer, Saint-Jean-Cap-Ferrat et Saint-Tropez. En hiver, nous allons aussi à Courchevel, Megève et Chamonix.",
       },
       {
         question: "Pouvez-vous me ramener à l'aéroport de Nice pour mon vol ?",
         answer:
-          "Oui. Nous venons vous chercher à votre hôtel, à votre villa ou au port et vous déposons à votre terminal. Beaucoup de clients réservent l'arrivée et le départ en même temps.",
+          "Oui. Nous venons vous chercher à votre hôtel, à votre villa ou au port et vous déposons à votre terminal. Beaucoup de nos clients réservent l'aller et le retour en même temps.",
       },
       {
         question: "Quelles sont les conditions d'annulation d'un transfert aéroport ?",
@@ -237,7 +237,7 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     story: {
       title: "Comment se passe le transfert de l'aéroport de Nice à Monaco",
       paragraphs: [
-        "Monaco n'a pas d'aéroport : un transfert aéroport pour Monaco part donc de Nice Côte d'Azur, à **30 à 40 minutes environ** par l'autoroute ou par la route du bord de mer, selon la circulation. Votre chauffeur vous accueille aux arrivées, au Terminal 1 ou 2, et vous dépose à la porte de votre hôtel ou de votre résidence à Monte-Carlo, sur le quai de Port Hercule ou sur la place du Casino.",
+        "Monaco n'a pas d'aéroport : un transfert aéroport pour Monaco part donc de Nice Côte d'Azur, à **30 à 40 minutes environ** par l'autoroute ou par la route du bord de mer, selon la circulation. Votre chauffeur vous accueille aux arrivées du Terminal 1 ou 2. Il vous dépose à la porte de votre hôtel ou de votre résidence à Monte-Carlo, sur le quai de Port Hercule ou sur la place du Casino.",
         `Un aller simple coûte à partir de ${routePrices("monaco")}. Le prix est fixé à la réservation, nous suivons votre vol et une heure d'attente est incluse à partir de l'heure de prise en charge. Le van Classe V accueille jusqu'à ${V_CLASS.passengers} passagers avec leurs bagages.`,
         "Pendant le Grand Prix en mai et le Monaco Yacht Show en septembre, des routes ferment et la Principauté se remplit. Nous prévoyons l'itinéraire et le point de dépose en fonction des fermetures. Si vous prenez l'hélicoptère depuis l'aéroport de Nice, votre chauffeur vous attend à l'héliport de Monaco, à Fontvieille. Pour votre départ, nous venons vous chercher à Monaco et vous ramenons à votre terminal.",
       ],
@@ -277,7 +277,7 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     faq: [
       {
         question: "Combien coûte un transfert de l'aéroport de Nice à Monaco ?",
-        answer: `À partir de ${routePrices("monaco")}, en aller simple. Le prix est fixe et confirmé avant la réservation, sans compteur.`,
+        answer: `L'aller simple coûte à partir de ${routePrices("monaco")}. Le prix est fixe et confirmé avant la réservation, sans compteur.`,
       },
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Monaco ?",
@@ -292,7 +292,7 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Où mon chauffeur m'attend-il à l'aéroport de Nice ?",
         answer:
-          "Dans le hall des arrivées de votre terminal, Terminal 1 ou 2, avec une pancarte à votre nom. Votre chauffeur prend vos bagages et vous accompagne jusqu'à la voiture.",
+          "Nous vous attendons dans le hall des arrivées du Terminal 1 ou 2, avec une pancarte à votre nom. Votre chauffeur prend vos bagages et vous accompagne jusqu'à la voiture.",
       },
       {
         question: "Pouvez-vous me conduire jusqu'à un yacht à Port Hercule ?",
@@ -307,7 +307,7 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       {
         question: "Faites-vous le trajet retour de Monaco à l'aéroport de Nice ?",
         answer:
-          "Oui. Nous venons vous chercher à votre hôtel ou à votre résidence à Monaco et vous déposons à votre terminal. Beaucoup de clients réservent l'arrivée et le départ en même temps.",
+          "Oui. Nous venons vous chercher à votre hôtel ou à votre résidence à Monaco et vous déposons à votre terminal. Beaucoup de nos clients réservent l'aller et le retour en même temps.",
       },
       {
         question: "Quelles sont les conditions d'annulation ?",
@@ -348,7 +348,7 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
       },
       {
         title: "Prêt pour les festivals",
-        text: "Pendant le Festival de Cannes, le Cannes Yachting Festival et les Cannes Lions, un chauffeur qui connaît les fermetures de routes vous évite les détours.",
+        text: "Pendant le Festival de Cannes, le Cannes Yachting Festival et les Cannes Lions, votre chauffeur connaît les routes fermées et vous évite les détours.",
         theme: "light",
       },
     ],
@@ -396,7 +396,7 @@ const routePagesFr = frenchSpacing<Record<string, ServicePageConfig>>({
     faq: [
       {
         question: "Combien coûte un transfert de l'aéroport de Nice à Cannes ?",
-        answer: `À partir de ${routePrices("cannes")}, en aller simple. Le prix est fixe et confirmé avant la réservation, sans compteur.`,
+        answer: `L'aller simple coûte à partir de ${routePrices("cannes")}. Le prix est fixe et confirmé avant la réservation, sans compteur.`,
       },
       {
         question: "Combien de temps dure le trajet de l'aéroport de Nice à Cannes ?",
