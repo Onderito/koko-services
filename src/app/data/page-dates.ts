@@ -9,7 +9,7 @@
 export const SITE_RELAUNCH = "2026-11-02";
 
 /** The day the French pages went live: the date of every /fr page not listed below. */
-export const FRENCH_SITE_RELEASE = "2026-11-25";
+export const FRENCH_SITE_RELEASE = "2026-11-26";
 
 /** Pages whose last significant change is after the relaunch, by sitemap route ("" is the home). */
 export const pageUpdatedAt: Record<string, string> = {
@@ -57,10 +57,25 @@ export const pageUpdatedAt: Record<string, string> = {
       "transfers/long-distance-transfer",
     ].map(page => [`/our-services/${page}`, "2026-11-25"]),
   ),
-  // 25 Nov 2026: the French versions of the Nice Airport, Nice Airport to Monaco and Nice Airport to Cannes pages.
-  "/fr/transfert-aeroport-nice": "2026-11-25",
-  "/fr/transfert-aeroport-nice-monaco": "2026-11-25",
-  "/fr/transfert-aeroport-nice-cannes": "2026-11-25",
+  // 26 Nov 2026: the home's H1, headings and reasons block; sentences rewritten to read naturally on the home and the
+  // service pages below (the English hourly Monaco page is unchanged); the French pages take FRENCH_SITE_RELEASE.
+  "": "2026-11-26",
+  ...Object.fromEntries(
+    [
+      "", "/transfers", "/hourly-chauffeur", "/private-tours", "/yacht-transfers", "/events",
+      "/transfers/nice-airport-transfer", "/transfers/long-distance-transfer", "/transfers/monaco-airport-transfer",
+      "/transfers/cannes-airport-transfer", "/transfers/saint-tropez-transfer", "/transfers/antibes-transfer",
+      "/transfers/saint-jean-cap-ferrat-transfer", "/transfers/eze-transfer", "/transfers/villefranche-transfer",
+      "/transfers/menton-transfer",
+      "/hourly-chauffeur/nice", "/hourly-chauffeur/saint-tropez", "/hourly-chauffeur/courchevel",
+      "/hourly-chauffeur/megeve", "/hourly-chauffeur/chamonix",
+      "/private-tours/nice", "/private-tours/cannes", "/private-tours/monaco", "/private-tours/saint-tropez",
+      "/private-tours/courchevel", "/private-tours/megeve", "/private-tours/chamonix",
+      "/yacht-transfers/monaco", "/yacht-transfers/cannes", "/yacht-transfers/antibes", "/yacht-transfers/saint-tropez",
+      "/yacht-transfers/nice-airport", "/yacht-transfers/crew-transportation",
+      "/events/monaco-grand-prix", "/events/cannes-film-festival", "/events/monaco-yacht-show",
+    ].map(page => [`/our-services${page}`, "2026-11-26"]),
+  ),
 };
 
 /** Articles whose text changed after publication, by slug: their Article markup's dateModified. */

@@ -7,6 +7,8 @@ import { hourlyChauffeurPages } from "@/app/data/service-pages";
 import ServicePageTemplate from "@/app/our-services/service-page-template";
 
 import BreadcrumbSchema from "@/app/ui/schema/breadcrumb-schema";
+import BreadcrumbJsonLd from "@/app/ui/schema/breadcrumb-json-ld";
+import { ENGLISH_LEFT_AS_IS } from "@/app/data/places";
 
 type HourlyCityPageProps = {
   params: Promise<{
@@ -62,7 +64,9 @@ export default async function HourlyCityPage({ params }: HourlyCityPageProps) {
 
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbs} />
+      {/* The breadcrumb is written into the HTML (BreadcrumbJsonLd); a page of ENGLISH_LEFT_AS_IS keeps its former one,
+          added in the browser by next/script (BreadcrumbSchema). */}
+      {ENGLISH_LEFT_AS_IS.has(config.path) ? <BreadcrumbSchema items={breadcrumbs} /> : <BreadcrumbJsonLd items={breadcrumbs} />}
       <ServicePageTemplate config={config} />
     </>
   );
