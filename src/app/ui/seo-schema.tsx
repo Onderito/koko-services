@@ -135,8 +135,8 @@ const WORDS = {
  * Rendered once in each root layout, in the page's language (the French layout passes locale="fr"). Supplements
  * per-page schema (Article, FAQPage, etc.) defined inline in route handlers.
  * The business carries its map position (geo) and its Google Maps listing; the description, languages and payments
- * repeat the facts of /ai-instructions and llms.txt. One name, "Kokolimo". No rating markup: Google shows no review
- * stars for a business's own ratings. The price range and the offers carry the starting fares of data/vehicles.tsx.
+ * repeat the facts of /ai-instructions and llms.txt. One name, "Kokolimo". No rating here: the two homes add the Google
+ * rating (ui/schema/home-page-json-ld.tsx). The price range and the offers carry the starting fares of data/vehicles.tsx.
  */
 export default function SeoSchema({ locale }: { locale?: "fr" }) {
   const w = WORDS[locale ?? "en"];
