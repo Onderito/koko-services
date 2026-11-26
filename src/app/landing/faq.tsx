@@ -13,7 +13,7 @@ import FaqList, { type FaqItem } from "../ui/faq-list";
 const car = (id: string) => vehicles.find(v => v.id === id)!;
 const E = car("mercedes-e"), V = car("mercedes-v"), S = car("mercedes-s"), M = car("mercedes-maybach");
 const eur = (n: number) => `€${n}`;
-const eurFr = (n: number) => `${n.toLocaleString("fr-FR")} €`;
+const eurFr = (n: number) => `${n.toLocaleString("fr-FR")} €`;
 
 const faqs: { question: string; answer: string }[] = [
   {
@@ -93,7 +93,7 @@ const faqsFr: { question: string; answer: string }[] = frenchSpacing([
     answer: `Kokolimo roule uniquement en Mercedes : la Classe E et la Classe S jusqu'à ${E.passengers} passagers, le van Classe V jusqu'à ${V.passengers}, et la Maybach jusqu'à ${M.passengers}. Nous vous conseillons la voiture adaptée à votre groupe et à vos bagages.`,
   },
   {
-    question: "Comment fonctionne un chauffeur à l'heure ?",
+    question: "Comment se passe la réservation d'un chauffeur à l'heure ?",
     answer: `Votre chauffeur Kokolimo et sa voiture restent avec vous pendant toute la réservation, pour vos rendez-vous, vos achats ou plusieurs arrêts. Comptez à partir de ${eurFr(E.prices.nice.hourly)} de l'heure en Classe E, ${eurFr(V.prices.nice.hourly)} en Classe V, ${eurFr(S.prices.nice.hourly)} en Classe S et ${eurFr(M.prices.nice.hourly)} en Maybach.`,
   },
   {

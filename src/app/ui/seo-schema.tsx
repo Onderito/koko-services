@@ -10,7 +10,6 @@ import {
 } from "../data/site-config";
 import { cities, vehicles } from "../data/vehicles";
 import { carFr, eur, frenchSpacing } from "../data/i18n/fr-helpers";
-import { frLink } from "../data/i18n/addresses";
 
 // Site-wide route offers: one offer per destination from Nice Airport, priced from the E-Class fare, with every car's
 // fare in its description. The fares come from data/vehicles.tsx; the route pages carry their own per-car offers.
@@ -117,7 +116,8 @@ const WORDS = {
     serviceName: `Service de chauffeur privé ${businessName}`,
     serviceType: "Chauffeur privé et transferts haut de gamme",
     serviceArea: serviceAreaTextFr,
-    contactPath: frLink("/contact-me"),
+    // The French home's booking bar, until a French contact page exists.
+    contactPath: "/fr#book",
     catalog: "Services de chauffeur",
     airportName: "Transferts aéroport",
     airportText: `Transferts privés de l'aéroport Nice Côte d'Azur vers toute la Côte d'Azur, à prix fixe, à partir de ${eur(90)}.`,

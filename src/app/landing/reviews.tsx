@@ -50,7 +50,7 @@ export const REVIEWS_FR = [
     context: "Juil. 2025 · avis traduit de l'anglais",
   },
   {
-    quote: "kokolimo a pris soin de nous, avec un accueil chaleureux. De belles vues, des explications passionnantes sur Nice, du bon vin et des spécialités de Cannes.",
+    quote: "Kokolimo a pris soin de nous, avec un accueil chaleureux. De belles vues, des explications passionnantes sur Nice, du bon vin et des spécialités de Cannes.",
     author: "Client Tripadvisor",
     context: "Juil. 2024 · avis traduit de l'anglais",
   },

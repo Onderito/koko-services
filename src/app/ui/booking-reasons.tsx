@@ -71,7 +71,7 @@ export default async function BookingReasons({ locale }: { locale?: "fr" } = {})
   const tripadvisor = ratings.find(r => r.source === "tripadvisor")!;
   const [year, month] = companyRegisteredOn.split("-").map(Number);
   if (locale === "fr") {
-    return <ReasonCards title="Pourquoi les voyageurs réservent Kokolimo" reasons={frenchReasons(google, tripadvisor, year, month)} />;
+    return <ReasonCards title="Pourquoi les voyageurs choisissent Kokolimo" reasons={frenchReasons(google, tripadvisor, year, month)} />;
   }
   const reasons = [
     {

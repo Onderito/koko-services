@@ -35,7 +35,7 @@ const TEXT = {
       },
       {
         title: "Chauffeur privé à l'heure",
-        kicker: "Selon la destination",
+        kicker: "À l'heure ou à la journée",
         description:
           "Votre chauffeur reste à votre disposition pour vos rendez-vous, vos achats, vos déjeuners, les plages privées ou une journée à plusieurs arrêts. Le service couvre Nice, Cannes, Monaco, Saint-Tropez et, l'hiver, les Alpes.",
         image: homeServiceCards[1].image,

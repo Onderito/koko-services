@@ -10,7 +10,7 @@ const QUESTION = {
 
 const TEXT = {
   en: { eyebrow: "Curious?", title: "Ask your favourite AI about Kokolimo", hint: "One click opens it with the question already written.", ask: (name: string) => `Ask ${name} about Kokolimo` },
-  fr: { eyebrow: "Une question ?", title: "Interrogez votre IA préférée sur Kokolimo", hint: "Un clic l'ouvre avec la question déjà écrite.", ask: (name: string) => `Interroger ${name} sur Kokolimo` },
+  fr: { eyebrow: "Une question ?", title: "Interrogez votre IA préférée sur Kokolimo", hint: "Un clic l'ouvre avec la question déjà écrite.", ask: (name: string) => `Interroger ${name} sur Kokolimo` },
 };
 
 const PLATFORMS = [
